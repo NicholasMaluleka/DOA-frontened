@@ -159,6 +159,36 @@ export class registerComponent {
       return this.errorHandler(bh, e, 'sd_ZSLYaSB5AEVYwkSZ');
     }
   }
+
+  idValid(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_2mzdjThkJ5J0te6L(bh);
+      //appendnew_next_idValid
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0pzHhF3BmDhHQBVP');
+    }
+  }
+
+  validId(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_2VvuA9sQP6wLSv4c(bh);
+      //appendnew_next_validId
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_edYEHE2MoZfczlQY');
+    }
+  }
   //appendnew_flow_registerComponent_start
 
   sd_21M8r6uomCRnf45y(bh) {
@@ -179,6 +209,8 @@ export class registerComponent {
       this.page.showDependencyForm1 = false;
       this.page.hideIcon = true;
       this.page.hideIcon2 = true;
+      this.page.gender = undefined;
+      this.page.loading = false;
       bh = this.sd_qjesZ9T9zyxXQtfe(bh);
       //appendnew_next_sd_7K2noVNldq6MAAbT
       return bh;
@@ -201,13 +233,17 @@ export class registerComponent {
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
         email: new FormControl('', [Validators.required, Validators.email]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
           Validators.minLength(13),
         ]),
-        cellphone: new FormControl('', [Validators.required]),
+        cellphone: new FormControl('', [
+          Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
+        ]),
         relationship: new FormControl('', [Validators.required]),
       });
 
@@ -215,20 +251,24 @@ export class registerComponent {
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
         email: new FormControl('', [Validators.required, Validators.email]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
           Validators.minLength(13),
         ]),
-        cellphone: new FormControl('', [Validators.required]),
+        cellphone: new FormControl('', [
+          Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
+        ]),
         relationship: new FormControl('', [Validators.required]),
       });
 
       page.dependencyForm = new FormGroup({
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
@@ -239,7 +279,7 @@ export class registerComponent {
       page.dependencyForm2 = new FormGroup({
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
@@ -250,7 +290,7 @@ export class registerComponent {
       page.dependencyForm3 = new FormGroup({
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
@@ -262,13 +302,17 @@ export class registerComponent {
         firstName: new FormControl('', [Validators.required]),
         lastName: new FormControl('', [Validators.required]),
         email: new FormControl('', [Validators.required, Validators.email]),
-        gender: new FormControl('', [Validators.required]),
+        gender: new FormControl(''),
         idNumber: new FormControl('', [
           Validators.required,
           Validators.maxLength(13),
           Validators.minLength(13),
         ]),
-        cellphone: new FormControl('', [Validators.required]),
+        cellphone: new FormControl('', [
+          Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
+        ]),
         address: new FormControl('', [Validators.required]),
         packageType: new FormControl('', [Validators.required]),
         file2: new FormControl('', [Validators.required]),
@@ -303,7 +347,7 @@ export class registerComponent {
             bh.file = input.files[0];
             page.uploadedFile = new FormData();
             page.uploadedFile.append('file', bh.file);
-            this.goToBackend();
+            this.validId();
           }
         });
       }
@@ -553,6 +597,149 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Piy2OPiATT4VA7Dk');
+    }
+  }
+
+  sd_2mzdjThkJ5J0te6L(bh) {
+    try {
+      const page = this.page;
+      let id = page.clientForm.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.clientForm.patchValue({
+          gender: page.gender,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.clientForm.patchValue({
+          gender: page.gender,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.clientForm.controls.idNumber.value);
+      //appendnew_next_sd_2mzdjThkJ5J0te6L
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2mzdjThkJ5J0te6L');
+    }
+  }
+
+  sd_2VvuA9sQP6wLSv4c(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_Joet7d2z5ZGhbPVA(bh);
+      //appendnew_next_sd_2VvuA9sQP6wLSv4c
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2VvuA9sQP6wLSv4c');
+    }
+  }
+
+  sd_Joet7d2z5ZGhbPVA(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'validate-id';
+      page.loading = true;
+
+      bh = this.sd_xmrSywhjgd5I6fVU(bh);
+      //appendnew_next_sd_Joet7d2z5ZGhbPVA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Joet7d2z5ZGhbPVA');
+    }
+  }
+
+  async sd_xmrSywhjgd5I6fVU(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_FZ6WMQY1voina3hL(bh);
+      //appendnew_next_sd_xmrSywhjgd5I6fVU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xmrSywhjgd5I6fVU');
+    }
+  }
+
+  sd_FZ6WMQY1voina3hL(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      this.getFromBackend();
+      //appendnew_next_sd_FZ6WMQY1voina3hL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FZ6WMQY1voina3hL');
     }
   }
 

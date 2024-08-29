@@ -948,7 +948,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "Header Label",
-                                        "_value": "Position",
+                                        "_value": "Client Name",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -994,7 +994,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "Header Label",
-                                        "_value": "Name",
+                                        "_value": "Policy Number",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -1040,7 +1040,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "Header Label",
-                                        "_value": "Weight",
+                                        "_value": "Claim Number",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -1086,7 +1086,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "Header Label",
-                                        "_value": "Symbol",
+                                        "_value": "Claim Date",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -1180,6 +1180,184 @@
                                         "_visibility": false
                                     }
                                 ]
+                            },
+                            "91e7c2b4-f409-9d58-609b-b24be1fbd2ff": {
+                                "paletteKey": "ng-table-column",
+                                "parentEditorKey": "fae963bc-7497-2405-8fa7-4a97ae6c1e4a",
+                                "isAdvancedChildComponent": true,
+                                "isCommented": "true",
+                                "commentid": "1724828128766",
+                                "designerReference": [
+                                    {
+                                        "_key": "Header Label",
+                                        "_value": "Claim Amount",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "matSortHeaderColumn",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "Mapping",
+                                        "_value": "",
+                                        "_type": "ma",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "columnName",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p",
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "headerclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "columnclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    }
+                                ]
+                            },
+                            "33115244-1bd8-6b61-8ae8-bfd06f78df70": {
+                                "paletteKey": "ng-table-column",
+                                "parentEditorKey": "fae963bc-7497-2405-8fa7-4a97ae6c1e4a",
+                                "isAdvancedChildComponent": true,
+                                "isCommented": "true",
+                                "commentid": "1724828131644",
+                                "designerReference": [
+                                    {
+                                        "_key": "Header Label",
+                                        "_value": "Status",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "matSortHeaderColumn",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "Mapping",
+                                        "_value": "",
+                                        "_type": "ma",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "columnName",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p",
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "headerclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "columnclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    }
+                                ]
+                            },
+                            "998188c2-25da-6051-60f5-92b86af50e8e": {
+                                "paletteKey": "ng-droppable-table-column",
+                                "parentEditorKey": "fae963bc-7497-2405-8fa7-4a97ae6c1e4a",
+                                "isAdvancedChildComponent": true,
+                                "isCommented": "true",
+                                "commentid": "1724829101030",
+                                "designerReference": [
+                                    {
+                                        "_key": "Sort Key",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "matSortHeaderColumn",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "columnId",
+                                        "_value": "588fc765-2fd0-8268-9651-a0e3f9d82469",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "Header Label",
+                                        "_value": "Action",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "headerclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "columnclass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    }
+                                ],
+                                "a824fbe3-33e7-952c-892c-d2adda06f314": {
+                                    "paletteKey": "NG-icon",
+                                    "parentEditorKey": "998188c2-25da-6051-60f5-92b86af50e8e",
+                                    "isCommented": "true",
+                                    "commentid": "1724829101030",
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "IconName",
+                                            "_value": "more_vert",
+                                            "_type": "a",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "[inline]",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "color",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ]
+                                }
                             }
                         }
                     },
