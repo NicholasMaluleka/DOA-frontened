@@ -2718,6 +2718,12 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "routerLink",
+                                    "_value": "/dashboard/edit-personalinfo",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }

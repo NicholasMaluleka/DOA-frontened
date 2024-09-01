@@ -32,7 +32,11 @@
         },
         {
             "path": "DOAServices",
-            "component": "landingComponent"
+            "component": "landingComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
         },
         {
             "path": "contact-us",
@@ -40,7 +44,11 @@
         },
         {
             "path": "login",
-            "component": "loginComponent"
+            "component": "loginComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
         },
         {
             "path": "forgot-password",
@@ -53,6 +61,10 @@
         {
             "component": "reset_passwordComponent",
             "path": "reset-password"
+        },
+        {
+            "path": "edit-personalinfo",
+            "component": "edit_personalInfoComponent"
         },
         {
             "path": "''",

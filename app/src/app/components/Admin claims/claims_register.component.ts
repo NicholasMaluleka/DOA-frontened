@@ -201,11 +201,22 @@ export class claims_registerComponent {
       this.page.policyholder = true;
       this.page.beneficiary = false;
       this.page.date = undefined;
-      bh = this.forms(bh);
+      bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8uegiEQyOnacegW8');
+    }
+  }
+
+  sd_VS9kuSjxODDIjqLl(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.forms(bh);
+      //appendnew_next_sd_VS9kuSjxODDIjqLl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VS9kuSjxODDIjqLl');
     }
   }
 
@@ -277,10 +288,54 @@ export class claims_registerComponent {
 
       console.log('page.deceased', page.deceased);
 
+      bh.url = page.ssdUrl + 'get-users';
+      bh = this.sd_lc7a7aI8KJ997bHn(bh);
       //appendnew_next_forms
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_fT4QY8oO9nWmGN5R');
+    }
+  }
+
+  async sd_lc7a7aI8KJ997bHn(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_2zMKByS1YzyZkcY2(bh);
+      //appendnew_next_sd_lc7a7aI8KJ997bHn
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lc7a7aI8KJ997bHn');
+    }
+  }
+
+  sd_2zMKByS1YzyZkcY2(bh) {
+    try {
+      const page = this.page;
+      page.clients = page.result.filter((item) => item.role === 'client');
+
+      this.sd_0KbyrDuQt7LUzdHq(bh);
+      //appendnew_next_sd_2zMKByS1YzyZkcY2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2zMKByS1YzyZkcY2');
+    }
+  }
+
+  sd_0KbyrDuQt7LUzdHq(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page);
+      //appendnew_next_sd_0KbyrDuQt7LUzdHq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0KbyrDuQt7LUzdHq');
     }
   }
 

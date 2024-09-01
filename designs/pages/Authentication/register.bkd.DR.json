@@ -394,6 +394,104 @@
                                         "_attrDef": "p"
                                     }
                                 ],
+                                "ab08fc4d-35c1-4693-ee37-fb7ac889b9f7": {
+                                    "paletteKey": "FlexLayoutCol",
+                                    "parentEditorKey": "f7933666-3f8a-5079-8510-8f1a80651c74",
+                                    "commentid": null,
+                                    "designerReference": [
+                                        {
+                                            "_key": "componentLabel",
+                                            "_value": "Loader",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "style",
+                                            "_value": "background-color: #0000002e",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": [
+                                                "full-width",
+                                                "full-height",
+                                                "absolute"
+                                            ],
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxFlex",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxLayoutGap",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "center",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "pLayoutAlign",
+                                            "_value": "center",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "*ngIf",
+                                            "_value": "page.loading",
+                                            "_type": "kv",
+                                            "_attrDef": "c"
+                                        }
+                                    ],
+                                    "b16aa1dc-2e6d-ea81-c559-0d32aa0d640c": {
+                                        "paletteKey": "NEUTRINOS_VIEW_loader",
+                                        "parentEditorKey": "ab08fc4d-35c1-4693-ee37-fb7ac889b9f7",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "componentLabel",
+                                                "_value": "loader",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    }
+                                },
                                 "3fd2ac28-a8f6-7db0-8b84-3920941f4a18": {
                                     "paletteKey": "NG-Form",
                                     "parentEditorKey": "f7933666-3f8a-5079-8510-8f1a80651c74",
@@ -1365,11 +1463,23 @@
                                                     "_value": "13",
                                                     "_type": "kv",
                                                     "_attrDef": "c"
+                                                },
+                                                {
+                                                    "_key": "oninput",
+                                                    "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c"
+                                                },
+                                                {
+                                                    "_key": "(blur)",
+                                                    "_value": "idValid()",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c"
                                                 }
                                             ]
                                         },
-                                        "b7183fdb-170f-d504-ceef-e1c46604f601": {
-                                            "paletteKey": "NG-Select",
+                                        "7a6dfc31-3620-bc36-58db-f574333d2202": {
+                                            "paletteKey": "NG-Input",
                                             "parentEditorKey": "198f4b30-57e1-7cf6-17a6-3b2c4568ea43",
                                             "isAdvancedComponent": true,
                                             "commentid": null,
@@ -1389,18 +1499,6 @@
                                                     "_attrDef": "p"
                                                 },
                                                 {
-                                                    "_key": "innerMatSelectStyle",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "innerMatSelectClass",
-                                                    "_value": "",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
                                                     "_key": "placeholder",
                                                     "_value": "Gender",
                                                     "_type": "kv",
@@ -1408,77 +1506,8 @@
                                                     "_useAsLabel": true
                                                 },
                                                 {
-                                                    "_key": "Label",
-                                                    "_value": "Gender",
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "datasource",
-                                                    "_value": "page.genders",
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[groupOptions]",
-                                                    "_value": "noGroup",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[groupLabels]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p",
-                                                    "_visibility": false
-                                                },
-                                                {
-                                                    "_key": "[disableGroup]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p",
-                                                    "_visibility": false
-                                                },
-                                                {
-                                                    "_key": "[optionDatasource]",
-                                                    "_value": "",
-                                                    "_type": "a",
-                                                    "_attrDef": "p",
-                                                    "_visibility": false
-                                                },
-                                                {
-                                                    "_key": "optionValue",
-                                                    "_value": "option.value",
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "optionView",
-                                                    "_value": "{{option.viewValue}}",
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "formControlName",
-                                                    "_value": "gender",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[(ngModel)]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[(value)]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[required]",
-                                                    "_value": "false",
+                                                    "_key": "value",
+                                                    "_value": "{{page.gender}}",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
@@ -1489,94 +1518,140 @@
                                                     "_attrDef": "p"
                                                 },
                                                 {
+                                                    "_key": "[required]",
+                                                    "_value": "false",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[(ngModel)]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "color",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "name",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "type",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[formControl]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "readonly",
+                                                    "_value": "true",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabled]",
+                                                    "_value": "false",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "id",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
                                                     "_key": "[floatLabel]",
                                                     "_value": "'auto'",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
                                                 },
                                                 {
-                                                    "_key": "[disableRipple]",
-                                                    "_value": "",
+                                                    "_key": "[hideRequiredMarker]",
+                                                    "_value": "false",
                                                     "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "multiple",
-                                                    "_value": "",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "CustomTriggerValue",
-                                                    "_value": "",
-                                                    "_type": "a",
                                                     "_attrDef": "p",
-                                                    "_visibility": false
-                                                },
-                                                {
-                                                    "_key": "(openedChange)",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "(selectionChange)",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "selectCustomOption",
-                                                    "_value": [],
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "selectStyle",
-                                                    "_value": "Basic",
-                                                    "_type": "a",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "panelClass",
-                                                    "_value": "",
-                                                    "_type": "dav",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[disabled]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "[errorStateMatcher]",
-                                                    "_value": "",
-                                                    "_type": "kv",
-                                                    "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "option",
-                                                    "_value": "option",
-                                                    "_type": "a",
-                                                    "_attrDef": "p",
-                                                    "_visibility": false
+                                                    "_complexity": "advanced"
                                                 },
                                                 {
                                                     "_key": "matError",
-                                                    "_value": [
-                                                        {
-                                                            "input1": "page.clientForm.controls.gender?.errors?.required",
-                                                            "input2": "Gender is <strong>required<strong/>",
-                                                            "toggle": {
-                                                                "toggleData": [],
-                                                                "selected": "start"
-                                                            }
-                                                        }
-                                                    ],
+                                                    "_value": [],
                                                     "_type": "a",
                                                     "_attrDef": "p",
                                                     "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "inputHint",
+                                                    "_value": [],
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "Label",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "Suffix Icon",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "(suffixIconClick)",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "Prefix Icon",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "(prefixIconClick)",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "Prefix",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "Suffix",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "formControlName",
+                                                    "_value": "gender",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c"
                                                 }
                                             ]
                                         }
@@ -2250,6 +2325,14 @@
                                                                 "toggleData": [],
                                                                 "selected": "start"
                                                             }
+                                                        },
+                                                        {
+                                                            "input1": "page.clientForm.controls.cellphone?.errors?.pattern",
+                                                            "input2": "Enter a valid South African cellphone number",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
                                                         }
                                                     ],
                                                     "_type": "a",
@@ -2315,6 +2398,18 @@
                                                 {
                                                     "_key": "formControlName",
                                                     "_value": "cellphone",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c"
+                                                },
+                                                {
+                                                    "_key": "maxlength",
+                                                    "_value": "10",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c"
+                                                },
+                                                {
+                                                    "_key": "oninput",
+                                                    "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
                                                     "_type": "kv",
                                                     "_attrDef": "c"
                                                 }
@@ -3038,7 +3133,34 @@
                                                     },
                                                     {
                                                         "_key": "html",
-                                                        "_value": "<input type=\"file\" id=\"upload\" required formControlName = \"file2\">\r\n<mat-error *ngIf =\"page.clientForm.controls.file2.errors?.required\">Please Upload File</mat-error>",
+                                                        "_value": "<input type=\"file\" id=\"upload\" required formControlName = \"file2\" accept=\".png\" hidden>\r\n<label for=\"upload\" class=\"kg-box kg-border-box kg-padding-10px\">Upload ID</label>\r\n",
+                                                        "_type": "a",
+                                                        "_attrDef": "p"
+                                                    }
+                                                ]
+                                            },
+                                            "63f4ccc0-456c-6ef1-a874-e0824c69f5ce": {
+                                                "paletteKey": "html-editor",
+                                                "parentEditorKey": "1e2244cd-cd48-ea38-527d-09aeade0f247",
+                                                "isAdvancedChildComponent": true,
+                                                "isCommented": "true",
+                                                "commentid": "1725001208813",
+                                                "designerReference": [
+                                                    {
+                                                        "_key": "style",
+                                                        "_value": "",
+                                                        "_type": "kv",
+                                                        "_attrDef": "p"
+                                                    },
+                                                    {
+                                                        "_key": "class",
+                                                        "_value": "",
+                                                        "_type": "dav",
+                                                        "_attrDef": "p"
+                                                    },
+                                                    {
+                                                        "_key": "html",
+                                                        "_value": "\r\n<p *ngIf =\"page.clientForm.controls.file2.errors?.required\" class=\"kg-red\">Please Upload File</p>",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     }
@@ -4549,6 +4671,195 @@
                                                             "_value": "13",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "(blur)",
+                                                            "_value": "idValid2()",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        }
+                                                    ]
+                                                },
+                                                "0ed69157-9fe0-d2e7-7954-2ffcf6730a7f": {
+                                                    "paletteKey": "NG-Input",
+                                                    "parentEditorKey": "b0f1339d-edbc-5f3d-5a72-138dc62db817",
+                                                    "isAdvancedComponent": true,
+                                                    "commentid": null,
+                                                    "designerReference": [
+                                                        {
+                                                            "_key": "style",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "class",
+                                                            "_value": [
+                                                                "kg-full-width"
+                                                            ],
+                                                            "_type": "dav",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "placeholder",
+                                                            "_value": "Gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_useAsLabel": true
+                                                        },
+                                                        {
+                                                            "_key": "value",
+                                                            "_value": "{{page.gender2}}",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[appearance]",
+                                                            "_value": "'legacy'",
+                                                            "_type": "a",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[required]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[(ngModel)]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "color",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "name",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "type",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[formControl]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "readonly",
+                                                            "_value": "true",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[disabled]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "id",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[floatLabel]",
+                                                            "_value": "'auto'",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[hideRequiredMarker]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_complexity": "advanced"
+                                                        },
+                                                        {
+                                                            "_key": "matError",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "inputHint",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Label",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(suffixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(prefixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "formControlName",
+                                                            "_value": "gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
                                                         }
                                                     ]
                                                 },
@@ -4556,7 +4867,8 @@
                                                     "paletteKey": "NG-Select",
                                                     "parentEditorKey": "b0f1339d-edbc-5f3d-5a72-138dc62db817",
                                                     "isAdvancedComponent": true,
-                                                    "commentid": null,
+                                                    "isCommented": "true",
+                                                    "commentid": "1724993025372",
                                                     "designerReference": [
                                                         {
                                                             "_key": "style",
@@ -5158,6 +5470,14 @@
                                                                         "toggleData": [],
                                                                         "selected": "start"
                                                                     }
+                                                                },
+                                                                {
+                                                                    "input1": "page.beneficaryForm.controls.cellphone?.errors?.pattern",
+                                                                    "input2": "Enter a valid South African celphone number",
+                                                                    "toggle": {
+                                                                        "toggleData": [],
+                                                                        "selected": "start"
+                                                                    }
                                                                 }
                                                             ],
                                                             "_type": "a",
@@ -5223,6 +5543,18 @@
                                                         {
                                                             "_key": "formControlName",
                                                             "_value": "cellphone",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "maxlength",
+                                                            "_value": "10",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
                                                         }
@@ -6909,6 +7241,189 @@
                                                             "_value": "13",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "(blur)",
+                                                            "_value": "idValid3()",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        }
+                                                    ]
+                                                },
+                                                "d26d3326-cb4e-1b99-70fb-0ae3c2ce676b": {
+                                                    "paletteKey": "NG-Input",
+                                                    "parentEditorKey": "714d3498-d5db-5b49-07dc-021a0586a5df",
+                                                    "isAdvancedComponent": true,
+                                                    "commentid": null,
+                                                    "designerReference": [
+                                                        {
+                                                            "_key": "style",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "class",
+                                                            "_value": [
+                                                                "kg-full-width"
+                                                            ],
+                                                            "_type": "dav",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "placeholder",
+                                                            "_value": "Gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_useAsLabel": true
+                                                        },
+                                                        {
+                                                            "_key": "value",
+                                                            "_value": "{{page.gender3}}",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[appearance]",
+                                                            "_value": "'legacy'",
+                                                            "_type": "a",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[required]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[(ngModel)]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "color",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "name",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "type",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[formControl]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "readonly",
+                                                            "_value": "true",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[disabled]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "id",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[floatLabel]",
+                                                            "_value": "'auto'",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[hideRequiredMarker]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_complexity": "advanced"
+                                                        },
+                                                        {
+                                                            "_key": "matError",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "inputHint",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Label",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(suffixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(prefixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "formControlName",
+                                                            "_value": "gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
                                                         }
                                                     ]
                                                 },
@@ -6916,7 +7431,8 @@
                                                     "paletteKey": "NG-Select",
                                                     "parentEditorKey": "714d3498-d5db-5b49-07dc-021a0586a5df",
                                                     "isAdvancedComponent": true,
-                                                    "commentid": null,
+                                                    "isCommented": "true",
+                                                    "commentid": "1724993032740",
                                                     "designerReference": [
                                                         {
                                                             "_key": "style",
@@ -7518,6 +8034,14 @@
                                                                         "toggleData": [],
                                                                         "selected": "start"
                                                                     }
+                                                                },
+                                                                {
+                                                                    "input1": "page.beneficaryForm2.controls.cellphone?.errors?.pattern",
+                                                                    "input2": "Enter a valid South African celphone number",
+                                                                    "toggle": {
+                                                                        "toggleData": [],
+                                                                        "selected": "start"
+                                                                    }
                                                                 }
                                                             ],
                                                             "_type": "a",
@@ -7583,6 +8107,18 @@
                                                         {
                                                             "_key": "formControlName",
                                                             "_value": "cellphone",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "maxlength",
+                                                            "_value": "10",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
                                                         }
@@ -8407,7 +8943,7 @@
                             },
                             {
                                 "_key": "[stepControl]",
-                                "_value": "page.dependencyForm",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -9717,6 +10253,195 @@
                                                             "_value": "13",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "(blur)",
+                                                            "_value": "idValid4()",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        }
+                                                    ]
+                                                },
+                                                "42bc4be2-1850-a2aa-0c22-7a2263748a33": {
+                                                    "paletteKey": "NG-Input",
+                                                    "parentEditorKey": "d4ed5fd1-8d67-385b-2576-5757ea690f00",
+                                                    "isAdvancedComponent": true,
+                                                    "commentid": null,
+                                                    "designerReference": [
+                                                        {
+                                                            "_key": "style",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "class",
+                                                            "_value": [
+                                                                "kg-full-width"
+                                                            ],
+                                                            "_type": "dav",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "placeholder",
+                                                            "_value": "Gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_useAsLabel": true
+                                                        },
+                                                        {
+                                                            "_key": "value",
+                                                            "_value": "{{page.gender4}}",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[appearance]",
+                                                            "_value": "'legacy'",
+                                                            "_type": "a",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[required]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[(ngModel)]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "color",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "name",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "type",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[formControl]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "readonly",
+                                                            "_value": "true",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[disabled]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "id",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[floatLabel]",
+                                                            "_value": "'auto'",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[hideRequiredMarker]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_complexity": "advanced"
+                                                        },
+                                                        {
+                                                            "_key": "matError",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "inputHint",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Label",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(suffixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(prefixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "formControlName",
+                                                            "_value": "gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
                                                         }
                                                     ]
                                                 },
@@ -9724,7 +10449,8 @@
                                                     "paletteKey": "NG-Select",
                                                     "parentEditorKey": "d4ed5fd1-8d67-385b-2576-5757ea690f00",
                                                     "isAdvancedComponent": true,
-                                                    "commentid": null,
+                                                    "isCommented": "true",
+                                                    "commentid": "1724993083442",
                                                     "designerReference": [
                                                         {
                                                             "_key": "style",
@@ -11169,6 +11895,195 @@
                                                             "_value": "13",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "(blur)",
+                                                            "_value": "idValid5()",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        }
+                                                    ]
+                                                },
+                                                "110082f0-bb61-5673-2e99-229a4f9cc017": {
+                                                    "paletteKey": "NG-Input",
+                                                    "parentEditorKey": "0fc72e78-b37c-136d-0564-677d92a04d00",
+                                                    "isAdvancedComponent": true,
+                                                    "commentid": null,
+                                                    "designerReference": [
+                                                        {
+                                                            "_key": "style",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "class",
+                                                            "_value": [
+                                                                "kg-full-width"
+                                                            ],
+                                                            "_type": "dav",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "placeholder",
+                                                            "_value": "Gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_useAsLabel": true
+                                                        },
+                                                        {
+                                                            "_key": "value",
+                                                            "_value": "{{page.gender5}}",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[appearance]",
+                                                            "_value": "'legacy'",
+                                                            "_type": "a",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[required]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[(ngModel)]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "color",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "name",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "type",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[formControl]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "readonly",
+                                                            "_value": "true",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[disabled]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "id",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[floatLabel]",
+                                                            "_value": "'auto'",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[hideRequiredMarker]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_complexity": "advanced"
+                                                        },
+                                                        {
+                                                            "_key": "matError",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "inputHint",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Label",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(suffixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(prefixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "formControlName",
+                                                            "_value": "gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
                                                         }
                                                     ]
                                                 },
@@ -11176,7 +12091,8 @@
                                                     "paletteKey": "NG-Select",
                                                     "parentEditorKey": "0fc72e78-b37c-136d-0564-677d92a04d00",
                                                     "isAdvancedComponent": true,
-                                                    "commentid": null,
+                                                    "isCommented": "true",
+                                                    "commentid": "1724993137619",
                                                     "designerReference": [
                                                         {
                                                             "_key": "style",
@@ -12621,6 +13537,195 @@
                                                             "_value": "13",
                                                             "_type": "kv",
                                                             "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "oninput",
+                                                            "_value": " this.value = this.value.replace(/[^\\d]/g, '')",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        },
+                                                        {
+                                                            "_key": "(blur)",
+                                                            "_value": "idValid6()",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
+                                                        }
+                                                    ]
+                                                },
+                                                "f69623fa-53a1-2902-33a0-add5c709507f": {
+                                                    "paletteKey": "NG-Input",
+                                                    "parentEditorKey": "0e981bce-27ca-de5a-7bc6-5eecef649bf8",
+                                                    "isAdvancedComponent": true,
+                                                    "commentid": null,
+                                                    "designerReference": [
+                                                        {
+                                                            "_key": "style",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "class",
+                                                            "_value": [
+                                                                "kg-full-width"
+                                                            ],
+                                                            "_type": "dav",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "placeholder",
+                                                            "_value": "Gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_useAsLabel": true
+                                                        },
+                                                        {
+                                                            "_key": "value",
+                                                            "_value": "{{page.gender6}}",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[appearance]",
+                                                            "_value": "'legacy'",
+                                                            "_type": "a",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[required]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[(ngModel)]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "color",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "name",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "type",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[formControl]",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "readonly",
+                                                            "_value": "true",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[disabled]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "id",
+                                                            "_value": "",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[floatLabel]",
+                                                            "_value": "'auto'",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p"
+                                                        },
+                                                        {
+                                                            "_key": "[hideRequiredMarker]",
+                                                            "_value": "false",
+                                                            "_type": "kv",
+                                                            "_attrDef": "p",
+                                                            "_complexity": "advanced"
+                                                        },
+                                                        {
+                                                            "_key": "matError",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "inputHint",
+                                                            "_value": [],
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Label",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(suffixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix Icon",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "(prefixIconClick)",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Prefix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "Suffix",
+                                                            "_value": "",
+                                                            "_type": "a",
+                                                            "_attrDef": "p",
+                                                            "_visibility": true
+                                                        },
+                                                        {
+                                                            "_key": "formControlName",
+                                                            "_value": "gender",
+                                                            "_type": "kv",
+                                                            "_attrDef": "c"
                                                         }
                                                     ]
                                                 },
@@ -12628,7 +13733,8 @@
                                                     "paletteKey": "NG-Select",
                                                     "parentEditorKey": "0e981bce-27ca-de5a-7bc6-5eecef649bf8",
                                                     "isAdvancedComponent": true,
-                                                    "commentid": null,
+                                                    "isCommented": "true",
+                                                    "commentid": "1724993148487",
                                                     "designerReference": [
                                                         {
                                                             "_key": "style",
@@ -14301,7 +15407,7 @@
                                                     "_attrDef": "p"
                                                 }
                                             ],
-                                            "43b5fe82-d0b6-977b-a9c3-1ca26a7b4831": {
+                                            "9bb5bc5a-f915-203c-54c8-9aaec1cd648d": {
                                                 "paletteKey": "NG-Input",
                                                 "parentEditorKey": "768fc43f-14c1-e382-597b-a3545f780970",
                                                 "isAdvancedComponent": true,
@@ -14323,14 +15429,14 @@
                                                     },
                                                     {
                                                         "_key": "placeholder",
-                                                        "_value": "Email",
+                                                        "_value": "ID Number",
                                                         "_type": "kv",
                                                         "_attrDef": "p",
                                                         "_useAsLabel": true
                                                     },
                                                     {
                                                         "_key": "value",
-                                                        "_value": "{{page.clientForm.value.email}}",
+                                                        "_value": "{{page.clientForm.value.idNumber}}",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -14472,7 +15578,7 @@
                                                     }
                                                 ]
                                             },
-                                            "9bb5bc5a-f915-203c-54c8-9aaec1cd648d": {
+                                            "5d9d4031-928d-0319-4c75-dc93ae4129ab": {
                                                 "paletteKey": "NG-Input",
                                                 "parentEditorKey": "768fc43f-14c1-e382-597b-a3545f780970",
                                                 "isAdvancedComponent": true,
@@ -14494,14 +15600,14 @@
                                                     },
                                                     {
                                                         "_key": "placeholder",
-                                                        "_value": "ID Number",
+                                                        "_value": "Gender",
                                                         "_type": "kv",
                                                         "_attrDef": "p",
                                                         "_useAsLabel": true
                                                     },
                                                     {
                                                         "_key": "value",
-                                                        "_value": "{{page.clientForm.value.idNumber}}",
+                                                        "_value": "{{page.clientForm.value.gender}}",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -14707,7 +15813,7 @@
                                                     "_attrDef": "p"
                                                 }
                                             ],
-                                            "5d9d4031-928d-0319-4c75-dc93ae4129ab": {
+                                            "43b5fe82-d0b6-977b-a9c3-1ca26a7b4831": {
                                                 "paletteKey": "NG-Input",
                                                 "parentEditorKey": "e53a4567-f317-d1a6-a8a3-8e845085fe07",
                                                 "isAdvancedComponent": true,
@@ -14729,14 +15835,14 @@
                                                     },
                                                     {
                                                         "_key": "placeholder",
-                                                        "_value": "Gender",
+                                                        "_value": "Package Type",
                                                         "_type": "kv",
                                                         "_attrDef": "p",
                                                         "_useAsLabel": true
                                                     },
                                                     {
                                                         "_key": "value",
-                                                        "_value": "{{page.clientForm.value.gender}}",
+                                                        "_value": "{{page.clientForm.value.packageType}}",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -15306,14 +16412,14 @@
                                                     },
                                                     {
                                                         "_key": "placeholder",
-                                                        "_value": "Email",
+                                                        "_value": "Address",
                                                         "_type": "kv",
                                                         "_attrDef": "p",
                                                         "_useAsLabel": true
                                                     },
                                                     {
                                                         "_key": "value",
-                                                        "_value": "{{page.clientForm.value.email}}",
+                                                        "_value": "{{page.clientForm.value.address}}",
                                                         "_type": "kv",
                                                         "_attrDef": "p"
                                                     },
@@ -15876,7 +16982,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },
@@ -16282,7 +17388,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },
@@ -16688,7 +17794,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },
@@ -17397,7 +18503,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },
@@ -17803,7 +18909,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },
@@ -18209,7 +19315,7 @@
                                                         },
                                                         {
                                                             "_key": "wrap",
-                                                            "_value": "wrap",
+                                                            "_value": "",
                                                             "_type": "a",
                                                             "_attrDef": "p"
                                                         },

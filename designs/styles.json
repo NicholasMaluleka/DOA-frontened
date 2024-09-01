@@ -121,6 +121,8 @@
         "kg-padding-20px",
         "kg-grey",
         "kg-yellow",
+        "kg-red",
+        "kg-box",
         "mat-step-header",
         "mat-step-icon-selected",
         "mat-step-icon-state-done",

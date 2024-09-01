@@ -3113,7 +3113,6 @@
                                     "paletteKey": "NG-Input",
                                     "parentEditorKey": "ef7616f7-3c29-8ff4-1e27-fc7a5eca575e",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -4547,7 +4546,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "bdab30e1-5c66-510d-b60f-76e55636c12c",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4735,7 +4733,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "7b2fe8ca-cb0f-7eb6-cf69-a360cfd673f6",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {

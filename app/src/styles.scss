@@ -112,6 +112,11 @@ overflow: hidden;
  max-height: 600px;
  overflow-y: auto;
 }
+
+.scroller{
+ max-height: 500px;
+ overflow-y: auto;
+}
 // angel
 
 //colors
@@ -687,7 +692,18 @@ body{
     background-color: $yellow !important;
 }
 
+.kg-red {
+    color: red;
+}
+
+.kg-box {
+    border: 1px solid $light-grey;
+    background-color: $light-grey;
+    color: black;
+    border-radius: 10px;
+}
+
 .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
-    background-color: $yellow;
-    color: #fff;
+    background-color: $light-grey;
+    color:black;
 }
