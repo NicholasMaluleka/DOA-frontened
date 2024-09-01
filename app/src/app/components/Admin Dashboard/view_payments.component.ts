@@ -234,14 +234,26 @@ export class view_paymentsComponent {
       ).value
         .trim()
         .toLowerCase();
+
       page.searchValue = searchValue;
 
       if (searchValue) {
         const searchResults = page.backupapplicationsDatasource.filter(
           (row) => {
+            const dateStr = new Date(row.date)
+              .toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })
+              .toLowerCase();
+
             return (
-              (row.amount && row.amount.toLowerCase().includes(searchValue)) ||
-              (row.date && row.date.toLowerCase().includes(searchValue))
+              (row.amount &&
+                row.amount.toString().toLowerCase().includes(searchValue)) ||
+              (row.date && dateStr.includes(searchValue)) ||
+              (row.policyNumber &&
+                row.policyNumber.toString().toLowerCase().includes(searchValue))
             );
           }
         );
