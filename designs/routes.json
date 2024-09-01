@@ -20,19 +20,31 @@
                     "path": "register",
                     "component": "registerComponent"
                 }
-            ]
+            ],
+            "canActivate": {
+                "edited": true,
+                "value": "authorizationService"
+            }
         },
         {
             "path": "DOAServices",
-            "component": "landingComponent"
+            "component": "landingComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
         },
         {
-            "path": "call",
+            "path": "contact-us",
             "component": "contact_usComponent"
         },
         {
             "path": "login",
-            "component": "loginComponent"
+            "component": "loginComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            }
         },
         {
             "path": "forgot-password",
@@ -45,6 +57,10 @@
         {
             "component": "reset_passwordComponent",
             "path": "reset-password"
+        },
+        {
+            "path": "edit-personalinfo",
+            "component": "edit_personalInfoComponent"
         },
         {
             "path": "''",

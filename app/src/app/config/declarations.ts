@@ -16,6 +16,20 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-searchPolicyComponent
+import { searchPolicyComponent } from '../components/search Policy/searchPolicy.component';
+//CORE_REFERENCE_IMPORT-payment_formComponent
+import { payment_formComponent } from '../components/Admin Dashboard/payment_form.component';
+//CORE_REFERENCE_IMPORT-variables
+import { variables } from '../sd-services/variables';
+//CORE_REFERENCE_IMPORT-view_paymentsComponent
+import { view_paymentsComponent } from '../components/Admin Dashboard/view_payments.component';
+//CORE_REFERENCE_IMPORT-clientDasbhoardComponent
+import { clientDasbhoardComponent } from '../components/Client/clientDasbhoard.component';
+//CORE_REFERENCE_IMPORT-edit_personalInfoComponent
+import { edit_personalInfoComponent } from '../components/Admin Dashboard/edit_personalInfo.component';
+//CORE_REFERENCE_IMPORT-claims_registerComponent
+import { claims_registerComponent } from '../components/Admin claims/claims_register.component';
 //CORE_REFERENCE_IMPORT-authorizationService
 import { authorizationService } from '../services/authorization/authorization.service';
 //CORE_REFERENCE_IMPORT-claimsComponent
@@ -78,6 +92,18 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchPolicyComponent
+  searchPolicyComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-payment_formComponent
+  payment_formComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_paymentsComponent
+  view_paymentsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-clientDasbhoardComponent
+  clientDasbhoardComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_personalInfoComponent
+  edit_personalInfoComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-claims_registerComponent
+  claims_registerComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-claimsComponent
   claimsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedulesComponent
@@ -119,10 +145,12 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-variables
+  variables,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-authorizationService
-authorizationService,
+  authorizationService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-randomNumber
-    randomNumber,
+  randomNumber,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-otp
   otp,
 ];
@@ -136,6 +164,7 @@ export const appRoutes = [
   {
     path: 'dashboard',
     component: dashboardComponent,
+    canActivate: [authorizationService],
     children: [
       { path: 'home', component: homeComponent },
       { path: 'schedules', component: schedulesComponent },
@@ -144,11 +173,12 @@ export const appRoutes = [
     ],
   },
   { path: 'DOAServices', component: landingComponent },
-  { path: 'call', component: contact_usComponent },
+  { path: 'contact-us', component: contact_usComponent },
   { path: 'login', component: loginComponent },
   { path: 'forgot-password', component: forgot_passwordComponent },
   { path: 'verify-code', component: verify_codeComponent },
   { path: 'reset-password', component: reset_passwordComponent },
+  { path: 'edit-personalinfo', component: edit_personalInfoComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

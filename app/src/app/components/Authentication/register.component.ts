@@ -189,6 +189,96 @@ export class registerComponent {
       return this.errorHandler(bh, e, 'sd_edYEHE2MoZfczlQY');
     }
   }
+
+  idValid2(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_1kUDPYwgeCpnEQpZ(bh);
+      //appendnew_next_idValid2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_F39mDdQqOqsrZBzc');
+    }
+  }
+
+  idValid3(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_Y01WN32UHn5IAx5g(bh);
+      //appendnew_next_idValid3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OxHE7eocWeyXElH8');
+    }
+  }
+
+  idValid4(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_tr46ebRFABCAVNMW(bh);
+      //appendnew_next_idValid4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yPduP4FKyE9ScUlV');
+    }
+  }
+
+  idValid5(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_Mmx2Yhw2yiEdWi6o(bh);
+      //appendnew_next_idValid5
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0feBWXbH4GfbEFPj');
+    }
+  }
+
+  idValid6(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_V1uf4sm5LD8oOfh4(bh);
+      //appendnew_next_idValid6
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5l06VeCA4XVvuonM');
+    }
+  }
+
+  showmsg(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_ujwsbDV8Krrs0ert(bh);
+      //appendnew_next_showmsg
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EJPnHK5FvoFnOVor');
+    }
+  }
   //appendnew_flow_registerComponent_start
 
   sd_21M8r6uomCRnf45y(bh) {
@@ -211,6 +301,11 @@ export class registerComponent {
       this.page.hideIcon2 = true;
       this.page.gender = undefined;
       this.page.loading = false;
+      this.page.gender2 = undefined;
+      this.page.gender3 = undefined;
+      this.page.gender4 = undefined;
+      this.page.gender5 = undefined;
+      this.page.gender6 = undefined;
       bh = this.sd_qjesZ9T9zyxXQtfe(bh);
       //appendnew_next_sd_7K2noVNldq6MAAbT
       return bh;
@@ -722,7 +817,7 @@ export class registerComponent {
         params: {},
         body: this.page.uploadedFile,
       };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh.message = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_FZ6WMQY1voina3hL(bh);
       //appendnew_next_sd_xmrSywhjgd5I6fVU
       return bh;
@@ -735,11 +830,462 @@ export class registerComponent {
     try {
       const page = this.page;
       page.loading = false;
-      this.getFromBackend();
+      this.showmsg();
+      this.goToBackend();
       //appendnew_next_sd_FZ6WMQY1voina3hL
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_FZ6WMQY1voina3hL');
+    }
+  }
+
+  sd_1kUDPYwgeCpnEQpZ(bh) {
+    try {
+      const page = this.page;
+      let id = page.beneficaryForm.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender2 = 'Female';
+        page.beneficaryForm.patchValue({
+          gender: page.gender2,
+        });
+        // page.beneficaryForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender2 = 'Male';
+        page.beneficaryForm.patchValue({
+          gender: page.gender2,
+        });
+        // page.beneficaryForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.beneficaryForm.controls.idNumber.value);
+      //appendnew_next_sd_1kUDPYwgeCpnEQpZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1kUDPYwgeCpnEQpZ');
+    }
+  }
+
+  sd_Y01WN32UHn5IAx5g(bh) {
+    try {
+      const page = this.page;
+      let id = page.beneficaryForm2.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender3 = 'Female';
+        page.beneficaryForm2.patchValue({
+          gender: page.gender3,
+        });
+        // page.beneficaryForm2.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender3 = 'Male';
+        page.beneficaryForm2.patchValue({
+          gender: page.gender3,
+        });
+        // page.beneficaryForm2.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.beneficaryForm2.controls.idNumber.value);
+      //appendnew_next_sd_Y01WN32UHn5IAx5g
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Y01WN32UHn5IAx5g');
+    }
+  }
+
+  sd_tr46ebRFABCAVNMW(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependencyForm.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender4 = 'Female';
+        page.dependencyForm.patchValue({
+          gender: page.gender4,
+        });
+        // page.dependencyForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender4 = 'Male';
+        page.dependencyForm.patchValue({
+          gender: page.gender4,
+        });
+        // page.dependencyForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependencyForm.controls.idNumber.value);
+      //appendnew_next_sd_tr46ebRFABCAVNMW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tr46ebRFABCAVNMW');
+    }
+  }
+
+  sd_Mmx2Yhw2yiEdWi6o(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependencyForm2.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender5 = 'Female';
+        page.dependencyForm2.patchValue({
+          gender: page.gender5,
+        });
+        // page.dependencyForm2.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender5 = 'Male';
+        page.dependencyForm2.patchValue({
+          gender: page.gender5,
+        });
+        // page.dependencyForm2.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependencyForm2.controls.idNumber.value);
+      //appendnew_next_sd_Mmx2Yhw2yiEdWi6o
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Mmx2Yhw2yiEdWi6o');
+    }
+  }
+
+  sd_V1uf4sm5LD8oOfh4(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependencyForm3.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender6 = 'Female';
+        page.dependencyForm3.patchValue({
+          gender: page.gender6,
+        });
+        // page.dependencyForm3.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender6 = 'Male';
+        page.dependencyForm3.patchValue({
+          gender: page.gender6,
+        });
+        // page.dependencyForm3.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependencyForm3.controls.idNumber.value);
+      //appendnew_next_sd_V1uf4sm5LD8oOfh4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_V1uf4sm5LD8oOfh4');
+    }
+  }
+
+  sd_ujwsbDV8Krrs0ert(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open(bh.message, 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_ujwsbDV8Krrs0ert
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ujwsbDV8Krrs0ert');
     }
   }
 

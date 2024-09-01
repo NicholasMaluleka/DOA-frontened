@@ -1,0 +1,309 @@
+[
+    {
+        "id": "sd_DhHQUCCXlUUb7ZvE",
+        "type": "tab",
+        "createdDate": "2024-08-30T08:56:49.519Z",
+        "label": "searchPolicy",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
+    },
+    {
+        "id": "sd_2pkBa5MBR75O7Is9",
+        "type": "OnInit",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_2pkBa5MBR75O7Is9",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_1H9eZKXPIZpHkx8G"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
+    },
+    {
+        "id": "sd_txpmGjlMyQdX6vLy",
+        "type": "PageVariables",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_txpmGjlMyQdX6vLy",
+        "category": "Function",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_xeoRoLeihzWy8efa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xeoRoLeihzWy8efa",
+        "type": "Script",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.searchPolicyForm = new FormGroup({\n    search: new FormControl('',Validators.required)\n})",
+        "functionName": "sd_xeoRoLeihzWy8efa",
+        "category": "Function",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_1H9eZKXPIZpHkx8G",
+        "type": "UseDependency",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_1H9eZKXPIZpHkx8G",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_txpmGjlMyQdX6vLy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rU0R3WzeGLC0CJEH",
+        "type": "PageStart",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "find",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "find",
+        "category": "General",
+        "x": 105,
+        "y": 160,
+        "wires": [
+            [
+                "sd_7reQ1uGtj2XhgmOg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
+    },
+    {
+        "id": "sd_RJfWSc1iaoIPZp3C",
+        "type": "Script",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.searchPolicyForm.value)\nbh.url = page.ssdUrl + 'get-users'",
+        "functionName": "sd_RJfWSc1iaoIPZp3C",
+        "category": "Function",
+        "x": 265,
+        "y": 160,
+        "wires": [
+            [
+                "sd_bvvL7YmEZnHQdKek"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_bvvL7YmEZnHQdKek",
+        "type": "HttpRequest",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.body",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_bvvL7YmEZnHQdKek",
+        "category": "HTTP",
+        "x": 365,
+        "y": 160,
+        "wires": [
+            [
+                "sd_ux8rhjGFxIE2uNBH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ux8rhjGFxIE2uNBH",
+        "type": "Script",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.clients = page.result.filter((item) => item.policyNumber == page.searchPolicyForm.value.search);\n",
+        "functionName": "sd_ux8rhjGFxIE2uNBH",
+        "category": "Function",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "sd_WIcYKCF6dB4ESURL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7reQ1uGtj2XhgmOg",
+        "type": "Environment",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_7reQ1uGtj2XhgmOg",
+        "category": "General",
+        "x": 185,
+        "y": 160,
+        "wires": [
+            [
+                "sd_RJfWSc1iaoIPZp3C"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_WIcYKCF6dB4ESURL",
+        "type": "Log",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page",
+        "functionName": "sd_WIcYKCF6dB4ESURL",
+        "category": "General",
+        "x": 580,
+        "y": 160,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    }
+]

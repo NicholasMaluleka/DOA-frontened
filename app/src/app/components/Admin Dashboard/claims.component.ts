@@ -5,9 +5,11 @@
 
 import { AfterViewInit, Component, Injector, ViewChild } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
 import { MatSort } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
+import { searchPolicyComponent } from 'app/components/search Policy/searchPolicy.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -90,10 +92,27 @@ export class claimsComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_Ax3NUpSHKes7P69O');
     }
   }
+
+  open(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_R4PZGnmiLIdMHbq5(bh);
+      //appendnew_next_open
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7kDEC5bWU42VY8uN');
+    }
+  }
   //appendnew_flow_claimsComponent_start
 
   sd_f4qlWKJDct97cBFV(bh) {
     try {
+      this.page.policy = false;
+      this.page.beneficary = false;
       bh = this.sd_eJuzOUTYKNgXaqdz_1(bh);
       //appendnew_next_sd_f4qlWKJDct97cBFV
       return bh;
@@ -245,6 +264,20 @@ export class claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_HIDdQSP0NPnkAAKL');
+    }
+  }
+
+  sd_R4PZGnmiLIdMHbq5(bh) {
+    try {
+      const searchPolicyDialog = this.__page_injector__.get(MatDialog);
+      const searchPolicyDialogRef = searchPolicyDialog.open(
+        searchPolicyComponent,
+        {}
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_R4PZGnmiLIdMHbq5');
     }
   }
 

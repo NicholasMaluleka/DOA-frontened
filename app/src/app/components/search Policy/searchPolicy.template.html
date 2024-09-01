@@ -1,0 +1,21 @@
+<div fxLayout="column wrap" class="kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h3>
+        Enter Policy Number:</h3>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" class="kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+      <form [formGroup]="page.searchPolicyForm">
+        <mat-form-field class="kg-full-width" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Search" [required]="false" formControlName="search">
+
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button color="accent" (click)="find()">Search</button></div>
+  </div>
+</div>
