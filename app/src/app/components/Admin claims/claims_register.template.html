@@ -1,8 +1,8 @@
-<div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
+<div fxLayout="column " style="color:#124e52" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="column " class="scroller" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center center" [fxShow]="true">
       <h2>
-        Claims Form -{{page.policyno}}</h2>
+        Claims Form -{{page.policy}}</h2>
     </div>
     <form [formGroup]="page.policyClaimsForm">
       <div fxLayout="column wrap" style="padding-left:19px; padding-right:19px" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -96,41 +96,41 @@
           <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
                 <b>Required Documents</b></label></div>
-            <div style="display: flex;     flex-direction: column;     gap: 25px;">
+            <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
 
               <input type="file" id="upload1" (change)="upload1()" accept=".pdf" hidden required formControlName="idClaimer2">
-              <button class="width-100px"><label for="upload1">
+              <button class="input-button"><label for="upload1">
                   Upload ID Claimer
                 </label></button>
-              <mat-error *ngIf="page.policyClaimsForm.controls.idClaimer2.errors?.required">Please Upload File</mat-error>
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idClaimer2.errors?.required">Please Upload File</mat-error> -->
               <input type="file" id="upload2" (change)="upload2()" accept=".pdf" hidden required formControlName="idDeceased2">
-              <button class="width-100px"><label for="upload2">
+              <button class="input-button"><label for="upload2">
                   Upload ID Deceased
 
                 </label></button>
-              <mat-error *ngIf="page.policyClaimsForm.controls.idDeceased2.errors?.required">Please Upload File</mat-error>
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idDeceased2.errors?.required">Please Upload File</mat-error> -->
 
 
               <input type="file" id="upload3" (change)="upload3()" accept=".pdf" hidden required formControlName="deathCetificatify2">
-              <button class="width-100px"><label for="upload3">
+              <button class="input-button"><label for="upload3">
                   Upload Death Cetificatify
 
                 </label></button>
-              <mat-error *ngIf="page.policyClaimsForm.controls.deathCetificatify2.errors?.required">Please Upload File</mat-error>
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.deathCetificatify2.errors?.required">Please Upload File</mat-error> -->
 
               <input type="file" id="upload4" (change)="upload4()" accept=".pdf" hidden required formControlName="bi16632">
-              <button class="width-100px"><label for="upload4">
+              <button class="input-button"><label for="upload4">
                   Upload bi1663
 
                 </label></button>
-              <mat-error *ngIf="page.policyClaimsForm.controls.bi16632.errors?.required">Please Upload File</mat-error>
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.bi16632.errors?.required">Please Upload File</mat-error> -->
 
               <input type="file" id="upload5" (change)="upload5()" accept=".pdf" hidden required formControlName="bankDetails2">
-              <button class="width-100px"><label for="upload5">
+              <button class="input-button"><label for="upload5">
                   Upload Bank Details
 
                 </label></button>
-              <mat-error *ngIf="page.policyClaimsForm.controls.bankDetails2.errors?.required">Please Upload File</mat-error>
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.bankDetails2.errors?.required">Please Upload File</mat-error> -->
 
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="sd_IXCHRCQfCoHdrMK4()">Submit a Claim</button></div>

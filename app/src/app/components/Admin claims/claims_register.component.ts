@@ -197,7 +197,7 @@ export class claims_registerComponent {
   sd_8uegiEQyOnacegW8(bh) {
     try {
       this.page.policyClaimsForm = undefined;
-      this.page.policyno = 12345678;
+      this.page.policy = 35855297;
       this.page.policyholder = true;
       this.page.beneficiary = false;
       this.page.date = undefined;
@@ -319,8 +319,12 @@ export class claims_registerComponent {
   sd_2zMKByS1YzyZkcY2(bh) {
     try {
       const page = this.page;
+      page.policy = 35855297;
       page.clients = page.result.filter((item) => item.role === 'client');
-
+      page.claim = page.clients.find(
+        (client) => client.policyNumber == page.policy
+      );
+      console.log('claimer', page.claim);
       this.sd_0KbyrDuQt7LUzdHq(bh);
       //appendnew_next_sd_2zMKByS1YzyZkcY2
       return bh;
@@ -331,7 +335,7 @@ export class claims_registerComponent {
 
   sd_0KbyrDuQt7LUzdHq(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page);
+      console.log(new Date().toLocaleTimeString(), this.page.clients);
       //appendnew_next_sd_0KbyrDuQt7LUzdHq
       return bh;
     } catch (e) {
@@ -532,10 +536,19 @@ export class claims_registerComponent {
 
   sd_N0oGwGLJffjROPRe(bh) {
     try {
+      bh = this.sd_jA1o3BhZFfCTHR1T(bh);
       //appendnew_next_sd_N0oGwGLJffjROPRe
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_N0oGwGLJffjROPRe');
+    }
+  }
+
+  sd_jA1o3BhZFfCTHR1T(bh) {
+    try {
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jA1o3BhZFfCTHR1T');
     }
   }
 
