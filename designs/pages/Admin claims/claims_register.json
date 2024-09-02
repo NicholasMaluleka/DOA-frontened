@@ -49,10 +49,10 @@
                 }
             },
             {
-                "textIp": "policyno",
+                "textIp": "policy",
                 "typedIpValue": {
                     "type": "literal",
-                    "value": "12345678"
+                    "value": "35855297"
                 }
             },
             {
@@ -733,10 +733,12 @@
         "script": "",
         "functionName": "sd_N0oGwGLJffjROPRe",
         "category": "Function",
-        "x": 185,
+        "x": 145,
         "y": 500,
         "wires": [
-            []
+            [
+                "sd_jA1o3BhZFfCTHR1T"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -832,7 +834,7 @@
         "nodeType": "flow",
         "name": "",
         "outputs": 0,
-        "logObject": "this.page",
+        "logObject": "this.page.clients",
         "functionName": "sd_0KbyrDuQt7LUzdHq",
         "category": "General",
         "x": 785,
@@ -841,7 +843,7 @@
         "__ssdTypeInputs__": {
             "logObject": {
                 "type": "this.page",
-                "value": "",
+                "value": "clients",
                 "constant": false
             }
         },
@@ -857,7 +859,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.clients = page.result.filter((item) => item.role === 'client');\n",
+        "script": "page.policy = 35855297\npage.clients = page.result.filter((item) => item.role === 'client');\npage.claim = page.clients. find(client =>client.policyNumber == page.policy)\nconsole.log(\"claimer\",page.claim)",
         "functionName": "sd_2zMKByS1YzyZkcY2",
         "category": "Function",
         "x": 700,
@@ -867,6 +869,69 @@
                 "sd_0KbyrDuQt7LUzdHq"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QS4MORyZGT1R4Bf7",
+        "type": "SnackBar",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": ""
+        },
+        "action": {
+            "type": "str",
+            "value": ""
+        },
+        "duration": {
+            "type": "num",
+            "value": ""
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_QS4MORyZGT1R4Bf7",
+        "category": "General",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "claims_registerComponent"
+    },
+    {
+        "id": "sd_jA1o3BhZFfCTHR1T",
+        "type": "PageSwitch",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "regist",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.regist",
+        "rules": [],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 0,
+        "functionName": "sd_jA1o3BhZFfCTHR1T",
+        "category": "Function",
+        "x": 225,
+        "y": 460,
+        "wires": [],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "claims_registerComponent",

@@ -27,6 +27,10 @@
                 {
                     "path": "edit-personalinfo",
                     "component": "edit_personalInfoComponent"
+                },
+                {
+                    "path": "claim_register",
+                    "component": "claims_registerComponent"
                 }
             ],
             "canActivate": {
