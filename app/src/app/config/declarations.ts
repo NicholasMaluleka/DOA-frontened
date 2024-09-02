@@ -168,10 +168,10 @@ export const appRoutes = [
     children: [
       { path: 'home', component: homeComponent },
       { path: 'schedules', component: schedulesComponent },
-      { path: 'claim_register', component: claims_registerComponent },
       { path: 'claims', component: claimsComponent },
       { path: 'register', component: registerComponent },
       { path: 'view-payments', component: view_paymentsComponent },
+      { path: 'claim-register', component: claims_registerComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },

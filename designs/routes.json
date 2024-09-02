@@ -23,6 +23,10 @@
                 {
                     "path": "view-payments",
                     "component": "view_paymentsComponent"
+                },
+                {
+                    "path": "claim-register",
+                    "component": "claims_registerComponent"
                 }
             ],
             "canActivate": {

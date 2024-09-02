@@ -93,7 +93,7 @@ export class claimsComponent implements AfterViewInit {
     }
   }
 
-  open(...others) {
+  openBeneficary(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
@@ -102,9 +102,24 @@ export class claimsComponent implements AfterViewInit {
       bh.input = {};
       bh.local = {};
       bh = this.sd_R4PZGnmiLIdMHbq5(bh);
-      //appendnew_next_open
+      //appendnew_next_openBeneficary
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_7kDEC5bWU42VY8uN');
+    }
+  }
+
+  openPolicy(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_LhywbXVhiP5VbipK(bh);
+      //appendnew_next_openPolicy
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_d5Bmgxud8M60Ezv8');
     }
   }
   //appendnew_flow_claimsComponent_start
@@ -274,10 +289,80 @@ export class claimsComponent implements AfterViewInit {
         searchPolicyComponent,
         {}
       );
+      searchPolicyDialogRef.afterOpened().subscribe((event) => {
+        this.sd_aNCFGIa8P3FmUQlu(bh);
+      });
 
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_R4PZGnmiLIdMHbq5');
+    }
+  }
+
+  sd_aNCFGIa8P3FmUQlu(bh) {
+    try {
+      const page = this.page;
+      page.check = {
+        beneficiary: true,
+        policyHolder: false,
+      };
+      bh = this.sd_3zlIvBo0PpuXde25(bh);
+      //appendnew_next_sd_aNCFGIa8P3FmUQlu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aNCFGIa8P3FmUQlu');
+    }
+  }
+
+  sd_3zlIvBo0PpuXde25(bh) {
+    try {
+      localStorage.setItem('check', JSON.stringify(this.page.check));
+      //appendnew_next_sd_3zlIvBo0PpuXde25
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3zlIvBo0PpuXde25');
+    }
+  }
+
+  sd_LhywbXVhiP5VbipK(bh) {
+    try {
+      const searchPolicyDialog = this.__page_injector__.get(MatDialog);
+      const searchPolicyDialogRef = searchPolicyDialog.open(
+        searchPolicyComponent,
+        {}
+      );
+      searchPolicyDialogRef.afterOpened().subscribe((event) => {
+        this.sd_UDh5XCgUWp8UrqTK(bh);
+      });
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LhywbXVhiP5VbipK');
+    }
+  }
+
+  sd_UDh5XCgUWp8UrqTK(bh) {
+    try {
+      const page = this.page;
+      page.check = {
+        beneficiary: false,
+        policyHolder: true,
+      };
+      bh = this.sd_2WWUBCfUnObCGa7z(bh);
+      //appendnew_next_sd_UDh5XCgUWp8UrqTK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UDh5XCgUWp8UrqTK');
+    }
+  }
+
+  sd_2WWUBCfUnObCGa7z(bh) {
+    try {
+      localStorage.setItem('check', JSON.stringify(this.page.check));
+      //appendnew_next_sd_2WWUBCfUnObCGa7z
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2WWUBCfUnObCGa7z');
     }
   }
 
