@@ -38,7 +38,7 @@
             </mat-form-field>
           </div>
         </div>
-        <div fxLayout="column wrap" class="relative login-btn" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="relative login-btn" fxLayoutAlign="start stretch" [fxShow]="true" (click)="login(loginForm)">
           <div fxLayout="column wrap" style="top: -6px; left: -4px" class="absolute btn" fxLayoutAlign="center center" [fxShow]="true" (click)="login(loginForm)">
             <div>
               Login</div>

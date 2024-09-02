@@ -1387,16 +1387,9 @@
                                     },
                                     {
                                         "_key": "(click)",
-                                        "_value": "sd_pQnOQ1kNl3GunXdh()",
+                                        "_value": "",
                                         "_type": "kv",
-                                        "_attrDef": "p",
-                                        "objValue": {
-                                            "nodeID": "sd_pQnOQ1kNl3GunXdh",
-                                            "functionName": "sd_pQnOQ1kNl3GunXdh",
-                                            "activeTree": "pages",
-                                            "z": "sd_IfyqcoYyY0Qn5p9Z",
-                                            "input": []
-                                        }
+                                        "_attrDef": "p"
                                     },
                                     {
                                         "_key": "[disabled]",
@@ -1418,7 +1411,7 @@
                                     },
                                     {
                                         "_key": "routerLink",
-                                        "_value": "/contact_us",
+                                        "_value": "/contact-us",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     }

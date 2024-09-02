@@ -67,7 +67,7 @@ export class loginComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_aTFbyAc1RKygWOcE(bh);
+      bh = this.sd_rkB5QqUgrAKv3a1e(bh);
       //appendnew_next_login
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_71FwAex7k56plSj9');
@@ -101,18 +101,6 @@ export class loginComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_QZIhirkF1KOOozB7');
-    }
-  }
-
-  sd_aTFbyAc1RKygWOcE(bh) {
-    try {
-      const page = this.page; // console.log("Form", bh.input.form.form.status)
-
-      bh = this.sd_rkB5QqUgrAKv3a1e(bh);
-      //appendnew_next_sd_aTFbyAc1RKygWOcE
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_aTFbyAc1RKygWOcE');
     }
   }
 
@@ -232,7 +220,7 @@ export class loginComponent {
       ) {
         bh = this.sd_vl5FCxtDP6xLD1fe(bh);
       } else {
-        bh = await this.sd_SGMcpcrY4y3UKTKj(bh);
+        bh = await this.sd_iGycO4jnqKpix0R8(bh);
       }
 
       return bh;
@@ -273,6 +261,23 @@ export class loginComponent {
     }
   }
 
+  async sd_iGycO4jnqKpix0R8(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      bh = this.sd_SGMcpcrY4y3UKTKj(bh);
+      //appendnew_next_sd_iGycO4jnqKpix0R8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iGycO4jnqKpix0R8');
+    }
+  }
+
   sd_SGMcpcrY4y3UKTKj(bh) {
     try {
       this.__page_injector__
@@ -283,26 +288,11 @@ export class loginComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      bh = this.sd_iGycO4jnqKpix0R8(bh);
+      bh = this.sd_AID4OaedpjFFkl1s(bh);
       //appendnew_next_sd_SGMcpcrY4y3UKTKj
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_SGMcpcrY4y3UKTKj');
-    }
-  }
-
-  async sd_iGycO4jnqKpix0R8(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/home');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
-      bh = this.sd_AID4OaedpjFFkl1s(bh);
-      //appendnew_next_sd_iGycO4jnqKpix0R8
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iGycO4jnqKpix0R8');
     }
   }
 
