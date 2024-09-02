@@ -267,11 +267,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.table = page.result.filter((user:any) => {\n    return page.userData.policyNumber = user.policyNumber\n})\n\npage.backupapplicationsDatasource = page.table;\nconsole.log(\"from api\", page.table)\n\npage.loading = false;\n",
+        "script": "page.table = page.result.filter((user:any) => {\n    return page.userData.policyNumber == user.policyNumber\n})\n\npage.backupapplicationsDatasource = page.table;\nconsole.log(\"from api\", page.table)\n\npage.loading = false;\n",
         "functionName": "sd_a7UeVsjQcHMmLMcX",
         "category": "Function",
         "x": 365,
-        "y": 160,
+        "y": 180,
         "wires": [
             []
         ],
