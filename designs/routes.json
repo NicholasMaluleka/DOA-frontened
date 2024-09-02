@@ -31,6 +31,10 @@
                 {
                     "path": "claim_register",
                     "component": "claims_registerComponent"
+                },
+                {
+                    "path": "claim-register",
+                    "component": "claims_registerComponent"
                 }
             ],
             "canActivate": {

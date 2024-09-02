@@ -10,6 +10,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatDialogRef } from '@angular/material/dialog'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -161,7 +163,7 @@ export class searchPolicyComponent {
         (item) => item.policyNumber == page.searchPolicyForm.value.search
       );
 
-      this.sd_WIcYKCF6dB4ESURL(bh);
+      bh = this.sd_uK9SFyo7OgJzOK8J(bh);
       //appendnew_next_sd_ux8rhjGFxIE2uNBH
       return bh;
     } catch (e) {
@@ -169,13 +171,41 @@ export class searchPolicyComponent {
     }
   }
 
-  sd_WIcYKCF6dB4ESURL(bh) {
+  sd_uK9SFyo7OgJzOK8J(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page);
-      //appendnew_next_sd_WIcYKCF6dB4ESURL
+      localStorage.setItem('client', JSON.stringify(this.page.clients));
+      bh = this.sd_GrC07KTLi0xBLPf5(bh);
+      //appendnew_next_sd_uK9SFyo7OgJzOK8J
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WIcYKCF6dB4ESURL');
+      return this.errorHandler(bh, e, 'sd_uK9SFyo7OgJzOK8J');
+    }
+  }
+
+  async sd_GrC07KTLi0xBLPf5(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      bh = this.sd_IO4IqWL9nrM5vCKf(bh);
+      //appendnew_next_sd_GrC07KTLi0xBLPf5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GrC07KTLi0xBLPf5');
+    }
+  }
+
+  sd_IO4IqWL9nrM5vCKf(bh) {
+    try {
+      const _dialogRef = this.__page_injector__.get(MatDialogRef);
+      _dialogRef.close(this.page.clients);
+
+      //appendnew_next_sd_IO4IqWL9nrM5vCKf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IO4IqWL9nrM5vCKf');
     }
   }
 

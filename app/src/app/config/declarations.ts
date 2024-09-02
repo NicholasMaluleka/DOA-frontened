@@ -181,6 +181,7 @@ export const appRoutes = [
       { path: 'view-payments', component: view_paymentsComponent },
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
       { path: 'claim_register', component: claims_registerComponent },
+      { path: 'claim-register', component: claims_registerComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
