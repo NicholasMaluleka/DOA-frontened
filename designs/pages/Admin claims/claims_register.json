@@ -49,7 +49,7 @@
                 }
             },
             {
-                "textIp": "policyno",
+                "textIp": "policy",
                 "typedIpValue": {
                     "type": "literal",
                     "value": ""
@@ -851,7 +851,7 @@
         "nodeType": "flow",
         "name": "",
         "outputs": 0,
-        "logObject": "this.page",
+        "logObject": "this.page.clients",
         "functionName": "sd_0KbyrDuQt7LUzdHq",
         "category": "General",
         "x": 1045,
@@ -860,7 +860,7 @@
         "__ssdTypeInputs__": {
             "logObject": {
                 "type": "this.page",
-                "value": "",
+                "value": "clients",
                 "constant": false
             }
         },
@@ -876,7 +876,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.clients = page.result.filter((item) => item.role === 'client');\n",
+        "script": "page.policy = 35855297\npage.clients = page.result.filter((item) => item.role === 'client');\npage.claim = page.clients. find(client =>client.policyNumber == page.policy)\nconsole.log(\"claimer\",page.claim)",
         "functionName": "sd_2zMKByS1YzyZkcY2",
         "category": "Function",
         "x": 960,

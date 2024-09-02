@@ -403,8 +403,12 @@ export class claims_registerComponent {
   sd_2zMKByS1YzyZkcY2(bh) {
     try {
       const page = this.page;
+      page.policy = 35855297;
       page.clients = page.result.filter((item) => item.role === 'client');
-
+      page.claim = page.clients.find(
+        (client) => client.policyNumber == page.policy
+      );
+      console.log('claimer', page.claim);
       this.sd_0KbyrDuQt7LUzdHq(bh);
       //appendnew_next_sd_2zMKByS1YzyZkcY2
       return bh;
@@ -415,7 +419,7 @@ export class claims_registerComponent {
 
   sd_0KbyrDuQt7LUzdHq(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page);
+      console.log(new Date().toLocaleTimeString(), this.page.clients);
       //appendnew_next_sd_0KbyrDuQt7LUzdHq
       return bh;
     } catch (e) {

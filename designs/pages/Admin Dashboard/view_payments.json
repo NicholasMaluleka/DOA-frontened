@@ -44,7 +44,7 @@
         "functionName": "getPayments",
         "category": "General",
         "x": 45,
-        "y": 280,
+        "y": 160,
         "wires": [
             [
                 "sd_wgXg74zMQAWEBLTw"
@@ -74,7 +74,7 @@
         "functionName": "sd_wgXg74zMQAWEBLTw",
         "category": "General",
         "x": 125,
-        "y": 280,
+        "y": 160,
         "wires": [
             [
                 "sd_jJBD6QAaFSK0aGUV"
@@ -96,7 +96,7 @@
         "functionName": "sd_jJBD6QAaFSK0aGUV",
         "category": "Function",
         "x": 205,
-        "y": 280,
+        "y": 160,
         "wires": [
             [
                 "sd_lwCNYItgPe4iBb7i"
@@ -151,7 +151,7 @@
         "functionName": "sd_lwCNYItgPe4iBb7i",
         "category": "HTTP",
         "x": 285,
-        "y": 280,
+        "y": 160,
         "wires": [
             [
                 "sd_a7UeVsjQcHMmLMcX"
@@ -271,7 +271,7 @@
         "functionName": "sd_a7UeVsjQcHMmLMcX",
         "category": "Function",
         "x": 365,
-        "y": 280,
+        "y": 180,
         "wires": [
             []
         ],
@@ -348,11 +348,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "if (!page.backupapplicationsDatasource) {\n    page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement).value.trim().toLowerCase();\npage.searchValue = searchValue;\n\nif (searchValue) {\n    const searchResults = page.backupapplicationsDatasource.filter((row) => {\n        return (\n            (row.amount && row.amount.toLowerCase().includes(searchValue)) ||\n            (row.date && row.date.toLowerCase().includes(searchValue))\n        );\n    });\n    page.table = searchResults;\n} else {\n    // Reset to original data if search value is empty\n    page.table = [...page.backupapplicationsDatasource];\n}\n",
+        "script": "if (!page.backupapplicationsDatasource) {\n  page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement)\n  .value.trim()\n  .toLowerCase();\n\npage.searchValue = searchValue;\n\nif (searchValue) {\n  const searchResults = page.backupapplicationsDatasource.filter(\n    (row) => {\n      const dateStr = new Date(row.date).toLocaleDateString('en-US', {\n        year: 'numeric',\n        month: 'short',\n        day: 'numeric',\n      }).toLowerCase();\n\n      return (\n        (row.amount &&\n          row.amount.toString().toLowerCase().includes(searchValue)) ||\n        (row.date && dateStr.includes(searchValue)) ||\n        (row.policyNumber &&\n          row.policyNumber.toString().toLowerCase().includes(searchValue))\n      );\n    }\n  );\n  page.table = searchResults;\n} else {\n  // Reset to original data if search value is empty\n  page.table = [...page.backupapplicationsDatasource];\n}\n",
         "functionName": "sd_iBlFYTlpoczCmWts_5",
         "category": "Function",
-        "x": 185,
-        "y": 400,
+        "x": 205,
+        "y": 260,
         "wires": [
             []
         ],
@@ -383,8 +383,8 @@
         "flow_type": "sync",
         "functionName": "onFilter",
         "category": "General",
-        "x": 40,
-        "y": 400,
+        "x": 60,
+        "y": 260,
         "wires": [
             [
                 "sd_sJPKFnOc5xM7bGTZ"
@@ -429,8 +429,8 @@
         ],
         "functionName": "sd_wJZgiVw85rq8LsWX",
         "category": "Function",
-        "x": 305,
-        "y": 200,
+        "x": 445,
+        "y": 60,
         "wires": [
             []
         ],
@@ -451,8 +451,8 @@
         "flow_type": "sync",
         "functionName": "openPaymentForm",
         "category": "General",
-        "x": 80,
-        "y": 640,
+        "x": 65,
+        "y": 340,
         "wires": [
             [
                 "sd_gfsbZ8Sd5skDsAgI"
@@ -498,8 +498,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_gfsbZ8Sd5skDsAgI",
         "category": "Dialog",
-        "x": 205,
-        "y": 640,
+        "x": 190,
+        "y": 340,
         "wires": [
             [],
             [],
@@ -652,8 +652,8 @@
         "accept_csd": false,
         "functionName": "sd_VtI0lmylmkampM9c",
         "category": "General",
-        "x": 320,
-        "y": 640,
+        "x": 305,
+        "y": 340,
         "wires": [
             []
         ],
@@ -661,31 +661,6 @@
         "generateNext": false,
         "serviceName": "view_paymentsComponent",
         "generated": true
-    },
-    {
-        "id": "sd_6tVu9JDDXImwqQmu",
-        "type": "Log",
-        "z": "sd_nsEcp9j2OQxe1WKG",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "this.page.table",
-        "functionName": "sd_6tVu9JDDXImwqQmu",
-        "category": "General",
-        "x": 405,
-        "y": 140,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "this.page",
-                "value": "table",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "view_paymentsComponent"
     },
     {
         "id": "sd_cB8uLKsTNJPOdGmG",

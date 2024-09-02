@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-sideNavComponent
+import { sideNavComponent } from '../components/shared_components/sideNav.component';
+//CORE_REFERENCE_IMPORT-toolbarComponent
+import { toolbarComponent } from '../components/shared_components/toolbar.component';
 //CORE_REFERENCE_IMPORT-searchPolicyComponent
 import { searchPolicyComponent } from '../components/search Policy/searchPolicy.component';
 //CORE_REFERENCE_IMPORT-payment_formComponent
@@ -92,6 +96,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
+  sideNavComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbarComponent
+  toolbarComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchPolicyComponent
   searchPolicyComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-payment_formComponent
@@ -171,6 +179,8 @@ export const appRoutes = [
       { path: 'claims', component: claimsComponent },
       { path: 'register', component: registerComponent },
       { path: 'view-payments', component: view_paymentsComponent },
+      { path: 'edit-personalinfo', component: edit_personalInfoComponent },
+      { path: 'claim_register', component: claims_registerComponent },
       { path: 'claim-register', component: claims_registerComponent },
     ],
   },
@@ -180,7 +190,6 @@ export const appRoutes = [
   { path: 'forgot-password', component: forgot_passwordComponent },
   { path: 'verify-code', component: verify_codeComponent },
   { path: 'reset-password', component: reset_passwordComponent },
-  { path: 'edit-personalinfo', component: edit_personalInfoComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

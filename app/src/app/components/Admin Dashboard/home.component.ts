@@ -385,9 +385,7 @@ export class homeComponent implements AfterViewInit {
         this.sdService.getPathAndQParamsObj('/dashboard/view-payments');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_WnahUlnrdMBkCHsS
       return bh;
     } catch (e) {
