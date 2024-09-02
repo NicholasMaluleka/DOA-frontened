@@ -207,7 +207,7 @@ export class view_paymentsComponent {
     try {
       const page = this.page;
       page.table = page.result.filter((user: any) => {
-        return (page.userData.policyNumber = user.policyNumber);
+        return page.userData.policyNumber == user.policyNumber;
       });
 
       page.backupapplicationsDatasource = page.table;
