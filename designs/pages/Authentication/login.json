@@ -272,7 +272,7 @@
                 "sd_vl5FCxtDP6xLD1fe"
             ],
             [
-                "sd_iGycO4jnqKpix0R8"
+                "sd_pWnUWcBfELW3hZrp"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -390,11 +390,11 @@
         "direction": "ltr",
         "functionName": "sd_SGMcpcrY4y3UKTKj",
         "category": "General",
-        "x": 785,
-        "y": 280,
+        "x": 905,
+        "y": 360,
         "wires": [
             [
-                "sd_AID4OaedpjFFkl1s"
+                "sd_QCpkMADtxfSqgHXt"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -575,33 +575,11 @@
         "resultMapping": "",
         "functionName": "sd_iGycO4jnqKpix0R8",
         "category": "Navigation",
-        "x": 705,
-        "y": 280,
+        "x": 825,
+        "y": 360,
         "wires": [
             [
                 "sd_SGMcpcrY4y3UKTKj"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_AID4OaedpjFFkl1s",
-        "type": "Script",
-        "z": "sd_fn8FAmmpAsSioSZv",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"res\", bh.result)",
-        "functionName": "sd_AID4OaedpjFFkl1s",
-        "category": "Function",
-        "x": 885,
-        "y": 280,
-        "wires": [
-            [
-                "sd_QCpkMADtxfSqgHXt"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -630,8 +608,258 @@
         "resultMapping": {},
         "functionName": "sd_QCpkMADtxfSqgHXt",
         "category": "Storage",
-        "x": 965,
+        "x": 1025,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pWnUWcBfELW3hZrp",
+        "type": "PageSwitch",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "result.role",
+        "propertyType": "bh",
+        "propertyGv": "bh.result.role",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "admin",
+                "vt": "str",
+                "gv": "\"admin\""
+            },
+            {
+                "t": "eq",
+                "v": "client",
+                "vt": "str",
+                "gv": "\"client\""
+            },
+            {
+                "t": "eq",
+                "v": "director",
+                "vt": "str",
+                "gv": "\"director\""
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "functionName": "sd_pWnUWcBfELW3hZrp",
+        "category": "Function",
+        "x": 700,
         "y": 280,
+        "wires": [
+            [
+                "sd_amrKD85p0eRgsnBY"
+            ],
+            [
+                "sd_r58lpYP5NfnKU8WQ"
+            ],
+            [
+                "sd_iGycO4jnqKpix0R8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_viITVWMo8noRtLLF",
+        "type": "SnackBar",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Successfully logged in"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_viITVWMo8noRtLLF",
+        "category": "General",
+        "x": 905,
+        "y": 280,
+        "wires": [
+            [
+                "sd_iiPTp6BRisa9Wz2L"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r58lpYP5NfnKU8WQ",
+        "type": "Navigation",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/client_plan_details",
+        "functionName": "sd_r58lpYP5NfnKU8WQ",
+        "category": "Navigation",
+        "x": 825,
+        "y": 280,
+        "wires": [
+            [
+                "sd_viITVWMo8noRtLLF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iiPTp6BRisa9Wz2L",
+        "type": "Storage",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "bh",
+            "value": "result"
+        },
+        "resultMapping": {},
+        "functionName": "sd_iiPTp6BRisa9Wz2L",
+        "category": "Storage",
+        "x": 1025,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_51iYvY9GLbmiDMYl",
+        "type": "SnackBar",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Successfully logged in"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_51iYvY9GLbmiDMYl",
+        "category": "General",
+        "x": 905,
+        "y": 200,
+        "wires": [
+            [
+                "sd_Sxe8LBYbOvGJ2l4m"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_amrKD85p0eRgsnBY",
+        "type": "Navigation",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/home",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_amrKD85p0eRgsnBY",
+        "category": "Navigation",
+        "x": 825,
+        "y": 200,
+        "wires": [
+            [
+                "sd_51iYvY9GLbmiDMYl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Sxe8LBYbOvGJ2l4m",
+        "type": "Storage",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "bh",
+            "value": "result"
+        },
+        "resultMapping": {},
+        "functionName": "sd_Sxe8LBYbOvGJ2l4m",
+        "category": "Storage",
+        "x": 1025,
+        "y": 200,
         "wires": [
             []
         ],
