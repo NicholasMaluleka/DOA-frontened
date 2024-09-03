@@ -129,17 +129,6 @@
         "mat-step-header",
         "mat-step-icon-selected",
         "mat-step-icon-state-done",
-        "mat-step-icon-state-edit",
-        "container",
-        "item",
-        "profile-container",
-        "profile-card",
-        "profile-card-header",
-        "profile-item",
-        "profile-label",
-        "profile-value",
-        "profile-icon",
-        "mat-card-actions",
-        "edit-button"
+        "mat-step-icon-state-edit"
     ]
 }
