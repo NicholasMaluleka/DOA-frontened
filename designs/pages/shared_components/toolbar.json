@@ -28,8 +28,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_rLCXQSvPqfkOfsHZ",
@@ -111,8 +110,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_u1ldiWMdVjhTr00C",
@@ -162,8 +160,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_qiIi6bjjT1iVNTcP",
@@ -207,11 +204,17 @@
                 "v": "client",
                 "vt": "str",
                 "gv": "\"client\""
+            },
+            {
+                "t": "eq",
+                "v": "director",
+                "vt": "str",
+                "gv": "\"director\""
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "functionName": "sd_vACip4EWiEU7Jst2",
         "category": "Function",
         "x": 185,
@@ -222,6 +225,9 @@
             ],
             [
                 "sd_3c1Lvfj2yO6nDjXf"
+            ],
+            [
+                "sd_SDUZ8pyB4VGokn3v"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -425,9 +431,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": true
     },
     {
         "id": "sd_lmjfVOm0jgPaxNTJ",
@@ -451,8 +457,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_9CWPhdafRN2uiO3R",
@@ -495,6 +500,26 @@
         "category": "Navigation",
         "x": 250,
         "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_SDUZ8pyB4VGokn3v",
+        "type": "Script",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.name = page.name.charAt(0).toUpperCase();\npage.surname = page.surname.charAt(0).toUpperCase();\n",
+        "functionName": "sd_SDUZ8pyB4VGokn3v",
+        "category": "Function",
+        "x": 331,
+        "y": 382.1354064941406,
         "wires": [
             []
         ],

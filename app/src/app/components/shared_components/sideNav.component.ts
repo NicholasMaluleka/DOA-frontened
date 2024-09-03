@@ -242,7 +242,7 @@ export class sideNavComponent {
     try {
       const page = this.page;
       page.sideNav = [
-        { label: 'Home', icon: 'home', route: '/dashboard/home' },
+        { label: 'Home', icon: 'home', route: '/dashboard/director_home' },
         { label: 'Claims', icon: 'description' },
         { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
       ];

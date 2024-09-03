@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-Director_homeComponent
+import { Director_homeComponent } from '../components/Director/Director_home.component';
 //CORE_REFERENCE_IMPORT-client_profileComponent
 import { client_profileComponent } from '../components/Client/client_profile.component';
 //CORE_REFERENCE_IMPORT-client_plan_detailsComponent
@@ -98,6 +100,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-Director_homeComponent
+  Director_homeComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_profileComponent
   client_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_plan_detailsComponent
@@ -188,6 +192,7 @@ export const appRoutes = [
       { path: 'client_profile', component: client_profileComponent },
       { path: 'claim_register', component: claims_registerComponent },
       { path: 'claim-register', component: claims_registerComponent },
+      { path: 'director_home', component: Director_homeComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
