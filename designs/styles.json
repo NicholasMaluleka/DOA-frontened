@@ -139,6 +139,16 @@
         "profile-value",
         "profile-icon",
         "mat-card-actions",
-        "edit-button"
+        "edit-button",
+        "summary-cards",
+        "card",
+        "card-info",
+        "count",
+        "pending",
+        "partially-approved",
+        "fully-approved",
+        "icon-hourglass",
+        "icon-half-check",
+        "icon-check"
     ]
 }

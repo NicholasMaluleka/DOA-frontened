@@ -200,6 +200,15 @@ export class toolbarComponent {
         )
       ) {
         bh = this.sd_3c1Lvfj2yO6nDjXf(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_SDUZ8pyB4VGokn3v(bh);
       }
 
       return bh;
@@ -230,6 +239,19 @@ export class toolbarComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3c1Lvfj2yO6nDjXf');
+    }
+  }
+
+  sd_SDUZ8pyB4VGokn3v(bh) {
+    try {
+      const page = this.page;
+      page.name = page.name.charAt(0).toUpperCase();
+      page.surname = page.surname.charAt(0).toUpperCase();
+
+      //appendnew_next_sd_SDUZ8pyB4VGokn3v
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SDUZ8pyB4VGokn3v');
     }
   }
 

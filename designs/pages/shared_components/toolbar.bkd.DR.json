@@ -1665,33 +1665,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<h3 class=\"blue-color\">{{page.user.name}} {{page.user.surname}} {{page.user.firstName}} {{page.user.lastName}}</h3>",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                },
-                                "d39d5d82-c80b-2d55-c910-5035cd7d136e": {
-                                    "paletteKey": "html-editor",
-                                    "parentEditorKey": "c6e33451-0329-ff41-c5fd-20b05957b7bb",
-                                    "isAdvancedChildComponent": true,
-                                    "commentid": null,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "html",
-                                            "_value": "",
+                                            "_value": "<h3 class=\"blue-color\">\r\n    <span *ngIf=\"page.user.name && page.user.surname\">\r\n        {{page.user.name}} {{page.user.surname}}\r\n    </span>\r\n    <span *ngIf=\"!page.user.name && !page.user.surname\">\r\n        {{page.user.firstName}} {{page.user.lastName}}\r\n    </span>\r\n</h3>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

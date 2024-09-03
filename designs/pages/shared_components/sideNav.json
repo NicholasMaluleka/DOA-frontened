@@ -403,7 +403,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/home\"},\n    {label: \"Claims\", icon: \"description\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n]",
+        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/director_home\"},\n    {label: \"Claims\", icon: \"description\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n]",
         "functionName": "sd_jrEzCa63HbYBkHlw",
         "category": "Function",
         "x": 465,

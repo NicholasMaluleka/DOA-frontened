@@ -813,3 +813,70 @@ body{
   background-color: $light-grey;
   cursor: pointer;
 }
+
+/* Summary Cards Section */
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px; 
+}
+
+.card {
+    flex: 1; 
+    padding: 10px; /* Reduced padding for smaller cards */
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 40px; /* Reduced icon size */
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.card-info {
+    font-size: 16px; /* Reduced font size */
+}
+
+.card-info .count {
+    display: block;
+    font-size: 30px; /* Reduced count font size */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Specific Card Styles */
+.card.pending {
+    background-color: #f7dd71; /* Yellow */
+}
+
+.card.partially-approved {
+    background-color: #124e52; /* Light Blue */
+}
+
+.card.fully-approved {
+    background-color: #4CAF50; /* Green */
+}
+
+/* Icon Styles */
+.icon-hourglass::before {
+    content: "\23F3"; /* Unicode for hourglass */
+}
+
+.icon-half-check::before {
+    content: "\2714"; /* Unicode for checkmark */
+    color: #ffeb3b; /* Yellow for half-check */
+}
+
+.icon-check::before {
+    content: "\2714"; /* Unicode for checkmark */
+}
