@@ -241,7 +241,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sideNav = [\n    {label: \"Plan details\", icon: \"description\", route: \"/dashboard/client_plan_details\"},\n    {label: \"Payment History\", icon: \"edit\", route:\"/payment-history\"},\n    {label: \"Claims\", icon: \"today\", route: \"/dashboard/client_claims\"},\n    {label: \"Profile\", icon: \"today\",route: \"/dashboard/client_profile\"},\n\n]",
+        "script": "page.sideNav = [\n    {label: \"Plan details\", icon: \"description\", route: \"/dashboard/client_plan_details\"},\n    {label: \"Payment History\", icon: \"edit\", route:\"/payment-history\"},\n    {label: \"Claims\", icon: \"today\", route: \"/claims\"},\n    // {label: \"Profile\", icon: \"today\",route: \"/dashboard/client_profile\"},\n\n]",
         "functionName": "sd_f8zH5EWAPPgeiqT0",
         "category": "Function",
         "x": 465,
