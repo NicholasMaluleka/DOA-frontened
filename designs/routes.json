@@ -47,6 +47,14 @@
                 {
                     "component": "Director_homeComponent",
                     "path": "director_home"
+                },
+                {
+                    "path": "payments",
+                    "component": "paymentsComponent"
+                },
+                {
+                    "path": "schedules_p",
+                    "component": "schedules_pComponent"
                 }
             ],
             "canActivate": {

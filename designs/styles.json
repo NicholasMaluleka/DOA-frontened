@@ -97,6 +97,7 @@
         "mat-form-field-flex",
         "mat-form-field-outline",
         "pointer",
+        "rotate",
         "nav-bar",
         "login",
         "logo",
