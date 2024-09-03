@@ -609,7 +609,9 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [
+                                "box-shadow"
+                            ],
                             "_type": "dav",
                             "_attrDef": "p"
                         },

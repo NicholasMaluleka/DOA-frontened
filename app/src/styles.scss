@@ -515,6 +515,22 @@ width: 150px;
     cursor: pointer;
 }
 
+
+//animations
+.rotate {
+    width: 100%;
+    height: auto;
+    animation: rotate360 5s infinite linear;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 ///////////////////////////////////////////////NICHOLAS STYLES END //////////////////////////////////////////////////////////////
 
 
