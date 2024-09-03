@@ -1,0 +1,119 @@
+[
+    {
+        "id": "sd_gbeG0SJVsHZYGBEc",
+        "type": "tab",
+        "createdDate": "2024-09-02T07:42:53.411Z",
+        "label": "client_plan_details",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "client_plan_detailsComponent"
+    },
+    {
+        "id": "sd_4mQrEz9Ka3TQFfDH",
+        "type": "OnInit",
+        "z": "sd_gbeG0SJVsHZYGBEc",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_4mQrEz9Ka3TQFfDH",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_nZBvna9VGICI6IZ7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_plan_detailsComponent"
+    },
+    {
+        "id": "sd_nZBvna9VGICI6IZ7",
+        "type": "PageVariables",
+        "z": "sd_gbeG0SJVsHZYGBEc",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "currentUser",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_nZBvna9VGICI6IZ7",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_l7TWElTpIXp7E4HJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_plan_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_l7TWElTpIXp7E4HJ",
+        "type": "Storage",
+        "z": "sd_gbeG0SJVsHZYGBEc",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_l7TWElTpIXp7E4HJ",
+        "category": "Storage",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_E2exTTghxPJnNphQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_plan_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_E2exTTghxPJnNphQ",
+        "type": "Script",
+        "z": "sd_gbeG0SJVsHZYGBEc",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\n\npage.currentUser = page.user\n\n console.log(\"page user\" , page.currentUser)\n console.log(\"bene\",page.currentUser.beneficaries);",
+        "functionName": "sd_E2exTTghxPJnNphQ",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_plan_detailsComponent",
+        "generated": true
+    }
+]

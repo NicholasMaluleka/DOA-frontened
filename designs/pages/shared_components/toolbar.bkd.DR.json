@@ -1665,7 +1665,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<h3 class=\"blue-color\">{{page.user.name}} {{page.user.surname}}</h3>",
+                                            "_value": "<h3 class=\"blue-color\">{{page.user.name}} {{page.user.surname}} {{page.user.firstName}} {{page.user.lastName}}</h3>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

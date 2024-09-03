@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-client_profileComponent
+import { client_profileComponent } from '../components/Client/client_profile.component';
+//CORE_REFERENCE_IMPORT-client_plan_detailsComponent
+import { client_plan_detailsComponent } from '../components/Client/client_plan_details.component';
 //CORE_REFERENCE_IMPORT-sideNavComponent
 import { sideNavComponent } from '../components/shared_components/sideNav.component';
 //CORE_REFERENCE_IMPORT-toolbarComponent
@@ -28,8 +32,6 @@ import { payment_formComponent } from '../components/Admin Dashboard/payment_for
 import { variables } from '../sd-services/variables';
 //CORE_REFERENCE_IMPORT-view_paymentsComponent
 import { view_paymentsComponent } from '../components/Admin Dashboard/view_payments.component';
-//CORE_REFERENCE_IMPORT-clientDasbhoardComponent
-import { clientDasbhoardComponent } from '../components/Client/clientDasbhoard.component';
 //CORE_REFERENCE_IMPORT-edit_personalInfoComponent
 import { edit_personalInfoComponent } from '../components/Admin Dashboard/edit_personalInfo.component';
 //CORE_REFERENCE_IMPORT-claims_registerComponent
@@ -96,6 +98,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_profileComponent
+  client_profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_plan_detailsComponent
+  client_plan_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
   sideNavComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbarComponent
@@ -106,8 +112,6 @@ export const appDeclarations = [
   payment_formComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_paymentsComponent
   view_paymentsComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-clientDasbhoardComponent
-  clientDasbhoardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_personalInfoComponent
   edit_personalInfoComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-claims_registerComponent
@@ -180,6 +184,8 @@ export const appRoutes = [
       { path: 'register', component: registerComponent },
       { path: 'view-payments', component: view_paymentsComponent },
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
+      { path: 'client_plan_details', component: client_plan_detailsComponent },
+      { path: 'client_profile', component: client_profileComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
