@@ -28,7 +28,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": false
     },
     {
         "id": "sd_rLCXQSvPqfkOfsHZ",
@@ -110,7 +111,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": false
     },
     {
         "id": "sd_u1ldiWMdVjhTr00C",
@@ -160,7 +162,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": false
     },
     {
         "id": "sd_qiIi6bjjT1iVNTcP",
@@ -422,9 +425,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "toolbarComponent",
-        "generated": true
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_lmjfVOm0jgPaxNTJ",
@@ -448,7 +451,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": false
     },
     {
         "id": "sd_9CWPhdafRN2uiO3R",

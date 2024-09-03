@@ -638,7 +638,9 @@
         "x": 160,
         "y": 460,
         "wires": [
-            []
+            [
+                "sd_ApqA9ISLMNGfknzq"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -688,6 +690,101 @@
         "category": "Navigation",
         "x": 180,
         "y": 560,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nrUbOI69LYzRt4La",
+        "type": "PageStart",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "sendUser",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "row",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "sendUser",
+        "category": "General",
+        "x": 97,
+        "y": 646.8020629882812,
+        "wires": [
+            [
+                "sd_eVczpAOdwofO12md"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_eVczpAOdwofO12md",
+        "type": "Storage",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "userData"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "row"
+        },
+        "resultMapping": {},
+        "functionName": "sd_eVczpAOdwofO12md",
+        "category": "Storage",
+        "x": 177,
+        "y": 646.8020629882812,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ApqA9ISLMNGfknzq",
+        "type": "Storage",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "userData"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "row"
+        },
+        "resultMapping": {},
+        "functionName": "sd_ApqA9ISLMNGfknzq",
+        "category": "Storage",
+        "x": 245,
+        "y": 460,
         "wires": [
             []
         ],
