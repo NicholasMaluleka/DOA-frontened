@@ -1,44 +1,97 @@
 <div>
-  <div class="profile-container">
-    <!-- Personal Information Section -->
-    <mat-card class="profile-card">
-      <mat-card-header class="profile-card-header">
-        <mat-card-title>
-          <mat-icon class="profile-icon">person</mat-icon> Personal Information
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <div class="profile-item">
-          <label class="profile-label">First Name:</label> <span class="profile-value">{{ page.currentUser.firstName }}</span>
+  <div class="profile-container-alt">
+    <div class="profile-card-alt">
+      <div class="profile-card-header-alt">
+        <mat-icon class="profile-icon-alt">person</mat-icon>
+        <h2>Personal Information</h2>
+      </div>
+      <div class="profile-content-alt">
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">First Name:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.firstName }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.firstName">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Last Name:</label> <span class="profile-value">{{ page.currentUser.lastName }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Last Name:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.lastName }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.lastName">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Email:</label> <span class="profile-value">{{ page.currentUser.email }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Email:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.email }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="email" class="profile-input-alt" [(ngModel)]="page.currentUser.email">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Gender:</label> <span class="profile-value">{{ page.currentUser.gender }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Gender:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.gender }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.gender">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">ID Number:</label> <span class="profile-value">{{ page.currentUser.idNumber }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">ID Number:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.idNumber }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.idNumber">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Cellphone:</label> <span class="profile-value">{{ page.currentUser.cellphone }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Cellphone:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.cellphone }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.cellphone">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Address:</label> <span class="profile-value">{{ page.currentUser.address }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Address:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.address }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.address">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Policy Number:</label> <span class="profile-value">{{ page.currentUser.policyNumber }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Policy Number:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.policyNumber }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.policyNumber">
+          </ng-container>
         </div>
-        <div class="profile-item">
-          <label class="profile-label">Package Type:</label> <span class="profile-value">{{ page.currentUser.packageType }}</span>
+        <div class="profile-item-alt">
+          <label class="profile-label-alt">Package Type:</label>
+          <ng-container *ngIf="!isEditing">
+            <span class="profile-value-alt">{{ page.currentUser.packageType }}</span>
+          </ng-container>
+          <ng-container *ngIf="isEditing">
+            <input type="text" class="profile-input-alt" [(ngModel)]="page.currentUser.packageType">
+          </ng-container>
         </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <mat-icon class="edit-icon" (click)="editProfile()">edit</mat-icon>
-      </mat-card-actions>
-    </mat-card>
+      </div>
+      <div class="profile-card-footer-alt">
+        <button class="edit-button-alt" (click)="toggleEdit()">{{ isEditing ? &apos;Save&apos; : &apos;Edit Profile&apos; }}</button>
+        <button class="cancel-button-alt" *ngIf="isEditing" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
   </div>
 </div>
