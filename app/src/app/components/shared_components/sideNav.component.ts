@@ -218,7 +218,7 @@ export class sideNavComponent {
           route: '/dashboard/payments',
         },
         { label: 'Claims', icon: 'today', route: '/claims' },
-        // {label: "Profile", icon: "today",route: "/dashboard/client_profile"},
+        { label: 'Profile', icon: 'today', route: '/dashboard/client_profile' },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
       //appendnew_next_sd_f8zH5EWAPPgeiqT0
@@ -248,7 +248,7 @@ export class sideNavComponent {
       page.sideNav = [
         { label: 'Home', icon: 'home', route: '/dashboard/director_home' },
         { label: 'Claims', icon: 'description' },
-        { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
+        { label: 'Schedules', icon: 'today', route: '/dashboard/schedules_p' },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
       //appendnew_next_sd_jrEzCa63HbYBkHlw
