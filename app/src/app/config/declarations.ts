@@ -186,6 +186,8 @@ export const appRoutes = [
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
       { path: 'client_plan_details', component: client_plan_detailsComponent },
       { path: 'client_profile', component: client_profileComponent },
+      { path: 'claim_register', component: claims_registerComponent },
+      { path: 'claim-register', component: claims_registerComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },

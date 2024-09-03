@@ -2,6 +2,7 @@
     "classes": [
         "FullHeight",
         "width20",
+        "small-weight",
         "fullWidth",
         "yellow-bg",
         "GREENISH-BG",
@@ -63,6 +64,7 @@
         "height-90",
         "full-height",
         "width-100px",
+        "input-button",
         "card-shadow",
         "filter-cards",
         "nav-items",

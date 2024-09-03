@@ -26,6 +26,11 @@ bh-contact_us{
 .width20{
     width: 5%;
 }
+
+.small-weight{
+    font-size: .4em !important;
+}
+
 .fullWidth{
     width: 100%;
 }
@@ -325,8 +330,16 @@ width: 25%;
 }
 .width-100px{
     width:100px
-}
 
+}
+.input-button{
+width: 150px;
+    border: 2px solid #124e52;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #edf5f569;
+    color: #124e52;
+}
 //button styles
 .box-shadow {
     border-bottom: 5.5px solid $light-blue !important;

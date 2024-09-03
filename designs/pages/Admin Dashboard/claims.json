@@ -341,7 +341,9 @@
         "x": 605,
         "y": 100,
         "wires": [
-            [],
+            [
+                "sd_aNCFGIa8P3FmUQlu"
+            ],
             [],
             [],
             []
@@ -464,12 +466,12 @@
         "z": "sd_sslKQC9SCZ3rr5Xe",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "open",
+        "name": "openBeneficary",
         "outputs": 1,
         "inputVariables": [],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "open",
+        "functionName": "openBeneficary",
         "category": "General",
         "x": 485,
         "y": 100,
@@ -481,5 +483,293 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "claimsComponent"
+    },
+    {
+        "id": "sd_3zlIvBo0PpuXde25",
+        "type": "Storage",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "check"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "check"
+        },
+        "resultMapping": {},
+        "functionName": "sd_3zlIvBo0PpuXde25",
+        "category": "Storage",
+        "x": 805,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_LhywbXVhiP5VbipK",
+        "type": "OpenDialog",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_DhHQUCCXlUUb7ZvE",
+            "label": "searchPolicy"
+        },
+        "relativePath": "app/components/search Policy/searchPolicy",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_LhywbXVhiP5VbipK",
+        "category": "Dialog",
+        "x": 605,
+        "y": 260,
+        "wires": [
+            [
+                "sd_UDh5XCgUWp8UrqTK"
+            ],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_d5Bmgxud8M60Ezv8",
+        "type": "PageStart",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openPolicy",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openPolicy",
+        "category": "General",
+        "x": 485,
+        "y": 260,
+        "wires": [
+            [
+                "sd_LhywbXVhiP5VbipK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "claimsComponent"
+    },
+    {
+        "id": "sd_2WWUBCfUnObCGa7z",
+        "type": "Storage",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "check"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "check"
+        },
+        "resultMapping": {},
+        "functionName": "sd_2WWUBCfUnObCGa7z",
+        "category": "Storage",
+        "x": 785,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aNCFGIa8P3FmUQlu",
+        "type": "Script",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.check = {\n    beneficiary: true,\n    policyHolder: false\n}",
+        "functionName": "sd_aNCFGIa8P3FmUQlu",
+        "category": "Function",
+        "x": 700,
+        "y": 100,
+        "wires": [
+            [
+                "sd_3zlIvBo0PpuXde25"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UDh5XCgUWp8UrqTK",
+        "type": "Script",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.check = {\n    beneficiary: false,\n    policyHolder: true\n}",
+        "functionName": "sd_UDh5XCgUWp8UrqTK",
+        "category": "Function",
+        "x": 705,
+        "y": 260,
+        "wires": [
+            [
+                "sd_2WWUBCfUnObCGa7z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
     }
 ]

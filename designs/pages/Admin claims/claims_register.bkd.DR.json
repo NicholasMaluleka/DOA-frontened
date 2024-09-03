@@ -12,7 +12,7 @@
             },
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "color:#124e52",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -392,7 +392,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "Claims Form -{{page.policyno}}",
+                                "_value": "Claims Form -{{page.policy}}",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -2778,7 +2778,7 @@
                                 },
                                 {
                                     "_key": "*ngIf",
-                                    "_value": "page.policyholder == true",
+                                    "_value": "page.policyHolder == true",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }
@@ -2830,7 +2830,7 @@
                                     },
                                     {
                                         "_key": "datasource",
-                                        "_value": "",
+                                        "_value": "page.ids",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -2863,19 +2863,19 @@
                                     },
                                     {
                                         "_key": "optionValue",
-                                        "_value": "",
+                                        "_value": "option.value",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "optionView",
-                                        "_value": "",
+                                        "_value": "{{option.viewValue}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "formControlName",
-                                        "_value": "",
+                                        "_value": "depsId",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -2936,9 +2936,17 @@
                                     },
                                     {
                                         "_key": "(selectionChange)",
-                                        "_value": "",
+                                        "_value": "populate()",
                                         "_type": "kv",
-                                        "_attrDef": "p"
+                                        "_attrDef": "p",
+                                        "_customAttributeFlag": "flowpicker",
+                                        "objValue": {
+                                            "nodeID": "sd_aLg7SMgOK7JFbf8d",
+                                            "functionName": "populate",
+                                            "activeTree": "pages",
+                                            "z": "sd_N4CyuOQSKrbNKzFe",
+                                            "input": []
+                                        }
                                     },
                                     {
                                         "_key": "selectCustomOption",
@@ -3138,7 +3146,7 @@
                                         },
                                         {
                                             "_key": "value",
-                                            "_value": "",
+                                            "_value": "{{page.name}}",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3315,7 +3323,7 @@
                                         },
                                         {
                                             "_key": "value",
-                                            "_value": "",
+                                            "_value": "{{page.surname}}",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3554,7 +3562,7 @@
                                         },
                                         {
                                             "_key": "value",
-                                            "_value": "",
+                                            "_value": "{{page.idnum}}",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -3731,7 +3739,7 @@
                                         },
                                         {
                                             "_key": "value",
-                                            "_value": "",
+                                            "_value": "{{page.gender}}",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -4550,7 +4558,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "display: flex;     flex-direction: column;     gap: 25px;",
+                                        "_value": "    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4749,7 +4757,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "\r\n <input type=\"file\" id=\"upload1\" (change)=\"upload1()\" accept=\".pdf\"  hidden required formControlName = \"idClaimer2\">\r\n <button class=\"width-100px\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n <mat-error *ngIf =\"page.policyClaimsForm.controls.idClaimer2.errors?.required\">Please Upload File</mat-error>\r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\" accept=\".pdf\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"width-100px\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n <mat-error *ngIf =\"page.policyClaimsForm.controls.idDeceased2.errors?.required\">Please Upload File</mat-error>\r\n\r\n\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" accept=\".pdf\"  hidden required formControlName = \"deathCetificatify2\">\r\n <button class=\"width-100px\"><label for=\"upload3\">\r\n     Upload Death Cetificatify\r\n\r\n </label></button>\r\n <mat-error *ngIf =\"page.policyClaimsForm.controls.deathCetificatify2.errors?.required\">Please Upload File</mat-error>\r\n\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\" accept=\".pdf\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"width-100px\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n <mat-error *ngIf =\"page.policyClaimsForm.controls.bi16632.errors?.required\">Please Upload File</mat-error>\r\n\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\" accept=\".pdf\"  hidden required formControlName = \"bankDetails2\">\r\n <button class=\"width-100px\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n <mat-error *ngIf =\"page.policyClaimsForm.controls.bankDetails2.errors?.required\">Please Upload File</mat-error>\r\n\r\n",
+                                            "_value": "\r\n <input type=\"file\" id=\"upload1\" (change)=\"upload1()\" accept=\".pdf\"  hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.idClaimer2.errors?.required\">Please Upload File</mat-error> -->\r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\" accept=\".pdf\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.idDeceased2.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" accept=\".pdf\"  hidden required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Cetificatify\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.deathCetificatify2.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\" accept=\".pdf\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.bi16632.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\" accept=\".pdf\"  hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.bankDetails2.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -4849,12 +4857,12 @@
                                         },
                                         {
                                             "_key": "(click)",
-                                            "_value": "sd_IXCHRCQfCoHdrMK4()",
+                                            "_value": "sd_Pmcf2QLXpNt1xmib()",
                                             "_type": "kv",
                                             "_attrDef": "p",
                                             "objValue": {
-                                                "nodeID": "sd_IXCHRCQfCoHdrMK4",
-                                                "functionName": "sd_IXCHRCQfCoHdrMK4",
+                                                "nodeID": "sd_Pmcf2QLXpNt1xmib",
+                                                "functionName": "sd_Pmcf2QLXpNt1xmib",
                                                 "activeTree": "pages",
                                                 "z": "sd_N4CyuOQSKrbNKzFe",
                                                 "input": []

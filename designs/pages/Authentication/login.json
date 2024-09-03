@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_9qBlAyTvanNO52sj",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 40,
         "wires": [
             [
                 "sd_QZIhirkF1KOOozB7"
@@ -111,11 +111,11 @@
         "flow_type": "sync",
         "functionName": "login",
         "category": "General",
-        "x": 40,
+        "x": 25,
         "y": 160,
         "wires": [
             [
-                "sd_aTFbyAc1RKygWOcE"
+                "sd_rkB5QqUgrAKv3a1e"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -231,28 +231,6 @@
         "generated": true
     },
     {
-        "id": "sd_aTFbyAc1RKygWOcE",
-        "type": "Script",
-        "z": "sd_fn8FAmmpAsSioSZv",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "// console.log(\"Form\", bh.input.form.form.status)\n",
-        "functionName": "sd_aTFbyAc1RKygWOcE",
-        "category": "Function",
-        "x": 105,
-        "y": 160,
-        "wires": [
-            [
-                "sd_rkB5QqUgrAKv3a1e"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
-    },
-    {
         "id": "sd_buYzaxDxyjRaVxqv",
         "type": "PageSwitch",
         "z": "sd_fn8FAmmpAsSioSZv",
@@ -294,7 +272,7 @@
                 "sd_vl5FCxtDP6xLD1fe"
             ],
             [
-                "sd_SGMcpcrY4y3UKTKj"
+                "sd_iGycO4jnqKpix0R8"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -402,7 +380,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -410,11 +390,11 @@
         "direction": "ltr",
         "functionName": "sd_SGMcpcrY4y3UKTKj",
         "category": "General",
-        "x": 705,
-        "y": 300,
+        "x": 785,
+        "y": 280,
         "wires": [
             [
-                "sd_iGycO4jnqKpix0R8"
+                "sd_AID4OaedpjFFkl1s"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -501,7 +481,7 @@
         "outputs": 2,
         "functionName": "sd_rkB5QqUgrAKv3a1e",
         "category": "Function",
-        "x": 185,
+        "x": 145,
         "y": 160,
         "wires": [
             [
@@ -546,8 +526,8 @@
         "direction": "ltr",
         "functionName": "sd_AKCd9T0p7cDWhRTR",
         "category": "General",
-        "x": 300,
-        "y": 80,
+        "x": 285,
+        "y": 100,
         "wires": [
             []
         ],
@@ -586,13 +566,20 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/home",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_iGycO4jnqKpix0R8",
         "category": "Navigation",
-        "x": 825,
-        "y": 260,
+        "x": 705,
+        "y": 280,
         "wires": [
             [
-                "sd_AID4OaedpjFFkl1s"
+                "sd_SGMcpcrY4y3UKTKj"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -610,8 +597,8 @@
         "script": "console.log(\"res\", bh.result)",
         "functionName": "sd_AID4OaedpjFFkl1s",
         "category": "Function",
-        "x": 905,
-        "y": 260,
+        "x": 885,
+        "y": 280,
         "wires": [
             [
                 "sd_QCpkMADtxfSqgHXt"
@@ -621,44 +608,6 @@
         "generateNext": false,
         "serviceName": "loginComponent",
         "generated": true
-    },
-    {
-        "id": "sd_Iqjr01FHlpRey07B",
-        "type": "Script",
-        "z": "sd_fn8FAmmpAsSioSZv",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"res\", bh.result)",
-        "functionName": "sd_Iqjr01FHlpRey07B",
-        "category": "Function",
-        "x": 825,
-        "y": 180,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "loginComponent"
-    },
-    {
-        "id": "sd_i2Jgl31qwu3RHkJP",
-        "type": "Script",
-        "z": "sd_fn8FAmmpAsSioSZv",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"res\", bh.result)",
-        "functionName": "sd_i2Jgl31qwu3RHkJP",
-        "category": "Function",
-        "x": 825,
-        "y": 100,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "loginComponent"
     },
     {
         "id": "sd_QCpkMADtxfSqgHXt",
@@ -681,8 +630,8 @@
         "resultMapping": {},
         "functionName": "sd_QCpkMADtxfSqgHXt",
         "category": "Storage",
-        "x": 985,
-        "y": 260,
+        "x": 965,
+        "y": 280,
         "wires": [
             []
         ],
