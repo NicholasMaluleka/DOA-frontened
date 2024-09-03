@@ -714,12 +714,12 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "open()",
+                                    "_value": "openPolicy()",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "objValue": {
-                                        "nodeID": "sd_7kDEC5bWU42VY8uN",
-                                        "functionName": "open",
+                                        "nodeID": "sd_d5Bmgxud8M60Ezv8",
+                                        "functionName": "openPolicy",
                                         "activeTree": "pages",
                                         "z": "sd_sslKQC9SCZ3rr5Xe",
                                         "input": []
@@ -765,9 +765,16 @@
                                 },
                                 {
                                     "_key": "(click)",
-                                    "_value": "",
+                                    "_value": "openBeneficary()",
                                     "_type": "kv",
-                                    "_attrDef": "p"
+                                    "_attrDef": "p",
+                                    "objValue": {
+                                        "nodeID": "sd_7kDEC5bWU42VY8uN",
+                                        "functionName": "openBeneficary",
+                                        "activeTree": "pages",
+                                        "z": "sd_sslKQC9SCZ3rr5Xe",
+                                        "input": []
+                                    }
                                 },
                                 {
                                     "_key": "[disabled]",
