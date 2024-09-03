@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_WDYF8MZP3j9BoXiB",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 40,
         "wires": [
             [
                 "sd_rLCXQSvPqfkOfsHZ"
@@ -40,11 +40,19 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "messages",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_rLCXQSvPqfkOfsHZ",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 165,
+        "y": 40,
         "wires": [
             [
                 "sd_rXrGjoBSlzR0uWPY"
@@ -314,6 +322,7 @@
         "serviceImportPath": "./",
         "startName": "fetchLoggedInUser",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_MQDVqrXGwtTycRuD",
         "category": "General",
@@ -411,13 +420,16 @@
         "serviceImportPath": "./",
         "startName": "getInitials",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_iVhqs9Yhhcc5HWXd",
         "category": "General",
         "x": 525,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_mjHylQATN82vPHZ2"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -489,6 +501,26 @@
         "category": "Navigation",
         "x": 250,
         "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mjHylQATN82vPHZ2",
+        "type": "Script",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.messages = [\n    {for: \"\", not: \"Claim has been approved\"},\n    {for: \"\", not: \"Claim applied successfully\"},\n    {for: \"\", not: \"Claim has been approved\"},\n    {for: \"\", not: \"Claim applied successfully\"},\n    {for: \"\", not: \"Claim has been approved\"},\n    {for: \"\", not: \"Claim applied successfully\"},\n]\n\nconsole.log(\"MESSAGES: \", page.messages)",
+        "functionName": "sd_mjHylQATN82vPHZ2",
+        "category": "Function",
+        "x": 625,
+        "y": 40,
         "wires": [
             []
         ],
