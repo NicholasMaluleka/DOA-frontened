@@ -213,7 +213,7 @@ export class sideNavComponent {
           route: '/dashboard/client_plan_details',
         },
         { label: 'Payment History', icon: 'edit', route: '/payment-history' },
-        { label: 'Claims', icon: 'today', route: '/claims' },
+        { label: 'Claims', icon: 'today', route: '/dashboard/client_claims' },
         { label: 'Profile', icon: 'today', route: '/dashboard/client_profile' },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);

@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-client_claim_formComponent
+import { client_claim_formComponent } from '../components/Client/client_claim_form.component';
+//CORE_REFERENCE_IMPORT-client_claimsComponent
+import { client_claimsComponent } from '../components/Client/client_claims.component';
 //CORE_REFERENCE_IMPORT-Director_homeComponent
 import { Director_homeComponent } from '../components/Director/Director_home.component';
 //CORE_REFERENCE_IMPORT-client_profileComponent
@@ -100,6 +104,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claim_formComponent
+  client_claim_formComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claimsComponent
+  client_claimsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-Director_homeComponent
   Director_homeComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_profileComponent
@@ -190,9 +198,9 @@ export const appRoutes = [
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
       { path: 'client_plan_details', component: client_plan_detailsComponent },
       { path: 'client_profile', component: client_profileComponent },
-      { path: 'claim_register', component: claims_registerComponent },
       { path: 'claim-register', component: claims_registerComponent },
-      { path: 'director_home', component: Director_homeComponent },
+      { path: 'client_claims', component: client_claimsComponent },
+      { path: 'client_claim_form', component: client_claim_formComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
