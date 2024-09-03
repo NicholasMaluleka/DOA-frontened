@@ -711,6 +711,46 @@ body{
     border-radius: 10px;
 }
 
+.sim-x-small {
+    font-size: x-small;
+}
+
+.sim-menu {
+    button.mat-menu-item {
+        height: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mat-menu-panel {
+        min-height: 0px !important;
+    }
+
+    .mat-menu-content:not(:empty) {
+        max-height: 50px !important;
+    }
+    .mat-menu-content::-webkit-scrollbar {
+       width: 10px;
+    }
+}
+
+/* width */
+// .mat-menu-content::-webkit-scrollbar {
+//   width: 10px;
+// }
+
+/* Track */
+// .mat-menu-content::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px $light-grey;
+//   border-radius: 10px;
+// }
+
+/* Handle */
+// .mat-menu-content::-webkit-scrollbar-thumb {
+//   background: $yellow;
+//   border-radius: 10px;
+// }
+
 .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
     background-color: $light-grey;
     color:black;
