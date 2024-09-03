@@ -136,6 +136,21 @@ export class homeComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_oYuxO86FKvA3jf09');
     }
   }
+
+  sendUser(row: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { row };
+      bh.local = {};
+      bh = this.sd_eVczpAOdwofO12md(bh);
+      //appendnew_next_sendUser
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nrUbOI69LYzRt4La');
+    }
+  }
   //appendnew_flow_homeComponent_start
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
@@ -372,10 +387,21 @@ export class homeComponent implements AfterViewInit {
 
       let outputVariables = await variablesInstance.setVariable(bh.input.row);
 
+      bh = this.sd_ApqA9ISLMNGfknzq(bh);
       //appendnew_next_sd_iLkoHwTtrAd37cM8
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_iLkoHwTtrAd37cM8');
+    }
+  }
+
+  sd_ApqA9ISLMNGfknzq(bh) {
+    try {
+      sessionStorage.setItem('userData', JSON.stringify(bh.input.row));
+      //appendnew_next_sd_ApqA9ISLMNGfknzq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ApqA9ISLMNGfknzq');
     }
   }
 
@@ -390,6 +416,16 @@ export class homeComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_WnahUlnrdMBkCHsS');
+    }
+  }
+
+  sd_eVczpAOdwofO12md(bh) {
+    try {
+      sessionStorage.setItem('userData', JSON.stringify(bh.input.row));
+      //appendnew_next_sd_eVczpAOdwofO12md
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eVczpAOdwofO12md');
     }
   }
 
