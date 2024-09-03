@@ -129,6 +129,27 @@
         "mat-step-header",
         "mat-step-icon-selected",
         "mat-step-icon-state-done",
-        "mat-step-icon-state-edit"
+        "mat-step-icon-state-edit",
+        "container",
+        "item",
+        "profile-container",
+        "profile-card",
+        "profile-card-header",
+        "profile-item",
+        "profile-label",
+        "profile-value",
+        "profile-icon",
+        "mat-card-actions",
+        "edit-button",
+        "summary-cards",
+        "card",
+        "card-info",
+        "count",
+        "pending",
+        "partially-approved",
+        "fully-approved",
+        "icon-hourglass",
+        "icon-half-check",
+        "icon-check"
     ]
 }

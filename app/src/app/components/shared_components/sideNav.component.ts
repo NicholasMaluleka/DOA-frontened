@@ -212,7 +212,11 @@ export class sideNavComponent {
           icon: 'description',
           route: '/dashboard/client_plan_details',
         },
-        { label: 'Payment History', icon: 'edit', route: '/payment-history' },
+        {
+          label: 'Payment History',
+          icon: 'edit',
+          route: '/dashboard/payments',
+        },
         { label: 'Claims', icon: 'today', route: '/claims' },
         { label: 'Profile', icon: 'today', route: '/dashboard/client_profile' },
       ];
@@ -242,7 +246,7 @@ export class sideNavComponent {
     try {
       const page = this.page;
       page.sideNav = [
-        { label: 'Home', icon: 'home', route: '/dashboard/home' },
+        { label: 'Home', icon: 'home', route: '/dashboard/director_home' },
         { label: 'Claims', icon: 'description' },
         { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
       ];

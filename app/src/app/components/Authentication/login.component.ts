@@ -349,7 +349,9 @@ export class loginComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_plan_details');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_viITVWMo8noRtLLF(bh);
       //appendnew_next_sd_r58lpYP5NfnKU8WQ
       return bh;
@@ -360,14 +362,12 @@ export class loginComponent {
 
   sd_viITVWMo8noRtLLF(bh) {
     try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Successfully logged in', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
+      this.__page_injector__.get(MatSnackBar).open('Welcome client', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
       bh = this.sd_iiPTp6BRisa9Wz2L(bh);
       //appendnew_next_sd_viITVWMo8noRtLLF
       return bh;
