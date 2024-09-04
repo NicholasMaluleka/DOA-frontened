@@ -88,7 +88,7 @@ export class sideNavComponent {
 
   sd_Y29YZPnIqCM7xqBL(bh) {
     try {
-      bh = this.sd_rD9EfBH7W7rmhjwX(bh);
+      bh = this.sd_J9mMNs3JHkGQ8Dpf(bh);
       //appendnew_next_sd_Y29YZPnIqCM7xqBL
       return bh;
     } catch (e) {
@@ -96,7 +96,66 @@ export class sideNavComponent {
     }
   }
 
-  sd_rD9EfBH7W7rmhjwX(bh) {
+  sd_J9mMNs3JHkGQ8Dpf(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_kM51QV4KRuw3NP4S(bh);
+      //appendnew_next_sd_J9mMNs3JHkGQ8Dpf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_J9mMNs3JHkGQ8Dpf');
+    }
+  }
+
+  sd_kM51QV4KRuw3NP4S(bh) {
+    try {
+      this.page.navItem = JSON.parse(sessionStorage.getItem('navItem'));
+      bh = this.sd_ZHyVAET40BbWJoWQ(bh);
+      //appendnew_next_sd_kM51QV4KRuw3NP4S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kM51QV4KRuw3NP4S');
+    }
+  }
+
+  sd_ZHyVAET40BbWJoWQ(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'admin',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_b3dzn7MpxnUPDSJw(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'client',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_f8zH5EWAPPgeiqT0(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_jrEzCa63HbYBkHlw(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZHyVAET40BbWJoWQ');
+    }
+  }
+
+  sd_b3dzn7MpxnUPDSJw(bh) {
     try {
       const page = this.page;
       page.sideNav = [
@@ -111,11 +170,25 @@ export class sideNavComponent {
         { label: 'Reports', icon: 'folder_open' },
         { label: 'Audit Logs', icon: 'trending_up' },
       ];
-      bh = this.sd_jIwsW9y1obE9SE6s(bh);
-      //appendnew_next_sd_rD9EfBH7W7rmhjwX
+      bh = this.sd_2tPXtu9NFHtoLXpa(bh);
+      //appendnew_next_sd_b3dzn7MpxnUPDSJw
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_rD9EfBH7W7rmhjwX');
+      return this.errorHandler(bh, e, 'sd_b3dzn7MpxnUPDSJw');
+    }
+  }
+
+  sd_2tPXtu9NFHtoLXpa(bh) {
+    try {
+      this.page.navItem = this.page.navItem;
+      this.page.selectedItem = 0;
+      this.page.name = this.page.user.name;
+      this.page.surname = this.page.user.surname;
+      bh = this.sd_jIwsW9y1obE9SE6s(bh);
+      //appendnew_next_sd_2tPXtu9NFHtoLXpa
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2tPXtu9NFHtoLXpa');
     }
   }
 
@@ -127,6 +200,61 @@ export class sideNavComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_jIwsW9y1obE9SE6s');
+    }
+  }
+
+  sd_f8zH5EWAPPgeiqT0(bh) {
+    try {
+      const page = this.page;
+      page.sideNav = [
+        {
+          label: 'Plan details',
+          icon: 'description',
+          route: '/dashboard/client_plan_details',
+        },
+        {
+          label: 'Payment History',
+          icon: 'edit',
+          route: '/dashboard/payments',
+        },
+        { label: 'Claims', icon: 'today', route: '/claims' },
+        { label: 'Profile', icon: 'today', route: '/dashboard/client_profile' },
+      ];
+      bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
+      //appendnew_next_sd_f8zH5EWAPPgeiqT0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_f8zH5EWAPPgeiqT0');
+    }
+  }
+
+  sd_NQPqzgmJ8fI8o7Rm(bh) {
+    try {
+      this.page.navItem = this.page.navItem;
+      this.page.selectedItem = 0;
+      this.page.name = this.page.user.firstName;
+      this.page.surname = this.page.user.lastName;
+      bh = this.sd_jIwsW9y1obE9SE6s(bh);
+      //appendnew_next_sd_NQPqzgmJ8fI8o7Rm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NQPqzgmJ8fI8o7Rm');
+    }
+  }
+
+  sd_jrEzCa63HbYBkHlw(bh) {
+    try {
+      const page = this.page;
+      page.sideNav = [
+        { label: 'Home', icon: 'home', route: '/dashboard/director_home' },
+        { label: 'Claims', icon: 'description' },
+        { label: 'Schedules', icon: 'today', route: '/dashboard/schedules_p' },
+      ];
+      bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
+      //appendnew_next_sd_jrEzCa63HbYBkHlw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jrEzCa63HbYBkHlw');
     }
   }
 

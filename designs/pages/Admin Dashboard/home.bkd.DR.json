@@ -1871,6 +1871,12 @@
                     "_value": "true",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.table.length > 0",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "99eecd70-5d13-f169-3009-91cfd1e5de2c": {
@@ -2392,6 +2398,21 @@
                                 "_value": "{table: table}",
                                 "_type": "kv",
                                 "_attrDef": "c"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "sendUser(row)",
+                                "_type": "kv",
+                                "_attrDef": "c",
+                                "objValue": {
+                                    "nodeID": "sd_nrUbOI69LYzRt4La",
+                                    "functionName": "sendUser",
+                                    "activeTree": "pages",
+                                    "z": "sd_o4ikLTEW12PcNWYL",
+                                    "input": [
+                                        "row"
+                                    ]
+                                }
                             }
                         ]
                     }

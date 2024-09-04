@@ -47,29 +47,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_rD9EfBH7W7rmhjwX"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "sideNavComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_rD9EfBH7W7rmhjwX",
-        "type": "Script",
-        "z": "sd_ujStGyjFVkp806yD",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/home\"},\n    {label: \"Claims\", icon: \"description\", route: \"/dashboard/claims\"},\n    {label: \"Register Client\", icon: \"edit\", route:\"/dashboard/register\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n    {label: \"Reports\", icon: \"folder_open\"},\n    {label: \"Audit Logs\", icon: \"trending_up\"}\n]",
-        "functionName": "sd_rD9EfBH7W7rmhjwX",
-        "category": "Function",
-        "x": 225,
-        "y": 40,
-        "wires": [
-            [
-                "sd_jIwsW9y1obE9SE6s"
+                "sd_J9mMNs3JHkGQ8Dpf"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -169,7 +147,7 @@
         ],
         "functionName": "sd_jIwsW9y1obE9SE6s",
         "category": "Function",
-        "x": 305,
+        "x": 665,
         "y": 40,
         "wires": [
             []
@@ -228,6 +206,299 @@
         "y": 260,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_b3dzn7MpxnUPDSJw",
+        "type": "Script",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/home\"},\n    {label: \"Claims\", icon: \"description\", route: \"/dashboard/claims\"},\n    {label: \"Register Client\", icon: \"edit\", route:\"/dashboard/register\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n    {label: \"Reports\", icon: \"folder_open\"},\n    {label: \"Audit Logs\", icon: \"trending_up\"}\n]",
+        "functionName": "sd_b3dzn7MpxnUPDSJw",
+        "category": "Function",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            [
+                "sd_2tPXtu9NFHtoLXpa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_f8zH5EWAPPgeiqT0",
+        "type": "Script",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.sideNav = [\n    {label: \"Plan details\", icon: \"description\", route: \"/dashboard/client_plan_details\"},\n    {label: \"Payment History\", icon: \"edit\", route:\"/dashboard/payments\"},\n    {label: \"Claims\", icon: \"today\", route: \"/claims\"},\n    {label: \"Profile\", icon: \"today\",route: \"/dashboard/client_profile\"},\n\n]",
+        "functionName": "sd_f8zH5EWAPPgeiqT0",
+        "category": "Function",
+        "x": 465,
+        "y": 120,
+        "wires": [
+            [
+                "sd_NQPqzgmJ8fI8o7Rm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZHyVAET40BbWJoWQ",
+        "type": "PageSwitch",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "user.role",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.user.role",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "admin",
+                "vt": "str",
+                "gv": "\"admin\""
+            },
+            {
+                "t": "eq",
+                "v": "client",
+                "vt": "str",
+                "gv": "\"client\""
+            },
+            {
+                "t": "eq",
+                "v": "director",
+                "vt": "str",
+                "gv": "\"director\""
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "functionName": "sd_ZHyVAET40BbWJoWQ",
+        "category": "Function",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_b3dzn7MpxnUPDSJw"
+            ],
+            [
+                "sd_f8zH5EWAPPgeiqT0"
+            ],
+            [
+                "sd_jrEzCa63HbYBkHlw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kM51QV4KRuw3NP4S",
+        "type": "Storage",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "navItem"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "navItem"
+        },
+        "functionName": "sd_kM51QV4KRuw3NP4S",
+        "category": "Storage",
+        "x": 285,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ZHyVAET40BbWJoWQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2tPXtu9NFHtoLXpa",
+        "type": "PageVariables",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "navItem",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navItem"
+                }
+            },
+            {
+                "textIp": "selectedItem",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            },
+            {
+                "textIp": "name",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user.name"
+                }
+            },
+            {
+                "textIp": "surname",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user.surname"
+                }
+            }
+        ],
+        "functionName": "sd_2tPXtu9NFHtoLXpa",
+        "category": "Function",
+        "x": 565,
+        "y": 40,
+        "wires": [
+            [
+                "sd_jIwsW9y1obE9SE6s"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jrEzCa63HbYBkHlw",
+        "type": "Script",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/director_home\"},\n    {label: \"Claims\", icon: \"description\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules_p\"},\n]",
+        "functionName": "sd_jrEzCa63HbYBkHlw",
+        "category": "Function",
+        "x": 465,
+        "y": 200,
+        "wires": [
+            [
+                "sd_NQPqzgmJ8fI8o7Rm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_J9mMNs3JHkGQ8Dpf",
+        "type": "Storage",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_J9mMNs3JHkGQ8Dpf",
+        "category": "Storage",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_kM51QV4KRuw3NP4S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_NQPqzgmJ8fI8o7Rm",
+        "type": "PageVariables",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "navItem",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "navItem"
+                }
+            },
+            {
+                "textIp": "selectedItem",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            },
+            {
+                "textIp": "name",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user.firstName"
+                }
+            },
+            {
+                "textIp": "surname",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user.lastName"
+                }
+            }
+        ],
+        "functionName": "sd_NQPqzgmJ8fI8o7Rm",
+        "category": "Function",
+        "x": 565,
+        "y": 140,
+        "wires": [
+            [
+                "sd_jIwsW9y1obE9SE6s"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

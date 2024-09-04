@@ -2034,8 +2034,8 @@
                         {
                             "_key": "class",
                             "_value": [
-                                "box-sizing",
                                 "padding-5px",
+                                "box-sizing",
                                 "light-grey-bg"
                             ],
                             "_type": "dav",
@@ -2145,6 +2145,7 @@
                         "aa1385a1-d2d0-6310-d8a6-7c0451469d88": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "42d51ab1-4835-9ada-e68c-ca7a9d013654",
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2209,6 +2210,7 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "aa1385a1-d2d0-6310-d8a6-7c0451469d88",
                                 "isAdvancedComponent": true,
+                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2396,6 +2398,7 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "f43fece3-7823-23af-b815-2c6dda0afdbf",
                                     "isAdvancedChildComponent": true,
+                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {

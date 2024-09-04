@@ -1,0 +1,215 @@
+{
+    "6f549fa5-4ff3-f36f-ef3a-841fbaf46100": {
+        "paletteKey": "Html5",
+        "isAdvancedComponent": true,
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "htmlElement",
+                "_value": "div",
+                "_type": "dav",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "tagType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "name",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "sandbox",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "src",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "srcdoc",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "width",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "[autoplay]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "[loop]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "data",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioSource",
+                "_value": [],
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoSource",
+                "_value": [],
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioDatasource",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioSrc",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoDatasource",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoSrc",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audioplay)",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videoplay)",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audiopause)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videopause)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audioended)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videoended)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            }
+        ],
+        "75b50845-03df-d448-f50b-710d9c40bcea": {
+            "paletteKey": "html-editor",
+            "parentEditorKey": "6f549fa5-4ff3-f36f-ef3a-841fbaf46100",
+            "isAdvancedChildComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "html",
+                    "_value": "<div class=\"profile-container-alt\">\r\n  <div class=\"profile-card-alt\">\r\n    <div class=\"profile-card-header-alt\">\r\n      <mat-icon class=\"profile-icon-alt\">person</mat-icon>\r\n      <h2>Personal Information</h2>\r\n    </div>\r\n    <div class=\"profile-content-alt\">\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">First Name:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.firstName }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.firstName\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Last Name:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.lastName }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.lastName\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Email:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.email }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"email\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.email\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Gender:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.gender }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.gender\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">ID Number:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.idNumber }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.idNumber\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Cellphone:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.cellphone }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.cellphone\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Address:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.address }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.address\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Policy Number:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.policyNumber }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.policyNumber\">\r\n        </ng-container>\r\n      </div>\r\n      <div class=\"profile-item-alt\">\r\n        <label class=\"profile-label-alt\">Package Type:</label>\r\n        <ng-container *ngIf=\"!isEditing\">\r\n          <span class=\"profile-value-alt\">{{ page.currentUser.packageType }}</span>\r\n        </ng-container>\r\n        <ng-container *ngIf=\"isEditing\">\r\n          <input type=\"text\" class=\"profile-input-alt\" [(ngModel)]=\"page.currentUser.packageType\">\r\n        </ng-container>\r\n      </div>\r\n    </div>\r\n    <div class=\"profile-card-footer-alt\">\r\n      <button class=\"edit-button-alt\" (click)=\"toggleEdit()\">{{ isEditing ? 'Save' : 'Edit Profile' }}</button>\r\n      <button class=\"cancel-button-alt\" *ngIf=\"isEditing\" (click)=\"cancelEdit()\">Cancel</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

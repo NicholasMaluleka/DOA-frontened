@@ -16,6 +16,16 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-schedules_pComponent
+import { schedules_pComponent } from '../components/Director/schedules_p.component';
+//CORE_REFERENCE_IMPORT-paymentsComponent
+import { paymentsComponent } from '../components/Client/payments.component';
+//CORE_REFERENCE_IMPORT-Director_homeComponent
+import { Director_homeComponent } from '../components/Director/Director_home.component';
+//CORE_REFERENCE_IMPORT-client_profileComponent
+import { client_profileComponent } from '../components/Client/client_profile.component';
+//CORE_REFERENCE_IMPORT-client_plan_detailsComponent
+import { client_plan_detailsComponent } from '../components/Client/client_plan_details.component';
 //CORE_REFERENCE_IMPORT-edit_claimComponent
 import { edit_claimComponent } from '../components/Admin Dashboard/edit_claim.component';
 //CORE_REFERENCE_IMPORT-sideNavComponent
@@ -30,8 +40,6 @@ import { payment_formComponent } from '../components/Admin Dashboard/payment_for
 import { variables } from '../sd-services/variables';
 //CORE_REFERENCE_IMPORT-view_paymentsComponent
 import { view_paymentsComponent } from '../components/Admin Dashboard/view_payments.component';
-//CORE_REFERENCE_IMPORT-clientDasbhoardComponent
-import { clientDasbhoardComponent } from '../components/Client/clientDasbhoard.component';
 //CORE_REFERENCE_IMPORT-edit_personalInfoComponent
 import { edit_personalInfoComponent } from '../components/Admin Dashboard/edit_personalInfo.component';
 //CORE_REFERENCE_IMPORT-claims_registerComponent
@@ -98,6 +106,16 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
+  schedules_pComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-paymentsComponent
+  paymentsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-Director_homeComponent
+  Director_homeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_profileComponent
+  client_profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_plan_detailsComponent
+  client_plan_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_claimComponent
   edit_claimComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
@@ -110,8 +128,6 @@ export const appDeclarations = [
   payment_formComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_paymentsComponent
   view_paymentsComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-clientDasbhoardComponent
-  clientDasbhoardComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_personalInfoComponent
   edit_personalInfoComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-claims_registerComponent
@@ -184,8 +200,13 @@ export const appRoutes = [
       { path: 'register', component: registerComponent },
       { path: 'view-payments', component: view_paymentsComponent },
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
+      { path: 'client_plan_details', component: client_plan_detailsComponent },
+      { path: 'client_profile', component: client_profileComponent },
       { path: 'claim_register', component: claims_registerComponent },
       { path: 'claim-register', component: claims_registerComponent },
+      { path: 'director_home', component: Director_homeComponent },
+      { path: 'payments', component: paymentsComponent },
+      { path: 'schedules_p', component: schedules_pComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
