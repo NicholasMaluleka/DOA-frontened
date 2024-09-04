@@ -28,7 +28,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_10GshSRIqokJRDnz",
@@ -95,7 +96,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_x0AVTFDWsdElklrU",
@@ -387,7 +389,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_oTnwqN7gr5BF6zF1",
@@ -417,7 +420,6 @@
         "serviceImportPath": "./",
         "startName": "getSchedules",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_oTnwqN7gr5BF6zF1",
         "category": "General",
@@ -427,9 +429,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "schedulesComponent",
-        "generated": true
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_G8YN2Rq1FHiszlWV",
@@ -453,7 +455,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_lWLxkvHgBt0cwZ0j",
@@ -614,7 +617,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_bgj0MEdiE4Tv6reS",
@@ -753,7 +757,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": false
     },
     {
         "id": "sd_aeiaDG1cBQidkd3O",
