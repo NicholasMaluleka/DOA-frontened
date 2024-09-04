@@ -26,6 +26,8 @@ import { Director_homeComponent } from '../components/Director/Director_home.com
 import { client_profileComponent } from '../components/Client/client_profile.component';
 //CORE_REFERENCE_IMPORT-client_plan_detailsComponent
 import { client_plan_detailsComponent } from '../components/Client/client_plan_details.component';
+//CORE_REFERENCE_IMPORT-edit_claimComponent
+import { edit_claimComponent } from '../components/Admin Dashboard/edit_claim.component';
 //CORE_REFERENCE_IMPORT-sideNavComponent
 import { sideNavComponent } from '../components/shared_components/sideNav.component';
 //CORE_REFERENCE_IMPORT-toolbarComponent
@@ -114,6 +116,8 @@ export const appDeclarations = [
   client_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_plan_detailsComponent
   client_plan_detailsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_claimComponent
+  edit_claimComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
   sideNavComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbarComponent

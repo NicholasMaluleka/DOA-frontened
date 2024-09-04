@@ -2,7 +2,7 @@
   <div fxLayout="column " class="scroller" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center center" [fxShow]="true">
       <h2>
-        Claims Form -{{page.policy}}</h2>
+        Claims Form - {{page.policyNo}}</h2>
     </div>
     <form [formGroup]="page.policyClaimsForm">
       <div fxLayout="column wrap" style="padding-left:19px; padding-right:19px" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -13,8 +13,8 @@
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.beneficiary ==true"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Beneficiary Id Number</mat-label>
               <mat-select placeholder="Select" [required]="false">
-                <ng-template ngFor let-option [ngForOf] let-i="index">
-                  <mat-option [value]></mat-option>
+                <ng-template ngFor let-option [ngForOf]="page.beIds" let-i="index">
+                  <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
                 </ng-template>
               </mat-select>
 
@@ -133,7 +133,7 @@
               <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.bankDetails2.errors?.required">Please Upload File</mat-error> -->
 
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="sd_Pmcf2QLXpNt1xmib()">Submit a Claim</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="start()">Submit a Claim</button></div>
           </div>
         </div>
       </div>
