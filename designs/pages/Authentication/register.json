@@ -1390,7 +1390,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
