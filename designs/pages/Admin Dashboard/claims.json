@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_Z1DToX7LS6YU49Dk",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 40,
         "wires": [
             [
                 "sd_f4qlWKJDct97cBFV"
@@ -58,11 +58,11 @@
         ],
         "functionName": "sd_f4qlWKJDct97cBFV",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 165,
+        "y": 40,
         "wires": [
             [
-                "sd_GwgX5mNFcON59xzn"
+                "sd_VR4tz5tQLO9fBnmI"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -77,11 +77,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.local.dataSource = new MatTableDataSource([\n  {\n    position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',  }\n  ,\n  {\n    position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' }\n  ,\n  {\n    position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' }\n  ,\n  {\n    position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' }\n  ,\n  {\n    position: 5, name: 'Boron', weight: 10.811, symbol: 'B' }\n  ,\n  {\n    position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' }\n  ,\n  {\n    position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' }\n  ,\n  {\n    position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' }\n  ,\n  {\n    position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' }\n  ,\n  {\n    position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }\n  ,\n]);",
+        "script": "console.log(\"claims ->\", page.result)\n\nbh.local.dataSource = new MatTableDataSource(page.result);",
         "functionName": "sd_eJuzOUTYKNgXaqdz_1",
         "category": "Function",
-        "x": 190,
-        "y": 140,
+        "x": 485,
+        "y": 40,
         "wires": [
             [
                 "sd_3pY8tDHomR137FNx"
@@ -113,8 +113,8 @@
         ],
         "functionName": "sd_E9QbOlnVduPNV5MO_1",
         "category": "Function",
-        "x": 330,
-        "y": 140,
+        "x": 585,
+        "y": 40,
         "wires": [
             []
         ],
@@ -339,7 +339,7 @@
         "functionName": "sd_R4PZGnmiLIdMHbq5",
         "category": "Dialog",
         "x": 605,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "sd_aNCFGIa8P3FmUQlu"
@@ -474,7 +474,7 @@
         "functionName": "openBeneficary",
         "category": "General",
         "x": 485,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "sd_R4PZGnmiLIdMHbq5"
@@ -506,7 +506,7 @@
         "functionName": "sd_3zlIvBo0PpuXde25",
         "category": "Storage",
         "x": 805,
-        "y": 100,
+        "y": 140,
         "wires": [
             []
         ],
@@ -739,7 +739,7 @@
         "functionName": "sd_aNCFGIa8P3FmUQlu",
         "category": "Function",
         "x": 700,
-        "y": 100,
+        "y": 140,
         "wires": [
             [
                 "sd_3zlIvBo0PpuXde25"
@@ -765,6 +765,108 @@
         "wires": [
             [
                 "sd_2WWUBCfUnObCGa7z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VR4tz5tQLO9fBnmI",
+        "type": "Environment",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_VR4tz5tQLO9fBnmI",
+        "category": "General",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_gSvpKSvplT90yV3v"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_gSvpKSvplT90yV3v",
+        "type": "Script",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdURL + \"get-claims\"",
+        "functionName": "sd_gSvpKSvplT90yV3v",
+        "category": "Function",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_7iqhFUJtamXGE2xs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7iqhFUJtamXGE2xs",
+        "type": "HttpRequest",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_7iqhFUJtamXGE2xs",
+        "category": "HTTP",
+        "x": 405,
+        "y": 40,
+        "wires": [
+            [
+                "sd_GwgX5mNFcON59xzn"
             ]
         ],
         "__n_excludedFromValidation__": {},

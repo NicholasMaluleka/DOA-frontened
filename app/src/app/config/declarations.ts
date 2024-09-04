@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-edit_claimComponent
+import { edit_claimComponent } from '../components/Admin Dashboard/edit_claim.component';
 //CORE_REFERENCE_IMPORT-sideNavComponent
 import { sideNavComponent } from '../components/shared_components/sideNav.component';
 //CORE_REFERENCE_IMPORT-toolbarComponent
@@ -96,6 +98,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_claimComponent
+  edit_claimComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
   sideNavComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbarComponent
