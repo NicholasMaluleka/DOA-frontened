@@ -89,17 +89,20 @@
                 <b>Required Documents</b></label></div>
             <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
 
-              <input type="file" id="upload1" (change)="upload1()" accept=".pdf" hidden required formControlName="idClaimer2">
-              <button class="input-button"><label for="upload1">
-                  Upload ID Claimer
-                </label></button>
-              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idClaimer2.errors?.required">Please Upload File</mat-error> -->
-              <input type="file" id="upload2" (change)="upload2()" accept=".pdf" hidden required formControlName="idDeceased2">
-              <button class="input-button"><label for="upload2">
-                  Upload ID Deceased
 
-                </label></button>
-              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idDeceased2.errors?.required">Please Upload File</mat-error> -->
+              <!-- <div   (click)="upload1()"> -->
+              <input type="file" id="upload1" hidden required formControlName="idClaimer2">
+              <label for="upload1">
+                Upload ID Claimer
+              </label>
+
+              <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idClaimer2.errors?.required">Please Upload File</mat-error>
+  <input type="file" id="upload2" (change)="upload2()" accept=".pdf"  hidden required formControlName = "idDeceased2">
+ <button class="input-button"><label for="upload2">
+     Upload ID Deceased
+
+ </label></button>
+ <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.idDeceased2.errors?.required">Please Upload File</mat-error> -->
 
 
               <input type="file" id="upload3" (change)="upload3()" accept=".pdf" hidden required formControlName="deathCetificatify2">
@@ -122,9 +125,9 @@
 
                 </label></button>
               <!-- <mat-error *ngIf ="page.policyClaimsForm.controls.bankDetails2.errors?.required">Please Upload File</mat-error> -->
-
+              --&gt;
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="sd_Pmcf2QLXpNt1xmib()">Submit a Claim</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="submit()">Submit a Claim</button></div>
           </div>
         </div>
       </div>
