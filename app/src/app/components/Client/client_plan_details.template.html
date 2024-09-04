@@ -1,0 +1,138 @@
+<div fxLayout="column wrap" style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column " style="height:100%" class="container" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:2em">
+      <mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (closed)="true" hideToggle="false">
+        <mat-expansion-panel-header>
+
+          <mat-panel-title>
+            <strong> Personal Details</strong>
+          </mat-panel-title></mat-expansion-panel-header>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="First Name" value="{{page.currentUser.firstName}}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Last Name" value="{{ page.currentUser.lastName }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="ID Number" value="{{ page.currentUser.idNumber }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Gender" value="{{page.currentUser.gender}}" [required]="false" readonly="true" [disabled]="false">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Email" value="{{page.currentUser.email }}" [required]="false" readonly="true">
+
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Cell phone" value="{{page.currentUser.cellphone}}" [required]="false" readonly="true">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Address" value="{{page.currentUser.address}}" [required]="false" readonly="true">
+
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Package Type" value="{{page.currentUser.packageType}}" [required]="false" readonly="true">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Policy Number" value="{{ page.currentUser.policyNumber }}" [required]="false" readonly="true">
+
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-expansion-panel><mat-expansion-panel *ngFor="let beneficiary of page.currentUser.beneficaries" style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+        <mat-expansion-panel-header>
+
+          <mat-panel-title>
+            <strong>Beneficary Details</strong>
+          </mat-panel-title></mat-expansion-panel-header>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.currentUser.beneficaries.length === 0">
+          <div>
+            No beneficiaries available.</div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="First Name" value="{{page.currentUser.firstName}}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Last Name" value="{{ page.currentUser.lastName }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="ID Number" value="{{ page.currentUser.idNumber }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Gender" value="{{ beneficiary.gender }}" [required]="false" readonly="true" [disabled]="false">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Email" value="{{page.currentUser.email }}" [required]="false" readonly="true">
+
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Cell phone" value="{{ beneficiary.cellphone }}" [required]="false" readonly="true">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Relationship" value="{{ beneficiary.relationship }}" [required]="false" readonly="true">
+
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-expansion-panel><mat-expansion-panel *ngFor="let dependency of page.currentUser.dependencies" style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+        <mat-expansion-panel-header>
+
+          <mat-panel-title>
+            <strong>Dependency Details</strong>
+          </mat-panel-title></mat-expansion-panel-header>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.currentUser.dependencies.length === 0">
+          <div>
+            No dependencies have been added.</div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="First Name" value="{{ dependency.firstName }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Last Name" value="{{ dependency.lastName }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;always&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="ID Number" value="{{ dependency.idNumber }}" [required]="false" readonly="true" [disabled]="false">
+              <mat-label>Id</mat-label>
+            </mat-form-field>
+            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Gender" value="{{ dependency.gender }}" [required]="false" readonly="true" [disabled]="false">
+
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-expansion-panel></mat-accordion></div>
+</div>

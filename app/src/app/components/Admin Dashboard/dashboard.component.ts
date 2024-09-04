@@ -204,6 +204,7 @@ export class dashboardComponent {
           undefined
         )
       ) {
+        bh = this.sd_2avvXWvVpTW2xwRf(bh);
       }
 
       return bh;
@@ -252,7 +253,11 @@ export class dashboardComponent {
     try {
       const page = this.page;
       page.sideNav = [
-        { label: 'Plan details', icon: 'description', route: '/plan-details' },
+        {
+          label: 'Plan details',
+          icon: 'description',
+          route: '/client_plan_details',
+        },
         { label: 'Payment History', icon: 'edit', route: '/payment-history' },
         { label: 'Claims', icon: 'today', route: '/claims' },
       ];
@@ -260,6 +265,21 @@ export class dashboardComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_SqXtYD2RjekqCj5k');
+    }
+  }
+
+  sd_2avvXWvVpTW2xwRf(bh) {
+    try {
+      const page = this.page;
+      page.sideNav = [
+        { label: 'Home', icon: 'home', route: '/dashboard/home' },
+        { label: 'Claims', icon: 'description' },
+        { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
+      ];
+      //appendnew_next_sd_2avvXWvVpTW2xwRf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2avvXWvVpTW2xwRf');
     }
   }
 

@@ -14,7 +14,7 @@
         <div class="height-10 width-10 notif-padding yellow-bg top-1 right-1 center-center flex radius-50 absolute">
           0</div>
       </div>
-      <div fxLayout="column wrap" class="blue-color light-grey-bg height-35 width-10 radius-50" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" class="blue-color light-grey-bg height-35 width-10 radius-50" fxLayoutAlign="center center" [fxShow]="true" (click)="editProfile()">
         <div>
           <h5><b>{{page.name}}{{ page.surname}}</b></h5>
         </div>
@@ -23,7 +23,14 @@
         <div fxLayout="row wrap" fxLayoutAlign="start center" [fxShow]="true">
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
-              <h3 class="blue-color">{{page.user.name}} {{page.user.surname}}</h3>
+              <h3 class="blue-color">
+                <span *ngIf="page.user.name &amp;&amp; page.user.surname">
+                {{page.user.name}} {{page.user.surname}}
+                </span>
+                <span *ngIf="!page.user.name &amp;&amp; !page.user.surname">
+                {{page.user.firstName}} {{page.user.lastName}}
+                </span>
+              </h3>
             </div>
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon></div>

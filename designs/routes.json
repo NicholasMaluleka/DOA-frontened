@@ -29,12 +29,24 @@
                     "component": "edit_personalInfoComponent"
                 },
                 {
+                    "component": "client_plan_detailsComponent",
+                    "path": "client_plan_details"
+                },
+                {
+                    "component": "client_profileComponent",
+                    "path": "client_profile"
+                },
+                {
                     "path": "claim_register",
                     "component": "claims_registerComponent"
                 },
                 {
                     "path": "claim-register",
                     "component": "claims_registerComponent"
+                },
+                {
+                    "component": "Director_homeComponent",
+                    "path": "director_home"
                 }
             ],
             "canActivate": {

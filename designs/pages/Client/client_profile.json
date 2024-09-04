@@ -1,0 +1,136 @@
+[
+    {
+        "id": "sd_V6dtQKCl70LzmOlO",
+        "type": "tab",
+        "createdDate": "2024-09-02T18:08:36.528Z",
+        "label": "client_profile",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "client_profileComponent"
+    },
+    {
+        "id": "sd_8sFTNmL33d2ytW8a",
+        "type": "OnInit",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_8sFTNmL33d2ytW8a",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_HylJdYhI60EDK1IM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_profileComponent"
+    },
+    {
+        "id": "sd_HylJdYhI60EDK1IM",
+        "type": "PageVariables",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_HylJdYhI60EDK1IM",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_qOYIIRwGDCqGGaOU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qOYIIRwGDCqGGaOU",
+        "type": "PageVariables",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_qOYIIRwGDCqGGaOU",
+        "category": "Function",
+        "x": 325,
+        "y": 60,
+        "wires": [
+            [
+                "sd_yfOFbavH9ohBUvy1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yfOFbavH9ohBUvy1",
+        "type": "Storage",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_yfOFbavH9ohBUvy1",
+        "category": "Storage",
+        "x": 370,
+        "y": 170,
+        "wires": [
+            [
+                "sd_sDChkTyL4lAwKMl2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sDChkTyL4lAwKMl2",
+        "type": "Script",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// page.currentUser = Object.keys(page.user).map(key => {\n//     return { key: key, value: page.user[key] };\n// });\n\npage.currentUser = page.user\n\n console.log(\"page user\" , page.currentUser)\n console.log(\"bene\",page.currentUser.beneficaries);",
+        "functionName": "sd_sDChkTyL4lAwKMl2",
+        "category": "Function",
+        "x": 450,
+        "y": 270,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_profileComponent",
+        "generated": true
+    }
+]

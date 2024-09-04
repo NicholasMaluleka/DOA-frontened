@@ -11,7 +11,7 @@ export class authorizationService implements CanActivate {
 
        console.log("Data", _data)
 
-        if(_data.name){
+        if(_data.firstName || _data.name){
             return true;
         }
         else{
