@@ -123,7 +123,7 @@ export class registerComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_5FvUEd3TbUxOODvU(bh);
+      bh = this.sd_wKoZboaQVHIPkQvv(bh);
       //appendnew_next_confirm
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mfn5TNjxg1EDrkux');
@@ -479,6 +479,20 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_NscpuoQXRbfmWzVJ');
+    }
+  }
+
+  sd_wKoZboaQVHIPkQvv(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+
+      console.log('LOADIN: ', page.loading);
+      bh = this.sd_5FvUEd3TbUxOODvU(bh);
+      //appendnew_next_sd_wKoZboaQVHIPkQvv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wKoZboaQVHIPkQvv');
     }
   }
 

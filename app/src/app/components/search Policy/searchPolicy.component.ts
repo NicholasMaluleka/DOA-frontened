@@ -11,6 +11,7 @@ import {
   Validators,
 } from '@angular/forms'; //_splitter_
 import { MatDialogRef } from '@angular/material/dialog'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -72,7 +73,7 @@ export class searchPolicyComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_7reQ1uGtj2XhgmOg(bh);
+      bh = this.sd_tWBNhkIBx5C151la(bh);
       //appendnew_next_find
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_rU0R3WzeGLC0CJEH');
@@ -110,6 +111,25 @@ export class searchPolicyComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_xeoRoLeihzWy8efa');
+    }
+  }
+
+  sd_tWBNhkIBx5C151la(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.searchPolicyForm.valid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_7reQ1uGtj2XhgmOg(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tWBNhkIBx5C151la');
     }
   }
 
@@ -163,11 +183,49 @@ export class searchPolicyComponent {
         (item) => item.policyNumber == page.searchPolicyForm.value.search
       );
 
-      bh = this.sd_uK9SFyo7OgJzOK8J(bh);
+      bh = this.sd_FQaTWhsdsnTZhqFY(bh);
       //appendnew_next_sd_ux8rhjGFxIE2uNBH
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ux8rhjGFxIE2uNBH');
+    }
+  }
+
+  async sd_FQaTWhsdsnTZhqFY(bh) {
+    try {
+      if (
+        this.sdService.operators['empty'](
+          this.page.clients,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_kPBY0flPvVW2qs8E(bh);
+      } else {
+        bh = await this.sd_uK9SFyo7OgJzOK8J(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FQaTWhsdsnTZhqFY');
+    }
+  }
+
+  sd_kPBY0flPvVW2qs8E(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open("THE  POLICY NUMBER ENTERED DOESN'T EXIST", 'OK', {
+          duration: 4000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_kPBY0flPvVW2qs8E
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kPBY0flPvVW2qs8E');
     }
   }
 
@@ -188,7 +246,9 @@ export class searchPolicyComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_IO4IqWL9nrM5vCKf(bh);
       //appendnew_next_sd_GrC07KTLi0xBLPf5
       return bh;
