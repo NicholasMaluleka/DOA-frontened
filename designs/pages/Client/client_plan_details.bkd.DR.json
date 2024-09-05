@@ -556,7 +556,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "First Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -2771,7 +2771,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "9ef198e8-5bce-8ba7-7069-30affeefbf1a",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3057,7 +3056,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "Last Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3288,7 +3287,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "ID Number",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3457,7 +3456,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "",
+                                        "_value": "Gender",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3688,7 +3687,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "",
+                                        "_value": "Email",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -3857,7 +3856,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "",
+                                        "_value": "Cell phone",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -4088,7 +4087,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "",
+                                        "_value": "Relationship",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -4819,7 +4818,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "First Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -4988,7 +4987,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "Last Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -5388,7 +5387,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "",
+                                        "_value": "Gender",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
