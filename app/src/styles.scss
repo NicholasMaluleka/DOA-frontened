@@ -15,6 +15,15 @@ body {
 $yellow: #f7dd71;
 $light-grey: #edf5f5;
 $light-blue: #124e52;
+
+%shared-stylish-hover {
+    cursor: pointer;
+    height: 45px;
+    width: 125px;
+    top: 0 !important;
+    left: 0 !important;
+}
+
 // angel
 bh-contact_us{
     // background-color:#edf5f5 ;
@@ -136,6 +145,10 @@ $teal-blue: #228bc4;
     position: relative;
     height: 100%;
     width: 100%;
+}
+
+.z-index2 {
+    z-index: 2;
 }
 
 .dhx_cal_event {
@@ -735,6 +748,70 @@ body{
     color: black;
     border-radius: 10px;
 }
+
+.sim-x-small {
+    font-size: x-small;
+}
+
+.logclaim-btn{
+    height: 43px;
+    width: 125px;
+    background-color: $light-blue;
+    border-radius: 10px;
+}
+
+.stylish-btn{
+    height: 45px;
+    width: 120px;
+    background-color:$yellow;
+    border-radius: 10px;
+    color: $light-blue;
+    border: 2px solid $light-blue;
+}
+
+.stylish-btn:hover{
+    @extend %shared-stylish-hover
+}
+
+.stylish-btn:active{
+    @extend %shared-stylish-hover
+}
+
+.sim-menu {
+    button.mat-menu-item {
+        height: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mat-menu-panel {
+        min-height: 0px !important;
+    }
+
+    .mat-menu-content:not(:empty) {
+        max-height: 50px !important;
+    }
+    .mat-menu-content::-webkit-scrollbar {
+       width: 10px;
+    }
+}
+
+/* width */
+// .mat-menu-content::-webkit-scrollbar {
+//   width: 10px;
+// }
+
+/* Track */
+// .mat-menu-content::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px $light-grey;
+//   border-radius: 10px;
+// }
+
+/* Handle */
+// .mat-menu-content::-webkit-scrollbar-thumb {
+//   background: $yellow;
+//   border-radius: 10px;
+// }
 
 .kg-box1 {
     padding: 10px;
