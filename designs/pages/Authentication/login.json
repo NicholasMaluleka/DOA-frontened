@@ -115,7 +115,7 @@
         "y": 160,
         "wires": [
             [
-                "sd_rkB5QqUgrAKv3a1e"
+                "sd_bqB5zlGIrtB9lvJY"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -149,9 +149,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_ioQgoBz2AkEDMlcS",
@@ -171,9 +170,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_zTKl6k43D2GeisCd",
@@ -226,9 +224,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_buYzaxDxyjRaVxqv",
@@ -276,9 +273,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_DrwpTKFaF2PfX0uE",
@@ -316,9 +312,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_vl5FCxtDP6xLD1fe",
@@ -356,9 +351,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_SGMcpcrY4y3UKTKj",
@@ -398,9 +392,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_DE42D8ZhYJoLHtIk",
@@ -481,7 +474,7 @@
         "outputs": 2,
         "functionName": "sd_rkB5QqUgrAKv3a1e",
         "category": "Function",
-        "x": 145,
+        "x": 185,
         "y": 160,
         "wires": [
             [
@@ -492,9 +485,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_AKCd9T0p7cDWhRTR",
@@ -532,9 +524,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_R2or05KgG4F0SznO",
@@ -554,9 +545,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_iGycO4jnqKpix0R8",
@@ -583,9 +573,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_QCpkMADtxfSqgHXt",
@@ -614,9 +603,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_pWnUWcBfELW3hZrp",
@@ -667,9 +655,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_viITVWMo8noRtLLF",
@@ -691,7 +678,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -707,9 +696,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_r58lpYP5NfnKU8WQ",
@@ -736,9 +724,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_iiPTp6BRisa9Wz2L",
@@ -767,9 +754,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_51iYvY9GLbmiDMYl",
@@ -809,9 +795,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_amrKD85p0eRgsnBY",
@@ -838,9 +823,8 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "loginComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "loginComponent"
     },
     {
         "id": "sd_Sxe8LBYbOvGJ2l4m",
@@ -868,6 +852,161 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_bqB5zlGIrtB9lvJY",
+        "type": "OpenDialog",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_PR3nvRTcpHmbFIoL",
+            "label": "view_document"
+        },
+        "relativePath": "app/components/Authentication/view_document",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_bqB5zlGIrtB9lvJY",
+        "category": "Dialog",
+        "x": 105,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "loginComponent",
