@@ -18,7 +18,10 @@
             },
             {
                 "_key": "class",
-                "_value": "",
+                "_value": [
+                    "white-bg",
+                    "full-width"
+                ],
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -42,7 +45,7 @@
             },
             {
                 "_key": "layoutAlign",
-                "_value": "start",
+                "_value": "center",
                 "_type": "a",
                 "_attrDef": "p"
             },
@@ -79,15 +82,14 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "",
+                    "_value": "margin-right: 5px",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "class",
                     "_value": [
-                        "white-bg",
-                        "full-width"
+                        "white-bg"
                     ],
                     "_type": "dav",
                     "_attrDef": "p"
@@ -118,7 +120,7 @@
                 },
                 {
                     "_key": "pLayoutAlign",
-                    "_value": "center",
+                    "_value": "stretch",
                     "_type": "a",
                     "_attrDef": "p"
                 },
@@ -649,7 +651,7 @@
                     },
                     {
                         "_key": "layoutAlign",
-                        "_value": "start",
+                        "_value": "end",
                         "_type": "a",
                         "_attrDef": "p"
                     },

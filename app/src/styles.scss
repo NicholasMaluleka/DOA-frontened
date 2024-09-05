@@ -515,6 +515,22 @@ width: 150px;
     cursor: pointer;
 }
 
+
+//animations
+.rotate {
+    width: 100%;
+    height: auto;
+    animation: rotate360 20s infinite linear;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 ///////////////////////////////////////////////NICHOLAS STYLES END //////////////////////////////////////////////////////////////
 
 
@@ -709,11 +725,25 @@ body{
     color: red;
 }
 
+.kg-green {
+    color:green;
+}
+
 .kg-box {
     border: 1px solid $light-grey;
     background-color: $light-grey;
     color: black;
     border-radius: 10px;
+}
+
+.kg-box1 {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid $light-grey;
+    background-color: $light-grey;
+    width: 70px;
+    text-align: center;
 }
 
 .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
