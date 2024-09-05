@@ -28,8 +28,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_rLCXQSvPqfkOfsHZ",
@@ -111,8 +110,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_u1ldiWMdVjhTr00C",
@@ -162,8 +160,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_qiIi6bjjT1iVNTcP",
@@ -207,11 +204,17 @@
                 "v": "client",
                 "vt": "str",
                 "gv": "\"client\""
+            },
+            {
+                "t": "eq",
+                "v": "director",
+                "vt": "str",
+                "gv": "\"director\""
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "functionName": "sd_vACip4EWiEU7Jst2",
         "category": "Function",
         "x": 185,
@@ -222,6 +225,9 @@
             ],
             [
                 "sd_3c1Lvfj2yO6nDjXf"
+            ],
+            [
+                "sd_SDUZ8pyB4VGokn3v"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -425,9 +431,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "toolbarComponent"
+        "serviceName": "toolbarComponent",
+        "generated": true
     },
     {
         "id": "sd_lmjfVOm0jgPaxNTJ",
@@ -451,8 +457,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "toolbarComponent",
-        "generated": false
+        "serviceName": "toolbarComponent"
     },
     {
         "id": "sd_9CWPhdafRN2uiO3R",
@@ -498,6 +503,206 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_SDUZ8pyB4VGokn3v",
+        "type": "Script",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.name = page.name.charAt(0).toUpperCase();\npage.surname = page.surname.charAt(0).toUpperCase();\n",
+        "functionName": "sd_SDUZ8pyB4VGokn3v",
+        "category": "Function",
+        "x": 331,
+        "y": 382.1354064941406,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hz6dUvyW6gB9ERDL",
+        "type": "PageStart",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "editProfile",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "editProfile",
+        "category": "General",
+        "x": 125,
+        "y": 660,
+        "wires": [
+            [
+                "sd_0cDiTre6EpWOepWR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbarComponent"
+    },
+    {
+        "id": "sd_0cDiTre6EpWOepWR",
+        "type": "OpenDialog",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_V6dtQKCl70LzmOlO",
+            "label": "client_profile"
+        },
+        "relativePath": "app/components/Client/client_profile",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_0cDiTre6EpWOepWR",
+        "category": "Dialog",
+        "x": 245,
+        "y": 660,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "toolbarComponent",

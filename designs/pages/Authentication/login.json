@@ -680,7 +680,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Successfully logged in"
+            "value": "Welcome client"
         },
         "action": {
             "type": "str",
@@ -719,6 +719,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/client_plan_details",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_r58lpYP5NfnKU8WQ",
         "category": "Navigation",
         "x": 825,

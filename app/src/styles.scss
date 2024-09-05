@@ -515,6 +515,22 @@ width: 150px;
     cursor: pointer;
 }
 
+
+//animations
+.rotate {
+    width: 100%;
+    height: auto;
+    animation: rotate360 20s infinite linear;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 ///////////////////////////////////////////////NICHOLAS STYLES END //////////////////////////////////////////////////////////////
 
 
@@ -709,11 +725,25 @@ body{
     color: red;
 }
 
+.kg-green {
+    color:green;
+}
+
 .kg-box {
     border: 1px solid $light-grey;
     background-color: $light-grey;
     color: black;
     border-radius: 10px;
+}
+
+.kg-box1 {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid $light-grey;
+    background-color: $light-grey;
+    width: 70px;
+    text-align: center;
 }
 
 .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
@@ -744,72 +774,165 @@ body{
     color: $light-blue;
 }
 
-.profile-container {
-  padding: 5px;
-//   max-width: 800px;
-  margin: auto;
+// .profile-container {
+//   padding: 5px;
+// //   max-width: 800px;
+//   margin: auto;
   
-    max-height: 500px;
-    overflow-y: scroll;
-    scrollbar-width: none;
+//     max-height: 500px;
+//     overflow-y: scroll;
+//     scrollbar-width: none;
 
-    // display: none; 
-}
-
-.profile-card {
-  margin: 20px 0;
+     
+// }
+.profile-container-alt {
+  padding: 10px;
+  max-width: 400px; 
+  margin: 20px auto;
+  background-color: $light-grey;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.profile-card-header {
-  background-color: #f1f1f1;
+.profile-card-alt {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card-header-alt {
+  background-color: $yellow;
+  padding: 12px;
+  text-align: center;
   border-bottom: 1px solid #ddd;
-  padding: 16px;
 }
 
-.profile-item {
+.profile-card-header-alt h2 {
+  margin: 0;
+  color: #124e52;
+  font-size: 16px; 
+}
+
+.profile-icon-alt {
+  font-size: 36px; 
+  color: #fff;
+  background-color: #124e52;
+  padding: 8px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.profile-content-alt {
+  padding: 15px;
+}
+
+.profile-item-alt {
   display: flex;
   justify-content: space-between;
-  padding: 10px 15px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 8px; 
 }
 
-.profile-label {
+.profile-label-alt {
   font-weight: 600;
   color: #333;
-  font-size: 16px;
+  font-size: 14px; 
 }
 
-.profile-value {
+.profile-value-alt {
   color: #555;
-  font-size: 16px;
+  font-size: 14px; 
 }
 
-.profile-icon {
-  vertical-align: middle;
-  margin-right: 12px;
-  color: $yellow;
+.profile-card-footer-alt {
+  background-color: #f1f1f1;
+  padding: 12px;
+  text-align: center;
 }
 
-.mat-card-actions {
-  padding: 16px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.edit-button {
-  background-color: $yellow !important;
-  color: #fff;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 14px;
-  text-transform: uppercase;
+.edit-button-alt {
+  background-color: $light-blue;
+  color: white;
+  border: none;
+  border-radius: 4px; 
+  padding: 8px 16px; 
+  font-size: 12px; 
   font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.edit-button:hover {
-  background-color: $light-grey;
-  cursor: pointer;
+.edit-button-alt:hover {
+  background-color: #3a7a80;
+}
+
+
+
+
+
+/*  Cards Section */
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    gap: 20px; 
+}
+
+.card {
+    flex: 1; 
+    padding: 10px; 
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 40px; 
+    margin-bottom: 8px; 
+}
+
+.card-info {
+    font-size: 16px; 
+}
+
+.card-info .count {
+    display: block;
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.card.pending {
+    background-color: #f7dd71; 
+}
+
+.card.partially-approved {
+    background-color: #124e52; 
+}
+
+.card.fully-approved {
+    background-color:  #d4edda;
+}
+
+/* Icon Styles */
+.icon-hourglass::before {
+    content: "\23F3"; /* Unicode for hourglass */
+}
+
+.icon-half-check::before {
+    content: "\2714"; /* Unicode for checkmark */
+    color: #ffeb3b; /* Yellow for half-check */
+}
+
+.icon-check::before {
+    content: "\2714"; /* Unicode for checkmark */
 }

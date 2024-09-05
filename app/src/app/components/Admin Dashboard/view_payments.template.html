@@ -8,7 +8,7 @@
         </mat-form-field>
       </div>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button color="accent" (click)="openPaymentForm()">Log payment</button></div>
+    <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button class="box-shadow" color="accent" (click)="openPaymentForm()">Log payment</button></div>
   </div>
   <div fxLayout="row wrap" class="margin-left-1em" fxLayoutAlign="start stretch" [fxShow]="true">
     <div>
@@ -16,7 +16,7 @@
       <h3 class="blue-color" *ngIf="page.table.length &lt; 1">{{page.userData.firstName}} {{page.userData.lastName}} has <span class="teal-color">0</span> payments.</h3>
     </div>
   </div>
-  <div fxLayout="row wrap" style="margin-bottom: 1em;" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.table.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" width="37%"></div>
+  <div fxLayout="row wrap" style="margin-bottom: 1em;" class="rotate" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.table.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" width="37%"></div>
   <div fxLayout="row wrap" class="FullHeight full-width" fxLayoutAlign="center space-between" [fxShow]="true" *ngIf="page.table.length &gt; 0">
     <div fxLayout="column" style="width:98%; border: 1.5px solid #124e52;">
       <table mat-table [dataSource]="page?.table" matSort class="table-width-fix">

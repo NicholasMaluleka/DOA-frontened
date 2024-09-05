@@ -609,7 +609,9 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [
+                                "box-shadow"
+                            ],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
@@ -965,7 +967,9 @@
                 },
                 {
                     "_key": "class",
-                    "_value": "",
+                    "_value": [
+                        "rotate"
+                    ],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -1032,7 +1036,7 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
