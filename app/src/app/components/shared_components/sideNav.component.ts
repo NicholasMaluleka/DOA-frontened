@@ -208,13 +208,17 @@ export class sideNavComponent {
       const page = this.page;
       page.sideNav = [
         {
-          label: 'Plan details',
+          label: 'Policy details',
           icon: 'description',
           route: '/dashboard/client_plan_details',
         },
         { label: 'Payment History', icon: 'edit', route: '/payment-history' },
         { label: 'Claims', icon: 'today', route: '/claims' },
-        // {label: "Profile", icon: "today",route: "/dashboard/client_profile"},
+        {
+          label: 'Profile',
+          icon: 'Profile',
+          route: '/dashboard/client_profile',
+        },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
       //appendnew_next_sd_f8zH5EWAPPgeiqT0

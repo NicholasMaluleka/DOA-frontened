@@ -1058,19 +1058,6 @@
                             "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(click)",
-                            "_value": "editProfile()",
-                            "_type": "kv",
-                            "_attrDef": "c",
-                            "objValue": {
-                                "nodeID": "sd_hz6dUvyW6gB9ERDL",
-                                "functionName": "editProfile",
-                                "activeTree": "pages",
-                                "z": "sd_jx2nZPm829dgllX2",
-                                "input": []
-                            }
                         }
                     ],
                     "c785262d-0894-3c09-72b4-f58b19e1e43c": {
