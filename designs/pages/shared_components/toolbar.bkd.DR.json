@@ -1025,6 +1025,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "pointer",
                                 "blue-color",
                                 "light-grey-bg",
                                 "height-35",
@@ -1306,7 +1307,7 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
