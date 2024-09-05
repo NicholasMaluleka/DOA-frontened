@@ -84,7 +84,7 @@ export class view_documentComponent {
 
   sd_dOrvoT9jzoh6Xw7f(bh) {
     try {
-      this.page.result = JSON.parse(sessionStorage.getItem('file'));
+      this.page.result = JSON.parse(sessionStorage.getItem('idClaimer'));
       bh = this.sd_t6ahQgfWPpzjBopV(bh);
       //appendnew_next_sd_dOrvoT9jzoh6Xw7f
       return bh;
@@ -97,6 +97,7 @@ export class view_documentComponent {
     try {
       const page = this.page;
       page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
+
       //appendnew_next_sd_t6ahQgfWPpzjBopV
       return bh;
     } catch (e) {

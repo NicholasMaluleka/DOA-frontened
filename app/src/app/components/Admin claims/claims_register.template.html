@@ -8,7 +8,7 @@
       <div fxLayout="column wrap" style="padding-left:19px; padding-right:19px" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
-              <b *ngIf="page.policyholder == true">Policy Holder Details</b>
+              <b *ngIf="page.policyHolder == true">Policy Holder Details</b>
               <b *ngIf="page.beneficiary == true">Beneficiary Details</b></label></div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.beneficiary ==true"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Beneficiary Id Number</mat-label>
@@ -83,15 +83,6 @@
 
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;">
-                <mat-label>Date of death</mat-label>
-                <input matInput placeholder="Date of Death" [matDatepicker]="picker" formControlName="dateOfDeath" [max]="page.date" [disabled]="false">
-                <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
-                <mat-datepicker #picker [disabled]="false"></mat-datepicker>
-                <mat-error align="start" *ngIf="page.deceased.controls.dateOfDeath?.errors?.required">Date of Death is required</mat-error>
-              </mat-form-field>
-            </div>
           </form>
           <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
@@ -135,11 +126,10 @@
                   </label></button>
               </div>
 
-              <!-- Juska -->
-              <div class="view-doc">
 
-              </div>
-
+            </div>
+            <div fxLayout="column wrap" style="height:30px; width:100%; margin-top:10px" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="FullHeight fullWidth" fxLayoutAlign="start center" [fxShow]="true"><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button></div>
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="start()">Submit a Claim</button></div>
           </div>

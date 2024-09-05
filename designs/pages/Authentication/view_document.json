@@ -118,7 +118,7 @@
         "outputs": 1,
         "key": {
             "type": "str",
-            "value": "file"
+            "value": "idClaimer"
         },
         "value": {},
         "resultMapping": {
@@ -146,7 +146,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\n",
         "functionName": "sd_t6ahQgfWPpzjBopV",
         "category": "Function",
         "x": 360,
