@@ -47,6 +47,14 @@
                 {
                     "path": "client_claim_form",
                     "component": "client_claim_formComponent"
+                },
+                {
+                    "path": "payments",
+                    "component": "paymentsComponent"
+                },
+                {
+                    "path": "schedules_p",
+                    "component": "schedules_pComponent"
                 }
             ],
             "canActivate": {

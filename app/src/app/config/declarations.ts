@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-schedules_pComponent
+import { schedules_pComponent } from '../components/Director/schedules_p.component';
+//CORE_REFERENCE_IMPORT-paymentsComponent
+import { paymentsComponent } from '../components/Client/payments.component';
 //CORE_REFERENCE_IMPORT-client_claim_formComponent
 import { client_claim_formComponent } from '../components/Client/client_claim_form.component';
 //CORE_REFERENCE_IMPORT-client_claimsComponent
@@ -26,6 +30,8 @@ import { Director_homeComponent } from '../components/Director/Director_home.com
 import { client_profileComponent } from '../components/Client/client_profile.component';
 //CORE_REFERENCE_IMPORT-client_plan_detailsComponent
 import { client_plan_detailsComponent } from '../components/Client/client_plan_details.component';
+//CORE_REFERENCE_IMPORT-edit_claimComponent
+import { edit_claimComponent } from '../components/Admin Dashboard/edit_claim.component';
 //CORE_REFERENCE_IMPORT-sideNavComponent
 import { sideNavComponent } from '../components/shared_components/sideNav.component';
 //CORE_REFERENCE_IMPORT-toolbarComponent
@@ -104,6 +110,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
+  schedules_pComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-paymentsComponent
+  paymentsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claim_formComponent
   client_claim_formComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claimsComponent
@@ -114,6 +124,8 @@ export const appDeclarations = [
   client_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_plan_detailsComponent
   client_plan_detailsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_claimComponent
+  edit_claimComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sideNavComponent
   sideNavComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbarComponent
@@ -201,6 +213,8 @@ export const appRoutes = [
       { path: 'claim-register', component: claims_registerComponent },
       { path: 'client_claims', component: client_claimsComponent },
       { path: 'client_claim_form', component: client_claim_formComponent },
+      { path: 'payments', component: paymentsComponent },
+      { path: 'schedules_p', component: schedules_pComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
