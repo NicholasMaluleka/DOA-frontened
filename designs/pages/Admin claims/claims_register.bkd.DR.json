@@ -851,7 +851,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<b *ngIf =\"page.policyholder == true\">Policy Holder Details</b>\r\n<b *ngIf =\"page.beneficiary == true\">Beneficiary Details</b>",
+                                            "_value": "<b *ngIf =\"page.policyHolder == true\">Policy Holder Details</b>\r\n<b *ngIf =\"page.beneficiary == true\">Beneficiary Details</b>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -3129,7 +3129,6 @@
                                     "paletteKey": "NG-Input",
                                     "parentEditorKey": "ef7616f7-3c29-8ff4-1e27-fc7a5eca575e",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3723,7 +3722,6 @@
                                     "paletteKey": "NG-Input",
                                     "parentEditorKey": "5623f04e-6d96-18bf-dd60-0ab137221a47",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3901,7 +3899,8 @@
                             "fb078db0-e688-9741-6c8a-dac4ff1dac70": {
                                 "paletteKey": "FlexLayoutRow",
                                 "parentEditorKey": "b3e4c0c1-4340-5d19-55fa-a65b29c40038",
-                                "commentid": null,
+                                "isCommented": "true",
+                                "commentid": "1725556270522",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -3963,7 +3962,8 @@
                                     "paletteKey": "NG-DatePicker",
                                     "parentEditorKey": "fb078db0-e688-9741-6c8a-dac4ff1dac70",
                                     "isAdvancedComponent": true,
-                                    "commentid": null,
+                                    "isCommented": "true",
+                                    "commentid": "1725556270522",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -4767,11 +4767,207 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "\r\n <div (click)=\"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Cetificatify\r\n\r\n </label></button>\r\n \r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n</div>\r\n\r\n",
+                                            "_value": "\r\n <div (click)=\"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Certificate\r\n\r\n </label></button>\r\n \r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n</div>\r\n\r\n\r\n",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
                                     ]
+                                }
+                            },
+                            "00f9a805-55e6-5a74-5506-0619f042ab0d": {
+                                "paletteKey": "FlexLayoutCol",
+                                "parentEditorKey": "bdab30e1-5c66-510d-b60f-76e55636c12c",
+                                "commentid": null,
+                                "designerReference": [
+                                    {
+                                        "_key": "componentLabel",
+                                        "_value": "View docs",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "style",
+                                        "_value": "height:30px; width:100%; margin-top:10px",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fxFlex",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "fxLayoutGap",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "wrap",
+                                        "_value": "wrap",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "layoutAlign",
+                                        "_value": "start",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "pLayoutAlign",
+                                        "_value": "stretch",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[fxShow]",
+                                        "_value": "true",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    }
+                                ],
+                                "c625e0e0-6b81-df42-604e-aaaf14000477": {
+                                    "paletteKey": "FlexLayoutRow",
+                                    "parentEditorKey": "00f9a805-55e6-5a74-5506-0619f042ab0d",
+                                    "commentid": null,
+                                    "designerReference": [
+                                        {
+                                            "_key": "componentLabel",
+                                            "_value": "Row",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "style",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": [
+                                                "FullHeight",
+                                                "fullWidth"
+                                            ],
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxFlex",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxLayoutGap",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "start",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "pLayoutAlign",
+                                            "_value": "center",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ],
+                                    "82a65e35-26b5-af7b-0242-69d6b255401c": {
+                                        "paletteKey": "NG-RaisedButton",
+                                        "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "background:#f7dd71; color:#124e52;",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "View Doc",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "open()",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "objValue": {
+                                                    "nodeID": "sd_NHGiXhSAsAuPO311",
+                                                    "functionName": "open",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": []
+                                                }
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    }
                                 }
                             },
                             "e33fc522-f920-8fb2-6c59-f13ea91e5a98": {

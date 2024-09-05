@@ -121,6 +121,7 @@ export class toolbarComponent {
 
   sd_rLCXQSvPqfkOfsHZ(bh) {
     try {
+      this.page.messages = undefined;
       bh = this.sd_rXrGjoBSlzR0uWPY(bh);
       //appendnew_next_sd_rLCXQSvPqfkOfsHZ
       return bh;
@@ -169,10 +170,31 @@ export class toolbarComponent {
     try {
       let outputVariables = this.getInitials();
 
+      bh = this.sd_mjHylQATN82vPHZ2(bh);
       //appendnew_next_sd_iVhqs9Yhhcc5HWXd
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_iVhqs9Yhhcc5HWXd');
+    }
+  }
+
+  sd_mjHylQATN82vPHZ2(bh) {
+    try {
+      const page = this.page;
+      page.messages = [
+        { for: '', not: 'Claim has been approved' },
+        { for: '', not: 'Claim applied successfully' },
+        { for: '', not: 'Claim has been approved' },
+        { for: '', not: 'Claim applied successfully' },
+        { for: '', not: 'Claim has been approved' },
+        { for: '', not: 'Claim applied successfully' },
+      ];
+
+      console.log('MESSAGES: ', page.messages);
+      //appendnew_next_sd_mjHylQATN82vPHZ2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mjHylQATN82vPHZ2');
     }
   }
 

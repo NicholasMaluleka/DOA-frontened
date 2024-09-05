@@ -689,6 +689,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "pointer",
                                 "relative"
                             ],
                             "_type": "dav",
@@ -766,6 +767,12 @@
                                 "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[matMenuTriggerFor]",
+                                "_value": "notsMenu",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ]
                     },
@@ -784,6 +791,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "sim-x-small",
                                     "height-10",
                                     "width-10",
                                     "notif-padding",
@@ -800,14 +808,15 @@
                             },
                             {
                                 "_key": "htmlElement",
-                                "_value": "div",
+                                "_value": "small",
                                 "_type": "dav",
                                 "_attrDef": "p",
-                                "_useAsLabel": true
+                                "_useAsLabel": true,
+                                "_customAttributeFlag": "customInput"
                             },
                             {
                                 "_key": "tagType",
-                                "_value": "",
+                                "_value": "small",
                                 "_type": "a",
                                 "_attrDef": "p",
                                 "_visibility": false
@@ -987,7 +996,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "0",
+                                    "_value": "{{page.messages.length}}",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -1016,6 +1025,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "pointer",
                                 "blue-color",
                                 "light-grey-bg",
                                 "height-35",
@@ -1297,7 +1307,7 @@
                         },
                         {
                             "_key": "class",
-                            "_value": "",
+                            "_value": [],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
@@ -1848,7 +1858,7 @@
                 "_attrDef": "p"
             }
         ],
-        "690d66e1-a0f9-c5a1-9ed0-fc187926ab73": {
+        "dc65c096-daae-4215-abbe-58c8e9589252": {
             "paletteKey": "FlexLayoutCol",
             "parentEditorKey": "7006e3e9-f31b-03c8-aa72-b202197cc4b6",
             "commentid": null,
@@ -1909,9 +1919,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "d263690d-2734-94c2-c66e-a5528c4f7208": {
+            "2ba7e23e-c1bb-2da6-a85f-ccb87dead851": {
                 "paletteKey": "NG-Menu",
-                "parentEditorKey": "690d66e1-a0f9-c5a1-9ed0-fc187926ab73",
+                "parentEditorKey": "dc65c096-daae-4215-abbe-58c8e9589252",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1964,9 +1974,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "cc958f56-d4e2-3959-754c-c841634a6062": {
+                "2d0f132f-b2db-566e-4d5d-93612b8c095e": {
                     "paletteKey": "NG-MenuItem",
-                    "parentEditorKey": "d263690d-2734-94c2-c66e-a5528c4f7208",
+                    "parentEditorKey": "2ba7e23e-c1bb-2da6-a85f-ccb87dead851",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2016,9 +2026,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "6eb14ce3-3122-4da6-ab15-5259621a3539": {
+                    "1227c38f-2958-b4bc-f1a8-48ed506745ba": {
                         "paletteKey": "FlexLayoutRow",
-                        "parentEditorKey": "cc958f56-d4e2-3959-754c-c841634a6062",
+                        "parentEditorKey": "2d0f132f-b2db-566e-4d5d-93612b8c095e",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2077,9 +2087,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "09af05b7-8456-ee82-47e7-7b6a9bbbd832": {
+                        "099a5739-4493-5266-194b-aa9ea098e9d3": {
                             "paletteKey": "FlexLayoutCol",
-                            "parentEditorKey": "6eb14ce3-3122-4da6-ab15-5259621a3539",
+                            "parentEditorKey": "1227c38f-2958-b4bc-f1a8-48ed506745ba",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2138,9 +2148,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "39f8261e-157b-bc0a-e2c2-e6245ef6b68c": {
+                            "27dee1a1-656f-430b-50a0-aec9e4460c90": {
                                 "paletteKey": "NG-icon",
-                                "parentEditorKey": "09af05b7-8456-ee82-47e7-7b6a9bbbd832",
+                                "parentEditorKey": "099a5739-4493-5266-194b-aa9ea098e9d3",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2179,9 +2189,9 @@
                                 ]
                             }
                         },
-                        "cb2e1706-d74b-e39b-6fdf-be95bc30ab5b": {
+                        "098877de-1739-dcff-ab16-53d6bb2311e3": {
                             "paletteKey": "FlexLayoutCol",
-                            "parentEditorKey": "6eb14ce3-3122-4da6-ab15-5259621a3539",
+                            "parentEditorKey": "1227c38f-2958-b4bc-f1a8-48ed506745ba",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2240,9 +2250,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "229237c2-bb4e-7459-7358-4fd5e7ef46a3": {
+                            "edc2f526-1b9e-0694-c765-88639ccc6522": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "cb2e1706-d74b-e39b-6fdf-be95bc30ab5b",
+                                "parentEditorKey": "098877de-1739-dcff-ab16-53d6bb2311e3",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -2427,9 +2437,9 @@
                                         "_visibility": false
                                     }
                                 ],
-                                "de4181e7-56ac-04f2-ae2b-2d9c8f6f3a03": {
+                                "92fd830c-4d07-5ca7-2f4b-27abb60a7ff8": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "229237c2-bb4e-7459-7358-4fd5e7ef46a3",
+                                    "parentEditorKey": "edc2f526-1b9e-0694-c765-88639ccc6522",
                                     "isAdvancedChildComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -2456,6 +2466,184 @@
                             }
                         }
                     }
+                }
+            }
+        },
+        "2ff5641f-a1ce-6691-44c4-6141f963924e": {
+            "paletteKey": "FlexLayoutCol",
+            "parentEditorKey": "7006e3e9-f31b-03c8-aa72-b202197cc4b6",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Column",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "start",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "stretch",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ],
+            "120d4b0d-0ffc-044f-188e-28ecb1813b1e": {
+                "paletteKey": "NG-Menu",
+                "parentEditorKey": "2ff5641f-a1ce-6691-44c4-6141f963924e",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "componentLabel",
+                        "_value": "Menu",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "sim-menu"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "xPosition",
+                        "_value": "before",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "yPosition",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "matMenu",
+                        "_value": "menu",
+                        "_type": "vk",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "hasBackdrop",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "overlapTrigger",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(closed)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "#notsMenu",
+                        "_value": "matMenu",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    }
+                ],
+                "f5b4bb00-e026-0823-2704-ea60fa61ac76": {
+                    "paletteKey": "NG-MenuItem",
+                    "parentEditorKey": "120d4b0d-0ffc-044f-188e-28ecb1813b1e",
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "componentLabel",
+                            "_value": "Menu Item",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": [
+                                "sim-x-small"
+                            ],
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "MenuItemName",
+                            "_value": "{{message.not}}",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[disabled]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "*ngFor",
+                            "_value": "let message of page.messages",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ]
                 }
             }
         }

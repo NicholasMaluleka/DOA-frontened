@@ -9,11 +9,9 @@
         </div>
       </div>
     </div>
-    <div fxLayout="row wrap" class="width-25 full-height" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="true">
-      <div fxLayout="column wrap" class="relative" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon>notifications</mat-icon>
-        <div class="height-10 width-10 notif-padding yellow-bg top-1 right-1 center-center flex radius-50 absolute">
-          0</div>
-      </div>
+    <div fxLayout="row wrap" class="width-25 full-height" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" class="pointer relative" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon [matMenuTriggerFor]="notsMenu">notifications</mat-icon><small class="sim-x-small height-10 width-10 notif-padding yellow-bg top-1 right-1 center-center flex radius-50 absolute">
+          {{page.messages.length}}</small></div>
       <div fxLayout="column wrap" class="blue-color light-grey-bg height-35 width-10 radius-50" fxLayoutAlign="center center" [fxShow]="true">
         <div>
           <h5><b>{{page.name}}{{ page.surname}}</b></h5>
@@ -50,4 +48,5 @@
           </div>
         </div>
       </button></mat-menu></div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-menu class="sim-menu" #notsMenu="matMenu" xPosition="before" #menu="matMenu"><button mat-menu-item *ngFor="let message of page.messages" class="sim-x-small"> {{message.not}} </button></mat-menu></div>
 </div>
