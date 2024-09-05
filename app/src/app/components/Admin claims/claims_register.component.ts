@@ -1068,6 +1068,7 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
       this.getFromBackend1();
+      console.log('data to use', page.idclaimerFile);
 
       bh = this.sd_jr3k8kNfVkjaB5Ka(bh);
       //appendnew_next_sd_b1QBlwuGwfmxrU8X
