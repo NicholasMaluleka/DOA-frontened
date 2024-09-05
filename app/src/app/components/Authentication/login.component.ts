@@ -5,8 +5,8 @@
 
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
-import { MatDialog } from '@angular/material/dialog'; //_splitter_
-import { view_documentComponent } from 'app/components/Authentication/view_document.component'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -67,7 +67,7 @@ export class loginComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_bqB5zlGIrtB9lvJY(bh);
+      bh = this.sd_rkB5QqUgrAKv3a1e(bh);
       //appendnew_next_login
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_71FwAex7k56plSj9');
@@ -104,17 +104,330 @@ export class loginComponent {
     }
   }
 
-  sd_bqB5zlGIrtB9lvJY(bh) {
+  async sd_rkB5QqUgrAKv3a1e(bh) {
     try {
-      const view_documentDialog = this.__page_injector__.get(MatDialog);
-      const view_documentDialogRef = view_documentDialog.open(
-        view_documentComponent,
-        {}
-      );
+      if (
+        this.sdService.operators['eq'](
+          bh.input.form.form.status,
+          'INVALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_AKCd9T0p7cDWhRTR(bh);
+      } else {
+        bh = await this.sd_DUejOGCOl1GlgrTF(bh);
+      }
 
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bqB5zlGIrtB9lvJY');
+      return this.errorHandler(bh, e, 'sd_rkB5QqUgrAKv3a1e');
+    }
+  }
+
+  sd_AKCd9T0p7cDWhRTR(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Please Fill All Fields', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_AKCd9T0p7cDWhRTR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AKCd9T0p7cDWhRTR');
+    }
+  }
+
+  sd_DUejOGCOl1GlgrTF(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_ioQgoBz2AkEDMlcS(bh);
+      //appendnew_next_sd_DUejOGCOl1GlgrTF
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DUejOGCOl1GlgrTF');
+    }
+  }
+
+  sd_ioQgoBz2AkEDMlcS(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'login';
+      page.loading = true;
+      bh = this.sd_zTKl6k43D2GeisCd(bh);
+      //appendnew_next_sd_ioQgoBz2AkEDMlcS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ioQgoBz2AkEDMlcS');
+    }
+  }
+
+  async sd_zTKl6k43D2GeisCd(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.input.form.value,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_R2or05KgG4F0SznO(bh);
+      //appendnew_next_sd_zTKl6k43D2GeisCd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zTKl6k43D2GeisCd');
+    }
+  }
+
+  sd_R2or05KgG4F0SznO(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+
+      // console.log("Result login", bh.result)
+      bh = this.sd_buYzaxDxyjRaVxqv(bh);
+      //appendnew_next_sd_R2or05KgG4F0SznO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_R2or05KgG4F0SznO');
+    }
+  }
+
+  async sd_buYzaxDxyjRaVxqv(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          "Password Don't match",
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_DrwpTKFaF2PfX0uE(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'User not found',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_vl5FCxtDP6xLD1fe(bh);
+      } else {
+        bh = await this.sd_pWnUWcBfELW3hZrp(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_buYzaxDxyjRaVxqv');
+    }
+  }
+
+  sd_DrwpTKFaF2PfX0uE(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open("Password Don't match", 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_DrwpTKFaF2PfX0uE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DrwpTKFaF2PfX0uE');
+    }
+  }
+
+  sd_vl5FCxtDP6xLD1fe(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open("User Doesn't exist", 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_vl5FCxtDP6xLD1fe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vl5FCxtDP6xLD1fe');
+    }
+  }
+
+  sd_pWnUWcBfELW3hZrp(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.role,
+          'admin',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_amrKD85p0eRgsnBY(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          bh.result.role,
+          'client',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_r58lpYP5NfnKU8WQ(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          bh.result.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_iGycO4jnqKpix0R8(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pWnUWcBfELW3hZrp');
+    }
+  }
+
+  async sd_amrKD85p0eRgsnBY(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      bh = this.sd_51iYvY9GLbmiDMYl(bh);
+      //appendnew_next_sd_amrKD85p0eRgsnBY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_amrKD85p0eRgsnBY');
+    }
+  }
+
+  sd_51iYvY9GLbmiDMYl(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Successfully logged in', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_Sxe8LBYbOvGJ2l4m(bh);
+      //appendnew_next_sd_51iYvY9GLbmiDMYl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_51iYvY9GLbmiDMYl');
+    }
+  }
+
+  sd_Sxe8LBYbOvGJ2l4m(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.result));
+      //appendnew_next_sd_Sxe8LBYbOvGJ2l4m
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Sxe8LBYbOvGJ2l4m');
+    }
+  }
+
+  async sd_r58lpYP5NfnKU8WQ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_plan_details');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      bh = this.sd_viITVWMo8noRtLLF(bh);
+      //appendnew_next_sd_r58lpYP5NfnKU8WQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r58lpYP5NfnKU8WQ');
+    }
+  }
+
+  sd_viITVWMo8noRtLLF(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Welcome client', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_iiPTp6BRisa9Wz2L(bh);
+      //appendnew_next_sd_viITVWMo8noRtLLF
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_viITVWMo8noRtLLF');
+    }
+  }
+
+  sd_iiPTp6BRisa9Wz2L(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.result));
+      //appendnew_next_sd_iiPTp6BRisa9Wz2L
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iiPTp6BRisa9Wz2L');
+    }
+  }
+
+  async sd_iGycO4jnqKpix0R8(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      bh = this.sd_SGMcpcrY4y3UKTKj(bh);
+      //appendnew_next_sd_iGycO4jnqKpix0R8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iGycO4jnqKpix0R8');
+    }
+  }
+
+  sd_SGMcpcrY4y3UKTKj(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Successfully logged in', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_QCpkMADtxfSqgHXt(bh);
+      //appendnew_next_sd_SGMcpcrY4y3UKTKj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SGMcpcrY4y3UKTKj');
+    }
+  }
+
+  sd_QCpkMADtxfSqgHXt(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(bh.result));
+      //appendnew_next_sd_QCpkMADtxfSqgHXt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QCpkMADtxfSqgHXt');
     }
   }
 
