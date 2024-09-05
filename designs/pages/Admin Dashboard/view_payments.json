@@ -452,10 +452,10 @@
         "functionName": "openPaymentForm",
         "category": "General",
         "x": 65,
-        "y": 340,
+        "y": 360,
         "wires": [
             [
-                "sd_gfsbZ8Sd5skDsAgI"
+                "sd_9ubEfKLoRfowfo8q"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -498,8 +498,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_gfsbZ8Sd5skDsAgI",
         "category": "Dialog",
-        "x": 190,
-        "y": 340,
+        "x": 245,
+        "y": 360,
         "wires": [
             [],
             [],
@@ -648,12 +648,11 @@
         "serviceImportPath": "./",
         "startName": "getPayments",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_VtI0lmylmkampM9c",
         "category": "General",
-        "x": 305,
-        "y": 340,
+        "x": 365,
+        "y": 360,
         "wires": [
             []
         ],
@@ -703,5 +702,358 @@
         "generateNext": false,
         "serviceName": "view_paymentsComponent",
         "generated": true
+    },
+    {
+        "id": "sd_9ubEfKLoRfowfo8q",
+        "type": "Storage",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "payment_event"
+        },
+        "value": {
+            "type": "str",
+            "value": "Log a payment"
+        },
+        "resultMapping": {},
+        "functionName": "sd_9ubEfKLoRfowfo8q",
+        "category": "Storage",
+        "x": 145,
+        "y": 360,
+        "wires": [
+            [
+                "sd_gfsbZ8Sd5skDsAgI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lLjKTcNWnIYepJjR",
+        "type": "PageStart",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "edit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "edit",
+        "category": "General",
+        "x": 60,
+        "y": 460,
+        "wires": [
+            [
+                "sd_IhgwzeZxvYG1yEqm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_paymentsComponent"
+    },
+    {
+        "id": "sd_a5WtRidyGMdzCdpQ",
+        "type": "OpenDialog",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_7Y0FdLD4v3Ji9ha6",
+            "label": "payment_form"
+        },
+        "relativePath": "app/components/Admin Dashboard/payment_form",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "\"75vh\"",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "\"50vw\"",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_a5WtRidyGMdzCdpQ",
+        "category": "Dialog",
+        "x": 245,
+        "y": 460,
+        "wires": [
+            [],
+            [],
+            [],
+            [
+                "sd_lPDS2mHFSSLMBItn"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "str",
+                "value": "75vh",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "str",
+                "value": "50vw",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lPDS2mHFSSLMBItn",
+        "type": "PageCallService",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_nsEcp9j2OQxe1WKG",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:31:27.956Z",
+            "label": "view_payments",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 1
+        },
+        "flow": {
+            "flowId": "sd_hitXP2aD8V5Moowo",
+            "flowName": "getPayments"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "getPayments",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_lPDS2mHFSSLMBItn",
+        "category": "General",
+        "x": 365,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IhgwzeZxvYG1yEqm",
+        "type": "Storage",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "payment_event"
+        },
+        "value": {
+            "type": "str",
+            "value": "Edit payment"
+        },
+        "resultMapping": {},
+        "functionName": "sd_IhgwzeZxvYG1yEqm",
+        "category": "Storage",
+        "x": 145,
+        "y": 460,
+        "wires": [
+            [
+                "sd_a5WtRidyGMdzCdpQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2wcyAsU7HYC1Or56",
+        "type": "Storage",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "edit_info"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "index"
+        },
+        "resultMapping": {},
+        "functionName": "sd_2wcyAsU7HYC1Or56",
+        "category": "Storage",
+        "x": 545,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jLre9GhKhZrqatD3",
+        "type": "PageStart",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "edit_info",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "index",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "editInfo",
+        "category": "General",
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "sd_2wcyAsU7HYC1Or56"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_paymentsComponent"
     }
 ]

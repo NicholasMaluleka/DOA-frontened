@@ -399,7 +399,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<h2 class=\"blue-color flex center-center full-width\">Log a payment</h2>",
+                            "_value": "<h2 class=\"blue-color flex center-center full-width\">{{page.action}}</h2>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
