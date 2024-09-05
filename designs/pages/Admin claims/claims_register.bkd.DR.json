@@ -3129,7 +3129,6 @@
                                     "paletteKey": "NG-Input",
                                     "parentEditorKey": "ef7616f7-3c29-8ff4-1e27-fc7a5eca575e",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3723,7 +3722,6 @@
                                     "paletteKey": "NG-Input",
                                     "parentEditorKey": "5623f04e-6d96-18bf-dd60-0ab137221a47",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -4767,7 +4765,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "\r\n <div (click)=\"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Certificate\r\n\r\n </label></button>\r\n \r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n</div>\r\n\r\n",
+                                            "_value": "\r\n <div (click)=\"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Certificate\r\n\r\n </label></button>\r\n \r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n</div>\r\n\r\n<!-- Juska -->\r\n<div class=\"view-doc\">\r\n\r\n</div>\r\n\r\n",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
