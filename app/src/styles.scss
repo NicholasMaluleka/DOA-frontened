@@ -114,11 +114,6 @@ overflow: hidden;
     width: 49%;
 }
 .scroller{
- max-height: 600px;
- overflow-y: auto;
-}
-
-.scroller{
  max-height: 500px;
  overflow-y: auto;
 }
@@ -533,7 +528,14 @@ width: 150px;
 }
 ///////////////////////////////////////////////NICHOLAS STYLES END //////////////////////////////////////////////////////////////
 
+//Phindile styles :start
 
+.scroller-phindile{
+ max-height: 600px;
+ overflow-y: hidden;
+}
+
+//Phindile styles end
 body{
     font-family: "Open Sans", sans-serif;
 }

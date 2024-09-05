@@ -106,6 +106,81 @@ export class edit_personalInfoComponent {
       return this.errorHandler(bh, e, 'sd_AkNHYq7o3lsF76C8');
     }
   }
+
+  idValid(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_OjnbAvlFLUR3zGD4(bh);
+      //appendnew_next_idValid
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_S9yW8bkU4F73EyOY');
+    }
+  }
+
+  idValid1(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_QEoSMxy68DdcwloW(bh);
+      //appendnew_next_idValid1
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qjdaPlh9tYRfl2cj');
+    }
+  }
+
+  idValid2(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_H9tzoLlT4Fi8b8WP(bh);
+      //appendnew_next_idValid2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ygLmaDpGMnONXIW3');
+    }
+  }
+
+  idValid3(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_0ENYDmWxNvxRkhoJ(bh);
+      //appendnew_next_idValid3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Tde7BjrvTO0jGMY8');
+    }
+  }
+
+  idValid4(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_lxizv4O2VUb4bjID(bh);
+      //appendnew_next_idValid4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Le0GGwdMrzMY8gnV');
+    }
+  }
   //appendnew_flow_edit_personalInfoComponent_start
 
   sd_gVQaHXs38htCSDBJ(bh) {
@@ -131,6 +206,14 @@ export class edit_personalInfoComponent {
       this.page.showdependencies1Form = this.page.false;
       this.page.counter = 0;
       this.page.showdependencies2Form = this.page.false;
+      this.page.hideIcon = true;
+      this.page.hideIcon2 = true;
+      this.page.gender = undefined;
+      this.page.gender1 = undefined;
+      this.page.gender2 = undefined;
+      this.page.gender3 = undefined;
+      this.page.gender4 = undefined;
+      this.page.gender5 = undefined;
       bh = this.sd_JfSFbebXgEzrA6yw(bh);
       //appendnew_next_sd_Y3mN2lQwd5HnEduh
       return bh;
@@ -166,19 +249,21 @@ export class edit_personalInfoComponent {
       //console.log("depe1", page.depe1)
 
       page.formdata = new FormGroup({
-        firstName: new FormControl(page.userData?.firstName, [
+        firstName: new FormControl(page.userData?.firstName || '', [
           Validators.required,
         ]),
-        lastName: new FormControl(page.userData?.lastName, [
+        lastName: new FormControl(page.userData?.lastName || '', [
           Validators.required,
         ]),
-        cellphone: new FormControl(page.userData?.cellphone, [
+        cellphone: new FormControl(page.userData?.cellphone || '', [
           Validators.required,
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
         idNumber: new FormControl(page.userData?.idNumber || '', [
           Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
         ]),
         gender: new FormControl(page.userData?.gender || '', [
           Validators.required,
@@ -204,9 +289,14 @@ export class edit_personalInfoComponent {
         ]),
         idNumber: new FormControl(page.ben1?.idNumber || '', [
           Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
         ]),
         gender: new FormControl(page.ben1?.gender || '', [Validators.required]),
-        email: new FormControl(page.ben1?.email || '', [Validators.required]),
+        email: new FormControl(page.ben1?.email || '', [
+          Validators.required,
+          Validators.email,
+        ]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
           Validators.maxLength(10),
@@ -217,49 +307,64 @@ export class edit_personalInfoComponent {
         ]),
       });
       page.beneficaries1Form = new FormGroup({
-        firstName: new FormControl(page.ben2.firstName),
-        lastName: new FormControl(page.ben2.lastName),
-        idNumber: new FormControl(page.ben2.idNumber),
-        gender: new FormControl(page.ben2.gender),
-        email: new FormControl(page.ben2.email),
-        cellphone: new FormControl(page.ben2.cellphone),
-        relationship: new FormControl(page.ben2.relationship),
+        firstName: new FormControl(page.ben2.firstName, [Validators.required]),
+        lastName: new FormControl(page.ben2.lastName, [Validators.required]),
+        idNumber: new FormControl(page.ben2.idNumber, [
+          Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
+        ]),
+        gender: new FormControl(page.ben2.gender || '', [Validators.required]),
+        email: new FormControl(page.ben2.email, [
+          Validators.required,
+          Validators.email,
+        ]),
+        cellphone: new FormControl(page.ben2.cellphone, [
+          Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
+        ]),
+        relationship: new FormControl(page.ben2.relationship, [
+          Validators.required,
+        ]),
       });
 
       page.dependencyForm = new FormGroup({
-        firstName: new FormControl(page.depe1?.firstName),
-        lastName: new FormControl(page.depe1?.lastName),
-        gender: new FormControl(page.depe1?.gender),
-        idNumber: new FormControl(page.depe1?.idNumber),
+        firstName: new FormControl(page.depe1?.firstName, [
+          Validators.required,
+        ]),
+        lastName: new FormControl(page.depe1?.lastName, [Validators.required]),
+        gender: new FormControl(page.depe1?.gender, [Validators.required]),
+        idNumber: new FormControl(page.depe1?.idNumber, [
+          Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
+        ]),
       });
 
       page.dependency1Form = new FormGroup({
-        firstName: new FormControl(page.depe2?.firstName || '', [
+        firstName: new FormControl(page.depe2?.firstName, [
           Validators.required,
         ]),
-        lastName: new FormControl(page.depe2?.lastName || '', [
+        lastName: new FormControl(page.depe2?.lastName, [Validators.required]),
+        gender: new FormControl(page.depe2?.gender, [Validators.required]),
+        idNumber: new FormControl(page.depe2?.idNumber, [
           Validators.required,
-        ]),
-        gender: new FormControl(page.depe2?.gender || '', [
-          Validators.required,
-        ]),
-        idNumber: new FormControl(page.depe2?.idNumber || '', [
-          Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
         ]),
       });
 
       page.dependency2Form = new FormGroup({
-        firstName: new FormControl(page.depe3?.firstName || '', [
+        firstName: new FormControl(page.depe3?.firstName, [
           Validators.required,
         ]),
-        lastName: new FormControl(page.depe3?.lastName || '', [
+        lastName: new FormControl(page.depe3?.lastName, [Validators.required]),
+        gender: new FormControl(page.depe3?.gender, [Validators.required]),
+        idNumber: new FormControl(page.depe3?.idNumber, [
           Validators.required,
-        ]),
-        gender: new FormControl(page.depe3?.gender || '', [
-          Validators.required,
-        ]),
-        idNumber: new FormControl(page.depe3?.idNumber || '', [
-          Validators.required,
+          Validators.minLength(13),
+          Validators.maxLength(13),
         ]),
       });
 
@@ -287,10 +392,10 @@ export class edit_personalInfoComponent {
         { value: 'Package 3', viewValue: 'Package 3' },
       ];
 
-      page.gender = [
-        { value: 'Male', viewValue: 'Male' },
-        { value: 'Female', viewValue: 'Female' },
-      ];
+      // page.gender = [
+      //    {value: 'Male', viewValue: 'Male'},
+      //    {value: 'Female', viewValue: 'Female'}
+      // ];
       //appendnew_next_sd_ECrTSDWg9bec5qWR
       return bh;
     } catch (e) {
@@ -393,7 +498,7 @@ export class edit_personalInfoComponent {
     try {
       const page = this.page;
       page.showbeneficaries1Form = true;
-      //page.hideIcon = false
+      page.hideIcon = false;
       console.log('form', page.showbeneficaries1Form);
 
       //appendnew_next_sd_5nhxWC6xzWqUMH6w
@@ -407,17 +512,460 @@ export class edit_personalInfoComponent {
     try {
       const page = this.page;
       page.showdependencies1Form = true;
-      //page.hideIcon = false
+
       console.log('form', page.showdependencies1Form);
 
       page.counter++;
       if (page.counter == 2) {
-        page.showdependencies2Form = true;
+        page.dependencyForm = true;
+        page.hideIcon2 = false;
       }
+
+      // page.showDependencyForm = true
+      // page.counter++
+      // if(page.counter == 2) {
+      //     page.showDependencyForm1 = true
+      //     page.hideIcon2 = false
+      // }
       //appendnew_next_sd_WQQZU7S1MJVM0lrL
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_WQQZU7S1MJVM0lrL');
+    }
+  }
+
+  sd_OjnbAvlFLUR3zGD4(bh) {
+    try {
+      const page = this.page;
+      let id = page.beneficariesForm.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.beneficariesForm.patchValue({
+          gender: page.gender,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.beneficariesForm.patchValue({
+          gender: page.gender,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.beneficariesForm.controls.idNumber.value);
+      //appendnew_next_sd_OjnbAvlFLUR3zGD4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OjnbAvlFLUR3zGD4');
+    }
+  }
+
+  sd_QEoSMxy68DdcwloW(bh) {
+    try {
+      const page = this.page;
+      let id = page.beneficaries1Form.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.beneficaries1Form.patchValue({
+          gender: page.gender1,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.beneficaries1Form.patchValue({
+          gender: page.gender1,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.beneficaries1Form.controls.idNumber.value);
+      //appendnew_next_sd_QEoSMxy68DdcwloW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QEoSMxy68DdcwloW');
+    }
+  }
+
+  sd_H9tzoLlT4Fi8b8WP(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependencyForm.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.dependencyForm.patchValue({
+          gender: page.gender2,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.dependencyForm.patchValue({
+          gender: page.gender2,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependencyForm.controls.idNumber.value);
+      //appendnew_next_sd_H9tzoLlT4Fi8b8WP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_H9tzoLlT4Fi8b8WP');
+    }
+  }
+
+  sd_0ENYDmWxNvxRkhoJ(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependency1Form.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.dependency1Form.patchValue({
+          gender: page.gender3,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.dependency1Form.patchValue({
+          gender: page.gender3,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependency1Form.controls.idNumber.value);
+      //appendnew_next_sd_0ENYDmWxNvxRkhoJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0ENYDmWxNvxRkhoJ');
+    }
+  }
+
+  sd_lxizv4O2VUb4bjID(bh) {
+    try {
+      const page = this.page;
+      let id = page.dependency2Form.controls.idNumber.value;
+      let DOB = id.substring(0, 6);
+      let year = DOB.substring(0, 2);
+      let yeardigit = year.substring(0, 1);
+      let yeardigit2 = year.substring(1, 2);
+      let month = DOB.substring(2, 4);
+      let day = DOB.substring(4, 6);
+      let gender = id.substring(6, 10);
+      let country = id.substring(10, 11);
+      let eight = id.substring(11, 12);
+
+      //year
+      if (Number(yeardigit) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      if (Number(yeardigit2) < 0) {
+        console.log('Invalid ID number');
+        return;
+      }
+      //month
+      if (Number(month) <= 12 && Number(month) >= 1) {
+        // valid
+        console.log('valid month');
+      } else {
+        console.log('Invalid ID month');
+        return;
+      }
+      //day
+      if (Number(day) <= 31 && Number(day) >= 1) {
+        // valid
+        console.log('valid day');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //gender
+      if (Number(gender) <= 4999 && Number(gender) >= 0) {
+        console.log('Female');
+        page.gender = 'Female';
+        page.dependency2Form.patchValue({
+          gender: page.gender4,
+        });
+        // page.clientForm.controls.gender.value = "Female"
+      } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
+        console.log('Male');
+        page.gender = 'Male';
+        page.dependency2Form.patchValue({
+          gender: page.gender4,
+        });
+        // page.clientForm.controls.gender.value = "Male"
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+
+      //country
+      if (Number(country) === 1) {
+        console.log('citizen');
+      } else if (Number(country) === 0) {
+        console.log('South Africa');
+      } else {
+        console.log('Invalid ID number');
+        return;
+      }
+
+      //eight
+      if (Number(eight) === 8) {
+        // valid
+        console.log('valid day');
+      } else {
+        alert('Invalid ID number');
+        return;
+      }
+      console.log('valid id', page.dependency2Form.controls.idNumber.value);
+      //appendnew_next_sd_lxizv4O2VUb4bjID
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lxizv4O2VUb4bjID');
     }
   }
 
