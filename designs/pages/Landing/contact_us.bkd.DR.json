@@ -2782,7 +2782,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "Type your massege here....",
+                                    "_value": "Type your message here....",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -2807,7 +2807,7 @@
                                 },
                                 {
                                     "_key": "Label",
-                                    "_value": "massege",
+                                    "_value": "Message",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
