@@ -490,7 +490,7 @@ export class claims_registerComponent {
         chunkSize: new FormControl(''),
         length: new FormControl(''),
       });
-      page.bi1663 = new FormGroup({
+      page.bi1662 = new FormGroup({
         _id: new FormControl(''),
         filename: new FormControl(''),
         chunkSize: new FormControl(''),
@@ -522,7 +522,7 @@ export class claims_registerComponent {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1663: page.bi1663,
+        bi1662: page.bi1662,
         bi16632: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
