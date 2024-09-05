@@ -4,7 +4,9 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
+import { client_profileComponent } from 'app/components/Client/client_profile.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -98,6 +100,21 @@ export class toolbarComponent {
       //appendnew_next_logout
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lmjfVOm0jgPaxNTJ');
+    }
+  }
+
+  editProfile(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_0cDiTre6EpWOepWR(bh);
+      //appendnew_next_editProfile
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hz6dUvyW6gB9ERDL');
     }
   }
   //appendnew_flow_toolbarComponent_start
@@ -222,6 +239,15 @@ export class toolbarComponent {
         )
       ) {
         bh = this.sd_3c1Lvfj2yO6nDjXf(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_SDUZ8pyB4VGokn3v(bh);
       }
 
       return bh;
@@ -255,6 +281,19 @@ export class toolbarComponent {
     }
   }
 
+  sd_SDUZ8pyB4VGokn3v(bh) {
+    try {
+      const page = this.page;
+      page.name = page.name.charAt(0).toUpperCase();
+      page.surname = page.surname.charAt(0).toUpperCase();
+
+      //appendnew_next_sd_SDUZ8pyB4VGokn3v
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SDUZ8pyB4VGokn3v');
+    }
+  }
+
   sd_9CWPhdafRN2uiO3R(bh) {
     try {
       const page = this.page;
@@ -280,6 +319,20 @@ export class toolbarComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_DjDQoaspFOVHyxuo');
+    }
+  }
+
+  sd_0cDiTre6EpWOepWR(bh) {
+    try {
+      const client_profileDialog = this.__page_injector__.get(MatDialog);
+      const client_profileDialogRef = client_profileDialog.open(
+        client_profileComponent,
+        {}
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0cDiTre6EpWOepWR');
     }
   }
 

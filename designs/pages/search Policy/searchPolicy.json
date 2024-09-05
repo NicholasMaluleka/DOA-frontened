@@ -185,6 +185,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -192,8 +193,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -209,9 +212,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_bvvL7YmEZnHQdKek",
         "category": "HTTP",
@@ -241,7 +246,7 @@
         "y": 160,
         "wires": [
             [
-                "sd_WIcYKCF6dB4ESURL"
+                "sd_uK9SFyo7OgJzOK8J"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -281,23 +286,79 @@
         "generated": true
     },
     {
-        "id": "sd_WIcYKCF6dB4ESURL",
-        "type": "Log",
+        "id": "sd_GrC07KTLi0xBLPf5",
+        "type": "Navigation",
         "z": "sd_DhHQUCCXlUUb7ZvE",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "outputs": 0,
-        "logObject": "this.page",
-        "functionName": "sd_WIcYKCF6dB4ESURL",
-        "category": "General",
-        "x": 580,
+        "path": "/dashboard/claim-register",
+        "functionName": "sd_GrC07KTLi0xBLPf5",
+        "category": "Navigation",
+        "x": 585,
+        "y": 260,
+        "wires": [
+            [
+                "sd_IO4IqWL9nrM5vCKf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uK9SFyo7OgJzOK8J",
+        "type": "Storage",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "client"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "clients"
+        },
+        "resultMapping": {},
+        "functionName": "sd_uK9SFyo7OgJzOK8J",
+        "category": "Storage",
+        "x": 560,
         "y": 160,
-        "wires": [],
+        "wires": [
+            [
+                "sd_GrC07KTLi0xBLPf5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IO4IqWL9nrM5vCKf",
+        "type": "CloseDialog",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.clients",
+        "functionName": "sd_IO4IqWL9nrM5vCKf",
+        "category": "Dialog",
+        "x": 705,
+        "y": 260,
+        "wires": [
+            []
+        ],
         "__ssdTypeInputs__": {
-            "logObject": {
+            "data": {
                 "type": "this.page",
-                "value": "",
+                "value": "clients",
                 "constant": false
             }
         },

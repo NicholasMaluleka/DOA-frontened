@@ -9,7 +9,7 @@
       </div>
     </div>
     <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
-      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button [matMenuTriggerFor]="menu" color="accent">Log A Claim</button><mat-menu #menu="matMenu"><button mat-menu-item (click)="open()"> Policy Holder </button><button mat-menu-item> Beneficary </button></mat-menu></div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button [matMenuTriggerFor]="menu" color="accent">Log A Claim</button><mat-menu #menu="matMenu"><button mat-menu-item (click)="openPolicy()"> Policy Holder </button><button mat-menu-item (click)="openBeneficary()"> Beneficary </button></mat-menu></div>
     </div>
   </div>
   <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">

@@ -2,6 +2,7 @@
     "classes": [
         "FullHeight",
         "width20",
+        "small-weight",
         "fullWidth",
         "yellow-bg",
         "GREENISH-BG",
@@ -132,6 +133,28 @@
         "mat-step-header",
         "mat-step-icon-selected",
         "mat-step-icon-state-done",
-        "mat-step-icon-state-edit"
+        "mat-step-icon-state-edit",
+        "container",
+        "item",
+        "profile-container-alt",
+        "profile-card-alt",
+        "profile-card-header-alt",
+        "profile-icon-alt",
+        "profile-content-alt",
+        "profile-item-alt",
+        "profile-label-alt",
+        "profile-value-alt",
+        "profile-card-footer-alt",
+        "edit-button-alt",
+        "summary-cards",
+        "card",
+        "card-info",
+        "count",
+        "pending",
+        "partially-approved",
+        "fully-approved",
+        "icon-hourglass",
+        "icon-half-check",
+        "icon-check"
     ]
 }

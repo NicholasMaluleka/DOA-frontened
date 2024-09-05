@@ -2392,6 +2392,21 @@
                                 "_value": "{table: table}",
                                 "_type": "kv",
                                 "_attrDef": "c"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "sendUser(row)",
+                                "_type": "kv",
+                                "_attrDef": "c",
+                                "objValue": {
+                                    "nodeID": "sd_nrUbOI69LYzRt4La",
+                                    "functionName": "sendUser",
+                                    "activeTree": "pages",
+                                    "z": "sd_o4ikLTEW12PcNWYL",
+                                    "input": [
+                                        "row"
+                                    ]
+                                }
                             }
                         ]
                     }
