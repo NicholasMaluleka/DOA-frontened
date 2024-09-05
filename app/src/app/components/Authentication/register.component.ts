@@ -123,7 +123,7 @@ export class registerComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_5FvUEd3TbUxOODvU(bh);
+      bh = this.sd_wKoZboaQVHIPkQvv(bh);
       //appendnew_next_confirm
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mfn5TNjxg1EDrkux');
@@ -482,6 +482,20 @@ export class registerComponent {
     }
   }
 
+  sd_wKoZboaQVHIPkQvv(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+
+      console.log('LOADIN: ', page.loading);
+      bh = this.sd_5FvUEd3TbUxOODvU(bh);
+      //appendnew_next_sd_wKoZboaQVHIPkQvv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wKoZboaQVHIPkQvv');
+    }
+  }
+
   sd_5FvUEd3TbUxOODvU(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
@@ -629,7 +643,6 @@ export class registerComponent {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'upload';
-
       bh = this.sd_Z0u2uGd5YO9ydjps(bh);
       //appendnew_next_sd_XSPvXcLY8nKgPJZk
       return bh;
@@ -662,26 +675,10 @@ export class registerComponent {
       const page = this.page;
       sessionStorage.setItem('file', JSON.stringify(bh.result));
       this.getFromBackend();
-      bh = this.sd_em3ylD24zJZE2On9(bh);
       //appendnew_next_sd_vR3yJnYv3XKsLrq8
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_vR3yJnYv3XKsLrq8');
-    }
-  }
-
-  sd_em3ylD24zJZE2On9(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Upload Successful', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      //appendnew_next_sd_em3ylD24zJZE2On9
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_em3ylD24zJZE2On9');
     }
   }
 
@@ -817,7 +814,7 @@ export class registerComponent {
         params: {},
         body: this.page.uploadedFile,
       };
-      bh.message = await this.sdService.nHttpRequest(requestOptions);
+      bh.results = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_FZ6WMQY1voina3hL(bh);
       //appendnew_next_sd_xmrSywhjgd5I6fVU
       return bh;
@@ -830,8 +827,11 @@ export class registerComponent {
     try {
       const page = this.page;
       page.loading = false;
+
+      bh.message1 = bh.results.message;
       this.showmsg();
       this.goToBackend();
+
       //appendnew_next_sd_FZ6WMQY1voina3hL
       return bh;
     } catch (e) {
@@ -1276,7 +1276,7 @@ export class registerComponent {
 
   sd_ujwsbDV8Krrs0ert(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open(bh.message, 'Ok', {
+      this.__page_injector__.get(MatSnackBar).open('ID is valid', 'Ok', {
         duration: 3000,
         direction: 'ltr',
         horizontalPosition: 'center',

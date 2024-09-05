@@ -381,7 +381,7 @@
         "y": 400,
         "wires": [
             [
-                "sd_5FvUEd3TbUxOODvU"
+                "sd_wKoZboaQVHIPkQvv"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -407,7 +407,7 @@
         ],
         "functionName": "sd_5FvUEd3TbUxOODvU",
         "category": "General",
-        "x": 385,
+        "x": 465,
         "y": 400,
         "wires": [
             [
@@ -429,7 +429,7 @@
         "script": "page.clientForm.value.file._id = page.userFile._id\npage.clientForm.value.file.filename = page.userFile.filename\npage.clientForm.value.file.length = page.userFile.length\npage.clientForm.value.file.chunkSize = page.userFile.chunkSize\n\nbh.url = page.ssdUrl + 'register'\n\ndelete page.clientForm.file2\n\nbh.body = page.clientForm.value\nbh.body.role = \"client\"\nbh.body.policyNumber = bh.random\nbh.body.password = bh.random2.toString()\nbh.body.beneficaries = [page.beneficaryForm.value, page.beneficaryForm2.value]\nbh.body.dependencies = [page.dependencyForm.value, page.dependencyForm2.value, page.dependencyForm3.value]\n\n\n",
         "functionName": "sd_lL2rQ9BIoBqeZaCn",
         "category": "Function",
-        "x": 625,
+        "x": 725,
         "y": 400,
         "wires": [
             [
@@ -479,7 +479,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'upload'\n\n",
+        "script": "bh.url = page.ssdUrl + 'upload'",
         "functionName": "sd_XSPvXcLY8nKgPJZk",
         "category": "Function",
         "x": 485,
@@ -641,9 +641,7 @@
         "x": 685,
         "y": 140,
         "wires": [
-            [
-                "sd_em3ylD24zJZE2On9"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -686,9 +684,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "registerComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "registerComponent"
     },
     {
         "id": "sd_feAbYysgRL7fgGGm",
@@ -733,7 +730,7 @@
         "paramMappingObj": {},
         "functionName": "sd_feAbYysgRL7fgGGm",
         "category": "HTTP",
-        "x": 705,
+        "x": 845,
         "y": 400,
         "wires": [
             [
@@ -775,7 +772,7 @@
         "direction": "ltr",
         "functionName": "sd_QnaW4yCDpoY9Cu3b",
         "category": "General",
-        "x": 805,
+        "x": 945,
         "y": 400,
         "wires": [
             [
@@ -838,7 +835,7 @@
         "accept_csd": true,
         "functionName": "sd_uaLP5pYLb4eJZafw",
         "category": "General",
-        "x": 465,
+        "x": 545,
         "y": 400,
         "wires": [
             [
@@ -867,7 +864,7 @@
         "resultMapping": "",
         "functionName": "sd_IKDCeaKDglhchiOD",
         "category": "Navigation",
-        "x": 925,
+        "x": 1065,
         "y": 400,
         "wires": [
             []
@@ -928,7 +925,7 @@
         "accept_csd": true,
         "functionName": "sd_E3iTiEBecw7LpUwh",
         "category": "General",
-        "x": 545,
+        "x": 625,
         "y": 400,
         "wires": [
             [
@@ -1065,10 +1062,10 @@
             "mapVarType": "this.page",
             "mapVarValue": "uploadedFile"
         },
-        "resultMapping": "bh.message",
+        "resultMapping": "bh.results",
         "resultMappingObj": {
             "mapVarType": "bh",
-            "mapVarValue": "message"
+            "mapVarValue": "results"
         },
         "headers": {},
         "headersObj": [],
@@ -1123,7 +1120,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nthis.showmsg()\nthis.goToBackend()",
+        "script": "page.loading = false\n\n    bh.message1 = bh.results.message\n    this.showmsg()\n    this.goToBackend()\n\n",
         "functionName": "sd_FZ6WMQY1voina3hL",
         "category": "Function",
         "x": 968,
@@ -1388,8 +1385,8 @@
         "nodeType": "flow",
         "name": "",
         "message": {
-            "type": "bh",
-            "value": "message"
+            "type": "str",
+            "value": "ID is valid"
         },
         "action": {
             "type": "str",
@@ -1400,7 +1397,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1408,10 +1407,32 @@
         "direction": "ltr",
         "functionName": "sd_ujwsbDV8Krrs0ert",
         "category": "General",
-        "x": 1200,
+        "x": 1185,
         "y": 260,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wKoZboaQVHIPkQvv",
+        "type": "Script",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.loading = true\n\nconsole.log(\"LOADIN: \", page.loading)",
+        "functionName": "sd_wKoZboaQVHIPkQvv",
+        "category": "Function",
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "sd_5FvUEd3TbUxOODvU"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

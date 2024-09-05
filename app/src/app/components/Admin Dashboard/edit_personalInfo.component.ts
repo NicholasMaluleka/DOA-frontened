@@ -168,16 +168,14 @@ export class edit_personalInfoComponent {
       page.formdata = new FormGroup({
         firstName: new FormControl(page.userData?.firstName, [
           Validators.required,
-          Validators.minLength(18),
-          Validators.maxLength(25),
         ]),
         lastName: new FormControl(page.userData?.lastName, [
           Validators.required,
-          Validators.minLength(20),
-          Validators.maxLength(80),
         ]),
         cellphone: new FormControl(page.userData?.cellphone, [
           Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
         idNumber: new FormControl(page.userData?.idNumber || '', [
           Validators.required,
@@ -190,6 +188,7 @@ export class edit_personalInfoComponent {
         ]),
         email: new FormControl(page.userData?.email || '', [
           Validators.required,
+          Validators.email,
         ]),
         packageType: new FormControl(page.userData?.packageType || '', [
           Validators.required,
@@ -210,6 +209,8 @@ export class edit_personalInfoComponent {
         email: new FormControl(page.ben1?.email || '', [Validators.required]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
+          Validators.maxLength(10),
+          Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
         relationship: new FormControl(page.ben1?.relationship || '', [
           Validators.required,
@@ -278,6 +279,18 @@ export class edit_personalInfoComponent {
       ];
       //console.log("dependencies", page.dependencies)
 
+      //The select
+
+      page.package = [
+        { value: 'Package 1', viewValue: 'Package 1' },
+        { value: 'Package 2', viewValue: 'Package 2' },
+        { value: 'Package 3', viewValue: 'Package 3' },
+      ];
+
+      page.gender = [
+        { value: 'Male', viewValue: 'Male' },
+        { value: 'Female', viewValue: 'Female' },
+      ];
       //appendnew_next_sd_ECrTSDWg9bec5qWR
       return bh;
     } catch (e) {
@@ -291,7 +304,7 @@ export class edit_personalInfoComponent {
       bh.structuredData = page.formdata.value;
 
       bh.structuredData.beneficaries = page.beneficary;
-      console.log(page.beneficary);
+      //console.log(page.beneficary)
 
       bh.structuredData.dependencies = page.dependencies;
 
@@ -307,7 +320,7 @@ export class edit_personalInfoComponent {
       // console.log("form", page.formdata.value)
 
       // console.log("ben==>", page.ben2)
-      console.log('structured data: ', bh.structuredData);
+      //console.log("structured data: ", bh.structuredData)
       // console.log("ben value==>", page.beneficaries1Form.value)
 
       bh = this.sd_esjR1J0mKRyRAwFA(bh);
@@ -332,7 +345,11 @@ export class edit_personalInfoComponent {
   sd_N2zAqcAwssUX9pC6(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'update/' + `${page.user._id}`;
+      bh.url = page.ssdUrl + 'update-user/' + `${page.userData._id}`;
+
+      console.log('url', bh.url);
+      console.log('structured d', bh.structuredData);
+
       bh = this.sd_bMnbUq5poe9SegbD(bh);
       //appendnew_next_sd_N2zAqcAwssUX9pC6
       return bh;
@@ -345,11 +362,11 @@ export class edit_personalInfoComponent {
     try {
       let requestOptions = {
         url: bh.url,
-        method: 'get',
+        method: 'put',
         responseType: 'json',
         headers: {},
         params: {},
-        body: bh.structuredData.value,
+        body: bh.structuredData,
       };
       this.page.results = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_CrzHebrXy1FWqqr3(bh);

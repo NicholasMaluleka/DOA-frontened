@@ -122,13 +122,28 @@ export class claimsComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_d5Bmgxud8M60Ezv8');
     }
   }
+
+  reviewClaim(claim: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { claim };
+      bh.local = {};
+      bh = this.sd_bAHaN07ntqi6vQZb(bh);
+      //appendnew_next_reviewClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6uxXfPKiwYlVASPF');
+    }
+  }
   //appendnew_flow_claimsComponent_start
 
   sd_f4qlWKJDct97cBFV(bh) {
     try {
       this.page.policy = false;
       this.page.beneficary = false;
-      bh = this.sd_eJuzOUTYKNgXaqdz_1(bh);
+      bh = this.sd_VR4tz5tQLO9fBnmI(bh);
       //appendnew_next_sd_f4qlWKJDct97cBFV
       return bh;
     } catch (e) {
@@ -136,71 +151,54 @@ export class claimsComponent implements AfterViewInit {
     }
   }
 
+  sd_VR4tz5tQLO9fBnmI(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_gSvpKSvplT90yV3v(bh);
+      //appendnew_next_sd_VR4tz5tQLO9fBnmI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VR4tz5tQLO9fBnmI');
+    }
+  }
+
+  sd_gSvpKSvplT90yV3v(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + 'get-claims';
+      bh = this.sd_7iqhFUJtamXGE2xs(bh);
+      //appendnew_next_sd_gSvpKSvplT90yV3v
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gSvpKSvplT90yV3v');
+    }
+  }
+
+  async sd_7iqhFUJtamXGE2xs(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_eJuzOUTYKNgXaqdz_1(bh);
+      //appendnew_next_sd_7iqhFUJtamXGE2xs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7iqhFUJtamXGE2xs');
+    }
+  }
+
   sd_eJuzOUTYKNgXaqdz_1(bh) {
     try {
       const page = this.page;
-      bh.local.dataSource = new MatTableDataSource([
-        {
-          position: 1,
-          name: 'Hydrogen',
-          weight: 1.0079,
-          symbol: 'H',
-        },
-        {
-          position: 2,
-          name: 'Helium',
-          weight: 4.0026,
-          symbol: 'He',
-        },
-        {
-          position: 3,
-          name: 'Lithium',
-          weight: 6.941,
-          symbol: 'Li',
-        },
-        {
-          position: 4,
-          name: 'Beryllium',
-          weight: 9.0122,
-          symbol: 'Be',
-        },
-        {
-          position: 5,
-          name: 'Boron',
-          weight: 10.811,
-          symbol: 'B',
-        },
-        {
-          position: 6,
-          name: 'Carbon',
-          weight: 12.0107,
-          symbol: 'C',
-        },
-        {
-          position: 7,
-          name: 'Nitrogen',
-          weight: 14.0067,
-          symbol: 'N',
-        },
-        {
-          position: 8,
-          name: 'Oxygen',
-          weight: 15.9994,
-          symbol: 'O',
-        },
-        {
-          position: 9,
-          name: 'Fluorine',
-          weight: 18.9984,
-          symbol: 'F',
-        },
-        {
-          position: 10,
-          name: 'Neon',
-          weight: 20.1797,
-          symbol: 'Ne',
-        },
-      ]);
+      console.log('claims ->', page.result);
+
+      bh.local.dataSource = new MatTableDataSource(page.result);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
       return bh;
@@ -287,7 +285,7 @@ export class claimsComponent implements AfterViewInit {
       const searchPolicyDialog = this.__page_injector__.get(MatDialog);
       const searchPolicyDialogRef = searchPolicyDialog.open(
         searchPolicyComponent,
-        {}
+        { width: '40%' }
       );
       searchPolicyDialogRef.afterOpened().subscribe((event) => {
         this.sd_aNCFGIa8P3FmUQlu(bh);
@@ -329,7 +327,7 @@ export class claimsComponent implements AfterViewInit {
       const searchPolicyDialog = this.__page_injector__.get(MatDialog);
       const searchPolicyDialogRef = searchPolicyDialog.open(
         searchPolicyComponent,
-        {}
+        { width: '40%' }
       );
       searchPolicyDialogRef.afterOpened().subscribe((event) => {
         this.sd_UDh5XCgUWp8UrqTK(bh);
@@ -363,6 +361,17 @@ export class claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2WWUBCfUnObCGa7z');
+    }
+  }
+
+  sd_bAHaN07ntqi6vQZb(bh) {
+    try {
+      const page = this.page;
+      console.log('CLAIM POLICY: ', bh.input.claim);
+      //appendnew_next_sd_bAHaN07ntqi6vQZb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bAHaN07ntqi6vQZb');
     }
   }
 
