@@ -813,13 +813,10 @@ export class registerComponent {
     try {
       const page = this.page;
       page.loading = false;
-      if (bh.results.message == 'ID Is InValid') {
-        alert('Please upload proper image of ID');
-      } else {
-        bh.message1 = bh.results.message;
-        this.showmsg();
-        this.goToBackend();
-      }
+
+      bh.message1 = bh.results.message;
+      this.showmsg();
+      this.goToBackend();
 
       //appendnew_next_sd_FZ6WMQY1voina3hL
       return bh;

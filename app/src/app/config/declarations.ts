@@ -20,6 +20,10 @@ window['neutrinos'] = {
 import { schedules_pComponent } from '../components/Director/schedules_p.component';
 //CORE_REFERENCE_IMPORT-paymentsComponent
 import { paymentsComponent } from '../components/Client/payments.component';
+//CORE_REFERENCE_IMPORT-client_claim_formComponent
+import { client_claim_formComponent } from '../components/Client/client_claim_form.component';
+//CORE_REFERENCE_IMPORT-client_claimsComponent
+import { client_claimsComponent } from '../components/Client/client_claims.component';
 //CORE_REFERENCE_IMPORT-Director_homeComponent
 import { Director_homeComponent } from '../components/Director/Director_home.component';
 //CORE_REFERENCE_IMPORT-client_profileComponent
@@ -110,6 +114,10 @@ export const appDeclarations = [
   schedules_pComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-paymentsComponent
   paymentsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claim_formComponent
+  client_claim_formComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_claimsComponent
+  client_claimsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-Director_homeComponent
   Director_homeComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_profileComponent
@@ -202,9 +210,9 @@ export const appRoutes = [
       { path: 'edit-personalinfo', component: edit_personalInfoComponent },
       { path: 'client_plan_details', component: client_plan_detailsComponent },
       { path: 'client_profile', component: client_profileComponent },
-      { path: 'claim_register', component: claims_registerComponent },
       { path: 'claim-register', component: claims_registerComponent },
-      { path: 'director_home', component: Director_homeComponent },
+      { path: 'client_claims', component: client_claimsComponent },
+      { path: 'client_claim_form', component: client_claim_formComponent },
       { path: 'payments', component: paymentsComponent },
       { path: 'schedules_p', component: schedules_pComponent },
     ],
