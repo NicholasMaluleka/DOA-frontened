@@ -209,7 +209,7 @@
                 },
                 {
                     "_key": "imgSrc",
-                    "_value": "/Web/images/logo.png",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -221,7 +221,7 @@
                 },
                 {
                     "_key": "[src]",
-                    "_value": "",
+                    "_value": "page.imageUrl",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -252,6 +252,12 @@
                 {
                     "_key": "fxFill",
                     "_value": "fill",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "crossorigin",
+                    "_value": "anonymous",
                     "_type": "kv",
                     "_attrDef": "c"
                 }

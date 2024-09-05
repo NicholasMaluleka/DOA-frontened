@@ -948,7 +948,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()\n\n",
+        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()\nconsole.log(\"data to use\",page.idclaimerFile)\n\n",
         "functionName": "sd_b1QBlwuGwfmxrU8X",
         "category": "Function",
         "x": 425,

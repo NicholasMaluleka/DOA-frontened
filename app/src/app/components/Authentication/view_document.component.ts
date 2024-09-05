@@ -97,7 +97,7 @@ export class view_documentComponent {
     try {
       const page = this.page;
       page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
-
+      console.log('session', page.result);
       //appendnew_next_sd_t6ahQgfWPpzjBopV
       return bh;
     } catch (e) {
