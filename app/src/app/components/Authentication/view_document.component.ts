@@ -74,7 +74,8 @@ export class view_documentComponent {
 
   sd_4gj9gYmwBgxJqwEJ(bh) {
     try {
-      bh = this.sd_dOrvoT9jzoh6Xw7f(bh);
+      this.page.key = [];
+      bh = this.sd_wYvg6kbX6d2RzWzR(bh);
       //appendnew_next_sd_4gj9gYmwBgxJqwEJ
       return bh;
     } catch (e) {
@@ -82,9 +83,174 @@ export class view_documentComponent {
     }
   }
 
-  sd_dOrvoT9jzoh6Xw7f(bh) {
+  sd_wYvg6kbX6d2RzWzR(bh) {
+    try {
+      const page = this.page;
+      for (let i = 0; i < sessionStorage.length; i++) {
+        page.key.push(sessionStorage.key(i));
+      }
+
+      console.log('keys', page.key.includes('user'));
+      bh = this.sd_3BXIJq1fyxcmccmh(bh);
+      //appendnew_next_sd_wYvg6kbX6d2RzWzR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wYvg6kbX6d2RzWzR');
+    }
+  }
+
+  sd_3BXIJq1fyxcmccmh(bh) {
+    try {
+      if (
+        this.sdService.operators['cont'](
+          this.page.key,
+          'bankDetails',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_09mIB1NmMWhtUJPo(bh);
+      } else if (
+        this.sdService.operators['cont'](
+          this.page.key,
+          'idDeceased',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_jdSznbCt9AopPT4T(bh);
+      } else if (
+        this.sdService.operators['cont'](
+          this.page.key,
+          'idClaimer',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_j5Fi6WpaIG7AWnx7(bh);
+      } else if (
+        this.sdService.operators['cont'](
+          this.page.key,
+          'deathCetificatify',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_8oDWIqEg3mYapHOc(bh);
+      } else if (
+        this.sdService.operators['cont'](
+          this.page.key,
+          'bi1663',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_dOrvoT9jzoh6Xw7f(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3BXIJq1fyxcmccmh');
+    }
+  }
+
+  sd_09mIB1NmMWhtUJPo(bh) {
+    try {
+      this.page.result = JSON.parse(sessionStorage.getItem('bankDetails'));
+      bh = this.sd_w6XJNRDxyClfAqFx(bh);
+      //appendnew_next_sd_09mIB1NmMWhtUJPo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_09mIB1NmMWhtUJPo');
+    }
+  }
+
+  sd_w6XJNRDxyClfAqFx(bh) {
+    try {
+      const page = this.page;
+      page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
+      console.log('session', page.result);
+      //appendnew_next_sd_w6XJNRDxyClfAqFx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w6XJNRDxyClfAqFx');
+    }
+  }
+
+  sd_jdSznbCt9AopPT4T(bh) {
+    try {
+      this.page.result = JSON.parse(sessionStorage.getItem('idDeceased'));
+      bh = this.sd_4GVwA4RfqyEaPFnf(bh);
+      //appendnew_next_sd_jdSznbCt9AopPT4T
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jdSznbCt9AopPT4T');
+    }
+  }
+
+  sd_4GVwA4RfqyEaPFnf(bh) {
+    try {
+      const page = this.page;
+      page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
+      console.log('session', page.result);
+      //appendnew_next_sd_4GVwA4RfqyEaPFnf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4GVwA4RfqyEaPFnf');
+    }
+  }
+
+  sd_j5Fi6WpaIG7AWnx7(bh) {
     try {
       this.page.result = JSON.parse(sessionStorage.getItem('idClaimer'));
+      bh = this.sd_xrbflunH5Skd910s(bh);
+      //appendnew_next_sd_j5Fi6WpaIG7AWnx7
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_j5Fi6WpaIG7AWnx7');
+    }
+  }
+
+  sd_xrbflunH5Skd910s(bh) {
+    try {
+      const page = this.page;
+      page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
+      console.log('session', page.result);
+      //appendnew_next_sd_xrbflunH5Skd910s
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xrbflunH5Skd910s');
+    }
+  }
+
+  sd_8oDWIqEg3mYapHOc(bh) {
+    try {
+      this.page.result = JSON.parse(
+        sessionStorage.getItem('deathCetificatify')
+      );
+      bh = this.sd_K3S7Uw8cnvJhO3FJ(bh);
+      //appendnew_next_sd_8oDWIqEg3mYapHOc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8oDWIqEg3mYapHOc');
+    }
+  }
+
+  sd_K3S7Uw8cnvJhO3FJ(bh) {
+    try {
+      const page = this.page;
+      page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`;
+      console.log('session', page.result);
+      //appendnew_next_sd_K3S7Uw8cnvJhO3FJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_K3S7Uw8cnvJhO3FJ');
+    }
+  }
+
+  sd_dOrvoT9jzoh6Xw7f(bh) {
+    try {
+      this.page.result = JSON.parse(sessionStorage.getItem('bi1663'));
       bh = this.sd_t6ahQgfWPpzjBopV(bh);
       //appendnew_next_sd_dOrvoT9jzoh6Xw7f
       return bh;
