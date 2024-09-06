@@ -461,7 +461,7 @@ export class claims_registerComponent {
         {
           value: page.benarray[0],
           viewValue: `${
-            page.benarray[1].firstName + '  ' + page.benarray[1].idNumber
+            page.benarray[0].firstName + '  ' + page.benarray[0].idNumber
           }`,
         },
         {
