@@ -79,9 +79,7 @@
                 },
                 {
                     "_key": "class",
-                    "_value": [
-                        "scroller"
-                    ],
+                    "_value": [],
                     "_type": "dav",
                     "_attrDef": "p"
                 },
@@ -4788,7 +4786,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height:30px; width:100%; margin-top:10px",
+                                        "_value": "height:30px; width:100%; margin-top:10px ;    ",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4849,7 +4847,7 @@
                                         },
                                         {
                                             "_key": "style",
-                                            "_value": "",
+                                            "_value": "  flex-direction: row;     gap: 60px;        justify-content: space-evenly; ",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -4882,7 +4880,7 @@
                                         },
                                         {
                                             "_key": "layoutAlign",
-                                            "_value": "start",
+                                            "_value": "space-evenly",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         },
@@ -4899,9 +4897,289 @@
                                             "_attrDef": "p"
                                         }
                                     ],
+                                    "adf04240-1fbe-00ea-f549-107175b2ee9b": {
+                                        "paletteKey": "NG-RaisedButton",
+                                        "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "background:#f7dd71; color:#124e52;",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "View Doc",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "open()",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "objValue": {
+                                                    "nodeID": "sd_NHGiXhSAsAuPO311",
+                                                    "functionName": "open",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": []
+                                                }
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
+                                    "cd9d9bab-5a57-4e07-9c0a-751fdd61667a": {
+                                        "paletteKey": "NG-RaisedButton",
+                                        "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "isCommented": "false",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "background:#f7dd71; color:#124e52;",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "View Doc",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "open()",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "objValue": {
+                                                    "nodeID": "sd_NHGiXhSAsAuPO311",
+                                                    "functionName": "open",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": []
+                                                }
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
+                                    "894985fd-48f5-8746-f4a9-3b6bc4080d65": {
+                                        "paletteKey": "NG-RaisedButton",
+                                        "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "isCommented": "false",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "background:#f7dd71; color:#124e52;",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "View Doc",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "open()",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "objValue": {
+                                                    "nodeID": "sd_NHGiXhSAsAuPO311",
+                                                    "functionName": "open",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": []
+                                                }
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
+                                    "b72024ec-ec54-a35c-37c4-414faca974ae": {
+                                        "paletteKey": "NG-RaisedButton",
+                                        "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "isCommented": "false",
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "background:#f7dd71; color:#124e52;",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "buttonname",
+                                                "_value": "View Doc",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "open()",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "objValue": {
+                                                    "nodeID": "sd_NHGiXhSAsAuPO311",
+                                                    "functionName": "open",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": []
+                                                }
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disableRipple]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "routerLink",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            }
+                                        ]
+                                    },
                                     "82a65e35-26b5-af7b-0242-69d6b255401c": {
                                         "paletteKey": "NG-RaisedButton",
                                         "parentEditorKey": "c625e0e0-6b81-df42-604e-aaaf14000477",
+                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {

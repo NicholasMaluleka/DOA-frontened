@@ -1,5 +1,5 @@
 <div fxLayout="column " style="color:#124e52" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="column " class="scroller" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center center" [fxShow]="true">
       <h2>
         Claims Form - {{page.policyNo}}</h2>
@@ -128,8 +128,8 @@
 
 
             </div>
-            <div fxLayout="column wrap" style="height:30px; width:100%; margin-top:10px" fxLayoutAlign="start stretch" [fxShow]="true">
-              <div fxLayout="row wrap" class="FullHeight fullWidth" fxLayoutAlign="start center" [fxShow]="true"><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button></div>
+            <div fxLayout="column wrap" style="height:30px; width:100%; margin-top:10px ;    " fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" style="  flex-direction: row;     gap: 60px;        justify-content: space-evenly; " class="FullHeight fullWidth" fxLayoutAlign="space-evenly center" [fxShow]="true"><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button><button mat-raised-button style="background:#f7dd71; color:#124e52;" (click)="open()">View Doc</button></div>
             </div>
             <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="start()">Submit a Claim</button></div>
           </div>
