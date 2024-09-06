@@ -1549,7 +1549,7 @@
                                     },
                                     {
                                         "_key": "type",
-                                        "_value": "number",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1663,8 +1663,20 @@
                                         "_visibility": true
                                     },
                                     {
+                                        "_key": "maxlength",
+                                        "_value": "4",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
+                                        "_key": "minlength",
+                                        "_value": "4",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    },
+                                    {
                                         "_key": "pattern",
-                                        "_value": "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$",
+                                        "_value": "^[0-9]*$",
                                         "_type": "kv",
                                         "_attrDef": "c"
                                     }

@@ -11,6 +11,7 @@ import {
   Validators,
 } from '@angular/forms'; //_splitter_
 import { MatDialogRef } from '@angular/material/dialog'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -87,7 +88,7 @@ export class payment_formComponent implements OnChanges {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_VcaQ1xF5Yh44J1gA(bh);
+      bh = this.sd_JNmxql6OuxRq7sK4(bh);
       //appendnew_next_logPayment
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_v3rJupcK1WyIppav');
@@ -222,6 +223,34 @@ export class payment_formComponent implements OnChanges {
     }
   }
 
+  sd_JNmxql6OuxRq7sK4(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.paymentForm.valid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_VcaQ1xF5Yh44J1gA(bh);
+      } else if (
+        this.sdService.operators['false'](
+          this.page.paymentForm.valid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_ClT4kYvauiOhUVm4(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JNmxql6OuxRq7sK4');
+    }
+  }
+
   sd_VcaQ1xF5Yh44J1gA(bh) {
     try {
       this.page.ssdURL = bh.system.environment.properties.ssdURL;
@@ -272,6 +301,23 @@ export class payment_formComponent implements OnChanges {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mEg74lKeqcx440aD');
+    }
+  }
+
+  sd_ClT4kYvauiOhUVm4(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Please fill in all fields', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_ClT4kYvauiOhUVm4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ClT4kYvauiOhUVm4');
     }
   }
 

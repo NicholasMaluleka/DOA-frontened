@@ -1,0 +1,162 @@
+[
+    {
+        "id": "sd_PR3nvRTcpHmbFIoL",
+        "type": "tab",
+        "createdDate": "2024-09-05T11:40:45.124Z",
+        "label": "view_document",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "view_documentComponent"
+    },
+    {
+        "id": "sd_KikucxW3FkzenR2O",
+        "type": "OnInit",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_KikucxW3FkzenR2O",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4gj9gYmwBgxJqwEJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_documentComponent"
+    },
+    {
+        "id": "sd_4gj9gYmwBgxJqwEJ",
+        "type": "PageVariables",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_4gj9gYmwBgxJqwEJ",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_dOrvoT9jzoh6Xw7f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GQmjPcm4kuYIoaAE",
+        "type": "PageStart",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "close",
+        "category": "General",
+        "x": 45,
+        "y": 160,
+        "wires": [
+            [
+                "sd_kxL7Y9L7iMTaS70J"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_documentComponent"
+    },
+    {
+        "id": "sd_kxL7Y9L7iMTaS70J",
+        "type": "CloseDialog",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.data",
+        "functionName": "sd_kxL7Y9L7iMTaS70J",
+        "category": "Dialog",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "data",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dOrvoT9jzoh6Xw7f",
+        "type": "Storage",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "file"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "functionName": "sd_dOrvoT9jzoh6Xw7f",
+        "category": "Storage",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_t6ahQgfWPpzjBopV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_t6ahQgfWPpzjBopV",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`",
+        "functionName": "sd_t6ahQgfWPpzjBopV",
+        "category": "Function",
+        "x": 360,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    }
+]

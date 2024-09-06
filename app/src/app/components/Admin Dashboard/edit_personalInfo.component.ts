@@ -204,7 +204,7 @@ export class edit_personalInfoComponent {
       this.page.dependency2Form = undefined;
       this.page.showbeneficaries1Form = this.page.false;
       this.page.showdependencies1Form = this.page.false;
-      this.page.counter = 0;
+      this.page.counter = 1;
       this.page.showdependencies2Form = this.page.false;
       this.page.hideIcon = true;
       this.page.hideIcon2 = true;
@@ -214,6 +214,7 @@ export class edit_personalInfoComponent {
       this.page.gender3 = undefined;
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
+      this.page.showdependenciesForm = this.page.false;
       bh = this.sd_JfSFbebXgEzrA6yw(bh);
       //appendnew_next_sd_Y3mN2lQwd5HnEduh
       return bh;
@@ -334,12 +335,12 @@ export class edit_personalInfoComponent {
           Validators.required,
         ]),
         lastName: new FormControl(page.depe1?.lastName, [Validators.required]),
-        gender: new FormControl(page.depe1?.gender, [Validators.required]),
         idNumber: new FormControl(page.depe1?.idNumber, [
           Validators.required,
           Validators.minLength(13),
           Validators.maxLength(13),
         ]),
+        gender: new FormControl(page.depe1?.gender, [Validators.required]),
       });
 
       page.dependency1Form = new FormGroup({
@@ -511,22 +512,18 @@ export class edit_personalInfoComponent {
   sd_WQQZU7S1MJVM0lrL(bh) {
     try {
       const page = this.page;
-      page.showdependencies1Form = true;
+      page.showdependenciesForm = true;
 
       console.log('form', page.showdependencies1Form);
 
       page.counter++;
-      if (page.counter == 2) {
-        page.dependencyForm = true;
+      if (page.counter === 2) {
+        page.showdependencies1Form = true;
+      } else if (page.counter === 3) {
+        page.showdependencies2Form = true;
         page.hideIcon2 = false;
       }
 
-      // page.showDependencyForm = true
-      // page.counter++
-      // if(page.counter == 2) {
-      //     page.showDependencyForm1 = true
-      //     page.hideIcon2 = false
-      // }
       //appendnew_next_sd_WQQZU7S1MJVM0lrL
       return bh;
     } catch (e) {
@@ -665,18 +662,18 @@ export class edit_personalInfoComponent {
       //gender
       if (Number(gender) <= 4999 && Number(gender) >= 0) {
         console.log('Female');
-        page.gender = 'Female';
+        page.gender1 = 'Female';
         page.beneficaries1Form.patchValue({
           gender: page.gender1,
         });
-        // page.clientForm.controls.gender.value = "Female"
+        page.beneficaries1Form.controls.gender.value = 'Female';
       } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
         console.log('Male');
-        page.gender = 'Male';
+        page.gender1 = 'Male';
         page.beneficaries1Form.patchValue({
           gender: page.gender1,
         });
-        // page.clientForm.controls.gender.value = "Male"
+        page.beneficaries1Form.controls.gender.value = 'Male';
       } else {
         alert('Invalid ID number');
         return;
@@ -752,14 +749,14 @@ export class edit_personalInfoComponent {
       //gender
       if (Number(gender) <= 4999 && Number(gender) >= 0) {
         console.log('Female');
-        page.gender = 'Female';
+        page.gender2 = 'Female';
         page.dependencyForm.patchValue({
           gender: page.gender2,
         });
         // page.clientForm.controls.gender.value = "Female"
       } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
         console.log('Male');
-        page.gender = 'Male';
+        page.gender2 = 'Male';
         page.dependencyForm.patchValue({
           gender: page.gender2,
         });
@@ -839,14 +836,14 @@ export class edit_personalInfoComponent {
       //gender
       if (Number(gender) <= 4999 && Number(gender) >= 0) {
         console.log('Female');
-        page.gender = 'Female';
+        page.gender3 = 'Female';
         page.dependency1Form.patchValue({
           gender: page.gender3,
         });
         // page.clientForm.controls.gender.value = "Female"
       } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
         console.log('Male');
-        page.gender = 'Male';
+        page.gender3 = 'Male';
         page.dependency1Form.patchValue({
           gender: page.gender3,
         });
@@ -926,14 +923,14 @@ export class edit_personalInfoComponent {
       //gender
       if (Number(gender) <= 4999 && Number(gender) >= 0) {
         console.log('Female');
-        page.gender = 'Female';
+        page.gender4 = 'Female';
         page.dependency2Form.patchValue({
           gender: page.gender4,
         });
         // page.clientForm.controls.gender.value = "Female"
       } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {
         console.log('Male');
-        page.gender = 'Male';
+        page.gender4 = 'Male';
         page.dependency2Form.patchValue({
           gender: page.gender4,
         });
