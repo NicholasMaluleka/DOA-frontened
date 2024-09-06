@@ -40,14 +40,22 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "key",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            }
+        ],
         "functionName": "sd_4gj9gYmwBgxJqwEJ",
         "category": "Function",
         "x": 145,
         "y": 40,
         "wires": [
             [
-                "sd_dOrvoT9jzoh6Xw7f"
+                "sd_wYvg6kbX6d2RzWzR"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -118,7 +126,7 @@
         "outputs": 1,
         "key": {
             "type": "str",
-            "value": "file"
+            "value": "bi1663"
         },
         "value": {},
         "resultMapping": {
@@ -127,8 +135,8 @@
         },
         "functionName": "sd_dOrvoT9jzoh6Xw7f",
         "category": "Storage",
-        "x": 245,
-        "y": 40,
+        "x": 625,
+        "y": 120,
         "wires": [
             [
                 "sd_t6ahQgfWPpzjBopV"
@@ -146,13 +154,318 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\nconsole.log(\"session\", page.result)",
         "functionName": "sd_t6ahQgfWPpzjBopV",
         "category": "Function",
-        "x": 360,
+        "x": 725,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3BXIJq1fyxcmccmh",
+        "type": "PageSwitch",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "key",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.key",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "bankDetails",
+                "vt": "str",
+                "gv": "\"bankDetails\""
+            },
+            {
+                "t": "cont",
+                "v": "idDeceased",
+                "vt": "str",
+                "gv": "\"idDeceased\""
+            },
+            {
+                "t": "cont",
+                "v": "idClaimer",
+                "vt": "str",
+                "gv": "\"idClaimer\""
+            },
+            {
+                "t": "cont",
+                "v": "deathCetificatify",
+                "vt": "str",
+                "gv": "\"deathCetificatify\""
+            },
+            {
+                "t": "cont",
+                "v": "bi1663",
+                "vt": "str",
+                "gv": "\"bi1663\""
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "functionName": "sd_3BXIJq1fyxcmccmh",
+        "category": "Function",
+        "x": 385,
+        "y": 80,
+        "wires": [
+            [
+                "sd_09mIB1NmMWhtUJPo"
+            ],
+            [
+                "sd_jdSznbCt9AopPT4T"
+            ],
+            [
+                "sd_j5Fi6WpaIG7AWnx7"
+            ],
+            [
+                "sd_8oDWIqEg3mYapHOc"
+            ],
+            [
+                "sd_dOrvoT9jzoh6Xw7f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_09mIB1NmMWhtUJPo",
+        "type": "Storage",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "bankDetails"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "functionName": "sd_09mIB1NmMWhtUJPo",
+        "category": "Storage",
+        "x": 625,
+        "y": 40,
+        "wires": [
+            [
+                "sd_w6XJNRDxyClfAqFx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_w6XJNRDxyClfAqFx",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\nconsole.log(\"session\", page.result)",
+        "functionName": "sd_w6XJNRDxyClfAqFx",
+        "category": "Function",
+        "x": 725,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8oDWIqEg3mYapHOc",
+        "type": "Storage",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "deathCetificatify"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "functionName": "sd_8oDWIqEg3mYapHOc",
+        "category": "Storage",
+        "x": 625,
+        "y": 220,
+        "wires": [
+            [
+                "sd_K3S7Uw8cnvJhO3FJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_K3S7Uw8cnvJhO3FJ",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\nconsole.log(\"session\", page.result)",
+        "functionName": "sd_K3S7Uw8cnvJhO3FJ",
+        "category": "Function",
+        "x": 725,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jdSznbCt9AopPT4T",
+        "type": "Storage",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "idDeceased"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "functionName": "sd_jdSznbCt9AopPT4T",
+        "category": "Storage",
+        "x": 625,
+        "y": 320,
+        "wires": [
+            [
+                "sd_4GVwA4RfqyEaPFnf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4GVwA4RfqyEaPFnf",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\nconsole.log(\"session\", page.result)",
+        "functionName": "sd_4GVwA4RfqyEaPFnf",
+        "category": "Function",
+        "x": 725,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_j5Fi6WpaIG7AWnx7",
+        "type": "Storage",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "idClaimer"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "functionName": "sd_j5Fi6WpaIG7AWnx7",
+        "category": "Storage",
+        "x": 625,
+        "y": 400,
+        "wires": [
+            [
+                "sd_xrbflunH5Skd910s"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xrbflunH5Skd910s",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.imageUrl = `http://localhost:8081/api/download/${page.result.filename}`\nconsole.log(\"session\", page.result)",
+        "functionName": "sd_xrbflunH5Skd910s",
+        "category": "Function",
+        "x": 725,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_documentComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wYvg6kbX6d2RzWzR",
+        "type": "Script",
+        "z": "sd_PR3nvRTcpHmbFIoL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "for(let i=0;i<sessionStorage.length;i++)\n{\n    page.key.push(sessionStorage.key(i))\n}\n\n console.log(\"keys\", page.key.includes('user'))",
+        "functionName": "sd_wYvg6kbX6d2RzWzR",
+        "category": "Function",
+        "x": 265,
+        "y": 60,
+        "wires": [
+            [
+                "sd_3BXIJq1fyxcmccmh"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

@@ -1189,10 +1189,19 @@
                     },
                     {
                         "_key": "(rowclick)",
-                        "_value": "",
+                        "_value": "editInfo(row)",
                         "_type": "a",
                         "_attrDef": "p",
-                        "_customAttributeFlag": "flowpicker"
+                        "_customAttributeFlag": "flowpicker",
+                        "objValue": {
+                            "nodeID": "sd_jLre9GhKhZrqatD3",
+                            "functionName": "editInfo",
+                            "activeTree": "pages",
+                            "z": "sd_nsEcp9j2OQxe1WKG",
+                            "input": [
+                                "row"
+                            ]
+                        }
                     },
                     {
                         "_key": "header",
@@ -1653,7 +1662,7 @@
                         },
                         {
                             "_key": "Header Label",
-                            "_value": "",
+                            "_value": "Action",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1719,21 +1728,6 @@
                                 "_value": "{table: table}",
                                 "_type": "kv",
                                 "_attrDef": "c"
-                            },
-                            {
-                                "_key": "(click)",
-                                "_value": "sendUser(row)",
-                                "_type": "kv",
-                                "_attrDef": "c",
-                                "objValue": {
-                                    "nodeID": "sd_nrUbOI69LYzRt4La",
-                                    "functionName": "sendUser",
-                                    "activeTree": "pages",
-                                    "z": "sd_o4ikLTEW12PcNWYL",
-                                    "input": [
-                                        "row"
-                                    ]
-                                }
                             }
                         ]
                     }
@@ -1888,9 +1882,16 @@
                     },
                     {
                         "_key": "(click)",
-                        "_value": "",
+                        "_value": "edit()",
                         "_type": "kv",
-                        "_attrDef": "p"
+                        "_attrDef": "p",
+                        "objValue": {
+                            "nodeID": "sd_lLjKTcNWnIYepJjR",
+                            "functionName": "edit",
+                            "activeTree": "pages",
+                            "z": "sd_nsEcp9j2OQxe1WKG",
+                            "input": []
+                        }
                     },
                     {
                         "_key": "[disabled]",
@@ -2060,12 +2061,6 @@
                                     "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "routerLink",
-                                    "_value": "/dashboard/edit-personalinfo",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
                                 }
                             ]
                         }

@@ -538,7 +538,6 @@
             "118782a6-52d4-591c-adb6-3a8d127b9ea8": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "a7588d98-c44c-38a1-cf63-258b55e0c911",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -600,7 +599,6 @@
                 "68d9b006-e129-dc65-6b40-dfabb37aaa22": {
                     "paletteKey": "NG-RaisedButton",
                     "parentEditorKey": "118782a6-52d4-591c-adb6-3a8d127b9ea8",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
