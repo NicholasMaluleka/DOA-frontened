@@ -2074,6 +2074,13 @@
                                                     "_value": "Review Claim",
                                                     "_type": "kv",
                                                     "_attrDef": "c"
+                                                },
+                                                {
+                                                    "_key": "(click)",
+                                                    "_value": "reviewClaim(table)",
+                                                    "_type": "kv",
+                                                    "_attrDef": "c",
+                                                    "_customAttributeFlag": "customInput"
                                                 }
                                             ]
                                         }
