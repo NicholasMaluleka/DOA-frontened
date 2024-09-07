@@ -140,7 +140,6 @@
             "f5d6d162-8bd8-fc71-08c8-405e5ad948e5": {
                 "paletteKey": "NG-icon",
                 "parentEditorKey": "3d96768e-4b63-6ec8-f26c-8efcdffaa61e",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -210,7 +209,7 @@
                 },
                 {
                     "_key": "imgSrc",
-                    "_value": "/Web/images/logo.png",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -222,7 +221,7 @@
                 },
                 {
                     "_key": "[src]",
-                    "_value": "",
+                    "_value": "page.imageUrl",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -253,6 +252,12 @@
                 {
                     "_key": "fxFill",
                     "_value": "fill",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "crossorigin",
+                    "_value": "anonymous",
                     "_type": "kv",
                     "_attrDef": "c"
                 }

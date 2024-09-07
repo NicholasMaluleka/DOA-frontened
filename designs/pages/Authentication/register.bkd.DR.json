@@ -14175,7 +14175,7 @@
                                         },
                                         {
                                             "_key": "[hidden]",
-                                            "_value": "page.showDependencyForm",
+                                            "_value": "page.dependencyForm",
                                             "_type": "kv",
                                             "_attrDef": "c"
                                         }

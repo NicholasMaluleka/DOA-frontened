@@ -128,6 +128,7 @@ export class payment_formComponent implements OnChanges {
     try {
       this.page.userData = undefined;
       this.page.amount = undefined;
+      this.page.amounts = undefined;
       bh = this.sd_6JYmM4GgmH550ZuL(bh);
       //appendnew_next_sd_1mWJDUJMcNFR2L50
       return bh;
@@ -177,11 +178,22 @@ export class payment_formComponent implements OnChanges {
   sd_U9h9VOBbE3QabBzk(bh) {
     try {
       this.page.loggedInUser = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_LV7KwD0nrfUeJXen(bh);
+      bh = this.sd_jwX2q1MiFsMprSdE(bh);
       //appendnew_next_sd_U9h9VOBbE3QabBzk
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_U9h9VOBbE3QabBzk');
+    }
+  }
+
+  sd_jwX2q1MiFsMprSdE(bh) {
+    try {
+      this.page.action = JSON.parse(sessionStorage.getItem('payment_event'));
+      bh = this.sd_LV7KwD0nrfUeJXen(bh);
+      //appendnew_next_sd_jwX2q1MiFsMprSdE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jwX2q1MiFsMprSdE');
     }
   }
 
@@ -196,8 +208,6 @@ export class payment_formComponent implements OnChanges {
         loggedBY: new FormControl(page.loggedInUser.email),
         event: new FormControl('', [Validators.required]),
       });
-
-      console.log('form value', page.paymentForm.value);
       //appendnew_next_sd_LV7KwD0nrfUeJXen
       return bh;
     } catch (e) {
@@ -233,7 +243,7 @@ export class payment_formComponent implements OnChanges {
           undefined
         )
       ) {
-        bh = this.sd_VcaQ1xF5Yh44J1gA(bh);
+        bh = this.sd_I5Rbhf557X0UwI4G(bh);
       } else if (
         this.sdService.operators['false'](
           this.page.paymentForm.valid,
@@ -248,6 +258,27 @@ export class payment_formComponent implements OnChanges {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_JNmxql6OuxRq7sK4');
+    }
+  }
+
+  async sd_I5Rbhf557X0UwI4G(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.action,
+          'Log a payment',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_VcaQ1xF5Yh44J1gA(bh);
+      } else {
+        bh = await this.sd_COdHzFpxTfkZBA7P(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_I5Rbhf557X0UwI4G');
     }
   }
 
@@ -266,7 +297,7 @@ export class payment_formComponent implements OnChanges {
     try {
       const page = this.page;
       bh.url = page.ssdURL + 'log-payment';
-      bh = this.sd_K8VOPjLQKX8kul5n(bh);
+      bh = this.logPay(bh);
       //appendnew_next_sd_b3DUrK8OijuTIvWT
       return bh;
     } catch (e) {
@@ -274,7 +305,7 @@ export class payment_formComponent implements OnChanges {
     }
   }
 
-  async sd_K8VOPjLQKX8kul5n(bh) {
+  async logPay(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -286,7 +317,7 @@ export class payment_formComponent implements OnChanges {
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_mEg74lKeqcx440aD(bh);
-      //appendnew_next_sd_K8VOPjLQKX8kul5n
+      //appendnew_next_logPay
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_K8VOPjLQKX8kul5n');
@@ -301,6 +332,86 @@ export class payment_formComponent implements OnChanges {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mEg74lKeqcx440aD');
+    }
+  }
+
+  sd_COdHzFpxTfkZBA7P(bh) {
+    try {
+      this.page.editDetails = JSON.parse(sessionStorage.getItem('edit_info'));
+      bh = this.sd_3ok8FgGvYdDG4q0g(bh);
+      //appendnew_next_sd_COdHzFpxTfkZBA7P
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_COdHzFpxTfkZBA7P');
+    }
+  }
+
+  sd_3ok8FgGvYdDG4q0g(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_cWxhUrz5tTNmVqV0(bh);
+      //appendnew_next_sd_3ok8FgGvYdDG4q0g
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3ok8FgGvYdDG4q0g');
+    }
+  }
+
+  sd_cWxhUrz5tTNmVqV0(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + 'edit-pay';
+
+      if (page.paymentForm.controls['event'].value == 'Missed payment') {
+        page.amounts = 0;
+      } else {
+        page.amounts = page.amount;
+      }
+
+      bh.body = {
+        event: page.paymentForm.controls['event'].value,
+        loggedBY: page.paymentForm.controls['loggedBY'].value,
+        date: new Date(),
+        _id: page.editDetails._id,
+        amount: page.amounts,
+      };
+
+      console.log('edit body ==>', bh.body);
+      bh = this.editPay(bh);
+      //appendnew_next_sd_cWxhUrz5tTNmVqV0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cWxhUrz5tTNmVqV0');
+    }
+  }
+
+  async editPay(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_mEg74lKeqcx440aD(bh);
+      this.sd_2k0JgxD760sDJbA1(bh);
+      //appendnew_next_editPay
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3L8TtjmFRGB6uQp0');
+    }
+  }
+
+  sd_2k0JgxD760sDJbA1(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.result);
+      //appendnew_next_sd_2k0JgxD760sDJbA1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2k0JgxD760sDJbA1');
     }
   }
 

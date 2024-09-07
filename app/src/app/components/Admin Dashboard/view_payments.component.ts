@@ -98,10 +98,40 @@ export class view_paymentsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_gfsbZ8Sd5skDsAgI(bh);
+      bh = this.sd_9ubEfKLoRfowfo8q(bh);
       //appendnew_next_openPaymentForm
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_42iesCMKtG2KiN8V');
+    }
+  }
+
+  edit(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_IhgwzeZxvYG1yEqm(bh);
+      //appendnew_next_edit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lLjKTcNWnIYepJjR');
+    }
+  }
+
+  editInfo(index: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { index };
+      bh.local = {};
+      bh = this.sd_2wcyAsU7HYC1Or56(bh);
+      //appendnew_next_editInfo
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jLre9GhKhZrqatD3');
     }
   }
   //appendnew_flow_view_paymentsComponent_start
@@ -270,6 +300,17 @@ export class view_paymentsComponent {
     }
   }
 
+  sd_9ubEfKLoRfowfo8q(bh) {
+    try {
+      sessionStorage.setItem('payment_event', JSON.stringify('Log a payment'));
+      bh = this.sd_gfsbZ8Sd5skDsAgI(bh);
+      //appendnew_next_sd_9ubEfKLoRfowfo8q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9ubEfKLoRfowfo8q');
+    }
+  }
+
   sd_gfsbZ8Sd5skDsAgI(bh) {
     try {
       const payment_formDialog = this.__page_injector__.get(MatDialog);
@@ -295,6 +336,55 @@ export class view_paymentsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_VtI0lmylmkampM9c');
+    }
+  }
+
+  sd_IhgwzeZxvYG1yEqm(bh) {
+    try {
+      sessionStorage.setItem('payment_event', JSON.stringify('Edit payment'));
+      bh = this.sd_a5WtRidyGMdzCdpQ(bh);
+      //appendnew_next_sd_IhgwzeZxvYG1yEqm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IhgwzeZxvYG1yEqm');
+    }
+  }
+
+  sd_a5WtRidyGMdzCdpQ(bh) {
+    try {
+      const payment_formDialog = this.__page_injector__.get(MatDialog);
+      const payment_formDialogRef = payment_formDialog.open(
+        payment_formComponent,
+        { height: '75vh', width: '50vw' }
+      );
+      payment_formDialogRef.beforeClosed().subscribe((event) => {
+        this.sd_lPDS2mHFSSLMBItn(bh);
+      });
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_a5WtRidyGMdzCdpQ');
+    }
+  }
+
+  sd_lPDS2mHFSSLMBItn(bh) {
+    try {
+      let outputVariables = this.getPayments();
+
+      //appendnew_next_sd_lPDS2mHFSSLMBItn
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lPDS2mHFSSLMBItn');
+    }
+  }
+
+  sd_2wcyAsU7HYC1Or56(bh) {
+    try {
+      sessionStorage.setItem('edit_info', JSON.stringify(bh.input.index));
+      //appendnew_next_sd_2wcyAsU7HYC1Or56
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2wcyAsU7HYC1Or56');
     }
   }
 

@@ -54,6 +54,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "amounts",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_1mWJDUJMcNFR2L50",
@@ -131,10 +138,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\npage.paymentForm = new FormGroup({\n    name: new FormControl(page.userData.firstName),\n    surname: new FormControl(page.userData.lastName),\n    policyNumber: new FormControl(page.userData.policyNumber),\n    amount: new FormControl(page.amount),\n    loggedBY: new FormControl(page.loggedInUser.email),\n    event: new FormControl(\"\",[Validators.required])\n})\n\nconsole.log(\"form value\",page.paymentForm.value)",
+        "script": "\n    page.paymentForm = new FormGroup({\n    name: new FormControl(page.userData.firstName),\n    surname: new FormControl(page.userData.lastName),\n    policyNumber: new FormControl(page.userData.policyNumber),\n    amount: new FormControl(page.amount),\n    loggedBY: new FormControl(page.loggedInUser.email),\n    event: new FormControl(\"\",[Validators.required])\n})",
         "functionName": "sd_LV7KwD0nrfUeJXen",
         "category": "Function",
-        "x": 505,
+        "x": 565,
         "y": 60,
         "wires": [
             []
@@ -272,7 +279,6 @@
         "serviceImportPath": "./",
         "startName": "packageType",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_pHYVQ6qVqoPeCrHB",
         "category": "General",
@@ -313,7 +319,7 @@
         "y": 60,
         "wires": [
             [
-                "sd_LV7KwD0nrfUeJXen"
+                "sd_jwX2q1MiFsMprSdE"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -335,7 +341,7 @@
         "functionName": "logPayment",
         "category": "General",
         "x": 65,
-        "y": 320,
+        "y": 480,
         "wires": [
             [
                 "sd_JNmxql6OuxRq7sK4"
@@ -364,8 +370,8 @@
         ],
         "functionName": "sd_VcaQ1xF5Yh44J1gA",
         "category": "General",
-        "x": 285,
-        "y": 280,
+        "x": 425,
+        "y": 420,
         "wires": [
             [
                 "sd_b3DUrK8OijuTIvWT"
@@ -386,8 +392,8 @@
         "script": "bh.url = page.ssdURL + \"log-payment\"",
         "functionName": "sd_b3DUrK8OijuTIvWT",
         "category": "Function",
-        "x": 385,
-        "y": 280,
+        "x": 525,
+        "y": 420,
         "wires": [
             [
                 "sd_K8VOPjLQKX8kul5n"
@@ -404,9 +410,8 @@
         "z": "sd_7Y0FdLD4v3Ji9ha6",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "log pay",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -414,10 +419,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -433,16 +436,14 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_K8VOPjLQKX8kul5n",
+        "functionName": "logPay",
         "category": "HTTP",
-        "x": 490,
-        "y": 280,
+        "x": 630,
+        "y": 420,
         "wires": [
             [
                 "sd_mEg74lKeqcx440aD"
@@ -467,7 +468,7 @@
         "functionName": "close",
         "category": "General",
         "x": 65,
-        "y": 440,
+        "y": 320,
         "wires": [
             [
                 "sd_gu3HmZZofEmUAShG"
@@ -488,7 +489,7 @@
         "functionName": "sd_gu3HmZZofEmUAShG",
         "category": "Dialog",
         "x": 160,
-        "y": 440,
+        "y": 320,
         "wires": [
             []
         ],
@@ -532,12 +533,11 @@
         "serviceImportPath": "./",
         "startName": "close",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_mEg74lKeqcx440aD",
         "category": "General",
-        "x": 605,
-        "y": 280,
+        "x": 745,
+        "y": 460,
         "wires": [
             []
         ],
@@ -642,10 +642,10 @@
         "functionName": "sd_JNmxql6OuxRq7sK4",
         "category": "Function",
         "x": 145,
-        "y": 320,
+        "y": 480,
         "wires": [
             [
-                "sd_VcaQ1xF5Yh44J1gA"
+                "sd_I5Rbhf557X0UwI4G"
             ],
             [
                 "sd_ClT4kYvauiOhUVm4"
@@ -684,10 +684,247 @@
         "direction": "ltr",
         "functionName": "sd_ClT4kYvauiOhUVm4",
         "category": "General",
-        "x": 285,
-        "y": 360,
+        "x": 225,
+        "y": 540,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jwX2q1MiFsMprSdE",
+        "type": "Storage",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "payment_event"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "action"
+        },
+        "functionName": "sd_jwX2q1MiFsMprSdE",
+        "category": "Storage",
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "sd_LV7KwD0nrfUeJXen"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_I5Rbhf557X0UwI4G",
+        "type": "PageSwitch",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "action",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.action",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Log a payment",
+                "vt": "str",
+                "gv": "\"Log a payment\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_I5Rbhf557X0UwI4G",
+        "category": "Function",
+        "x": 225,
+        "y": 420,
+        "wires": [
+            [
+                "sd_VcaQ1xF5Yh44J1gA"
+            ],
+            [
+                "sd_COdHzFpxTfkZBA7P"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3ok8FgGvYdDG4q0g",
+        "type": "Environment",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_3ok8FgGvYdDG4q0g",
+        "category": "General",
+        "x": 425,
+        "y": 500,
+        "wires": [
+            [
+                "sd_cWxhUrz5tTNmVqV0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cWxhUrz5tTNmVqV0",
+        "type": "Script",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdURL + \"edit-pay\"\n\nif(page.paymentForm.controls['event'].value == \"Missed payment\") {\n   page.amounts = 0;\n}else {\n   page.amounts = page.amount\n}\n\nbh.body = {\n    event : page.paymentForm.controls['event'].value,\n    loggedBY : page.paymentForm.controls['loggedBY'].value,\n    date: new Date(),\n    _id: page.editDetails._id,\n    amount: page.amounts\n    }\n\n    console.log(\"edit body ==>\", bh.body)",
+        "functionName": "sd_cWxhUrz5tTNmVqV0",
+        "category": "Function",
+        "x": 525,
+        "y": 500,
+        "wires": [
+            [
+                "sd_3L8TtjmFRGB6uQp0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3L8TtjmFRGB6uQp0",
+        "type": "HttpRequest",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "edit pay",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "editPay",
+        "category": "HTTP",
+        "x": 625,
+        "y": 500,
+        "wires": [
+            [
+                "sd_mEg74lKeqcx440aD",
+                "sd_2k0JgxD760sDJbA1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2k0JgxD760sDJbA1",
+        "type": "Log",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.result",
+        "functionName": "sd_2k0JgxD760sDJbA1",
+        "category": "General",
+        "x": 765,
+        "y": 580,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "payment_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_COdHzFpxTfkZBA7P",
+        "type": "Storage",
+        "z": "sd_7Y0FdLD4v3Ji9ha6",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "edit_info"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "editDetails"
+        },
+        "functionName": "sd_COdHzFpxTfkZBA7P",
+        "category": "Storage",
+        "x": 305,
+        "y": 500,
+        "wires": [
+            [
+                "sd_3ok8FgGvYdDG4q0g"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
