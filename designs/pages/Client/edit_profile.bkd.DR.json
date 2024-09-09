@@ -8902,9 +8902,10 @@
                     "_attrDef": "p"
                 }
             ],
-            "905ba880-84d1-4142-5b17-d55411444594": {
-                "paletteKey": "NG-RaisedButton",
+            "e03d6112-c487-a547-94dc-ee8218e7b66d": {
+                "paletteKey": "NG-button",
                 "parentEditorKey": "73c9b03c-771d-3568-1048-f849d17674fd",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -8960,7 +8961,7 @@
                     },
                     {
                         "_key": "routerLink",
-                        "_value": "dashboard/client_profile",
+                        "_value": "/dashboard/client_profile",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
@@ -9026,73 +9027,12 @@
                     },
                     {
                         "_key": "routerLink",
-                        "_value": "/dashboard/home",
+                        "_value": "/dashboard/client_profile",
                         "_type": "kv",
                         "_attrDef": "p"
                     }
                 ]
             }
         }
-    },
-    "ded0e4dc-03f9-2a27-ca7c-dd219f00f791": {
-        "paletteKey": "FlexLayoutCol",
-        "commentid": null,
-        "designerReference": [
-            {
-                "_key": "componentLabel",
-                "_value": "Column",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_useAsLabel": true
-            },
-            {
-                "_key": "style",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "class",
-                "_value": "",
-                "_type": "dav",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "fxFlex",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "fxLayoutGap",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "wrap",
-                "_value": "wrap",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "layoutAlign",
-                "_value": "start",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "pLayoutAlign",
-                "_value": "stretch",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "[fxShow]",
-                "_value": "true",
-                "_type": "kv",
-                "_attrDef": "p"
-            }
-        ]
     }
 }

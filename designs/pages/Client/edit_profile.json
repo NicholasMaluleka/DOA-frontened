@@ -56,57 +56,6 @@
         "generated": true
     },
     {
-        "id": "sd_sGVgbYoEJQipBrIL",
-        "type": "Storage",
-        "z": "sd_VenzcweTArpHLw1P",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "getItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "user"
-        },
-        "value": {},
-        "resultMapping": {
-            "type": "this.page",
-            "value": "user"
-        },
-        "functionName": "sd_sGVgbYoEJQipBrIL",
-        "category": "Storage",
-        "x": 285,
-        "y": 40,
-        "wires": [
-            [
-                "sd_T0Ka7kjZZVs9T6c2"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "edit_profileComponent"
-    },
-    {
-        "id": "sd_T0Ka7kjZZVs9T6c2",
-        "type": "Script",
-        "z": "sd_VenzcweTArpHLw1P",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "page.user\n console.log(\"page user\" , page.user)\n",
-        "functionName": "sd_T0Ka7kjZZVs9T6c2",
-        "category": "Function",
-        "x": 385,
-        "y": 60,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "edit_profileComponent"
-    },
-    {
         "id": "sd_MhlljBlxFSW8IGgH",
         "type": "PageVariables",
         "z": "sd_VenzcweTArpHLw1P",
@@ -855,6 +804,50 @@
         "category": "Function",
         "x": 985,
         "y": 1120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pklcqBCImlsNjMX4",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "cancel",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "cancel",
+        "category": "General",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "sd_tcxBJckGGYZqxWmJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_tcxBJckGGYZqxWmJ",
+        "type": "Navigation",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/client_profile",
+        "functionName": "sd_tcxBJckGGYZqxWmJ",
+        "category": "Navigation",
+        "x": 380,
+        "y": 420,
         "wires": [
             []
         ],
