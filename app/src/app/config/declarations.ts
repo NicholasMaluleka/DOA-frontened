@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-edit_profileComponent
+import { edit_profileComponent } from '../components/Client/edit_profile.component';
+//CORE_REFERENCE_IMPORT-password_pop_upComponent
+import { password_pop_upComponent } from '../components/Client/password_pop_up.component';
 //CORE_REFERENCE_IMPORT-schedules_pComponent
 import { schedules_pComponent } from '../components/Director/schedules_p.component';
 //CORE_REFERENCE_IMPORT-paymentsComponent
@@ -110,6 +114,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_profileComponent
+  edit_profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent
+  password_pop_upComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
   schedules_pComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-paymentsComponent
@@ -215,6 +223,8 @@ export const appRoutes = [
       { path: 'client_claim_form', component: client_claim_formComponent },
       { path: 'payments', component: paymentsComponent },
       { path: 'schedules_p', component: schedules_pComponent },
+      { path: 'edit_profile', component: edit_profileComponent },
+      { path: 'director_home', component: Director_homeComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },

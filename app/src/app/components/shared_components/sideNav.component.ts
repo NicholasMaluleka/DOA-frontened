@@ -208,7 +208,7 @@ export class sideNavComponent {
       const page = this.page;
       page.sideNav = [
         {
-          label: 'Policy details',
+          label: 'Plan details',
           icon: 'description',
           route: '/dashboard/client_plan_details',
         },
@@ -220,7 +220,7 @@ export class sideNavComponent {
         { label: 'Claims', icon: 'today', route: '/claims' },
         {
           label: 'Profile',
-          icon: 'Profile',
+          icon: 'person',
           route: '/dashboard/client_profile',
         },
       ];

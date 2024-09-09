@@ -55,6 +55,14 @@
                 {
                     "path": "schedules_p",
                     "component": "schedules_pComponent"
+                },
+                {
+                    "component": "edit_profileComponent",
+                    "path": "edit_profile"
+                },
+                {
+                    "component": "Director_homeComponent",
+                    "path": "director_home"
                 }
             ],
             "canActivate": {
