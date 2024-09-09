@@ -1,0 +1,111 @@
+[
+    {
+        "id": "sd_VenzcweTArpHLw1P",
+        "type": "tab",
+        "createdDate": "2024-09-08T22:33:33.282Z",
+        "label": "edit_profile",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_JgyRBkRN3y1TgJS6",
+        "type": "OnInit",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_JgyRBkRN3y1TgJS6",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_zZbFXjqfFF4D2qLR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_zZbFXjqfFF4D2qLR",
+        "type": "PageVariables",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_zZbFXjqfFF4D2qLR",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_sGVgbYoEJQipBrIL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sGVgbYoEJQipBrIL",
+        "type": "Storage",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_sGVgbYoEJQipBrIL",
+        "category": "Storage",
+        "x": 285,
+        "y": 40,
+        "wires": [
+            [
+                "sd_T0Ka7kjZZVs9T6c2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_T0Ka7kjZZVs9T6c2",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.user\n console.log(\"page user\" , page.user)\n",
+        "functionName": "sd_T0Ka7kjZZVs9T6c2",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    }
+]

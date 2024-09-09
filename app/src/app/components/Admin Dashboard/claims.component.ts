@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
 import { MatSort } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { searchPolicyComponent } from 'app/components/search Policy/searchPolicy.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -131,7 +132,7 @@ export class claimsComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = { claim };
       bh.local = {};
-      bh = this.sd_bAHaN07ntqi6vQZb(bh);
+      bh = this.sd_6b10CFQCiMMUZcQg(bh);
       //appendnew_next_reviewClaim
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_6uxXfPKiwYlVASPF');
@@ -364,14 +365,42 @@ export class claimsComponent implements AfterViewInit {
     }
   }
 
-  sd_bAHaN07ntqi6vQZb(bh) {
+  sd_6b10CFQCiMMUZcQg(bh) {
     try {
-      const page = this.page;
-      console.log('CLAIM POLICY: ', bh.input.claim);
-      //appendnew_next_sd_bAHaN07ntqi6vQZb
+      localStorage.setItem('claim', JSON.stringify(bh.input.claim));
+      bh = this.sd_BfP16kvx4zGkQL9z(bh);
+      //appendnew_next_sd_6b10CFQCiMMUZcQg
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bAHaN07ntqi6vQZb');
+      return this.errorHandler(bh, e, 'sd_6b10CFQCiMMUZcQg');
+    }
+  }
+
+  sd_BfP16kvx4zGkQL9z(bh) {
+    try {
+      const page = this.page;
+      bh.routeData = { isReview: true };
+      bh = this.sd_ieGXqp1MFZIwHCzM(bh);
+      //appendnew_next_sd_BfP16kvx4zGkQL9z
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_BfP16kvx4zGkQL9z');
+    }
+  }
+
+  async sd_ieGXqp1MFZIwHCzM(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, bh.routeData),
+        });
+      //appendnew_next_sd_ieGXqp1MFZIwHCzM
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ieGXqp1MFZIwHCzM');
     }
   }
 
