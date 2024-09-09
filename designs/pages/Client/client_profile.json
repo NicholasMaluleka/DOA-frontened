@@ -120,7 +120,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// page.currentUser = Object.keys(page.user).map(key => {\n//     return { key: key, value: page.user[key] };\n// });\n\npage.currentUser = page.user\n\n console.log(\"page user\" , page.currentUser)\n console.log(\"bene\",page.currentUser.beneficaries);",
+        "script": "page.currentUser = page.user\n\n console.log(\"page user\" , page.currentUser)\n console.log(\"bene\",page.currentUser.beneficaries);",
         "functionName": "sd_sDChkTyL4lAwKMl2",
         "category": "Function",
         "x": 450,
@@ -128,6 +128,186 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OpmZ1T2tFVSwDzss",
+        "type": "PageStart",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "enterPassword",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "enterPassword",
+        "category": "General",
+        "x": 105,
+        "y": 260,
+        "wires": [
+            [
+                "sd_WYWVvPFjrnA4FKdK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_profileComponent"
+    },
+    {
+        "id": "sd_WYWVvPFjrnA4FKdK",
+        "type": "OpenDialog",
+        "z": "sd_V6dtQKCl70LzmOlO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_uFm7b8zvCRfgicgM",
+            "label": "password_pop_up"
+        },
+        "relativePath": "app/components/Client/password_pop_up",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_WYWVvPFjrnA4FKdK",
+        "category": "Dialog",
+        "x": 245,
+        "y": 260,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "client_profileComponent",
