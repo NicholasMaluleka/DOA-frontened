@@ -725,7 +725,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "Last Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
@@ -2887,7 +2887,7 @@
                                     },
                                     {
                                         "_key": "Label",
-                                        "_value": "Id",
+                                        "_value": "First Name",
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true

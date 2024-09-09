@@ -906,7 +906,7 @@
         "y": 620,
         "wires": [
             [
-                "sd_bAHaN07ntqi6vQZb"
+                "sd_6b10CFQCiMMUZcQg"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -920,14 +920,11 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/dashboard/claim-register",
+        "qparamsMap": {
+            "type": "bh",
+            "value": "routeData"
+        },
         "functionName": "sd_ieGXqp1MFZIwHCzM",
         "category": "Navigation",
         "x": 325,
@@ -936,23 +933,59 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "claimsComponent"
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
     },
     {
-        "id": "sd_bAHaN07ntqi6vQZb",
+        "id": "sd_6b10CFQCiMMUZcQg",
+        "type": "Storage",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "claim"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "claim"
+        },
+        "resultMapping": {},
+        "functionName": "sd_6b10CFQCiMMUZcQg",
+        "category": "Storage",
+        "x": 145,
+        "y": 620,
+        "wires": [
+            [
+                "sd_BfP16kvx4zGkQL9z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_BfP16kvx4zGkQL9z",
         "type": "Script",
         "z": "sd_sslKQC9SCZ3rr5Xe",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"CLAIM POLICY: \", bh.input.claim)",
-        "functionName": "sd_bAHaN07ntqi6vQZb",
+        "script": "bh.routeData = {isReview: true}",
+        "functionName": "sd_BfP16kvx4zGkQL9z",
         "category": "Function",
-        "x": 220,
+        "x": 225,
         "y": 620,
         "wires": [
-            []
+            [
+                "sd_ieGXqp1MFZIwHCzM"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
