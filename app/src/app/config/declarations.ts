@@ -20,6 +20,8 @@ window['neutrinos'] = {
 import { edit_profileComponent } from '../components/Client/edit_profile.component';
 //CORE_REFERENCE_IMPORT-password_pop_upComponent
 import { password_pop_upComponent } from '../components/Client/password_pop_up.component';
+//CORE_REFERENCE_IMPORT-view_documentComponent
+import { view_documentComponent } from '../components/Authentication/view_document.component';
 //CORE_REFERENCE_IMPORT-schedules_pComponent
 import { schedules_pComponent } from '../components/Director/schedules_p.component';
 //CORE_REFERENCE_IMPORT-paymentsComponent
@@ -118,6 +120,8 @@ export const appDeclarations = [
   edit_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent
   password_pop_upComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_documentComponent
+  view_documentComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
   schedules_pComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-paymentsComponent
@@ -233,6 +237,7 @@ export const appRoutes = [
   { path: 'forgot-password', component: forgot_passwordComponent },
   { path: 'verify-code', component: verify_codeComponent },
   { path: 'reset-password', component: reset_passwordComponent },
+  { path: 'view', component: view_documentComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

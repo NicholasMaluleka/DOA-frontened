@@ -10,7 +10,7 @@
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
               <b *ngIf="page.policyholder == true">Policy Holder Details</b>
               <b *ngIf="page.beneficiary == true">Beneficiary Details</b></label></div>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.beneficiary ==true"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.beneficiary ==true &amp;&amp; !page.selectedClaim "><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Beneficiary Id Number</mat-label>
               <mat-select formControlName="beIds" placeholder="Select" [required]="false" (selectionChange)="populate2()">
                 <ng-template ngFor let-option [ngForOf]="page.beIds" let-i="index">
@@ -53,7 +53,7 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
               <b>Deceased Details</b></label></div>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.policyHolder == true"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.policyHolder == true &amp;&amp; !page.selectedClaim"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Dependency Id Number</mat-label>
               <mat-select formControlName="depsId" placeholder="Select" [required]="false" (selectionChange)="populate()">
                 <ng-template ngFor let-option [ngForOf]="page.ids" let-i="index">
@@ -83,7 +83,7 @@
 
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
               <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;">
                 <mat-label>Date of death</mat-label>
                 <input matInput placeholder="Date of Death" [matDatepicker]="picker" formControlName="dateOfDeath" [max]="page.date" [disabled]="false">
@@ -91,13 +91,21 @@
                 <mat-datepicker #picker [disabled]="false"></mat-datepicker>
                 <mat-error align="start" *ngIf="page.deceased.controls.dateOfDeath?.errors?.required">Date of Death is required</mat-error>
               </mat-form-field>
+              <div fxLayout="column wrap" fxFlex="49" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.selectedClaim"><mat-form-field class="fullWidth" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                  <mat-label>Update Status</mat-label>
+                  <mat-select formControlName="status" placeholder="Select" [required]="false" [disabled]="false">
+                    <ng-template ngFor let-option [ngForOf]="page.claimStatuses" let-i="index">
+                      <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                    </ng-template>
+                  </mat-select>
+
+                </mat-form-field></div>
             </div>
           </form>
-          <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column " fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
                 <b>Required Documents</b></label></div>
-            <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
-
+            <div *ngIf="!page.selectedClaim" style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
               <div (click)="upload1()">
                 <input type="file" id="upload1" hidden required formControlName="idClaimer2">
                 <button class="input-button"><label for="upload1">
@@ -134,9 +142,16 @@
 
                   </label></button>
               </div>
-
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="start()">Submit a Claim</button></div>
+            <div fxLayout="column wrap" style="height:30px; width:100%; margin-top:10px ;" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" class="fullWidth FullHeight" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
+                <div fxLayout="column wrap" class="viewclaim-btn relative" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let doc of page.docs">
+                  <div fxLayout="column wrap" style="top: -6px; left: -4px" class="view-btn absolute" fxLayoutAlign="center center" [fxShow]="true"><a href="{{page.fileURL}}{{doc.filename}}" target="_blank">
+                      View {{doc.name}}</a></div>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="page.selectedClaim ? updateClaim(page.policyClaimsForm.value) : start()">{{page.selectedClaim ? &quot;Update Claim&quot; : &quot;Submit a Claim&quot; }}</button></div>
           </div>
         </div>
       </div>

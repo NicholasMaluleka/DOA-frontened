@@ -108,11 +108,74 @@
                 "textIp": "counter",
                 "typedIpValue": {
                     "type": "literal",
-                    "value": "0"
+                    "value": "1"
                 }
             },
             {
                 "textIp": "showdependencies2Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "hideIcon",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "hideIcon2",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "gender",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender1",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender2",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender3",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender4",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender5",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showdependenciesForm",
                 "typedIpValue": {
                     "type": "this.page",
                     "value": "false"
@@ -357,7 +420,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"userData==>\",page.userData)\n//console.log(\"depe\", page.userData.dependencies)\n\npage.ben1 = page.userData.beneficaries[0]\npage.ben2 = page.userData.beneficaries[1]\n//console.log(\"ben1\", page.ben1)\n//console.log(\"ben2\", page.ben2)\npage.depe1 = page.userData.dependencies[0]\npage.depe2 = page.userData.dependencies[1]\npage.depe3 = page.userData.dependencies[2]\n//console.log(\"depe1\", page.depe1)\n\npage.formdata = new FormGroup({\n    firstName: new FormControl(page.userData?.firstName, [Validators.required]),\n   lastName: new FormControl(page.userData?.lastName, [Validators.required]),\n  cellphone: new FormControl(page.userData?.cellphone, [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    idNumber: new FormControl(page.userData?.idNumber || '', [Validators.required]),\n    gender: new FormControl(page.userData?.gender || '', [Validators.required]),\n    address: new FormControl(page.userData?.address || '', [Validators.required]),\n    email: new FormControl(page.userData?.email || '', [Validators.required, Validators.email]),\n    packageType: new FormControl(page.userData?.packageType || '', [Validators.required]),\n\n});\n\npage.beneficariesForm = new FormGroup({\n    firstName: new FormControl(page.ben1?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.ben1?.lastName || '', [Validators.required]),\n    idNumber: new FormControl(page.ben1?.idNumber || '', [Validators.required]),\n    gender: new FormControl(page.ben1?.gender || '', [Validators.required]),\n    email: new FormControl(page.ben1?.email || '', [Validators.required]),\n    cellphone: new FormControl(page.ben1?.cellphone || '', [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben1?.relationship || '', [Validators.required]),\n})\npage.beneficaries1Form = new FormGroup({\n    firstName: new FormControl(page.ben2.firstName),\n    lastName: new FormControl(page.ben2.lastName),\n    idNumber: new FormControl(page.ben2.idNumber),\n    gender: new FormControl(page.ben2.gender),\n    email: new FormControl(page.ben2.email),\n    cellphone: new FormControl(page.ben2.cellphone),\n    relationship: new FormControl(page.ben2.relationship),\n})\n\npage.dependencyForm  = new FormGroup({\n      firstName: new FormControl(page.depe1?.firstName ),\n    lastName: new FormControl(page.depe1?.lastName ),\n    gender: new FormControl(page.depe1?.gender ),\n     idNumber: new FormControl(page.depe1?.idNumber ),\n})\n\npage.dependency1Form  = new FormGroup({\n      firstName: new FormControl(page.depe2?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.depe2?.lastName || '', [Validators.required]),\n    gender: new FormControl(page.depe2?.gender || '', [Validators.required]),\n     idNumber: new FormControl(page.depe2?.idNumber || '', [Validators.required]),\n})\n\npage.dependency2Form  = new FormGroup({\n      firstName: new FormControl(page.depe3?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.depe3?.lastName || '', [Validators.required]),\n    gender: new FormControl(page.depe3?.gender || '', [Validators.required]),\n     idNumber: new FormControl(page.depe3?.idNumber || '', [Validators.required]),\n})\n\n//combine beneficaries\npage.beneficary = [page.beneficariesForm.value, page.beneficaries1Form.value ]\n\n//console.log(\"beneficaries\", page.beneficaries)\n\n//combine dependencies\npage.dependencies =[page.dependencyForm.value, page.dependency1Form.value, page.dependency2Form.value]\n//console.log(\"dependencies\", page.dependencies)\n\n//The select\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\npage.gender = [\n   {value: 'Male', viewValue: 'Male'},\n   {value: 'Female', viewValue: 'Female'}\n];",
+        "script": "console.log(\"userData==>\",page.userData)\n//console.log(\"depe\", page.userData.dependencies)\n\npage.ben1 = page.userData.beneficaries[0]\npage.ben2 = page.userData.beneficaries[1]\n//console.log(\"ben1\", page.ben1)\n//console.log(\"ben2\", page.ben2)\npage.depe1 = page.userData.dependencies[0]\npage.depe2 = page.userData.dependencies[1]\npage.depe3 = page.userData.dependencies[2]\n//console.log(\"depe1\", page.depe1)\n\npage.formdata = new FormGroup({\n    firstName: new FormControl(page.userData?.firstName || '', [Validators.required]),\n   lastName: new FormControl(page.userData?.lastName || '', [Validators.required]),\n  cellphone: new FormControl(page.userData?.cellphone || '', [Validators.required,Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    idNumber: new FormControl(page.userData?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.userData?.gender || '', [Validators.required]),\n    address: new FormControl(page.userData?.address || '', [Validators.required]),\n    email: new FormControl(page.userData?.email || '', [Validators.required, Validators.email]),\n    packageType: new FormControl(page.userData?.packageType || '', [Validators.required]),\n\n});\n\npage.beneficariesForm = new FormGroup({\n    firstName: new FormControl(page.ben1?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.ben1?.lastName || '', [Validators.required]),\n    idNumber: new FormControl(page.ben1?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.ben1?.gender || '', [Validators.required]),\n    email: new FormControl(page.ben1?.email || '', [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben1?.cellphone || '', [Validators.required,Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben1?.relationship || '', [Validators.required]),\n})\npage.beneficaries1Form = new FormGroup({\n    firstName: new FormControl(page.ben2.firstName, [Validators.required]),\n    lastName: new FormControl(page.ben2.lastName, [Validators.required]),\n    idNumber: new FormControl(page.ben2.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)]),\n    gender: new FormControl(page.ben2.gender || '', [Validators.required]),\n    email: new FormControl(page.ben2.email, [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben2.cellphone, [Validators.required, Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben2.relationship, [Validators.required]),\n})\n\npage.dependencyForm  = new FormGroup({\n    firstName: new FormControl(page.depe1?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe1?.lastName, [Validators.required] ),\n   idNumber: new FormControl(page.depe1?.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)] ),\n    gender: new FormControl(page.depe1?.gender, [Validators.required] ),\n})\n\npage.dependency1Form  = new FormGroup({\n      firstName: new FormControl(page.depe2?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe2?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe2?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe2?.idNumber, [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n})\n\npage.dependency2Form  = new FormGroup({\n      firstName: new FormControl(page.depe3?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe3?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe3?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe3?.idNumber, [Validators.required, Validators.minLength(13),Validators.maxLength(13)]),\n})\n\n//combine beneficaries\npage.beneficary = [page.beneficariesForm.value, page.beneficaries1Form.value ]\n\n//console.log(\"beneficaries\", page.beneficaries)\n\n//combine dependencies\npage.dependencies =[page.dependencyForm.value, page.dependency1Form.value, page.dependency2Form.value]\n//console.log(\"dependencies\", page.dependencies)\n\n//The select\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\n// page.gender = [\n//    {value: 'Male', viewValue: 'Male'},\n//    {value: 'Female', viewValue: 'Female'}\n// ];",
         "functionName": "sd_ECrTSDWg9bec5qWR",
         "category": "Function",
         "x": 385,
@@ -447,7 +510,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.showbeneficaries1Form = true\n//page.hideIcon = false\nconsole.log(\"form\", page.showbeneficaries1Form )\n\n",
+        "script": "page.showbeneficaries1Form = true\npage.hideIcon = false\nconsole.log(\"form\", page.showbeneficaries1Form )\n\n",
         "functionName": "sd_5nhxWC6xzWqUMH6w",
         "category": "Function",
         "x": 180,
@@ -491,11 +554,231 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.showdependencies1Form = true\n//page.hideIcon = false\nconsole.log(\"form\", page.showdependencies1Form )\n\npage.counter++\nif(page.counter == 2) {\n    page.showdependencies2Form = true\n   \n}",
+        "script": "page.showdependenciesForm = true\n\nconsole.log(\"form\", page.showdependencies1Form )\n\npage.counter++\nif(page.counter === 2) {\n    page.showdependencies1Form = true\n   \n}else if (page.counter === 3){\n    page.showdependencies2Form = true\n    page.hideIcon2 = false\n}\n",
         "functionName": "sd_WQQZU7S1MJVM0lrL",
         "category": "Function",
         "x": 200,
         "y": 500,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_S9yW8bkU4F73EyOY",
+        "type": "PageStart",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid",
+        "category": "General",
+        "x": 85,
+        "y": 640,
+        "wires": [
+            [
+                "sd_OjnbAvlFLUR3zGD4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_personalInfoComponent"
+    },
+    {
+        "id": "sd_OjnbAvlFLUR3zGD4",
+        "type": "Script",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.beneficariesForm.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender = 'Female'\n      page.beneficariesForm.patchValue({\n        gender: page.gender\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender = 'Male'\n     page.beneficariesForm.patchValue({\n        gender: page.gender\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.beneficariesForm.controls.idNumber.value)",
+        "functionName": "sd_OjnbAvlFLUR3zGD4",
+        "category": "Function",
+        "x": 185,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qjdaPlh9tYRfl2cj",
+        "type": "PageStart",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid1",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid1",
+        "category": "General",
+        "x": 65,
+        "y": 760,
+        "wires": [
+            [
+                "sd_QEoSMxy68DdcwloW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_personalInfoComponent"
+    },
+    {
+        "id": "sd_QEoSMxy68DdcwloW",
+        "type": "Script",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.beneficaries1Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender1 = 'Female'\n      page.beneficaries1Form.patchValue({\n        gender: page.gender1\n      })\n      page.beneficaries1Form.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender1 = 'Male'\n      page.beneficaries1Form.patchValue({\n        gender: page.gender1\n      })\n       page.beneficaries1Form.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.beneficaries1Form.controls.idNumber.value)",
+        "functionName": "sd_QEoSMxy68DdcwloW",
+        "category": "Function",
+        "x": 185,
+        "y": 760,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ygLmaDpGMnONXIW3",
+        "type": "PageStart",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid2",
+        "category": "General",
+        "x": 325,
+        "y": 640,
+        "wires": [
+            [
+                "sd_H9tzoLlT4Fi8b8WP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_personalInfoComponent"
+    },
+    {
+        "id": "sd_H9tzoLlT4Fi8b8WP",
+        "type": "Script",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependencyForm.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender2 = 'Female'\n     page.dependencyForm.patchValue({\n        gender: page.gender2\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender2 = 'Male'\n      page.dependencyForm.patchValue({\n        gender: page.gender2\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id',page.dependencyForm.controls.idNumber.value)",
+        "functionName": "sd_H9tzoLlT4Fi8b8WP",
+        "category": "Function",
+        "x": 445,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Tde7BjrvTO0jGMY8",
+        "type": "PageStart",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid3",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid3",
+        "category": "General",
+        "x": 325,
+        "y": 780,
+        "wires": [
+            [
+                "sd_0ENYDmWxNvxRkhoJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_personalInfoComponent"
+    },
+    {
+        "id": "sd_0ENYDmWxNvxRkhoJ",
+        "type": "Script",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependency1Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender3 = 'Female'\n      page.dependency1Form.patchValue({\n        gender: page.gender3\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender3 = 'Male'\n      page.dependency1Form.patchValue({\n        gender: page.gender3\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id',page.dependency1Form.controls.idNumber.value)",
+        "functionName": "sd_0ENYDmWxNvxRkhoJ",
+        "category": "Function",
+        "x": 445,
+        "y": 780,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Le0GGwdMrzMY8gnV",
+        "type": "PageStart",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid4",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid4",
+        "category": "General",
+        "x": 85,
+        "y": 880,
+        "wires": [
+            [
+                "sd_lxizv4O2VUb4bjID"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_personalInfoComponent"
+    },
+    {
+        "id": "sd_lxizv4O2VUb4bjID",
+        "type": "Script",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependency2Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender4 = 'Female'\n      page.dependency2Form.patchValue({\n        gender: page.gender4\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender4 = 'Male'\n      page.dependency2Form.patchValue({\n        gender: page.gender4\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.dependency2Form.controls.idNumber.value)",
+        "functionName": "sd_lxizv4O2VUb4bjID",
+        "category": "Function",
+        "x": 205,
+        "y": 880,
         "wires": [
             []
         ],

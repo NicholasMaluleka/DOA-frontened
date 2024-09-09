@@ -23,7 +23,7 @@
           </div>
           <div fxLayout="column wrap" style="height:50%;" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput [(ngModel)]="page.otpForm.otp" name="otp" type="number" placeholder="1234" [required]="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              <input matInput [(ngModel)]="page.otpForm.otp" name="otp" placeholder="1234" [required]="true" maxlength="4" minlength="4" pattern="^[0-9]*$">
               <mat-error align="start" *ngIf="otpForm.controls.otp?.invalid">OTP is required</mat-error>
             </mat-form-field>
           </div>

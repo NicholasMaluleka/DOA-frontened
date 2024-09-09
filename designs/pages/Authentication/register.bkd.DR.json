@@ -61,6 +61,105 @@
                 "_attrDef": "p"
             }
         ],
+        "c476fb4c-f3f8-e96f-dc08-4dd9468b8387": {
+            "paletteKey": "FlexLayoutCol",
+            "parentEditorKey": "9f72eeb3-b261-344f-f9a4-c9f261c31bf7",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Loader",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "background-color: #0000002e; top: 0; bottom: 0; right: 0; left: 0",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "z-index2",
+                        "full-width",
+                        "full-height",
+                        "absolute"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "center",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "center",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.loading",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "06cb2feb-a9e6-73cc-ee8d-83cef113cd86": {
+                "paletteKey": "NEUTRINOS_VIEW_loader",
+                "parentEditorKey": "c476fb4c-f3f8-e96f-dc08-4dd9468b8387",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "componentLabel",
+                        "_value": "loader",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    }
+                ]
+            }
+        },
         "29747d16-9d28-dde1-6add-3990ec348f41": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "9f72eeb3-b261-344f-f9a4-c9f261c31bf7",
@@ -397,7 +496,8 @@
                                 "ab08fc4d-35c1-4693-ee37-fb7ac889b9f7": {
                                     "paletteKey": "FlexLayoutCol",
                                     "parentEditorKey": "f7933666-3f8a-5079-8510-8f1a80651c74",
-                                    "commentid": null,
+                                    "isCommented": "true",
+                                    "commentid": "1725565842184",
                                     "designerReference": [
                                         {
                                             "_key": "componentLabel",
@@ -408,7 +508,7 @@
                                         },
                                         {
                                             "_key": "style",
-                                            "_value": "background-color: #0000002e",
+                                            "_value": "background-color: #0000002e; top: 0; bottom: 0; right: 0; left: 0",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -468,7 +568,8 @@
                                     "b16aa1dc-2e6d-ea81-c559-0d32aa0d640c": {
                                         "paletteKey": "NEUTRINOS_VIEW_loader",
                                         "parentEditorKey": "ab08fc4d-35c1-4693-ee37-fb7ac889b9f7",
-                                        "commentid": null,
+                                        "isCommented": "true",
+                                        "commentid": "1725565842184",
                                         "designerReference": [
                                             {
                                                 "_key": "componentLabel",
@@ -1224,6 +1325,7 @@
                                             {
                                                 "_key": "class",
                                                 "_value": [
+                                                    "margin-top-10px",
                                                     "kg-full-width"
                                                 ],
                                                 "_type": "dav",
@@ -1677,6 +1779,7 @@
                                             {
                                                 "_key": "class",
                                                 "_value": [
+                                                    "margin-top-10px",
                                                     "kg-full-width"
                                                 ],
                                                 "_type": "dav",
@@ -2622,7 +2725,9 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "margin-top-10px"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
@@ -2878,7 +2983,9 @@
                                             },
                                             {
                                                 "_key": "class",
-                                                "_value": "",
+                                                "_value": [
+                                                    "margin-top-2em"
+                                                ],
                                                 "_type": "dav",
                                                 "_attrDef": "p"
                                             },
@@ -4432,6 +4539,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -5776,6 +5884,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -7002,6 +7111,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -8340,6 +8450,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -10014,6 +10125,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -11656,6 +11768,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -13298,6 +13411,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "margin-top-10px",
                                                             "kg-full-width"
                                                         ],
                                                         "_type": "dav",
@@ -14061,7 +14175,7 @@
                                         },
                                         {
                                             "_key": "[hidden]",
-                                            "_value": "page.showDependencyForm",
+                                            "_value": "page.dependencyForm",
                                             "_type": "kv",
                                             "_attrDef": "c"
                                         }

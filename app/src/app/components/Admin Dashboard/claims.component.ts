@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
 import { MatSort } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { searchPolicyComponent } from 'app/components/search Policy/searchPolicy.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -120,6 +121,21 @@ export class claimsComponent implements AfterViewInit {
       //appendnew_next_openPolicy
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_d5Bmgxud8M60Ezv8');
+    }
+  }
+
+  reviewClaim(claim: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { claim };
+      bh.local = {};
+      bh = this.sd_6b10CFQCiMMUZcQg(bh);
+      //appendnew_next_reviewClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6uxXfPKiwYlVASPF');
     }
   }
   //appendnew_flow_claimsComponent_start
@@ -270,7 +286,7 @@ export class claimsComponent implements AfterViewInit {
       const searchPolicyDialog = this.__page_injector__.get(MatDialog);
       const searchPolicyDialogRef = searchPolicyDialog.open(
         searchPolicyComponent,
-        {}
+        { width: '40%' }
       );
       searchPolicyDialogRef.afterOpened().subscribe((event) => {
         this.sd_aNCFGIa8P3FmUQlu(bh);
@@ -312,7 +328,7 @@ export class claimsComponent implements AfterViewInit {
       const searchPolicyDialog = this.__page_injector__.get(MatDialog);
       const searchPolicyDialogRef = searchPolicyDialog.open(
         searchPolicyComponent,
-        {}
+        { width: '40%' }
       );
       searchPolicyDialogRef.afterOpened().subscribe((event) => {
         this.sd_UDh5XCgUWp8UrqTK(bh);
@@ -346,6 +362,45 @@ export class claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2WWUBCfUnObCGa7z');
+    }
+  }
+
+  sd_6b10CFQCiMMUZcQg(bh) {
+    try {
+      localStorage.setItem('claim', JSON.stringify(bh.input.claim));
+      bh = this.sd_BfP16kvx4zGkQL9z(bh);
+      //appendnew_next_sd_6b10CFQCiMMUZcQg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6b10CFQCiMMUZcQg');
+    }
+  }
+
+  sd_BfP16kvx4zGkQL9z(bh) {
+    try {
+      const page = this.page;
+      bh.routeData = { isReview: true };
+      bh = this.sd_ieGXqp1MFZIwHCzM(bh);
+      //appendnew_next_sd_BfP16kvx4zGkQL9z
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_BfP16kvx4zGkQL9z');
+    }
+  }
+
+  async sd_ieGXqp1MFZIwHCzM(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, bh.routeData),
+        });
+      //appendnew_next_sd_ieGXqp1MFZIwHCzM
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ieGXqp1MFZIwHCzM');
     }
   }
 

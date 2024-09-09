@@ -103,6 +103,10 @@
             "path": "reset-password"
         },
         {
+            "path": "view",
+            "component": "view_documentComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "/DOAServices",
             "pathMatch": "full",

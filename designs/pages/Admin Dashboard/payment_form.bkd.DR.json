@@ -64,7 +64,6 @@
         "59691ad2-cd17-973b-153f-669ef7ebb4db": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "89a451cf-b779-16f7-6275-bb476236ad38",
-            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -197,7 +196,6 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "59691ad2-cd17-973b-153f-669ef7ebb4db",
                 "isAdvancedComponent": true,
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -385,7 +383,6 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "2814c50d-fb8b-94c9-321e-b434872bacd7",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -402,7 +399,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<h2 class=\"blue-color flex center-center full-width\">Log a payment</h2>",
+                            "_value": "<h2 class=\"blue-color flex center-center full-width\">{{page.action}}</h2>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
