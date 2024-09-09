@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -179,6 +180,21 @@ export class edit_profileComponent {
       //appendnew_next_idValid4
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_zeavhCK92Hm892hh');
+    }
+  }
+
+  cancel(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_tcxBJckGGYZqxWmJ(bh);
+      //appendnew_next_cancel
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pklcqBCImlsNjMX4');
     }
   }
   //appendnew_flow_edit_profileComponent_start
@@ -973,6 +989,20 @@ export class edit_profileComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
+    }
+  }
+
+  async sd_tcxBJckGGYZqxWmJ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_tcxBJckGGYZqxWmJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tcxBJckGGYZqxWmJ');
     }
   }
 
