@@ -100,6 +100,20 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "docs",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "fileURL",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_8uegiEQyOnacegW8",
@@ -364,7 +378,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "if(page.checked.policyHolder == true) {\n    page.beneficiary = false\n    page.policyHolder = true\n} else {\n    page.beneficiary = true\n    page.policyHolder = false\n}\n\npage.policyNo = page.newClient[0].policyNumber",
+        "script": "if(page.checked.policyHolder == true) {\n    page.beneficiary = false\n    page.policyHolder = true\n} else {\n    page.beneficiary = true\n    page.policyHolder = false\n}\n\npage.policyNo = page.newClient[0].policyNumber\n",
         "functionName": "sd_t7WBGNUYn2Qn9klf",
         "category": "Function",
         "x": 485,
@@ -419,7 +433,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "ben and depen array for selectors",
-        "script": "// Dependency\npage.deparray = page.newClient[0].dependencies\nconsole.log(\"depnarray\",page.deparray)\n// beneficary\npage.benarray = page.newClient[0].beneficaries\nconsole.log(\"benearray\",page.benarray)\n\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\npage.beIds = [\n   {value: page.benarray[0], viewValue: page.benarray[0].idNumber},\n   {value: page.benarray[1], viewValue: page.benarray[1].idNumber}\n];\n\n",
+        "script": "// Dependency\n\npage.fileURL = page.ssdUrl + 'download/'\n\npage.deparray = page.newClient[0].dependencies\nconsole.log(\"depnarray\",page.deparray)\n// beneficary\npage.benarray = page.newClient[0].beneficaries\nconsole.log(\"benearray\",page.benarray)\n\npage.docs = []\n\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\npage.beIds = [\n   {value: page.benarray[0], viewValue: page.benarray[0].idNumber},\n   {value: page.benarray[1], viewValue: page.benarray[1].idNumber}\n];\n\n",
         "functionName": "benAndDepenArrayForSelectors",
         "category": "Function",
         "x": 965,
@@ -970,7 +984,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()",
+        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()\n\nlet file = JSON.parse(sessionStorage.getItem(\"idClaimer\"))\n\npage.docs[0] = {\n    name: \"idClaimer\",\n    ...file\n}",
         "functionName": "sd_b1QBlwuGwfmxrU8X",
         "category": "Function",
         "x": 425,
@@ -1347,7 +1361,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"idDeceased\",JSON.stringify(bh.result))\nthis.getFromBackend2()",
+        "script": "sessionStorage.setItem(\"idDeceased\",JSON.stringify(bh.result))\nthis.getFromBackend2()\n\nlet file = JSON.parse(sessionStorage.getItem(\"idDeceased\"))\n\npage.docs[1] = {\n    name: \"idDeceased\",\n    ...file\n}",
         "functionName": "sd_naVFzQoHG9PNzmpr",
         "category": "Function",
         "x": 465,
@@ -1618,7 +1632,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"deathCetificatify\",JSON.stringify(bh.result))\nthis.getFromBackend3()\nconsole.log(\"bh\",bh.results)",
+        "script": "sessionStorage.setItem(\"deathCetificatify\",JSON.stringify(bh.result))\nthis.getFromBackend3()\nconsole.log(\"bh\",bh.results)\n\nlet file = JSON.parse(sessionStorage.getItem(\"deathCetificatify\"))\n\npage.docs[2] = {\n    name: \"deathCetificatify\",\n    ...file\n}",
         "functionName": "sd_PEs3jZ0F7V9TKive",
         "category": "Function",
         "x": 465,
@@ -1995,7 +2009,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"bi1663\",JSON.stringify(bh.result))\nthis.getFromBackend4()",
+        "script": "sessionStorage.setItem(\"bi1663\",JSON.stringify(bh.result))\nthis.getFromBackend4()\n\nlet file = JSON.parse(sessionStorage.getItem(\"bi1663\"))\n\npage.docs[3] = {\n    name: \"bi1663\",\n    ...file\n}",
         "functionName": "sd_qAqklLHl7YggpvdV",
         "category": "Function",
         "x": 1185,
@@ -2266,7 +2280,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"bankDetails\",JSON.stringify(bh.result))\nthis.getFromBackend5()",
+        "script": "sessionStorage.setItem(\"bankDetails\",JSON.stringify(bh.result))\nthis.getFromBackend5()\n\nlet file = JSON.parse(sessionStorage.getItem(\"bankDetails\"))\n\npage.docs[4] = {\n    name: \"bankDetails\",\n    ...file\n}",
         "functionName": "sd_lbjf2VgcIKFjsixy",
         "category": "Function",
         "x": 1205,
@@ -2419,8 +2433,8 @@
         },
         "functionName": "sd_EiyEHm1Q0suBYnul",
         "category": "Storage",
-        "x": 465,
-        "y": 1180,
+        "x": 485,
+        "y": 1240,
         "wires": [
             []
         ],
@@ -2436,6 +2450,8 @@
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
+        "tmpOp": "",
+        "tmpOpType": "",
         "operationType": "queryParams",
         "operation": "keys",
         "key": "bh",
@@ -2443,7 +2459,7 @@
         "functionName": "sd_0ZC8jSwPtvUkjiBJ",
         "category": "Navigation",
         "x": 205,
-        "y": 1140,
+        "y": 1200,
         "wires": [
             [
                 "sd_yo4JoCQiVtNoLyHc"
@@ -2479,8 +2495,8 @@
         "flow_type": "sync",
         "functionName": "checkIfIsReview",
         "category": "General",
-        "x": 80,
-        "y": 1140,
+        "x": 85,
+        "y": 1200,
         "wires": [
             [
                 "sd_0ZC8jSwPtvUkjiBJ"
@@ -2508,8 +2524,8 @@
         "resultMapping": {},
         "functionName": "sd_HbEDqAM5kG7ivWOE",
         "category": "Storage",
-        "x": 465,
-        "y": 1080,
+        "x": 485,
+        "y": 1140,
         "wires": [
             []
         ],
@@ -2541,8 +2557,8 @@
         "outputs": 2,
         "functionName": "sd_yo4JoCQiVtNoLyHc",
         "category": "Function",
-        "x": 325,
-        "y": 1140,
+        "x": 365,
+        "y": 1200,
         "wires": [
             [
                 "sd_HbEDqAM5kG7ivWOE"
@@ -2563,11 +2579,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "forms1",
-        "script": "// decesed details\n\nconsole.log(\"PH\")\n\npage.claimStatuses = [\n     {value: \"partially approved\", viewValue: \"Partially Approve\"},\n   {value: \"approved\", viewValue: \"Approve\"},\n   {value: \"rejected\", viewValue: \"Reject\"},\n]\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.selectedClaim.deceased.firstName),\n      lastName: new FormControl( page.selectedClaim.deceased.lastName),\n      idNum :new FormControl(page.selectedClaim.deceased.idNum),\n       gender: new FormControl(page.selectedClaim.deceased.gender),\n       dateOfDeath:new FormControl( ),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1662 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.selectedClaim.firstName),\n    lastName:new FormControl(page.selectedClaim.lastName),\n    idNum:new FormControl( page.selectedClaim.idNumber),\n    gender:new FormControl( page.selectedClaim.gender),\n    packageType : new FormControl(page.selectedClaim.packageType),\n    payoutAmount :new FormControl(page.selectedClaim.payoutAmount),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1662:page.bi1662,\n    bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl(page.selectedClaim.status),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\n\nconsole.log(\"PH\")\n\npage.claimStatuses = [\n  { value: \"partially approved\", viewValue: \"Partially Approve\" },\n  { value: \"rejected\", viewValue: \"Reject\" },\n]\n\npage.deceased = new FormGroup({\n  firstName: new FormControl(page.selectedClaim.deceased.firstName),\n  lastName: new FormControl(page.selectedClaim.deceased.lastName),\n  idNum: new FormControl(page.selectedClaim.deceased.idNum),\n  gender: new FormControl(page.selectedClaim.deceased.gender),\n  dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath),\n  status: new FormControl(page.selectedClaim.status),\n})\n\nconsole.log(\"DECEASED\", page.deceased)\n\n// documents\npage.idClaimer = new FormGroup({\n  _id: new FormControl(page.selectedClaim.idClaimer._id),\n  filename: new FormControl(page.selectedClaim.idClaimer.filename),\n  // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize.length),\n  length: new FormControl(page.selectedClaim.idClaimer.length),\n\n})\n\npage.idDecesed = new FormGroup({\n  _id: new FormControl(page.selectedClaim.idDecesed._id),\n  filename: new FormControl(page.selectedClaim.idDecesed.filename),\n  // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize.length),\n  length: new FormControl(page.selectedClaim.idDecesed.length),\n\n})\n\npage.bi1662 = new FormGroup({\n  _id: new FormControl(page.selectedClaim.bi1662._id),\n  filename: new FormControl(page.selectedClaim.bi1662.filename),\n  // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),\n  length: new FormControl(page.selectedClaim.bi1662.length),\n\n})\n\npage.deathCertificate = new FormGroup({\n  _id: new FormControl(page.selectedClaim.deathCertificate._id),\n  filename: new FormControl(page.selectedClaim.deathCertificate.filename),\n  // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize.length),\n  length: new FormControl(page.selectedClaim.deathCertificate.length),\n\n})\n\npage.bankDetails = new FormGroup({\n  _id: new FormControl(page.selectedClaim.bankDetails._id),\n  filename: new FormControl(page.selectedClaim.bankDetails.filename),\n  // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize.length),\n  length: new FormControl(page.selectedClaim.bankDetails.length),\n})\n\n//claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n  firstName: new FormControl(page.selectedClaim.firstName),\n  lastName: new FormControl(page.selectedClaim.lastName),\n  idNum: new FormControl(page.selectedClaim.idNum),\n  gender: new FormControl(page.selectedClaim.gender),\n  packageType: new FormControl(page.selectedClaim.packageType),\n  payoutAmount: new FormControl(page.selectedClaim.payoutAmount),\n  deceased: page.deceased,\n  deceased2: new FormControl(''),\n  idClaimer: page.idClaimer,\n  idClaimer2: new FormControl(''),\n  idDecesed: page.idDecesed,\n  idDeceased2: new FormControl(''),\n  bi1662: page.bi1662,\n  bi16632: new FormControl(''),\n  deathCertificate: page.deathCertificate,\n  deathCetificatify2: new FormControl(''),\n  bankDetails: page.bankDetails,\n  bankDetails2: new FormControl(''),\n  depsId: new FormControl(page.selectedClaim.depsId),\n  beIds: new FormControl(page.selectedClaim.beIds),\n  claimNumber: new FormControl(page.selectedClaim.claimNumber),\n  status: new FormControl(page.deceased.value.status),\n  _id: new FormControl(page.selectedClaim._id)\n\n})\n\npage.date = new Date()\n\nconsole.log(\"page.deceased\", page.deceased)\n\n\nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "forms1",
         "category": "Function",
-        "x": 365,
-        "y": 1360,
+        "x": 485,
+        "y": 1460,
         "wires": [
             [
                 "sd_H2rfObg2GTiF2OJI"
@@ -2586,6 +2602,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -2593,8 +2610,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -2610,14 +2629,16 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_H2rfObg2GTiF2OJI",
         "category": "HTTP",
-        "x": 565,
-        "y": 1320,
+        "x": 685,
+        "y": 1400,
         "wires": [
             [
                 "sd_duOxmO19SUtDVgxP"
@@ -2638,8 +2659,8 @@
         "script": "page.clients = page.result.filter((item) => item.role === 'client');\npage.claim = page.clients. find(client =>client.policyNumber == page.policy)",
         "functionName": "sd_duOxmO19SUtDVgxP",
         "category": "Function",
-        "x": 665,
-        "y": 1320,
+        "x": 785,
+        "y": 1400,
         "wires": [
             []
         ],
@@ -2655,11 +2676,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "ben1 form",
-        "script": "// decesed details\n\nconsole.log(\"BEN\")\n\npage.claimStatuses = [\n     {value: \"partially approved\", viewValue: \"Partially Approve\"},\n   {value: \"approved\", viewValue: \"Approve\"},\n   {value: \"rejected\", viewValue: \"Reject\"},\n]\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.selectedClaim.deceased.firstName),\n      lastName: new FormControl(page.selectedClaim.deceased.lastName ),\n      idNum :new FormControl( page.selectedClaim.deceased.idNum),\n       gender: new FormControl(page.selectedClaim.deceased.gender),\n       dateOfDeath:new FormControl(page.selectedClaim.date,[Validators.required]),\n    })\n\n\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1663 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n \n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.selectedClaim.firstName),\n    lastName:new FormControl(page.selectedClaim.lastName),\n    idNum:new FormControl( page.selectedClaim.idNum),\n    gender:new FormControl(page.selectedClaim.gender),\n    packageType : new FormControl(page.selectedClaim.packageType),\n    payoutAmount :new FormControl(page.selectedClaim.payoutAmount),\n    deceased: page.deceased,\n    status:new FormControl(page.selectedClaim.status),\n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1663:page.bi1663,\n     bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\n\nconsole.log(\"BEN\")\n\npage.claimStatuses = [\n  { value: \"partially approved\", viewValue: \"Partially Approve\" },\n  { value: \"rejected\", viewValue: \"Reject\" },\n]\n\npage.deceased = new FormGroup({\n  firstName: new FormControl(page.selectedClaim.deceased.firstName),\n  lastName: new FormControl(page.selectedClaim.deceased.lastName),\n  idNum: new FormControl(page.selectedClaim.deceased.idNum),\n  gender: new FormControl(page.selectedClaim.deceased.gender),\n  dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath, [Validators.required]),\n  status: new FormControl(page.selectedClaim, [Validators.required])\n})\n\nconsole.log(\"DECEASED\", page.deceased)\n\n// documents\npage.idClaimer = new FormGroup({\n  _id: new FormControl(page.selectedClaim.idClaimer._id),\n  filename: new FormControl(page.selectedClaim.idClaimer.filename),\n  // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize?.length),\n  length: new FormControl(page.selectedClaim.idClaimer.length),\n})\n\npage.idDecesed = new FormGroup({\n  _id: new FormControl(page.selectedClaim.idDecesed._id),\n  filename: new FormControl(page.selectedClaim.idDecesed.filename),\n  // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize?.length),\n  length: new FormControl(page.selectedClaim.idDecesed.length),\n\n})\n\npage.bi1663 = new FormGroup({\n  _id: new FormControl(page.selectedClaim.bi1662._id),\n  filename: new FormControl(page.selectedClaim.bi1662.filename),\n  // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),\n  length: new FormControl(page.selectedClaim.bi1662.length),\n})\n\npage.deathCertificate = new FormGroup({\n  _id: new FormControl(page.selectedClaim.deathCertificate._id),\n  filename: new FormControl(page.selectedClaim.deathCertificate.filename),\n  // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize?.length),\n  length: new FormControl(page.selectedClaim.deathCertificate.length),\n\n})\n\npage.bankDetails = new FormGroup({\n  _id: new FormControl(page.selectedClaim.bankDetails._id),\n  filename: new FormControl(page.selectedClaim.bankDetails.filename),\n  // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize?.length),\n  length: new FormControl(page.selectedClaim.bankDetails.length),\n})\n\n//claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n  firstName: new FormControl(page.selectedClaim.firstName),\n  lastName: new FormControl(page.selectedClaim.lastName),\n  idNum: new FormControl(page.selectedClaim.idNum),\n  gender: new FormControl(page.selectedClaim.gender),\n  packageType: new FormControl(page.selectedClaim.packageType),\n  payoutAmount: new FormControl(page.selectedClaim.payoutAmount),\n  deceased: page.deceased,\n  status: new FormControl(page.selectedClaim.status),\n  deceased2: new FormControl(''),\n  idClaimer: page.idClaimer,\n  idClaimer2: new FormControl(''),\n  idDecesed: page.idDecesed,\n  idDeceased2: new FormControl(''),\n  bi1663: page.bi1663,\n  bi16632: new FormControl(''),\n  deathCertificate: page.deathCertificate,\n  deathCetificatify2: new FormControl(''),\n  bankDetails: page.bankDetails,\n  bankDetails2: new FormControl(''),\n  depsId: new FormControl(page.selectedClaim.depsId),\n  beIds: new FormControl(page.selectedClaim.beIds),\n  _id: new FormControl(page.selectedClaim._id),\n  claimNumber: new FormControl(page.selectedClaim.claimNumber)\n})\n\npage.date = new Date()\n\nconsole.log(\"page.deceased\", page.deceased)\n\n\nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "ben1Form",
         "category": "Function",
-        "x": 365,
-        "y": 1280,
+        "x": 485,
+        "y": 1340,
         "wires": [
             [
                 "sd_H2rfObg2GTiF2OJI"
@@ -2683,12 +2704,12 @@
         "flow_type": "sync",
         "functionName": "reviewPatch",
         "category": "General",
-        "x": 80,
-        "y": 1300,
+        "x": 85,
+        "y": 1400,
         "wires": [
             [
-                "sd_ypuYcwTSxbHCyLl9",
-                "sd_3UFHNmHQ6gr6Z6rE"
+                "sd_3UFHNmHQ6gr6Z6rE",
+                "sd_tTEL46pK2xh7B0lI"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -2718,8 +2739,8 @@
         "outputs": 2,
         "functionName": "sd_ypuYcwTSxbHCyLl9",
         "category": "Function",
-        "x": 205,
-        "y": 1300,
+        "x": 365,
+        "y": 1400,
         "wires": [
             [
                 "sd_KqW8tRDm0M48Qng2"
@@ -2761,6 +2782,7 @@
         "serviceImportPath": "./",
         "startName": "checkIfIsReview",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_YYpzaqPjgqnQDOvA",
         "category": "General",
@@ -2845,6 +2867,7 @@
         "serviceImportPath": "./",
         "startName": "reviewPatch",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_0dgCvNhXnv2EDp9O",
         "category": "General",
@@ -2897,8 +2920,8 @@
         "logObject": "this.page.selectedClaim",
         "functionName": "sd_3UFHNmHQ6gr6Z6rE",
         "category": "General",
-        "x": 205,
-        "y": 1400,
+        "x": 225,
+        "y": 1540,
         "wires": [],
         "__ssdTypeInputs__": {
             "logObject": {
@@ -2907,6 +2930,467 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_M9HeUA5hjXD09RPR",
+        "type": "PageStart",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "open",
+        "category": "General",
+        "x": 105,
+        "y": 1040,
+        "wires": [
+            [
+                "sd_sZzw2GvSrAzcQ1Zs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "claims_registerComponent"
+    },
+    {
+        "id": "sd_sZzw2GvSrAzcQ1Zs",
+        "type": "OpenDialog",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_PR3nvRTcpHmbFIoL",
+            "label": "view_document"
+        },
+        "relativePath": "app/components/Authentication/view_document",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_sZzw2GvSrAzcQ1Zs",
+        "category": "Dialog",
+        "x": 260,
+        "y": 1040,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UmdtwXC1AB0nhAbw",
+        "type": "Script",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.claimKeys = Object.keys(page.selectedClaim)\n\npage.docs = [] \n\nbh.claimKeys.forEach(key => {\n    if(page.selectedClaim[key]?.filename) {\n        let doc = {...page.selectedClaim[key],\n                    name: key}\n        page.docs.push(doc)\n    }\n    \n    }) \n\nconsole.log(\"DOCS: \", page.docs)\n\npage.fileURL = page.ssdUrl + 'download/'\n\nconsole.log(\"URL:\", page.ssdUrl)",
+        "functionName": "sd_UmdtwXC1AB0nhAbw",
+        "category": "Function",
+        "x": 285,
+        "y": 1400,
+        "wires": [
+            [
+                "sd_ypuYcwTSxbHCyLl9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tTEL46pK2xh7B0lI",
+        "type": "Environment",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_tTEL46pK2xh7B0lI",
+        "category": "General",
+        "x": 185,
+        "y": 1400,
+        "wires": [
+            [
+                "sd_UmdtwXC1AB0nhAbw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_d6vseXRHCyuRWjnv",
+        "type": "PageStart",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "updateClaim",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "claim",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "updateClaim",
+        "category": "General",
+        "x": 85,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_p3ivOtVgfXm0I0Z5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "claims_registerComponent"
+    },
+    {
+        "id": "sd_Jp5WhdAT8tH6NXXw",
+        "type": "Script",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + \"update_claim\"\n\nconsole.log(\"URL: \", bh.url)",
+        "functionName": "sd_Jp5WhdAT8tH6NXXw",
+        "category": "Function",
+        "x": 305,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_9j0Sbn07mNgWcy1F"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9j0Sbn07mNgWcy1F",
+        "type": "HttpRequest",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.claim",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "claim"
+        },
+        "resultMapping": "this.page.res",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "res"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_9j0Sbn07mNgWcy1F",
+        "category": "HTTP",
+        "x": 425,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_aaERlUkwBglNdw0w"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_p3ivOtVgfXm0I0Z5",
+        "type": "Environment",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_p3ivOtVgfXm0I0Z5",
+        "category": "General",
+        "x": 180,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_Jp5WhdAT8tH6NXXw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_e6cgpzrBPGD5XQ4t",
+        "type": "SnackBar",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "CLAIM UPDATED SUCCESSFULY"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_e6cgpzrBPGD5XQ4t",
+        "category": "General",
+        "x": 665,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_nZ3fyQZGNTByR3Yl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aaERlUkwBglNdw0w",
+        "type": "PageSwitch",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "res.lastErrorObject.updatedExisting",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.res.lastErrorObject.updatedExisting",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_aaERlUkwBglNdw0w",
+        "category": "Function",
+        "x": 540,
+        "y": 1640,
+        "wires": [
+            [
+                "sd_e6cgpzrBPGD5XQ4t"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nZ3fyQZGNTByR3Yl",
+        "type": "Navigation",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/claims",
+        "functionName": "sd_nZ3fyQZGNTByR3Yl",
+        "category": "Navigation",
+        "x": 760,
+        "y": 1640,
+        "wires": [
+            []
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "claims_registerComponent",

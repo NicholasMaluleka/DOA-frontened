@@ -10,8 +10,10 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { ActivatedRoute, Router } from '@angular/router'; //_splitter_
+import { view_documentComponent } from 'app/components/Authentication/view_document.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -357,11 +359,41 @@ export class claims_registerComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_ypuYcwTSxbHCyLl9(bh);
       this.sd_3UFHNmHQ6gr6Z6rE(bh);
+      bh = this.sd_tTEL46pK2xh7B0lI(bh);
       //appendnew_next_reviewPatch
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_TKthgYuBJaq7ONFh');
+    }
+  }
+
+  open(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_sZzw2GvSrAzcQ1Zs(bh);
+      //appendnew_next_open
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_M9HeUA5hjXD09RPR');
+    }
+  }
+
+  updateClaim(claim: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { claim };
+      bh.local = {};
+      bh = this.sd_p3ivOtVgfXm0I0Z5(bh);
+      //appendnew_next_updateClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_d6vseXRHCyuRWjnv');
     }
   }
   //appendnew_flow_claims_registerComponent_start
@@ -386,6 +418,8 @@ export class claims_registerComponent {
       this.page.desname = undefined;
       this.page.name = undefined;
       this.page.claimStatuses = undefined;
+      this.page.docs = undefined;
+      this.page.fileURL = undefined;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
@@ -428,6 +462,7 @@ export class claims_registerComponent {
       }
 
       page.policyNo = page.newClient[0].policyNumber;
+
       bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_t7WBGNUYn2Qn9klf
       return bh;
@@ -483,11 +518,16 @@ export class claims_registerComponent {
   benAndDepenArrayForSelectors(bh) {
     try {
       const page = this.page; // Dependency
+
+      page.fileURL = page.ssdUrl + 'download/';
+
       page.deparray = page.newClient[0].dependencies;
       console.log('depnarray', page.deparray);
       // beneficary
       page.benarray = page.newClient[0].beneficaries;
       console.log('benearray', page.benarray);
+
+      page.docs = [];
 
       page.ids = [
         { value: page.deparray[0], viewValue: page.deparray[0].idNumber },
@@ -1037,6 +1077,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
       this.getFromBackend1();
+
+      let file = JSON.parse(sessionStorage.getItem('idClaimer'));
+
+      page.docs[0] = {
+        name: 'idClaimer',
+        ...file,
+      };
       bh = this.sd_jr3k8kNfVkjaB5Ka(bh);
       //appendnew_next_sd_b1QBlwuGwfmxrU8X
       return bh;
@@ -1165,6 +1212,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
       this.getFromBackend2();
+
+      let file = JSON.parse(sessionStorage.getItem('idDeceased'));
+
+      page.docs[1] = {
+        name: 'idDeceased',
+        ...file,
+      };
       bh = this.sd_ByY2JldcpCcfHzI8(bh);
       //appendnew_next_sd_naVFzQoHG9PNzmpr
       return bh;
@@ -1251,6 +1305,13 @@ export class claims_registerComponent {
       sessionStorage.setItem('deathCetificatify', JSON.stringify(bh.result));
       this.getFromBackend3();
       console.log('bh', bh.results);
+
+      let file = JSON.parse(sessionStorage.getItem('deathCetificatify'));
+
+      page.docs[2] = {
+        name: 'deathCetificatify',
+        ...file,
+      };
       bh = this.sd_8oQKKQYPcqVuI8TK(bh);
       //appendnew_next_sd_PEs3jZ0F7V9TKive
       return bh;
@@ -1380,6 +1441,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('bi1663', JSON.stringify(bh.result));
       this.getFromBackend4();
+
+      let file = JSON.parse(sessionStorage.getItem('bi1663'));
+
+      page.docs[3] = {
+        name: 'bi1663',
+        ...file,
+      };
       bh = this.sd_lg9wvNZgvdJI59fo(bh);
       //appendnew_next_sd_qAqklLHl7YggpvdV
       return bh;
@@ -1463,6 +1531,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
       this.getFromBackend5();
+
+      let file = JSON.parse(sessionStorage.getItem('bankDetails'));
+
+      page.docs[4] = {
+        name: 'bankDetails',
+        ...file,
+      };
       bh = this.sd_rzesD82YORPSFkNR(bh);
       //appendnew_next_sd_lbjf2VgcIKFjsixy
       return bh;
@@ -1553,6 +1628,54 @@ export class claims_registerComponent {
     }
   }
 
+  sd_3UFHNmHQ6gr6Z6rE(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.selectedClaim);
+      //appendnew_next_sd_3UFHNmHQ6gr6Z6rE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3UFHNmHQ6gr6Z6rE');
+    }
+  }
+
+  sd_tTEL46pK2xh7B0lI(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_UmdtwXC1AB0nhAbw(bh);
+      //appendnew_next_sd_tTEL46pK2xh7B0lI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tTEL46pK2xh7B0lI');
+    }
+  }
+
+  sd_UmdtwXC1AB0nhAbw(bh) {
+    try {
+      const page = this.page;
+      bh.claimKeys = Object.keys(page.selectedClaim);
+
+      page.docs = [];
+
+      bh.claimKeys.forEach((key) => {
+        if (page.selectedClaim[key]?.filename) {
+          let doc = { ...page.selectedClaim[key], name: key };
+          page.docs.push(doc);
+        }
+      });
+
+      console.log('DOCS: ', page.docs);
+
+      page.fileURL = page.ssdUrl + 'download/';
+
+      console.log('URL:', page.ssdUrl);
+      bh = this.sd_ypuYcwTSxbHCyLl9(bh);
+      //appendnew_next_sd_UmdtwXC1AB0nhAbw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UmdtwXC1AB0nhAbw');
+    }
+  }
+
   async sd_ypuYcwTSxbHCyLl9(bh) {
     try {
       if (
@@ -1582,7 +1705,6 @@ export class claims_registerComponent {
 
       page.claimStatuses = [
         { value: 'partially approved', viewValue: 'Partially Approve' },
-        { value: 'approved', viewValue: 'Approve' },
         { value: 'rejected', viewValue: 'Reject' },
       ];
 
@@ -1591,41 +1713,48 @@ export class claims_registerComponent {
         lastName: new FormControl(page.selectedClaim.deceased.lastName),
         idNum: new FormControl(page.selectedClaim.deceased.idNum),
         gender: new FormControl(page.selectedClaim.deceased.gender),
-        dateOfDeath: new FormControl(page.selectedClaim.date, [
+        dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath, [
           Validators.required,
         ]),
+        status: new FormControl(page.selectedClaim, [Validators.required]),
       });
+
+      console.log('DECEASED', page.deceased);
 
       // documents
       page.idClaimer = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
       });
+
       page.idDecesed = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
       });
+
       page.bi1663 = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
       });
+
       page.deathCertificate = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
       });
+
       page.bankDetails = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
       });
 
       //claims form with all information including claimer details
@@ -1649,8 +1778,10 @@ export class claims_registerComponent {
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
         bankDetails2: new FormControl(''),
-        depsId: new FormControl(),
-        beIds: new FormControl(),
+        depsId: new FormControl(page.selectedClaim.depsId),
+        beIds: new FormControl(page.selectedClaim.beIds),
+        _id: new FormControl(page.selectedClaim._id),
+        claimNumber: new FormControl(page.selectedClaim.claimNumber),
       });
 
       page.date = new Date();
@@ -1707,7 +1838,6 @@ export class claims_registerComponent {
 
       page.claimStatuses = [
         { value: 'partially approved', viewValue: 'Partially Approve' },
-        { value: 'approved', viewValue: 'Approve' },
         { value: 'rejected', viewValue: 'Reject' },
       ];
 
@@ -1716,44 +1846,53 @@ export class claims_registerComponent {
         lastName: new FormControl(page.selectedClaim.deceased.lastName),
         idNum: new FormControl(page.selectedClaim.deceased.idNum),
         gender: new FormControl(page.selectedClaim.deceased.gender),
-        dateOfDeath: new FormControl(),
+        dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath),
+        status: new FormControl(page.selectedClaim.status),
       });
+
+      console.log('DECEASED', page.deceased);
+
       // documents
       page.idClaimer = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
       });
+
       page.idDecesed = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
       });
+
       page.bi1662 = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
       });
+
       page.deathCertificate = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
       });
+
       page.bankDetails = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
       });
+
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(page.selectedClaim.firstName),
         lastName: new FormControl(page.selectedClaim.lastName),
-        idNum: new FormControl(page.selectedClaim.idNumber),
+        idNum: new FormControl(page.selectedClaim.idNum),
         gender: new FormControl(page.selectedClaim.gender),
         packageType: new FormControl(page.selectedClaim.packageType),
         payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
@@ -1769,9 +1908,11 @@ export class claims_registerComponent {
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
         bankDetails2: new FormControl(''),
-        status: new FormControl(page.selectedClaim.status),
-        depsId: new FormControl(),
-        beIds: new FormControl(),
+        depsId: new FormControl(page.selectedClaim.depsId),
+        beIds: new FormControl(page.selectedClaim.beIds),
+        claimNumber: new FormControl(page.selectedClaim.claimNumber),
+        status: new FormControl(page.deceased.value.status),
+        _id: new FormControl(page.selectedClaim._id),
       });
 
       page.date = new Date();
@@ -1787,13 +1928,112 @@ export class claims_registerComponent {
     }
   }
 
-  sd_3UFHNmHQ6gr6Z6rE(bh) {
+  sd_sZzw2GvSrAzcQ1Zs(bh) {
     try {
-      console.log(new Date().toLocaleTimeString(), this.page.selectedClaim);
-      //appendnew_next_sd_3UFHNmHQ6gr6Z6rE
+      const view_documentDialog = this.__page_injector__.get(MatDialog);
+      const view_documentDialogRef = view_documentDialog.open(
+        view_documentComponent,
+        {}
+      );
+
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3UFHNmHQ6gr6Z6rE');
+      return this.errorHandler(bh, e, 'sd_sZzw2GvSrAzcQ1Zs');
+    }
+  }
+
+  sd_p3ivOtVgfXm0I0Z5(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_Jp5WhdAT8tH6NXXw(bh);
+      //appendnew_next_sd_p3ivOtVgfXm0I0Z5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_p3ivOtVgfXm0I0Z5');
+    }
+  }
+
+  sd_Jp5WhdAT8tH6NXXw(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'update_claim';
+
+      console.log('URL: ', bh.url);
+      bh = this.sd_9j0Sbn07mNgWcy1F(bh);
+      //appendnew_next_sd_Jp5WhdAT8tH6NXXw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Jp5WhdAT8tH6NXXw');
+    }
+  }
+
+  async sd_9j0Sbn07mNgWcy1F(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.input.claim,
+      };
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_aaERlUkwBglNdw0w(bh);
+      //appendnew_next_sd_9j0Sbn07mNgWcy1F
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9j0Sbn07mNgWcy1F');
+    }
+  }
+
+  sd_aaERlUkwBglNdw0w(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.res.lastErrorObject.updatedExisting,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_e6cgpzrBPGD5XQ4t(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aaERlUkwBglNdw0w');
+    }
+  }
+
+  sd_e6cgpzrBPGD5XQ4t(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('CLAIM UPDATED SUCCESSFULY', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_nZ3fyQZGNTByR3Yl(bh);
+      //appendnew_next_sd_e6cgpzrBPGD5XQ4t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_e6cgpzrBPGD5XQ4t');
+    }
+  }
+
+  async sd_nZ3fyQZGNTByR3Yl(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claims');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_nZ3fyQZGNTByR3Yl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nZ3fyQZGNTByR3Yl');
     }
   }
 

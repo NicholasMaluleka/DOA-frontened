@@ -780,6 +780,35 @@ body{
     @extend %shared-stylish-hover
 }
 
+.viewclaim-btn{
+    height: 43px;
+    width: 170px;
+    background-color: $light-blue;
+    border-radius: 10px;
+}
+
+.view-btn{
+    height: 45px;
+    width: 160px;
+    background-color:$yellow;
+    border-radius: 10px;
+    color: $light-blue;
+    border: 2px solid $light-blue;
+}
+
+a {
+    text-decoration: none;
+    color: $light-blue;
+}
+
+.view-btn:hover{
+    cursor: pointer;
+    height: 45px;
+    width: 170px;
+    top: 0 !important;
+    left: 0 !important;
+}
+
 .stylish-btn:active{
     @extend %shared-stylish-hover
 }
