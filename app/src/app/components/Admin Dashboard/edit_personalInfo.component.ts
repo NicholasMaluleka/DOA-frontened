@@ -258,6 +258,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.userData?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -300,6 +301,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -322,6 +324,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben2.cellphone, [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),

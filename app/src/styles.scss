@@ -553,6 +553,10 @@ width: 150px;
  overflow-y: hidden;
 }
 
+.mat-expansion-panel-header {
+    height: 30px !important;
+}
+
 //Phindile styles end
 body{
     font-family: "Open Sans", sans-serif;
