@@ -1,0 +1,14 @@
+<div fxLayout="column wrap" fxLayoutGap="14px" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="row wrap" style="margin-bottom: 14px;" fxLayoutAlign="start stretch" [fxShow]="true">
+    <h3 style="margin-bottom: 0px; ">
+      Password required for verification</h3>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form [formGroup]="page.passwordForm">
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput type="text" placeholder="****" [required]="false" oninput=" this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" formControlName="password" maxlength="4">
+        <mat-error align="start" *ngIf="page.passwordForm.controls.password?.errors?.required">Password is required</mat-error><mat-error align="start" *ngIf="page.passwordForm.controls.password?.errors?.maxlenght">Password must have a maximum number of 4 numbers</mat-error><mat-error align="start" *ngIf="page.passwordForm.controls.password?.errors?.minLenght">Password must have a minimum of 4 numbers</mat-error> <mat-label>Password</mat-label>
+      </mat-form-field>
+    </form><button mat-raised-button style="margin-bottom:15px;margin-top: 20px; " class="box-shadow yellow-bg" (click)="login(page.passwordForm)">Confirm Password</button>
+  </div>
+</div>

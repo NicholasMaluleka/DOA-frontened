@@ -31,584 +31,6 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_tsaZEG85KHCWHmbM",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "upload1",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "event",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "upload1",
-        "category": "General",
-        "x": 285,
-        "y": 280,
-        "wires": [
-            [
-                "sd_QLcNVEufXDm9yCzk"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_QLcNVEufXDm9yCzk",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.upload1 = document.getElementById('upload1') as HTMLInputElement;\n  if (bh.upload1) {\n   bh.upload.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile = new FormData()\n       page.uploadedFile.append('file', bh.file)\n       this.goToBackend1()\n    }\n  })\n  }\n",
-        "functionName": "sd_QLcNVEufXDm9yCzk",
-        "category": "Function",
-        "x": 380,
-        "y": 280,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_LjjP5ZHsyUqvEgKy",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "upload2",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "event",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "upload2",
-        "category": "General",
-        "x": 265,
-        "y": 520,
-        "wires": [
-            [
-                "sd_WZ8an64kmH8B5AaN"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_WZ8an64kmH8B5AaN",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.upload2 = document.getElementById('upload2') as HTMLInputElement;\n  if (bh.upload2) {\n   bh.upload.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile = new FormData()\n       page.uploadedFile.append('file', bh.file)\n        this.goToBackend2()\n    }\n  })\n  }",
-        "functionName": "sd_WZ8an64kmH8B5AaN",
-        "category": "Function",
-        "x": 425,
-        "y": 520,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_PTQevViJvxBFEZ5d",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "upload3",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "event",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "upload3",
-        "category": "General",
-        "x": 265,
-        "y": 700,
-        "wires": [
-            [
-                "sd_yVtEMq57dPK4i8ud"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_yVtEMq57dPK4i8ud",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.upload3 = document.getElementById('upload3') as HTMLInputElement;\n  if (bh.upload3) {\n   bh.upload.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile = new FormData()\n       page.uploadedFile.append('file', bh.file)\n        this.goToBackend3()\n    }\n  })\n  }",
-        "functionName": "sd_yVtEMq57dPK4i8ud",
-        "category": "Function",
-        "x": 345,
-        "y": 700,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_8oc0KCLAijvS6r6c",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "upload4",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "event",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "upload4",
-        "category": "General",
-        "x": 225,
-        "y": 940,
-        "wires": [
-            [
-                "sd_fpp1hQhsd3hhemZc"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_fpp1hQhsd3hhemZc",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.upload4 = document.getElementById('upload4') as HTMLInputElement;\n  if (bh.upload4) {\n   bh.upload.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile = new FormData()\n       page.uploadedFile.append('file', bh.file)\n        this.goToBackend4()\n    }\n  })\n  }",
-        "functionName": "sd_fpp1hQhsd3hhemZc",
-        "category": "Function",
-        "x": 345,
-        "y": 940,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_aHsFT3oNRF3wfbSJ",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "upload5",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "event",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "upload5",
-        "category": "General",
-        "x": 245,
-        "y": 1160,
-        "wires": [
-            [
-                "sd_uHZiBJcz5vdJ0oUF"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_uHZiBJcz5vdJ0oUF",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.upload5 = document.getElementById('upload5') as HTMLInputElement;\n  if (bh.upload5) {\n   bh.upload.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile = new FormData()\n       page.uploadedFile.append('file', bh.file)\n        this.goToBackend5()\n    }\n  })\n  }",
-        "functionName": "sd_uHZiBJcz5vdJ0oUF",
-        "category": "Function",
-        "x": 345,
-        "y": 1160,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_f8oeVtOuBZNKRkqx",
-        "type": "Environment",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "envMaps": [
-            {
-                "flowVar": {
-                    "type": "this.page",
-                    "value": "ssdUrl"
-                },
-                "envProperty": "ssdURL"
-            }
-        ],
-        "functionName": "sd_f8oeVtOuBZNKRkqx",
-        "category": "General",
-        "x": 345,
-        "y": 200,
-        "wires": [
-            [
-                "sd_yWU7xpXirWVpkKq3"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_yWU7xpXirWVpkKq3",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.url = page.ssdUrl + 'upload'\n\n",
-        "functionName": "sd_yWU7xpXirWVpkKq3",
-        "category": "Function",
-        "x": 445,
-        "y": 200,
-        "wires": [
-            [
-                "sd_oVZ7tX3dTddZKKri"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_oVZ7tX3dTddZKKri",
-        "type": "HttpRequest",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "method": "post",
-        "methodMapping": "",
-        "methodMappingObj": {},
-        "urlMapping": "bh.url",
-        "urlMappingObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "url"
-        },
-        "ret": "json",
-        "retMapping": "",
-        "retMappingObj": {},
-        "observe": "",
-        "observeMapping": "",
-        "observeMappingObj": {},
-        "reportProgress": false,
-        "withCreds": false,
-        "reqBody": "this.page.uploadedFile",
-        "reqBodyObj": {
-            "mapVarType": "this.page",
-            "mapVarValue": "uploadedFile"
-        },
-        "resultMapping": "bh.result",
-        "resultMappingObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMapping": "",
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMapping": "",
-        "paramMappingObj": {},
-        "functionName": "sd_oVZ7tX3dTddZKKri",
-        "category": "HTTP",
-        "x": 545,
-        "y": 200,
-        "wires": [
-            [
-                "sd_PpZPbeWFr2FVYypN"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_K4qFnKvfsDEDVqLG",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "goToBackend1",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "goToBackend1",
-        "category": "General",
-        "x": 245,
-        "y": 200,
-        "wires": [
-            [
-                "sd_f8oeVtOuBZNKRkqx"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_PpZPbeWFr2FVYypN",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()",
-        "functionName": "sd_PpZPbeWFr2FVYypN",
-        "category": "Function",
-        "x": 645,
-        "y": 200,
-        "wires": [
-            [
-                "sd_wrqepYnBF7p3QZbY"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_wrqepYnBF7p3QZbY",
-        "type": "SnackBar",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "message": {
-            "type": "str",
-            "value": "claimer id Upload Successful"
-        },
-        "action": {
-            "type": "str",
-            "value": "Ok"
-        },
-        "duration": {
-            "type": "num",
-            "value": "3000"
-        },
-        "horizontalPosition": "center",
-        "verticalPosition": "bottom",
-        "panelClass": {
-            "type": "str",
-            "value": ""
-        },
-        "direction": "ltr",
-        "functionName": "sd_wrqepYnBF7p3QZbY",
-        "category": "General",
-        "x": 745,
-        "y": 200,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_l93cX96HBR9CW1SP",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "getFromBackend1",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "getFromBackend1",
-        "category": "General",
-        "x": 465,
-        "y": 280,
-        "wires": [
-            [
-                "sd_VVLJsIZ571Px3sUH"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_VVLJsIZ571Px3sUH",
-        "type": "Storage",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "getItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "idClaimer"
-        },
-        "value": {},
-        "resultMapping": {
-            "type": "this.page",
-            "value": "idclaimerFile"
-        },
-        "functionName": "sd_VVLJsIZ571Px3sUH",
-        "category": "Storage",
-        "x": 605,
-        "y": 280,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_06WYv6qvZkpO8AyS",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"helllow\",page.policyClaimsForm)",
-        "functionName": "sd_06WYv6qvZkpO8AyS",
-        "category": "Function",
-        "x": 845,
-        "y": 1260,
-        "wires": [
-            [
-                "sd_YC50j0rU933miL4a"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_ovXzkOsbueGFsAMq",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "populate",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "populate",
-        "category": "General",
-        "x": 725,
-        "y": 1280,
-        "wires": [
-            [
-                "sd_06WYv6qvZkpO8AyS"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_YC50j0rU933miL4a",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "page.name = page.policyClaimsForm.value.depsId.firstName\npage.surname = page.policyClaimsForm.value.depsId.lastName\npage.idnum = page.policyClaimsForm.value.depsId.idNumber\npage.gender = page.policyClaimsForm.value.depsId.gender\n\nconsole.log(\"value\",page.name)",
-        "functionName": "sd_YC50j0rU933miL4a",
-        "category": "Function",
-        "x": 945,
-        "y": 1280,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
         "id": "sd_37zMadhqe6cOjrj2",
         "type": "PageVariables",
         "z": "sd_w93AbqYMQ4LWwqYF",
@@ -690,7 +112,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "forms",
-        "script": "// decesed details\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.name),\n      lastName: new FormControl( ''),\n      idNum :new FormControl( ''),\n       gender: new FormControl(''),\n       dateOfDeath:new FormControl( '',[Validators.required]),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1663 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.user.firstName),\n    lastName:new FormControl(page.user.lastName),\n    idNum:new FormControl( page.user.idNumber),\n    gender:new FormControl( page.user.gender),\n    packageType : new FormControl( page.user.packageType),\n    payoutAmount :new FormControl( ''),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1663:page.bi1663,\n     bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl ()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.name),\n      lastName: new FormControl( ''),\n      idNum :new FormControl( ''),\n       gender: new FormControl(''),\n       \n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1663 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.user.firstName),\n    lastName:new FormControl(page.user.lastName),\n    idNum:new FormControl( page.user.idNumber),\n    gender:new FormControl( page.user.gender),\n    packageType : new FormControl( page.user.packageType),\n    payoutAmount :new FormControl( ''),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1663:page.bi1663,\n     bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl ()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "forms",
         "category": "Function",
         "x": 865,
@@ -973,41 +395,17 @@
         "generated": true
     },
     {
-        "id": "sd_wMkFBIk2OjUNSacB",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "submit",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "submit",
-        "category": "General",
-        "x": 305,
-        "y": 1300,
-        "wires": [
-            [
-                "sd_r0hNEVnYUHmLNOnp"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_r0hNEVnYUHmLNOnp",
+        "id": "sd_nsLME7WgAVVodWLW",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.policyClaimsForm )",
-        "functionName": "sd_r0hNEVnYUHmLNOnp",
+        "script": "// page.name1 = page.policyClaimsForm.value.beIds.firstName\n// page.surname1 = page.policyClaimsForm.value.beIds.lastName\n// page.idnum1 = page.policyClaimsForm.value.beIds.idNumber\n// page.gender1 = page.policyClaimsForm.value.beIds.gender\n\npage.policyClaimsForm.patchValue({\n    firstName :page.policyClaimsForm.value.beIds.firstName,\n    lastName: page.policyClaimsForm.value.beIds.lastName,\n    idNum:page.policyClaimsForm.value.beIds.idNumber,\n    gender:page.policyClaimsForm.value.beIds.gender\n    })",
+        "functionName": "sd_nsLME7WgAVVodWLW",
         "category": "Function",
-        "x": 405,
-        "y": 1300,
+        "x": 1445,
+        "y": 260,
         "wires": [
             []
         ],
@@ -1017,26 +415,84 @@
         "generated": true
     },
     {
-        "id": "sd_OhBVJRlnDN2TWO92",
-        "type": "Script",
+        "id": "sd_NmV9iXXzB0gokAZe",
+        "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "id claimer file added on form",
-        "script": "page.idClaimer.value.file._id = page.idclaimerFile._id\npage.idClaimer.value.file.filename = page.idclaimerFile.filename\npage.idClaimer.value.file.length = page.idclaimerFile.length\npage.idClaimer.value.file.chunkSize = page.idclaimerFile.chunkSize",
-        "functionName": "idClaimerFileAddedOnForm",
-        "category": "Function",
-        "x": 765,
-        "y": 300,
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "populate2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "populate2",
+        "category": "General",
+        "x": 1325,
+        "y": 260,
         "wires": [
-            []
+            [
+                "sd_nsLME7WgAVVodWLW"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_Tqk3Dzb8GXk0vtWT",
+        "id": "sd_eaMbugEjSr6BdxcD",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "upload1",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "upload1",
+        "category": "General",
+        "x": 85,
+        "y": 360,
+        "wires": [
+            [
+                "sd_PxnKHFtUiUE6Ezgr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_PxnKHFtUiUE6Ezgr",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.upload1 = document.getElementById('upload1') as HTMLInputElement;\n  if (bh.upload1) {\n   bh.upload1.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile1 = new FormData()\n       page.uploadedFile1.append('file', bh.file)\n       this.goToBackend1()\n    }\n    \n  })\n  }\n",
+        "functionName": "sd_PxnKHFtUiUE6Ezgr",
+        "category": "Function",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5khnoqzpKbg2Y0rb",
         "type": "Environment",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1052,13 +508,13 @@
                 "envProperty": "ssdURL"
             }
         ],
-        "functionName": "sd_Tqk3Dzb8GXk0vtWT",
+        "functionName": "sd_5khnoqzpKbg2Y0rb",
         "category": "General",
-        "x": 365,
-        "y": 420,
+        "x": 145,
+        "y": 280,
         "wires": [
             [
-                "sd_3qgYgK3Vl1q6kEU2"
+                "sd_p4B7idTFiqPSmL4H"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1067,20 +523,20 @@
         "generated": true
     },
     {
-        "id": "sd_3qgYgK3Vl1q6kEU2",
+        "id": "sd_p4B7idTFiqPSmL4H",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "bh.url = page.ssdUrl + 'upload'\n\n",
-        "functionName": "sd_3qgYgK3Vl1q6kEU2",
+        "functionName": "sd_p4B7idTFiqPSmL4H",
         "category": "Function",
-        "x": 465,
-        "y": 420,
+        "x": 245,
+        "y": 280,
         "wires": [
             [
-                "sd_iGhT9Gvd4kWwRArI"
+                "sd_qE3ziIXUvXb5u3JI"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1089,7 +545,7 @@
         "generated": true
     },
     {
-        "id": "sd_iGhT9Gvd4kWwRArI",
+        "id": "sd_qE3ziIXUvXb5u3JI",
         "type": "HttpRequest",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1111,10 +567,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "this.page.uploadedFile",
+        "reqBody": "this.page.uploadedFile1",
         "reqBodyObj": {
             "mapVarType": "this.page",
-            "mapVarValue": "uploadedFile"
+            "mapVarValue": "uploadedFile1"
         },
         "resultMapping": "bh.result",
         "resultMappingObj": {
@@ -1129,13 +585,13 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_iGhT9Gvd4kWwRArI",
+        "functionName": "sd_qE3ziIXUvXb5u3JI",
         "category": "HTTP",
-        "x": 565,
-        "y": 420,
+        "x": 345,
+        "y": 280,
         "wires": [
             [
-                "sd_8IuEk1GWzdNIbGmu"
+                "sd_Kqc6WzWwm9zzqnSk"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1144,7 +600,362 @@
         "generated": true
     },
     {
-        "id": "sd_K1yY8BQ3wKpL38V8",
+        "id": "sd_XXsnkh2tsBkA97A5",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "goToBackend1",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToBackend1",
+        "category": "General",
+        "x": 45,
+        "y": 280,
+        "wires": [
+            [
+                "sd_5khnoqzpKbg2Y0rb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_Kqc6WzWwm9zzqnSk",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()\nconsole.log(\"data to use\",page.idclaimerFile)\n\n",
+        "functionName": "sd_Kqc6WzWwm9zzqnSk",
+        "category": "Function",
+        "x": 445,
+        "y": 280,
+        "wires": [
+            [
+                "sd_YWEx409WHZc5ptpT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YWEx409WHZc5ptpT",
+        "type": "SnackBar",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "claimer id Upload Successful"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_YWEx409WHZc5ptpT",
+        "category": "General",
+        "x": 545,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Lzibvu44Pm3wNe3u",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getFromBackend1",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getFromBackend1",
+        "category": "General",
+        "x": 265,
+        "y": 360,
+        "wires": [
+            [
+                "sd_3oPD9URBTiO6W2ii"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_3oPD9URBTiO6W2ii",
+        "type": "Storage",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "idClaimer"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "idclaimerFile"
+        },
+        "functionName": "sd_3oPD9URBTiO6W2ii",
+        "category": "Storage",
+        "x": 405,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_WCxdLs5ArZ5kjXEK",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "upload2",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "upload2",
+        "category": "General",
+        "x": 85,
+        "y": 580,
+        "wires": [
+            [
+                "sd_FI84TGbT75vwA7et"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_FI84TGbT75vwA7et",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.upload2 = document.getElementById('upload2') as HTMLInputElement;\n  if (bh.upload2) {\n   bh.upload2.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile2 = new FormData()\n       page.uploadedFile2.append('file', bh.file)\n        this.goToBackend2()\n    }\n  })\n  }",
+        "functionName": "sd_FI84TGbT75vwA7et",
+        "category": "Function",
+        "x": 245,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8VDT9gx1zEcf0fce",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "upload3",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "upload3",
+        "category": "General",
+        "x": 85,
+        "y": 760,
+        "wires": [
+            [
+                "sd_6v56ozONeXLjjrlv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_6v56ozONeXLjjrlv",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.upload3 = document.getElementById('upload3') as HTMLInputElement;\n  if (bh.upload3) {\n   bh.upload3.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile3= new FormData()\n       page.uploadedFile3.append('file', bh.file)\n        this.goToBackend3()\n    }\n  })\n}\n",
+        "functionName": "sd_6v56ozONeXLjjrlv",
+        "category": "Function",
+        "x": 165,
+        "y": 760,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rIocvYAynFrNBRhC",
+        "type": "Environment",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_rIocvYAynFrNBRhC",
+        "category": "General",
+        "x": 185,
+        "y": 480,
+        "wires": [
+            [
+                "sd_f55zoNvUGGWrTWC5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_f55zoNvUGGWrTWC5",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + 'upload'\n\n",
+        "functionName": "sd_f55zoNvUGGWrTWC5",
+        "category": "Function",
+        "x": 285,
+        "y": 480,
+        "wires": [
+            [
+                "sd_kqDJ2BiotifqExKK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kqDJ2BiotifqExKK",
+        "type": "HttpRequest",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.uploadedFile2",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "uploadedFile2"
+        },
+        "resultMapping": "bh.result",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_kqDJ2BiotifqExKK",
+        "category": "HTTP",
+        "x": 385,
+        "y": 480,
+        "wires": [
+            [
+                "sd_RgxzFFTTyWkfgomq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lWF4l4xUDmnMvpx3",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -1156,11 +967,11 @@
         "flow_type": "sync",
         "functionName": "goToBackend2",
         "category": "General",
-        "x": 265,
-        "y": 420,
+        "x": 85,
+        "y": 480,
         "wires": [
             [
-                "sd_Tqk3Dzb8GXk0vtWT"
+                "sd_rIocvYAynFrNBRhC"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1168,20 +979,20 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_8IuEk1GWzdNIbGmu",
+        "id": "sd_RgxzFFTTyWkfgomq",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "sessionStorage.setItem(\"idDeceased\",JSON.stringify(bh.result))\nthis.getFromBackend2()",
-        "functionName": "sd_8IuEk1GWzdNIbGmu",
+        "functionName": "sd_RgxzFFTTyWkfgomq",
         "category": "Function",
-        "x": 665,
-        "y": 420,
+        "x": 485,
+        "y": 480,
         "wires": [
             [
-                "sd_RzKzqQE9uM1rIutw"
+                "sd_ip9jfBvGXmplXnvG"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1190,7 +1001,7 @@
         "generated": true
     },
     {
-        "id": "sd_RzKzqQE9uM1rIutw",
+        "id": "sd_ip9jfBvGXmplXnvG",
         "type": "SnackBar",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1209,16 +1020,18 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
         },
         "direction": "ltr",
-        "functionName": "sd_RzKzqQE9uM1rIutw",
+        "functionName": "sd_ip9jfBvGXmplXnvG",
         "category": "General",
-        "x": 765,
-        "y": 420,
+        "x": 585,
+        "y": 480,
         "wires": [
             []
         ],
@@ -1228,7 +1041,7 @@
         "generated": true
     },
     {
-        "id": "sd_ZcNzfwk6naOYxFo7",
+        "id": "sd_FQIgjNR2FdwVDvRk",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -1240,11 +1053,11 @@
         "flow_type": "sync",
         "functionName": "getFromBackend2",
         "category": "General",
-        "x": 525,
-        "y": 520,
+        "x": 345,
+        "y": 580,
         "wires": [
             [
-                "sd_Zr7ApbrY8BVw3K4z"
+                "sd_vaSZMZ6cbFM75eCs"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1252,7 +1065,7 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_Zr7ApbrY8BVw3K4z",
+        "id": "sd_vaSZMZ6cbFM75eCs",
         "type": "Storage",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1270,10 +1083,10 @@
             "type": "this.page",
             "value": "idDeceasedFile"
         },
-        "functionName": "sd_Zr7ApbrY8BVw3K4z",
+        "functionName": "sd_vaSZMZ6cbFM75eCs",
         "category": "Storage",
-        "x": 665,
-        "y": 520,
+        "x": 485,
+        "y": 580,
         "wires": [
             []
         ],
@@ -1283,26 +1096,7 @@
         "generated": true
     },
     {
-        "id": "sd_uQ7B6AAn7ryMhbGK",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "Deceased id file in form",
-        "script": "page.idDeceased.value.file._id = page.idclaimerFile._id\npage.idDeceased.value.file.filename = page.idDeceasedFile.filename\npage.idDeceased.value.file.length = page.idDeceasedFile.length\npage.idDeceased.value.file.chunkSize = page.idDeceasedFile.chunkSize",
-        "functionName": "deceasedIdFileInForm",
-        "category": "Function",
-        "x": 825,
-        "y": 520,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_jffnr601fhHLO0XP",
+        "id": "sd_prE5JKEBKZxPl1Hm",
         "type": "Environment",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1318,13 +1112,13 @@
                 "envProperty": "ssdURL"
             }
         ],
-        "functionName": "sd_jffnr601fhHLO0XP",
+        "functionName": "sd_prE5JKEBKZxPl1Hm",
         "category": "General",
-        "x": 365,
-        "y": 620,
+        "x": 185,
+        "y": 680,
         "wires": [
             [
-                "sd_GLrgtD3yeIvXLGwW"
+                "sd_thDxeQbDwCfzEA7N"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1333,20 +1127,20 @@
         "generated": true
     },
     {
-        "id": "sd_GLrgtD3yeIvXLGwW",
+        "id": "sd_thDxeQbDwCfzEA7N",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "bh.url = page.ssdUrl + 'upload'\n\n",
-        "functionName": "sd_GLrgtD3yeIvXLGwW",
+        "functionName": "sd_thDxeQbDwCfzEA7N",
         "category": "Function",
-        "x": 465,
-        "y": 620,
+        "x": 285,
+        "y": 680,
         "wires": [
             [
-                "sd_FlDtETcu2ZQPzsxt"
+                "sd_20Gl4jiFtBLsuQOG"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1355,7 +1149,7 @@
         "generated": true
     },
     {
-        "id": "sd_FlDtETcu2ZQPzsxt",
+        "id": "sd_20Gl4jiFtBLsuQOG",
         "type": "HttpRequest",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1377,10 +1171,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "this.page.uploadedFile",
+        "reqBody": "this.page.uploadedFile3",
         "reqBodyObj": {
             "mapVarType": "this.page",
-            "mapVarValue": "uploadedFile"
+            "mapVarValue": "uploadedFile3"
         },
         "resultMapping": "bh.result",
         "resultMappingObj": {
@@ -1395,13 +1189,13 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_FlDtETcu2ZQPzsxt",
+        "functionName": "sd_20Gl4jiFtBLsuQOG",
         "category": "HTTP",
-        "x": 565,
-        "y": 620,
+        "x": 385,
+        "y": 680,
         "wires": [
             [
-                "sd_7OcEDNg4nVFoFeIL"
+                "sd_qaZdy6OTBx6ajuJL"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1410,7 +1204,7 @@
         "generated": true
     },
     {
-        "id": "sd_RJSFcX8NqqDom8gU",
+        "id": "sd_F6whCttWtBkIwTHk",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -1422,11 +1216,11 @@
         "flow_type": "sync",
         "functionName": "goToBackend3",
         "category": "General",
-        "x": 265,
-        "y": 620,
+        "x": 85,
+        "y": 680,
         "wires": [
             [
-                "sd_jffnr601fhHLO0XP"
+                "sd_prE5JKEBKZxPl1Hm"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1434,20 +1228,20 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_7OcEDNg4nVFoFeIL",
+        "id": "sd_qaZdy6OTBx6ajuJL",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"deathCetificatify\",JSON.stringify(bh.result))\nthis.getFromBackend3()",
-        "functionName": "sd_7OcEDNg4nVFoFeIL",
+        "script": "sessionStorage.setItem(\"deathCetificatify\",JSON.stringify(bh.result))\nthis.getFromBackend3()\nconsole.log(\"bh\",bh.results)",
+        "functionName": "sd_qaZdy6OTBx6ajuJL",
         "category": "Function",
-        "x": 665,
-        "y": 620,
+        "x": 485,
+        "y": 680,
         "wires": [
             [
-                "sd_BzWZskEmqd87Usvw"
+                "sd_V1ht4BqD8D7UWsta"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1456,7 +1250,7 @@
         "generated": true
     },
     {
-        "id": "sd_BzWZskEmqd87Usvw",
+        "id": "sd_V1ht4BqD8D7UWsta",
         "type": "SnackBar",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1475,16 +1269,18 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
         },
         "direction": "ltr",
-        "functionName": "sd_BzWZskEmqd87Usvw",
+        "functionName": "sd_V1ht4BqD8D7UWsta",
         "category": "General",
-        "x": 765,
-        "y": 620,
+        "x": 585,
+        "y": 680,
         "wires": [
             []
         ],
@@ -1494,7 +1290,7 @@
         "generated": true
     },
     {
-        "id": "sd_Yt2V8geXkD4yLN2r",
+        "id": "sd_WKlCweVLuaAFSxJc",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -1506,11 +1302,11 @@
         "flow_type": "sync",
         "functionName": "getFromBackend3",
         "category": "General",
-        "x": 445,
-        "y": 700,
+        "x": 265,
+        "y": 760,
         "wires": [
             [
-                "sd_tYyqa5w3E6nFbTzM"
+                "sd_cTQM1ews8f491wu1"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1518,7 +1314,7 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_tYyqa5w3E6nFbTzM",
+        "id": "sd_cTQM1ews8f491wu1",
         "type": "Storage",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1536,10 +1332,10 @@
             "type": "this.page",
             "value": "deathCetificatifyFile"
         },
-        "functionName": "sd_tYyqa5w3E6nFbTzM",
+        "functionName": "sd_cTQM1ews8f491wu1",
         "category": "Storage",
-        "x": 525,
-        "y": 700,
+        "x": 345,
+        "y": 760,
         "wires": [
             []
         ],
@@ -1549,26 +1345,113 @@
         "generated": true
     },
     {
-        "id": "sd_l0PwLZ4bFeL9BQf5",
-        "type": "Script",
+        "id": "sd_houwI8ihnjMC8RV8",
+        "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "Death Cetificatify file in form",
-        "script": "page.deathCetificatify.value.file._id = page.deathCetificatifyFile._id\npage.deathCetificatify.value.file.filename = page.deathCetificatifyFile.filename\npage.deathCetificatify.value.file.length = page.deathCetificatifyFile.length\npage.deathCetificatify.value.file.chunkSize = page.deathCetificatifyFile.chunkSize",
-        "functionName": "deathCetificatifyFileInForm",
-        "category": "Function",
-        "x": 820,
-        "y": 720,
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "upload4",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "upload4",
+        "category": "General",
+        "x": 805,
+        "y": 460,
         "wires": [
-            []
+            [
+                "sd_YFzc5D0e3ZnKmkIy"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_zhKlkYUSe5CBZxj5",
+        "id": "sd_YFzc5D0e3ZnKmkIy",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.upload4 = document.getElementById('upload4') as HTMLInputElement;\n  if (bh.upload4) {\n   bh.upload4.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile4 = new FormData()\n       page.uploadedFile4.append('file', bh.file)\n        this.goToBackend4()\n    }\n  })\n  }",
+        "functionName": "sd_YFzc5D0e3ZnKmkIy",
+        "category": "Function",
+        "x": 925,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mz2TWXQYdMMPObGq",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "upload5",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "upload5",
+        "category": "General",
+        "x": 825,
+        "y": 680,
+        "wires": [
+            [
+                "sd_hAV6j2lg8RUkJagP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_hAV6j2lg8RUkJagP",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.upload5 = document.getElementById('upload5') as HTMLInputElement;\n  if (bh.upload5) {\n   bh.upload5.addEventListener('change', (event: Event) => {\n    const input = event.target as HTMLInputElement;\n    if (input.files && input.files.length > 0) {\n       bh.file =  input.files[0]\n       page.uploadedFile5 = new FormData()\n       page.uploadedFile5.append('file', bh.file)\n        this.goToBackend5()\n    }\n  })\n  }",
+        "functionName": "sd_hAV6j2lg8RUkJagP",
+        "category": "Function",
+        "x": 925,
+        "y": 680,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DqtdBUuDMXCrxZe0",
         "type": "Environment",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1584,13 +1467,13 @@
                 "envProperty": "ssdURL"
             }
         ],
-        "functionName": "sd_zhKlkYUSe5CBZxj5",
+        "functionName": "sd_DqtdBUuDMXCrxZe0",
         "category": "General",
-        "x": 325,
-        "y": 820,
+        "x": 905,
+        "y": 340,
         "wires": [
             [
-                "sd_LiY1hThPamh9WiR1"
+                "sd_igQ9AGmdPHqsp3mS"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1599,20 +1482,20 @@
         "generated": true
     },
     {
-        "id": "sd_LiY1hThPamh9WiR1",
+        "id": "sd_igQ9AGmdPHqsp3mS",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "bh.url = page.ssdUrl + 'upload'\n\n",
-        "functionName": "sd_LiY1hThPamh9WiR1",
+        "functionName": "sd_igQ9AGmdPHqsp3mS",
         "category": "Function",
-        "x": 425,
-        "y": 820,
+        "x": 1005,
+        "y": 340,
         "wires": [
             [
-                "sd_95lPDlxlAcLOMpzB"
+                "sd_ro9SM1ckM63pVVbE"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1621,7 +1504,7 @@
         "generated": true
     },
     {
-        "id": "sd_95lPDlxlAcLOMpzB",
+        "id": "sd_ro9SM1ckM63pVVbE",
         "type": "HttpRequest",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -1643,10 +1526,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "this.page.uploadedFile",
+        "reqBody": "this.page.uploadedFile4",
         "reqBodyObj": {
             "mapVarType": "this.page",
-            "mapVarValue": "uploadedFile"
+            "mapVarValue": "uploadedFile4"
         },
         "resultMapping": "bh.result",
         "resultMappingObj": {
@@ -1661,13 +1544,13 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_95lPDlxlAcLOMpzB",
+        "functionName": "sd_ro9SM1ckM63pVVbE",
         "category": "HTTP",
-        "x": 525,
-        "y": 820,
+        "x": 1105,
+        "y": 340,
         "wires": [
             [
-                "sd_5PNk7v84esOuVLao"
+                "sd_4iLB4CCHB6QntvKg"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1676,7 +1559,7 @@
         "generated": true
     },
     {
-        "id": "sd_wSC63hskqYtAcCtA",
+        "id": "sd_zcKpA2BoEMprjNIU",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -1688,11 +1571,11 @@
         "flow_type": "sync",
         "functionName": "goToBackend4",
         "category": "General",
-        "x": 225,
-        "y": 820,
+        "x": 805,
+        "y": 340,
         "wires": [
             [
-                "sd_zhKlkYUSe5CBZxj5"
+                "sd_DqtdBUuDMXCrxZe0"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1700,20 +1583,20 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_5PNk7v84esOuVLao",
+        "id": "sd_4iLB4CCHB6QntvKg",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "sessionStorage.setItem(\"bi1663\",JSON.stringify(bh.result))\nthis.getFromBackend4()",
-        "functionName": "sd_5PNk7v84esOuVLao",
+        "functionName": "sd_4iLB4CCHB6QntvKg",
         "category": "Function",
-        "x": 625,
-        "y": 820,
+        "x": 1205,
+        "y": 340,
         "wires": [
             [
-                "sd_swXrcG28dC5Nd7BU"
+                "sd_HUAgQoECNnJ5TwfY"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -1722,273 +1605,7 @@
         "generated": true
     },
     {
-        "id": "sd_swXrcG28dC5Nd7BU",
-        "type": "SnackBar",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "message": {
-            "type": "str",
-            "value": "bi1663 Upload Successful"
-        },
-        "action": {
-            "type": "str",
-            "value": "Ok"
-        },
-        "duration": {
-            "type": "num",
-            "value": "3000"
-        },
-        "horizontalPosition": "center",
-        "verticalPosition": "bottom",
-        "panelClass": {
-            "type": "str",
-            "value": ""
-        },
-        "direction": "ltr",
-        "functionName": "sd_swXrcG28dC5Nd7BU",
-        "category": "General",
-        "x": 725,
-        "y": 820,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_00HKennhYNyoALGA",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "getFromBackend4",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "getFromBackend4",
-        "category": "General",
-        "x": 465,
-        "y": 940,
-        "wires": [
-            [
-                "sd_DGCheBYkhJP8zW8Q"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_DGCheBYkhJP8zW8Q",
-        "type": "Storage",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "getItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "bi1663"
-        },
-        "value": {},
-        "resultMapping": {
-            "type": "this.page",
-            "value": "bi1663File"
-        },
-        "functionName": "sd_DGCheBYkhJP8zW8Q",
-        "category": "Storage",
-        "x": 545,
-        "y": 940,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_2yy9usujXE5O7qwz",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "bi1663 file in form",
-        "script": "page.bi1663.value.file._id = page.bi1663File._id\npage.bi1663.value.file.filename = page.bi1663File.filename\npage.bi1663.value.file.length = page.bi1663File.length\npage.bi1663.value.file.chunkSize = page.bi1663File.chunkSize",
-        "functionName": "bi1663FileInForm",
-        "category": "Function",
-        "x": 720,
-        "y": 940,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_qfp37w3njmYTT5Af",
-        "type": "Environment",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "envMaps": [
-            {
-                "flowVar": {
-                    "type": "this.page",
-                    "value": "ssdUrl"
-                },
-                "envProperty": "ssdURL"
-            }
-        ],
-        "functionName": "sd_qfp37w3njmYTT5Af",
-        "category": "General",
-        "x": 345,
-        "y": 1040,
-        "wires": [
-            [
-                "sd_0OAlFItkLPiY1Swy"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_0OAlFItkLPiY1Swy",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.url = page.ssdUrl + 'upload'\n\n",
-        "functionName": "sd_0OAlFItkLPiY1Swy",
-        "category": "Function",
-        "x": 445,
-        "y": 1040,
-        "wires": [
-            [
-                "sd_C7aNRl1zTiQotpoI"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_C7aNRl1zTiQotpoI",
-        "type": "HttpRequest",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "method": "post",
-        "methodMapping": "",
-        "methodMappingObj": {},
-        "urlMapping": "bh.url",
-        "urlMappingObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "url"
-        },
-        "ret": "json",
-        "retMapping": "",
-        "retMappingObj": {},
-        "observe": "",
-        "observeMapping": "",
-        "observeMappingObj": {},
-        "reportProgress": false,
-        "withCreds": false,
-        "reqBody": "this.page.uploadedFile",
-        "reqBodyObj": {
-            "mapVarType": "this.page",
-            "mapVarValue": "uploadedFile"
-        },
-        "resultMapping": "bh.result",
-        "resultMappingObj": {
-            "mapVarType": "bh",
-            "mapVarValue": "result"
-        },
-        "headers": {},
-        "headersObj": [],
-        "headerMapping": "",
-        "headerMappingObj": {},
-        "params": {},
-        "paramsObj": [],
-        "paramMapping": "",
-        "paramMappingObj": {},
-        "functionName": "sd_C7aNRl1zTiQotpoI",
-        "category": "HTTP",
-        "x": 545,
-        "y": 1040,
-        "wires": [
-            [
-                "sd_ASlXUnbVzsb7BCdM"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_mEufV89LRcfYkTXY",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "goToBackend5",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "goToBackend5",
-        "category": "General",
-        "x": 245,
-        "y": 1040,
-        "wires": [
-            [
-                "sd_qfp37w3njmYTT5Af"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_ASlXUnbVzsb7BCdM",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "sessionStorage.setItem(\"bankDetails\",JSON.stringify(bh.result))\nthis.getFromBackend5()",
-        "functionName": "sd_ASlXUnbVzsb7BCdM",
-        "category": "Function",
-        "x": 645,
-        "y": 1040,
-        "wires": [
-            [
-                "sd_SjfZLro6q7uB6B9X"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_SjfZLro6q7uB6B9X",
+        "id": "sd_HUAgQoECNnJ5TwfY",
         "type": "SnackBar",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -2015,10 +1632,10 @@
             "value": ""
         },
         "direction": "ltr",
-        "functionName": "sd_SjfZLro6q7uB6B9X",
+        "functionName": "sd_HUAgQoECNnJ5TwfY",
         "category": "General",
-        "x": 745,
-        "y": 1040,
+        "x": 1305,
+        "y": 340,
         "wires": [
             []
         ],
@@ -2028,7 +1645,256 @@
         "generated": true
     },
     {
-        "id": "sd_oXM8QNYpWlsuUEN9",
+        "id": "sd_5ahl3qYrJllslZBF",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getFromBackend4",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getFromBackend4",
+        "category": "General",
+        "x": 1045,
+        "y": 460,
+        "wires": [
+            [
+                "sd_tCJpi7kCEwW36SRu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_tCJpi7kCEwW36SRu",
+        "type": "Storage",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "bi1663"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "bi1663File"
+        },
+        "functionName": "sd_tCJpi7kCEwW36SRu",
+        "category": "Storage",
+        "x": 1125,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8MTZARhBAQJWoRUE",
+        "type": "Environment",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_8MTZARhBAQJWoRUE",
+        "category": "General",
+        "x": 925,
+        "y": 560,
+        "wires": [
+            [
+                "sd_m0NfI52jottco5YU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_m0NfI52jottco5YU",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + 'upload'\n\n",
+        "functionName": "sd_m0NfI52jottco5YU",
+        "category": "Function",
+        "x": 1025,
+        "y": 560,
+        "wires": [
+            [
+                "sd_dl2txXlIpObERM05"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dl2txXlIpObERM05",
+        "type": "HttpRequest",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.uploadedFile5",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "uploadedFile5"
+        },
+        "resultMapping": "bh.result",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_dl2txXlIpObERM05",
+        "category": "HTTP",
+        "x": 1125,
+        "y": 560,
+        "wires": [
+            [
+                "sd_SaAfqj4OuBwMyE93"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DBT5hOJFUizWQFIy",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "goToBackend5",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToBackend5",
+        "category": "General",
+        "x": 825,
+        "y": 560,
+        "wires": [
+            [
+                "sd_8MTZARhBAQJWoRUE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_SaAfqj4OuBwMyE93",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "sessionStorage.setItem(\"bankDetails\",JSON.stringify(bh.result))\nthis.getFromBackend5()",
+        "functionName": "sd_SaAfqj4OuBwMyE93",
+        "category": "Function",
+        "x": 1225,
+        "y": 560,
+        "wires": [
+            [
+                "sd_VW3IpS841FBYi5EL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VW3IpS841FBYi5EL",
+        "type": "SnackBar",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Bank Details Upload Successful"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_VW3IpS841FBYi5EL",
+        "category": "General",
+        "x": 1325,
+        "y": 560,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_WW3fnpni5l8xxyfo",
         "type": "PageStart",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "pages",
@@ -2040,11 +1906,11 @@
         "flow_type": "sync",
         "functionName": "getFromBackend5",
         "category": "General",
-        "x": 465,
-        "y": 1160,
+        "x": 1045,
+        "y": 680,
         "wires": [
             [
-                "sd_xXk9gr1CsBwveIKY"
+                "sd_6wYXUnDjB7qDVWsp"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -2052,7 +1918,7 @@
         "serviceName": "client_claim_formComponent"
     },
     {
-        "id": "sd_xXk9gr1CsBwveIKY",
+        "id": "sd_6wYXUnDjB7qDVWsp",
         "type": "Storage",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "client-pages",
@@ -2070,10 +1936,10 @@
             "type": "this.page",
             "value": "bankDetailsFile"
         },
-        "functionName": "sd_xXk9gr1CsBwveIKY",
+        "functionName": "sd_6wYXUnDjB7qDVWsp",
         "category": "Storage",
-        "x": 605,
-        "y": 1160,
+        "x": 1185,
+        "y": 680,
         "wires": [
             []
         ],
@@ -2083,22 +1949,305 @@
         "generated": true
     },
     {
-        "id": "sd_TZqUfAyWejyLJ4LB",
+        "id": "sd_X2tvjc7ajLK5WAAA",
+        "type": "PageStart",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 85,
+        "y": 880,
+        "wires": [
+            [
+                "sd_3VDakwnzEcR5Oup5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claim_formComponent"
+    },
+    {
+        "id": "sd_3VDakwnzEcR5Oup5",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nbh.url = page.ssdUrl + 'add-claim'\nconsole.log(\"The val\",page.deathCetificatifyFile)\nbh.body = page.policyClaimsForm.value\nbh.body.policyNo = page.policyNo\nbh.body.claimNumber = `CN-${page.policyNo}`\n\ndelete bh.body.deathCetificatify2\ndelete bh.body.deceased2\ndelete bh.body.idClaimer2\ndelete bh.body.idDeceased2\ndelete bh.body.bi16632\ndelete bh.body.bankDetails2\n\nconsole.log(\"This is bh body\", bh.body)",
+        "functionName": "sd_3VDakwnzEcR5Oup5",
+        "category": "Function",
+        "x": 205,
+        "y": 880,
+        "wires": [
+            [
+                "sd_W355p2xBTUlYo2Vf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_syfc0wxD9q4EkuN1",
+        "type": "Environment",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_syfc0wxD9q4EkuN1",
+        "category": "General",
+        "x": 865,
+        "y": 880,
+        "wires": [
+            [
+                "sd_fusyotj2BipM6rO4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fusyotj2BipM6rO4",
+        "type": "HttpRequest",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.body",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_fusyotj2BipM6rO4",
+        "category": "HTTP",
+        "x": 945,
+        "y": 880,
+        "wires": [
+            [
+                "sd_ywG8tkpWlVm7FdHY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ywG8tkpWlVm7FdHY",
+        "type": "SnackBar",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Claim Added"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_ywG8tkpWlVm7FdHY",
+        "category": "General",
+        "x": 1045,
+        "y": 880,
+        "wires": [
+            [
+                "sd_MRDIkFrFByrv0Qxz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MRDIkFrFByrv0Qxz",
+        "type": "Navigation",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/client_claims",
+        "functionName": "sd_MRDIkFrFByrv0Qxz",
+        "category": "Navigation",
+        "x": 1165,
+        "y": 880,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ndLSUnWZ8jgL6mNH",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "id claimer file added on form",
+        "script": "page.policyClaimsForm.value.idClaimer._id = page.idclaimerFile._id\npage.policyClaimsForm.value.idClaimer.filename = page.idclaimerFile.filename\npage.policyClaimsForm.value.idClaimer.length = page.idclaimerFile.length\npage.policyClaimsForm.value.idClaimer.chunkSize = page.idclaimerFile.chunkSize",
+        "functionName": "idClaimerFileAddedOnForm",
+        "category": "Function",
+        "x": 545,
+        "y": 880,
+        "wires": [
+            [
+                "sd_T1o02bn4GYSlB8H0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6iqpA1CG6gycQF5w",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Deceased id file in form",
+        "script": "page.policyClaimsForm.value. idDecesed._id = page.idDeceasedFile._id\npage.policyClaimsForm.value. idDecesed.filename = page.idDeceasedFile.filename\npage.policyClaimsForm.value. idDecesed.length = page.idDeceasedFile.length\npage.policyClaimsForm.value. idDecesed.chunkSize = page.idDeceasedFile.chunkSize",
+        "functionName": "deceasedIdFileInForm",
+        "category": "Function",
+        "x": 425,
+        "y": 880,
+        "wires": [
+            [
+                "sd_ndLSUnWZ8jgL6mNH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_W355p2xBTUlYo2Vf",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Death Cetificatify file in form",
+        "script": "page.policyClaimsForm.value.deathCertificate._id = page.deathCetificatifyFile._id\npage.policyClaimsForm.value.deathCertificate.filename = page.deathCetificatifyFile.filename\npage.policyClaimsForm.value.deathCertificate.length = page.deathCetificatifyFile.length\npage.policyClaimsForm.value.deathCertificate.chunkSize = page.deathCetificatifyFile.chunkSize\n\n// console.log(\"The val\",page.deathCetificatifyFile)",
+        "functionName": "deathCetificatifyFileInForm",
+        "category": "Function",
+        "x": 325,
+        "y": 880,
+        "wires": [
+            [
+                "sd_6iqpA1CG6gycQF5w"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PnL7snCyYfbYIdIG",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "bi1663 file in form",
+        "script": "page.policyClaimsForm.value.bi1662._id = page.bi1663File._id\npage.policyClaimsForm.value.bi1662.filename = page.bi1663File.filename\npage.policyClaimsForm.value.bi1662.length = page.bi1663File.length\npage.policyClaimsForm.value.bi1662.chunkSize = page.bi1663File.chunkSize",
+        "functionName": "bi1663FileInForm",
+        "category": "Function",
+        "x": 765,
+        "y": 880,
+        "wires": [
+            [
+                "sd_syfc0wxD9q4EkuN1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_T1o02bn4GYSlB8H0",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
         "name": "bankDetails file in form",
-        "script": "page.bankDetails.value.file._id = page.bankDetailsFile._id\npage.bankDetails.value.file.filename = page.bankDetailsFile.filename\npage.bankDetails.value.file.length = page.bankDetailsFile.length\npage.bankDetails.value.file.chunkSize = page.bankDetailsFile.chunkSize",
+        "script": "page.policyClaimsForm.value.bankDetails._id = page.bankDetailsFile._id\npage.policyClaimsForm.value.bankDetails.filename = page.bankDetailsFile.filename\npage.policyClaimsForm.value.bankDetails.length = page.bankDetailsFile.length\npage.policyClaimsForm.value.bankDetails.chunkSize = page.bankDetailsFile.chunkSize",
         "functionName": "bankDetailsFileInForm",
         "category": "Function",
-        "x": 740,
-        "y": 1160,
+        "x": 645,
+        "y": 880,
         "wires": [
-            []
+            [
+                "sd_PnL7snCyYfbYIdIG"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
     }
 ]

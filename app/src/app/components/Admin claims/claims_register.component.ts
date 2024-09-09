@@ -493,12 +493,51 @@ export class claims_registerComponent {
       ) {
         bh = this.forms(bh);
       } else {
-        bh = await this.benForm(bh);
+        bh = await this.sd_miM1YvvKJHvjoOMf(bh);
       }
 
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_s7IAxRYDHIXfSJ12');
+    }
+  }
+
+  sd_miM1YvvKJHvjoOMf(bh) {
+    try {
+      const page = this.page; // console.log("id number",page.policyClaimsForm.value.depsId.idNumber)
+
+      page.birthyear = parseInt(page.newClient[0].idNumber.slice(0, 2));
+      page.years = page.birthyear - page.year;
+      console.log(page.years);
+      if (page.newClient[0].packageType == 'Package 1') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '1500';
+        } else {
+          page.payamount = '3000';
+        }
+      }
+      if (page.newClient[0].packageType == 'Package 2') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '2500';
+        } else {
+          page.payamount = '5000';
+        }
+      }
+      if (page.newClient[0].packageType == 'Package 3') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '4000';
+        } else {
+          page.payamount = '10000';
+        }
+      }
+      //  page.policyClaimsForm.patchValue({
+      //      payoutAmount :page.payamount
+      //  })
+      bh = this.benForm(bh);
+      //appendnew_next_sd_miM1YvvKJHvjoOMf
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_miM1YvvKJHvjoOMf');
     }
   }
 
@@ -553,7 +592,7 @@ export class claims_registerComponent {
         idNum: new FormControl(''),
         gender: new FormControl(''),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl('R110'),
+        payoutAmount: new FormControl(page.payamount),
         deceased: page.deceased,
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
@@ -736,7 +775,7 @@ export class claims_registerComponent {
       page.policyClaimsForm.value.deathCertificate.chunkSize =
         page.deathCetificatifyFile.chunkSize;
 
-      console.log('The val', page.deathCetificatifyFile);
+      // console.log("The val",page.deathCetificatifyFile)
       bh = this.deceasedIdFileInForm(bh);
       //appendnew_next_deathCetificatifyFileInForm
       return bh;
@@ -748,7 +787,7 @@ export class claims_registerComponent {
   deceasedIdFileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.idDecesed._id = page.idclaimerFile._id;
+      page.policyClaimsForm.value.idDecesed._id = page.idDeceasedFile._id;
       page.policyClaimsForm.value.idDecesed.filename =
         page.idDeceasedFile.filename;
       page.policyClaimsForm.value.idDecesed.length = page.idDeceasedFile.length;
@@ -951,49 +990,10 @@ export class claims_registerComponent {
         idNum: page.policyClaimsForm.value.beIds.idNumber,
         gender: page.policyClaimsForm.value.beIds.gender,
       });
-      bh = this.sd_miM1YvvKJHvjoOMf(bh);
       //appendnew_next_sd_HwSEW31qlijbdmJp
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_HwSEW31qlijbdmJp');
-    }
-  }
-
-  sd_miM1YvvKJHvjoOMf(bh) {
-    try {
-      const page = this.page; // console.log("id number",page.policyClaimsForm.value.depsId.idNumber)
-
-      page.birthyear = parseInt(page.newClient[0].idNumber.slice(0, 2));
-      page.years = page.birthyear - page.year;
-      console.log(page.years);
-      if (page.newClient[0].packageType == 'Package 1') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '1500';
-        } else {
-          page.payamount = '3000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 2') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '2500';
-        } else {
-          page.payamount = '5000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 3') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '4000';
-        } else {
-          page.payamount = '10000';
-        }
-      }
-      page.policyClaimsForm.patchValue({
-        payoutAmount: page.payamount,
-      });
-      //appendnew_next_sd_miM1YvvKJHvjoOMf
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_miM1YvvKJHvjoOMf');
     }
   }
 
@@ -1508,7 +1508,7 @@ export class claims_registerComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
+        .open('Bank Details Upload Successful', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',

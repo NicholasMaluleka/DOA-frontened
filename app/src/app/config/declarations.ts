@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-confirm_identityComponent
+import { confirm_identityComponent } from '../components/Client/confirm_identity.component';
 //CORE_REFERENCE_IMPORT-view_documentComponent
 import { view_documentComponent } from '../components/Authentication/view_document.component';
 //CORE_REFERENCE_IMPORT-schedules_pComponent
@@ -112,6 +114,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-confirm_identityComponent
+  confirm_identityComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_documentComponent
   view_documentComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
@@ -228,6 +232,7 @@ export const appRoutes = [
   { path: 'verify-code', component: verify_codeComponent },
   { path: 'reset-password', component: reset_passwordComponent },
   { path: 'view', component: view_documentComponent },
+  { path: 'confirm', component: confirm_identityComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
