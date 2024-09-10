@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -82,6 +83,21 @@ export class sideNavComponent {
       //appendnew_next_getNavItem
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_kXF6N2DjyQhut0P3');
+    }
+  }
+
+  logout(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_q3Z42ywC3bk8vQSa(bh);
+      //appendnew_next_logout
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KcLyiEPpX8qu0XM7');
     }
   }
   //appendnew_flow_sideNavComponent_start
@@ -212,13 +228,13 @@ export class sideNavComponent {
           icon: 'description',
           route: '/dashboard/client_plan_details',
         },
+        { label: 'Payments', icon: 'payments', route: '/dashboard/payments' },
+        { label: 'Claims', icon: 'today', route: '/dashboard/client_claims' },
         {
-          label: 'Payment History',
-          icon: 'edit',
-          route: '/dashboard/payments',
+          label: 'Profile',
+          icon: 'person',
+          route: '/dashboard/client_profile',
         },
-        { label: 'Claims', icon: 'today', route: 'client_claims' },
-        { label: 'Profile', icon: 'today', route: '/dashboard/client_profile' },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
       //appendnew_next_sd_f8zH5EWAPPgeiqT0
@@ -247,7 +263,11 @@ export class sideNavComponent {
       const page = this.page;
       page.sideNav = [
         { label: 'Home', icon: 'home', route: '/dashboard/director_home' },
-        { label: 'Claims', icon: 'description' },
+        {
+          label: 'Claims',
+          icon: 'description',
+          route: '/dashboard/director_claims',
+        },
         { label: 'Schedules', icon: 'today', route: '/dashboard/schedules_p' },
       ];
       bh = this.sd_NQPqzgmJ8fI8o7Rm(bh);
@@ -275,6 +295,31 @@ export class sideNavComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_7vowlKMfIquTljAp');
+    }
+  }
+
+  sd_q3Z42ywC3bk8vQSa(bh) {
+    try {
+      sessionStorage.clear();
+      bh = this.sd_g9HdCihIW9zKSLFu(bh);
+      //appendnew_next_sd_q3Z42ywC3bk8vQSa
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_q3Z42ywC3bk8vQSa');
+    }
+  }
+
+  async sd_g9HdCihIW9zKSLFu(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/login');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_g9HdCihIW9zKSLFu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_g9HdCihIW9zKSLFu');
     }
   }
 
