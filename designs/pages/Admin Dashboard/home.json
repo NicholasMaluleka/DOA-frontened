@@ -724,6 +724,7 @@
         "inputParams": [
             null
         ],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_CdCXJ8wOH3CkcJYj",
         "category": "General",
@@ -1036,6 +1037,59 @@
             [
                 "sd_SqQamlbgHC0CMDv2"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MPNk5xxpnKSeR1Jn",
+        "type": "PageStart",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getRowColor",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "row",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getRowColor",
+        "category": "General",
+        "x": 80,
+        "y": 940,
+        "wires": [
+            [
+                "sd_Vk8d9TXjHuPW2ccT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_Vk8d9TXjHuPW2ccT",
+        "type": "Script",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"input\", bh.input.row.packageType == 'Package 1')\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
+        "functionName": "sd_Vk8d9TXjHuPW2ccT",
+        "category": "Function",
+        "x": 165,
+        "y": 940,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
