@@ -55,6 +55,10 @@
                 {
                     "path": "schedules_p",
                     "component": "schedules_pComponent"
+                },
+                {
+                    "component": "director_claimsComponent",
+                    "path": "director_claims"
                 }
             ],
             "canActivate": {

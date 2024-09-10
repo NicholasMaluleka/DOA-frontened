@@ -4281,7 +4281,7 @@
                                         },
                                         {
                                             "_key": "*ngIf",
-                                            "_value": "page.selectedClaim",
+                                            "_value": "page.selectedClaim && page.user.role === 'admin' ||  page.user.role === 'director'",
                                             "_type": "kv",
                                             "_attrDef": "c"
                                         }
@@ -4416,7 +4416,8 @@
                                                 "_key": "[disableRipple]",
                                                 "_value": "",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
+                                                "_attrDef": "p",
+                                                "_customAttributeFlag": "customInput"
                                             },
                                             {
                                                 "_key": "multiple",
@@ -4439,10 +4440,19 @@
                                             },
                                             {
                                                 "_key": "(selectionChange)",
-                                                "_value": "",
+                                                "_value": "addReason(page.value.status)",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
-                                                "_customAttributeFlag": "flowpicker"
+                                                "_customAttributeFlag": "flowpicker",
+                                                "objValue": {
+                                                    "nodeID": "sd_3FCYJiLfE5GXt05I",
+                                                    "functionName": "addReason",
+                                                    "activeTree": "pages",
+                                                    "z": "sd_N4CyuOQSKrbNKzFe",
+                                                    "input": [
+                                                        "page.value.status"
+                                                    ]
+                                                }
                                             },
                                             {
                                                 "_key": "selectCustomOption",
@@ -4464,9 +4474,10 @@
                                             },
                                             {
                                                 "_key": "[disabled]",
-                                                "_value": "false",
+                                                "_value": "",
                                                 "_type": "kv",
-                                                "_attrDef": "p"
+                                                "_attrDef": "p",
+                                                "_customAttributeFlag": "customInput"
                                             },
                                             {
                                                 "_key": "[errorStateMatcher]",

@@ -1,0 +1,257 @@
+[
+    {
+        "id": "sd_BcfQ7HWdDjhV9OJ2",
+        "type": "tab",
+        "createdDate": "2024-09-09T11:54:21.545Z",
+        "label": "director_note",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "director_noteComponent"
+    },
+    {
+        "id": "sd_YaFI8fIg4QwcqbFx",
+        "type": "OnInit",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_YaFI8fIg4QwcqbFx",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_hI1KPbm7rk2dmQrb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "director_noteComponent"
+    },
+    {
+        "id": "sd_vBGO5pFkOgxf4DI6",
+        "type": "PageVariables",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_vBGO5pFkOgxf4DI6",
+        "category": "Function",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_COsIOP5j2voU7oLf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "director_noteComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_COsIOP5j2voU7oLf",
+        "type": "Script",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.claimReasonForm = new FormGroup({\n    reason: new FormControl('',Validators.required)\n})",
+        "functionName": "sd_COsIOP5j2voU7oLf",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "director_noteComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hI1KPbm7rk2dmQrb",
+        "type": "UseDependency",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_hI1KPbm7rk2dmQrb",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_vBGO5pFkOgxf4DI6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "director_noteComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KYMMjBWOQl3atc0u",
+        "type": "PageStart",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit Reason",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "claimReasonForm",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submitReason",
+        "category": "General",
+        "x": 60,
+        "y": 240,
+        "wires": [
+            [
+                "sd_eyL91f59WAQyvIHG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "director_noteComponent"
+    },
+    {
+        "id": "sd_JWkVETAPkm9oMRNp",
+        "type": "CloseDialog",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "bh.input.claimReasonForm.value.reason",
+        "functionName": "sd_JWkVETAPkm9oMRNp",
+        "category": "Dialog",
+        "x": 285,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "bh.input",
+                "value": "claimReasonForm.value.reason",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "director_noteComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eyL91f59WAQyvIHG",
+        "type": "PageCallService",
+        "z": "sd_BcfQ7HWdDjhV9OJ2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_mZtkuYkkTI8tLdyV",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:36:49.759Z",
+            "label": "variables",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJNBQsNOvW2mw7Dt",
+            "flowName": "setVariable"
+        },
+        "inputVariables": [
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "claimReasonForm.value.reason"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "data",
+                "valueType": "this.page",
+                "value": "popupClaimReason",
+                "mapVarName": "data",
+                "localVar": "this.page.popupClaimReason"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/variables",
+        "startName": "setVariable",
+        "inputParams": [
+            "bh.input.claimReasonForm.value.reason"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_eyL91f59WAQyvIHG",
+        "category": "General",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "sd_JWkVETAPkm9oMRNp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "director_noteComponent",
+        "generated": true
+    }
+]
