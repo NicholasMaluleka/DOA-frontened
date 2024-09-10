@@ -200,6 +200,8 @@ export class claimsComponent implements AfterViewInit {
       console.log('claims ->', page.result);
 
       bh.local.dataSource = new MatTableDataSource(page.result);
+
+      console.log('DS: ', bh.local.dataSource);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
       return bh;
