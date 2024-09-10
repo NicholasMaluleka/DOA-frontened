@@ -1,4 +1,4 @@
-<div fxLayout="column " style="color:#124e52" fxLayoutAlign="start stretch" [fxShow]="true">
+<div fxLayout="column " style="color:#124e52" class="relative" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="column " class="scroller" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center center" [fxShow]="true">
       <h2>
@@ -85,36 +85,40 @@
                 <button class="input-button"><label for="upload1">
                     Upload ID Claimer
                   </label></button>
+                <p *ngIf="page.showId">{{page.id}}</p>
               </div>
+
               <div (click)="upload2()">
 
-                <input type="file" id="upload2" (change)="upload2()" hidden required formControlName="idDeceased2">
+                <input type="file" id="upload2" hidden required formControlName="idDeceased2">
                 <button class="input-button"><label for="upload2">
                     Upload ID Deceased
-
                   </label></button>
+                <p *ngIf="page.showIddes">{{page.iddes}}</p>
               </div>
               <div (click)="upload3()">
-                <input type="file" id="upload3" (change)="upload3()" hidden required formControlName="deathCetificatify2">
+                <input type="file" id="upload3" (change)="upload3($event)" hidden required formControlName="deathCetificatify2">
                 <button class="input-button"><label for="upload3">
                     Upload Death Certificate
 
                   </label></button>
-
+                <p *ngIf=" page.showdeathCetificatify ">{{page.deathCetificatify}}</p>
               </div>
               <div (click)="upload4()">
-                <input type="file" id="upload4" (change)="upload4()" hidden required formControlName="bi16632">
+                <input type="file" id="upload4" (change)="upload4($event)" hidden required formControlName="bi16632">
                 <button class="input-button"><label for="upload4">
                     Upload bi1663
 
                   </label></button>
+                <p *ngIf=" page.showbi1663 ">{{page.bi1663}}</p>
               </div>
               <div (click)="upload5()">
-                <input type="file" id="upload5" (change)="upload5()" hidden required formControlName="bankDetails2">
+                <input type="file" id="upload5" (change)="upload5($event)" hidden required formControlName="bankDetails2">
                 <button class="input-button"><label for="upload5">
                     Upload Bank Details
 
                   </label></button>
+                <p *ngIf=" page.showbankDetails ">{{page.bankDetails}}</p>
               </div>
 
 
@@ -124,5 +128,10 @@
         </div>
       </div>
     </form>
+  </div>
+  <div fxLayout="column wrap" style="background:#00000045" class="fullWidth FullHeight absolute" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" *ngIf="page.loading"><bh-loader></bh-loader>
+    <div style="color:white">
+      <h1>{{page.mes}}</h1>
+    </div>
   </div>
 </div>

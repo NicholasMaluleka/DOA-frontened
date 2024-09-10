@@ -21,176 +21,57 @@
       </div>
     </div>
     <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="column wrap" class="kg-padding-10px kg-border-box kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" color="accent"><mat-tab label="All">
-            <div fxLayout="column" style="border: 1.5px solid #124e52;">
-              <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;];"></tr>
+      <div fxLayout="row wrap" style="margin-bottom: 1em;" class="rotate" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.table.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" width="37%"></div>
+      <div fxLayout="column wrap" class="kg-padding-10px kg-border-box kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column" style="border: 1.5px solid #124e52;">
+          <table mat-table [dataSource]="page?.tableData" *ngIf="page.table.length &gt; 0" matSort class="table-width-fix">
+            <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;]"></tr>
+            <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;];"></tr>
 
-                <ng-container matColumnDef="lastName">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.firstName}} {{table.lastName}}</td>
-                </ng-container>
+            <ng-container matColumnDef="lastName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.firstName}} {{table.lastName}}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="policyNo">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNo}}</td>
-                </ng-container>
+            <ng-container matColumnDef="policyNo">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNo}}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="claimNumber">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.claimNumber}}</td>
-                </ng-container>
+            <ng-container matColumnDef="claimNumber">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Number</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.claimNumber}}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="date.slice(0,10)">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Date</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.date.slice(0,10)}}</td>
-                </ng-container>
+            <ng-container matColumnDef="date.slice(0,10)">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Date</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.date.slice(0,10)}}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="payoutAmount">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Payout Amount</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.payoutAmount}}</td>
-                </ng-container>
+            <ng-container matColumnDef="payoutAmount">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Payout Amount</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.payoutAmount}}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="status">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.status }}</td>
-                </ng-container>
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+              <td mat-cell *matCellDef="let table; let i = index;">{{table.status }}</td>
+            </ng-container>
 
-                <ng-container matColumnDef="588fc765-2fd0-8268-9651-a0e3f9d82469">
-                  <th mat-header-cell *matHeaderCellDef>Action</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">
-                    <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
-                      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="kg-pointer" matTooltip="Review Claim">visibility</mat-icon></div>
-                    </div>
-                  </td>
-                </ng-container>
-              </table>
-              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
-              </mat-paginator>
+            <ng-container matColumnDef="588fc765-2fd0-8268-9651-a0e3f9d82469">
+              <th mat-header-cell *matHeaderCellDef>Action</th>
+              <td mat-cell *matCellDef="let table; let i = index;">
+                <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+                  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="kg-pointer" matTooltip="Review Claim">visibility</mat-icon></div>
+                </div>
+              </td>
+            </ng-container>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" *ngIf="page.table.length &gt; 0">
+          </mat-paginator>
 
-            </div>
-          </mat-tab><mat-tab label="Approved">
-            <div fxLayout="column" style="border: 1.5px solid #124e52;">
-              <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;];"></tr>
-
-                <ng-container matColumnDef="lastName">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;"> {{table.firstName}} {{table.lastName}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="policyNo">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNo}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="claimNumber">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.claimNumber}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="date.slice(0,10)">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Date</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.date.slice(0,10)}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="payoutAmount">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Payout Amount</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.payoutAmount}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="status">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.status }}</td>
-                </ng-container>
-              </table>
-              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
-              </mat-paginator>
-
-            </div>
-          </mat-tab><mat-tab label="Pending">
-            <div fxLayout="column" style="border: 1.5px solid #124e52;">
-              <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;];"></tr>
-
-                <ng-container matColumnDef="lastName">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;"> {{table.firstName}} {{table.lastName}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="policyNo">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNo}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="claimNumber">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.claimNumber}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="date.slice(0,10)">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Date</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.date.slice(0,10)}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="payoutAmount">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Payout Amount</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.payoutAmount}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="status">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.status }}</td>
-                </ng-container>
-              </table>
-              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
-              </mat-paginator>
-
-            </div>
-          </mat-tab><mat-tab label="Rejected">
-            <div fxLayout="column" style="border: 1.5px solid #124e52;">
-              <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
-                <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;]"></tr>
-                <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status&apos;];"></tr>
-
-                <ng-container matColumnDef="lastName">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</th>
-                  <td mat-cell *matCellDef="let table; let i = index;"> {{table.firstName}} {{table.lastName}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="policyNo">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNo}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="claimNumber">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Number</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.claimNumber}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="date.slice(0,10)">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Claim Date</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.date.slice(0,10)}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="payoutAmount">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Payout Amount</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.payoutAmount}}</td>
-                </ng-container>
-
-                <ng-container matColumnDef="status">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
-                  <td mat-cell *matCellDef="let table; let i = index;">{{table.status }}</td>
-                </ng-container>
-              </table>
-              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
-              </mat-paginator>
-
-            </div>
-          </mat-tab></mat-tab-group></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

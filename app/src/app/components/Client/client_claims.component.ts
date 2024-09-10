@@ -128,6 +128,7 @@ export class client_claimsComponent implements AfterViewInit {
     try {
       this.page.policy = false;
       this.page.beneficary = false;
+      this.page.table = [];
       bh = this.sd_myiuVnSFhK0HbGI0(bh);
       //appendnew_next_sd_LQE3G3t79OKB77YW
       return bh;
@@ -198,9 +199,14 @@ export class client_claimsComponent implements AfterViewInit {
       console.log(
         page.result.filter((item) => item.policyNo == page.user.policyNumber)
       );
-      page.table = page.result.filter(
-        (item) => item.policyNo == page.user.policyNumber
-      );
+      page.result.filter((item) => {
+        if (item.policyNo == page.user.policyNumber) {
+          console.log('data for 1 client', item);
+          page.table.push(item);
+        }
+      });
+      console.log('rwertyui', page.table);
+
       bh.local.dataSource = new MatTableDataSource(page.table);
 
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);

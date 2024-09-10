@@ -54,6 +54,13 @@
                     "type": "literal",
                     "value": "false"
                 }
+            },
+            {
+                "textIp": "table",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
             }
         ],
         "functionName": "sd_LQE3G3t79OKB77YW",
@@ -77,7 +84,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"page.user - >\", page.user.policyNumber)\nconsole.log(\"claims ->\", page.result)\n\nconsole.log(page.result.filter(item => item.policyNo  == page.user.policyNumber ))\npage.table = page.result.filter(item => item.policyNo  == page.user.policyNumber )\nbh.local.dataSource = new MatTableDataSource(page.table);\n",
+        "script": "console.log(\"page.user - >\", page.user.policyNumber)\nconsole.log(\"claims ->\", page.result)\n\nconsole.log(page.result.filter(item => item.policyNo  == page.user.policyNumber ))\n page.result.filter(item => {\n    if(item.policyNo  == page.user.policyNumber){\n        console.log(\"data for 1 client\", item)\n        page.table.push(item)\n    }\n    })\nconsole.log(\"rwertyui\",page.table)\n\nbh.local.dataSource = new MatTableDataSource(page.table);\n",
         "functionName": "sd_eJuzOUTYKNgXaqdz_1",
         "category": "Function",
         "x": 665,

@@ -4,10 +4,15 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
-import { Router } from '@angular/router'; //_splitter_
+import { ActivatedRoute, Router } from '@angular/router'; //_splitter_
 import { view_documentComponent } from 'app/components/Authentication/view_document.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -331,6 +336,37 @@ export class claims_registerComponent {
     }
   }
 
+  checkIfIsReview(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_0ZC8jSwPtvUkjiBJ(bh);
+      //appendnew_next_checkIfIsReview
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_j9GOsDaRPX1qn2HK');
+    }
+  }
+
+  reviewPatch(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      this.sd_3UFHNmHQ6gr6Z6rE(bh);
+      bh = this.sd_tTEL46pK2xh7B0lI(bh);
+      //appendnew_next_reviewPatch
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_TKthgYuBJaq7ONFh');
+    }
+  }
+
   open(...others) {
     let bh: any = {};
     try {
@@ -339,10 +375,25 @@ export class claims_registerComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_pDN60uD8hLYjEagb(bh);
+      bh = this.sd_sZzw2GvSrAzcQ1Zs(bh);
       //appendnew_next_open
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_NHGiXhSAsAuPO311');
+      return this.errorHandler(bh, e, 'sd_M9HeUA5hjXD09RPR');
+    }
+  }
+
+  updateClaim(claim: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { claim };
+      bh.local = {};
+      bh = this.sd_p3ivOtVgfXm0I0Z5(bh);
+      //appendnew_next_updateClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_d6vseXRHCyuRWjnv');
     }
   }
   //appendnew_flow_claims_registerComponent_start
@@ -366,6 +417,9 @@ export class claims_registerComponent {
       this.page.date = undefined;
       this.page.desname = undefined;
       this.page.name = undefined;
+      this.page.claimStatuses = undefined;
+      this.page.docs = undefined;
+      this.page.fileURL = undefined;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
@@ -408,6 +462,7 @@ export class claims_registerComponent {
       }
 
       page.policyNo = page.newClient[0].policyNumber;
+
       bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_t7WBGNUYn2Qn9klf
       return bh;
@@ -419,7 +474,7 @@ export class claims_registerComponent {
   sd_VS9kuSjxODDIjqLl(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.benAndDepenArrayForSelectorsAndYear(bh);
+      bh = this.sd_YYpzaqPjgqnQDOvA(bh);
       //appendnew_next_sd_VS9kuSjxODDIjqLl
       return bh;
     } catch (e) {
@@ -427,53 +482,66 @@ export class claims_registerComponent {
     }
   }
 
+  sd_YYpzaqPjgqnQDOvA(bh) {
+    try {
+      let outputVariables = this.checkIfIsReview();
+
+      bh = this.sd_FZutB5HUJlZZ3mXi(bh);
+      //appendnew_next_sd_YYpzaqPjgqnQDOvA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YYpzaqPjgqnQDOvA');
+    }
+  }
+
+  async sd_FZutB5HUJlZZ3mXi(bh) {
+    try {
+      if (
+        this.sdService.operators['istype'](
+          this.page.selectedClaim,
+          'undefined',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.benAndDepenArrayForSelectorsAndYear(bh);
+      } else {
+        bh = await this.sd_0dgCvNhXnv2EDp9O(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FZutB5HUJlZZ3mXi');
+    }
+  }
+
   benAndDepenArrayForSelectorsAndYear(bh) {
     try {
       const page = this.page; // Dependency
+
+      page.fileURL = page.ssdUrl + 'download/';
+
       page.deparray = page.newClient[0].dependencies;
       console.log('depnarray', page.deparray);
       // beneficary
       page.benarray = page.newClient[0].beneficaries;
       console.log('benearray', page.benarray);
-      console.log(`${page.deparray[1].firstName + page.deparray[1].idNumber}`);
+
+      page.docs = [];
+
       page.ids = [
-        {
-          value: page.deparray[0],
-          viewValue: `${
-            page.deparray[0].firstName + '  ' + page.deparray[0].idNumber
-          }`,
-        },
-        {
-          value: page.deparray[1],
-          viewValue: `${
-            page.deparray[1].firstName + '  ' + page.deparray[1].idNumber
-          }`,
-        },
-        {
-          value: page.deparray[2],
-          viewValue: `${
-            page.deparray[2].firstName + '  ' + page.deparray[2].idNumber
-          }`,
-        },
+        { value: page.deparray[0], viewValue: page.deparray[0].idNumber },
+        { value: page.deparray[1], viewValue: page.deparray[1].idNumber },
+        { value: page.deparray[2], viewValue: page.deparray[2].idNumber },
       ];
 
       page.beIds = [
-        {
-          value: page.benarray[0],
-          viewValue: `${
-            page.benarray[0].firstName + '  ' + page.benarray[0].idNumber
-          }`,
-        },
-        {
-          value: page.benarray[1],
-          viewValue: `${
-            page.benarray[1].firstName + '  ' + page.benarray[1].idNumber
-          }`,
-        },
+        { value: page.benarray[0], viewValue: page.benarray[0].idNumber },
+        { value: page.benarray[1], viewValue: page.benarray[1].idNumber },
       ];
-
       page.year = parseInt(new Date().getFullYear().toString().slice(-2));
-      bh = this.sd_s7IAxRYDHIXfSJ12(bh);
+
+      bh = this.sd_rFvwbwIcneycRJPj(bh);
       //appendnew_next_benAndDepenArrayForSelectorsAndYear
       return bh;
     } catch (e) {
@@ -481,7 +549,45 @@ export class claims_registerComponent {
     }
   }
 
-  async sd_s7IAxRYDHIXfSJ12(bh) {
+  sd_rFvwbwIcneycRJPj(bh) {
+    try {
+      const page = this.page;
+      page.birthyear = parseInt(page.userdata.idNumber.slice(0, 2));
+      //     page.years = page.birthyear - page.year;
+      //     console.log(page.years);
+      //      if (page.newClient[0].packageType == 'Package 1') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '1500';
+      //       } else {
+      //         page.payamount = '3000';
+      //       }
+      //     }
+      //     if (page.newClient[0].packageType == 'Package 2') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '2500';
+      //       } else {
+      //         page.payamount = '5000';
+      //       }
+      //     }
+      //     if (page.newClient[0].packageType == 'Package 3') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '4000';
+      //       } else {
+      //         page.payamount = '10000';
+      //       }
+      //     }
+      //     page.policyClaimsForm.patchValue({
+      //       payoutAmount: page.payamount,
+      //     });
+      bh = this.sd_s7IAxRYDHIXfSJ12(bh);
+      //appendnew_next_sd_rFvwbwIcneycRJPj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rFvwbwIcneycRJPj');
+    }
+  }
+
+  sd_s7IAxRYDHIXfSJ12(bh) {
     try {
       if (
         this.sdService.operators['true'](
@@ -493,7 +599,6 @@ export class claims_registerComponent {
       ) {
         bh = this.forms(bh);
       } else {
-        bh = await this.sd_miM1YvvKJHvjoOMf(bh);
       }
 
       return bh;
@@ -502,57 +607,18 @@ export class claims_registerComponent {
     }
   }
 
-  sd_miM1YvvKJHvjoOMf(bh) {
-    try {
-      const page = this.page; // console.log("id number",page.policyClaimsForm.value.depsId.idNumber)
-
-      page.birthyear = parseInt(page.newClient[0].idNumber.slice(0, 2));
-      page.years = page.birthyear - page.year;
-      console.log(page.years);
-      if (page.newClient[0].packageType == 'Package 1') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '1500';
-        } else {
-          page.payamount = '3000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 2') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '2500';
-        } else {
-          page.payamount = '5000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 3') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '4000';
-        } else {
-          page.payamount = '10000';
-        }
-      }
-      //  page.policyClaimsForm.patchValue({
-      //      payoutAmount :page.payamount
-      //  })
-      bh = this.benForm(bh);
-      //appendnew_next_sd_miM1YvvKJHvjoOMf
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_miM1YvvKJHvjoOMf');
-    }
-  }
-
-  benForm(bh) {
+  forms(bh) {
     try {
       const page = this.page; // decesed details
 
-      console.log('BEN');
+      console.log('PH');
 
       page.deceased = new FormGroup({
-        firstName: new FormControl(page.newClient[0].firstName),
-        lastName: new FormControl(page.newClient[0].lastName),
-        idNum: new FormControl(page.newClient[0].idNumber),
-        gender: new FormControl(page.newClient[0].gender),
-        //  dateOfDeath:new FormControl( '',[Validators.required]),
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        idNum: new FormControl(''),
+        gender: new FormControl(''),
+        dateOfDeath: new FormControl('', [Validators.required]),
       });
       // documents
       page.idClaimer = new FormGroup({
@@ -587,12 +653,12 @@ export class claims_registerComponent {
       });
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        idNum: new FormControl(''),
-        gender: new FormControl(''),
+        firstName: new FormControl(page.newClient[0].firstName),
+        lastName: new FormControl(page.newClient[0].lastName),
+        idNum: new FormControl(page.newClient[0].idNumber),
+        gender: new FormControl(page.newClient[0].gender),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl(page.payamount),
+        payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
@@ -616,10 +682,10 @@ export class claims_registerComponent {
 
       bh.url = page.ssdUrl + 'get-users';
       bh = this.sd_lc7a7aI8KJ997bHn(bh);
-      //appendnew_next_benForm
+      //appendnew_next_forms
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Bymc6jPBYuJm79rv');
+      return this.errorHandler(bh, e, 'sd_fT4QY8oO9nWmGN5R');
     }
   }
 
@@ -656,85 +722,25 @@ export class claims_registerComponent {
     }
   }
 
-  forms(bh) {
+  sd_0dgCvNhXnv2EDp9O(bh) {
     try {
-      const page = this.page; // decesed details
+      let outputVariables = this.reviewPatch();
 
-      console.log('PH');
-
-      page.deceased = new FormGroup({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        idNum: new FormControl(''),
-        gender: new FormControl(''),
-        //  dateOfDeath:new FormControl( '',[Validators.required]),
-      });
-      // documents
-      page.idClaimer = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.idDecesed = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bi1662 = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.deathCertificate = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bankDetails = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      //claims form with all information including claimer details
-      page.policyClaimsForm = new FormGroup({
-        firstName: new FormControl(page.newClient[0].firstName),
-        lastName: new FormControl(page.newClient[0].lastName),
-        idNum: new FormControl(page.newClient[0].idNumber),
-        gender: new FormControl(page.newClient[0].gender),
-        packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl(),
-        deceased: page.deceased,
-        deceased2: new FormControl(''),
-        idClaimer: page.idClaimer,
-        idClaimer2: new FormControl(''),
-        idDecesed: page.idDecesed,
-        idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
-        bi16632: new FormControl(''),
-        deathCertificate: page.deathCertificate,
-        deathCetificatify2: new FormControl(''),
-        bankDetails: page.bankDetails,
-        bankDetails2: new FormControl(''),
-        status: new FormControl('pending'),
-        depsId: new FormControl(),
-        beIds: new FormControl(),
-      });
-
-      page.date = new Date();
-
-      console.log('page.deceased', page.deceased);
-
-      bh.url = page.ssdUrl + 'get-users';
-      bh = this.sd_lc7a7aI8KJ997bHn(bh);
-      //appendnew_next_forms
+      this.sd_vlg7Jz5xPnAHOlgA(bh);
+      //appendnew_next_sd_0dgCvNhXnv2EDp9O
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_fT4QY8oO9nWmGN5R');
+      return this.errorHandler(bh, e, 'sd_0dgCvNhXnv2EDp9O');
+    }
+  }
+
+  sd_vlg7Jz5xPnAHOlgA(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.selectedClaim);
+      //appendnew_next_sd_vlg7Jz5xPnAHOlgA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vlg7Jz5xPnAHOlgA');
     }
   }
 
@@ -929,7 +935,7 @@ export class claims_registerComponent {
         idNum: page.policyClaimsForm.value.depsId.idNumber,
         gender: page.policyClaimsForm.value.depsId.gender,
       });
-      bh = this.sd_oSQGczsN2YTr7E1P(bh);
+      bh = this.sd_eihSjDYVnMgVKw4J(bh);
       //appendnew_next_sd_YRFsW4mmP13CYVr4
       return bh;
     } catch (e) {
@@ -937,10 +943,9 @@ export class claims_registerComponent {
     }
   }
 
-  sd_oSQGczsN2YTr7E1P(bh) {
+  sd_eihSjDYVnMgVKw4J(bh) {
     try {
-      const page = this.page; // console.log("id number",page.policyClaimsForm.value.depsId.idNumber)
-
+      const page = this.page;
       page.birthyear = parseInt(
         page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)
       );
@@ -970,10 +975,10 @@ export class claims_registerComponent {
       page.policyClaimsForm.patchValue({
         payoutAmount: page.payamount,
       });
-      //appendnew_next_sd_oSQGczsN2YTr7E1P
+      //appendnew_next_sd_eihSjDYVnMgVKw4J
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_oSQGczsN2YTr7E1P');
+      return this.errorHandler(bh, e, 'sd_eihSjDYVnMgVKw4J');
     }
   }
 
@@ -1012,7 +1017,7 @@ export class claims_registerComponent {
           }
         });
       }
-
+      console.log('page.uploadedFile1', page.uploadedFile1);
       //appendnew_next_sd_i0xoEvpROPITU08N
       return bh;
     } catch (e) {
@@ -1068,8 +1073,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
       this.getFromBackend1();
-      console.log('data to use', page.idclaimerFile);
 
+      let file = JSON.parse(sessionStorage.getItem('idClaimer'));
+
+      page.docs[0] = {
+        name: 'idClaimer',
+        ...file,
+      };
       bh = this.sd_jr3k8kNfVkjaB5Ka(bh);
       //appendnew_next_sd_b1QBlwuGwfmxrU8X
       return bh;
@@ -1198,6 +1208,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
       this.getFromBackend2();
+
+      let file = JSON.parse(sessionStorage.getItem('idDeceased'));
+
+      page.docs[1] = {
+        name: 'idDeceased',
+        ...file,
+      };
       bh = this.sd_ByY2JldcpCcfHzI8(bh);
       //appendnew_next_sd_naVFzQoHG9PNzmpr
       return bh;
@@ -1284,6 +1301,13 @@ export class claims_registerComponent {
       sessionStorage.setItem('deathCetificatify', JSON.stringify(bh.result));
       this.getFromBackend3();
       console.log('bh', bh.results);
+
+      let file = JSON.parse(sessionStorage.getItem('deathCetificatify'));
+
+      page.docs[2] = {
+        name: 'deathCetificatify',
+        ...file,
+      };
       bh = this.sd_8oQKKQYPcqVuI8TK(bh);
       //appendnew_next_sd_PEs3jZ0F7V9TKive
       return bh;
@@ -1413,6 +1437,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('bi1663', JSON.stringify(bh.result));
       this.getFromBackend4();
+
+      let file = JSON.parse(sessionStorage.getItem('bi1663'));
+
+      page.docs[3] = {
+        name: 'bi1663',
+        ...file,
+      };
       bh = this.sd_lg9wvNZgvdJI59fo(bh);
       //appendnew_next_sd_qAqklLHl7YggpvdV
       return bh;
@@ -1496,6 +1527,13 @@ export class claims_registerComponent {
       const page = this.page;
       sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
       this.getFromBackend5();
+
+      let file = JSON.parse(sessionStorage.getItem('bankDetails'));
+
+      page.docs[4] = {
+        name: 'bankDetails',
+        ...file,
+      };
       bh = this.sd_rzesD82YORPSFkNR(bh);
       //appendnew_next_sd_lbjf2VgcIKFjsixy
       return bh;
@@ -1533,7 +1571,360 @@ export class claims_registerComponent {
     }
   }
 
-  sd_pDN60uD8hLYjEagb(bh) {
+  sd_0ZC8jSwPtvUkjiBJ(bh) {
+    try {
+      const route = this.__page_injector__.get(ActivatedRoute);
+      bh.routeData = route.snapshot.queryParams;
+      bh = this.sd_yo4JoCQiVtNoLyHc(bh);
+      //appendnew_next_sd_0ZC8jSwPtvUkjiBJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0ZC8jSwPtvUkjiBJ');
+    }
+  }
+
+  async sd_yo4JoCQiVtNoLyHc(bh) {
+    try {
+      if (
+        this.sdService.operators['empty'](
+          bh.routeData,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_HbEDqAM5kG7ivWOE(bh);
+      } else {
+        bh = await this.sd_EiyEHm1Q0suBYnul(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yo4JoCQiVtNoLyHc');
+    }
+  }
+
+  sd_HbEDqAM5kG7ivWOE(bh) {
+    try {
+      localStorage.removeItem('claim');
+      //appendnew_next_sd_HbEDqAM5kG7ivWOE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HbEDqAM5kG7ivWOE');
+    }
+  }
+
+  sd_EiyEHm1Q0suBYnul(bh) {
+    try {
+      this.page.selectedClaim = JSON.parse(localStorage.getItem('claim'));
+      //appendnew_next_sd_EiyEHm1Q0suBYnul
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EiyEHm1Q0suBYnul');
+    }
+  }
+
+  sd_3UFHNmHQ6gr6Z6rE(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.selectedClaim);
+      //appendnew_next_sd_3UFHNmHQ6gr6Z6rE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3UFHNmHQ6gr6Z6rE');
+    }
+  }
+
+  sd_tTEL46pK2xh7B0lI(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_UmdtwXC1AB0nhAbw(bh);
+      //appendnew_next_sd_tTEL46pK2xh7B0lI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tTEL46pK2xh7B0lI');
+    }
+  }
+
+  sd_UmdtwXC1AB0nhAbw(bh) {
+    try {
+      const page = this.page;
+      bh.claimKeys = Object.keys(page.selectedClaim);
+
+      page.docs = [];
+
+      bh.claimKeys.forEach((key) => {
+        if (page.selectedClaim[key]?.filename) {
+          let doc = { ...page.selectedClaim[key], name: key };
+          page.docs.push(doc);
+        }
+      });
+
+      console.log('DOCS: ', page.docs);
+
+      page.fileURL = page.ssdUrl + 'download/';
+
+      console.log('URL:', page.ssdUrl);
+      bh = this.sd_ypuYcwTSxbHCyLl9(bh);
+      //appendnew_next_sd_UmdtwXC1AB0nhAbw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UmdtwXC1AB0nhAbw');
+    }
+  }
+
+  async sd_ypuYcwTSxbHCyLl9(bh) {
+    try {
+      if (
+        this.sdService.operators['null'](
+          this.page.selectedClaim.depsId,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.ben1Form(bh);
+      } else {
+        bh = await this.forms1(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ypuYcwTSxbHCyLl9');
+    }
+  }
+
+  ben1Form(bh) {
+    try {
+      const page = this.page; // decesed details
+
+      console.log('BEN');
+
+      page.claimStatuses = [
+        { value: 'partially approved', viewValue: 'Partially Approve' },
+        { value: 'rejected', viewValue: 'Reject' },
+      ];
+
+      page.deceased = new FormGroup({
+        firstName: new FormControl(page.selectedClaim.deceased.firstName),
+        lastName: new FormControl(page.selectedClaim.deceased.lastName),
+        idNum: new FormControl(page.selectedClaim.deceased.idNum),
+        gender: new FormControl(page.selectedClaim.deceased.gender),
+        dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath, [
+          Validators.required,
+        ]),
+        status: new FormControl(page.selectedClaim, [Validators.required]),
+      });
+
+      console.log('DECEASED', page.deceased);
+
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
+      });
+
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
+      });
+
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
+      });
+
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
+      });
+
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
+      });
+
+      //claims form with all information including claimer details
+      page.policyClaimsForm = new FormGroup({
+        firstName: new FormControl(page.selectedClaim.firstName),
+        lastName: new FormControl(page.selectedClaim.lastName),
+        idNum: new FormControl(page.selectedClaim.idNum),
+        gender: new FormControl(page.selectedClaim.gender),
+        packageType: new FormControl(page.selectedClaim.packageType),
+        payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
+        deceased: page.deceased,
+        status: new FormControl(page.selectedClaim.status),
+        deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
+        idDeceased2: new FormControl(''),
+        bi1663: page.bi1663,
+        bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
+        deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
+        bankDetails2: new FormControl(''),
+        depsId: new FormControl(page.selectedClaim.depsId),
+        beIds: new FormControl(page.selectedClaim.beIds),
+        _id: new FormControl(page.selectedClaim._id),
+        claimNumber: new FormControl(page.selectedClaim.claimNumber),
+      });
+
+      page.date = new Date();
+
+      console.log('page.deceased', page.deceased);
+
+      bh.url = page.ssdUrl + 'get-users';
+      bh = this.sd_H2rfObg2GTiF2OJI(bh);
+      //appendnew_next_ben1Form
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KqW8tRDm0M48Qng2');
+    }
+  }
+
+  async sd_H2rfObg2GTiF2OJI(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_duOxmO19SUtDVgxP(bh);
+      //appendnew_next_sd_H2rfObg2GTiF2OJI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_H2rfObg2GTiF2OJI');
+    }
+  }
+
+  sd_duOxmO19SUtDVgxP(bh) {
+    try {
+      const page = this.page;
+      page.clients = page.result.filter((item) => item.role === 'client');
+      page.claim = page.clients.find(
+        (client) => client.policyNumber == page.policy
+      );
+      //appendnew_next_sd_duOxmO19SUtDVgxP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_duOxmO19SUtDVgxP');
+    }
+  }
+
+  forms1(bh) {
+    try {
+      const page = this.page; // decesed details
+
+      console.log('PH');
+
+      page.claimStatuses = [
+        { value: 'partially approved', viewValue: 'Partially Approve' },
+        { value: 'rejected', viewValue: 'Reject' },
+      ];
+
+      page.deceased = new FormGroup({
+        firstName: new FormControl(page.selectedClaim.deceased.firstName),
+        lastName: new FormControl(page.selectedClaim.deceased.lastName),
+        idNum: new FormControl(page.selectedClaim.deceased.idNum),
+        gender: new FormControl(page.selectedClaim.deceased.gender),
+        dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath),
+        status: new FormControl(page.selectedClaim.status),
+      });
+
+      console.log('DECEASED', page.deceased);
+
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
+      });
+
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
+      });
+
+      page.bi1662 = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
+      });
+
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
+      });
+
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
+      });
+
+      //claims form with all information including claimer details
+      page.policyClaimsForm = new FormGroup({
+        firstName: new FormControl(page.selectedClaim.firstName),
+        lastName: new FormControl(page.selectedClaim.lastName),
+        idNum: new FormControl(page.selectedClaim.idNum),
+        gender: new FormControl(page.selectedClaim.gender),
+        packageType: new FormControl(page.selectedClaim.packageType),
+        payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
+        deceased: page.deceased,
+        deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
+        idDeceased2: new FormControl(''),
+        bi1662: page.bi1662,
+        bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
+        deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
+        bankDetails2: new FormControl(''),
+        depsId: new FormControl(page.selectedClaim.depsId),
+        beIds: new FormControl(page.selectedClaim.beIds),
+        claimNumber: new FormControl(page.selectedClaim.claimNumber),
+        status: new FormControl(page.deceased.value.status),
+        _id: new FormControl(page.selectedClaim._id),
+      });
+
+      page.date = new Date();
+
+      console.log('page.deceased', page.deceased);
+
+      bh.url = page.ssdUrl + 'get-users';
+      bh = this.sd_H2rfObg2GTiF2OJI(bh);
+      //appendnew_next_forms1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QHKgZNl5Jio19cV7');
+    }
+  }
+
+  sd_sZzw2GvSrAzcQ1Zs(bh) {
     try {
       const view_documentDialog = this.__page_injector__.get(MatDialog);
       const view_documentDialogRef = view_documentDialog.open(
@@ -1543,7 +1934,185 @@ export class claims_registerComponent {
 
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pDN60uD8hLYjEagb');
+      return this.errorHandler(bh, e, 'sd_sZzw2GvSrAzcQ1Zs');
+    }
+  }
+
+  sd_p3ivOtVgfXm0I0Z5(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_Jp5WhdAT8tH6NXXw(bh);
+      //appendnew_next_sd_p3ivOtVgfXm0I0Z5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_p3ivOtVgfXm0I0Z5');
+    }
+  }
+
+  sd_Jp5WhdAT8tH6NXXw(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'update_claim';
+
+      console.log('URL: ', bh.url);
+      bh = this.sd_9j0Sbn07mNgWcy1F(bh);
+      //appendnew_next_sd_Jp5WhdAT8tH6NXXw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Jp5WhdAT8tH6NXXw');
+    }
+  }
+
+  async sd_9j0Sbn07mNgWcy1F(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.input.claim,
+      };
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_aaERlUkwBglNdw0w(bh);
+      //appendnew_next_sd_9j0Sbn07mNgWcy1F
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9j0Sbn07mNgWcy1F');
+    }
+  }
+
+  sd_aaERlUkwBglNdw0w(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.res.lastErrorObject.updatedExisting,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_e6cgpzrBPGD5XQ4t(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aaERlUkwBglNdw0w');
+    }
+  }
+
+  sd_e6cgpzrBPGD5XQ4t(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('CLAIM UPDATED SUCCESSFULY', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_nZ3fyQZGNTByR3Yl(bh);
+      //appendnew_next_sd_e6cgpzrBPGD5XQ4t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_e6cgpzrBPGD5XQ4t');
+    }
+  }
+
+  async sd_nZ3fyQZGNTByR3Yl(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claims');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      bh = this.benForm(bh);
+      //appendnew_next_sd_nZ3fyQZGNTByR3Yl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nZ3fyQZGNTByR3Yl');
+    }
+  }
+
+  benForm(bh) {
+    try {
+      const page = this.page; // decesed details
+
+      console.log('BEN');
+
+      page.deceased = new FormGroup({
+        firstName: new FormControl(page.newClient[0].firstName),
+        lastName: new FormControl(page.newClient[0].lastName),
+        idNum: new FormControl(page.newClient[0].idNumber),
+        gender: new FormControl(page.newClient[0].gender),
+        dateOfDeath: new FormControl('', [Validators.required]),
+      });
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      //claims form with all information including claimer details
+      page.policyClaimsForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        idNum: new FormControl(''),
+        gender: new FormControl(''),
+        packageType: new FormControl(page.newClient[0].packageType),
+        payoutAmount: new FormControl(''),
+        deceased: page.deceased,
+        deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
+        idDeceased2: new FormControl(''),
+        bi1663: page.bi1663,
+        bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
+        deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
+        bankDetails2: new FormControl(''),
+        status: new FormControl('pending'),
+        depsId: new FormControl(),
+        beIds: new FormControl(),
+      });
+
+      page.date = new Date();
+
+      console.log('page.deceased', page.deceased);
+
+      bh.url = page.ssdUrl + 'get-users';
+      bh = this.sd_lc7a7aI8KJ997bHn(bh);
+      //appendnew_next_benForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Bymc6jPBYuJm79rv');
     }
   }
 

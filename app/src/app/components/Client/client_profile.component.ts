@@ -4,6 +4,8 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { password_pop_upComponent } from 'app/components/Client/password_pop_up.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -55,6 +57,20 @@ export class client_profileComponent {
     }
   }
 
+  enterPassword(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_WYWVvPFjrnA4FKdK(bh);
+      //appendnew_next_enterPassword
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OpmZ1T2tFVSwDzss');
+    }
+  }
   //appendnew_flow_client_profileComponent_start
 
   sd_HylJdYhI60EDK1IM(bh) {
@@ -90,10 +106,7 @@ export class client_profileComponent {
 
   sd_sDChkTyL4lAwKMl2(bh) {
     try {
-      const page = this.page; // page.currentUser = Object.keys(page.user).map(key => {
-      //     return { key: key, value: page.user[key] };
-      // });
-
+      const page = this.page;
       page.currentUser = page.user;
 
       console.log('page user', page.currentUser);
@@ -102,6 +115,20 @@ export class client_profileComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_sDChkTyL4lAwKMl2');
+    }
+  }
+
+  sd_WYWVvPFjrnA4FKdK(bh) {
+    try {
+      const password_pop_upDialog = this.__page_injector__.get(MatDialog);
+      const password_pop_upDialogRef = password_pop_upDialog.open(
+        password_pop_upComponent,
+        {}
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WYWVvPFjrnA4FKdK');
     }
   }
 
