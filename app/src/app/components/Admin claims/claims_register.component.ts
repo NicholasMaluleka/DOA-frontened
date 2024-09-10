@@ -535,7 +535,7 @@ export class claims_registerComponent implements AfterViewInit {
           undefined
         )
       ) {
-        bh = this.benAndDepenArrayForSelectors(bh);
+        bh = this.benAndDepenArrayForSelectorsAndYear(bh);
       } else {
         bh = await this.sd_0dgCvNhXnv2EDp9O(bh);
       }
@@ -546,7 +546,7 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  benAndDepenArrayForSelectors(bh) {
+  benAndDepenArrayForSelectorsAndYear(bh) {
     try {
       const page = this.page; // Dependency
 
@@ -570,9 +570,10 @@ export class claims_registerComponent implements AfterViewInit {
         { value: page.benarray[0], viewValue: page.benarray[0].idNumber },
         { value: page.benarray[1], viewValue: page.benarray[1].idNumber },
       ];
+      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
 
       bh = this.sd_s7IAxRYDHIXfSJ12(bh);
-      //appendnew_next_benAndDepenArrayForSelectors
+      //appendnew_next_benAndDepenArrayForSelectorsAndYear
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_VmZ87Aum2rOPCu6Y');
@@ -651,7 +652,7 @@ export class claims_registerComponent implements AfterViewInit {
         idNum: new FormControl(''),
         gender: new FormControl(''),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl('R110'),
+        payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
@@ -868,7 +869,7 @@ export class claims_registerComponent implements AfterViewInit {
       page.policyClaimsForm.value.deathCertificate.chunkSize =
         page.deathCetificatifyFile.chunkSize;
 
-      console.log('The val', page.deathCetificatifyFile);
+      // console.log("The val",page.deathCetificatifyFile)
       bh = this.deceasedIdFileInForm(bh);
       //appendnew_next_deathCetificatifyFileInForm
       return bh;
@@ -880,7 +881,7 @@ export class claims_registerComponent implements AfterViewInit {
   deceasedIdFileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.idDecesed._id = page.idclaimerFile._id;
+      page.policyClaimsForm.value.idDecesed._id = page.idDeceasedFile._id;
       page.policyClaimsForm.value.idDecesed.filename =
         page.idDeceasedFile.filename;
       page.policyClaimsForm.value.idDecesed.length = page.idDeceasedFile.length;
@@ -1593,7 +1594,7 @@ export class claims_registerComponent implements AfterViewInit {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
+        .open('Bank Details Upload Successful', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',

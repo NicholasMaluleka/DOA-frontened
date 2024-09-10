@@ -1,0 +1,859 @@
+[
+    {
+        "id": "sd_VenzcweTArpHLw1P",
+        "type": "tab",
+        "createdDate": "2024-09-08T22:33:33.282Z",
+        "label": "edit_profile",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_JgyRBkRN3y1TgJS6",
+        "type": "OnInit",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_JgyRBkRN3y1TgJS6",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_zZbFXjqfFF4D2qLR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_zZbFXjqfFF4D2qLR",
+        "type": "PageVariables",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_zZbFXjqfFF4D2qLR",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_YpKvHuzOJX7A70Nt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MhlljBlxFSW8IGgH",
+        "type": "PageVariables",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "results",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "formdata",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "beneficaries1Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "beneficariesForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "dependencyForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "dependency1Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "dependency2Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showbeneficaries1Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "showdependencies1Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "counter",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "1"
+                }
+            },
+            {
+                "textIp": "showdependencies2Form",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            },
+            {
+                "textIp": "hideIcon",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "hideIcon2",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "true"
+                }
+            },
+            {
+                "textIp": "gender",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender1",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender2",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender3",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender4",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "gender5",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "showdependenciesForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_MhlljBlxFSW8IGgH",
+        "category": "Function",
+        "x": 985,
+        "y": 300,
+        "wires": [
+            [
+                "sd_WRH4C8nfvCW2ysVZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Dug2vRdqwEKYndZt",
+        "type": "Environment",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_Dug2vRdqwEKYndZt",
+        "category": "General",
+        "x": 1065,
+        "y": 480,
+        "wires": [
+            [
+                "sd_lvNLqA6tib2KUU18"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lvNLqA6tib2KUU18",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + 'update-user/'+`${page.userData._id}` \n\n\nconsole.log(\"url\", bh.url)\nconsole.log(\"structured d\", bh.structuredData)\n",
+        "functionName": "sd_lvNLqA6tib2KUU18",
+        "category": "Function",
+        "x": 1165,
+        "y": 480,
+        "wires": [
+            [
+                "sd_xBb6i0XCapBH7NP3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xBb6i0XCapBH7NP3",
+        "type": "HttpRequest",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.structuredData",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "structuredData"
+        },
+        "resultMapping": "this.page.results",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "results"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_xBb6i0XCapBH7NP3",
+        "category": "HTTP",
+        "x": 1265,
+        "y": 480,
+        "wires": [
+            [
+                "sd_qdPGbaSjG2Fz6oiL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qdPGbaSjG2Fz6oiL",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"results\", page.results)\n\n",
+        "functionName": "sd_qdPGbaSjG2Fz6oiL",
+        "category": "Function",
+        "x": 1365,
+        "y": 480,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YpKvHuzOJX7A70Nt",
+        "type": "UseDependency",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_YpKvHuzOJX7A70Nt",
+        "category": "Function",
+        "x": 900,
+        "y": 300,
+        "wires": [
+            [
+                "sd_MhlljBlxFSW8IGgH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_WRH4C8nfvCW2ysVZ",
+        "type": "Storage",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userData"
+        },
+        "functionName": "sd_WRH4C8nfvCW2ysVZ",
+        "category": "Storage",
+        "x": 1065,
+        "y": 300,
+        "wires": [
+            [
+                "sd_fzZkHtBt829JtEFx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fzZkHtBt829JtEFx",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"userData==>\",page.userData)\n//console.log(\"depe\", page.userData.dependencies)\n\npage.ben1 = page.userData.beneficaries[0]\npage.ben2 = page.userData.beneficaries[1]\n//console.log(\"ben1\", page.ben1)\n//console.log(\"ben2\", page.ben2)\npage.depe1 = page.userData.dependencies[0]\npage.depe2 = page.userData.dependencies[1]\npage.depe3 = page.userData.dependencies[2]\n//console.log(\"depe1\", page.depe1)\n\npage.formdata = new FormGroup({\n    firstName: new FormControl(page.userData?.firstName || '', [Validators.required]),\n   lastName: new FormControl(page.userData?.lastName || '', [Validators.required]),\n  cellphone: new FormControl(page.userData?.cellphone || '', [Validators.required,Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    idNumber: new FormControl(page.userData?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.userData?.gender || '', [Validators.required]),\n    address: new FormControl(page.userData?.address || '', [Validators.required]),\n    email: new FormControl(page.userData?.email || '', [Validators.required, Validators.email]),\n    packageType: new FormControl(page.userData?.packageType || '', [Validators.required]),\n\n});\n\npage.beneficariesForm = new FormGroup({\n    firstName: new FormControl(page.ben1?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.ben1?.lastName || '', [Validators.required]),\n    idNumber: new FormControl(page.ben1?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.ben1?.gender || '', [Validators.required]),\n    email: new FormControl(page.ben1?.email || '', [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben1?.cellphone || '', [Validators.required,Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben1?.relationship || '', [Validators.required]),\n})\npage.beneficaries1Form = new FormGroup({\n    firstName: new FormControl(page.ben2.firstName, [Validators.required]),\n    lastName: new FormControl(page.ben2.lastName, [Validators.required]),\n    idNumber: new FormControl(page.ben2.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)]),\n    gender: new FormControl(page.ben2.gender || '', [Validators.required]),\n    email: new FormControl(page.ben2.email, [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben2.cellphone, [Validators.required, Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben2.relationship, [Validators.required]),\n})\n\npage.dependencyForm  = new FormGroup({\n    firstName: new FormControl(page.depe1?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe1?.lastName, [Validators.required] ),\n   idNumber: new FormControl(page.depe1?.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)] ),\n    gender: new FormControl(page.depe1?.gender, [Validators.required] ),\n})\n\npage.dependency1Form  = new FormGroup({\n      firstName: new FormControl(page.depe2?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe2?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe2?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe2?.idNumber, [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n})\n\npage.dependency2Form  = new FormGroup({\n      firstName: new FormControl(page.depe3?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe3?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe3?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe3?.idNumber, [Validators.required, Validators.minLength(13),Validators.maxLength(13)]),\n})\n\n//combine beneficaries\npage.beneficary = [page.beneficariesForm.value, page.beneficaries1Form.value ]\n\n//console.log(\"beneficaries\", page.beneficaries)\n\n//combine dependencies\npage.dependencies =[page.dependencyForm.value, page.dependency1Form.value, page.dependency2Form.value]\n//console.log(\"dependencies\", page.dependencies)\n\n//The select\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\n// page.gender = [\n//    {value: 'Male', viewValue: 'Male'},\n//    {value: 'Female', viewValue: 'Female'}\n// ];",
+        "functionName": "sd_fzZkHtBt829JtEFx",
+        "category": "Function",
+        "x": 1165,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YaBBZJtWlPt7bFHB",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Update",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "update",
+        "category": "General",
+        "x": 840,
+        "y": 480,
+        "wires": [
+            [
+                "sd_O0Jk4YGXjcErU5KM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_O0Jk4YGXjcErU5KM",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nbh.structuredData = page.formdata.value\n\nbh.structuredData.beneficaries = page.beneficary\n//console.log(page.beneficary)\n\nbh.structuredData.dependencies = page.dependencies\n\npage.ben2 = page.beneficaries1Form.value\nbh.structuredData.beneficaries[1] = page.ben2 \n\npage.depe2 = page.dependency1Form.value\nbh.structuredData.dependencies[1] = page.depe2\n\npage.depe3 = page.dependency2Form.value\nbh.structuredData.dependencies[2] = page.depe3\n \n\n\n// console.log(\"form\", page.formdata.value)\n\n// console.log(\"ben==>\", page.ben2)\n//console.log(\"structured data: \", bh.structuredData)\n// console.log(\"ben value==>\", page.beneficaries1Form.value)\n\n\n",
+        "functionName": "sd_O0Jk4YGXjcErU5KM",
+        "category": "Function",
+        "x": 945,
+        "y": 480,
+        "wires": [
+            [
+                "sd_Dug2vRdqwEKYndZt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_1Fc2ORtGlIyayrgN",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openBeneficiries",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openBeneficiries",
+        "category": "General",
+        "x": 860,
+        "y": 620,
+        "wires": [
+            [
+                "sd_J9PwgORaWfdJy8li"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_J9PwgORaWfdJy8li",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showbeneficaries1Form = true\npage.hideIcon = false\nconsole.log(\"form\", page.showbeneficaries1Form )\n\n",
+        "functionName": "sd_J9PwgORaWfdJy8li",
+        "category": "Function",
+        "x": 960,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AP7dmceTLRFkhXnN",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "openDependencies",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openDependencies",
+        "category": "General",
+        "x": 860,
+        "y": 740,
+        "wires": [
+            [
+                "sd_POQroE0i2enIYQNx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_POQroE0i2enIYQNx",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showdependenciesForm = true\n\nconsole.log(\"form\", page.showdependencies1Form )\n\npage.counter++\nif(page.counter === 2) {\n    page.showdependencies1Form = true\n   \n}else if (page.counter === 3){\n    page.showdependencies2Form = true\n    page.hideIcon2 = false\n}\n",
+        "functionName": "sd_POQroE0i2enIYQNx",
+        "category": "Function",
+        "x": 980,
+        "y": 740,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_HiU37FLdDCx20drd",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid",
+        "category": "General",
+        "x": 865,
+        "y": 880,
+        "wires": [
+            [
+                "sd_Gc4iT6sFGJajKFo9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_Gc4iT6sFGJajKFo9",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.beneficariesForm.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender = 'Female'\n      page.beneficariesForm.patchValue({\n        gender: page.gender\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender = 'Male'\n     page.beneficariesForm.patchValue({\n        gender: page.gender\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.beneficariesForm.controls.idNumber.value)",
+        "functionName": "sd_Gc4iT6sFGJajKFo9",
+        "category": "Function",
+        "x": 965,
+        "y": 880,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KwgHSz7lqQeEj1N4",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid1",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid1",
+        "category": "General",
+        "x": 845,
+        "y": 1000,
+        "wires": [
+            [
+                "sd_h2grNuNNwlt1Rjir"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_h2grNuNNwlt1Rjir",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.beneficaries1Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender1 = 'Female'\n      page.beneficaries1Form.patchValue({\n        gender: page.gender1\n      })\n      page.beneficaries1Form.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender1 = 'Male'\n      page.beneficaries1Form.patchValue({\n        gender: page.gender1\n      })\n       page.beneficaries1Form.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.beneficaries1Form.controls.idNumber.value)",
+        "functionName": "sd_h2grNuNNwlt1Rjir",
+        "category": "Function",
+        "x": 965,
+        "y": 1000,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jzjiMnGz6dZi6ToK",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid2",
+        "category": "General",
+        "x": 1105,
+        "y": 880,
+        "wires": [
+            [
+                "sd_dYpPTDnv8OXrUBaR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_dYpPTDnv8OXrUBaR",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependencyForm.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender2 = 'Female'\n     page.dependencyForm.patchValue({\n        gender: page.gender2\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender2 = 'Male'\n      page.dependencyForm.patchValue({\n        gender: page.gender2\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id',page.dependencyForm.controls.idNumber.value)",
+        "functionName": "sd_dYpPTDnv8OXrUBaR",
+        "category": "Function",
+        "x": 1225,
+        "y": 880,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ptFntbRK6k6BXB3z",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid3",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid3",
+        "category": "General",
+        "x": 1105,
+        "y": 1020,
+        "wires": [
+            [
+                "sd_bnohEYupJ0AVpzeT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_bnohEYupJ0AVpzeT",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependency1Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender3 = 'Female'\n      page.dependency1Form.patchValue({\n        gender: page.gender3\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender3 = 'Male'\n      page.dependency1Form.patchValue({\n        gender: page.gender3\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id',page.dependency1Form.controls.idNumber.value)",
+        "functionName": "sd_bnohEYupJ0AVpzeT",
+        "category": "Function",
+        "x": 1225,
+        "y": 1020,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zeavhCK92Hm892hh",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "idValid4",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "idValid4",
+        "category": "General",
+        "x": 865,
+        "y": 1120,
+        "wires": [
+            [
+                "sd_j8Q8TFFKldHEDP5b"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_j8Q8TFFKldHEDP5b",
+        "type": "Script",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "    let id = page.dependency2Form.controls.idNumber.value\n    let DOB = id.substring(0, 6)\n    let year = DOB.substring(0, 2)\n    let yeardigit = year.substring(0, 1)\n    let yeardigit2 = year.substring(1, 2)\n    let month = DOB.substring(2, 4)\n    let day = DOB.substring(4,6)\n    let gender = id.substring(6,10)\n    let country = id.substring(10,11)\n    let eight  = id.substring(11,12)\n\n\n    //year\n    if (Number(yeardigit) < 0) {\n    console.log('Invalid ID number')\n      return\n    }\n\n    if (Number(yeardigit2) < 0) {\n      console.log('Invalid ID number')\n      return\n    }\n    //month\n    if (Number(month) <= 12 && Number(month) >= 1) {\n      // valid\n      console.log('valid month')\n    } else {\n      console.log('Invalid ID month')\n      return\n    }\n    //day\n    if (Number(day) <= 31 && Number(day) >= 1) {\n      // valid\n      console.log('valid day')\n    } else {\n      console.log('Invalid ID number')\n      return\n    }\n\n    //gender\n    if (Number(gender) <= 4999 && Number(gender) >= 0) {\n      console.log(\"Female\");\n      page.gender4 = 'Female'\n      page.dependency2Form.patchValue({\n        gender: page.gender4\n      })\n      // page.clientForm.controls.gender.value = \"Female\"\n    } else if (Number(gender) >= 5000 && Number(gender) <= 9999) {\n      console.log(\"Male\");\n      page.gender4 = 'Male'\n      page.dependency2Form.patchValue({\n        gender: page.gender4\n      })\n      // page.clientForm.controls.gender.value = \"Male\"\n    } else {\n     alert('Invalid ID number')\n      return\n    }\n\n  //country\n  if (Number(country) === 1) {\n    console.log(\"citizen\");\n  } else if (Number(country) === 0) {\n    console.log(\"South Africa\");\n  } else {\n    console.log('Invalid ID number')\n    return\n  }\n\n//eight\nif (Number(eight) === 8) {\n  // valid\n  console.log('valid day')\n} else {\n   alert('Invalid ID number')\n  return\n}\n    console.log('valid id', page.dependency2Form.controls.idNumber.value)",
+        "functionName": "sd_j8Q8TFFKldHEDP5b",
+        "category": "Function",
+        "x": 985,
+        "y": 1120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pklcqBCImlsNjMX4",
+        "type": "PageStart",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "cancel",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "cancel",
+        "category": "General",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "sd_tcxBJckGGYZqxWmJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "edit_profileComponent"
+    },
+    {
+        "id": "sd_tcxBJckGGYZqxWmJ",
+        "type": "Navigation",
+        "z": "sd_VenzcweTArpHLw1P",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/client_profile",
+        "functionName": "sd_tcxBJckGGYZqxWmJ",
+        "category": "Navigation",
+        "x": 380,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_profileComponent",
+        "generated": true
+    }
+]

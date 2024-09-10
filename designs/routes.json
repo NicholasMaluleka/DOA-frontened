@@ -57,6 +57,14 @@
                     "component": "schedules_pComponent"
                 },
                 {
+                    "component": "edit_profileComponent",
+                    "path": "edit_profile"
+                },
+                {
+                    "component": "Director_homeComponent",
+                    "path": "director_home"
+                },
+                {
                     "component": "director_claimsComponent",
                     "path": "director_claims"
                 }
@@ -101,6 +109,10 @@
         {
             "path": "view",
             "component": "view_documentComponent"
+        },
+        {
+            "path": "confirm",
+            "component": "confirm_identityComponent"
         },
         {
             "path": "''",

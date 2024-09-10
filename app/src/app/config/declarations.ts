@@ -16,6 +16,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-edit_profileComponent
+import { edit_profileComponent } from '../components/Client/edit_profile.component';
+//CORE_REFERENCE_IMPORT-password_pop_upComponent
+import { password_pop_upComponent } from '../components/Client/password_pop_up.component';
+//CORE_REFERENCE_IMPORT-confirm_identityComponent
+import { confirm_identityComponent } from '../components/Client/confirm_identity.component';
 //CORE_REFERENCE_IMPORT-director_noteComponent
 import { director_noteComponent } from '../components/Director/director_note.component';
 //CORE_REFERENCE_IMPORT-director_claimsComponent
@@ -116,6 +122,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_profileComponent
+  edit_profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent
+  password_pop_upComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-confirm_identityComponent
+  confirm_identityComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-director_noteComponent
   director_noteComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-director_claimsComponent
@@ -227,6 +239,8 @@ export const appRoutes = [
       { path: 'client_claim_form', component: client_claim_formComponent },
       { path: 'payments', component: paymentsComponent },
       { path: 'schedules_p', component: schedules_pComponent },
+      { path: 'edit_profile', component: edit_profileComponent },
+      { path: 'director_home', component: Director_homeComponent },
       { path: 'director_claims', component: director_claimsComponent },
     ],
   },
@@ -237,6 +251,7 @@ export const appRoutes = [
   { path: 'verify-code', component: verify_codeComponent },
   { path: 'reset-password', component: reset_passwordComponent },
   { path: 'view', component: view_documentComponent },
+  { path: 'confirm', component: confirm_identityComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
