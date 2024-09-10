@@ -758,7 +758,8 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "4dbd41ba-ba0c-91cd-38cb-e59bb672f24d",
                                 "isAdvancedChildComponent": true,
-                                "commentid": null,
+                                "isCommented": "true",
+                                "commentid": "1725871696173",
                                 "designerReference": [
                                     {
                                         "_key": "style",

@@ -504,7 +504,7 @@ export class claims_registerComponent {
           undefined
         )
       ) {
-        bh = this.benAndDepenArrayForSelectors(bh);
+        bh = this.benAndDepenArrayForSelectorsAndYear(bh);
       } else {
         bh = await this.sd_0dgCvNhXnv2EDp9O(bh);
       }
@@ -515,7 +515,7 @@ export class claims_registerComponent {
     }
   }
 
-  benAndDepenArrayForSelectors(bh) {
+  benAndDepenArrayForSelectorsAndYear(bh) {
     try {
       const page = this.page; // Dependency
 
@@ -539,16 +539,55 @@ export class claims_registerComponent {
         { value: page.benarray[0], viewValue: page.benarray[0].idNumber },
         { value: page.benarray[1], viewValue: page.benarray[1].idNumber },
       ];
+      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
 
-      bh = this.sd_s7IAxRYDHIXfSJ12(bh);
-      //appendnew_next_benAndDepenArrayForSelectors
+      bh = this.sd_rFvwbwIcneycRJPj(bh);
+      //appendnew_next_benAndDepenArrayForSelectorsAndYear
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_VmZ87Aum2rOPCu6Y');
     }
   }
 
-  async sd_s7IAxRYDHIXfSJ12(bh) {
+  sd_rFvwbwIcneycRJPj(bh) {
+    try {
+      const page = this.page;
+      page.birthyear = parseInt(page.userdata.idNumber.slice(0, 2));
+      //     page.years = page.birthyear - page.year;
+      //     console.log(page.years);
+      //      if (page.newClient[0].packageType == 'Package 1') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '1500';
+      //       } else {
+      //         page.payamount = '3000';
+      //       }
+      //     }
+      //     if (page.newClient[0].packageType == 'Package 2') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '2500';
+      //       } else {
+      //         page.payamount = '5000';
+      //       }
+      //     }
+      //     if (page.newClient[0].packageType == 'Package 3') {
+      //       if (page.years >= -21 && page.years <= 21) {
+      //         page.payamount = '4000';
+      //       } else {
+      //         page.payamount = '10000';
+      //       }
+      //     }
+      //     page.policyClaimsForm.patchValue({
+      //       payoutAmount: page.payamount,
+      //     });
+      bh = this.sd_s7IAxRYDHIXfSJ12(bh);
+      //appendnew_next_sd_rFvwbwIcneycRJPj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rFvwbwIcneycRJPj');
+    }
+  }
+
+  sd_s7IAxRYDHIXfSJ12(bh) {
     try {
       if (
         this.sdService.operators['true'](
@@ -560,127 +599,11 @@ export class claims_registerComponent {
       ) {
         bh = this.forms(bh);
       } else {
-        bh = await this.benForm(bh);
       }
 
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_s7IAxRYDHIXfSJ12');
-    }
-  }
-
-  benForm(bh) {
-    try {
-      const page = this.page; // decesed details
-
-      console.log('BEN');
-
-      page.deceased = new FormGroup({
-        firstName: new FormControl(page.newClient[0].firstName),
-        lastName: new FormControl(page.newClient[0].lastName),
-        idNum: new FormControl(page.newClient[0].idNumber),
-        gender: new FormControl(page.newClient[0].gender),
-        dateOfDeath: new FormControl('', [Validators.required]),
-      });
-      // documents
-      page.idClaimer = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.idDecesed = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bi1663 = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.deathCertificate = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bankDetails = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      //claims form with all information including claimer details
-      page.policyClaimsForm = new FormGroup({
-        firstName: new FormControl(''),
-        lastName: new FormControl(''),
-        idNum: new FormControl(''),
-        gender: new FormControl(''),
-        packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl('R110'),
-        deceased: page.deceased,
-        deceased2: new FormControl(''),
-        idClaimer: page.idClaimer,
-        idClaimer2: new FormControl(''),
-        idDecesed: page.idDecesed,
-        idDeceased2: new FormControl(''),
-        bi1663: page.bi1663,
-        bi16632: new FormControl(''),
-        deathCertificate: page.deathCertificate,
-        deathCetificatify2: new FormControl(''),
-        bankDetails: page.bankDetails,
-        bankDetails2: new FormControl(''),
-        status: new FormControl('pending'),
-        depsId: new FormControl(),
-        beIds: new FormControl(),
-      });
-
-      page.date = new Date();
-
-      console.log('page.deceased', page.deceased);
-
-      bh.url = page.ssdUrl + 'get-users';
-      bh = this.sd_lc7a7aI8KJ997bHn(bh);
-      //appendnew_next_benForm
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Bymc6jPBYuJm79rv');
-    }
-  }
-
-  async sd_lc7a7aI8KJ997bHn(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'get',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.body,
-      };
-      this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_2zMKByS1YzyZkcY2(bh);
-      //appendnew_next_sd_lc7a7aI8KJ997bHn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lc7a7aI8KJ997bHn');
-    }
-  }
-
-  sd_2zMKByS1YzyZkcY2(bh) {
-    try {
-      const page = this.page;
-      page.clients = page.result.filter((item) => item.role === 'client');
-      page.claim = page.clients.find(
-        (client) => client.policyNumber == page.policy
-      );
-      //appendnew_next_sd_2zMKByS1YzyZkcY2
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_2zMKByS1YzyZkcY2');
     }
   }
 
@@ -735,7 +658,7 @@ export class claims_registerComponent {
         idNum: new FormControl(page.newClient[0].idNumber),
         gender: new FormControl(page.newClient[0].gender),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl('R110'),
+        payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
@@ -763,6 +686,39 @@ export class claims_registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_fT4QY8oO9nWmGN5R');
+    }
+  }
+
+  async sd_lc7a7aI8KJ997bHn(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_2zMKByS1YzyZkcY2(bh);
+      //appendnew_next_sd_lc7a7aI8KJ997bHn
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lc7a7aI8KJ997bHn');
+    }
+  }
+
+  sd_2zMKByS1YzyZkcY2(bh) {
+    try {
+      const page = this.page;
+      page.clients = page.result.filter((item) => item.role === 'client');
+      page.claim = page.clients.find(
+        (client) => client.policyNumber == page.policy
+      );
+      //appendnew_next_sd_2zMKByS1YzyZkcY2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2zMKByS1YzyZkcY2');
     }
   }
 
@@ -825,7 +781,7 @@ export class claims_registerComponent {
       page.policyClaimsForm.value.deathCertificate.chunkSize =
         page.deathCetificatifyFile.chunkSize;
 
-      console.log('The val', page.deathCetificatifyFile);
+      // console.log("The val",page.deathCetificatifyFile)
       bh = this.deceasedIdFileInForm(bh);
       //appendnew_next_deathCetificatifyFileInForm
       return bh;
@@ -837,7 +793,7 @@ export class claims_registerComponent {
   deceasedIdFileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.idDecesed._id = page.idclaimerFile._id;
+      page.policyClaimsForm.value.idDecesed._id = page.idDeceasedFile._id;
       page.policyClaimsForm.value.idDecesed.filename =
         page.idDeceasedFile.filename;
       page.policyClaimsForm.value.idDecesed.length = page.idDeceasedFile.length;
@@ -979,10 +935,50 @@ export class claims_registerComponent {
         idNum: page.policyClaimsForm.value.depsId.idNumber,
         gender: page.policyClaimsForm.value.depsId.gender,
       });
+      bh = this.sd_eihSjDYVnMgVKw4J(bh);
       //appendnew_next_sd_YRFsW4mmP13CYVr4
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_YRFsW4mmP13CYVr4');
+    }
+  }
+
+  sd_eihSjDYVnMgVKw4J(bh) {
+    try {
+      const page = this.page;
+      page.birthyear = parseInt(
+        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)
+      );
+      page.years = page.birthyear - page.year;
+      console.log(page.years);
+      if (page.newClient[0].packageType == 'Package 1') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '1500';
+        } else {
+          page.payamount = '3000';
+        }
+      }
+      if (page.newClient[0].packageType == 'Package 2') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '2500';
+        } else {
+          page.payamount = '5000';
+        }
+      }
+      if (page.newClient[0].packageType == 'Package 3') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '4000';
+        } else {
+          page.payamount = '10000';
+        }
+      }
+      page.policyClaimsForm.patchValue({
+        payoutAmount: page.payamount,
+      });
+      //appendnew_next_sd_eihSjDYVnMgVKw4J
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eihSjDYVnMgVKw4J');
     }
   }
 
@@ -1550,7 +1546,7 @@ export class claims_registerComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
+        .open('Bank Details Upload Successful', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -2030,10 +2026,93 @@ export class claims_registerComponent {
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      bh = this.benForm(bh);
       //appendnew_next_sd_nZ3fyQZGNTByR3Yl
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_nZ3fyQZGNTByR3Yl');
+    }
+  }
+
+  benForm(bh) {
+    try {
+      const page = this.page; // decesed details
+
+      console.log('BEN');
+
+      page.deceased = new FormGroup({
+        firstName: new FormControl(page.newClient[0].firstName),
+        lastName: new FormControl(page.newClient[0].lastName),
+        idNum: new FormControl(page.newClient[0].idNumber),
+        gender: new FormControl(page.newClient[0].gender),
+        dateOfDeath: new FormControl('', [Validators.required]),
+      });
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      //claims form with all information including claimer details
+      page.policyClaimsForm = new FormGroup({
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        idNum: new FormControl(''),
+        gender: new FormControl(''),
+        packageType: new FormControl(page.newClient[0].packageType),
+        payoutAmount: new FormControl(''),
+        deceased: page.deceased,
+        deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
+        idDeceased2: new FormControl(''),
+        bi1663: page.bi1663,
+        bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
+        deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
+        bankDetails2: new FormControl(''),
+        status: new FormControl('pending'),
+        depsId: new FormControl(),
+        beIds: new FormControl(),
+      });
+
+      page.date = new Date();
+
+      console.log('page.deceased', page.deceased);
+
+      bh.url = page.ssdUrl + 'get-users';
+      bh = this.sd_lc7a7aI8KJ997bHn(bh);
+      //appendnew_next_benForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Bymc6jPBYuJm79rv');
     }
   }
 

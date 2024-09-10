@@ -137,7 +137,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "forms",
-        "script": "// decesed details\n\nconsole.log(\"PH\")\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(\"\"),\n      lastName: new FormControl( \"\"),\n      idNum :new FormControl(\"\"),\n       gender: new FormControl(\"\"),\n       dateOfDeath:new FormControl( '',[Validators.required]),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1662 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.newClient[0].firstName),\n    lastName:new FormControl(page.newClient[0].lastName),\n    idNum:new FormControl( page.newClient[0].idNumber),\n    gender:new FormControl( page.newClient[0].gender),\n    packageType : new FormControl( page.newClient[0].packageType),\n    payoutAmount :new FormControl('R110'),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1662:page.bi1662,\n    bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\n\nconsole.log(\"PH\")\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(\"\"),\n      lastName: new FormControl( \"\"),\n      idNum :new FormControl(\"\"),\n       gender: new FormControl(\"\"),\n       dateOfDeath:new FormControl( '',[Validators.required]),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1662 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.newClient[0].firstName),\n    lastName:new FormControl(page.newClient[0].lastName),\n    idNum:new FormControl( page.newClient[0].idNumber),\n    gender:new FormControl( page.newClient[0].gender),\n    packageType : new FormControl( page.newClient[0].packageType),\n    payoutAmount :new FormControl(\"\"),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1662:page.bi1662,\n    bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "forms",
         "category": "Function",
         "x": 1225,
@@ -432,15 +432,15 @@
         "z": "sd_N4CyuOQSKrbNKzFe",
         "viewType": "common",
         "nodeType": "flow",
-        "name": "ben and depen array for selectors",
-        "script": "// Dependency\n\npage.fileURL = page.ssdUrl + 'download/'\n\npage.deparray = page.newClient[0].dependencies\nconsole.log(\"depnarray\",page.deparray)\n// beneficary\npage.benarray = page.newClient[0].beneficaries\nconsole.log(\"benearray\",page.benarray)\n\npage.docs = []\n\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\npage.beIds = [\n   {value: page.benarray[0], viewValue: page.benarray[0].idNumber},\n   {value: page.benarray[1], viewValue: page.benarray[1].idNumber}\n];\n\n",
-        "functionName": "benAndDepenArrayForSelectors",
+        "name": "ben and depen array for selectors and year",
+        "script": "// Dependency\n\npage.fileURL = page.ssdUrl + 'download/'\n\npage.deparray = page.newClient[0].dependencies\nconsole.log(\"depnarray\",page.deparray)\n// beneficary\npage.benarray = page.newClient[0].beneficaries\nconsole.log(\"benearray\",page.benarray)\n\npage.docs = []\n\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\npage.beIds = [\n   {value: page.benarray[0], viewValue: page.benarray[0].idNumber},\n   {value: page.benarray[1], viewValue: page.benarray[1].idNumber}\n];\npage.year =parseInt( new Date().getFullYear().toString().slice(-2))\n",
+        "functionName": "benAndDepenArrayForSelectorsAndYear",
         "category": "Function",
-        "x": 965,
-        "y": 40,
+        "x": 905,
+        "y": 20,
         "wires": [
             [
-                "sd_s7IAxRYDHIXfSJ12"
+                "sd_rFvwbwIcneycRJPj"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -485,7 +485,9 @@
         "x": 1905,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_eihSjDYVnMgVKw4J"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -620,9 +622,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -676,7 +676,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "ben form",
-        "script": "// decesed details\n\nconsole.log(\"BEN\")\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.newClient[0].firstName),\n      lastName: new FormControl(page.newClient[0].lastName ),\n      idNum :new FormControl( page.newClient[0].idNumber),\n       gender: new FormControl(page.newClient[0].gender),\n       dateOfDeath:new FormControl( '',[Validators.required]),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1663 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(\"\"),\n    lastName:new FormControl(\"\"),\n    idNum:new FormControl( \"\"),\n    gender:new FormControl(\"\"),\n    packageType : new FormControl( page.newClient[0].packageType),\n    payoutAmount :new FormControl('R110'),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1663:page.bi1663,\n     bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\n\nconsole.log(\"BEN\")\n\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.newClient[0].firstName),\n      lastName: new FormControl(page.newClient[0].lastName ),\n      idNum :new FormControl( page.newClient[0].idNumber),\n       gender: new FormControl(page.newClient[0].gender),\n       dateOfDeath:new FormControl( '',[Validators.required]),\n    })\n    // documents\n  page.idClaimer=new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n     page.idDecesed =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bi1663 =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.deathCertificate =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n      page.bankDetails =new FormGroup({\n   _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"), \n     \n    })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(\"\"),\n    lastName:new FormControl(\"\"),\n    idNum:new FormControl( \"\"),\n    gender:new FormControl(\"\"),\n    packageType : new FormControl( page.newClient[0].packageType),\n    payoutAmount :new FormControl(\"\"),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    idDecesed:page.idDecesed,\n     idDeceased2:new FormControl(''),\n    bi1663:page.bi1663,\n     bi16632:new FormControl(''),\n    deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl (),\n     beIds: new FormControl()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "benForm",
         "category": "Function",
         "x": 1205,
@@ -737,9 +737,7 @@
         "x": 1085,
         "y": 40,
         "wires": [
-            [
-                "sd_Bymc6jPBYuJm79rv"
-            ],
+            [],
             [
                 "sd_fT4QY8oO9nWmGN5R"
             ]
@@ -1478,7 +1476,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "Deceased id file in form",
-        "script": "page.policyClaimsForm.value. idDecesed._id = page.idclaimerFile._id\npage.policyClaimsForm.value. idDecesed.filename = page.idDeceasedFile.filename\npage.policyClaimsForm.value. idDecesed.length = page.idDeceasedFile.length\npage.policyClaimsForm.value. idDecesed.chunkSize = page.idDeceasedFile.chunkSize",
+        "script": "page.policyClaimsForm.value. idDecesed._id = page.idDeceasedFile._id\npage.policyClaimsForm.value. idDecesed.filename = page.idDeceasedFile.filename\npage.policyClaimsForm.value. idDecesed.length = page.idDeceasedFile.length\npage.policyClaimsForm.value. idDecesed.chunkSize = page.idDeceasedFile.chunkSize",
         "functionName": "deceasedIdFileInForm",
         "category": "Function",
         "x": 185,
@@ -1749,7 +1747,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "Death Cetificatify file in form",
-        "script": "page.policyClaimsForm.value.deathCertificate._id = page.deathCetificatifyFile._id\npage.policyClaimsForm.value.deathCertificate.filename = page.deathCetificatifyFile.filename\npage.policyClaimsForm.value.deathCertificate.length = page.deathCetificatifyFile.length\npage.policyClaimsForm.value.deathCertificate.chunkSize = page.deathCetificatifyFile.chunkSize\n\nconsole.log(\"The val\",page.deathCetificatifyFile)",
+        "script": "page.policyClaimsForm.value.deathCertificate._id = page.deathCetificatifyFile._id\npage.policyClaimsForm.value.deathCertificate.filename = page.deathCetificatifyFile.filename\npage.policyClaimsForm.value.deathCertificate.length = page.deathCetificatifyFile.length\npage.policyClaimsForm.value.deathCertificate.chunkSize = page.deathCetificatifyFile.chunkSize\n\n// console.log(\"The val\",page.deathCetificatifyFile)",
         "functionName": "deathCetificatifyFileInForm",
         "category": "Function",
         "x": 105,
@@ -2304,7 +2302,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "bi1663 Upload Successful"
+            "value": "Bank Details Upload Successful"
         },
         "action": {
             "type": "str",
@@ -2315,9 +2313,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -3231,6 +3227,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -3238,8 +3235,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -3255,9 +3254,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_9j0Sbn07mNgWcy1F",
         "category": "HTTP",
@@ -3389,7 +3390,51 @@
         "x": 760,
         "y": 1640,
         "wires": [
+            [
+                "sd_Bymc6jPBYuJm79rv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eihSjDYVnMgVKw4J",
+        "type": "Script",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "   page.birthyear = parseInt(\n        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)\n      );\n      page.years = page.birthyear - page.year;\n      console.log(page.years);\n       if (page.newClient[0].packageType == 'Package 1') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '1500';\n        } else {\n          page.payamount = '3000';\n        }\n      }\n      if (page.newClient[0].packageType == 'Package 2') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '2500';\n        } else {\n          page.payamount = '5000';\n        }\n      }\n      if (page.newClient[0].packageType == 'Package 3') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '4000';\n        } else {\n          page.payamount = '10000';\n        }\n      }\n      page.policyClaimsForm.patchValue({\n        payoutAmount: page.payamount,\n      });",
+        "functionName": "sd_eihSjDYVnMgVKw4J",
+        "category": "Function",
+        "x": 2165,
+        "y": 60,
+        "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rFvwbwIcneycRJPj",
+        "type": "Script",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "   page.birthyear = parseInt(\n        page.userdata.idNumber.slice(0, 2)\n      );\n  //     page.years = page.birthyear - page.year;\n  //     console.log(page.years);\n  //      if (page.newClient[0].packageType == 'Package 1') {\n  //       if (page.years >= -21 && page.years <= 21) {\n  //         page.payamount = '1500';\n  //       } else {\n  //         page.payamount = '3000';\n  //       }\n  //     }\n  //     if (page.newClient[0].packageType == 'Package 2') {\n  //       if (page.years >= -21 && page.years <= 21) {\n  //         page.payamount = '2500';\n  //       } else {\n  //         page.payamount = '5000';\n  //       }\n  //     }\n  //     if (page.newClient[0].packageType == 'Package 3') {\n  //       if (page.years >= -21 && page.years <= 21) {\n  //         page.payamount = '4000';\n  //       } else {\n  //         page.payamount = '10000';\n  //       }\n  //     }\n  //     page.policyClaimsForm.patchValue({\n  //       payoutAmount: page.payamount,\n  //     });",
+        "functionName": "sd_rFvwbwIcneycRJPj",
+        "category": "Function",
+        "x": 1005,
+        "y": 20,
+        "wires": [
+            [
+                "sd_s7IAxRYDHIXfSJ12"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

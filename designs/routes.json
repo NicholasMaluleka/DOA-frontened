@@ -107,6 +107,10 @@
             "component": "view_documentComponent"
         },
         {
+            "path": "confirm",
+            "component": "confirm_identityComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "/DOAServices",
             "pathMatch": "full",
