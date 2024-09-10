@@ -241,7 +241,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sideNav = [\n    {label: \"Plan details\", icon: \"description\", route: \"/dashboard/client_plan_details\"},\n    {label: \"Payment History\", icon: \"edit\", route:\"/dashboard/payments\"},\n    {label: \"Claims\", icon: \"today\", route: \"/claims\"},\n    {label: \"Profile\", icon: \"person\",route: \"/dashboard/client_profile\"},\n\n]",
+        "script": "page.sideNav = [\n    {label: \"Plan details\", icon: \"description\", route: \"/dashboard/client_plan_details\"},\n    {label: \"Payments\", icon: \"payments\", route:\"/dashboard/payments\"},\n    {label: \"Claims\", icon: \"today\", route: \"/dashboard/client_claims\"},\n    {label: \"Profile\", icon: \"person\",route: \"/dashboard/client_profile\"},\n\n]",
         "functionName": "sd_f8zH5EWAPPgeiqT0",
         "category": "Function",
         "x": 465,
@@ -403,7 +403,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/director_home\"},\n    {label: \"Claims\", icon: \"description\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules_p\"},\n]",
+        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/director_home\"},\n    {label: \"Claims\", icon: \"description\", route: \"/dashboard/director_claims\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules_p\"},\n]",
         "functionName": "sd_jrEzCa63HbYBkHlw",
         "category": "Function",
         "x": 465,
@@ -498,6 +498,77 @@
         "wires": [
             [
                 "sd_jIwsW9y1obE9SE6s"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_KcLyiEPpX8qu0XM7",
+        "type": "PageStart",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logout",
+        "category": "General",
+        "x": 65,
+        "y": 360,
+        "wires": [
+            [
+                "sd_q3Z42ywC3bk8vQSa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "sideNavComponent"
+    },
+    {
+        "id": "sd_g9HdCihIW9zKSLFu",
+        "type": "Navigation",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/login",
+        "functionName": "sd_g9HdCihIW9zKSLFu",
+        "category": "Navigation",
+        "x": 225,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "sideNavComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_q3Z42ywC3bk8vQSa",
+        "type": "Storage",
+        "z": "sd_ujStGyjFVkp806yD",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "clear",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {},
+        "value": {},
+        "resultMapping": {},
+        "functionName": "sd_q3Z42ywC3bk8vQSa",
+        "category": "Storage",
+        "x": 145,
+        "y": 360,
+        "wires": [
+            [
+                "sd_g9HdCihIW9zKSLFu"
             ]
         ],
         "__n_excludedFromValidation__": {},
