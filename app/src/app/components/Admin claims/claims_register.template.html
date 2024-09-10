@@ -91,9 +91,9 @@
                 <mat-datepicker #picker [disabled]="false"></mat-datepicker>
                 <mat-error align="start" *ngIf="page.deceased.controls.dateOfDeath?.errors?.required">Date of Death is required</mat-error>
               </mat-form-field>
-              <div fxLayout="column wrap" fxFlex="49" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.selectedClaim"><mat-form-field class="fullWidth" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+              <div fxLayout="column wrap" fxFlex="49" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.selectedClaim &amp;&amp; page.user.role === &apos;admin&apos; ||  page.user.role === &apos;director&apos;"><mat-form-field class="fullWidth" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
                   <mat-label>Update Status</mat-label>
-                  <mat-select formControlName="status" placeholder="Select" [required]="false" [disabled]="false">
+                  <mat-select formControlName="status" placeholder="Select" [required]="false" (selectionChange)="addReason(page.value.status)">
                     <ng-template ngFor let-option [ngForOf]="page.claimStatuses" let-i="index">
                       <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
                     </ng-template>

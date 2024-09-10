@@ -22,6 +22,10 @@ import { edit_profileComponent } from '../components/Client/edit_profile.compone
 import { password_pop_upComponent } from '../components/Client/password_pop_up.component';
 //CORE_REFERENCE_IMPORT-confirm_identityComponent
 import { confirm_identityComponent } from '../components/Client/confirm_identity.component';
+//CORE_REFERENCE_IMPORT-director_noteComponent
+import { director_noteComponent } from '../components/Director/director_note.component';
+//CORE_REFERENCE_IMPORT-director_claimsComponent
+import { director_claimsComponent } from '../components/Director/director_claims.component';
 //CORE_REFERENCE_IMPORT-view_documentComponent
 import { view_documentComponent } from '../components/Authentication/view_document.component';
 //CORE_REFERENCE_IMPORT-schedules_pComponent
@@ -124,6 +128,10 @@ export const appDeclarations = [
   password_pop_upComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-confirm_identityComponent
   confirm_identityComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-director_noteComponent
+  director_noteComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-director_claimsComponent
+  director_claimsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_documentComponent
   view_documentComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-schedules_pComponent
@@ -233,6 +241,7 @@ export const appRoutes = [
       { path: 'schedules_p', component: schedules_pComponent },
       { path: 'edit_profile', component: edit_profileComponent },
       { path: 'director_home', component: Director_homeComponent },
+      { path: 'director_claims', component: director_claimsComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },

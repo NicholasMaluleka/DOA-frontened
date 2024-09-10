@@ -63,6 +63,10 @@
                 {
                     "component": "Director_homeComponent",
                     "path": "director_home"
+                },
+                {
+                    "component": "director_claimsComponent",
+                    "path": "director_claims"
                 }
             ],
             "canActivate": {
