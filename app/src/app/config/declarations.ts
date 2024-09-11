@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-Notifications
+import { Notifications } from '../sd-services/Notifications';
 //CORE_REFERENCE_IMPORT-edit_profileComponent
 import { edit_profileComponent } from '../components/Client/edit_profile.component';
 //CORE_REFERENCE_IMPORT-password_pop_upComponent
@@ -193,6 +195,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-Notifications
+Notifications,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-variables
   variables,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-authorizationService

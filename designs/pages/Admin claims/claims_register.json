@@ -114,6 +114,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "notification",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_8uegiEQyOnacegW8",
@@ -251,7 +258,7 @@
         ],
         "functionName": "sd_VS9kuSjxODDIjqLl",
         "category": "General",
-        "x": 565,
+        "x": 645,
         "y": 40,
         "wires": [
             [
@@ -271,7 +278,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -279,10 +285,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -298,11 +302,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_lc7a7aI8KJ997bHn",
         "category": "HTTP",
@@ -378,10 +380,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "if(page.checked.policyHolder == true) {\n    page.beneficiary = false\n    page.policyHolder = true\n} else {\n    page.beneficiary = true\n    page.policyHolder = false\n}\n\npage.policyNo = page.newClient[0].policyNumber\n",
+        "script": "if(page.checked.policyHolder == true) {\n    page.beneficiary = false\n    page.policyHolder = true\n} else {\n    page.beneficiary = true\n    page.policyHolder = false\n}\n\npage.policyNo = page.newClient[0].policyNumber\n\npage.notification = {\n    \"notificationID\": `NOT-${new Date().getTime()}`,\n    \"claimNumber\": `CN-${page.policyNo}`,\n    \"addedBy\": page.user.role,\n    \"notification\": \"CLAIM has been created sucessfully and pending\"\n}\n",
         "functionName": "sd_t7WBGNUYn2Qn9klf",
         "category": "Function",
-        "x": 485,
+        "x": 565,
         "y": 40,
         "wires": [
             [
@@ -418,7 +420,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_t7WBGNUYn2Qn9klf"
+                "sd_hGyKu4GCZrIhOO7t"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -436,7 +438,7 @@
         "script": "// Dependency\n\npage.fileURL = page.ssdUrl + 'download/'\n\npage.deparray = page.newClient[0].dependencies\nconsole.log(\"depnarray\",page.deparray)\n// beneficary\npage.benarray = page.newClient[0].beneficaries\nconsole.log(\"benearray\",page.benarray)\n\npage.docs = []\n\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\npage.beIds = [\n   {value: page.benarray[0], viewValue: page.benarray[0].idNumber},\n   {value: page.benarray[1], viewValue: page.benarray[1].idNumber}\n];\n\n",
         "functionName": "benAndDepenArrayForSelectors",
         "category": "Function",
-        "x": 965,
+        "x": 985,
         "y": 40,
         "wires": [
             [
@@ -734,7 +736,7 @@
         "outputs": 2,
         "functionName": "sd_s7IAxRYDHIXfSJ12",
         "category": "Function",
-        "x": 1085,
+        "x": 1105,
         "y": 40,
         "wires": [
             [
@@ -2786,7 +2788,7 @@
         "accept_csd": false,
         "functionName": "sd_YYpzaqPjgqnQDOvA",
         "category": "General",
-        "x": 665,
+        "x": 725,
         "y": 40,
         "wires": [
             [
@@ -2824,7 +2826,7 @@
         "outputs": 2,
         "functionName": "sd_FZutB5HUJlZZ3mXi",
         "category": "Function",
-        "x": 745,
+        "x": 805,
         "y": 40,
         "wires": [
             [
@@ -2871,7 +2873,7 @@
         "accept_csd": false,
         "functionName": "sd_0dgCvNhXnv2EDp9O",
         "category": "General",
-        "x": 845,
+        "x": 985,
         "y": 120,
         "wires": [
             [
@@ -2894,7 +2896,7 @@
         "logObject": "this.page.selectedClaim",
         "functionName": "sd_vlg7Jz5xPnAHOlgA",
         "category": "General",
-        "x": 945,
+        "x": 1105,
         "y": 120,
         "wires": [],
         "__ssdTypeInputs__": {
@@ -3231,6 +3233,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -3238,8 +3241,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -3255,9 +3260,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_9j0Sbn07mNgWcy1F",
         "category": "HTTP",
@@ -3324,7 +3331,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -3384,12 +3393,52 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/claims",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_nZ3fyQZGNTByR3Yl",
         "category": "Navigation",
         "x": 760,
         "y": 1640,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "claims_registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hGyKu4GCZrIhOO7t",
+        "type": "Storage",
+        "z": "sd_N4CyuOQSKrbNKzFe",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_hGyKu4GCZrIhOO7t",
+        "category": "Storage",
+        "x": 480,
+        "y": 40,
+        "wires": [
+            [
+                "sd_t7WBGNUYn2Qn9klf"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

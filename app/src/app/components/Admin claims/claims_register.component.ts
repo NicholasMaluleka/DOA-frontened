@@ -420,6 +420,7 @@ export class claims_registerComponent {
       this.page.claimStatuses = undefined;
       this.page.docs = undefined;
       this.page.fileURL = undefined;
+      this.page.notification = undefined;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
@@ -442,11 +443,22 @@ export class claims_registerComponent {
   sd_tRNzeK7FO7O5eZY6(bh) {
     try {
       this.page.newClient = JSON.parse(localStorage.getItem('client'));
-      bh = this.sd_t7WBGNUYn2Qn9klf(bh);
+      bh = this.sd_hGyKu4GCZrIhOO7t(bh);
       //appendnew_next_sd_tRNzeK7FO7O5eZY6
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_tRNzeK7FO7O5eZY6');
+    }
+  }
+
+  sd_hGyKu4GCZrIhOO7t(bh) {
+    try {
+      this.page.user = JSON.parse(localStorage.getItem('user'));
+      bh = this.sd_t7WBGNUYn2Qn9klf(bh);
+      //appendnew_next_sd_hGyKu4GCZrIhOO7t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hGyKu4GCZrIhOO7t');
     }
   }
 
@@ -462,6 +474,13 @@ export class claims_registerComponent {
       }
 
       page.policyNo = page.newClient[0].policyNumber;
+
+      page.notification = {
+        notificationID: `NOT-${new Date().getTime()}`,
+        claimNumber: `CN-${page.policyNo}`,
+        addedBy: page.user.role,
+        notification: 'CLAIM has been created sucessfully and pending',
+      };
 
       bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_t7WBGNUYn2Qn9klf
@@ -2029,7 +2048,9 @@ export class claims_registerComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/claims');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_nZ3fyQZGNTByR3Yl
       return bh;
     } catch (e) {
