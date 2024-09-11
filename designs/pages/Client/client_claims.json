@@ -451,59 +451,6 @@
         "generated": true
     },
     {
-        "id": "sd_80ikP2DpBVCpm4zS",
-        "type": "PageStart",
-        "z": "sd_TWjVL4CJiqaEHkYO",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "reviewClaim",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "claim",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "reviewClaim",
-        "category": "General",
-        "x": 365,
-        "y": 300,
-        "wires": [
-            [
-                "sd_I4zWDUvUV7ID58GE"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claimsComponent"
-    },
-    {
-        "id": "sd_I4zWDUvUV7ID58GE",
-        "type": "Script",
-        "z": "sd_TWjVL4CJiqaEHkYO",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"CLAIM POLICY: \", bh.input.claim)",
-        "functionName": "sd_I4zWDUvUV7ID58GE",
-        "category": "Function",
-        "x": 505,
-        "y": 300,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claimsComponent",
-        "generated": true
-    },
-    {
         "id": "sd_8p3lE7t0dTRlGArU",
         "type": "PageStart",
         "z": "sd_TWjVL4CJiqaEHkYO",
@@ -678,6 +625,124 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7HQQDsDhZXQKqYFH",
+        "type": "PageStart",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "reviewClaim",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "claim",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "reviewClaim",
+        "category": "General",
+        "x": 265,
+        "y": 640,
+        "wires": [
+            [
+                "sd_QasqNkT1ft9xx3g5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_claimsComponent"
+    },
+    {
+        "id": "sd_qJzUhzTofMKIqPSC",
+        "type": "Navigation",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/claim-register",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": {
+            "type": "bh",
+            "value": "routeData"
+        },
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_qJzUhzTofMKIqPSC",
+        "category": "Navigation",
+        "x": 530,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QasqNkT1ft9xx3g5",
+        "type": "Storage",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "claim"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "claim"
+        },
+        "resultMapping": {},
+        "functionName": "sd_QasqNkT1ft9xx3g5",
+        "category": "Storage",
+        "x": 350,
+        "y": 640,
+        "wires": [
+            [
+                "sd_dxNlwJcweptzBBD0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dxNlwJcweptzBBD0",
+        "type": "Script",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.routeData = {isReview: true}",
+        "functionName": "sd_dxNlwJcweptzBBD0",
+        "category": "Function",
+        "x": 430,
+        "y": 640,
+        "wires": [
+            [
+                "sd_qJzUhzTofMKIqPSC"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "client_claimsComponent",

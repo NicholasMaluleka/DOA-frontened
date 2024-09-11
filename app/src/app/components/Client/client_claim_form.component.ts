@@ -884,23 +884,23 @@ export class client_claim_formComponent {
 
       if (page.user.packageType == 'Package 1') {
         if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '1500';
+          page.payamount = 'R 1500';
         } else {
-          page.payamount = '3000';
+          page.payamount = 'R 3000';
         }
       }
       if (page.user.packageType == 'Package 2') {
         if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '2500';
+          page.payamount = 'R 2500';
         } else {
-          page.payamount = '5000';
+          page.payamount = 'R 5000';
         }
       }
       if (page.user.packageType == 'Package 3') {
         if (page.years >= -21 && page.years <= 21) {
-          page.payamount = '4000';
+          page.payamount = 'R 4000';
         } else {
-          page.payamount = '10000';
+          page.payamount = 'R 10000';
         }
       }
       page.policyClaimsForm.patchValue({

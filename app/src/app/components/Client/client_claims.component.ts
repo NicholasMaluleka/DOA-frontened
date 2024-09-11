@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
 import { MatSort } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { confirm_identityComponent } from 'app/components/Client/confirm_identity.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -93,21 +94,6 @@ export class client_claimsComponent implements AfterViewInit {
     }
   }
 
-  reviewClaim(claim: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { claim };
-      bh.local = {};
-      bh = this.sd_I4zWDUvUV7ID58GE(bh);
-      //appendnew_next_reviewClaim
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_80ikP2DpBVCpm4zS');
-    }
-  }
-
   confirmPassword(...others) {
     let bh: any = {};
     try {
@@ -120,6 +106,21 @@ export class client_claimsComponent implements AfterViewInit {
       //appendnew_next_confirmPassword
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8p3lE7t0dTRlGArU');
+    }
+  }
+
+  reviewClaim(claim: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { claim };
+      bh.local = {};
+      bh = this.sd_QasqNkT1ft9xx3g5(bh);
+      //appendnew_next_reviewClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7HQQDsDhZXQKqYFH');
     }
   }
   //appendnew_flow_client_claimsComponent_start
@@ -290,17 +291,6 @@ export class client_claimsComponent implements AfterViewInit {
     }
   }
 
-  sd_I4zWDUvUV7ID58GE(bh) {
-    try {
-      const page = this.page;
-      console.log('CLAIM POLICY: ', bh.input.claim);
-      //appendnew_next_sd_I4zWDUvUV7ID58GE
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_I4zWDUvUV7ID58GE');
-    }
-  }
-
   sd_cCg7LMjTO95FMIW9(bh) {
     try {
       const confirm_identityDialog = this.__page_injector__.get(MatDialog);
@@ -312,6 +302,45 @@ export class client_claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_cCg7LMjTO95FMIW9');
+    }
+  }
+
+  sd_QasqNkT1ft9xx3g5(bh) {
+    try {
+      localStorage.setItem('claim', JSON.stringify(bh.input.claim));
+      bh = this.sd_dxNlwJcweptzBBD0(bh);
+      //appendnew_next_sd_QasqNkT1ft9xx3g5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QasqNkT1ft9xx3g5');
+    }
+  }
+
+  sd_dxNlwJcweptzBBD0(bh) {
+    try {
+      const page = this.page;
+      bh.routeData = { isReview: true };
+      bh = this.sd_qJzUhzTofMKIqPSC(bh);
+      //appendnew_next_sd_dxNlwJcweptzBBD0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dxNlwJcweptzBBD0');
+    }
+  }
+
+  async sd_qJzUhzTofMKIqPSC(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, bh.routeData),
+        });
+      //appendnew_next_sd_qJzUhzTofMKIqPSC
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qJzUhzTofMKIqPSC');
     }
   }
 
