@@ -998,7 +998,9 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_tcxBJckGGYZqxWmJ
       return bh;
     } catch (e) {
