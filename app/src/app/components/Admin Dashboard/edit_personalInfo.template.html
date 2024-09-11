@@ -1,12 +1,12 @@
 <div fxLayout="column wrap" style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="column " style="height:100%" class="scroller-phindile" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:2em">
-      <mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+  <div fxLayout="column " style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:1em">
+      <mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong> Personal Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.formdata">
+        <form [formGroup]="page.formdata" style="margin-top:7px">
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div fxLayout="row wrap" style="margin-bottom:7px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
@@ -54,13 +54,13 @@
             </div>
           </div>
         </form>
-      </mat-expansion-panel><mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+      </mat-expansion-panel><mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong>Beneficary Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.beneficariesForm">
+        <form [formGroup]="page.beneficariesForm" style="margin-top:7px">
           <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
@@ -98,7 +98,7 @@
             </mat-form-field>
           </div>
         </form>
-        <form [formGroup]="page.beneficaries1Form" *ngIf="page.showbeneficaries1Form == true">
+        <form [formGroup]="page.beneficaries1Form" *ngIf="page.showbeneficaries1Form ">
           <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
@@ -136,14 +136,14 @@
             </mat-form-field>
           </div>
         </form>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon"><mat-icon (click)="openBeneficiries()">add_circle</mat-icon></div>
-      </mat-expansion-panel><mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon || !page.showbeneficaries1Form == true"><mat-icon (click)="openBeneficiries()">add_circle</mat-icon></div>
+      </mat-expansion-panel><mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong>Dependency Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.dependencyForm">
+        <form [formGroup]="page.dependencyForm" *ngIf="page.showdependenciesForm" style="margin-top:7px">
           <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
@@ -209,8 +209,8 @@
             </mat-form-field>
           </div>
         </form>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2"><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2 "><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
       </mat-expansion-panel></mat-accordion>
-    <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/home">Cancel</button><button mat-raised-button routerLink="/dashboard/home" (click)="update()">Submit</button></div>
+    <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/home" class="edit-button-alt">Cancel</button><button mat-raised-button class="blue-color yellow-bg" (click)="update()">Submit</button></div>
   </div>
 </div>

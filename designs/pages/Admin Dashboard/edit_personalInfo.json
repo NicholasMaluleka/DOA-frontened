@@ -100,8 +100,8 @@
             {
                 "textIp": "showdependencies1Form",
                 "typedIpValue": {
-                    "type": "this.page",
-                    "value": "false"
+                    "type": "literal",
+                    "value": ""
                 }
             },
             {
@@ -114,8 +114,8 @@
             {
                 "textIp": "showdependencies2Form",
                 "typedIpValue": {
-                    "type": "this.page",
-                    "value": "false"
+                    "type": "literal",
+                    "value": ""
                 }
             },
             {
@@ -129,7 +129,7 @@
                 "textIp": "hideIcon2",
                 "typedIpValue": {
                     "type": "literal",
-                    "value": "true"
+                    "value": ""
                 }
             },
             {
@@ -177,8 +177,8 @@
             {
                 "textIp": "showdependenciesForm",
                 "typedIpValue": {
-                    "type": "this.page",
-                    "value": "false"
+                    "type": "literal",
+                    "value": ""
                 }
             }
         ],
@@ -234,14 +234,14 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'update-user/'+`${page.userData._id}` \n\n\nconsole.log(\"url\", bh.url)\nconsole.log(\"structured d\", bh.structuredData)\n",
+        "script": "bh.url = page.ssdUrl + 'update-user/'+`${page.userData._id}` \n\n\n",
         "functionName": "sd_N2zAqcAwssUX9pC6",
         "category": "Function",
         "x": 385,
         "y": 240,
         "wires": [
             [
-                "sd_bMnbUq5poe9SegbD"
+                "sd_IgHzvdmwQyYasNy8"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -257,7 +257,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -265,10 +264,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -284,15 +281,13 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_bMnbUq5poe9SegbD",
         "category": "HTTP",
-        "x": 485,
+        "x": 665,
         "y": 240,
         "wires": [
             [
@@ -314,10 +309,12 @@
         "script": "console.log(\"results\", page.results)\n\n",
         "functionName": "sd_CrzHebrXy1FWqqr3",
         "category": "Function",
-        "x": 585,
+        "x": 765,
         "y": 240,
         "wires": [
-            []
+            [
+                "sd_XI16n0Leiv1aQkui"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -420,10 +417,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"userData==>\",page.userData)\n//console.log(\"depe\", page.userData.dependencies)\n\npage.ben1 = page.userData.beneficaries[0]\npage.ben2 = page.userData.beneficaries[1]\n//console.log(\"ben1\", page.ben1)\n//console.log(\"ben2\", page.ben2)\npage.depe1 = page.userData.dependencies[0]\npage.depe2 = page.userData.dependencies[1]\npage.depe3 = page.userData.dependencies[2]\n//console.log(\"depe1\", page.depe1)\n\npage.formdata = new FormGroup({\n    firstName: new FormControl(page.userData?.firstName || '', [Validators.required]),\n   lastName: new FormControl(page.userData?.lastName || '', [Validators.required]),\n  cellphone: new FormControl(page.userData?.cellphone || '', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    idNumber: new FormControl(page.userData?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.userData?.gender || '', [Validators.required]),\n    address: new FormControl(page.userData?.address || '', [Validators.required]),\n    email: new FormControl(page.userData?.email || '', [Validators.required, Validators.email]),\n    packageType: new FormControl(page.userData?.packageType || '', [Validators.required]),\n\n});\n\npage.beneficariesForm = new FormGroup({\n    firstName: new FormControl(page.ben1?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.ben1?.lastName || '', [Validators.required]),\n    idNumber: new FormControl(page.ben1?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.ben1?.gender || '', [Validators.required]),\n    email: new FormControl(page.ben1?.email || '', [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben1?.cellphone || '', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben1?.relationship || '', [Validators.required]),\n})\npage.beneficaries1Form = new FormGroup({\n    firstName: new FormControl(page.ben2.firstName, [Validators.required]),\n    lastName: new FormControl(page.ben2.lastName, [Validators.required]),\n    idNumber: new FormControl(page.ben2.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)]),\n    gender: new FormControl(page.ben2.gender || '', [Validators.required]),\n    email: new FormControl(page.ben2.email, [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben2.cellphone, [Validators.required,Validators.minLength(10), Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben2.relationship, [Validators.required]),\n})\n\npage.dependencyForm  = new FormGroup({\n    firstName: new FormControl(page.depe1?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe1?.lastName, [Validators.required] ),\n   idNumber: new FormControl(page.depe1?.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)] ),\n    gender: new FormControl(page.depe1?.gender, [Validators.required] ),\n})\n\npage.dependency1Form  = new FormGroup({\n      firstName: new FormControl(page.depe2?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe2?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe2?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe2?.idNumber, [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n})\n\npage.dependency2Form  = new FormGroup({\n      firstName: new FormControl(page.depe3?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe3?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe3?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe3?.idNumber, [Validators.required, Validators.minLength(13),Validators.maxLength(13)]),\n})\n\n//combine beneficaries\npage.beneficary = [page.beneficariesForm.value, page.beneficaries1Form.value ]\n\n//console.log(\"beneficaries\", page.beneficaries)\n\n//combine dependencies\npage.dependencies =[page.dependencyForm.value, page.dependency1Form.value, page.dependency2Form.value]\n//console.log(\"dependencies\", page.dependencies)\n\n//The select\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\n// page.gender = [\n//    {value: 'Male', viewValue: 'Male'},\n//    {value: 'Female', viewValue: 'Female'}\n// ];",
+        "script": "console.log(\"userData==>\",page.userData)\nconsole.log(\"depe\", page.userData.beneficaries)\n\npage.ben1 = page.userData.beneficaries[0]\npage.ben2 = page.userData.beneficaries[1]\n\n//check if the form has data so that we can display the button\nif(page.ben2.firstName != \"\") {\n    page.showbeneficaries1Form = true\n    page.hideIcon = false\n\n\n}\nelse{\n  page.showbeneficaries1Form = false\n}\n\n//check if the Dependencyform1 has data so that we can display the button\n// if(page.depe2.firstName != \"\") {\n//     page.showdependencies1Form = true\n// }\n// console.log(\"show\", page.depe2)\n\n\n//console.log(\"ben1\", page.ben1)\n//console.log(\"ben2\", page.ben2)\npage.depe1 = page.userData.dependencies[0]\npage.depe2 = page.userData.dependencies[1]\npage.depe3 = page.userData.dependencies[2]\n//console.log(\"depe1\", page.depe1)\n\n///dependencies\n\nif (page.depe1.firstName !== \"\" && page.depe2.firstName !== \"\" && page.depe3.firstName !== \"\") {\n  // Case 1: All forms are not empty\n  page.showdependenciesForm = true;\n  page.showdependencies1Form = true;\n  page.showdependencies2Form = true;\n  page.hideIcon2 = false;  // Hide the add icon\n\n} else if (page.depe1.firstName !== \"\" && page.depe2.firstName !== \"\" && page.depe3.firstName === \"\") {\n  // Case 2: Form 1 and Form 2 are filled, Form 3 is empty\n  page.showdependenciesForm = true;\n  page.showdependencies1Form = true;\n  page.showdependencies2Form = false;\n  page.hideIcon2 = true;  // Show the add icon\n\n} else if (page.depe1.firstName !== \"\" && page.depe2.firstName === \"\" && page.depe3.firstName === \"\") {\n  // Case 3: Form 1 is filled, Forms 2 and 3 are empty\n  page.showdependenciesForm = true;\n  page.showdependencies1Form = false;\n  page.showdependencies2Form = false;\n  page.hideIcon2 = true;  // Show the add icon\n\n} else if (page.depe1.firstName === \"\" && page.depe2.firstName === \"\" && page.depe3.firstName === \"\") {\n  // Case 4: All forms are empty\n  page.showdependenciesForm = true;  // Show the first empty form (Form 1)\n  page.showdependencies1Form = false;\n  page.showdependencies2Form = false;\n  page.hideIcon2 = true;  // Show the add icon\n}\n\n\npage.formdata = new FormGroup({\n    firstName: new FormControl(page.userData?.firstName || '', [Validators.required]),\n   lastName: new FormControl(page.userData?.lastName || '', [Validators.required]),\n  cellphone: new FormControl(page.userData?.cellphone || '', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    idNumber: new FormControl(page.userData?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.userData?.gender || '', [Validators.required]),\n    address: new FormControl(page.userData?.address || '', [Validators.required]),\n    email: new FormControl(page.userData?.email || '', [Validators.required, Validators.email]),\n    packageType: new FormControl(page.userData?.packageType || '', [Validators.required]),\n\n});\n\npage.beneficariesForm = new FormGroup({\n    firstName: new FormControl(page.ben1?.firstName || '', [Validators.required]),\n    lastName: new FormControl(page.ben1?.lastName || '', [Validators.required]),\n    idNumber: new FormControl(page.ben1?.idNumber || '', [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n    gender: new FormControl(page.ben1?.gender || '', [Validators.required]),\n    email: new FormControl(page.ben1?.email || '', [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben1?.cellphone || '', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben1?.relationship || '', [Validators.required]),\n})\npage.beneficaries1Form = new FormGroup({\n    firstName: new FormControl(page.ben2?.firstName ||'', [Validators.required]),\n    lastName: new FormControl(page.ben2.lastName, [Validators.required]),\n    idNumber: new FormControl(page.ben2.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)]),\n    gender: new FormControl(page.ben2.gender || '', [Validators.required]),\n    email: new FormControl(page.ben2.email, [Validators.required,Validators.email]),\n    cellphone: new FormControl(page.ben2.cellphone, [Validators.required,Validators.minLength(10), Validators.maxLength(10),Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(page.ben2.relationship, [Validators.required]),\n})\n\npage.dependencyForm  = new FormGroup({\n    firstName: new FormControl(page.depe1?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe1?.lastName, [Validators.required] ),\n   idNumber: new FormControl(page.depe1?.idNumber, [Validators.required,Validators.minLength(13),Validators.maxLength(13)] ),\n    gender: new FormControl(page.depe1?.gender, [Validators.required] ),\n})\n\npage.dependency1Form  = new FormGroup({\n      firstName: new FormControl(page.depe2?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe2?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe2?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe2?.idNumber, [Validators.required, Validators.minLength(13), Validators.maxLength(13)]),\n})\n\npage.dependency2Form  = new FormGroup({\n      firstName: new FormControl(page.depe3?.firstName, [Validators.required]),\n    lastName: new FormControl(page.depe3?.lastName, [Validators.required]),\n    gender: new FormControl(page.depe3?.gender, [Validators.required]),\n     idNumber: new FormControl(page.depe3?.idNumber, [Validators.required, Validators.minLength(13),Validators.maxLength(13)]),\n})\n\n//combine beneficaries\npage.beneficary = [page.beneficariesForm.value, page.beneficaries1Form.value ]\n\n//console.log(\"beneficaries\", page.beneficaries)\n\n//combine dependencies\npage.dependencies =[page.dependencyForm.value, page.dependency1Form.value, page.dependency2Form.value]\n//console.log(\"dependencies\", page.dependencies)\n\n//The select\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\n// page.gender = [\n//    {value: 'Male', viewValue: 'Male'},\n//    {value: 'Female', viewValue: 'Female'}\n// ];",
         "functionName": "sd_ECrTSDWg9bec5qWR",
         "category": "Function",
-        "x": 385,
+        "x": 365,
         "y": 60,
         "wires": [
             []
@@ -464,7 +461,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\nbh.structuredData = page.formdata.value\n\nbh.structuredData.beneficaries = page.beneficary\n//console.log(page.beneficary)\n\nbh.structuredData.dependencies = page.dependencies\n\npage.ben2 = page.beneficaries1Form.value\nbh.structuredData.beneficaries[1] = page.ben2 \n\npage.depe2 = page.dependency1Form.value\nbh.structuredData.dependencies[1] = page.depe2\n\npage.depe3 = page.dependency2Form.value\nbh.structuredData.dependencies[2] = page.depe3\n \n\n\n// console.log(\"form\", page.formdata.value)\n\n// console.log(\"ben==>\", page.ben2)\n//console.log(\"structured data: \", bh.structuredData)\n// console.log(\"ben value==>\", page.beneficaries1Form.value)\n\n\n",
+        "script": "\nbh.structuredData = page.formdata.value\nconsole.log(\"data\",bh.structuredData )\n\nbh.structuredData.beneficaries = page.beneficary\n\n //Beneficaries\nbh.ben1 = bh.structuredData.beneficaries[0]\npage.ben2 = bh.structuredData.beneficaries[1]\nconsole.log(\"Let's see Juska\",bh.structuredData)\npage.ben2 = page.beneficaries1Form.value\nbh.structuredData.beneficaries[1] = page.ben2 \n\n//Dependencies\nbh.structuredData.dependencies = page.dependencies\n\n\n\npage.depe2 = page.dependency1Form.value\nbh.structuredData.dependencies[1] = page.depe2\n\npage.depe3 = page.dependency2Form.value\nbh.structuredData.dependencies[2] = page.depe3\n\n\n",
         "functionName": "sd_FsVk6s2tPHK0ALhx",
         "category": "Function",
         "x": 165,
@@ -554,7 +551,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.showdependenciesForm = true\n\nconsole.log(\"form\", page.showdependencies1Form )\n\npage.counter++\nif(page.counter === 2) {\n    page.showdependencies1Form = true\n   \n}else if (page.counter === 3){\n    page.showdependencies2Form = true\n    page.hideIcon2 = false\n}\n",
+        "script": "page.showdependenciesForm = true\n\nconsole.log(\"form\", page.showdependencies1Form )\n\npage.counter++\nif(page.counter === 2) {\n    page.showdependencies1Form = true\n   \n}else if (page.counter === 3){\n    page.showdependencies2Form = true\n    page.hideIcon2 = false\n}\n\n",
         "functionName": "sd_WQQZU7S1MJVM0lrL",
         "category": "Function",
         "x": 200,
@@ -779,6 +776,159 @@
         "category": "Function",
         "x": 205,
         "y": 880,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_a0m21vIOdUt6sNY3",
+        "type": "HttpRequest",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.ben1",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "ben1"
+        },
+        "resultMapping": "this.page.result1",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result1"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_a0m21vIOdUt6sNY3",
+        "category": "HTTP",
+        "x": 565,
+        "y": 240,
+        "wires": [
+            [
+                "sd_bMnbUq5poe9SegbD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IgHzvdmwQyYasNy8",
+        "type": "HttpRequest",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.ben2",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "ben2"
+        },
+        "resultMapping": "this.page.result2",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result2"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_IgHzvdmwQyYasNy8",
+        "category": "HTTP",
+        "x": 465,
+        "y": 240,
+        "wires": [
+            [
+                "sd_a0m21vIOdUt6sNY3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XI16n0Leiv1aQkui",
+        "type": "Storage",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "userData"
+        },
+        "value": {
+            "type": "bh",
+            "value": "structuredData"
+        },
+        "resultMapping": {},
+        "functionName": "sd_XI16n0Leiv1aQkui",
+        "category": "Storage",
+        "x": 845,
+        "y": 240,
+        "wires": [
+            [
+                "sd_ah4h46GmePFPc6Xd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "edit_personalInfoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ah4h46GmePFPc6Xd",
+        "type": "Navigation",
+        "z": "sd_aszQuLCFTMEUXpR4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/home",
+        "functionName": "sd_ah4h46GmePFPc6Xd",
+        "category": "Navigation",
+        "x": 925,
+        "y": 240,
         "wires": [
             []
         ],
