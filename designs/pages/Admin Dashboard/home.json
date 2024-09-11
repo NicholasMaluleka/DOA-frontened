@@ -6,7 +6,7 @@
         "label": "home",
         "disabled": false,
         "info": "",
-        "functionSeq": 6,
+        "functionSeq": 9,
         "generateNext": true,
         "serviceName": "homeComponent"
     },
@@ -23,213 +23,12 @@
         "y": 40,
         "wires": [
             [
-                "sd_lu9ZRRD821iOeI1F"
+                "sd_PqjDEZrkZowpbFwi"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_XAIP7JuvVAj0wF4F",
-        "type": "PageVariables",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "tableData.paginator",
-                "typedIpValue": {
-                    "type": "bh",
-                    "value": "pageViews.MatPaginator"
-                }
-            },
-            {
-                "textIp": "tableData.sort",
-                "typedIpValue": {
-                    "type": "bh",
-                    "value": "pageViews.MatSort"
-                }
-            },
-            {
-                "textIp": "backupapplicationsDatasource",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": ""
-                }
-            }
-        ],
-        "functionName": "sd_XAIP7JuvVAj0wF4F",
-        "category": "Function",
-        "x": 685,
-        "y": 40,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_spTRV34Jpqa8LdXM",
-        "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "// bh.local.dataSource = new MatTableDataSource(page.table);\n// this.page.tableData = new MatTableDataSource(this.page.table);",
-        "functionName": "sd_eJuzOUTYKNgXaqdz_1",
-        "category": "Function",
-        "x": 605,
-        "y": 40,
-        "wires": [
-            [
-                "sd_XAIP7JuvVAj0wF4F"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_pC5QoH5IEuEP1VZe",
-        "type": "AfterViewInit",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "start",
-        "name": "",
-        "functionName": "ngAfterViewInit",
-        "category": "Lifecycle Events",
-        "x": 65,
-        "y": 180,
-        "wires": [
-            [
-                "sd_yXzumKKxSbYco4AV"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_yXzumKKxSbYco4AV",
-        "type": "ViewPicker",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "childViewVariables": [
-            {
-                "key": {
-                    "type": "literal",
-                    "value": "MatSort"
-                },
-                "defaultValue": "MatSort",
-                "isViewChildren": false
-            }
-        ],
-        "functionName": "sd_xKCCTWKzvgDN0rx7_1",
-        "category": "Function",
-        "x": 205,
-        "y": 180,
-        "wires": [
-            [
-                "sd_8gLYlYJxO77ugSE3"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_8gLYlYJxO77ugSE3",
-        "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "this.page.table.sort = this.MatSort;",
-        "functionName": "sd_2VNGqvcKee34lvOz_1",
-        "category": "Function",
-        "x": 345,
-        "y": 180,
-        "wires": [
-            [
-                "sd_j9NHkoiSeBkcAAoX"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_j9NHkoiSeBkcAAoX",
-        "type": "ViewPicker",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "childViewVariables": [
-            {
-                "key": {
-                    "type": "literal",
-                    "value": "MatPaginator"
-                },
-                "defaultValue": "MatPaginator",
-                "isViewChildren": false
-            },
-            {
-                "key": {
-                    "type": "literal",
-                    "value": "MatSort"
-                },
-                "defaultValue": "MatSort",
-                "isViewChildren": false
-            }
-        ],
-        "functionName": "sd_xKCCTWKzvgDN0rx7_3",
-        "category": "Function",
-        "x": 445,
-        "y": 180,
-        "wires": [
-            [
-                "sd_n4SpLejeJimyp45K"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_n4SpLejeJimyp45K",
-        "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "this.page.table.paginator = this.MatPaginator;",
-        "functionName": "sd_2VNGqvcKee34lvOz_3",
-        "category": "Function",
-        "x": 565,
-        "y": 180,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
     },
     {
         "id": "sd_SqQamlbgHC0CMDv2",
@@ -250,7 +49,7 @@
         ],
         "functionName": "sd_SqQamlbgHC0CMDv2",
         "category": "General",
-        "x": 285,
+        "x": 525,
         "y": 40,
         "wires": [
             [
@@ -272,7 +71,7 @@
         "script": "bh.url = page.ssdURL + \"get-users\"",
         "functionName": "sd_7gioBFKVWHaZ95Yw",
         "category": "Function",
-        "x": 365,
+        "x": 605,
         "y": 40,
         "wires": [
             [
@@ -327,7 +126,7 @@
         "paramMappingObj": {},
         "functionName": "sd_RRKQV3ETWYI7Umxb",
         "category": "HTTP",
-        "x": 440,
+        "x": 685,
         "y": 40,
         "wires": [
             [
@@ -346,68 +145,14 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\npage.table = bh.tableDataSource \npage.backupapplicationsDatasource = page.table;",
+        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\npage.table = bh.tableDataSource \npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"bh\" ,bh)\n\n",
         "functionName": "sd_sQz2RUgYmK2eNRYZ",
         "category": "Function",
-        "x": 525,
+        "x": 765,
         "y": 40,
         "wires": [
             [
-                "sd_spTRV34Jpqa8LdXM"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_lu9ZRRD821iOeI1F",
-        "type": "PageVariables",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "tableData",
-                "typedIpValue": {
-                    "type": "bh.local",
-                    "value": "dataSource"
-                }
-            },
-            {
-                "textIp": "table",
-                "typedIpValue": {
-                    "type": "literal",
-                    "value": "[]"
-                }
-            },
-            {
-                "textIp": "searchValue",
-                "typedIpValue": {
-                    "type": "literal",
-                    "value": "''"
-                }
-            },
-            {
-                "textIp": "backupapplicationsDatasource",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": ""
-                }
-            }
-        ],
-        "functionName": "sd_E9QbOlnVduPNV5MO_1",
-        "category": "Function",
-        "x": 125,
-        "y": 40,
-        "wires": [
-            [
-                "sd_MVMh0WBg4s6QqZUr"
+                "sd_Q9kpfJBrwcNwMSIq"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -534,17 +279,26 @@
         "propertyType": "bh",
         "propertyGv": "bh.",
         "alias": "",
-        "modules": [],
+        "modules": [
+            {
+                "textIp": "MatPaginatorModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "paginator"
+                },
+                "injectable": false
+            }
+        ],
         "import_all": false,
         "library": "@angular/material/paginator",
         "serviceDesignerType": "pages",
         "functionName": "sd_MVMh0WBg4s6QqZUr",
         "category": "Function",
-        "x": 205,
+        "x": 225,
         "y": 40,
         "wires": [
             [
-                "sd_SqQamlbgHC0CMDv2"
+                "sd_FQOoBfBlmATSyjPd"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -785,6 +539,555 @@
         "category": "Storage",
         "x": 245,
         "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FQOoBfBlmATSyjPd",
+        "type": "UseDependency",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "MatSortModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/material/sort",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_FQOoBfBlmATSyjPd",
+        "category": "Function",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            [
+                "sd_S0vzAMRd3kpQdYu4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Q9kpfJBrwcNwMSIq",
+        "type": "PageVariables",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "table.paginator",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "tableDataSource.paginator"
+                }
+            },
+            {
+                "textIp": "table.sort",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "tableDataSource.sort"
+                }
+            },
+            {
+                "textIp": "backupapplicationsDatasource",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_Q9kpfJBrwcNwMSIq",
+        "category": "Function",
+        "x": 865,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aw4OH46OM1EzQrTS",
+        "type": "PageStart",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "On page change",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "ev",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onPageChange",
+        "category": "General",
+        "x": 465,
+        "y": 180,
+        "wires": [
+            [
+                "sd_av9XUpIkWkjumDhd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_av9XUpIkWkjumDhd",
+        "type": "Script",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.currentPageIndex = bh.input.ev.pageIndex;\nconsole.log(\"current\", page.currentPageIndex)",
+        "functionName": "sd_av9XUpIkWkjumDhd",
+        "category": "Function",
+        "x": 565,
+        "y": 180,
+        "wires": [
+            [
+                "sd_CdCXJ8wOH3CkcJYj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CdCXJ8wOH3CkcJYj",
+        "type": "PageCallService",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_o4ikLTEW12PcNWYL",
+            "type": "tab",
+            "createdDate": "2024-08-18T19:15:05.395Z",
+            "label": "home",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 8
+        },
+        "flow": {
+            "flowId": "sd_6Uycp6i4VVxlHjZ2",
+            "flowName": "updateApplicationToShow"
+        },
+        "inputVariables": [
+            {
+                "key": "itemsPerPage",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "updateApplicationToShow",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": false,
+        "functionName": "sd_CdCXJ8wOH3CkcJYj",
+        "category": "General",
+        "x": 665,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0myDzscgXXTxK4WK",
+        "type": "Script",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.startIndex = page.currentPageIndex * bh.input.itemsPerPage;\nbh.endIndex = bh.startIndex + bh.input.itemsPerPage;\npage.table = page.backupapplicationsDatasource.slice(bh.startIndex, bh.endIndex);",
+        "functionName": "sd_0myDzscgXXTxK4WK",
+        "category": "Function",
+        "x": 585,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6Uycp6i4VVxlHjZ2",
+        "type": "PageStart",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "updateApplicationToShow",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "itemsPerPage",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "updateApplicationToShow",
+        "category": "General",
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "sd_0myDzscgXXTxK4WK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_PifxfaDM06rskNkb",
+        "type": "OnChanges",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "On Changes",
+        "functionName": "ngOnChanges",
+        "category": "Lifecycle Events",
+        "x": 400,
+        "y": 560,
+        "wires": [
+            [
+                "sd_2DIjYQbf6CS17DYx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_2DIjYQbf6CS17DYx",
+        "type": "PageCallService",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_o4ikLTEW12PcNWYL",
+            "type": "tab",
+            "createdDate": "2024-08-18T19:15:05.395Z",
+            "label": "home",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 8
+        },
+        "flow": {
+            "flowId": "sd_aw4OH46OM1EzQrTS",
+            "flowName": "onPageChange"
+        },
+        "inputVariables": [
+            {
+                "key": "ev",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "onPageChange",
+        "inputParams": [
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": false,
+        "functionName": "sd_2DIjYQbf6CS17DYx",
+        "category": "General",
+        "x": 485,
+        "y": 560,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0fGu5LvUcHdhb2Ac",
+        "type": "AfterViewInit",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "ngAfterViewInit",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 756.8020629882812,
+        "wires": [
+            [
+                "sd_wuV2zSw5nsWGD6kg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_wuV2zSw5nsWGD6kg",
+        "type": "ViewPicker",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "childViewVariables": [
+            {
+                "key": {
+                    "type": "literal",
+                    "value": "MatPaginator"
+                },
+                "defaultValue": "MatPaginator",
+                "isViewChildren": false
+            }
+        ],
+        "functionName": "sd_xKCCTWKzvgDN0rx7_9",
+        "category": "Function",
+        "x": 205,
+        "y": 756.8020629882812,
+        "wires": [
+            [
+                "sd_7VuYIUgtmhqPsXpX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7VuYIUgtmhqPsXpX",
+        "type": "Script",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// page.table.paginator = this.MatPaginator;",
+        "functionName": "sd_2VNGqvcKee34lvOz_9",
+        "category": "Function",
+        "x": 345,
+        "y": 756.8020629882812,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PqjDEZrkZowpbFwi",
+        "type": "PageVariables",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "tableData",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "dataSource"
+                }
+            },
+            {
+                "textIp": "table",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "searchValue",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "''"
+                }
+            },
+            {
+                "textIp": "backupapplicationsDatasource",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "currentPageIndex",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_E9QbOlnVduPNV5MO_1",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_MVMh0WBg4s6QqZUr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_S0vzAMRd3kpQdYu4",
+        "type": "UseDependency",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "AfterViewInit",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "ViewChild",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/core",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_S0vzAMRd3kpQdYu4",
+        "category": "Function",
+        "x": 405,
+        "y": 40,
+        "wires": [
+            [
+                "sd_SqQamlbgHC0CMDv2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_MPNk5xxpnKSeR1Jn",
+        "type": "PageStart",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getRowColor",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "row",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getRowColor",
+        "category": "General",
+        "x": 80,
+        "y": 940,
+        "wires": [
+            [
+                "sd_Vk8d9TXjHuPW2ccT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_Vk8d9TXjHuPW2ccT",
+        "type": "Script",
+        "z": "sd_o4ikLTEW12PcNWYL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"input\", bh.input.row.packageType == 'Package 1')\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
+        "functionName": "sd_Vk8d9TXjHuPW2ccT",
+        "category": "Function",
+        "x": 165,
+        "y": 940,
         "wires": [
             []
         ],

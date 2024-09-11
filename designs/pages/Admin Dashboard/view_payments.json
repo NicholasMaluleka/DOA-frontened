@@ -273,7 +273,9 @@
         "x": 365,
         "y": 160,
         "wires": [
-            []
+            [
+                "sd_FhUgDvmUku51uwzV"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -324,6 +326,13 @@
                 "typedIpValue": {
                     "type": "this.page",
                     "value": "table"
+                }
+            },
+            {
+                "textIp": "disabled",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "false"
                 }
             }
         ],
@@ -648,6 +657,7 @@
         "serviceImportPath": "./",
         "startName": "getPayments",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_VtI0lmylmkampM9c",
         "category": "General",
@@ -946,6 +956,7 @@
         "serviceImportPath": "./",
         "startName": "getPayments",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_lPDS2mHFSSLMBItn",
         "category": "General",
@@ -1055,5 +1066,90 @@
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "view_paymentsComponent"
+    },
+    {
+        "id": "sd_rJ0buM9N485gcx6I",
+        "type": "PageStart",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "disable",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "disable",
+        "category": "General",
+        "x": 80,
+        "y": 600,
+        "wires": [
+            [
+                "sd_iJBq2LSBzyX2Dd3G"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_paymentsComponent"
+    },
+    {
+        "id": "sd_iJBq2LSBzyX2Dd3G",
+        "type": "Script",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// if (page.table)\nconsole.log(\"result\",page.result)\n\npage.result.forEach((item:any) => {\n   if (item.date == new Date()) {\n       page.disabled = true;\n   }\n})",
+        "functionName": "sd_iJBq2LSBzyX2Dd3G",
+        "category": "Function",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FhUgDvmUku51uwzV",
+        "type": "PageCallService",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_nsEcp9j2OQxe1WKG",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:31:27.956Z",
+            "label": "view_payments",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 1
+        },
+        "flow": {
+            "flowId": "sd_rJ0buM9N485gcx6I",
+            "flowName": "disable"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "disable",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_FhUgDvmUku51uwzV",
+        "category": "General",
+        "x": 465,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
     }
 ]

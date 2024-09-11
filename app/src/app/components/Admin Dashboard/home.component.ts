@@ -3,10 +3,16 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { AfterViewInit, Component, Injector, ViewChild } from '@angular/core'; //_splitter_
+import {
+  AfterViewInit,
+  Component,
+  Injector,
+  OnChanges,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
-import { MatPaginator } from '@angular/material/paginator'; //_splitter_
-import { MatSort } from '@angular/material/sort'; //_splitter_
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -21,9 +27,7 @@ import { variables } from 'app/sd-services/variables'; //_splitter_
     //appendnew_element_providers
   ],
 })
-export class homeComponent implements AfterViewInit {
-  @ViewChild(MatSort, { read: MatSort })
-  public MatSort: any = null;
+export class homeComponent implements OnChanges, AfterViewInit {
   @ViewChild(MatPaginator, { read: MatPaginator })
   public MatPaginator: any = null;
   page: any = { dep: {} };
@@ -62,18 +66,6 @@ export class homeComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_1t0DhsI5kAmqEWqm');
-    }
-  }
-
-  ngAfterViewInit() {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
-      //appendnew_next_ngAfterViewInit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pC5QoH5IEuEP1VZe');
     }
   }
 
@@ -151,6 +143,75 @@ export class homeComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_nrUbOI69LYzRt4La');
     }
   }
+
+  onPageChange(ev: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { ev };
+      bh.local = {};
+      bh = this.sd_av9XUpIkWkjumDhd(bh);
+      //appendnew_next_onPageChange
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aw4OH46OM1EzQrTS');
+    }
+  }
+
+  updateApplicationToShow(itemsPerPage: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { itemsPerPage };
+      bh.local = {};
+      bh = this.sd_0myDzscgXXTxK4WK(bh);
+      //appendnew_next_updateApplicationToShow
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6Uycp6i4VVxlHjZ2');
+    }
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.changes = changes;
+      bh = this.sd_2DIjYQbf6CS17DYx(bh);
+      //appendnew_next_ngOnChanges
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PifxfaDM06rskNkb');
+    }
+  }
+
+  ngAfterViewInit() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_xKCCTWKzvgDN0rx7_9(bh);
+      //appendnew_next_ngAfterViewInit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0fGu5LvUcHdhb2Ac');
+    }
+  }
+
+  getRowColor(row: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { row };
+      bh.local = {};
+      bh = this.sd_Vk8d9TXjHuPW2ccT(bh);
+      //appendnew_next_getRowColor
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MPNk5xxpnKSeR1Jn');
+    }
+  }
   //appendnew_flow_homeComponent_start
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
@@ -159,21 +220,43 @@ export class homeComponent implements AfterViewInit {
       this.page.table = [];
       this.page.searchValue = '';
       this.page.backupapplicationsDatasource = undefined;
+      this.page.currentPageIndex = undefined;
       bh = this.sd_MVMh0WBg4s6QqZUr(bh);
       //appendnew_next_sd_E9QbOlnVduPNV5MO_1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lu9ZRRD821iOeI1F');
+      return this.errorHandler(bh, e, 'sd_PqjDEZrkZowpbFwi');
     }
   }
 
   sd_MVMh0WBg4s6QqZUr(bh) {
     try {
-      bh = this.sd_SqQamlbgHC0CMDv2(bh);
+      this.page.paginator = MatPaginatorModule;
+      bh = this.sd_FQOoBfBlmATSyjPd(bh);
       //appendnew_next_sd_MVMh0WBg4s6QqZUr
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_MVMh0WBg4s6QqZUr');
+    }
+  }
+
+  sd_FQOoBfBlmATSyjPd(bh) {
+    try {
+      bh = this.sd_S0vzAMRd3kpQdYu4(bh);
+      //appendnew_next_sd_FQOoBfBlmATSyjPd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FQOoBfBlmATSyjPd');
+    }
+  }
+
+  sd_S0vzAMRd3kpQdYu4(bh) {
+    try {
+      bh = this.sd_SqQamlbgHC0CMDv2(bh);
+      //appendnew_next_sd_S0vzAMRd3kpQdYu4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_S0vzAMRd3kpQdYu4');
     }
   }
 
@@ -228,7 +311,10 @@ export class homeComponent implements AfterViewInit {
 
       page.table = bh.tableDataSource;
       page.backupapplicationsDatasource = page.table;
-      bh = this.sd_eJuzOUTYKNgXaqdz_1(bh);
+      page.table.paginator = page.paginator;
+      console.log('bh', bh);
+
+      bh = this.sd_Q9kpfJBrwcNwMSIq(bh);
       //appendnew_next_sd_sQz2RUgYmK2eNRYZ
       return bh;
     } catch (e) {
@@ -236,77 +322,15 @@ export class homeComponent implements AfterViewInit {
     }
   }
 
-  sd_eJuzOUTYKNgXaqdz_1(bh) {
+  sd_Q9kpfJBrwcNwMSIq(bh) {
     try {
-      const page = this.page; // bh.local.dataSource = new MatTableDataSource(page.table);
-      // this.page.tableData = new MatTableDataSource(this.page.table);
-      bh = this.sd_XAIP7JuvVAj0wF4F(bh);
-      //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_spTRV34Jpqa8LdXM');
-    }
-  }
-
-  sd_XAIP7JuvVAj0wF4F(bh) {
-    try {
-      this.page.tableData.paginator = bh.pageViews.MatPaginator;
-      this.page.tableData.sort = bh.pageViews.MatSort;
+      this.page.table.paginator = bh.tableDataSource.paginator;
+      this.page.table.sort = bh.tableDataSource.sort;
       this.page.backupapplicationsDatasource = undefined;
-      //appendnew_next_sd_XAIP7JuvVAj0wF4F
+      //appendnew_next_sd_Q9kpfJBrwcNwMSIq
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_XAIP7JuvVAj0wF4F');
-    }
-  }
-
-  sd_xKCCTWKzvgDN0rx7_1(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatSort: this.MatSort,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yXzumKKxSbYco4AV');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_1(bh) {
-    try {
-      const page = this.page;
-      this.page.table.sort = this.MatSort;
-      bh = this.sd_xKCCTWKzvgDN0rx7_3(bh);
-      //appendnew_next_sd_2VNGqvcKee34lvOz_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8gLYlYJxO77ugSE3');
-    }
-  }
-
-  sd_xKCCTWKzvgDN0rx7_3(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatPaginator: this.MatPaginator,
-        MatSort: this.MatSort,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_3(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_j9NHkoiSeBkcAAoX');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_3(bh) {
-    try {
-      const page = this.page;
-      this.page.table.paginator = this.MatPaginator;
-      //appendnew_next_sd_2VNGqvcKee34lvOz_3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_n4SpLejeJimyp45K');
+      return this.errorHandler(bh, e, 'sd_Q9kpfJBrwcNwMSIq');
     }
   }
 
@@ -428,6 +452,96 @@ export class homeComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_eVczpAOdwofO12md');
+    }
+  }
+
+  sd_av9XUpIkWkjumDhd(bh) {
+    try {
+      const page = this.page;
+      page.currentPageIndex = bh.input.ev.pageIndex;
+      console.log('current', page.currentPageIndex);
+      bh = this.sd_CdCXJ8wOH3CkcJYj(bh);
+      //appendnew_next_sd_av9XUpIkWkjumDhd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_av9XUpIkWkjumDhd');
+    }
+  }
+
+  sd_CdCXJ8wOH3CkcJYj(bh) {
+    try {
+      let outputVariables = this.updateApplicationToShow(undefined);
+
+      //appendnew_next_sd_CdCXJ8wOH3CkcJYj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CdCXJ8wOH3CkcJYj');
+    }
+  }
+
+  sd_0myDzscgXXTxK4WK(bh) {
+    try {
+      const page = this.page;
+      bh.startIndex = page.currentPageIndex * bh.input.itemsPerPage;
+      bh.endIndex = bh.startIndex + bh.input.itemsPerPage;
+      page.table = page.backupapplicationsDatasource.slice(
+        bh.startIndex,
+        bh.endIndex
+      );
+      //appendnew_next_sd_0myDzscgXXTxK4WK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0myDzscgXXTxK4WK');
+    }
+  }
+
+  sd_2DIjYQbf6CS17DYx(bh) {
+    try {
+      let outputVariables = this.onPageChange(undefined);
+
+      //appendnew_next_sd_2DIjYQbf6CS17DYx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2DIjYQbf6CS17DYx');
+    }
+  }
+
+  sd_xKCCTWKzvgDN0rx7_9(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        MatPaginator: this.MatPaginator,
+      });
+      bh = this.sd_2VNGqvcKee34lvOz_9(bh);
+      //appendnew_next_sd_xKCCTWKzvgDN0rx7_9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wuV2zSw5nsWGD6kg');
+    }
+  }
+
+  sd_2VNGqvcKee34lvOz_9(bh) {
+    try {
+      const page = this.page; // page.table.paginator = this.MatPaginator;
+      //appendnew_next_sd_2VNGqvcKee34lvOz_9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7VuYIUgtmhqPsXpX');
+    }
+  }
+
+  sd_Vk8d9TXjHuPW2ccT(bh) {
+    try {
+      const page = this.page;
+      console.log('input', bh.input.row.packageType == 'Package 1');
+      if (bh.input.row.packageType == 'Package 1') {
+        return 'lightblue'; // Change to the color you want for this condition
+      }
+      return ''; // Default color (no color change)
+
+      //appendnew_next_sd_Vk8d9TXjHuPW2ccT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Vk8d9TXjHuPW2ccT');
     }
   }
 
