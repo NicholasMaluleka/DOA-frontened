@@ -4,13 +4,9 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms'; //_splitter_
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -71,70 +67,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = { event };
       bh.local = {};
-      bh = this.sd_QLcNVEufXDm9yCzk(bh);
+      bh = this.sd_PxnKHFtUiUE6Ezgr(bh);
       //appendnew_next_upload1
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_tsaZEG85KHCWHmbM');
-    }
-  }
-
-  upload2(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_WZ8an64kmH8B5AaN(bh);
-      //appendnew_next_upload2
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_LjjP5ZHsyUqvEgKy');
-    }
-  }
-
-  upload3(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_yVtEMq57dPK4i8ud(bh);
-      //appendnew_next_upload3
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PTQevViJvxBFEZ5d');
-    }
-  }
-
-  upload4(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_fpp1hQhsd3hhemZc(bh);
-      //appendnew_next_upload4
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8oc0KCLAijvS6r6c');
-    }
-  }
-
-  upload5(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_uHZiBJcz5vdJ0oUF(bh);
-      //appendnew_next_upload5
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_aHsFT3oNRF3wfbSJ');
+      return this.errorHandler(bh, e, 'sd_eaMbugEjSr6BdxcD');
     }
   }
 
@@ -146,10 +82,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_f8oeVtOuBZNKRkqx(bh);
+      bh = this.sd_5khnoqzpKbg2Y0rb(bh);
       //appendnew_next_goToBackend1
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_K4qFnKvfsDEDVqLG');
+      return this.errorHandler(bh, e, 'sd_XXsnkh2tsBkA97A5');
     }
   }
 
@@ -161,25 +97,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_VVLJsIZ571Px3sUH(bh);
+      bh = this.sd_3oPD9URBTiO6W2ii(bh);
       //appendnew_next_getFromBackend1
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_l93cX96HBR9CW1SP');
-    }
-  }
-
-  populate(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_06WYv6qvZkpO8AyS(bh);
-      //appendnew_next_populate
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ovXzkOsbueGFsAMq');
+      return this.errorHandler(bh, e, 'sd_Lzibvu44Pm3wNe3u');
     }
   }
 
@@ -191,10 +112,55 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_r0hNEVnYUHmLNOnp(bh);
+      bh = this.sd_3VDakwnzEcR5Oup5(bh);
       //appendnew_next_submit
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_wMkFBIk2OjUNSacB');
+      return this.errorHandler(bh, e, 'sd_X2tvjc7ajLK5WAAA');
+    }
+  }
+
+  populate(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_UkF2eDdSpGZvRsan(bh);
+      //appendnew_next_populate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_j83i6QAg4YSl7WWy');
+    }
+  }
+
+  idDisclaimer(e: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { e };
+      bh.local = {};
+      bh = this.sd_1vaiP5kxticWztLy(bh);
+      //appendnew_next_idDisclaimer
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_92tVWfrP7H1u0NES');
+    }
+  }
+
+  upload2(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_73ee5xtOkNsq3vEP(bh);
+      //appendnew_next_upload2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pnK15mb77etqH7CA');
     }
   }
 
@@ -206,10 +172,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_Tqk3Dzb8GXk0vtWT(bh);
+      bh = this.sd_wewTvU6WhQBBHSBk(bh);
       //appendnew_next_goToBackend2
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_K1yY8BQ3wKpL38V8');
+      return this.errorHandler(bh, e, 'sd_0gyGvv2o2gESE0mo');
     }
   }
 
@@ -221,10 +187,25 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_Zr7ApbrY8BVw3K4z(bh);
+      bh = this.sd_WyVw5UYJyDWtPxLj(bh);
       //appendnew_next_getFromBackend2
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ZcNzfwk6naOYxFo7');
+      return this.errorHandler(bh, e, 'sd_4lucjcs88Ubhv4yg');
+    }
+  }
+
+  upload3(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_nxwEEqrPL0IsvOXM(bh);
+      //appendnew_next_upload3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zmI786a5vGe11uPb');
     }
   }
 
@@ -236,10 +217,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_jffnr601fhHLO0XP(bh);
+      bh = this.sd_Q96oFHFmSpuBzor1(bh);
       //appendnew_next_goToBackend3
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RJSFcX8NqqDom8gU');
+      return this.errorHandler(bh, e, 'sd_Qec5RH4oOdWPuIV7');
     }
   }
 
@@ -251,10 +232,25 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_tYyqa5w3E6nFbTzM(bh);
+      bh = this.sd_982Nnir9Q9jmnsmb(bh);
       //appendnew_next_getFromBackend3
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Yt2V8geXkD4yLN2r');
+      return this.errorHandler(bh, e, 'sd_RX8XtGMlBpC2EQ6l');
+    }
+  }
+
+  upload4(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_3nxucOPj5bOTxXO3(bh);
+      //appendnew_next_upload4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lTrUptBcNX171K8e');
     }
   }
 
@@ -266,10 +262,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_zhKlkYUSe5CBZxj5(bh);
+      bh = this.sd_VnNfCHQyLJ455x5S(bh);
       //appendnew_next_goToBackend4
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_wSC63hskqYtAcCtA');
+      return this.errorHandler(bh, e, 'sd_o8djo4nrd8QAXzN6');
     }
   }
 
@@ -281,10 +277,25 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_DGCheBYkhJP8zW8Q(bh);
+      bh = this.sd_wPEJ9ypn913YDfdT(bh);
       //appendnew_next_getFromBackend4
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_00HKennhYNyoALGA');
+      return this.errorHandler(bh, e, 'sd_B5AvWxdnrvMX1dam');
+    }
+  }
+
+  upload5(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_zzVnICILwtHgCSRq(bh);
+      //appendnew_next_upload5
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Ik2gtOwWj2LZYzQp');
     }
   }
 
@@ -296,10 +307,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_qfp37w3njmYTT5Af(bh);
+      bh = this.sd_6sc5R5XAOkzwnQL4(bh);
       //appendnew_next_goToBackend5
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mEufV89LRcfYkTXY');
+      return this.errorHandler(bh, e, 'sd_7D1Kba18fzfeup7M');
     }
   }
 
@@ -311,10 +322,10 @@ export class client_claim_formComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_xXk9gr1CsBwveIKY(bh);
+      bh = this.sd_6wYXUnDjB7qDVWsp(bh);
       //appendnew_next_getFromBackend5
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_oXM8QNYpWlsuUEN9');
+      return this.errorHandler(bh, e, 'sd_Ql7WKBKTcyqku29v');
     }
   }
   //appendnew_flow_client_claim_formComponent_start
@@ -338,6 +349,18 @@ export class client_claim_formComponent {
       this.page.date = undefined;
       this.page.desname = undefined;
       this.page.name = undefined;
+      this.page.loading = false;
+      this.page.uploadedFile1 = undefined;
+      this.page.id = undefined;
+      this.page.showId = false;
+      this.page.showIddes = false;
+      this.page.iddes = undefined;
+      this.page.deathCetificatify = undefined;
+      this.page.showbi1663 = false;
+      this.page.bi1663 = undefined;
+      this.page.showbankDetails = false;
+      this.page.bankDetails = undefined;
+      this.page.mes = 'READING DOCUMENT';
       bh = this.sd_n3Yjb7EcHOgLqxD2(bh);
       //appendnew_next_sd_37zMadhqe6cOjrj2
       return bh;
@@ -386,11 +409,10 @@ export class client_claim_formComponent {
 
   benAndDepenArrayForSelectors(bh) {
     try {
-      const page = this.page; // Dependency
+      const page = this.page;
+      // Dependency
       page.deparray = page.user.dependencies;
-      console.log('depnarray', page.deparray);
-      // beneficary
-
+      // selector deps list
       page.ids = [
         { value: page.deparray[0], viewValue: page.deparray[0].idNumber },
         { value: page.deparray[1], viewValue: page.deparray[1].idNumber },
@@ -413,39 +435,23 @@ export class client_claim_formComponent {
         lastName: new FormControl(''),
         idNum: new FormControl(''),
         gender: new FormControl(''),
-        dateOfDeath: new FormControl('', [Validators.required]),
       });
       // documents
-      page.idClaimer = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.idDecesed = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bi1663 = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.deathCertificate = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
-      page.bankDetails = new FormGroup({
-        _id: new FormControl(''),
-        filename: new FormControl(''),
-        chunkSize: new FormControl(''),
-        length: new FormControl(''),
-      });
+      // page.idClaimer=new FormGroup({
+      //   filename: new FormControl(""),
+      //   })
+      //    page.idDecesed =new FormGroup({
+
+      //   })
+      //     page.bi1662 =new FormGroup({
+
+      //   })
+      //     page.deathCertificate =new FormGroup({
+
+      //   })
+      //     page.bankDetails =new FormGroup({
+
+      //   })
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(page.user.firstName),
@@ -456,15 +462,15 @@ export class client_claim_formComponent {
         payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
-        idClaimer: page.idClaimer,
+        // idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
-        idDecesed: page.idDecesed,
+
         idDeceased2: new FormControl(''),
-        bi1663: page.bi1663,
+
         bi16632: new FormControl(''),
-        deathCertificate: page.deathCertificate,
+        // deathCertificate:page.deathCertificate,
         deathCetificatify2: new FormControl(''),
-        bankDetails: page.bankDetails,
+        // bankDetails :page.bankDetails,
         bankDetails2: new FormControl(''),
         status: new FormControl('pending'),
         depsId: new FormControl(),
@@ -505,7 +511,7 @@ export class client_claim_formComponent {
   sd_DGtQxckWxt0Ra1cO(bh) {
     try {
       const page = this.page;
-      page.policy = 35855297;
+      page.policy = page.policyno;
       page.clients = page.result.filter((item) => item.role === 'client');
       page.claim = page.clients.find(
         (client) => client.policyNumber == page.policy
@@ -529,142 +535,58 @@ export class client_claim_formComponent {
     }
   }
 
-  sd_QLcNVEufXDm9yCzk(bh) {
+  sd_PxnKHFtUiUE6Ezgr(bh) {
     try {
       const page = this.page;
       bh.upload1 = document.getElementById('upload1') as HTMLInputElement;
       if (bh.upload1) {
-        bh.upload.addEventListener('change', (event: Event) => {
+        bh.upload1.addEventListener('change', (event: Event) => {
           const input = event.target as HTMLInputElement;
           if (input.files && input.files.length > 0) {
-            bh.file = input.files[0];
-            page.uploadedFile = new FormData();
-            page.uploadedFile.append('file', bh.file);
+            page.file = input.files[0];
+            page.uploadedFile1 = new FormData();
+            page.uploadedFile1.append('file', page.file);
+            page.id = page.file.name;
+            page.showId = true;
+
             this.goToBackend1();
           }
         });
       }
 
-      //appendnew_next_sd_QLcNVEufXDm9yCzk
+      //appendnew_next_sd_PxnKHFtUiUE6Ezgr
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_QLcNVEufXDm9yCzk');
+      return this.errorHandler(bh, e, 'sd_PxnKHFtUiUE6Ezgr');
     }
   }
 
-  sd_WZ8an64kmH8B5AaN(bh) {
-    try {
-      const page = this.page;
-      bh.upload2 = document.getElementById('upload2') as HTMLInputElement;
-      if (bh.upload2) {
-        bh.upload.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            bh.file = input.files[0];
-            page.uploadedFile = new FormData();
-            page.uploadedFile.append('file', bh.file);
-            this.goToBackend2();
-          }
-        });
-      }
-      //appendnew_next_sd_WZ8an64kmH8B5AaN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WZ8an64kmH8B5AaN');
-    }
-  }
-
-  sd_yVtEMq57dPK4i8ud(bh) {
-    try {
-      const page = this.page;
-      bh.upload3 = document.getElementById('upload3') as HTMLInputElement;
-      if (bh.upload3) {
-        bh.upload.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            bh.file = input.files[0];
-            page.uploadedFile = new FormData();
-            page.uploadedFile.append('file', bh.file);
-            this.goToBackend3();
-          }
-        });
-      }
-      //appendnew_next_sd_yVtEMq57dPK4i8ud
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yVtEMq57dPK4i8ud');
-    }
-  }
-
-  sd_fpp1hQhsd3hhemZc(bh) {
-    try {
-      const page = this.page;
-      bh.upload4 = document.getElementById('upload4') as HTMLInputElement;
-      if (bh.upload4) {
-        bh.upload.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            bh.file = input.files[0];
-            page.uploadedFile = new FormData();
-            page.uploadedFile.append('file', bh.file);
-            this.goToBackend4();
-          }
-        });
-      }
-      //appendnew_next_sd_fpp1hQhsd3hhemZc
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_fpp1hQhsd3hhemZc');
-    }
-  }
-
-  sd_uHZiBJcz5vdJ0oUF(bh) {
-    try {
-      const page = this.page;
-      bh.upload5 = document.getElementById('upload5') as HTMLInputElement;
-      if (bh.upload5) {
-        bh.upload.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            bh.file = input.files[0];
-            page.uploadedFile = new FormData();
-            page.uploadedFile.append('file', bh.file);
-            this.goToBackend5();
-          }
-        });
-      }
-      //appendnew_next_sd_uHZiBJcz5vdJ0oUF
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uHZiBJcz5vdJ0oUF');
-    }
-  }
-
-  sd_f8oeVtOuBZNKRkqx(bh) {
+  sd_5khnoqzpKbg2Y0rb(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_yWU7xpXirWVpkKq3(bh);
-      //appendnew_next_sd_f8oeVtOuBZNKRkqx
+      bh = this.sd_p4B7idTFiqPSmL4H(bh);
+      //appendnew_next_sd_5khnoqzpKbg2Y0rb
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_f8oeVtOuBZNKRkqx');
+      return this.errorHandler(bh, e, 'sd_5khnoqzpKbg2Y0rb');
     }
   }
 
-  sd_yWU7xpXirWVpkKq3(bh) {
+  sd_p4B7idTFiqPSmL4H(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'upload';
+      bh.url = page.ssdUrl + 'verify-doc';
+      page.loading = true;
 
-      bh = this.sd_oVZ7tX3dTddZKKri(bh);
-      //appendnew_next_sd_yWU7xpXirWVpkKq3
+      bh = this.sd_qE3ziIXUvXb5u3JI(bh);
+      //appendnew_next_sd_p4B7idTFiqPSmL4H
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yWU7xpXirWVpkKq3');
+      return this.errorHandler(bh, e, 'sd_p4B7idTFiqPSmL4H');
     }
   }
 
-  async sd_oVZ7tX3dTddZKKri(bh) {
+  async sd_qE3ziIXUvXb5u3JI(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -672,121 +594,85 @@ export class client_claim_formComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.uploadedFile,
+        body: this.page.uploadedFile1,
       };
       bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_PpZPbeWFr2FVYypN(bh);
-      //appendnew_next_sd_oVZ7tX3dTddZKKri
+      bh = this.sd_Ne8LGVdDti9HKdaS(bh);
+      //appendnew_next_sd_qE3ziIXUvXb5u3JI
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_oVZ7tX3dTddZKKri');
+      return this.errorHandler(bh, e, 'sd_qE3ziIXUvXb5u3JI');
     }
   }
 
-  sd_PpZPbeWFr2FVYypN(bh) {
+  sd_Ne8LGVdDti9HKdaS(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+      bh = this.sd_LP359cqvRdXBlyZJ(bh);
+      //appendnew_next_sd_Ne8LGVdDti9HKdaS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Ne8LGVdDti9HKdaS');
+    }
+  }
+
+  async sd_LP359cqvRdXBlyZJ(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Valid Form',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_JrbSwQTnHKOe06CO(bh);
+      } else {
+        bh = await this.sd_YWEx409WHZc5ptpT(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LP359cqvRdXBlyZJ');
+    }
+  }
+
+  sd_JrbSwQTnHKOe06CO(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_lNRBNADEwAftcDMX(bh);
+      //appendnew_next_sd_JrbSwQTnHKOe06CO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JrbSwQTnHKOe06CO');
+    }
+  }
+
+  sd_lNRBNADEwAftcDMX(bh) {
     try {
       const page = this.page;
       sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
       this.getFromBackend1();
-      bh = this.sd_wrqepYnBF7p3QZbY(bh);
-      //appendnew_next_sd_PpZPbeWFr2FVYypN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PpZPbeWFr2FVYypN');
-    }
-  }
-
-  sd_wrqepYnBF7p3QZbY(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('claimer id Upload Successful', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_wrqepYnBF7p3QZbY
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_wrqepYnBF7p3QZbY');
-    }
-  }
-
-  sd_VVLJsIZ571Px3sUH(bh) {
-    try {
-      this.page.idclaimerFile = JSON.parse(sessionStorage.getItem('idClaimer'));
-      //appendnew_next_sd_VVLJsIZ571Px3sUH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_VVLJsIZ571Px3sUH');
-    }
-  }
-
-  sd_06WYv6qvZkpO8AyS(bh) {
-    try {
-      const page = this.page;
-      console.log('helllow', page.policyClaimsForm);
-      bh = this.sd_YC50j0rU933miL4a(bh);
-      //appendnew_next_sd_06WYv6qvZkpO8AyS
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_06WYv6qvZkpO8AyS');
-    }
-  }
-
-  sd_YC50j0rU933miL4a(bh) {
-    try {
-      const page = this.page;
-      page.name = page.policyClaimsForm.value.depsId.firstName;
-      page.surname = page.policyClaimsForm.value.depsId.lastName;
-      page.idnum = page.policyClaimsForm.value.depsId.idNumber;
-      page.gender = page.policyClaimsForm.value.depsId.gender;
-
-      console.log('value', page.name);
-      //appendnew_next_sd_YC50j0rU933miL4a
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YC50j0rU933miL4a');
-    }
-  }
-
-  sd_r0hNEVnYUHmLNOnp(bh) {
-    try {
-      const page = this.page;
-      console.log(page.policyClaimsForm);
-      //appendnew_next_sd_r0hNEVnYUHmLNOnp
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_r0hNEVnYUHmLNOnp');
-    }
-  }
-
-  sd_Tqk3Dzb8GXk0vtWT(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_3qgYgK3Vl1q6kEU2(bh);
-      //appendnew_next_sd_Tqk3Dzb8GXk0vtWT
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Tqk3Dzb8GXk0vtWT');
-    }
-  }
-
-  sd_3qgYgK3Vl1q6kEU2(bh) {
-    try {
-      const page = this.page;
+      console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
+      page.loading = true;
+      page.mes = 'UPLOADING DOCUMENT';
 
-      bh = this.sd_iGhT9Gvd4kWwRArI(bh);
-      //appendnew_next_sd_3qgYgK3Vl1q6kEU2
+      bh = this.sd_5y2VR92b81XEz9tD(bh);
+      //appendnew_next_sd_lNRBNADEwAftcDMX
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3qgYgK3Vl1q6kEU2');
+      return this.errorHandler(bh, e, 'sd_lNRBNADEwAftcDMX');
     }
   }
 
-  async sd_iGhT9Gvd4kWwRArI(bh) {
+  async sd_5y2VR92b81XEz9tD(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -794,84 +680,536 @@ export class client_claim_formComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.uploadedFile,
+        body: this.page.uploadedFile1,
       };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_8IuEk1GWzdNIbGmu(bh);
-      //appendnew_next_sd_iGhT9Gvd4kWwRArI
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_nUpeEDzTzWMcBbWd(bh);
+      //appendnew_next_sd_5y2VR92b81XEz9tD
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iGhT9Gvd4kWwRArI');
+      return this.errorHandler(bh, e, 'sd_5y2VR92b81XEz9tD');
     }
   }
 
-  sd_8IuEk1GWzdNIbGmu(bh) {
+  sd_nUpeEDzTzWMcBbWd(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
-      this.getFromBackend2();
-      bh = this.sd_RzKzqQE9uM1rIutw(bh);
-      //appendnew_next_sd_8IuEk1GWzdNIbGmu
+      page.loading = false;
+      console.log('File uploded', page.res);
+      page.mes = 'READING DOCUMENT';
+      bh = this.sd_l3dQSb0lFtyKLJ9h(bh);
+      //appendnew_next_sd_nUpeEDzTzWMcBbWd
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8IuEk1GWzdNIbGmu');
+      return this.errorHandler(bh, e, 'sd_nUpeEDzTzWMcBbWd');
     }
   }
 
-  sd_RzKzqQE9uM1rIutw(bh) {
+  sd_l3dQSb0lFtyKLJ9h(bh) {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('Deceased Id Upload Successful', 'Ok', {
+        .open('ID has been Uploaded', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      //appendnew_next_sd_RzKzqQE9uM1rIutw
+      //appendnew_next_sd_l3dQSb0lFtyKLJ9h
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RzKzqQE9uM1rIutw');
+      return this.errorHandler(bh, e, 'sd_l3dQSb0lFtyKLJ9h');
     }
   }
 
-  sd_Zr7ApbrY8BVw3K4z(bh) {
+  sd_YWEx409WHZc5ptpT(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('The ID uploaded is Invalid', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_40HsiI8hJlXS22BP(bh);
+      //appendnew_next_sd_YWEx409WHZc5ptpT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YWEx409WHZc5ptpT');
+    }
+  }
+
+  sd_40HsiI8hJlXS22BP(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      page.showId = false;
+      //appendnew_next_sd_40HsiI8hJlXS22BP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_40HsiI8hJlXS22BP');
+    }
+  }
+
+  sd_3oPD9URBTiO6W2ii(bh) {
+    try {
+      this.page.idclaimerFile = JSON.parse(sessionStorage.getItem('idClaimer'));
+      //appendnew_next_sd_3oPD9URBTiO6W2ii
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3oPD9URBTiO6W2ii');
+    }
+  }
+
+  sd_3VDakwnzEcR5Oup5(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'add-claim';
+      console.log('The val', page.policyClaimsForm.value);
+      bh.body = page.policyClaimsForm.value;
+      bh.body['policyNo'] = page.policyno;
+      bh.body.claimNumber = `CN-${page.policyno}`;
+
+      delete bh.body.deathCetificatify2;
+      delete bh.body.deceased2;
+      delete bh.body.idClaimer2;
+      delete bh.body.idDeceased2;
+      delete bh.body.bi16632;
+      delete bh.body.bankDetails2;
+      delete bh.body.depsId;
+      console.log('This is bh body', bh.body);
+      bh = this.fileInForm(bh);
+      //appendnew_next_sd_3VDakwnzEcR5Oup5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3VDakwnzEcR5Oup5');
+    }
+  }
+
+  fileInForm(bh) {
+    try {
+      const page = this.page;
+      page.policyClaimsForm.value['ID'] = page.id;
+      page.policyClaimsForm.value['IDDeceased'] = page.iddes;
+      page.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify;
+      page.policyClaimsForm.value['bi1663'] = page.bi1663;
+      page.policyClaimsForm.value['bankDetails'] = page.bankDetails;
+
+      // console.log("The val",page.deathCetificatifyFile)
+      bh = this.sd_fusyotj2BipM6rO4(bh);
+      //appendnew_next_fileInForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_W355p2xBTUlYo2Vf');
+    }
+  }
+
+  async sd_fusyotj2BipM6rO4(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_ywG8tkpWlVm7FdHY(bh);
+      //appendnew_next_sd_fusyotj2BipM6rO4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fusyotj2BipM6rO4');
+    }
+  }
+
+  sd_ywG8tkpWlVm7FdHY(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Claim Added', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_MRDIkFrFByrv0Qxz(bh);
+      //appendnew_next_sd_ywG8tkpWlVm7FdHY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ywG8tkpWlVm7FdHY');
+    }
+  }
+
+  async sd_MRDIkFrFByrv0Qxz(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_claims');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_MRDIkFrFByrv0Qxz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MRDIkFrFByrv0Qxz');
+    }
+  }
+
+  sd_UkF2eDdSpGZvRsan(bh) {
+    try {
+      const page = this.page;
+      page.deceased.patchValue({
+        firstName: page.policyClaimsForm.value.depsId.firstName,
+        lastName: page.policyClaimsForm.value.depsId.lastName,
+        idNum: page.policyClaimsForm.value.depsId.idNumber,
+        gender: page.policyClaimsForm.value.depsId.gender,
+      });
+      bh = this.sd_DbkzD1Oop0ECjWgI(bh);
+      //appendnew_next_sd_UkF2eDdSpGZvRsan
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UkF2eDdSpGZvRsan');
+    }
+  }
+
+  sd_DbkzD1Oop0ECjWgI(bh) {
+    try {
+      const page = this.page;
+      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
+      page.birthyear = parseInt(
+        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)
+      );
+      page.years = page.birthyear - page.year;
+
+      if (page.user.packageType == 'Package 1') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '1500';
+        } else {
+          page.payamount = '3000';
+        }
+      }
+      if (page.user.packageType == 'Package 2') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '2500';
+        } else {
+          page.payamount = '5000';
+        }
+      }
+      if (page.user.packageType == 'Package 3') {
+        if (page.years >= -21 && page.years <= 21) {
+          page.payamount = '4000';
+        } else {
+          page.payamount = '10000';
+        }
+      }
+      page.policyClaimsForm.patchValue({
+        payoutAmount: page.payamount,
+      });
+      //appendnew_next_sd_DbkzD1Oop0ECjWgI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_DbkzD1Oop0ECjWgI');
+    }
+  }
+
+  sd_1vaiP5kxticWztLy(bh) {
+    try {
+      const page = this.page;
+      let file: File;
+      page.input = bh.input.e.target as HTMLInputElement;
+      file = page.input.files[0];
+      page.file = file;
+
+      // this.goToBackend1()
+      //appendnew_next_sd_1vaiP5kxticWztLy
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1vaiP5kxticWztLy');
+    }
+  }
+
+  sd_73ee5xtOkNsq3vEP(bh) {
+    try {
+      const page = this.page;
+      bh.upload2 = document.getElementById('upload2') as HTMLInputElement;
+      if (bh.upload2) {
+        bh.upload2.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            page.file = input.files[0];
+            page.uploadedFile2 = new FormData();
+            page.uploadedFile2.append('file', page.file);
+            page.iddes = page.file.name;
+            page.showIddes = true;
+
+            this.goToBackend2();
+          }
+        });
+      }
+
+      //appendnew_next_sd_73ee5xtOkNsq3vEP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_73ee5xtOkNsq3vEP');
+    }
+  }
+
+  sd_wewTvU6WhQBBHSBk(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_mfoU0xKdTFiLcrfz(bh);
+      //appendnew_next_sd_wewTvU6WhQBBHSBk
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wewTvU6WhQBBHSBk');
+    }
+  }
+
+  sd_mfoU0xKdTFiLcrfz(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'verify-doc';
+      page.loading = true;
+
+      bh = this.sd_LZJJZ6TTNFPHtebO(bh);
+      //appendnew_next_sd_mfoU0xKdTFiLcrfz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mfoU0xKdTFiLcrfz');
+    }
+  }
+
+  async sd_LZJJZ6TTNFPHtebO(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile2,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_tsW8lZBnVEbfRsXw(bh);
+      //appendnew_next_sd_LZJJZ6TTNFPHtebO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LZJJZ6TTNFPHtebO');
+    }
+  }
+
+  sd_tsW8lZBnVEbfRsXw(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+      bh = this.sd_MvsjtWPguAm4UPCg(bh);
+      //appendnew_next_sd_tsW8lZBnVEbfRsXw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tsW8lZBnVEbfRsXw');
+    }
+  }
+
+  async sd_MvsjtWPguAm4UPCg(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Valid Form',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_s0pOGCbxS3iDT0HA(bh);
+      } else {
+        bh = await this.sd_nfyEelLSfvwLBxfj(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MvsjtWPguAm4UPCg');
+    }
+  }
+
+  sd_s0pOGCbxS3iDT0HA(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_cFaCMy4DZV75DBan(bh);
+      //appendnew_next_sd_s0pOGCbxS3iDT0HA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_s0pOGCbxS3iDT0HA');
+    }
+  }
+
+  sd_cFaCMy4DZV75DBan(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
+      this.getFromBackend1();
+      console.log('response', bh.result);
+      bh.url = page.ssdUrl + 'upload';
+      page.loading = true;
+      page.mes = 'UPLOADING DOCUMENT';
+
+      bh = this.sd_18W5H0dOnfGzmtRm(bh);
+      //appendnew_next_sd_cFaCMy4DZV75DBan
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cFaCMy4DZV75DBan');
+    }
+  }
+
+  async sd_18W5H0dOnfGzmtRm(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile2,
+      };
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_Uu3tgDJTOP1kdw5g(bh);
+      //appendnew_next_sd_18W5H0dOnfGzmtRm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_18W5H0dOnfGzmtRm');
+    }
+  }
+
+  sd_Uu3tgDJTOP1kdw5g(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      console.log('File uploded', page.res);
+      page.mes = 'READING DOCUMENT';
+      bh = this.sd_3HJsYol77bzL8LeN(bh);
+      //appendnew_next_sd_Uu3tgDJTOP1kdw5g
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Uu3tgDJTOP1kdw5g');
+    }
+  }
+
+  sd_3HJsYol77bzL8LeN(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('ID has been Uploaded', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_3HJsYol77bzL8LeN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3HJsYol77bzL8LeN');
+    }
+  }
+
+  sd_nfyEelLSfvwLBxfj(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('The ID uploaded is Invalid', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_4EE4NvtdfAAqABCT(bh);
+      //appendnew_next_sd_nfyEelLSfvwLBxfj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nfyEelLSfvwLBxfj');
+    }
+  }
+
+  sd_4EE4NvtdfAAqABCT(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      page.showIddes = false;
+      //appendnew_next_sd_4EE4NvtdfAAqABCT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4EE4NvtdfAAqABCT');
+    }
+  }
+
+  sd_WyVw5UYJyDWtPxLj(bh) {
     try {
       this.page.idDeceasedFile = JSON.parse(
         sessionStorage.getItem('idDeceased')
       );
-      //appendnew_next_sd_Zr7ApbrY8BVw3K4z
+      //appendnew_next_sd_WyVw5UYJyDWtPxLj
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Zr7ApbrY8BVw3K4z');
+      return this.errorHandler(bh, e, 'sd_WyVw5UYJyDWtPxLj');
     }
   }
 
-  sd_jffnr601fhHLO0XP(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_GLrgtD3yeIvXLGwW(bh);
-      //appendnew_next_sd_jffnr601fhHLO0XP
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_jffnr601fhHLO0XP');
-    }
-  }
-
-  sd_GLrgtD3yeIvXLGwW(bh) {
+  sd_nxwEEqrPL0IsvOXM(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'upload';
+      bh.upload3 = document.getElementById('upload3') as HTMLInputElement;
+      if (bh.upload3) {
+        bh.upload3.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            page.file3 = input.files[0];
+            page.uploadedFile3 = new FormData();
+            page.uploadedFile3.append('file', page.file3);
+            page.deathCetificatify = page.file3.name;
+            page.showdeathCetificatify = true;
 
-      bh = this.sd_FlDtETcu2ZQPzsxt(bh);
-      //appendnew_next_sd_GLrgtD3yeIvXLGwW
+            this.goToBackend3();
+          }
+        });
+      }
+
+      //appendnew_next_sd_nxwEEqrPL0IsvOXM
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_GLrgtD3yeIvXLGwW');
+      return this.errorHandler(bh, e, 'sd_nxwEEqrPL0IsvOXM');
     }
   }
 
-  async sd_FlDtETcu2ZQPzsxt(bh) {
+  sd_Q96oFHFmSpuBzor1(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_2khXacsujptwBtLe(bh);
+      //appendnew_next_sd_Q96oFHFmSpuBzor1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Q96oFHFmSpuBzor1');
+    }
+  }
+
+  sd_2khXacsujptwBtLe(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'verify-doc';
+      page.loading = true;
+
+      bh = this.sd_o6UVMiTVHBuHN4aM(bh);
+      //appendnew_next_sd_2khXacsujptwBtLe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2khXacsujptwBtLe');
+    }
+  }
+
+  async sd_o6UVMiTVHBuHN4aM(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -879,84 +1217,228 @@ export class client_claim_formComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.uploadedFile,
+        body: this.page.uploadedFile3,
       };
       bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_7OcEDNg4nVFoFeIL(bh);
-      //appendnew_next_sd_FlDtETcu2ZQPzsxt
+      bh = this.sd_ljD3WlkR4nR0nJTg(bh);
+      //appendnew_next_sd_o6UVMiTVHBuHN4aM
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FlDtETcu2ZQPzsxt');
+      return this.errorHandler(bh, e, 'sd_o6UVMiTVHBuHN4aM');
     }
   }
 
-  sd_7OcEDNg4nVFoFeIL(bh) {
+  sd_ljD3WlkR4nR0nJTg(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+      bh = this.sd_KLaNrFQDEnF8MX4J(bh);
+      //appendnew_next_sd_ljD3WlkR4nR0nJTg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ljD3WlkR4nR0nJTg');
+    }
+  }
+
+  async sd_KLaNrFQDEnF8MX4J(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Valid Form',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_cD4R2NV3b0OC28Ll(bh);
+      } else {
+        bh = await this.sd_smT3a7j6jt8yaBiH(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KLaNrFQDEnF8MX4J');
+    }
+  }
+
+  sd_cD4R2NV3b0OC28Ll(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_z4s2zTiMY3XzjD0p(bh);
+      //appendnew_next_sd_cD4R2NV3b0OC28Ll
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cD4R2NV3b0OC28Ll');
+    }
+  }
+
+  sd_z4s2zTiMY3XzjD0p(bh) {
     try {
       const page = this.page;
       sessionStorage.setItem('deathCetificatify', JSON.stringify(bh.result));
       this.getFromBackend3();
-      bh = this.sd_BzWZskEmqd87Usvw(bh);
-      //appendnew_next_sd_7OcEDNg4nVFoFeIL
+      console.log('response', bh.result);
+      bh.url = page.ssdUrl + 'upload';
+      page.loading = true;
+      page.mes = 'UPLOADING DOCUMENT';
+
+      bh = this.sd_FlZAGikPa1MP0lYo(bh);
+      //appendnew_next_sd_z4s2zTiMY3XzjD0p
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7OcEDNg4nVFoFeIL');
+      return this.errorHandler(bh, e, 'sd_z4s2zTiMY3XzjD0p');
     }
   }
 
-  sd_BzWZskEmqd87Usvw(bh) {
+  async sd_FlZAGikPa1MP0lYo(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile3,
+      };
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_WuwUSZUIW6SHhWhX(bh);
+      //appendnew_next_sd_FlZAGikPa1MP0lYo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FlZAGikPa1MP0lYo');
+    }
+  }
+
+  sd_WuwUSZUIW6SHhWhX(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      console.log('File uploded', page.res);
+      page.mes = 'READING DOCUMENT';
+      bh = this.sd_uaJ6miQN25EAdeUI(bh);
+      //appendnew_next_sd_WuwUSZUIW6SHhWhX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WuwUSZUIW6SHhWhX');
+    }
+  }
+
+  sd_uaJ6miQN25EAdeUI(bh) {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('Death Cetificatify Upload Successful', 'Ok', {
+        .open('Death Certificate has been Uploaded', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      //appendnew_next_sd_BzWZskEmqd87Usvw
+      //appendnew_next_sd_uaJ6miQN25EAdeUI
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_BzWZskEmqd87Usvw');
+      return this.errorHandler(bh, e, 'sd_uaJ6miQN25EAdeUI');
     }
   }
 
-  sd_tYyqa5w3E6nFbTzM(bh) {
+  sd_smT3a7j6jt8yaBiH(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('The ID uploaded is Invalid', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_R0TmSkOCt6KeBOzq(bh);
+      //appendnew_next_sd_smT3a7j6jt8yaBiH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_smT3a7j6jt8yaBiH');
+    }
+  }
+
+  sd_R0TmSkOCt6KeBOzq(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      page.showdeathCetificatify = false;
+      //appendnew_next_sd_R0TmSkOCt6KeBOzq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_R0TmSkOCt6KeBOzq');
+    }
+  }
+
+  sd_982Nnir9Q9jmnsmb(bh) {
     try {
       this.page.deathCetificatifyFile = JSON.parse(
         sessionStorage.getItem('deathCetificatify')
       );
-      //appendnew_next_sd_tYyqa5w3E6nFbTzM
+      //appendnew_next_sd_982Nnir9Q9jmnsmb
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_tYyqa5w3E6nFbTzM');
+      return this.errorHandler(bh, e, 'sd_982Nnir9Q9jmnsmb');
     }
   }
 
-  sd_zhKlkYUSe5CBZxj5(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_LiY1hThPamh9WiR1(bh);
-      //appendnew_next_sd_zhKlkYUSe5CBZxj5
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zhKlkYUSe5CBZxj5');
-    }
-  }
-
-  sd_LiY1hThPamh9WiR1(bh) {
+  sd_3nxucOPj5bOTxXO3(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'upload';
+      bh.upload4 = document.getElementById('upload4') as HTMLInputElement;
+      if (bh.upload4) {
+        bh.upload4.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            page.file4 = input.files[0];
+            page.uploadedFile4 = new FormData();
+            page.uploadedFile4.append('file', page.file4);
+            page.bi1663 = page.file4.name;
+            page.showbi1663 = true;
 
-      bh = this.sd_95lPDlxlAcLOMpzB(bh);
-      //appendnew_next_sd_LiY1hThPamh9WiR1
+            this.goToBackend4();
+          }
+        });
+      }
+
+      //appendnew_next_sd_3nxucOPj5bOTxXO3
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_LiY1hThPamh9WiR1');
+      return this.errorHandler(bh, e, 'sd_3nxucOPj5bOTxXO3');
     }
   }
 
-  async sd_95lPDlxlAcLOMpzB(bh) {
+  sd_VnNfCHQyLJ455x5S(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_sjdHcjXEEIYbkjVm(bh);
+      //appendnew_next_sd_VnNfCHQyLJ455x5S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VnNfCHQyLJ455x5S');
+    }
+  }
+
+  sd_sjdHcjXEEIYbkjVm(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'verify-doc';
+      page.loading = true;
+
+      bh = this.sd_2KaUyUcFhEDpNac1(bh);
+      //appendnew_next_sd_sjdHcjXEEIYbkjVm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_sjdHcjXEEIYbkjVm');
+    }
+  }
+
+  async sd_2KaUyUcFhEDpNac1(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -964,82 +1446,85 @@ export class client_claim_formComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.uploadedFile,
+        body: this.page.uploadedFile4,
       };
       bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_5PNk7v84esOuVLao(bh);
-      //appendnew_next_sd_95lPDlxlAcLOMpzB
+      bh = this.sd_QrFOU4XrjWDme9mt(bh);
+      //appendnew_next_sd_2KaUyUcFhEDpNac1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_95lPDlxlAcLOMpzB');
+      return this.errorHandler(bh, e, 'sd_2KaUyUcFhEDpNac1');
     }
   }
 
-  sd_5PNk7v84esOuVLao(bh) {
+  sd_QrFOU4XrjWDme9mt(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+      bh = this.sd_p8Z6QmT4kLvX2v3l(bh);
+      //appendnew_next_sd_QrFOU4XrjWDme9mt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QrFOU4XrjWDme9mt');
+    }
+  }
+
+  async sd_p8Z6QmT4kLvX2v3l(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Valid Form',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_eYs4cYC8qnGFQysa(bh);
+      } else {
+        bh = await this.sd_w2g2tTfbmqK2wPyA(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_p8Z6QmT4kLvX2v3l');
+    }
+  }
+
+  sd_eYs4cYC8qnGFQysa(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_P1x5hwR7zK2XSXhe(bh);
+      //appendnew_next_sd_eYs4cYC8qnGFQysa
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eYs4cYC8qnGFQysa');
+    }
+  }
+
+  sd_P1x5hwR7zK2XSXhe(bh) {
     try {
       const page = this.page;
       sessionStorage.setItem('bi1663', JSON.stringify(bh.result));
       this.getFromBackend4();
-      bh = this.sd_swXrcG28dC5Nd7BU(bh);
-      //appendnew_next_sd_5PNk7v84esOuVLao
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_5PNk7v84esOuVLao');
-    }
-  }
-
-  sd_swXrcG28dC5Nd7BU(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_swXrcG28dC5Nd7BU
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_swXrcG28dC5Nd7BU');
-    }
-  }
-
-  sd_DGCheBYkhJP8zW8Q(bh) {
-    try {
-      this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
-      //appendnew_next_sd_DGCheBYkhJP8zW8Q
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_DGCheBYkhJP8zW8Q');
-    }
-  }
-
-  sd_qfp37w3njmYTT5Af(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_0OAlFItkLPiY1Swy(bh);
-      //appendnew_next_sd_qfp37w3njmYTT5Af
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qfp37w3njmYTT5Af');
-    }
-  }
-
-  sd_0OAlFItkLPiY1Swy(bh) {
-    try {
-      const page = this.page;
+      console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
+      page.loading = true;
+      page.mes = 'UPLOADING DOCUMENT';
 
-      bh = this.sd_C7aNRl1zTiQotpoI(bh);
-      //appendnew_next_sd_0OAlFItkLPiY1Swy
+      bh = this.sd_5OwvkSRVRODJRV33(bh);
+      //appendnew_next_sd_P1x5hwR7zK2XSXhe
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_0OAlFItkLPiY1Swy');
+      return this.errorHandler(bh, e, 'sd_P1x5hwR7zK2XSXhe');
     }
   }
 
-  async sd_C7aNRl1zTiQotpoI(bh) {
+  async sd_5OwvkSRVRODJRV33(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -1047,56 +1532,314 @@ export class client_claim_formComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.uploadedFile,
+        body: this.page.uploadedFile4,
       };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_ASlXUnbVzsb7BCdM(bh);
-      //appendnew_next_sd_C7aNRl1zTiQotpoI
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_uQ2ta4AT7dJGjfF6(bh);
+      //appendnew_next_sd_5OwvkSRVRODJRV33
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_C7aNRl1zTiQotpoI');
+      return this.errorHandler(bh, e, 'sd_5OwvkSRVRODJRV33');
     }
   }
 
-  sd_ASlXUnbVzsb7BCdM(bh) {
+  sd_uQ2ta4AT7dJGjfF6(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
-      this.getFromBackend5();
-      bh = this.sd_SjfZLro6q7uB6B9X(bh);
-      //appendnew_next_sd_ASlXUnbVzsb7BCdM
+      page.loading = false;
+      console.log('File uploded', page.res);
+      page.mes = 'READING DOCUMENT';
+      bh = this.sd_WamSMfSAwtQ40Qcm(bh);
+      //appendnew_next_sd_uQ2ta4AT7dJGjfF6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ASlXUnbVzsb7BCdM');
+      return this.errorHandler(bh, e, 'sd_uQ2ta4AT7dJGjfF6');
     }
   }
 
-  sd_SjfZLro6q7uB6B9X(bh) {
+  sd_WamSMfSAwtQ40Qcm(bh) {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
+        .open('bi1663 has been Uploaded', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      //appendnew_next_sd_SjfZLro6q7uB6B9X
+      //appendnew_next_sd_WamSMfSAwtQ40Qcm
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_SjfZLro6q7uB6B9X');
+      return this.errorHandler(bh, e, 'sd_WamSMfSAwtQ40Qcm');
     }
   }
 
-  sd_xXk9gr1CsBwveIKY(bh) {
+  sd_w2g2tTfbmqK2wPyA(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('The ID uploaded is Invalid', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_WsQWFkZpYTmyduU5(bh);
+      //appendnew_next_sd_w2g2tTfbmqK2wPyA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w2g2tTfbmqK2wPyA');
+    }
+  }
+
+  sd_WsQWFkZpYTmyduU5(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      page.showbi1663 = false;
+      //appendnew_next_sd_WsQWFkZpYTmyduU5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WsQWFkZpYTmyduU5');
+    }
+  }
+
+  sd_wPEJ9ypn913YDfdT(bh) {
+    try {
+      this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
+      //appendnew_next_sd_wPEJ9ypn913YDfdT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wPEJ9ypn913YDfdT');
+    }
+  }
+
+  sd_zzVnICILwtHgCSRq(bh) {
+    try {
+      const page = this.page;
+      bh.upload5 = document.getElementById('upload5') as HTMLInputElement;
+      if (bh.upload5) {
+        bh.upload5.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            page.file5 = input.files[0];
+            page.uploadedFile5 = new FormData();
+            page.uploadedFile5.append('file', page.file5);
+            page.bankDetails = page.file5.name;
+            page.showbankDetails = true;
+
+            this.goToBackend5();
+          }
+        });
+      }
+
+      //appendnew_next_sd_zzVnICILwtHgCSRq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zzVnICILwtHgCSRq');
+    }
+  }
+
+  sd_6sc5R5XAOkzwnQL4(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_8GPDFmqkBu3Gj4Jy(bh);
+      //appendnew_next_sd_6sc5R5XAOkzwnQL4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6sc5R5XAOkzwnQL4');
+    }
+  }
+
+  sd_8GPDFmqkBu3Gj4Jy(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'verify-doc';
+      page.loading = true;
+
+      bh = this.sd_jhzXDCIg5uWpdK5F(bh);
+      //appendnew_next_sd_8GPDFmqkBu3Gj4Jy
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8GPDFmqkBu3Gj4Jy');
+    }
+  }
+
+  async sd_jhzXDCIg5uWpdK5F(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile5,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_aeaV09qHXYT8zfS1(bh);
+      //appendnew_next_sd_jhzXDCIg5uWpdK5F
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jhzXDCIg5uWpdK5F');
+    }
+  }
+
+  sd_aeaV09qHXYT8zfS1(bh) {
+    try {
+      const page = this.page;
+      page.loading = true;
+      bh = this.sd_dknOnK0KaoTtUxXE(bh);
+      //appendnew_next_sd_aeaV09qHXYT8zfS1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aeaV09qHXYT8zfS1');
+    }
+  }
+
+  async sd_dknOnK0KaoTtUxXE(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Valid Form',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_J4rvyg7A7tCs8Xee(bh);
+      } else {
+        bh = await this.sd_4vRz6aQfuFLSY8Lm(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dknOnK0KaoTtUxXE');
+    }
+  }
+
+  sd_J4rvyg7A7tCs8Xee(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_t6r7SrhN7R7PePIS(bh);
+      //appendnew_next_sd_J4rvyg7A7tCs8Xee
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_J4rvyg7A7tCs8Xee');
+    }
+  }
+
+  sd_t6r7SrhN7R7PePIS(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
+      this.getFromBackend5();
+      console.log('response', bh.result);
+      bh.url = page.ssdUrl + 'upload';
+      page.loading = true;
+      page.mes = 'UPLOADING DOCUMENT';
+
+      bh = this.sd_qcIw5zhvQL6QMZDv(bh);
+      //appendnew_next_sd_t6r7SrhN7R7PePIS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_t6r7SrhN7R7PePIS');
+    }
+  }
+
+  async sd_qcIw5zhvQL6QMZDv(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile5,
+      };
+      this.page.res = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_aI7RSXUCxplR25t0(bh);
+      //appendnew_next_sd_qcIw5zhvQL6QMZDv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qcIw5zhvQL6QMZDv');
+    }
+  }
+
+  sd_aI7RSXUCxplR25t0(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      console.log('File uploded', page.res);
+      page.mes = 'READING DOCUMENT';
+      bh = this.sd_NtulvwwJ2kNpWD82(bh);
+      //appendnew_next_sd_aI7RSXUCxplR25t0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aI7RSXUCxplR25t0');
+    }
+  }
+
+  sd_NtulvwwJ2kNpWD82(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Bank Details has been Uploaded', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_NtulvwwJ2kNpWD82
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NtulvwwJ2kNpWD82');
+    }
+  }
+
+  sd_4vRz6aQfuFLSY8Lm(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('The ID uploaded is Invalid', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_n8N1PrmtcAhunlAo(bh);
+      //appendnew_next_sd_4vRz6aQfuFLSY8Lm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4vRz6aQfuFLSY8Lm');
+    }
+  }
+
+  sd_n8N1PrmtcAhunlAo(bh) {
+    try {
+      const page = this.page;
+      page.loading = false;
+      page.showbankDetails = false;
+      //appendnew_next_sd_n8N1PrmtcAhunlAo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_n8N1PrmtcAhunlAo');
+    }
+  }
+
+  sd_6wYXUnDjB7qDVWsp(bh) {
     try {
       this.page.bankDetailsFile = JSON.parse(
         sessionStorage.getItem('bankDetails')
       );
-      //appendnew_next_sd_xXk9gr1CsBwveIKY
+      //appendnew_next_sd_6wYXUnDjB7qDVWsp
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xXk9gr1CsBwveIKY');
+      return this.errorHandler(bh, e, 'sd_6wYXUnDjB7qDVWsp');
     }
   }
 

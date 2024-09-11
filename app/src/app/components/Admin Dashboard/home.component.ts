@@ -198,6 +198,20 @@ export class homeComponent implements OnChanges, AfterViewInit {
     }
   }
 
+  getRowColor(row: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { row };
+      bh.local = {};
+      bh = this.sd_Vk8d9TXjHuPW2ccT(bh);
+      //appendnew_next_getRowColor
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MPNk5xxpnKSeR1Jn');
+    }
+  }
   //appendnew_flow_homeComponent_start
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
@@ -512,6 +526,22 @@ export class homeComponent implements OnChanges, AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_7VuYIUgtmhqPsXpX');
+    }
+  }
+
+  sd_Vk8d9TXjHuPW2ccT(bh) {
+    try {
+      const page = this.page;
+      console.log('input', bh.input.row.packageType == 'Package 1');
+      if (bh.input.row.packageType == 'Package 1') {
+        return 'lightblue'; // Change to the color you want for this condition
+      }
+      return ''; // Default color (no color change)
+
+      //appendnew_next_sd_Vk8d9TXjHuPW2ccT
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Vk8d9TXjHuPW2ccT');
     }
   }
 

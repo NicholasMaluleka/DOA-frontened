@@ -1,0 +1,587 @@
+[
+    {
+        "id": "sd_tOi74c2gjDernk3l",
+        "type": "tab",
+        "createdDate": "2024-09-09T08:53:56.178Z",
+        "label": "confirm_identity",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "confirm_identityComponent"
+    },
+    {
+        "id": "sd_uBdAjSEq6sV0TmPm",
+        "type": "OnInit",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_uBdAjSEq6sV0TmPm",
+        "category": "Lifecycle Events",
+        "x": 25,
+        "y": 40,
+        "wires": [
+            [
+                "sd_pd4k2qQdVfhDB5xy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "confirm_identityComponent"
+    },
+    {
+        "id": "sd_lFMbt1k9CtueeArU",
+        "type": "PageVariables",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "passwordForm",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_lFMbt1k9CtueeArU",
+        "category": "Function",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_01wpPlRa2i3NRgvw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pd4k2qQdVfhDB5xy",
+        "type": "UseDependency",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControlName",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_pd4k2qQdVfhDB5xy",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_lFMbt1k9CtueeArU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Gx0RKvee1hp4S16S",
+        "type": "Script",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.passwordForm =new FormGroup({\n  email:new FormControl(page.user.email),\n    password:new FormControl(\"\",[Validators.required , Validators.maxLength(4) ,Validators.minLength(4)] )\n})\n// console.log(\"seeeeee user\", page.user.email)\nconsole.log(\"seeeeee\", page.passwordForm.status)",
+        "functionName": "sd_Gx0RKvee1hp4S16S",
+        "category": "Function",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Rolfawbvl8KV5sTd",
+        "type": "PageStart",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Login",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "form",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "login",
+        "category": "General",
+        "x": 225,
+        "y": 160,
+        "wires": [
+            [
+                "sd_aZqj2V5O6NRbUQJc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "confirm_identityComponent"
+    },
+    {
+        "id": "sd_4OjJQdYZRZApya0H",
+        "type": "Environment",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_4OjJQdYZRZApya0H",
+        "category": "General",
+        "x": 485,
+        "y": 200,
+        "wires": [
+            [
+                "sd_02x9leGQM9r0aPbi"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_02x9leGQM9r0aPbi",
+        "type": "Script",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = page.ssdUrl + 'login'\npage.loading = true",
+        "functionName": "sd_02x9leGQM9r0aPbi",
+        "category": "Function",
+        "x": 565,
+        "y": 180,
+        "wires": [
+            [
+                "sd_waRCs7AfI6KKwrAk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_waRCs7AfI6KKwrAk",
+        "type": "HttpRequest",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.passwordForm.value",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "passwordForm.value"
+        },
+        "resultMapping": "bh.result",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_waRCs7AfI6KKwrAk",
+        "category": "HTTP",
+        "x": 645,
+        "y": 180,
+        "wires": [
+            [
+                "sd_5bBrdrpo1ELjJYio"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hAEQARY2sVbBpkIq",
+        "type": "SnackBar",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "incorrect password"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_hAEQARY2sVbBpkIq",
+        "category": "General",
+        "x": 905,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TSTjkGLws4c5c652",
+        "type": "SnackBar",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "confirmed"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_TSTjkGLws4c5c652",
+        "category": "General",
+        "x": 1005,
+        "y": 260,
+        "wires": [
+            [
+                "sd_Jpfd6dBOhM3agaAl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aZqj2V5O6NRbUQJc",
+        "type": "PageSwitch",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "form.status",
+        "propertyType": "bh.input",
+        "propertyGv": "bh.input.form.status",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "INVALID",
+                "vt": "str",
+                "gv": "\"INVALID\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_aZqj2V5O6NRbUQJc",
+        "category": "Function",
+        "x": 325,
+        "y": 160,
+        "wires": [
+            [
+                "sd_GheoXIsOETsKlEr4"
+            ],
+            [
+                "sd_4OjJQdYZRZApya0H"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5bBrdrpo1ELjJYio",
+        "type": "Script",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.loading = false\n\nconsole.log(\"Result login\", bh.result)",
+        "functionName": "sd_5bBrdrpo1ELjJYio",
+        "category": "Function",
+        "x": 725,
+        "y": 180,
+        "wires": [
+            [
+                "sd_4EYWEckGLzE0WhK3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_oHtAcXLF1cMWRK4g",
+        "type": "Navigation",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/client_claim_form",
+        "functionName": "sd_oHtAcXLF1cMWRK4g",
+        "category": "Navigation",
+        "x": 885,
+        "y": 300,
+        "wires": [
+            [
+                "sd_TSTjkGLws4c5c652"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_01wpPlRa2i3NRgvw",
+        "type": "Storage",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_01wpPlRa2i3NRgvw",
+        "category": "Storage",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Gx0RKvee1hp4S16S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GheoXIsOETsKlEr4",
+        "type": "SnackBar",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Form invalid"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_GheoXIsOETsKlEr4",
+        "category": "General",
+        "x": 500,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4EYWEckGLzE0WhK3",
+        "type": "PageSwitch",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "result.message",
+        "propertyType": "bh",
+        "propertyGv": "bh.result.message",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Password Don't match",
+                "vt": "str",
+                "gv": "\"Password Don't match\""
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_4EYWEckGLzE0WhK3",
+        "category": "Function",
+        "x": 805,
+        "y": 180,
+        "wires": [
+            [
+                "sd_hAEQARY2sVbBpkIq"
+            ],
+            [
+                "sd_oHtAcXLF1cMWRK4g"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Jpfd6dBOhM3agaAl",
+        "type": "CloseDialog",
+        "z": "sd_tOi74c2gjDernk3l",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.close",
+        "functionName": "sd_Jpfd6dBOhM3agaAl",
+        "category": "Dialog",
+        "x": 1145,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "close",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "confirm_identityComponent",
+        "generated": true
+    }
+]

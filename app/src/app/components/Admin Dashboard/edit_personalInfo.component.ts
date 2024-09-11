@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -203,18 +204,18 @@ export class edit_personalInfoComponent {
       this.page.dependency1Form = undefined;
       this.page.dependency2Form = undefined;
       this.page.showbeneficaries1Form = this.page.false;
-      this.page.showdependencies1Form = this.page.false;
+      this.page.showdependencies1Form = undefined;
       this.page.counter = 1;
-      this.page.showdependencies2Form = this.page.false;
+      this.page.showdependencies2Form = undefined;
       this.page.hideIcon = true;
-      this.page.hideIcon2 = true;
+      this.page.hideIcon2 = undefined;
       this.page.gender = undefined;
       this.page.gender1 = undefined;
       this.page.gender2 = undefined;
       this.page.gender3 = undefined;
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
-      this.page.showdependenciesForm = this.page.false;
+      this.page.showdependenciesForm = undefined;
       bh = this.sd_JfSFbebXgEzrA6yw(bh);
       //appendnew_next_sd_Y3mN2lQwd5HnEduh
       return bh;
@@ -238,16 +239,75 @@ export class edit_personalInfoComponent {
     try {
       const page = this.page;
       console.log('userData==>', page.userData);
-      //console.log("depe", page.userData.dependencies)
+      console.log('depe', page.userData.beneficaries);
 
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData.beneficaries[1];
+
+      //check if the form has data so that we can display the button
+      if (page.ben2.firstName != '') {
+        page.showbeneficaries1Form = true;
+        page.hideIcon = false;
+      } else {
+        page.showbeneficaries1Form = false;
+      }
+
+      //check if the Dependencyform1 has data so that we can display the button
+      // if(page.depe2.firstName != "") {
+      //     page.showdependencies1Form = true
+      // }
+      // console.log("show", page.depe2)
+
       //console.log("ben1", page.ben1)
       //console.log("ben2", page.ben2)
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData.dependencies[1];
       page.depe3 = page.userData.dependencies[2];
       //console.log("depe1", page.depe1)
+
+      ///dependencies
+
+      if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName !== '' &&
+        page.depe3.firstName !== ''
+      ) {
+        // Case 1: All forms are not empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = true;
+        page.showdependencies2Form = true;
+        page.hideIcon2 = false; // Hide the add icon
+      } else if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName !== '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = true;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      } else if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName === '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 3: Form 1 is filled, Forms 2 and 3 are empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = false;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      } else if (
+        page.depe1.firstName === '' &&
+        page.depe2.firstName === '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 4: All forms are empty
+        page.showdependenciesForm = true; // Show the first empty form (Form 1)
+        page.showdependencies1Form = false;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      }
 
       page.formdata = new FormGroup({
         firstName: new FormControl(page.userData?.firstName || '', [
@@ -258,6 +318,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.userData?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -300,6 +361,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -308,7 +370,9 @@ export class edit_personalInfoComponent {
         ]),
       });
       page.beneficaries1Form = new FormGroup({
-        firstName: new FormControl(page.ben2.firstName, [Validators.required]),
+        firstName: new FormControl(page.ben2?.firstName || '', [
+          Validators.required,
+        ]),
         lastName: new FormControl(page.ben2.lastName, [Validators.required]),
         idNumber: new FormControl(page.ben2.idNumber, [
           Validators.required,
@@ -322,6 +386,7 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben2.cellphone, [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -408,26 +473,25 @@ export class edit_personalInfoComponent {
     try {
       const page = this.page;
       bh.structuredData = page.formdata.value;
+      console.log('data', bh.structuredData);
 
       bh.structuredData.beneficaries = page.beneficary;
-      //console.log(page.beneficary)
 
-      bh.structuredData.dependencies = page.dependencies;
-
+      //Beneficaries
+      bh.ben1 = bh.structuredData.beneficaries[0];
+      page.ben2 = bh.structuredData.beneficaries[1];
+      console.log("Let's see Juska", bh.structuredData);
       page.ben2 = page.beneficaries1Form.value;
       bh.structuredData.beneficaries[1] = page.ben2;
+
+      //Dependencies
+      bh.structuredData.dependencies = page.dependencies;
 
       page.depe2 = page.dependency1Form.value;
       bh.structuredData.dependencies[1] = page.depe2;
 
       page.depe3 = page.dependency2Form.value;
       bh.structuredData.dependencies[2] = page.depe3;
-
-      // console.log("form", page.formdata.value)
-
-      // console.log("ben==>", page.ben2)
-      //console.log("structured data: ", bh.structuredData)
-      // console.log("ben value==>", page.beneficaries1Form.value)
 
       bh = this.sd_esjR1J0mKRyRAwFA(bh);
       //appendnew_next_sd_FsVk6s2tPHK0ALhx
@@ -453,14 +517,49 @@ export class edit_personalInfoComponent {
       const page = this.page;
       bh.url = page.ssdUrl + 'update-user/' + `${page.userData._id}`;
 
-      console.log('url', bh.url);
-      console.log('structured d', bh.structuredData);
-
-      bh = this.sd_bMnbUq5poe9SegbD(bh);
+      bh = this.sd_IgHzvdmwQyYasNy8(bh);
       //appendnew_next_sd_N2zAqcAwssUX9pC6
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_N2zAqcAwssUX9pC6');
+    }
+  }
+
+  async sd_IgHzvdmwQyYasNy8(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.ben2,
+      };
+      this.page.result2 = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_a0m21vIOdUt6sNY3(bh);
+      //appendnew_next_sd_IgHzvdmwQyYasNy8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IgHzvdmwQyYasNy8');
+    }
+  }
+
+  async sd_a0m21vIOdUt6sNY3(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.ben1,
+      };
+      this.page.result1 = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_bMnbUq5poe9SegbD(bh);
+      //appendnew_next_sd_a0m21vIOdUt6sNY3
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_a0m21vIOdUt6sNY3');
     }
   }
 
@@ -488,10 +587,36 @@ export class edit_personalInfoComponent {
       const page = this.page;
       console.log('results', page.results);
 
+      bh = this.sd_XI16n0Leiv1aQkui(bh);
       //appendnew_next_sd_CrzHebrXy1FWqqr3
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_CrzHebrXy1FWqqr3');
+    }
+  }
+
+  sd_XI16n0Leiv1aQkui(bh) {
+    try {
+      sessionStorage.setItem('userData', JSON.stringify(bh.structuredData));
+      bh = this.sd_ah4h46GmePFPc6Xd(bh);
+      //appendnew_next_sd_XI16n0Leiv1aQkui
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XI16n0Leiv1aQkui');
+    }
+  }
+
+  async sd_ah4h46GmePFPc6Xd(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/home');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_ah4h46GmePFPc6Xd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ah4h46GmePFPc6Xd');
     }
   }
 
