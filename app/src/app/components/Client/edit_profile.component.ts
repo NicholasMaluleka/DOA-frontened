@@ -17,13 +17,13 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
 //append_imports_end
 
 @Component({
-  selector: 'bh-edit_personalInfo',
-  templateUrl: './edit_personalInfo.template.html',
+  selector: 'bh-edit_profile',
+  templateUrl: './edit_profile.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class edit_personalInfoComponent {
+export class edit_profileComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -41,7 +41,7 @@ export class edit_personalInfoComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_GiOL8QuTONvO1QYL(bh);
+      this.sd_JgyRBkRN3y1TgJS6(bh);
     }
   }
 
@@ -53,13 +53,13 @@ export class edit_personalInfoComponent {
     //append_listeners
   }
 
-  sd_GiOL8QuTONvO1QYL(bh) {
+  sd_JgyRBkRN3y1TgJS6(bh) {
     try {
-      bh = this.sd_gVQaHXs38htCSDBJ(bh);
-      //appendnew_next_sd_GiOL8QuTONvO1QYL
+      bh = this.sd_zZbFXjqfFF4D2qLR(bh);
+      //appendnew_next_sd_JgyRBkRN3y1TgJS6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_GiOL8QuTONvO1QYL');
+      return this.errorHandler(bh, e, 'sd_JgyRBkRN3y1TgJS6');
     }
   }
 
@@ -71,10 +71,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_FsVk6s2tPHK0ALhx(bh);
+      bh = this.sd_O0Jk4YGXjcErU5KM(bh);
       //appendnew_next_update
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_86yneFfUNLGPQGtt');
+      return this.errorHandler(bh, e, 'sd_YaBBZJtWlPt7bFHB');
     }
   }
 
@@ -86,10 +86,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_5nhxWC6xzWqUMH6w(bh);
+      bh = this.sd_J9PwgORaWfdJy8li(bh);
       //appendnew_next_openBeneficiries
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_UbfJ8q5a8V7xLZqx');
+      return this.errorHandler(bh, e, 'sd_1Fc2ORtGlIyayrgN');
     }
   }
 
@@ -101,10 +101,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_WQQZU7S1MJVM0lrL(bh);
+      bh = this.sd_POQroE0i2enIYQNx(bh);
       //appendnew_next_openDependencies
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AkNHYq7o3lsF76C8');
+      return this.errorHandler(bh, e, 'sd_AP7dmceTLRFkhXnN');
     }
   }
 
@@ -116,10 +116,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_OjnbAvlFLUR3zGD4(bh);
+      bh = this.sd_Gc4iT6sFGJajKFo9(bh);
       //appendnew_next_idValid
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_S9yW8bkU4F73EyOY');
+      return this.errorHandler(bh, e, 'sd_HiU37FLdDCx20drd');
     }
   }
 
@@ -131,10 +131,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_QEoSMxy68DdcwloW(bh);
+      bh = this.sd_h2grNuNNwlt1Rjir(bh);
       //appendnew_next_idValid1
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qjdaPlh9tYRfl2cj');
+      return this.errorHandler(bh, e, 'sd_KwgHSz7lqQeEj1N4');
     }
   }
 
@@ -146,10 +146,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_H9tzoLlT4Fi8b8WP(bh);
+      bh = this.sd_dYpPTDnv8OXrUBaR(bh);
       //appendnew_next_idValid2
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ygLmaDpGMnONXIW3');
+      return this.errorHandler(bh, e, 'sd_jzjiMnGz6dZi6ToK');
     }
   }
 
@@ -161,10 +161,10 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_0ENYDmWxNvxRkhoJ(bh);
+      bh = this.sd_bnohEYupJ0AVpzeT(bh);
       //appendnew_next_idValid3
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Tde7BjrvTO0jGMY8');
+      return this.errorHandler(bh, e, 'sd_ptFntbRK6k6BXB3z');
     }
   }
 
@@ -176,25 +176,50 @@ export class edit_personalInfoComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_lxizv4O2VUb4bjID(bh);
+      bh = this.sd_j8Q8TFFKldHEDP5b(bh);
       //appendnew_next_idValid4
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Le0GGwdMrzMY8gnV');
+      return this.errorHandler(bh, e, 'sd_zeavhCK92Hm892hh');
     }
   }
-  //appendnew_flow_edit_personalInfoComponent_start
 
-  sd_gVQaHXs38htCSDBJ(bh) {
+  cancel(...others) {
+    let bh: any = {};
     try {
-      bh = this.sd_Y3mN2lQwd5HnEduh(bh);
-      //appendnew_next_sd_gVQaHXs38htCSDBJ
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_tcxBJckGGYZqxWmJ(bh);
+      //appendnew_next_cancel
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pklcqBCImlsNjMX4');
+    }
+  }
+  //appendnew_flow_edit_profileComponent_start
+
+  sd_zZbFXjqfFF4D2qLR(bh) {
+    try {
+      bh = this.sd_YpKvHuzOJX7A70Nt(bh);
+      //appendnew_next_sd_zZbFXjqfFF4D2qLR
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_gVQaHXs38htCSDBJ');
+      return this.errorHandler(bh, e, 'sd_zZbFXjqfFF4D2qLR');
     }
   }
 
-  sd_Y3mN2lQwd5HnEduh(bh) {
+  sd_YpKvHuzOJX7A70Nt(bh) {
+    try {
+      bh = this.sd_MhlljBlxFSW8IGgH(bh);
+      //appendnew_next_sd_YpKvHuzOJX7A70Nt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_YpKvHuzOJX7A70Nt');
+    }
+  }
+
+  sd_MhlljBlxFSW8IGgH(bh) {
     try {
       this.page.results = undefined;
       this.page.formdata = undefined;
@@ -204,110 +229,51 @@ export class edit_personalInfoComponent {
       this.page.dependency1Form = undefined;
       this.page.dependency2Form = undefined;
       this.page.showbeneficaries1Form = this.page.false;
-      this.page.showdependencies1Form = undefined;
+      this.page.showdependencies1Form = this.page.false;
       this.page.counter = 1;
-      this.page.showdependencies2Form = undefined;
+      this.page.showdependencies2Form = this.page.false;
       this.page.hideIcon = true;
-      this.page.hideIcon2 = undefined;
+      this.page.hideIcon2 = true;
       this.page.gender = undefined;
       this.page.gender1 = undefined;
       this.page.gender2 = undefined;
       this.page.gender3 = undefined;
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
-      this.page.showdependenciesForm = undefined;
-      bh = this.sd_JfSFbebXgEzrA6yw(bh);
-      //appendnew_next_sd_Y3mN2lQwd5HnEduh
+      this.page.showdependenciesForm = this.page.false;
+      bh = this.sd_WRH4C8nfvCW2ysVZ(bh);
+      //appendnew_next_sd_MhlljBlxFSW8IGgH
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Y3mN2lQwd5HnEduh');
+      return this.errorHandler(bh, e, 'sd_MhlljBlxFSW8IGgH');
     }
   }
 
-  sd_JfSFbebXgEzrA6yw(bh) {
+  sd_WRH4C8nfvCW2ysVZ(bh) {
     try {
-      this.page.userData = JSON.parse(sessionStorage.getItem('userData'));
-      bh = this.sd_ECrTSDWg9bec5qWR(bh);
-      //appendnew_next_sd_JfSFbebXgEzrA6yw
+      this.page.userData = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_fzZkHtBt829JtEFx(bh);
+      //appendnew_next_sd_WRH4C8nfvCW2ysVZ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_JfSFbebXgEzrA6yw');
+      return this.errorHandler(bh, e, 'sd_WRH4C8nfvCW2ysVZ');
     }
   }
 
-  sd_ECrTSDWg9bec5qWR(bh) {
+  sd_fzZkHtBt829JtEFx(bh) {
     try {
       const page = this.page;
       console.log('userData==>', page.userData);
-      console.log('depe', page.userData.beneficaries);
+      //console.log("depe", page.userData.dependencies)
 
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData.beneficaries[1];
-
-      //check if the form has data so that we can display the button
-      if (page.ben2.firstName != '') {
-        page.showbeneficaries1Form = true;
-        page.hideIcon = false;
-      } else {
-        page.showbeneficaries1Form = false;
-      }
-
-      //check if the Dependencyform1 has data so that we can display the button
-      // if(page.depe2.firstName != "") {
-      //     page.showdependencies1Form = true
-      // }
-      // console.log("show", page.depe2)
-
       //console.log("ben1", page.ben1)
       //console.log("ben2", page.ben2)
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData.dependencies[1];
       page.depe3 = page.userData.dependencies[2];
       //console.log("depe1", page.depe1)
-
-      ///dependencies
-
-      if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName !== ''
-      ) {
-        // Case 1: All forms are not empty
-        page.showdependenciesForm = true;
-        page.showdependencies1Form = true;
-        page.showdependencies2Form = true;
-        page.hideIcon2 = false; // Hide the add icon
-      } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName === ''
-      ) {
-        // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
-        page.showdependenciesForm = true;
-        page.showdependencies1Form = true;
-        page.showdependencies2Form = false;
-        page.hideIcon2 = true; // Show the add icon
-      } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
-      ) {
-        // Case 3: Form 1 is filled, Forms 2 and 3 are empty
-        page.showdependenciesForm = true;
-        page.showdependencies1Form = false;
-        page.showdependencies2Form = false;
-        page.hideIcon2 = true; // Show the add icon
-      } else if (
-        page.depe1.firstName === '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
-      ) {
-        // Case 4: All forms are empty
-        page.showdependenciesForm = true; // Show the first empty form (Form 1)
-        page.showdependencies1Form = false;
-        page.showdependencies2Form = false;
-        page.hideIcon2 = true; // Show the add icon
-      }
 
       page.formdata = new FormGroup({
         firstName: new FormControl(page.userData?.firstName || '', [
@@ -318,7 +284,6 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.userData?.cellphone || '', [
           Validators.required,
-          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -361,7 +326,6 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
-          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -370,9 +334,7 @@ export class edit_personalInfoComponent {
         ]),
       });
       page.beneficaries1Form = new FormGroup({
-        firstName: new FormControl(page.ben2?.firstName || '', [
-          Validators.required,
-        ]),
+        firstName: new FormControl(page.ben2.firstName, [Validators.required]),
         lastName: new FormControl(page.ben2.lastName, [Validators.required]),
         idNumber: new FormControl(page.ben2.idNumber, [
           Validators.required,
@@ -386,7 +348,6 @@ export class edit_personalInfoComponent {
         ]),
         cellphone: new FormControl(page.ben2.cellphone, [
           Validators.required,
-          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -462,30 +423,25 @@ export class edit_personalInfoComponent {
       //    {value: 'Male', viewValue: 'Male'},
       //    {value: 'Female', viewValue: 'Female'}
       // ];
-      //appendnew_next_sd_ECrTSDWg9bec5qWR
+      //appendnew_next_sd_fzZkHtBt829JtEFx
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ECrTSDWg9bec5qWR');
+      return this.errorHandler(bh, e, 'sd_fzZkHtBt829JtEFx');
     }
   }
 
-  sd_FsVk6s2tPHK0ALhx(bh) {
+  sd_O0Jk4YGXjcErU5KM(bh) {
     try {
       const page = this.page;
       bh.structuredData = page.formdata.value;
-      console.log('data', bh.structuredData);
 
       bh.structuredData.beneficaries = page.beneficary;
+      //console.log(page.beneficary)
 
-      //Beneficaries
-      bh.ben1 = bh.structuredData.beneficaries[0];
-      page.ben2 = bh.structuredData.beneficaries[1];
-      console.log("Let's see Juska", bh.structuredData);
+      bh.structuredData.dependencies = page.dependencies;
+
       page.ben2 = page.beneficaries1Form.value;
       bh.structuredData.beneficaries[1] = page.ben2;
-
-      //Dependencies
-      bh.structuredData.dependencies = page.dependencies;
 
       page.depe2 = page.dependency1Form.value;
       bh.structuredData.dependencies[1] = page.depe2;
@@ -493,77 +449,48 @@ export class edit_personalInfoComponent {
       page.depe3 = page.dependency2Form.value;
       bh.structuredData.dependencies[2] = page.depe3;
 
-      bh = this.sd_esjR1J0mKRyRAwFA(bh);
-      //appendnew_next_sd_FsVk6s2tPHK0ALhx
+      // console.log("form", page.formdata.value)
+
+      // console.log("ben==>", page.ben2)
+      //console.log("structured data: ", bh.structuredData)
+      // console.log("ben value==>", page.beneficaries1Form.value)
+
+      bh = this.sd_Dug2vRdqwEKYndZt(bh);
+      //appendnew_next_sd_O0Jk4YGXjcErU5KM
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FsVk6s2tPHK0ALhx');
+      return this.errorHandler(bh, e, 'sd_O0Jk4YGXjcErU5KM');
     }
   }
 
-  sd_esjR1J0mKRyRAwFA(bh) {
+  sd_Dug2vRdqwEKYndZt(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_N2zAqcAwssUX9pC6(bh);
-      //appendnew_next_sd_esjR1J0mKRyRAwFA
+      bh = this.sd_lvNLqA6tib2KUU18(bh);
+      //appendnew_next_sd_Dug2vRdqwEKYndZt
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_esjR1J0mKRyRAwFA');
+      return this.errorHandler(bh, e, 'sd_Dug2vRdqwEKYndZt');
     }
   }
 
-  sd_N2zAqcAwssUX9pC6(bh) {
+  sd_lvNLqA6tib2KUU18(bh) {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'update-user/' + `${page.userData._id}`;
 
-      bh = this.sd_IgHzvdmwQyYasNy8(bh);
-      //appendnew_next_sd_N2zAqcAwssUX9pC6
+      console.log('url', bh.url);
+      console.log('structured d', bh.structuredData);
+
+      bh = this.sd_xBb6i0XCapBH7NP3(bh);
+      //appendnew_next_sd_lvNLqA6tib2KUU18
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_N2zAqcAwssUX9pC6');
+      return this.errorHandler(bh, e, 'sd_lvNLqA6tib2KUU18');
     }
   }
 
-  async sd_IgHzvdmwQyYasNy8(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'put',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: bh.ben2,
-      };
-      this.page.result2 = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_a0m21vIOdUt6sNY3(bh);
-      //appendnew_next_sd_IgHzvdmwQyYasNy8
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_IgHzvdmwQyYasNy8');
-    }
-  }
-
-  async sd_a0m21vIOdUt6sNY3(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'put',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.ben1,
-      };
-      this.page.result1 = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_bMnbUq5poe9SegbD(bh);
-      //appendnew_next_sd_a0m21vIOdUt6sNY3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_a0m21vIOdUt6sNY3');
-    }
-  }
-
-  async sd_bMnbUq5poe9SegbD(bh) {
+  async sd_xBb6i0XCapBH7NP3(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -574,67 +501,41 @@ export class edit_personalInfoComponent {
         body: bh.structuredData,
       };
       this.page.results = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_CrzHebrXy1FWqqr3(bh);
-      //appendnew_next_sd_bMnbUq5poe9SegbD
+      bh = this.sd_qdPGbaSjG2Fz6oiL(bh);
+      //appendnew_next_sd_xBb6i0XCapBH7NP3
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bMnbUq5poe9SegbD');
+      return this.errorHandler(bh, e, 'sd_xBb6i0XCapBH7NP3');
     }
   }
 
-  sd_CrzHebrXy1FWqqr3(bh) {
+  sd_qdPGbaSjG2Fz6oiL(bh) {
     try {
       const page = this.page;
       console.log('results', page.results);
 
-      bh = this.sd_XI16n0Leiv1aQkui(bh);
-      //appendnew_next_sd_CrzHebrXy1FWqqr3
+      //appendnew_next_sd_qdPGbaSjG2Fz6oiL
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CrzHebrXy1FWqqr3');
+      return this.errorHandler(bh, e, 'sd_qdPGbaSjG2Fz6oiL');
     }
   }
 
-  sd_XI16n0Leiv1aQkui(bh) {
-    try {
-      sessionStorage.setItem('userData', JSON.stringify(bh.structuredData));
-      bh = this.sd_ah4h46GmePFPc6Xd(bh);
-      //appendnew_next_sd_XI16n0Leiv1aQkui
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_XI16n0Leiv1aQkui');
-    }
-  }
-
-  async sd_ah4h46GmePFPc6Xd(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/home');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
-      //appendnew_next_sd_ah4h46GmePFPc6Xd
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ah4h46GmePFPc6Xd');
-    }
-  }
-
-  sd_5nhxWC6xzWqUMH6w(bh) {
+  sd_J9PwgORaWfdJy8li(bh) {
     try {
       const page = this.page;
       page.showbeneficaries1Form = true;
       page.hideIcon = false;
       console.log('form', page.showbeneficaries1Form);
 
-      //appendnew_next_sd_5nhxWC6xzWqUMH6w
+      //appendnew_next_sd_J9PwgORaWfdJy8li
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_5nhxWC6xzWqUMH6w');
+      return this.errorHandler(bh, e, 'sd_J9PwgORaWfdJy8li');
     }
   }
 
-  sd_WQQZU7S1MJVM0lrL(bh) {
+  sd_POQroE0i2enIYQNx(bh) {
     try {
       const page = this.page;
       page.showdependenciesForm = true;
@@ -649,14 +550,14 @@ export class edit_personalInfoComponent {
         page.hideIcon2 = false;
       }
 
-      //appendnew_next_sd_WQQZU7S1MJVM0lrL
+      //appendnew_next_sd_POQroE0i2enIYQNx
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WQQZU7S1MJVM0lrL');
+      return this.errorHandler(bh, e, 'sd_POQroE0i2enIYQNx');
     }
   }
 
-  sd_OjnbAvlFLUR3zGD4(bh) {
+  sd_Gc4iT6sFGJajKFo9(bh) {
     try {
       const page = this.page;
       let id = page.beneficariesForm.controls.idNumber.value;
@@ -736,14 +637,14 @@ export class edit_personalInfoComponent {
         return;
       }
       console.log('valid id', page.beneficariesForm.controls.idNumber.value);
-      //appendnew_next_sd_OjnbAvlFLUR3zGD4
+      //appendnew_next_sd_Gc4iT6sFGJajKFo9
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OjnbAvlFLUR3zGD4');
+      return this.errorHandler(bh, e, 'sd_Gc4iT6sFGJajKFo9');
     }
   }
 
-  sd_QEoSMxy68DdcwloW(bh) {
+  sd_h2grNuNNwlt1Rjir(bh) {
     try {
       const page = this.page;
       let id = page.beneficaries1Form.controls.idNumber.value;
@@ -823,14 +724,14 @@ export class edit_personalInfoComponent {
         return;
       }
       console.log('valid id', page.beneficaries1Form.controls.idNumber.value);
-      //appendnew_next_sd_QEoSMxy68DdcwloW
+      //appendnew_next_sd_h2grNuNNwlt1Rjir
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_QEoSMxy68DdcwloW');
+      return this.errorHandler(bh, e, 'sd_h2grNuNNwlt1Rjir');
     }
   }
 
-  sd_H9tzoLlT4Fi8b8WP(bh) {
+  sd_dYpPTDnv8OXrUBaR(bh) {
     try {
       const page = this.page;
       let id = page.dependencyForm.controls.idNumber.value;
@@ -910,14 +811,14 @@ export class edit_personalInfoComponent {
         return;
       }
       console.log('valid id', page.dependencyForm.controls.idNumber.value);
-      //appendnew_next_sd_H9tzoLlT4Fi8b8WP
+      //appendnew_next_sd_dYpPTDnv8OXrUBaR
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_H9tzoLlT4Fi8b8WP');
+      return this.errorHandler(bh, e, 'sd_dYpPTDnv8OXrUBaR');
     }
   }
 
-  sd_0ENYDmWxNvxRkhoJ(bh) {
+  sd_bnohEYupJ0AVpzeT(bh) {
     try {
       const page = this.page;
       let id = page.dependency1Form.controls.idNumber.value;
@@ -997,14 +898,14 @@ export class edit_personalInfoComponent {
         return;
       }
       console.log('valid id', page.dependency1Form.controls.idNumber.value);
-      //appendnew_next_sd_0ENYDmWxNvxRkhoJ
+      //appendnew_next_sd_bnohEYupJ0AVpzeT
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_0ENYDmWxNvxRkhoJ');
+      return this.errorHandler(bh, e, 'sd_bnohEYupJ0AVpzeT');
     }
   }
 
-  sd_lxizv4O2VUb4bjID(bh) {
+  sd_j8Q8TFFKldHEDP5b(bh) {
     try {
       const page = this.page;
       let id = page.dependency2Form.controls.idNumber.value;
@@ -1084,10 +985,24 @@ export class edit_personalInfoComponent {
         return;
       }
       console.log('valid id', page.dependency2Form.controls.idNumber.value);
-      //appendnew_next_sd_lxizv4O2VUb4bjID
+      //appendnew_next_sd_j8Q8TFFKldHEDP5b
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lxizv4O2VUb4bjID');
+      return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
+    }
+  }
+
+  async sd_tcxBJckGGYZqxWmJ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_tcxBJckGGYZqxWmJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tcxBJckGGYZqxWmJ');
     }
   }
 
@@ -1107,5 +1022,5 @@ export class edit_personalInfoComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_edit_personalInfoComponent_Catch
+  //appendnew_flow_edit_profileComponent_Catch
 }

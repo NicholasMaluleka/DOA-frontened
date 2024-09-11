@@ -199,6 +199,23 @@ export class claimsComponent implements AfterViewInit {
       const page = this.page;
       console.log('claims ->', page.result);
 
+      page.approvedDataSource = [];
+      page.pendingDataSource = [];
+      page.rejectedDataSource = [];
+      page.partiallyApprovedDataSource = [];
+
+      page.result.forEach((claim) => {
+        if (claim.status === 'approved') {
+          page.approvedDataSource.push(claim);
+        } else if (claim.status === 'pending') {
+          page.pendingDataSource.push(claim);
+        } else if (claim.status === 'rejected') {
+          page.rejectedDataSource.push(claim);
+        } else if (claim.status === 'partially approved') {
+          page.partiallyApprovedDataSource.push(claim);
+        }
+      });
+
       bh.local.dataSource = new MatTableDataSource(page.result);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1

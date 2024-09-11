@@ -18,7 +18,9 @@
             },
             {
                 "_key": "class",
-                "_value": [],
+                "_value": [
+                    "relative"
+                ],
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -3614,7 +3616,8 @@
                             "b1545ade-084d-7864-eed9-1dad4fc96893": {
                                 "paletteKey": "FlexLayoutRow",
                                 "parentEditorKey": "3e49165a-50c7-1902-f9f3-14b5e5771468",
-                                "commentid": null,
+                                "isCommented": "true",
+                                "commentid": "1725810225331",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -3676,7 +3679,8 @@
                                     "paletteKey": "NG-DatePicker",
                                     "parentEditorKey": "b1545ade-084d-7864-eed9-1dad4fc96893",
                                     "isAdvancedComponent": true,
-                                    "commentid": null,
+                                    "isCommented": "true",
+                                    "commentid": "1725810225331",
                                     "designerReference": [
                                         {
                                             "_key": "style",
@@ -4273,7 +4277,7 @@
                                     }
                                 }
                             },
-                            "5dbbe0a9-290e-0baf-ba39-eb22d6f2f98c": {
+                            "32c93241-ecc2-534d-43c8-4dc5aaab2b22": {
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "5e346c4f-34c8-d169-89e8-d8250e66fac9",
                                 "isAdvancedComponent": true,
@@ -4460,10 +4464,11 @@
                                         "_visibility": false
                                     }
                                 ],
-                                "f11da194-fbe7-9cec-a1fb-cdbe9e0764e5": {
+                                "f32adafe-0685-54b4-d149-1a904b1298f0": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "5dbbe0a9-290e-0baf-ba39-eb22d6f2f98c",
+                                    "parentEditorKey": "32c93241-ecc2-534d-43c8-4dc5aaab2b22",
                                     "isAdvancedChildComponent": true,
+                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -4480,7 +4485,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "\r\n\r\n <!-- <div   (click)=\"upload1()\"> -->\r\n      <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n      <label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label>\r\n \r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.idClaimer2.errors?.required\">Please Upload File</mat-error>\r\n  <input type=\"file\" id=\"upload2\" (change)=\"upload2()\" accept=\".pdf\"  hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.idDeceased2.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3()\" accept=\".pdf\"  hidden required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Cetificatify\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.deathCetificatify2.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4()\" accept=\".pdf\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.bi16632.errors?.required\">Please Upload File</mat-error> -->\r\n\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5()\" accept=\".pdf\"  hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n <!-- <mat-error *ngIf =\"page.policyClaimsForm.controls.bankDetails2.errors?.required\">Please Upload File</mat-error> -->\r\n -->\r\n",
+                                            "_value": "\r\n <div (click)= \"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n  <p *ngIf=\"page.showId\">{{page.id}}</p>\r\n </div>\r\n\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\"   hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n </label></button>\r\n <p *ngIf=\"page.showIddes\">{{page.iddes}}</p>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3($event)\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Certificate\r\n\r\n </label></button>\r\n <p *ngIf=\" page.showdeathCetificatify \">{{page.deathCetificatify}}</p>\r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\" (change)=\"upload4($event)\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n  <p *ngIf=\" page.showbi1663 \">{{page.bi1663}}</p>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5($event)\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n  <p *ngIf=\" page.showbankDetails \">{{page.bankDetails}}</p>\r\n</div>\r\n\r\n\r\n",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -4584,7 +4589,7 @@
                                             "_type": "kv",
                                             "_attrDef": "p",
                                             "objValue": {
-                                                "nodeID": "sd_wMkFBIk2OjUNSacB",
+                                                "nodeID": "sd_X2tvjc7ajLK5WAAA",
                                                 "functionName": "submit",
                                                 "activeTree": "pages",
                                                 "z": "sd_w93AbqYMQ4LWwqYF",
@@ -4620,6 +4625,318 @@
                             }
                         }
                     }
+                }
+            }
+        },
+        "ae832f97-f521-3337-bac8-3a6eb194d6b4": {
+            "paletteKey": "FlexLayoutCol",
+            "parentEditorKey": "65de233f-b420-4475-f300-a0359e7a11dd",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "LOading",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "background:#00000045",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "fullWidth",
+                        "FullHeight",
+                        "absolute"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "1em",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "center",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "center",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.loading",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "ff145289-68f4-66bd-7cfd-bd779025dffc": {
+                "paletteKey": "NEUTRINOS_VIEW_loader",
+                "parentEditorKey": "ae832f97-f521-3337-bac8-3a6eb194d6b4",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "componentLabel",
+                        "_value": "loader",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "72437edb-7449-7c83-dcbd-6bb1e96b14ac": {
+                "paletteKey": "Html5",
+                "parentEditorKey": "ae832f97-f521-3337-bac8-3a6eb194d6b4",
+                "isAdvancedComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "color:white",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "htmlElement",
+                        "_value": "div",
+                        "_type": "dav",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "tagType",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "name",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "sandbox",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "src",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "srcdoc",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "width",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "[autoplay]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "[loop]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "data",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "audioSource",
+                        "_value": [],
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "videoSource",
+                        "_value": [],
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "audioDatasource",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "audioSrc",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "audioType",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "videoDatasource",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "videoSrc",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "videoType",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(audioplay)",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(videoplay)",
+                        "_value": "",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(audiopause)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(videopause)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(audioended)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    },
+                    {
+                        "_key": "(videoended)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p",
+                        "_visibility": false
+                    }
+                ],
+                "407ae635-6579-65d2-a2d7-b9c8e216d391": {
+                    "paletteKey": "html-editor",
+                    "parentEditorKey": "72437edb-7449-7c83-dcbd-6bb1e96b14ac",
+                    "isAdvancedChildComponent": true,
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "html",
+                            "_value": "<h1>{{page.mes}}</h1>",
+                            "_type": "a",
+                            "_attrDef": "p"
+                        }
+                    ]
                 }
             }
         }

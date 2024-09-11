@@ -122,6 +122,19 @@ export class payment_formComponent implements OnChanges {
     }
   }
 
+  checkDate(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      //appendnew_next_checkDate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gKA6xVjHA4ym50YD');
+    }
+  }
   //appendnew_flow_payment_formComponent_start
 
   sd_1mWJDUJMcNFR2L50(bh) {
@@ -129,6 +142,7 @@ export class payment_formComponent implements OnChanges {
       this.page.userData = undefined;
       this.page.amount = undefined;
       this.page.amounts = undefined;
+      this.page.disabled = false;
       bh = this.sd_6JYmM4GgmH550ZuL(bh);
       //appendnew_next_sd_1mWJDUJMcNFR2L50
       return bh;
