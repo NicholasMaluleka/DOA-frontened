@@ -162,9 +162,9 @@
         "count",
         "pending",
         "partially-approved",
-        "fully-approved",
+        "all-accounts",
         "icon-hourglass",
         "icon-half-check",
-        "icon-check"
+        "icon-globe"
     ]
 }

@@ -594,6 +594,12 @@
                         "_value": "true",
                         "_type": "kv",
                         "_attrDef": "p"
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page.user.role == 'admin'",
+                        "_type": "kv",
+                        "_attrDef": "c"
                     }
                 ],
                 "3a5b528a-4708-02d3-03fa-623091546919": {

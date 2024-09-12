@@ -612,7 +612,9 @@ export class edit_personalInfoComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_ah4h46GmePFPc6Xd
       return bh;
     } catch (e) {
