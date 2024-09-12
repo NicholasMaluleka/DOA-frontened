@@ -1,5 +1,5 @@
 <div fxLayout="column wrap" class="white-bg full-width" fxLayoutAlign="center stretch" [fxShow]="true" fxFill>
-  <div fxLayout="row wrap" class="white-bg" fxFlex="70" fxLayoutAlign="space-between stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="full-width white-bg" fxLayoutAlign="space-between stretch" [fxShow]="true">
     <div fxLayout="row wrap" fxLayoutAlign="start center" [fxShow]="true">
       <div fxLayout="column wrap" class="width-15 full-height" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="/Web/images/D.O.A-logo.png" class="full-width"></div>
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -9,9 +9,9 @@
         </div>
       </div>
     </div>
-    <div fxLayout="row wrap" class="width-25 full-height" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="true">
+    <div fxLayout="row wrap" style="margin-right: 1.5em" class="width-25 full-height" fxLayoutGap="1em" fxLayoutAlign="end center" [fxShow]="true">
       <div fxLayout="column wrap" class="pointer relative" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon [matMenuTriggerFor]="notsMenu">notifications</mat-icon><small class="sim-x-small height-10 width-10 notif-padding yellow-bg top-1 right-1 center-center flex radius-50 absolute">
-          {{page.messages.length}}</small></div>
+          {{page.messages?.length}}</small></div>
       <div fxLayout="column wrap" class="pointer blue-color light-grey-bg height-35 width-10 radius-50" fxLayoutAlign="center center" [fxShow]="true">
         <div>
           <h5><b>{{page.name}}{{ page.surname}}</b></h5>
@@ -31,7 +31,6 @@
               </h3>
             </div>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" [matMenuTriggerFor]="menu">keyboard_arrow_down</mat-icon></div>
         </div>
       </div>
     </div>
