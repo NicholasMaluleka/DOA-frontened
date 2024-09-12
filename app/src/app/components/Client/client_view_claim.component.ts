@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -25,6 +26,7 @@ export class client_view_claimComponent {
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
+    this.page.dep.FormBuilder = this.__page_injector__.get(FormBuilder); //FormBuilder
     //appendnew_element_inject
   }
 
@@ -69,6 +71,10 @@ export class client_view_claimComponent {
 
   sd_fJ8m3FaaUfnjTh9C(bh) {
     try {
+      this.page.claimReason = undefined;
+      this.page.fileUR = 'http://localhost:8081/api/download/';
+      this.page.filename = undefined;
+      this.page.fileURL = undefined;
       bh = this.sd_c8NOjDUYzS2u7cWO(bh);
       //appendnew_next_sd_fJ8m3FaaUfnjTh9C
       return bh;
@@ -79,8 +85,8 @@ export class client_view_claimComponent {
 
   sd_c8NOjDUYzS2u7cWO(bh) {
     try {
-      localStorage.setItem('claim', JSON.stringify(this.page.claim));
-      bh = this.forms(bh);
+      this.page.claim = JSON.parse(localStorage.getItem('claim'));
+      bh = this.sd_b6qQdvlEhU2Qucbs(bh);
       //appendnew_next_sd_c8NOjDUYzS2u7cWO
       return bh;
     } catch (e) {
@@ -88,63 +94,83 @@ export class client_view_claimComponent {
     }
   }
 
+  sd_b6qQdvlEhU2Qucbs(bh) {
+    try {
+      const page = this.page;
+      console.log('page.claim', page.claim);
+      page['DeathCertificatefile'] = page.claim['DeathCertificatefile'];
+      page.bi1663file = page.claim['bi1663file'];
+      page['IDDeceasedfile'] = page.claim['IDDeceasedfile'];
+      page['IDfile'] = page.claim['IDfile'];
+      page['bankDetailsfile'] = page.claim['bankDetailsfile'];
+
+      bh = this.forms(bh);
+      //appendnew_next_sd_b6qQdvlEhU2Qucbs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_b6qQdvlEhU2Qucbs');
+    }
+  }
+
   forms(bh) {
     try {
       const page = this.page;
-      console.log('claimeee', page.claim);
-      // // decesed details
-      // page.deceased = new FormGroup({
-      //       firstName :new FormControl(''),
-      //       lastName: new FormControl( ''),
-      //       idNum :new FormControl( ''),
-      //        gender: new FormControl(''),
+      console.log('claimeee', page.claim.policyNo);
+      page.policy = page.claim.policyNo;
+      page.claim.claimReason = page.claimReason ? page.claim.claimReason : '';
+      // decesed details
+      page.deceased = new FormGroup({
+        firstName: new FormControl(page.claim.deceased.firstName),
+        lastName: new FormControl(page.claim.deceased.lastName),
+        idNum: new FormControl(page.claim.deceased.idNum),
+        gender: new FormControl(page.claim.deceased.gender),
+      });
+      // documents
+      // page.idClaimer=new FormGroup({
+      //   filename: new FormControl(""),
+      //   })
+      //    page.idDecesed =new FormGroup({
 
-      //     })
-      //     // documents
-      //   // page.idClaimer=new FormGroup({
-      //   //   filename: new FormControl(""),
-      //   //   })
-      //   //    page.idDecesed =new FormGroup({
+      //   })
+      //     page.bi1662 =new FormGroup({
 
-      //   //   })
-      //   //     page.bi1662 =new FormGroup({
+      //   })
+      //     page.deathCertificate =new FormGroup({
 
-      //   //   })
-      //   //     page.deathCertificate =new FormGroup({
+      //   })
+      //     page.bankDetails =new FormGroup({
 
-      //   //   })
-      //   //     page.bankDetails =new FormGroup({
+      //   })
+      //claims form with all information including claimer details
+      page.policyClaimsForm = new FormGroup({
+        firstName: new FormControl(page.claim.firstName),
+        lastName: new FormControl(page.claim.lastName),
+        idNum: new FormControl(page.claim.idNum),
+        gender: new FormControl(page.claim.gender),
+        packageType: new FormControl(page.claim.packageType),
+        payoutAmount: new FormControl(page.claim.payoutAmount),
+        deceased: page.deceased,
+        deceased2: new FormControl(''),
+        // idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(page.claim['ID']),
 
-      //   //   })
-      //     //claims form with all information including claimer details
-      // page.policyClaimsForm = new FormGroup({
-      //     firstName :new FormControl(page.user.firstName),
-      //     lastName:new FormControl(page.user.lastName),
-      //     idNum:new FormControl( page.user.idNumber),
-      //     gender:new FormControl( page.user.gender),
-      //     packageType : new FormControl( page.user.packageType),
-      //     payoutAmount :new FormControl( ''),
-      //     deceased: page.deceased,
-      //     deceased2 :new FormControl(''),
-      //     // idClaimer: page.idClaimer,
-      //     idClaimer2:new FormControl(''),
+        idDeceased2: new FormControl(page.claim.idDecesed),
 
-      //      idDeceased2:new FormControl(''),
+        bi16632: new FormControl(page.claim.bi1663),
+        // deathCertificate:page.deathCertificate,
+        deathCetificatify2: new FormControl(page.claim['DeathCertificate']),
+        // bankDetails :page.bankDetails,
+        bankDetails2: new FormControl(page.claim.bankDetails),
+        status: new FormControl(page.claim.status),
+        reason: new FormControl(''),
+        depsId: new FormControl(),
+      });
 
-      //      bi16632:new FormControl(''),
-      //     // deathCertificate:page.deathCertificate,
-      //     deathCetificatify2:new FormControl(''),
-      //     // bankDetails :page.bankDetails,
-      //      bankDetails2:new FormControl(''),
-      //      status:new FormControl('pending'),
-      //      depsId : new FormControl ()
-      //  })
+      page.date = new Date();
 
-      //  page.date = new Date()
+      console.log('page.deceased', page.deceased);
 
-      //    console.log("page.deceased", page.deceased)
-
-      // // bh.url = page.ssdUrl + 'get-users'
+      // bh.url = page.ssdUrl + 'get-users'
       //appendnew_next_forms
       return bh;
     } catch (e) {

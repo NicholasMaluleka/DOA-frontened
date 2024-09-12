@@ -40,7 +40,36 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "claimReason",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "fileUR",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "'http://localhost:8081/api/download/'"
+                }
+            },
+            {
+                "textIp": "filename",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "fileURL",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_fJ8m3FaaUfnjTh9C",
         "category": "Function",
         "x": 245,
@@ -118,10 +147,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "forms",
-        "script": "console.log(\"claimeee\", page.claim)\n// // decesed details\n// page.deceased = new FormGroup({\n//       firstName :new FormControl(''),\n//       lastName: new FormControl( ''),\n//       idNum :new FormControl( ''),\n//        gender: new FormControl(''),\n       \n//     })\n//     // documents\n//   // page.idClaimer=new FormGroup({\n//   //   filename: new FormControl(\"\"),\n//   //   })\n//   //    page.idDecesed =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.bi1662 =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.deathCertificate =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.bankDetails =new FormGroup({\n   \n    \n     \n//   //   })\n//     //claims form with all information including claimer details\n// page.policyClaimsForm = new FormGroup({\n//     firstName :new FormControl(page.user.firstName),\n//     lastName:new FormControl(page.user.lastName),\n//     idNum:new FormControl( page.user.idNumber),\n//     gender:new FormControl( page.user.gender),\n//     packageType : new FormControl( page.user.packageType),\n//     payoutAmount :new FormControl( ''),\n//     deceased: page.deceased, \n//     deceased2 :new FormControl(''),\n//     // idClaimer: page.idClaimer,\n//     idClaimer2:new FormControl(''),\n    \n//      idDeceased2:new FormControl(''),\n   \n//      bi16632:new FormControl(''),\n//     // deathCertificate:page.deathCertificate,\n//     deathCetificatify2:new FormControl(''),\n//     // bankDetails :page.bankDetails,\n//      bankDetails2:new FormControl(''),\n//      status:new FormControl('pending'),\n//      depsId : new FormControl ()\n//  })\n\n//  page.date = new Date()\n\n//    console.log(\"page.deceased\", page.deceased)         \n            \n              \n// // bh.url = page.ssdUrl + 'get-users'",
+        "script": "console.log(\"claimeee\", page.claim.policyNo)\npage.policy = page.claim.policyNo\npage.claim.claimReason = (page.claimReason ? page.claim.claimReason : \"\")\n// decesed details\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.claim.deceased.firstName),\n      lastName: new FormControl( page.claim.deceased.lastName),\n      idNum :new FormControl( page.claim.deceased.idNum),\n       gender: new FormControl(page.claim.deceased.gender),\n       \n    })\n    // documents\n  // page.idClaimer=new FormGroup({\n  //   filename: new FormControl(\"\"),\n  //   })\n  //    page.idDecesed =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.bi1662 =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.deathCertificate =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.bankDetails =new FormGroup({\n   \n    \n     \n  //   })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.claim.firstName),\n    lastName:new FormControl(page.claim.lastName),\n    idNum:new FormControl( page.claim.idNum),\n    gender:new FormControl( page.claim.gender),\n    packageType : new FormControl( page.claim.packageType),\n    payoutAmount :new FormControl( page.claim.payoutAmount),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    // idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(page.claim['ID']),\n    \n     idDeceased2:new FormControl(page.claim.idDecesed),\n   \n     bi16632:new FormControl(page.claim.bi1663),\n    // deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(page.claim['DeathCertificate']),\n    // bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(page.claim.bankDetails),\n     status:new FormControl(page.claim.status),\n     reason:new FormControl( \"\"),\n     depsId : new FormControl ()\n     \n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \n// bh.url = page.ssdUrl + 'get-users'",
         "functionName": "forms",
         "category": "Function",
-        "x": 505,
+        "x": 765,
         "y": 40,
         "wires": [
             []
@@ -138,21 +167,43 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "operationType": "setItem",
+        "operationType": "getItem",
         "storageType": "localStorage",
         "outputs": 1,
         "key": {
             "type": "str",
             "value": "claim"
         },
-        "value": {
+        "value": {},
+        "resultMapping": {
             "type": "this.page",
             "value": "claim"
         },
-        "resultMapping": {},
         "functionName": "sd_c8NOjDUYzS2u7cWO",
         "category": "Storage",
-        "x": 385,
+        "x": 505,
+        "y": 40,
+        "wires": [
+            [
+                "sd_b6qQdvlEhU2Qucbs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_view_claimComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_b6qQdvlEhU2Qucbs",
+        "type": "Script",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"page.claim\",page.claim)\npage['DeathCertificatefile'] = page.claim['DeathCertificatefile'] \npage.bi1663file =page.claim['bi1663file']\npage['IDDeceasedfile'] =page.claim['IDDeceasedfile']\npage['IDfile'] = page.claim['IDfile']\npage['bankDetailsfile'] = page.claim['bankDetailsfile']\n\n",
+        "functionName": "sd_b6qQdvlEhU2Qucbs",
+        "category": "Function",
+        "x": 645,
         "y": 40,
         "wires": [
             [
@@ -163,5 +214,33 @@
         "generateNext": false,
         "serviceName": "client_view_claimComponent",
         "generated": true
+    },
+    {
+        "id": "sd_FCDpS1aYE4uVTqya",
+        "type": "Environment",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_FCDpS1aYE4uVTqya",
+        "category": "General",
+        "x": 385,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_view_claimComponent"
     }
 ]

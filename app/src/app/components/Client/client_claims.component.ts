@@ -319,7 +319,7 @@ export class client_claimsComponent implements AfterViewInit {
   sd_dxNlwJcweptzBBD0(bh) {
     try {
       const page = this.page;
-      bh.routeData = { isReview: true };
+      console.log('cllldk', bh.input.claim);
       bh = this.sd_qJzUhzTofMKIqPSC(bh);
       //appendnew_next_sd_dxNlwJcweptzBBD0
       return bh;

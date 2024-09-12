@@ -799,8 +799,8 @@
         "script": "console.log('page.',page.deceased)",
         "functionName": "sd_8uy7TQ48zgBugAZc",
         "category": "Function",
-        "x": 105,
-        "y": 900,
+        "x": 65,
+        "y": 920,
         "wires": [
             []
         ],
@@ -3515,7 +3515,7 @@
         "direction": "this.page",
         "disableClose": "this.page",
         "hasBackdrop": "this.page",
-        "height": "\"300px\"",
+        "height": "\"200px\"",
         "maxHeight": "this.page",
         "minHeight": "this.page",
         "width": "\"400px\"",
@@ -3591,7 +3591,7 @@
             },
             "height": {
                 "type": "str",
-                "value": "300px",
+                "value": "200px",
                 "constant": false
             },
             "maxHeight": {
@@ -4065,7 +4065,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.users.find(item => {\n    if(item.idNumber === page.updatedClaim.idNum){\n        page.userEmail = item.email\n\n    }\n})\n\nbh.body = {\n    email: page.userEmail, \n    subject: \"Claim update\",\n    message: `Your claim has been ${page.updatedClaim.status}. Please login to the system to see more details.`\n}",
+        "script": "page.users.find(item => {\n    if(item.idNumber === page.updatedClaim.idNum){\n        page.userEmail = item.email\n\n    }\n})\n\n\nbh.body = {\n    email: page.userEmail, \n    title: `DOA Claim Update - ${page.updatedClaim.claimNumber}`,\n    message: `Your claim's status has been updated. Please log in to the system to view more details regarding your claim.`\n}",
         "functionName": "sd_0JdhwakS1r4tZGSu",
         "category": "Function",
         "x": 1065,

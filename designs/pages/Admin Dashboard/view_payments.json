@@ -438,8 +438,8 @@
         ],
         "functionName": "sd_wJZgiVw85rq8LsWX",
         "category": "Function",
-        "x": 445,
-        "y": 60,
+        "x": 645,
+        "y": 80,
         "wires": [
             []
         ],
@@ -706,7 +706,9 @@
         "x": 360,
         "y": 60,
         "wires": [
-            []
+            [
+                "sd_FMDpkN9mOlyDn874"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1139,11 +1141,108 @@
         "serviceImportPath": "./",
         "startName": "disable",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_FhUgDvmUku51uwzV",
         "category": "General",
         "x": 465,
         "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ghznAG5VB1seGRqZ",
+        "type": "PageStart",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getLoggedInUser",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getLoggedInUser",
+        "category": "General",
+        "x": 80,
+        "y": 740,
+        "wires": [
+            [
+                "sd_56JL6Oc8cBmMeC1N"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_paymentsComponent"
+    },
+    {
+        "id": "sd_56JL6Oc8cBmMeC1N",
+        "type": "Storage",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "user"
+        },
+        "functionName": "sd_56JL6Oc8cBmMeC1N",
+        "category": "Storage",
+        "x": 165,
+        "y": 740,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_paymentsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FMDpkN9mOlyDn874",
+        "type": "PageCallService",
+        "z": "sd_nsEcp9j2OQxe1WKG",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_nsEcp9j2OQxe1WKG",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:31:27.956Z",
+            "label": "view_payments",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 1
+        },
+        "flow": {
+            "flowId": "sd_ghznAG5VB1seGRqZ",
+            "flowName": "getLoggedInUser"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "getLoggedInUser",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_FMDpkN9mOlyDn874",
+        "category": "General",
+        "x": 445,
+        "y": 60,
         "wires": [
             []
         ],

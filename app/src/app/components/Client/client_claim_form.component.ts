@@ -361,6 +361,8 @@ export class client_claim_formComponent {
       this.page.showbankDetails = false;
       this.page.bankDetails = undefined;
       this.page.mes = 'READING DOCUMENT';
+      this.page.fileURL = undefined;
+      this.page.idclaimerfilename = undefined;
       bh = this.sd_n3Yjb7EcHOgLqxD2(bh);
       //appendnew_next_sd_37zMadhqe6cOjrj2
       return bh;
@@ -383,7 +385,7 @@ export class client_claim_formComponent {
   sd_n3ZmIInEaqwuOf5e(bh) {
     try {
       const page = this.page;
-
+      page.fileURL = 'http://localhost:8081/api/download/';
       // console.log(page.newClient[0].policyNumber)
 
       page.policyno = page.user.policyNumber;
@@ -575,7 +577,7 @@ export class client_claim_formComponent {
   sd_p4B7idTFiqPSmL4H(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'verify-doc';
+      bh.url = page.ssdUrl + 'verify-id';
       page.loading = true;
 
       bh = this.sd_qE3ziIXUvXb5u3JI(bh);
@@ -657,8 +659,6 @@ export class client_claim_formComponent {
   sd_lNRBNADEwAftcDMX(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
-      this.getFromBackend1();
       console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
       page.loading = true;
@@ -697,6 +697,8 @@ export class client_claim_formComponent {
       page.loading = false;
       console.log('File uploded', page.res);
       page.mes = 'READING DOCUMENT';
+      sessionStorage.setItem('idClaimer', JSON.stringify(page.res));
+      this.getFromBackend1();
       bh = this.sd_l3dQSb0lFtyKLJ9h(bh);
       //appendnew_next_sd_nUpeEDzTzWMcBbWd
       return bh;
@@ -726,7 +728,7 @@ export class client_claim_formComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('The ID uploaded is Invalid', 'Ok', {
+        .open('The document uploaded is Invalid', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -755,10 +757,22 @@ export class client_claim_formComponent {
   sd_3oPD9URBTiO6W2ii(bh) {
     try {
       this.page.idclaimerFile = JSON.parse(sessionStorage.getItem('idClaimer'));
+      bh = this.sd_PbHhgGm66YTklFyZ(bh);
       //appendnew_next_sd_3oPD9URBTiO6W2ii
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3oPD9URBTiO6W2ii');
+    }
+  }
+
+  sd_PbHhgGm66YTklFyZ(bh) {
+    try {
+      const page = this.page;
+      page.idclaimerfilename = page.idclaimerFile.filename;
+      //appendnew_next_sd_PbHhgGm66YTklFyZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PbHhgGm66YTklFyZ');
     }
   }
 
@@ -791,12 +805,18 @@ export class client_claim_formComponent {
     try {
       const page = this.page;
       page.policyClaimsForm.value['ID'] = page.id;
+      page.policyClaimsForm.value['IDfile'] = page.idclaimerfilename;
       page.policyClaimsForm.value['IDDeceased'] = page.iddes;
+      page.policyClaimsForm.value['IDDeceasedfile'] = page.idDeceasedfilename;
       page.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify;
+      page.policyClaimsForm.value['DeathCertificatefile'] =
+        page.deathCetificatifyfilename;
       page.policyClaimsForm.value['bi1663'] = page.bi1663;
+      page.policyClaimsForm.value['bi1663file'] = page.bi1663filename;
       page.policyClaimsForm.value['bankDetails'] = page.bankDetails;
+      page.policyClaimsForm.value['bankDetailsfile'] = page.bankDetailsfilename;
 
-      // console.log("The val",page.deathCetificatifyFile)
+      console.log('The val', page.policyClaimsForm.value);
       bh = this.sd_fusyotj2BipM6rO4(bh);
       //appendnew_next_fileInForm
       return bh;
@@ -969,7 +989,7 @@ export class client_claim_formComponent {
   sd_mfoU0xKdTFiLcrfz(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'verify-doc';
+      bh.url = page.ssdUrl + 'verify-id';
       page.loading = true;
 
       bh = this.sd_LZJJZ6TTNFPHtebO(bh);
@@ -1034,7 +1054,7 @@ export class client_claim_formComponent {
 
   sd_s0pOGCbxS3iDT0HA(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
         duration: 3000,
         direction: 'ltr',
         horizontalPosition: 'center',
@@ -1051,8 +1071,6 @@ export class client_claim_formComponent {
   sd_cFaCMy4DZV75DBan(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
-      this.getFromBackend1();
       console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
       page.loading = true;
@@ -1091,6 +1109,8 @@ export class client_claim_formComponent {
       page.loading = false;
       console.log('File uploded', page.res);
       page.mes = 'READING DOCUMENT';
+      sessionStorage.setItem('idDeceased', JSON.stringify(page.res));
+      this.getFromBackend2();
       bh = this.sd_3HJsYol77bzL8LeN(bh);
       //appendnew_next_sd_Uu3tgDJTOP1kdw5g
       return bh;
@@ -1120,7 +1140,7 @@ export class client_claim_formComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('The ID uploaded is Invalid', 'Ok', {
+        .open('The document uploaded is Invalid', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -1151,10 +1171,22 @@ export class client_claim_formComponent {
       this.page.idDeceasedFile = JSON.parse(
         sessionStorage.getItem('idDeceased')
       );
+      bh = this.sd_44ZVLUe7U6XdYr4k(bh);
       //appendnew_next_sd_WyVw5UYJyDWtPxLj
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_WyVw5UYJyDWtPxLj');
+    }
+  }
+
+  sd_44ZVLUe7U6XdYr4k(bh) {
+    try {
+      const page = this.page;
+      page.idDeceasedfilename = page.idDeceasedFile.filename;
+      //appendnew_next_sd_44ZVLUe7U6XdYr4k
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_44ZVLUe7U6XdYr4k');
     }
   }
 
@@ -1198,7 +1230,7 @@ export class client_claim_formComponent {
   sd_2khXacsujptwBtLe(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'verify-doc';
+      bh.url = page.ssdUrl + 'verify-death-certificate';
       page.loading = true;
 
       bh = this.sd_o6UVMiTVHBuHN4aM(bh);
@@ -1263,7 +1295,7 @@ export class client_claim_formComponent {
 
   sd_cD4R2NV3b0OC28Ll(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
         duration: 3000,
         direction: 'ltr',
         horizontalPosition: 'center',
@@ -1280,8 +1312,6 @@ export class client_claim_formComponent {
   sd_z4s2zTiMY3XzjD0p(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('deathCetificatify', JSON.stringify(bh.result));
-      this.getFromBackend3();
       console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
       page.loading = true;
@@ -1320,6 +1350,8 @@ export class client_claim_formComponent {
       page.loading = false;
       console.log('File uploded', page.res);
       page.mes = 'READING DOCUMENT';
+      sessionStorage.setItem('deathCetificatify', JSON.stringify(page.res));
+      this.getFromBackend3();
       bh = this.sd_uaJ6miQN25EAdeUI(bh);
       //appendnew_next_sd_WuwUSZUIW6SHhWhX
       return bh;
@@ -1349,7 +1381,7 @@ export class client_claim_formComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('The ID uploaded is Invalid', 'Ok', {
+        .open('The document uploaded is Invalid', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -1380,10 +1412,22 @@ export class client_claim_formComponent {
       this.page.deathCetificatifyFile = JSON.parse(
         sessionStorage.getItem('deathCetificatify')
       );
+      bh = this.sd_soByUd0NmBNgnhsu(bh);
       //appendnew_next_sd_982Nnir9Q9jmnsmb
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_982Nnir9Q9jmnsmb');
+    }
+  }
+
+  sd_soByUd0NmBNgnhsu(bh) {
+    try {
+      const page = this.page;
+      page.deathCetificatifyfilename = page.deathCetificatifyFile.filename;
+      //appendnew_next_sd_soByUd0NmBNgnhsu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_soByUd0NmBNgnhsu');
     }
   }
 
@@ -1461,6 +1505,7 @@ export class client_claim_formComponent {
     try {
       const page = this.page;
       page.loading = true;
+
       bh = this.sd_p8Z6QmT4kLvX2v3l(bh);
       //appendnew_next_sd_QrFOU4XrjWDme9mt
       return bh;
@@ -1492,7 +1537,7 @@ export class client_claim_formComponent {
 
   sd_eYs4cYC8qnGFQysa(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
         duration: 3000,
         direction: 'ltr',
         horizontalPosition: 'center',
@@ -1509,8 +1554,6 @@ export class client_claim_formComponent {
   sd_P1x5hwR7zK2XSXhe(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('bi1663', JSON.stringify(bh.result));
-      this.getFromBackend4();
       console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
       page.loading = true;
@@ -1549,6 +1592,8 @@ export class client_claim_formComponent {
       page.loading = false;
       console.log('File uploded', page.res);
       page.mes = 'READING DOCUMENT';
+      sessionStorage.setItem('bi1663', JSON.stringify(page.res));
+      this.getFromBackend4();
       bh = this.sd_WamSMfSAwtQ40Qcm(bh);
       //appendnew_next_sd_uQ2ta4AT7dJGjfF6
       return bh;
@@ -1578,7 +1623,7 @@ export class client_claim_formComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('The ID uploaded is Invalid', 'Ok', {
+        .open('The document uploaded is Invalid', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -1607,10 +1652,22 @@ export class client_claim_formComponent {
   sd_wPEJ9ypn913YDfdT(bh) {
     try {
       this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
+      bh = this.sd_bMD9PJo4pOaPvjCY(bh);
       //appendnew_next_sd_wPEJ9ypn913YDfdT
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_wPEJ9ypn913YDfdT');
+    }
+  }
+
+  sd_bMD9PJo4pOaPvjCY(bh) {
+    try {
+      const page = this.page;
+      page.bi1663filename = page.bi1663File.filename;
+      //appendnew_next_sd_bMD9PJo4pOaPvjCY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bMD9PJo4pOaPvjCY');
     }
   }
 
@@ -1654,7 +1711,7 @@ export class client_claim_formComponent {
   sd_8GPDFmqkBu3Gj4Jy(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'verify-doc';
+      bh.url = page.ssdUrl + 'verify-bank-statement';
       page.loading = true;
 
       bh = this.sd_jhzXDCIg5uWpdK5F(bh);
@@ -1719,7 +1776,7 @@ export class client_claim_formComponent {
 
   sd_J4rvyg7A7tCs8Xee(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
+      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
         duration: 3000,
         direction: 'ltr',
         horizontalPosition: 'center',
@@ -1736,8 +1793,6 @@ export class client_claim_formComponent {
   sd_t6r7SrhN7R7PePIS(bh) {
     try {
       const page = this.page;
-      sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
-      this.getFromBackend5();
       console.log('response', bh.result);
       bh.url = page.ssdUrl + 'upload';
       page.loading = true;
@@ -1773,9 +1828,12 @@ export class client_claim_formComponent {
   sd_aI7RSXUCxplR25t0(bh) {
     try {
       const page = this.page;
-      page.loading = false;
       console.log('File uploded', page.res);
       page.mes = 'READING DOCUMENT';
+      page.loading = false;
+      sessionStorage.setItem('bankDetails', JSON.stringify(page.res));
+      this.getFromBackend5();
+      page.loading = false;
       bh = this.sd_NtulvwwJ2kNpWD82(bh);
       //appendnew_next_sd_aI7RSXUCxplR25t0
       return bh;
@@ -1805,7 +1863,7 @@ export class client_claim_formComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('The ID uploaded is Invalid', 'Ok', {
+        .open('The document uploaded is Invalid', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -1836,10 +1894,22 @@ export class client_claim_formComponent {
       this.page.bankDetailsFile = JSON.parse(
         sessionStorage.getItem('bankDetails')
       );
+      bh = this.sd_UwjbGxNF17NFOfnQ(bh);
       //appendnew_next_sd_6wYXUnDjB7qDVWsp
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_6wYXUnDjB7qDVWsp');
+    }
+  }
+
+  sd_UwjbGxNF17NFOfnQ(bh) {
+    try {
+      const page = this.page;
+      page.bankDetailsfilename = page.bankDetailsFile.filename;
+      //appendnew_next_sd_UwjbGxNF17NFOfnQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UwjbGxNF17NFOfnQ');
     }
   }
 

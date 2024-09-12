@@ -723,7 +723,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.routeData = {isReview: true}",
+        "script": "\nconsole.log(\"cllldk\", bh.input.claim)",
         "functionName": "sd_dxNlwJcweptzBBD0",
         "category": "Function",
         "x": 430,
