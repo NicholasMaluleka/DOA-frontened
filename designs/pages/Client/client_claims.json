@@ -670,17 +670,7 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/dashboard/claim-register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": {
-            "type": "bh",
-            "value": "routeData"
-        },
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/dashboard/client_view_claim",
         "functionName": "sd_qJzUhzTofMKIqPSC",
         "category": "Navigation",
         "x": 530,

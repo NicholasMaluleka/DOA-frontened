@@ -306,7 +306,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -314,10 +313,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -333,11 +330,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_eeDqEW48y1aYDdzq",
         "category": "HTTP",
@@ -804,7 +799,7 @@
         "flow_type": "sync",
         "functionName": "submit",
         "category": "General",
-        "x": 145,
+        "x": 165,
         "y": 1300,
         "wires": [
             [
@@ -825,7 +820,7 @@
         "script": "\nbh.url = page.ssdUrl + 'add-claim'\nconsole.log(\"The val\",page.policyClaimsForm.value)\nbh.body = page.policyClaimsForm.value\nbh.body['policyNo']=  page.policyno\nbh.body.claimNumber = `CN-${ page.policyno}`\n\ndelete bh.body.deathCetificatify2\ndelete bh.body.deceased2\ndelete bh.body.idClaimer2\ndelete bh.body.idDeceased2\ndelete bh.body.bi16632\ndelete bh.body.bankDetails2\ndelete bh.body.depsId\nconsole.log(\"This is bh body\", bh.body)",
         "functionName": "sd_3VDakwnzEcR5Oup5",
         "category": "Function",
-        "x": 265,
+        "x": 245,
         "y": 1300,
         "wires": [
             [
@@ -971,7 +966,7 @@
         "script": "\npage.policyClaimsForm.value['ID'] = page.id\npage.policyClaimsForm.value['IDDeceased'] = page.iddes\npage.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify\npage.policyClaimsForm.value['bi1663'] =  page.bi1663\npage.policyClaimsForm.value['bankDetails'] = page.bankDetails\n\n// console.log(\"The val\",page.deathCetificatifyFile)",
         "functionName": "fileInForm",
         "category": "Function",
-        "x": 385,
+        "x": 345,
         "y": 1300,
         "wires": [
             [

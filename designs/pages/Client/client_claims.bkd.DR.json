@@ -1833,6 +1833,7 @@
                                     "32fcad9b-3e6b-e7af-09a5-2efa5ddb5435": {
                                         "paletteKey": "NG-icon",
                                         "parentEditorKey": "bce4463c-eaed-3a8c-eccb-e31dda1d43ba",
+                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -1879,15 +1880,7 @@
                                                 "_value": "reviewClaim(table)",
                                                 "_type": "kv",
                                                 "_attrDef": "c",
-                                                "objValue": {
-                                                    "nodeID": "sd_7HQQDsDhZXQKqYFH",
-                                                    "functionName": "reviewClaim",
-                                                    "activeTree": "pages",
-                                                    "z": "sd_TWjVL4CJiqaEHkYO",
-                                                    "input": [
-                                                        "table"
-                                                    ]
-                                                }
+                                                "_customAttributeFlag": "customInput"
                                             }
                                         ]
                                     }

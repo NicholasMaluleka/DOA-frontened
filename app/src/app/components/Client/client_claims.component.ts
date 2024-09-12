@@ -331,12 +331,10 @@ export class client_claimsComponent implements AfterViewInit {
   async sd_qJzUhzTofMKIqPSC(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+        this.sdService.getPathAndQParamsObj('/dashboard/client_view_claim');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, bh.routeData),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_qJzUhzTofMKIqPSC
       return bh;
     } catch (e) {

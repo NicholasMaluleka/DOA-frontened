@@ -44,7 +44,7 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
               <b>Deceased Details</b></label></div>
-          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field style="color:#124e52" class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Dependency Id Number</mat-label>
               <mat-select formControlName="depsId" placeholder="Select" [required]="false" (selectionChange)="populate()">
                 <ng-template ngFor let-option [ngForOf]="page.ids" let-i="index">
@@ -123,7 +123,7 @@
 
 
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="submit()">Submit a Claim</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="submit()" [disabled]="page.policyClaimsForm.invalid">Submit a Claim</button></div>
           </div>
         </div>
       </div>

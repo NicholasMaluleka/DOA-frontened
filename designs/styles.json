@@ -1,5 +1,6 @@
 {
     "classes": [
+        "mat-select-value-text",
         "FullHeight",
         "width20",
         "small-weight",

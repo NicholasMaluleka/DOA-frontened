@@ -1,0 +1,167 @@
+[
+    {
+        "id": "sd_dG2UOa6KZSqqQWfL",
+        "type": "tab",
+        "createdDate": "2024-09-11T20:59:04.329Z",
+        "label": "client_view_claim",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "client_view_claimComponent"
+    },
+    {
+        "id": "sd_dfFKsPO9eitEjN7M",
+        "type": "OnInit",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_dfFKsPO9eitEjN7M",
+        "category": "Lifecycle Events",
+        "x": 25,
+        "y": 40,
+        "wires": [
+            [
+                "sd_wpYrgOag9aqCjhHl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "client_view_claimComponent"
+    },
+    {
+        "id": "sd_fJ8m3FaaUfnjTh9C",
+        "type": "PageVariables",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_fJ8m3FaaUfnjTh9C",
+        "category": "Function",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_c8NOjDUYzS2u7cWO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_view_claimComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wpYrgOag9aqCjhHl",
+        "type": "UseDependency",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControlName",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_wpYrgOag9aqCjhHl",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_fJ8m3FaaUfnjTh9C"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_view_claimComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6nloMKrs7E7KI7sJ",
+        "type": "Script",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "forms",
+        "script": "console.log(\"claimeee\", page.claim)\n// // decesed details\n// page.deceased = new FormGroup({\n//       firstName :new FormControl(''),\n//       lastName: new FormControl( ''),\n//       idNum :new FormControl( ''),\n//        gender: new FormControl(''),\n       \n//     })\n//     // documents\n//   // page.idClaimer=new FormGroup({\n//   //   filename: new FormControl(\"\"),\n//   //   })\n//   //    page.idDecesed =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.bi1662 =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.deathCertificate =new FormGroup({\n   \n    \n     \n//   //   })\n//   //     page.bankDetails =new FormGroup({\n   \n    \n     \n//   //   })\n//     //claims form with all information including claimer details\n// page.policyClaimsForm = new FormGroup({\n//     firstName :new FormControl(page.user.firstName),\n//     lastName:new FormControl(page.user.lastName),\n//     idNum:new FormControl( page.user.idNumber),\n//     gender:new FormControl( page.user.gender),\n//     packageType : new FormControl( page.user.packageType),\n//     payoutAmount :new FormControl( ''),\n//     deceased: page.deceased, \n//     deceased2 :new FormControl(''),\n//     // idClaimer: page.idClaimer,\n//     idClaimer2:new FormControl(''),\n    \n//      idDeceased2:new FormControl(''),\n   \n//      bi16632:new FormControl(''),\n//     // deathCertificate:page.deathCertificate,\n//     deathCetificatify2:new FormControl(''),\n//     // bankDetails :page.bankDetails,\n//      bankDetails2:new FormControl(''),\n//      status:new FormControl('pending'),\n//      depsId : new FormControl ()\n//  })\n\n//  page.date = new Date()\n\n//    console.log(\"page.deceased\", page.deceased)         \n            \n              \n// // bh.url = page.ssdUrl + 'get-users'",
+        "functionName": "forms",
+        "category": "Function",
+        "x": 505,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_view_claimComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_c8NOjDUYzS2u7cWO",
+        "type": "Storage",
+        "z": "sd_dG2UOa6KZSqqQWfL",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "claim"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "claim"
+        },
+        "resultMapping": {},
+        "functionName": "sd_c8NOjDUYzS2u7cWO",
+        "category": "Storage",
+        "x": 385,
+        "y": 40,
+        "wires": [
+            [
+                "sd_6nloMKrs7E7KI7sJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_view_claimComponent",
+        "generated": true
+    }
+]
