@@ -3,7 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Component, Injector } from '@angular/core'; //_splitter_
+import { AfterViewInit, Component, Injector } from '@angular/core'; //_splitter_
 import {
   FormBuilder,
   FormControl,
@@ -14,9 +14,12 @@ import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { ActivatedRoute, Router } from '@angular/router'; //_splitter_
 import { view_documentComponent } from 'app/components/Authentication/view_document.component'; //_splitter_
+import { director_noteComponent } from 'app/components/Director/director_note.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
+import { variables } from 'app/sd-services/variables'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -26,7 +29,7 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
     //appendnew_element_providers
   ],
 })
-export class claims_registerComponent {
+export class claims_registerComponent implements AfterViewInit {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -74,7 +77,7 @@ export class claims_registerComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      bh = this.sd_8uy7TQ48zgBugAZc(bh);
       //appendnew_next_start
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Pmcf2QLXpNt1xmib');
@@ -396,6 +399,33 @@ export class claims_registerComponent {
       return this.errorHandler(bh, e, 'sd_d6vseXRHCyuRWjnv');
     }
   }
+
+  addReason(value: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { value };
+      bh.local = {};
+      bh = this.sd_6K1LlQR7ORYPgDAJ(bh);
+      //appendnew_next_addReason
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3FCYJiLfE5GXt05I');
+    }
+  }
+  ngAfterViewInit() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_dMv4RgmBK75eHTvZ(bh);
+      //appendnew_next_ngAfterViewInit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cAN8JzyGJi1Oq1V5');
+    }
+  }
+
   //appendnew_flow_claims_registerComponent_start
 
   sd_TLAQgRUW9oXzXEcO(bh) {
@@ -420,6 +450,8 @@ export class claims_registerComponent {
       this.page.claimStatuses = undefined;
       this.page.docs = undefined;
       this.page.fileURL = undefined;
+      this.page.updatedClaim = undefined;
+      this.page.value = undefined;
       this.page.notification = undefined;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
@@ -453,7 +485,7 @@ export class claims_registerComponent {
 
   sd_hGyKu4GCZrIhOO7t(bh) {
     try {
-      this.page.user = JSON.parse(localStorage.getItem('user'));
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
       bh = this.sd_t7WBGNUYn2Qn9klf(bh);
       //appendnew_next_sd_hGyKu4GCZrIhOO7t
       return bh;
@@ -476,12 +508,11 @@ export class claims_registerComponent {
       page.policyNo = page.newClient[0].policyNumber;
 
       page.notification = {
+        status: 'pending',
         notificationID: `NOT-${new Date().getTime()}`,
         claimNumber: `CN-${page.policyNo}`,
         addedBy: page.user.role,
-        notification: 'CLAIM has been created sucessfully and pending',
       };
-
       bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_t7WBGNUYn2Qn9klf
       return bh;
@@ -523,7 +554,7 @@ export class claims_registerComponent {
           undefined
         )
       ) {
-        bh = this.benAndDepenArrayForSelectors(bh);
+        bh = this.benAndDepenArrayForSelectorsAndYear(bh);
       } else {
         bh = await this.sd_0dgCvNhXnv2EDp9O(bh);
       }
@@ -534,7 +565,7 @@ export class claims_registerComponent {
     }
   }
 
-  benAndDepenArrayForSelectors(bh) {
+  benAndDepenArrayForSelectorsAndYear(bh) {
     try {
       const page = this.page; // Dependency
 
@@ -558,9 +589,10 @@ export class claims_registerComponent {
         { value: page.benarray[0], viewValue: page.benarray[0].idNumber },
         { value: page.benarray[1], viewValue: page.benarray[1].idNumber },
       ];
+      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
 
       bh = this.sd_s7IAxRYDHIXfSJ12(bh);
-      //appendnew_next_benAndDepenArrayForSelectors
+      //appendnew_next_benAndDepenArrayForSelectorsAndYear
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_VmZ87Aum2rOPCu6Y');
@@ -639,7 +671,7 @@ export class claims_registerComponent {
         idNum: new FormControl(''),
         gender: new FormControl(''),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl('R110'),
+        payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
@@ -696,10 +728,21 @@ export class claims_registerComponent {
       page.claim = page.clients.find(
         (client) => client.policyNumber == page.policy
       );
+      bh = this.sd_7BWzeJjISBuILSaE(bh);
       //appendnew_next_sd_2zMKByS1YzyZkcY2
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_2zMKByS1YzyZkcY2');
+    }
+  }
+
+  sd_7BWzeJjISBuILSaE(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      //appendnew_next_sd_7BWzeJjISBuILSaE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7BWzeJjISBuILSaE');
     }
   }
 
@@ -729,7 +772,7 @@ export class claims_registerComponent {
         chunkSize: new FormControl(''),
         length: new FormControl(''),
       });
-      page.bi1662 = new FormGroup({
+      page.bi1663 = new FormGroup({
         _id: new FormControl(''),
         filename: new FormControl(''),
         chunkSize: new FormControl(''),
@@ -761,8 +804,8 @@ export class claims_registerComponent {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
-        bi16632: new FormControl(''),
+        bi1663: page.bi1663,
+        bi1662: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
@@ -770,6 +813,7 @@ export class claims_registerComponent {
         status: new FormControl('pending'),
         depsId: new FormControl(),
         beIds: new FormControl(),
+        //  claimReason: new FormControl()
       });
 
       page.date = new Date();
@@ -804,6 +848,18 @@ export class claims_registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_vlg7Jz5xPnAHOlgA');
+    }
+  }
+
+  sd_8uy7TQ48zgBugAZc(bh) {
+    try {
+      const page = this.page;
+      console.log('page.', page.deceased);
+      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      //appendnew_next_sd_8uy7TQ48zgBugAZc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8uy7TQ48zgBugAZc');
     }
   }
 
@@ -844,7 +900,7 @@ export class claims_registerComponent {
       page.policyClaimsForm.value.deathCertificate.chunkSize =
         page.deathCetificatifyFile.chunkSize;
 
-      console.log('The val', page.deathCetificatifyFile);
+      // console.log("The val",page.deathCetificatifyFile)
       bh = this.deceasedIdFileInForm(bh);
       //appendnew_next_deathCetificatifyFileInForm
       return bh;
@@ -856,7 +912,7 @@ export class claims_registerComponent {
   deceasedIdFileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.idDecesed._id = page.idclaimerFile._id;
+      page.policyClaimsForm.value.idDecesed._id = page.idDeceasedFile._id;
       page.policyClaimsForm.value.idDecesed.filename =
         page.idDeceasedFile.filename;
       page.policyClaimsForm.value.idDecesed.length = page.idDeceasedFile.length;
@@ -897,7 +953,7 @@ export class claims_registerComponent {
         page.bankDetailsFile.length;
       page.policyClaimsForm.value.bankDetails.chunkSize =
         page.bankDetailsFile.chunkSize;
-      bh = this.bi1663FileInForm(bh);
+      bh = this.sd_3QrXrgXm95pU3x0Q(bh);
       //appendnew_next_bankDetailsFileInForm
       return bh;
     } catch (e) {
@@ -905,29 +961,34 @@ export class claims_registerComponent {
     }
   }
 
+  sd_3QrXrgXm95pU3x0Q(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.bi1663FileInForm(bh);
+      //appendnew_next_sd_3QrXrgXm95pU3x0Q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3QrXrgXm95pU3x0Q');
+    }
+  }
+
   bi1663FileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.bi1662._id = page.bi1663File._id;
-      page.policyClaimsForm.value.bi1662.filename = page.bi1663File.filename;
-      page.policyClaimsForm.value.bi1662.length = page.bi1663File.length;
-      page.policyClaimsForm.value.bi1662.chunkSize = page.bi1663File.chunkSize;
-      bh = this.sd_6AIl6tNP9HfXh7UZ(bh);
+      console.log('PG FILE: ', page.bi1663File);
+
+      page.policyClaimsForm.value.bi1663._id = page.bi1663File._id;
+      page.policyClaimsForm.value.bi1663.filename = page.bi1663File.filename;
+      page.policyClaimsForm.value.bi1663.length = page.bi1663File.length;
+      page.policyClaimsForm.value.bi1663.chunkSize = page.bi1663File.chunkSize;
+
+      bh.notURL = 'add-notification';
+      console.log('NOT URL: ', bh.notURL);
+      bh = this.sd_GDDWmjjIVPTba5A7(bh);
       //appendnew_next_bi1663FileInForm
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_JR3eNMxvH2KitFQv');
-    }
-  }
-
-  sd_6AIl6tNP9HfXh7UZ(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_GDDWmjjIVPTba5A7(bh);
-      //appendnew_next_sd_6AIl6tNP9HfXh7UZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_6AIl6tNP9HfXh7UZ');
     }
   }
 
@@ -942,11 +1003,31 @@ export class claims_registerComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      bh = this.sd_szPF5fSpHvY5QPUd(bh);
       //appendnew_next_sd_GDDWmjjIVPTba5A7
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_GDDWmjjIVPTba5A7');
+    }
+  }
+
+  async sd_szPF5fSpHvY5QPUd(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericPost(
+        bh.notURL,
+        this.page.notification
+      );
+      bh.res = outputVariables.local.result;
+
+      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      this.sd_1yKiwXFoXNIGd3dc(bh);
+      //appendnew_next_sd_szPF5fSpHvY5QPUd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_szPF5fSpHvY5QPUd');
     }
   }
 
@@ -979,6 +1060,16 @@ export class claims_registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EZV9KScHEbVQ3VZL');
+    }
+  }
+
+  sd_1yKiwXFoXNIGd3dc(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.res);
+      //appendnew_next_sd_1yKiwXFoXNIGd3dc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1yKiwXFoXNIGd3dc');
     }
   }
 
@@ -1427,7 +1518,6 @@ export class claims_registerComponent {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'upload';
-
       bh = this.sd_rXIAeUYF30BWCUSh(bh);
       //appendnew_next_sd_VmKFEeemCRTBGk6S
       return bh;
@@ -1495,10 +1585,21 @@ export class claims_registerComponent {
   sd_gL8y6GZoB2NS2hdX(bh) {
     try {
       this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
+      this.sd_UtPy5PvcklyhnFCo(bh);
       //appendnew_next_sd_gL8y6GZoB2NS2hdX
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_gL8y6GZoB2NS2hdX');
+    }
+  }
+
+  sd_UtPy5PvcklyhnFCo(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.bi1663File);
+      //appendnew_next_sd_UtPy5PvcklyhnFCo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UtPy5PvcklyhnFCo');
     }
   }
 
@@ -1517,7 +1618,6 @@ export class claims_registerComponent {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'upload';
-
       bh = this.sd_lZOqKwyx0IZ5HCE1(bh);
       //appendnew_next_sd_GIH7bU9nx5ZqjZdu
       return bh;
@@ -1569,7 +1669,7 @@ export class claims_registerComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('bi1663 Upload Successful', 'Ok', {
+        .open('Bank Details Upload Successful', 'Ok', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -1687,11 +1787,22 @@ export class claims_registerComponent {
       page.fileURL = page.ssdUrl + 'download/';
 
       console.log('URL:', page.ssdUrl);
-      bh = this.sd_ypuYcwTSxbHCyLl9(bh);
+      bh = this.sd_xLAtfgHKTyGPt8n2(bh);
       //appendnew_next_sd_UmdtwXC1AB0nhAbw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_UmdtwXC1AB0nhAbw');
+    }
+  }
+
+  sd_xLAtfgHKTyGPt8n2(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_ypuYcwTSxbHCyLl9(bh);
+      //appendnew_next_sd_xLAtfgHKTyGPt8n2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xLAtfgHKTyGPt8n2');
     }
   }
 
@@ -1721,11 +1832,19 @@ export class claims_registerComponent {
       const page = this.page; // decesed details
 
       console.log('BEN');
+      // console.log(page.user.role)
 
-      page.claimStatuses = [
-        { value: 'partially approved', viewValue: 'Partially Approve' },
-        { value: 'rejected', viewValue: 'Reject' },
-      ];
+      if (page.user.role === 'admin') {
+        page.claimStatuses = [
+          { value: 'partially approved', viewValue: 'Partially Approve' },
+          { value: 'rejected', viewValue: 'Reject' },
+        ];
+      } else if (page.user.role === 'director') {
+        page.claimStatuses = [
+          { value: 'approved', viewValue: 'Approve' },
+          { value: 'rejected', viewValue: 'Reject' },
+        ];
+      }
 
       page.deceased = new FormGroup({
         firstName: new FormControl(page.selectedClaim.deceased.firstName),
@@ -1737,8 +1856,6 @@ export class claims_registerComponent {
         ]),
         status: new FormControl(page.selectedClaim, [Validators.required]),
       });
-
-      console.log('DECEASED', page.deceased);
 
       // documents
       page.idClaimer = new FormGroup({
@@ -1785,14 +1902,14 @@ export class claims_registerComponent {
         packageType: new FormControl(page.selectedClaim.packageType),
         payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
         deceased: page.deceased,
-        status: new FormControl(page.selectedClaim.status),
+        status: new FormControl(page.deceased.value.status),
         deceased2: new FormControl(''),
         idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
         bi1663: page.bi1663,
-        bi16632: new FormControl(''),
+        bi1662: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
@@ -1801,6 +1918,23 @@ export class claims_registerComponent {
         beIds: new FormControl(page.selectedClaim.beIds),
         _id: new FormControl(page.selectedClaim._id),
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
+      });
+
+      page.deceased.get('status')?.valueChanges.subscribe((value) => {
+        page.value = { status: value };
+        if (
+          (page.user.role == 'admin' && value == 'partially approved') ||
+          (page.user.role === 'admin' && value == 'rejected')
+        ) {
+          page.deceased.get('status')?.disable();
+          page.policyClaimsForm.value.status = page.value.status;
+        } else if (
+          (page.user.role === 'director' && value === 'approved') ||
+          (page.user.role === 'director' && value === 'rejected')
+        ) {
+          page.deceased.get('status')?.disable();
+          page.policyClaimsForm.value.status = page.value.status;
+        }
       });
 
       page.date = new Date();
@@ -1851,14 +1985,20 @@ export class claims_registerComponent {
 
   forms1(bh) {
     try {
-      const page = this.page; // decesed details
+      const page = this.page;
+      page.value = {};
 
-      console.log('PH');
-
-      page.claimStatuses = [
-        { value: 'partially approved', viewValue: 'Partially Approve' },
-        { value: 'rejected', viewValue: 'Reject' },
-      ];
+      if (page.user.role === 'admin') {
+        page.claimStatuses = [
+          { value: 'partially approved', viewValue: 'Partially Approve' },
+          { value: 'rejected', viewValue: 'Reject' },
+        ];
+      } else if (page.user.role === 'director') {
+        page.claimStatuses = [
+          { value: 'approved', viewValue: 'Approve' },
+          { value: 'rejected', viewValue: 'Reject' },
+        ];
+      }
 
       page.deceased = new FormGroup({
         firstName: new FormControl(page.selectedClaim.deceased.firstName),
@@ -1866,10 +2006,9 @@ export class claims_registerComponent {
         idNum: new FormControl(page.selectedClaim.deceased.idNum),
         gender: new FormControl(page.selectedClaim.deceased.gender),
         dateOfDeath: new FormControl(page.selectedClaim.deceased.dateOfDeath),
+        // status: new FormControl({value: page.selectedClaim.status, disabled: true}),
         status: new FormControl(page.selectedClaim.status),
       });
-
-      console.log('DECEASED', page.deceased);
 
       // documents
       page.idClaimer = new FormGroup({
@@ -1886,7 +2025,7 @@ export class claims_registerComponent {
         length: new FormControl(page.selectedClaim.idDecesed.length),
       });
 
-      page.bi1662 = new FormGroup({
+      page.bi1663 = new FormGroup({
         _id: new FormControl(page.selectedClaim.bi1662._id),
         filename: new FormControl(page.selectedClaim.bi1662.filename),
         // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
@@ -1921,8 +2060,8 @@ export class claims_registerComponent {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
-        bi16632: new FormControl(''),
+        bi1663: page.bi1663,
+        bi1662: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
@@ -1930,13 +2069,31 @@ export class claims_registerComponent {
         depsId: new FormControl(page.selectedClaim.depsId),
         beIds: new FormControl(page.selectedClaim.beIds),
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
-        status: new FormControl(page.deceased.value.status),
+        status: new FormControl(page.value?.status),
         _id: new FormControl(page.selectedClaim._id),
       });
 
-      page.date = new Date();
+      page.deceased.get('status')?.valueChanges.subscribe((value) => {
+        page.value = { status: value };
+        if (
+          (page.user.role == 'admin' && value == 'partially approved') ||
+          (page.user.role === 'admin' && value == 'rejected')
+        ) {
+          page.deceased.get('status')?.disable();
+          page.policyClaimsForm.value.status = page.value.status;
+          if (page.user.role === 'director' && value === 'partially approved') {
+            page.deceased.get('status')?.enable();
+          }
+        } else if (
+          (page.user.role === 'director' && value === 'approved') ||
+          (page.user.role === 'director' && value === 'rejected')
+        ) {
+          page.deceased.get('status')?.disable();
+          page.policyClaimsForm.value.status = page.value.status;
+        }
+      });
 
-      console.log('page.deceased', page.deceased);
+      page.date = new Date();
 
       bh.url = page.ssdUrl + 'get-users';
       bh = this.sd_H2rfObg2GTiF2OJI(bh);
@@ -1977,7 +2134,10 @@ export class claims_registerComponent {
       const page = this.page;
       bh.url = page.ssdUrl + 'update_claim';
 
-      console.log('URL: ', bh.url);
+      page.updatedClaim = page.policyClaimsForm.value;
+      page.updatedClaim.status = page.value.status;
+
+      console.log('page.updatedClaim', page.updatedClaim);
       bh = this.sd_9j0Sbn07mNgWcy1F(bh);
       //appendnew_next_sd_Jp5WhdAT8tH6NXXw
       return bh;
@@ -1994,7 +2154,7 @@ export class claims_registerComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: bh.input.claim,
+        body: this.page.updatedClaim,
       };
       this.page.res = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_aaERlUkwBglNdw0w(bh);
@@ -2034,11 +2194,106 @@ export class claims_registerComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      bh = this.sd_nZ3fyQZGNTByR3Yl(bh);
+      bh = this.sd_v6ld535K0dqcmZGj(bh);
       //appendnew_next_sd_e6cgpzrBPGD5XQ4t
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_e6cgpzrBPGD5XQ4t');
+    }
+  }
+
+  async sd_v6ld535K0dqcmZGj(bh) {
+    try {
+      if (
+        this.sdService.operators['se'](
+          this.page.user.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_nzrNljXRVpixxCrc(bh);
+      } else {
+        bh = await this.sd_nZ3fyQZGNTByR3Yl(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_v6ld535K0dqcmZGj');
+    }
+  }
+
+  sd_nzrNljXRVpixxCrc(bh) {
+    try {
+      const page = this.page;
+      page.sendMsg = page.ssdUrl + 'send-message';
+      page.getUsers = page.ssdUrl + 'get-users';
+
+      bh = this.sd_jQUYu0lvcMzZSRhu(bh);
+      //appendnew_next_sd_nzrNljXRVpixxCrc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nzrNljXRVpixxCrc');
+    }
+  }
+
+  async sd_jQUYu0lvcMzZSRhu(bh) {
+    try {
+      let requestOptions = {
+        url: this.page.getUsers,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.users = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_0JdhwakS1r4tZGSu(bh);
+      //appendnew_next_sd_jQUYu0lvcMzZSRhu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jQUYu0lvcMzZSRhu');
+    }
+  }
+
+  sd_0JdhwakS1r4tZGSu(bh) {
+    try {
+      const page = this.page;
+      page.users.find((item) => {
+        if (item.idNumber === page.updatedClaim.idNum) {
+          page.userEmail = item.email;
+        }
+      });
+
+      bh.body = {
+        email: page.userEmail,
+        subject: 'Claim update',
+        message: `Your claim has been ${page.updatedClaim.status}. Please login to the system to see more details.`,
+      };
+      bh = this.sd_iLRwB3gmY1wyNMMJ(bh);
+      //appendnew_next_sd_0JdhwakS1r4tZGSu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_0JdhwakS1r4tZGSu');
+    }
+  }
+
+  async sd_iLRwB3gmY1wyNMMJ(bh) {
+    try {
+      let requestOptions = {
+        url: this.page.sendMsg,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.sendMsgres = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_nZ3fyQZGNTByR3Yl(bh);
+      //appendnew_next_sd_iLRwB3gmY1wyNMMJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iLRwB3gmY1wyNMMJ');
     }
   }
 
@@ -2055,6 +2310,144 @@ export class claims_registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_nZ3fyQZGNTByR3Yl');
+    }
+  }
+
+  sd_6K1LlQR7ORYPgDAJ(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_WhX0AWiqqtFEb3rr(bh);
+      //appendnew_next_sd_6K1LlQR7ORYPgDAJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6K1LlQR7ORYPgDAJ');
+    }
+  }
+
+  sd_WhX0AWiqqtFEb3rr(bh) {
+    try {
+      if (
+        this.sdService.operators['se'](
+          this.page.user.role,
+          'director',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_ZUohxf8XSY12QfLL(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          this.page.user.role,
+          'admin',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_ZUohxf8XSY12QfLL(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WhX0AWiqqtFEb3rr');
+    }
+  }
+
+  sd_ZUohxf8XSY12QfLL(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.input.value,
+          'rejected',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_SHTSpPSJUWaQ9ceQ(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZUohxf8XSY12QfLL');
+    }
+  }
+
+  sd_SHTSpPSJUWaQ9ceQ(bh) {
+    try {
+      const director_noteDialog = this.__page_injector__.get(MatDialog);
+      const director_noteDialogRef = director_noteDialog.open(
+        director_noteComponent,
+        { height: '300px', width: '400px' }
+      );
+      director_noteDialogRef.afterClosed().subscribe((event) => {
+        this.page.resFromPop = event;
+        this.sd_1m4XSqRry2h3n56Z(bh);
+
+        //appendnew_next_sd_SHTSpPSJUWaQ9ceQ;
+      });
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SHTSpPSJUWaQ9ceQ');
+    }
+  }
+
+  async sd_1m4XSqRry2h3n56Z(bh) {
+    try {
+      const variablesInstance: variables =
+        this.__page_injector__.get(variables);
+
+      let outputVariables = await variablesInstance.getVariable();
+      this.page.popupClaimReason = outputVariables.local.data;
+
+      bh = this.sd_UIrQhv0U3JraGvFH(bh);
+      //appendnew_next_sd_1m4XSqRry2h3n56Z
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1m4XSqRry2h3n56Z');
+    }
+  }
+
+  sd_UIrQhv0U3JraGvFH(bh) {
+    try {
+      const page = this.page;
+      page.updatedClaim = page.policyClaimsForm.value;
+      page.updatedClaim.claimReason = page.popupClaimReason;
+
+      //appendnew_next_sd_UIrQhv0U3JraGvFH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UIrQhv0U3JraGvFH');
+    }
+  }
+
+  sd_dMv4RgmBK75eHTvZ(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_5wzAXg1SAFazVW4X(bh);
+      //appendnew_next_sd_dMv4RgmBK75eHTvZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_dMv4RgmBK75eHTvZ');
+    }
+  }
+
+  sd_5wzAXg1SAFazVW4X(bh) {
+    try {
+      const page = this.page;
+      if (page.deceased.get('status')?.value !== 'pending') {
+        page.deceased.get('status')?.disable();
+      }
+
+      if (
+        page.deceased.get('status')?.value === 'partially approved' &&
+        page.user.role === 'director'
+      ) {
+        page.deceased.get('status')?.enable();
+      }
+      //appendnew_next_sd_5wzAXg1SAFazVW4X
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5wzAXg1SAFazVW4X');
     }
   }
 

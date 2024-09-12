@@ -3,12 +3,7 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import {
-  AfterViewChecked,
-  Component,
-  Injector,
-  ViewChild,
-} from '@angular/core'; //_splitter_
+import { AfterViewInit, Component, Injector, ViewChild } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
@@ -28,7 +23,7 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
     //appendnew_element_providers
   ],
 })
-export class claimsComponent implements AfterViewChecked {
+export class claimsComponent implements AfterViewInit {
   @ViewChild(MatSort)
   public MatSort: any = null;
   @ViewChild(MatPaginator)
@@ -131,15 +126,15 @@ export class claimsComponent implements AfterViewChecked {
       return this.errorHandler(bh, e, 'sd_6uxXfPKiwYlVASPF');
     }
   }
-  ngAfterViewChecked() {
+  ngAfterViewInit() {
     try {
       var bh: any = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
       bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
-      //appendnew_next_ngAfterViewChecked
+      //appendnew_next_ngAfterViewInit
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_kBVjeuRP8ZMxs86q');
+      return this.errorHandler(bh, e, 'sd_FAwuoNmWMyaQjCaS');
     }
   }
 
@@ -204,9 +199,26 @@ export class claimsComponent implements AfterViewChecked {
       const page = this.page;
       console.log('claims ->', page.result);
 
-      bh.local.dataSource = new MatTableDataSource(page.result);
+      page.approvedDataSource = [];
+      page.pendingDataSource = [];
+      page.rejectedDataSource = [];
+      page.partiallyApprovedDataSource = [];
 
-      console.log('DS: ', bh.local.dataSource);
+      page.result.forEach((claim) => {
+        if (claim.status === 'approved') {
+          page.approvedDataSource.push(claim);
+        } else if (claim.status === 'pending') {
+          page.pendingDataSource.push(claim);
+        } else if (claim.status === 'rejected') {
+          page.rejectedDataSource.push(claim);
+        } else if (claim.status === 'partially approved') {
+          page.partiallyApprovedDataSource.push(claim);
+        }
+      });
+
+      bh.path = 'get-notification';
+
+      bh.local.dataSource = new MatTableDataSource(page.result);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
       return bh;
@@ -391,7 +403,7 @@ export class claimsComponent implements AfterViewChecked {
   sd_2VNGqvcKee34lvOz_1(bh) {
     try {
       const page = this.page;
-      setInterval(() => {
+      setTimeout(() => {
         console.log('TB DATA: ', page.tableData);
 
         this.page.tableData.sort = bh.pageViews.MatSort;

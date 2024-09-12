@@ -1,14 +1,14 @@
 <div fxLayout="column wrap" style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="column " style="height:100%" class="scroller-phindile" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:2em">
-      <mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+  <div fxLayout="column " style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:1em">
+      <mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong> Personal Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.formdata">
+        <form [formGroup]="page.formdata" style="margin-top:7px">
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-            <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" style="margin-bottom:7px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
                 <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
                 <mat-error align="start" *ngIf="page.formdata.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
@@ -18,7 +18,7 @@
                 <mat-error align="start" *ngIf="page.formdata.controls.lastName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" style="margin-bottom:7px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
                 <input matInput placeholder="ID Number" [required]="false" formControlName="idNumber" readonly="idNumber" [disabled]="false">
 
@@ -28,13 +28,13 @@
 
               </mat-form-field>
             </div>
-            <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" style="margin-bottom:7px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput placeholder="Email" [required]="false" formControlName="email" [disabled]="true">
+                <input matInput placeholder="Email" [required]="false" formControlName="email" readonly="email" [disabled]="true">
                 <mat-error align="start" *ngIf="page.formdata.controls.email?.errors?.required">Email is <strong>required<strong></strong></strong></mat-error><mat-error align="start" *ngIf="page.formdata.controls.email?.errors?.email">enter a valid email</mat-error>
               </mat-form-field>
               <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-                <input matInput placeholder="Cell phone" [required]="false" formControlName="cellphone">
+                <input matInput placeholder="Cell phone" [required]="false" formControlName="cellphone" maxLength="10" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)">
                 <mat-error align="start" *ngIf="page.formdata.controls.cellphone?.errors?.pattern">Enter a valid South African number</mat-error><mat-error align="start" *ngIf="page.formdata.controls.cellphone?.errors?.required">Email is <strong>required<strong></strong></strong></mat-error>
               </mat-form-field>
             </div>
@@ -54,14 +54,14 @@
             </div>
           </div>
         </form>
-      </mat-expansion-panel><mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+      </mat-expansion-panel><mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong>Beneficary Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.beneficariesForm">
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <form [formGroup]="page.beneficariesForm" style="margin-top:7px">
+          <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
               <mat-error align="start" *ngIf="page.beneficariesForm.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
@@ -71,17 +71,17 @@
               <mat-error align="start" *ngIf="page.beneficariesForm.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
           </div>
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" maxlength="13" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" (blur)="idValid()">
-              <mat-error align="start" *ngIf="page.beneficariesForm.controls.id?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
+              <mat-error align="start" *ngIf="page.beneficariesForm.controls.idNumber?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Gender" value="{{page.gender}}" [required]="false" formControlName="gender">
+              <input matInput placeholder="Gender" value="{{page.gender}}" [required]="false" formControlName="gender" readonly="gender">
 
             </mat-form-field>
           </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="Email" [required]="false" formControlName="email">
               <mat-error align="start" *ngIf="page.beneficariesForm.controls.email?.errors?.required">Email is <strong>required<strong></strong></strong></mat-error><mat-error align="start" *ngIf="page.beneficariesForm.controls.email?.errors?.email">Please enter a valid email address</mat-error>
@@ -91,60 +91,63 @@
               <mat-error align="start" *ngIf="page.beneficariesForm.controls.cellphone?.errors?.pattern">Enter a valid South African number</mat-error><mat-error align="start" *ngIf="page.beneficariesForm.controls.cellphone?.errors?.required">Cellphone is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
           </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="Relationship" [required]="false" formControlName="relationship">
-              <mat-error align="start" *ngIf="page.beneficariesForm.controls.email?.errors?.required">Relationship is <strong>required<strong></strong></strong></mat-error>
+              <mat-error align="start" *ngIf="page.beneficariesForm.controls.relationship?.errors?.required">Relationship is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
           </div>
         </form>
-        <form [formGroup]="page.beneficaries1Form" *ngIf="page.showbeneficaries1Form == true">
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" maxlength="13" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" (blur)="idValid1()">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.id?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Gender" value="{{page.gender1}}" [required]="false" formControlName="gender">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngIf="page.showbeneficaries1Form">
+          <form [formGroup]="page.beneficaries1Form">
+            <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" maxlength="13" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" (blur)="idValid1()">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.idNumber?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Gender" value="{{page.gender1}}" [required]="false" formControlName="gender" readonly="gender">
 
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Email" [required]="false" formControlName="email">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.email?.errors?.required">Email is <strong>required<strong></strong></strong></mat-error><mat-error align="start" *ngIf="page.beneficaries1Form.controls.email?.errors?.email">Please enter a valid email address</mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Cell phone" [required]="false" formControlName="cellphone" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.cellphone?.errors?.pattern">Enter a valid South African number</mat-error><mat-error align="start" *ngIf="page.beneficaries1Form.controls.cellphone?.errors?.required">Cellphone is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Relationship" [required]="false" formControlName="relationship">
-              <mat-error align="start" *ngIf="page.beneficaries1Form.controls.email?.errors?.required">Relationship is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-          </div>
-        </form>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon"><mat-icon (click)="openBeneficiries()">add_circle</mat-icon></div>
-      </mat-expansion-panel><mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false">
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" style="margin-bottom:6px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Email" [required]="false" formControlName="email">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.email?.errors?.required">Email is <strong>required<strong></strong></strong></mat-error><mat-error align="start" *ngIf="page.beneficaries1Form.controls.email?.errors?.email">Please enter a valid email address</mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Cell phone" [required]="false" formControlName="cellphone" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" maxLength="10">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.cellphone?.errors?.pattern">Enter a valid South African number</mat-error><mat-error align="start" *ngIf="page.beneficaries1Form.controls.cellphone?.errors?.required">Cellphone is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Relationship" [required]="false" formControlName="relationship">
+                <mat-error align="start" *ngIf="page.beneficaries1Form.controls.relationship?.errors?.required">Relationship is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+            </div>
+          </form>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(2,ben)">delete</mat-icon></div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon || !page.showbeneficaries1Form == true"><mat-icon (click)="openBeneficiries()">add_circle</mat-icon></div>
+      </mat-expansion-panel><mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
             <strong>Dependency Details</strong>
           </mat-panel-title></mat-expansion-panel-header>
-        <form [formGroup]="page.dependencyForm">
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <form [formGroup]="page.dependencyForm" *ngIf="page.showdependenciesForm" style="margin-top:7px">
+          <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
               <mat-error align="start" *ngIf="page.dependency1Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
@@ -154,63 +157,69 @@
               <mat-error align="start" *ngIf="page.dependency1Form.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
           </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" maxLength="13" (blur)="idValid2()">
               <mat-error align="start" *ngIf="page.dependency1Form.controls.id?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
             </mat-form-field>
             <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Gender" value="{{page.gender2}}" [required]="false" formControlName="gender">
+              <input matInput placeholder="Gender" value="{{page.gender2}}" [required]="false" formControlName="gender" readonly="gender">
 
             </mat-form-field>
           </div>
         </form>
-        <form [formGroup]="page.dependency1Form" *ngIf="page.showdependencies1Form">
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
-              <mat-error align="start" *ngIf="page.dependency1Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
-              <mat-error align="start" *ngIf="page.dependency1Form.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" maxLength="13" (blur)="idValid3()">
-              <mat-error align="start" *ngIf="page.dependency1Form.controls.idNumber?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Gender" value="{{page.gender3}}" [required]="false" formControlName="gender">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngIf="page.showdependencies1Form">
+          <form [formGroup]="page.dependency1Form">
+            <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
+                <mat-error align="start" *ngIf="page.dependency1Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
+                <mat-error align="start" *ngIf="page.dependency1Form.controls.lastName?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" maxLength="13" (blur)="idValid3()">
+                <mat-error align="start" *ngIf="page.dependency1Form.controls.idNumber?.errors?.required">ID is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Gender" value="{{page.gender3}}" [required]="false" formControlName="gender" readonly="gender">
 
-            </mat-form-field>
-          </div>
-        </form>
-        <form [formGroup]="page.dependency2Form" *ngIf="page.showdependencies2Form">
-          <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
-              <mat-error align="start" *ngIf="page.dependency2Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
-              <mat-error align="start" *ngIf="page.dependency2Form.controls.lastName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-          </div>
-          <div fxLayout="row wrap" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" maxLength="13" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" (blur)="idValid4()">
-              <mat-error align="start" *ngIf="page.dependency2Form.controls.idNumber?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
-            </mat-form-field>
-            <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="gender" value="{{page.gender4}}" [required]="false" formControlName="gender">
+              </mat-form-field>
+            </div>
+          </form>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(2,&apos;dep&apos;)">delete</mat-icon></div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngIf="page.showdependencies2Form">
+          <form [formGroup]="page.dependency2Form">
+            <div fxLayout="row wrap" style="margin-bottom:8px" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="First Name" [required]="false" formControlName="firstName">
+                <mat-error align="start" *ngIf="page.dependency2Form.controls.firstName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Last Name" [required]="false" formControlName="lastName">
+                <mat-error align="start" *ngIf="page.dependency2Form.controls.lastName?.errors?.required">First Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" style="margin-bottom:1em" fxLayoutGap="10em" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Id Number" [required]="false" formControlName="idNumber" maxLength="13" oninput="this.value = this.value.replace(/[^\d]/g,&#xA0;&apos;&apos;)" (blur)="idValid4()">
+                <mat-error align="start" *ngIf="page.dependency2Form.controls.idNumber?.errors?.required">Last Name is <strong>required<strong></strong></strong></mat-error>
+              </mat-form-field>
+              <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="gender" value="{{page.gender4}}" [required]="false" formControlName="gender" readonly="gender">
 
-            </mat-form-field>
-          </div>
-        </form>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2"><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
+              </mat-form-field>
+            </div>
+          </form>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(3,&apos;dep&apos;)">delete</mat-icon></div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2 "><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
       </mat-expansion-panel></mat-accordion>
-    <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/home">Cancel</button><button mat-raised-button routerLink="/dashboard/home" (click)="update()">Submit</button></div>
+    <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/home" class="edit-button-alt">Cancel</button><button mat-raised-button class="blue-color yellow-bg" (click)="update()">Submit</button></div>
   </div>
 </div>

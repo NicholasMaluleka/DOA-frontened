@@ -47,6 +47,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "path",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "get-notification"
+                }
             }
         ],
         "functionName": "sd_rLCXQSvPqfkOfsHZ",
@@ -335,11 +342,11 @@
         "accept_csd": false,
         "functionName": "sd_MQDVqrXGwtTycRuD",
         "category": "General",
-        "x": 365,
+        "x": 385,
         "y": 40,
         "wires": [
             [
-                "sd_4JmschuK1J95rMwA"
+                "sd_qtn4YGxkzRZk8Y6h"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -389,7 +396,7 @@
         ],
         "functionName": "sd_4JmschuK1J95rMwA",
         "category": "Function",
-        "x": 445,
+        "x": 625,
         "y": 40,
         "wires": [
             [
@@ -433,12 +440,10 @@
         "accept_csd": false,
         "functionName": "sd_iVhqs9Yhhcc5HWXd",
         "category": "General",
-        "x": 525,
+        "x": 705,
         "y": 40,
         "wires": [
-            [
-                "sd_mjHylQATN82vPHZ2"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -713,6 +718,91 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qtn4YGxkzRZk8Y6h",
+        "type": "PageCallService",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_2F1jRXPpIvh6BKAw",
+            "type": "tab",
+            "createdDate": "2024-09-10T12:10:37.327Z",
+            "label": "Notifications",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_7Gra8AgAem9ujuDY",
+            "flowName": "genericGet"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "this.page",
+                "value": "path"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "this.page",
+                "value": "notifications",
+                "mapVarName": "data",
+                "localVar": "this.page.notifications"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Notifications",
+        "startName": "genericGet",
+        "inputParams": [
+            "this.page.path"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_qtn4YGxkzRZk8Y6h",
+        "category": "General",
+        "x": 465,
+        "y": 40,
+        "wires": [
+            [
+                "sd_C2uEjMLkeZE9dBL7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_C2uEjMLkeZE9dBL7",
+        "type": "Script",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
+        "functionName": "sd_C2uEjMLkeZE9dBL7",
+        "category": "Function",
+        "x": 545,
+        "y": 40,
+        "wires": [
+            [
+                "sd_4JmschuK1J95rMwA"
+            ]
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "toolbarComponent",

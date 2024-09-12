@@ -10,6 +10,7 @@ import { client_profileComponent } from 'app/components/Client/client_profile.co
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -122,6 +123,7 @@ export class toolbarComponent {
   sd_rLCXQSvPqfkOfsHZ(bh) {
     try {
       this.page.messages = undefined;
+      this.page.path = 'get-notification';
       bh = this.sd_rXrGjoBSlzR0uWPY(bh);
       //appendnew_next_sd_rLCXQSvPqfkOfsHZ
       return bh;
@@ -144,11 +146,110 @@ export class toolbarComponent {
     try {
       let outputVariables = this.fetchLoggedInUser();
 
-      bh = this.sd_4JmschuK1J95rMwA(bh);
+      bh = this.sd_qtn4YGxkzRZk8Y6h(bh);
       //appendnew_next_sd_MQDVqrXGwtTycRuD
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_MQDVqrXGwtTycRuD');
+    }
+  }
+
+  async sd_qtn4YGxkzRZk8Y6h(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericGet(
+        this.page.path
+      );
+      this.page.notifications = outputVariables.local.data;
+
+      bh = this.sd_C2uEjMLkeZE9dBL7(bh);
+      //appendnew_next_sd_qtn4YGxkzRZk8Y6h
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qtn4YGxkzRZk8Y6h');
+    }
+  }
+
+  sd_C2uEjMLkeZE9dBL7(bh) {
+    try {
+      const page = this.page;
+      console.log('NOTIFICATIONS: ', page.notifications);
+
+      page.notifications = [];
+
+      page.notifications.forEach((notification) => {
+        console.log('CLAIM POLICY: ', notification.claimNumber.split('-')[1]);
+        console.log('userPolicy : ', page.user.policyNumber);
+        if (
+          notification?.status.toLowerCase() == 'partially approved' &&
+          page.user.role == 'director'
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim is ${notification?.status} and requires your attention`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'admin' &&
+          notification?.status.toLowerCase() == 'pending'
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been logged and requires your attention`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          notification?.status.toLowerCase() == 'approved' &&
+          page.user.role == 'client' &&
+          notification.claimNumber.includes(page.user.policy)
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been sucessfully ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'pending' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been logged sucessfully and is ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'partially approved' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'rejected' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been ${notification?.status}.`,
+            claimNumber: notification.claimNumber,
+          });
+        }
+      });
+
+      console.log(' AFTER FILTER: ', page.notifications);
+
+      bh = this.sd_4JmschuK1J95rMwA(bh);
+      //appendnew_next_sd_C2uEjMLkeZE9dBL7
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_C2uEjMLkeZE9dBL7');
     }
   }
 
@@ -170,31 +271,10 @@ export class toolbarComponent {
     try {
       let outputVariables = this.getInitials();
 
-      bh = this.sd_mjHylQATN82vPHZ2(bh);
       //appendnew_next_sd_iVhqs9Yhhcc5HWXd
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_iVhqs9Yhhcc5HWXd');
-    }
-  }
-
-  sd_mjHylQATN82vPHZ2(bh) {
-    try {
-      const page = this.page;
-      page.messages = [
-        { for: '', not: 'Claim has been approved' },
-        { for: '', not: 'Claim applied successfully' },
-        { for: '', not: 'Claim has been approved' },
-        { for: '', not: 'Claim applied successfully' },
-        { for: '', not: 'Claim has been approved' },
-        { for: '', not: 'Claim applied successfully' },
-      ];
-
-      console.log('MESSAGES: ', page.messages);
-      //appendnew_next_sd_mjHylQATN82vPHZ2
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mjHylQATN82vPHZ2');
     }
   }
 

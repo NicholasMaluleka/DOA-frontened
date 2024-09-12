@@ -60,10 +60,14 @@ export class Notifications {
     }
   }
 
-  async genericPost(url: any = undefined, payload: any = undefined, ...others) {
+  async genericPost(
+    path: any = undefined,
+    payload: any = undefined,
+    ...others
+  ) {
     let bh: any = {
       input: {
-        url,
+        path,
         payload,
       },
       local: {
@@ -103,7 +107,7 @@ export class Notifications {
 
   async sd_KK0dsv4rbjWPXqKI(bh) {
     try {
-      bh.url = bh.url + bh.input.path;
+      bh.url = bh.ssdURL + bh.input.path;
       bh = await this.sd_69Jfv3ADnOkXm9a7(bh);
       //appendnew_next_sd_KK0dsv4rbjWPXqKI
       return bh;
@@ -143,7 +147,7 @@ export class Notifications {
 
   async sd_AZYvYq8p9bttzcea(bh) {
     try {
-      bh.url = bh.url + bh.input.path;
+      bh.url = bh.ssdURL + bh.input.path;
       bh = await this.sd_eD9sbenMelWr6yyk(bh);
       //appendnew_next_sd_AZYvYq8p9bttzcea
       return bh;
@@ -156,7 +160,7 @@ export class Notifications {
     try {
       let requestOptions = {
         url: bh.url,
-        method: 'get',
+        method: 'post',
         responseType: 'json',
         headers: {},
         params: {},
