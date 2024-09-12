@@ -618,6 +618,13 @@
                     "type": "this.page",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user"
+                }
             }
         ],
         "functionName": "sd_Q9kpfJBrwcNwMSIq",
@@ -1083,7 +1090,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"input\", bh.input.row.packageType == 'Package 1')\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
+        "script": "\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
         "functionName": "sd_Vk8d9TXjHuPW2ccT",
         "category": "Function",
         "x": 165,
