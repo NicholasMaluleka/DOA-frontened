@@ -5,6 +5,9 @@
 @import '~dhtmlx-scheduler/codebase/dhtmlxscheduler.css';
 
 
+.dhx_menu_icon.icon_details:before, .dhx_menu_icon.icon_edit:before, .dhx_menu_icon.icon_delete:before {
+    color: white !important;
+}
 
 body {
     height: 100%;
