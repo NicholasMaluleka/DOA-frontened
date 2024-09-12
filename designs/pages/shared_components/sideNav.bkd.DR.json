@@ -1219,6 +1219,19 @@
                             "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "logout()",
+                            "_type": "kv",
+                            "_attrDef": "c",
+                            "objValue": {
+                                "nodeID": "sd_KcLyiEPpX8qu0XM7",
+                                "functionName": "logout",
+                                "activeTree": "pages",
+                                "z": "sd_ujStGyjFVkp806yD",
+                                "input": []
+                            }
                         }
                     ],
                     "9edbabe9-e0a1-dec3-1506-dfbac2b4aab7": {

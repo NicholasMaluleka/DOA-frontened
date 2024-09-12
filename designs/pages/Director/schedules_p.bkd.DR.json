@@ -57,12 +57,6 @@
                 "_value": "true",
                 "_type": "kv",
                 "_attrDef": "p"
-            },
-            {
-                "_key": "disabled",
-                "_value": "true",
-                "_type": "kv",
-                "_attrDef": "c"
             }
         ],
         "afc657ee-4d65-a8c2-0453-2d5d83bbfab3": {
@@ -250,6 +244,12 @@
                     "_type": "kv",
                     "_attrDef": "p",
                     "_visibility": false
+                },
+                {
+                    "_key": "disabled",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ],
             "fb9efd13-bc8c-38fb-09d1-f4cc3c0160bf": {
@@ -272,7 +272,7 @@
                     },
                     {
                         "_key": "html",
-                        "_value": "<div #scheduler_here class=\"dhx_cal_container full-width full-height\">\r\n    <div class=\"dhx_cal_navline\">\r\n    <div class=\"dhx_cal_prev_button\"></div>\r\n    <div class=\"dhx_cal_next_button\"></div>\r\n    <div class=\"dhx_cal_today_button\"></div>\r\n    <div class=\"dhx_cal_date\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"day\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"week\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"month\"></div>\r\n    </div>\r\n    <div class=\"dhx_cal_header\"></div>\r\n    <div class=\"dhx_cal_data\"></div>\r\n</div>",
+                        "_value": "<div #scheduler_here class=\"dhx_cal_container full-width full-height\" readonly>\r\n    <div class=\"dhx_cal_navline\">\r\n    <div class=\"dhx_cal_prev_button\"></div>\r\n    <div class=\"dhx_cal_next_button\"></div>\r\n    <div class=\"dhx_cal_today_button\"></div>\r\n    <div class=\"dhx_cal_date\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"day\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"week\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"month\"></div>\r\n    </div>\r\n    <div class=\"dhx_cal_header\"></div>\r\n    <div class=\"dhx_cal_data\"></div>\r\n</div>",
                         "_type": "a",
                         "_attrDef": "p"
                     }
