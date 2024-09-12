@@ -19,6 +19,7 @@
             {
                 "_key": "class",
                 "_value": [
+                    "padding-5px",
                     "full-height",
                     "full-width"
                 ],
