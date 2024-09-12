@@ -252,37 +252,28 @@ export class edit_personalInfoComponent {
         page.showbeneficaries1Form = false;
       }
 
-      //check if the Dependencyform1 has data so that we can display the button
-      // if(page.depe2.firstName != "") {
-      //     page.showdependencies1Form = true
-      // }
-      // console.log("show", page.depe2)
-
-      //console.log("ben1", page.ben1)
-      //console.log("ben2", page.ben2)
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData.dependencies[1];
       page.depe3 = page.userData.dependencies[2];
       //console.log("depe1", page.depe1)
 
-      ///dependencies
-
+      ///Checks if the form has data so we can display the add button on dependencies
       if (
         page.depe1.firstName !== '' &&
         page.depe2.firstName !== '' &&
         page.depe3.firstName !== ''
       ) {
-        // Case 1: All forms are not empty
+        //Checks if all forms have data
         page.showdependenciesForm = true;
         page.showdependencies1Form = true;
         page.showdependencies2Form = true;
-        page.hideIcon2 = false; // Hide the add icon
+        page.hideIcon2 = false;
       } else if (
         page.depe1.firstName !== '' &&
         page.depe2.firstName !== '' &&
         page.depe3.firstName === ''
       ) {
-        // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
+        //Form 1 and Form 2 are filled, Form 3 is empty
         page.showdependenciesForm = true;
         page.showdependencies1Form = true;
         page.showdependencies2Form = false;
@@ -292,7 +283,7 @@ export class edit_personalInfoComponent {
         page.depe2.firstName === '' &&
         page.depe3.firstName === ''
       ) {
-        // Case 3: Form 1 is filled, Forms 2 and 3 are empty
+        // Form 1 is filled, Forms 2 and 3 are empty
         page.showdependenciesForm = true;
         page.showdependencies1Form = false;
         page.showdependencies2Form = false;
@@ -302,7 +293,7 @@ export class edit_personalInfoComponent {
         page.depe2.firstName === '' &&
         page.depe3.firstName === ''
       ) {
-        // Case 4: All forms are empty
+        //All forms are empty
         page.showdependenciesForm = true; // Show the first empty form (Form 1)
         page.showdependencies1Form = false;
         page.showdependencies2Form = false;
@@ -480,7 +471,7 @@ export class edit_personalInfoComponent {
       //Beneficaries
       bh.ben1 = bh.structuredData.beneficaries[0];
       page.ben2 = bh.structuredData.beneficaries[1];
-      console.log("Let's see Juska", bh.structuredData);
+      //console.log("Let's see Juska",bh.structuredData)
       page.ben2 = page.beneficaries1Form.value;
       bh.structuredData.beneficaries[1] = page.ben2;
 
@@ -489,7 +480,6 @@ export class edit_personalInfoComponent {
 
       page.depe2 = page.dependency1Form.value;
       bh.structuredData.dependencies[1] = page.depe2;
-
       page.depe3 = page.dependency2Form.value;
       bh.structuredData.dependencies[2] = page.depe3;
 
@@ -612,7 +602,9 @@ export class edit_personalInfoComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_ah4h46GmePFPc6Xd
       return bh;
     } catch (e) {
