@@ -5,6 +5,9 @@
 @import '~dhtmlx-scheduler/codebase/dhtmlxscheduler.css';
 
 
+.dhx_menu_icon.icon_details:before, .dhx_menu_icon.icon_edit:before, .dhx_menu_icon.icon_delete:before {
+    color: white !important;
+}
 
 body {
     height: 100%;
@@ -392,7 +395,7 @@ width: 150px;
 
     .mat-icon {
         color: white !important;
-        margin-left: 4px;
+        // margin-left: 4px;
 
     }
 
@@ -406,7 +409,7 @@ width: 150px;
     color: $teal-blue !important;
     .mat-icon {
         // color: $teal-blue !important;
-        margin-left: 4px;
+        // margin-left: 4px;
     }
 
     .label {

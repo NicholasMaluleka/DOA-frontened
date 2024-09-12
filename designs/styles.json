@@ -1,5 +1,9 @@
 {
     "classes": [
+        "dhx_menu_icon",
+        "icon_details",
+        "icon_edit",
+        "icon_delete",
         "FullHeight",
         "width20",
         "small-weight",
