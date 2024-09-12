@@ -4,22 +4,22 @@
       <div class="card pending">
         <i class="icon-hourglass"></i>
         <div class="card-info">
-          <span class="count">{{page.pending}}</span>
-          <span>Pending Claims</span>
+          <span class="count">{{ page.trialAccounts}}</span>
+          <span>Trial Accounts</span>
         </div>
       </div>
       <div class="card partially-approved">
         <i class="icon-half-check"></i>
         <div class="card-info">
-          <span class="count">{{page.partiallyApproved}}</span>
-          <span>Partially Approved</span>
+          <span class="count">{{page.outsideTrialAccounts}}</span>
+          <span>Outside  Trial Accounts </span>
         </div>
       </div>
-      <div class="card fully-approved">
-        <i class="icon-check"></i>
+      <div class="card all-accounts">
+        <i class="icon-globe"></i>
         <div class="card-info">
-          <span class="count">{{page.fullyApproved}}</span>
-          <span>Fully Approved</span>
+          <span class="count">{{page.allAccounts}}</span>
+          All Accounts
         </div>
       </div>
     </div>

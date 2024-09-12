@@ -231,21 +231,37 @@ export class schedulesComponent implements AfterViewInit {
     try {
       const page = this.page;
       scheduler.attachEvent('onEventAdded', (id, ev) => {
-        page.dates = ev;
-        this.post();
+        const currentDate = new Date();
+        const eventStartDate = new Date(ev.start_date);
+
+        // Prevent event addition if start date is in the past
+        if (eventStartDate < currentDate) {
+          alert('Cannot add events in the past!');
+          scheduler.deleteEvent(id); // Optional: delete event from scheduler
+        } else {
+          page.dates = ev;
+          this.post();
+        }
       });
 
+      ///////////////////////////////////////////////////////////////
       scheduler.attachEvent('onEventChanged', (id, ev) => {
+        const currentDate = new Date();
+        const eventDate = new Date(ev.start_date);
+
+        // Prevent moving to a past date
+        if (eventDate < currentDate) {
+          alert('You cannot move events to past dates.');
+          scheduler.cancel_lightbox(); // Prevents the event from being saved
+          scheduler.updateEvent(id); // Reverts the event back to its original state
+          this.getSchedules();
+          return;
+        }
+
+        // Call the API if the date is valid
         this.editSchedule(ev);
       });
-
-      scheduler.attachEvent('onEventSave', (id, ev, is_new) => {
-        if (!is_new) {
-          this.editSchedule(ev);
-        }
-        return true;
-      });
-
+      //////////////////////////////////////////
       scheduler.attachEvent('onEventDeleted', (id, ev) => {
         console.log('Deleted Event ID:', id); // Log the id to verify it
         this.deleteSchedule({ id }); // Pass the id properly to the deleteSchedule method

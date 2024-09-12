@@ -196,6 +196,10 @@ export class Director_homeComponent implements AfterViewInit {
       this.page.searchValue = '';
       this.page.backupapplicationsDatasource = undefined;
       this.page.currentPageIndex = undefined;
+      this.page.currentDate = undefined;
+      this.page.timeDifference = undefined;
+      this.page.differenceInMonths = undefined;
+      this.page.outsideTrialAccounts = undefined;
       bh = this.sd_rTJJURMTnWuDRATt(bh);
       //appendnew_next_sd_E9QbOlnVduPNV5MO_1
       return bh;
@@ -287,7 +291,39 @@ export class Director_homeComponent implements AfterViewInit {
       page.table = bh.tableDataSource;
       page.backupapplicationsDatasource = page.table;
       page.table.paginator = page.paginator;
-      console.log('bh', bh);
+      console.log('bh', page.table);
+
+      page.currentDate = new Date();
+
+      page.trialAccounts = page.table.filter((item) => {
+        page.registeredDate = new Date(item.registeredDate);
+        console.log('page.registeredDate', page.registeredDate);
+
+        page.timeDifference =
+          page.currentDate.getTime() - page.registeredDate.getTime();
+        console.log('timeDifference', page.timeDifference);
+
+        page.differenceInMonths =
+          page.timeDifference / (1000 * 3600 * 24 * 30.436875); // Convert milliseconds to months
+        console.log('m', page.differenceInMonths);
+        return page.differenceInMonths <= 6;
+      }).length;
+
+      page.outsideTrialAccounts = page.table.filter((item) => {
+        page.registeredDate = new Date(item.registeredDate);
+        page.timeDifference =
+          page.currentDate.getTime() - page.registeredDate.getTime();
+        page.differenceInMonths =
+          page.timeDifference / (1000 * 3600 * 24 * 30.436875); // Convert milliseconds to months
+
+        return page.differenceInMonths > 6;
+      }).length;
+
+      page.allAccounts = page.table.length;
+
+      console.log('Trial Accounts:', page.trialAccounts);
+      console.log('Outside Trial Accounts:', page.outsideTrialAccounts);
+      console.log('All Accounts:', page.allAccounts);
 
       bh = this.sd_CNo2sWBcD8FWpCtC(bh);
       //appendnew_next_sd_2lLCrjneGLoT2O1S

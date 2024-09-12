@@ -4070,7 +4070,6 @@
                     "3af5381d-517e-8415-b05e-c33d47fc772f": {
                         "paletteKey": "NG-Form",
                         "parentEditorKey": "22827ec8-377b-d43f-3fb9-aef041cad227",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -4132,7 +4131,6 @@
                         "42916e7e-c409-b8e3-ae64-7a5b2ce58fb5": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "3af5381d-517e-8415-b05e-c33d47fc772f",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4195,7 +4193,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "42916e7e-c409-b8e3-ae64-7a5b2ce58fb5",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4380,7 +4377,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "42916e7e-c409-b8e3-ae64-7a5b2ce58fb5",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4565,7 +4561,6 @@
                         "54db30ae-ee21-29a2-bbef-f18172e613f6": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "3af5381d-517e-8415-b05e-c33d47fc772f",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4628,7 +4623,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "54db30ae-ee21-29a2-bbef-f18172e613f6",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4831,7 +4825,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "54db30ae-ee21-29a2-bbef-f18172e613f6",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5007,7 +5000,6 @@
                         "d8684791-24d8-6fb9-cac8-3709ea1420b1": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "3af5381d-517e-8415-b05e-c33d47fc772f",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -5070,7 +5062,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "d8684791-24d8-6fb9-cac8-3709ea1420b1",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5263,7 +5254,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "d8684791-24d8-6fb9-cac8-3709ea1420b1",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5468,7 +5458,6 @@
                         "e865f727-713e-71f1-f236-605b1674872c": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "3af5381d-517e-8415-b05e-c33d47fc772f",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -5531,7 +5520,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "e865f727-713e-71f1-f236-605b1674872c",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5717,7 +5705,6 @@
                     "6bc75289-f4ec-9462-0067-463c0b1c3a2a": {
                         "paletteKey": "NG-Form",
                         "parentEditorKey": "22827ec8-377b-d43f-3fb9-aef041cad227",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -5785,7 +5772,6 @@
                         "02ede365-7a6d-536b-ad35-535003f8c6c5": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "6bc75289-f4ec-9462-0067-463c0b1c3a2a",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -5848,7 +5834,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "02ede365-7a6d-536b-ad35-535003f8c6c5",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6033,7 +6018,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "02ede365-7a6d-536b-ad35-535003f8c6c5",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6218,7 +6202,6 @@
                         "db31ced1-e8b7-8fbf-b754-1d7a6c89062f": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "6bc75289-f4ec-9462-0067-463c0b1c3a2a",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -6281,7 +6264,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "db31ced1-e8b7-8fbf-b754-1d7a6c89062f",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6484,7 +6466,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "db31ced1-e8b7-8fbf-b754-1d7a6c89062f",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6660,7 +6641,6 @@
                         "6e0dfea3-4eb3-40cc-d47f-76bfba034730": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "6bc75289-f4ec-9462-0067-463c0b1c3a2a",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -6723,7 +6703,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "6e0dfea3-4eb3-40cc-d47f-76bfba034730",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6916,7 +6895,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "6e0dfea3-4eb3-40cc-d47f-76bfba034730",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -7121,7 +7099,6 @@
                         "65438db3-96d0-f438-ca13-ea6f5807c8dd": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "6bc75289-f4ec-9462-0067-463c0b1c3a2a",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -7184,7 +7161,6 @@
                                 "paletteKey": "NG-Input",
                                 "parentEditorKey": "65438db3-96d0-f438-ca13-ea6f5807c8dd",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
