@@ -944,12 +944,12 @@ a {
 }
 
 .profile-icon-alt {
-  font-size: 36px; 
-  color: #fff;
+    font-size: 23px;
+    color: #fff;
   background-color: #124e52;
   padding: 8px;
   border-radius: 50%;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .profile-content-alt {
@@ -1045,24 +1045,33 @@ a {
     background-color: #f7dd71; 
 }
 
+
 .card.partially-approved {
     background-color: #124e52; 
 }
 
-.card.fully-approved {
-    background-color:  #d4edda;
+/* All Accounts */
+.card.all-accounts {
+    background-color: #d4edda; /* Light green for all accounts */
 }
 
 /* Icon Styles */
 .icon-hourglass::before {
     content: "\23F3"; /* Unicode for hourglass */
+    font-size: 30px; /* Adjust icon size */
+    margin-right: 5px;
 }
 
 .icon-half-check::before {
     content: "\2714"; /* Unicode for checkmark */
-    color: #ffeb3b; /* Yellow for half-check */
+    color: #ffeb3b; 
+    font-size: 30px;
+    margin-right: 5px;
 }
 
-.icon-check::before {
-    content: "\2714"; /* Unicode for checkmark */
+.icon-globe::before {
+    content: "\1F465"; /* a group of people (all accounts) */
+    font-size: 30px;
+    margin-right: 5px;
+
 }
