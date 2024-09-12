@@ -28,8 +28,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_10GshSRIqokJRDnz",
@@ -96,8 +95,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_x0AVTFDWsdElklrU",
@@ -248,7 +246,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "intialized",
-        "script": "scheduler.attachEvent('onEventAdded', (id, ev) => {\n            page.dates = ev;\n            this.post();\n        });\n\n        scheduler.attachEvent('onEventChanged', (id, ev) => {\n            this.editSchedule(ev);\n        });\n\n        scheduler.attachEvent('onEventSave', (id, ev, is_new) => {\n            if (!is_new) {\n                this.editSchedule(ev);\n            }\n            return true;\n        });\n\nscheduler.attachEvent('onEventDeleted', (id, ev) => {\n            console.log('Deleted Event ID:', id);  // Log the id to verify it\n            this.deleteSchedule({ id });  // Pass the id properly to the deleteSchedule method\n        });\n",
+        "script": "  scheduler.attachEvent('onEventAdded', (id, ev) => {\n        const currentDate = new Date();\n        const eventStartDate = new Date(ev.start_date);\n        \n        // Prevent event addition if start date is in the past\n        if (eventStartDate < currentDate) {\n          alert('Cannot add events in the past!');\n          scheduler.deleteEvent(id);  // Optional: delete event from scheduler\n        } else {\n          page.dates = ev;\n          this.post();\n        }\n      });\n\n///////////////////////////////////////////////////////////////\n       scheduler.attachEvent('onEventChanged', (id, ev) => {\n    const currentDate = new Date();\n    const eventDate = new Date(ev.start_date);\n    \n    // Prevent moving to a past date\n    if (eventDate < currentDate) {\n        alert('You cannot move events to past dates.');\n        scheduler.cancel_lightbox(); // Prevents the event from being saved\n        scheduler.updateEvent(id);   // Reverts the event back to its original state\n        this.getSchedules();\n        return;\n    }\n\n    // Call the API if the date is valid\n    this.editSchedule(ev);\n});\n//////////////////////////////////////////\nscheduler.attachEvent('onEventDeleted', (id, ev) => {\n            console.log('Deleted Event ID:', id);  // Log the id to verify it\n            this.deleteSchedule({ id });  // Pass the id properly to the deleteSchedule method\n        });\n",
         "functionName": "intialized",
         "category": "Function",
         "x": 310,
@@ -389,8 +387,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_oTnwqN7gr5BF6zF1",
@@ -429,9 +426,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generated": true,
         "generateNext": false,
-        "serviceName": "schedulesComponent"
+        "serviceName": "schedulesComponent",
+        "generated": true
     },
     {
         "id": "sd_G8YN2Rq1FHiszlWV",
@@ -455,8 +452,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_lWLxkvHgBt0cwZ0j",
@@ -617,8 +613,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_bgj0MEdiE4Tv6reS",
@@ -757,8 +752,7 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "schedulesComponent",
-        "generated": false
+        "serviceName": "schedulesComponent"
     },
     {
         "id": "sd_aeiaDG1cBQidkd3O",

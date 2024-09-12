@@ -196,6 +196,30 @@ export class schedules_pComponent implements AfterViewInit {
         return true;
       });
 
+      scheduler.attachEvent('onBeforeEventCreated', function (id, ev) {
+        return false; // Prevents any event creation
+      });
+
+      // Optionally, disable lightbox if the event is manually created by other means
+      scheduler.attachEvent('onBeforeLightbox', function (id) {
+        return false; // Prevents the lightbox from opening
+      });
+
+      scheduler.attachEvent('onDblClick', function () {
+        return false; // Disable double-click if condition is met
+      });
+
+      scheduler.attachEvent('onBeforeEventChanged', function (ev, e, is_new) {
+        if (is_new) {
+          return false; // Block new event creation
+        }
+      });
+
+      // Disable double-click from creating events
+      scheduler.attachEvent('onDblClick', function (id, e) {
+        return false; // Prevent double-click event creation
+      });
+
       //appendnew_next_intialized
       return bh;
     } catch (e) {
