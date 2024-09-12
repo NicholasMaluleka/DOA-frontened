@@ -82,7 +82,7 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "margin-right: 5px",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -96,7 +96,7 @@
                 },
                 {
                     "_key": "fxFlex",
-                    "_value": "",
+                    "_value": "70",
                     "_type": "kv",
                     "_attrDef": "p"
                 },

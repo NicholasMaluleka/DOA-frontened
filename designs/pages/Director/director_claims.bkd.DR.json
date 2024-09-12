@@ -1294,7 +1294,6 @@
                     "paletteKey": "ng-tab-group",
                     "parentEditorKey": "1d91fdff-1044-ebc0-a206-22f61e7f19c4",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1399,7 +1398,6 @@
                         "paletteKey": "ng-tab-content",
                         "parentEditorKey": "9e3fb24a-95e1-7fd2-b00b-95d8113758f4",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1528,13 +1526,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1565,7 +1563,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1603,7 +1601,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1626,7 +1624,6 @@
                             "paletteKey": "ng-table",
                             "parentEditorKey": "3da245ad-6983-f3b7-e7fb-9602fc74725d",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1650,7 +1647,7 @@
                                 },
                                 {
                                     "_key": "[dataSource]",
-                                    "_value": "page?.tableData",
+                                    "_value": "page?.result",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "value": "page?.tableData"
@@ -1693,7 +1690,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1740,7 +1736,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1787,7 +1782,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1834,7 +1828,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1882,7 +1875,6 @@
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedComponent": true,
                                 "advancedSiblingType": "after",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1939,7 +1931,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1976,7 +1967,7 @@
                                     },
                                     {
                                         "_key": "columnclass",
-                                        "_value": "",
+                                        "_value": [],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     }
@@ -1986,7 +1977,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2003,7 +1993,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -2023,7 +2013,7 @@
                                     },
                                     {
                                         "_key": "columnclass",
-                                        "_value": "",
+                                        "_value": [],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     }
@@ -2033,7 +2023,6 @@
                                 "paletteKey": "ng-droppable-table-column",
                                 "parentEditorKey": "7830e8a2-c3a1-9583-f454-025de295c57f",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2076,7 +2065,6 @@
                                 "ec481bcd-ac45-8488-00ee-f30d636502a7": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "0aa25c9c-cab6-926a-d61e-d8fe7e4d186c",
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -2138,7 +2126,6 @@
                                     "09fe1091-1a01-64a7-aedd-bbe6acc17363": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "ec481bcd-ac45-8488-00ee-f30d636502a7",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -2200,7 +2187,6 @@
                                         "2587278f-7f2a-8cf5-0e63-5130269d35f1": {
                                             "paletteKey": "NG-icon",
                                             "parentEditorKey": "09fe1091-1a01-64a7-aedd-bbe6acc17363",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -2658,7 +2644,6 @@
                         "paletteKey": "ng-tab-content",
                         "parentEditorKey": "9e3fb24a-95e1-7fd2-b00b-95d8113758f4",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2824,7 +2809,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height: 300px; width: 400px",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -2885,7 +2870,6 @@
                             "paletteKey": "ng-table",
                             "parentEditorKey": "edeb1450-0072-5d77-9ca6-565db33a9c44",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2952,7 +2936,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2999,7 +2982,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3046,7 +3028,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3093,7 +3074,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3141,7 +3121,6 @@
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedComponent": true,
                                 "advancedSiblingType": "after",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3198,7 +3177,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3245,7 +3223,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3262,7 +3239,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -3292,7 +3269,6 @@
                                 "paletteKey": "ng-droppable-table-column",
                                 "parentEditorKey": "fe673c36-7a48-643c-64cf-3cf79f485089",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3335,7 +3311,6 @@
                                 "90efc50f-bead-5d2b-a5df-16698c528f26": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "23dd8de0-f9ae-46a9-c067-44934da799de",
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3397,7 +3372,6 @@
                                     "4ce10063-9031-66f6-8edc-26012fdf67ec": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "90efc50f-bead-5d2b-a5df-16698c528f26",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -3459,7 +3433,6 @@
                                         "bcde74cf-c4d5-9859-e0a3-91067c55bb0f": {
                                             "paletteKey": "NG-icon",
                                             "parentEditorKey": "4ce10063-9031-66f6-8edc-26012fdf67ec",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -3917,7 +3890,6 @@
                         "paletteKey": "ng-tab-content",
                         "parentEditorKey": "9e3fb24a-95e1-7fd2-b00b-95d8113758f4",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -4083,7 +4055,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height: 300px; width: 400px",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4144,7 +4116,6 @@
                             "paletteKey": "ng-table",
                             "parentEditorKey": "d110a875-3d17-9253-09e2-5c8ad66369b7",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4211,7 +4182,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4258,7 +4228,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4305,7 +4274,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4352,7 +4320,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4400,7 +4367,6 @@
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedComponent": true,
                                 "advancedSiblingType": "after",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4457,7 +4423,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4504,7 +4469,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4521,7 +4485,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -4551,7 +4515,6 @@
                                 "paletteKey": "ng-droppable-table-column",
                                 "parentEditorKey": "9f227051-36b3-bc16-6fc7-a89ee39cb982",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4594,7 +4557,6 @@
                                 "e9b1c1e4-da52-e102-ef0a-b5d070919600": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "3031dfc7-5c1b-2ee7-c179-5ed2da9dd09a",
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -4656,7 +4618,6 @@
                                     "be214093-49bb-f6b2-7dc0-18d47b7fc92c": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "e9b1c1e4-da52-e102-ef0a-b5d070919600",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -4718,7 +4679,6 @@
                                         "5be678b4-f752-94a6-f3bf-507be34bc449": {
                                             "paletteKey": "NG-icon",
                                             "parentEditorKey": "be214093-49bb-f6b2-7dc0-18d47b7fc92c",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -5176,7 +5136,6 @@
                         "paletteKey": "ng-tab-content",
                         "parentEditorKey": "9e3fb24a-95e1-7fd2-b00b-95d8113758f4",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -5342,7 +5301,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height: 300px; width: 400px",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -5403,7 +5362,6 @@
                             "paletteKey": "ng-table",
                             "parentEditorKey": "c702886a-3860-4fcf-7057-0492580bc2c7",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -5470,7 +5428,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5517,7 +5474,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5564,7 +5520,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5611,7 +5566,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5659,7 +5613,6 @@
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedComponent": true,
                                 "advancedSiblingType": "after",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5716,7 +5669,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5763,7 +5715,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5780,7 +5731,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -5810,7 +5761,6 @@
                                 "paletteKey": "ng-droppable-table-column",
                                 "parentEditorKey": "80f6be7c-d8b0-03e6-bb56-7cd73d347dcb",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -5853,7 +5803,6 @@
                                 "1c1ad294-117f-35b0-1c24-5b8f4770faf4": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "8e192de7-a040-772c-31d6-480be4baed1e",
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -5915,7 +5864,6 @@
                                     "b5f10270-d94e-3af5-ae9c-909053dcf113": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "1c1ad294-117f-35b0-1c24-5b8f4770faf4",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -5977,7 +5925,6 @@
                                         "bc6820bf-7a46-291d-9da2-3c6b930fea52": {
                                             "paletteKey": "NG-icon",
                                             "parentEditorKey": "b5f10270-d94e-3af5-ae9c-909053dcf113",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
@@ -6435,7 +6382,6 @@
                         "paletteKey": "ng-tab-content",
                         "parentEditorKey": "9e3fb24a-95e1-7fd2-b00b-95d8113758f4",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -6601,7 +6547,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "height: 300px; width: 400px",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -6662,7 +6608,6 @@
                             "paletteKey": "ng-table",
                             "parentEditorKey": "9bc4185e-b2b6-2f9b-2500-ac4552125289",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -6729,7 +6674,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6776,7 +6720,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6823,7 +6766,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6870,7 +6812,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6918,7 +6859,6 @@
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedComponent": true,
                                 "advancedSiblingType": "after",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -6975,7 +6915,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -7022,7 +6961,6 @@
                                 "paletteKey": "ng-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -7039,7 +6977,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -7069,7 +7007,6 @@
                                 "paletteKey": "ng-droppable-table-column",
                                 "parentEditorKey": "4bc45f7e-b244-de1a-d1f7-e1ae98100f32",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -7112,7 +7049,6 @@
                                 "15903432-e7ba-791c-89d3-3570f344dfa3": {
                                     "paletteKey": "FlexLayoutRow",
                                     "parentEditorKey": "85513c85-1ddc-30a1-2f80-46d4dc2a15de",
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -7174,7 +7110,6 @@
                                     "1941a4b2-dc15-dd06-d8a1-0dfadac4ea20": {
                                         "paletteKey": "FlexLayoutCol",
                                         "parentEditorKey": "15903432-e7ba-791c-89d3-3570f344dfa3",
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {
@@ -7236,7 +7171,6 @@
                                         "7c6aee74-452b-90de-7f56-be70e69e61e6": {
                                             "paletteKey": "NG-icon",
                                             "parentEditorKey": "1941a4b2-dc15-dd06-d8a1-0dfadac4ea20",
-                                            "isCommented": "false",
                                             "commentid": null,
                                             "designerReference": [
                                                 {
