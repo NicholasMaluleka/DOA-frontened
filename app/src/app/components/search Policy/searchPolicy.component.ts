@@ -10,12 +10,14 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
-import { MatDialogRef } from '@angular/material/dialog'; //_splitter_
+import { MatDialog, MatDialogRef } from '@angular/material/dialog'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
+import { not_liable_popUpComponent } from 'app/components/search Policy/not_liable_popUp.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { variables } from 'app/sd-services/variables'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -203,7 +205,7 @@ export class searchPolicyComponent {
       ) {
         bh = this.sd_kPBY0flPvVW2qs8E(bh);
       } else {
-        bh = await this.sd_uK9SFyo7OgJzOK8J(bh);
+        bh = await this.sd_M3Mx5SO6Ewwd84IC(bh);
       }
 
       return bh;
@@ -226,6 +228,56 @@ export class searchPolicyComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_kPBY0flPvVW2qs8E');
+    }
+  }
+
+  sd_M3Mx5SO6Ewwd84IC(bh) {
+    try {
+      const page = this.page;
+      page.total = page.clients[0].trialCount - 6;
+
+      // if(page.total  > 0) {
+      //     console.log(" liable for claim")
+      // } else {
+      //     console.log(" not liable for claim")
+      // }
+      bh = this.sd_eELT5pMxSfee5Pj1(bh);
+      //appendnew_next_sd_M3Mx5SO6Ewwd84IC
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_M3Mx5SO6Ewwd84IC');
+    }
+  }
+
+  async sd_eELT5pMxSfee5Pj1(bh) {
+    try {
+      if (
+        this.sdService.operators['gt'](this.page.total, 0, undefined, undefined)
+      ) {
+        bh = this.sd_FSRNBESiivi2xjRH(bh);
+      } else {
+        bh = await this.sd_7yMY6xtRM932937O(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eELT5pMxSfee5Pj1');
+    }
+  }
+
+  sd_FSRNBESiivi2xjRH(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('liable for claim', 'OK', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_uK9SFyo7OgJzOK8J(bh);
+      //appendnew_next_sd_FSRNBESiivi2xjRH
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FSRNBESiivi2xjRH');
     }
   }
 
@@ -266,6 +318,51 @@ export class searchPolicyComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_IO4IqWL9nrM5vCKf');
+    }
+  }
+
+  async sd_7yMY6xtRM932937O(bh) {
+    try {
+      const variablesInstance: variables =
+        this.__page_injector__.get(variables);
+
+      let outputVariables = await variablesInstance.setVariable(
+        this.page.clients[0]
+      );
+      bh.results = outputVariables.input.data;
+
+      bh = this.sd_8VXYA6N57Vm8tm0h(bh);
+      //appendnew_next_sd_7yMY6xtRM932937O
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7yMY6xtRM932937O');
+    }
+  }
+
+  sd_8VXYA6N57Vm8tm0h(bh) {
+    try {
+      const _dialogRef = this.__page_injector__.get(MatDialogRef);
+      _dialogRef.close(this.page.clients);
+
+      bh = this.sd_ZVCUNk8rfZjdDM9Z(bh);
+      //appendnew_next_sd_8VXYA6N57Vm8tm0h
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8VXYA6N57Vm8tm0h');
+    }
+  }
+
+  sd_ZVCUNk8rfZjdDM9Z(bh) {
+    try {
+      const not_liable_popUpDialog = this.__page_injector__.get(MatDialog);
+      const not_liable_popUpDialogRef = not_liable_popUpDialog.open(
+        not_liable_popUpComponent,
+        { height: '65vh', width: '45vw' }
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZVCUNk8rfZjdDM9Z');
     }
   }
 
