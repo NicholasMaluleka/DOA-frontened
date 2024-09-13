@@ -4106,7 +4106,7 @@
                     },
                     {
                         "_key": "routerLink",
-                        "_value": "/dashboard/edit-personalinfo",
+                        "_value": "/dashboard/view_details",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -4275,7 +4275,7 @@
                                 },
                                 {
                                     "_key": "routerLink",
-                                    "_value": "/dashboard/edit-personalinfo",
+                                    "_value": "/dashboard/view_details",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }
