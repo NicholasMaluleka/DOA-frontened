@@ -254,7 +254,7 @@ export class searchPolicyComponent {
       if (
         this.sdService.operators['gt'](this.page.total, 0, undefined, undefined)
       ) {
-        bh = this.sd_FSRNBESiivi2xjRH(bh);
+        bh = this.sd_uK9SFyo7OgJzOK8J(bh);
       } else {
         bh = await this.sd_7yMY6xtRM932937O(bh);
       }
@@ -262,22 +262,6 @@ export class searchPolicyComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_eELT5pMxSfee5Pj1');
-    }
-  }
-
-  sd_FSRNBESiivi2xjRH(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('liable for claim', 'OK', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_uK9SFyo7OgJzOK8J(bh);
-      //appendnew_next_sd_FSRNBESiivi2xjRH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FSRNBESiivi2xjRH');
     }
   }
 
