@@ -138,6 +138,13 @@
                     "type": "str",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "date",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_7K2noVNldq6MAAbT",
@@ -202,7 +209,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_7K2noVNldq6MAAbT"
+                "sd_r3eEuybGflYSevtu"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -217,7 +224,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.path = \"get-users\"\n\npage.fileForm = new FormGroup({\n    _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"),\n})\n\npage.beneficaryForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.beneficaryForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.dependencyForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm3 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.clientForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    address: new FormControl(\"\", [Validators.required]),\n    packageType: new FormControl(\"\", [Validators.required]),\n    file2: new FormControl(\"\", [Validators.required]),\n    file: page.fileForm\n})\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\npage.genders = [\n   {value: 'Male', viewValue: 'Male'},\n   {value: 'Female', viewValue: 'Female'}\n];",
+        "script": "bh.path = \"get-users\"\n\npage.fileForm = new FormGroup({\n    _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"),\n})\n\npage.beneficaryForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.beneficaryForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.dependencyForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm3 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.clientForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    address: new FormControl(\"\", [Validators.required]),\n    packageType: new FormControl(\"\", [Validators.required]),\n    paymentDate: new FormControl(\"\", [Validators.required]),\n    file2: new FormControl(\"\", [Validators.required]),\n    file: page.fileForm,\n    trialCount: new FormControl (0)\n})\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\npage.genders = [\n   {value: 'Male', viewValue: 'Male'},\n   {value: 'Female', viewValue: 'Female'}\n];\n\npage.date = new Date()\n\n page.customHeader = \"CustomHeaderComponent\"",
         "functionName": "sd_qjesZ9T9zyxXQtfe",
         "category": "Function",
         "x": 305,
@@ -657,7 +664,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1605,6 +1614,7 @@
         "serviceImportPath": "./",
         "startName": "checkClientIfExists",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_r8ZA4xPfv6W0TiV1",
         "category": "General",
@@ -1698,7 +1708,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1736,7 +1748,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1809,31 +1823,6 @@
         "generateNext": false,
         "serviceName": "registerComponent",
         "generated": true
-    },
-    {
-        "id": "sd_RHNk3JeBywfxlEKW",
-        "type": "Log",
-        "z": "sd_uqB8Ta19yPAqB9Xq",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "bh",
-        "functionName": "sd_RHNk3JeBywfxlEKW",
-        "category": "General",
-        "x": 265,
-        "y": 820,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "bh",
-                "value": "",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "registerComponent"
     },
     {
         "id": "sd_PosCwUYRxSSmEloq",
@@ -1910,6 +1899,7 @@
         "serviceImportPath": "./",
         "startName": "checkClientIfExists",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_1K5TUH2VquggXj9W",
         "category": "General",
@@ -1939,6 +1929,46 @@
         "y": 640,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r3eEuybGflYSevtu",
+        "type": "UseDependency",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "MatCalendar",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/material/datepicker",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_r3eEuybGflYSevtu",
+        "category": "Function",
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "sd_7K2noVNldq6MAAbT"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
