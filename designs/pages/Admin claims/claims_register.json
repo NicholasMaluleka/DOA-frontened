@@ -799,8 +799,8 @@
         "script": "console.log('page.',page.deceased)",
         "functionName": "sd_8uy7TQ48zgBugAZc",
         "category": "Function",
-        "x": 105,
-        "y": 900,
+        "x": 65,
+        "y": 920,
         "wires": [
             []
         ],

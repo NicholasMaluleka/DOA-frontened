@@ -8,7 +8,9 @@
 .dhx_menu_icon.icon_details:before, .dhx_menu_icon.icon_edit:before, .dhx_menu_icon.icon_delete:before {
     color: white !important;
 }
-
+.mat-select-value-text {
+    color: #124e52;
+}
 body {
     height: 100%;
     width: 100%;

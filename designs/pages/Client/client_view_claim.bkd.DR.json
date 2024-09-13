@@ -1,5 +1,5 @@
 {
-    "65de233f-b420-4475-f300-a0359e7a11dd": {
+    "dff84e63-2ba3-377a-0b67-215989c0b542": {
         "paletteKey": "FlexLayoutCol",
         "commentid": null,
         "designerReference": [
@@ -61,9 +61,9 @@
                 "_attrDef": "p"
             }
         ],
-        "f6874e5c-449a-4bdb-ae75-70b6390c5832": {
+        "a3051d92-51aa-f5f6-1569-84f0ff93cfab": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "65de233f-b420-4475-f300-a0359e7a11dd",
+            "parentEditorKey": "dff84e63-2ba3-377a-0b67-215989c0b542",
             "commentid": null,
             "designerReference": [
                 {
@@ -124,9 +124,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "e90e9695-f7ee-f97c-2a23-addde3d62525": {
+            "fc803978-2552-4f50-a534-b4ab52c2dceb": {
                 "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "f6874e5c-449a-4bdb-ae75-70b6390c5832",
+                "parentEditorKey": "a3051d92-51aa-f5f6-1569-84f0ff93cfab",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -187,9 +187,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "7dacbef7-145d-2116-8e60-b9dde214cb97": {
+                "dfd3d39a-900f-b992-7cb4-46a1585ed426": {
                     "paletteKey": "Html5",
-                    "parentEditorKey": "e90e9695-f7ee-f97c-2a23-addde3d62525",
+                    "parentEditorKey": "fc803978-2552-4f50-a534-b4ab52c2dceb",
                     "isAdvancedComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -374,9 +374,9 @@
                             "_visibility": false
                         }
                     ],
-                    "d977fdf5-a7b0-25ce-9b0f-e3e6c6bd494f": {
+                    "5f0e380f-cd3b-4e84-9adc-8d606036e6fc": {
                         "paletteKey": "html-editor",
-                        "parentEditorKey": "7dacbef7-145d-2116-8e60-b9dde214cb97",
+                        "parentEditorKey": "dfd3d39a-900f-b992-7cb4-46a1585ed426",
                         "isAdvancedChildComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -402,9 +402,9 @@
                     }
                 }
             },
-            "a7fbeb9a-faa0-8178-c525-66d15e9e208e": {
+            "58499e54-89a2-38f8-0150-54bc8ca49d4d": {
                 "paletteKey": "NG-Form",
-                "parentEditorKey": "f6874e5c-449a-4bdb-ae75-70b6390c5832",
+                "parentEditorKey": "a3051d92-51aa-f5f6-1569-84f0ff93cfab",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -463,9 +463,9 @@
                         "_attrDef": "c"
                     }
                 ],
-                "d4539963-5cda-cba9-0e7a-88ad5d67db5e": {
+                "833f43e5-140f-48d3-1731-ecdc356f2535": {
                     "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "a7fbeb9a-faa0-8178-c525-66d15e9e208e",
+                    "parentEditorKey": "58499e54-89a2-38f8-0150-54bc8ca49d4d",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -524,9 +524,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "29ec3fe0-3156-8569-4c5f-c9fa0168ad0b": {
+                    "12dcb6d4-b1ac-5949-8919-0eaa5b262fd7": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "d4539963-5cda-cba9-0e7a-88ad5d67db5e",
+                        "parentEditorKey": "833f43e5-140f-48d3-1731-ecdc356f2535",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -585,9 +585,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "853d22e4-0ce6-c65a-b38f-76b522a0763d": {
+                        "22f938cd-debc-4fda-3186-005b05dc0cec": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "29ec3fe0-3156-8569-4c5f-c9fa0168ad0b",
+                            "parentEditorKey": "12dcb6d4-b1ac-5949-8919-0eaa5b262fd7",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -646,9 +646,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "21697d2d-ac26-e5c3-f890-d8f9b01e0ad5": {
+                            "d75a1191-1d65-64f5-fa88-3f44498d8924": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "853d22e4-0ce6-c65a-b38f-76b522a0763d",
+                                "parentEditorKey": "22f938cd-debc-4fda-3186-005b05dc0cec",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -833,9 +833,9 @@
                                         "_visibility": false
                                     }
                                 ],
-                                "78dce59a-6384-64b6-fd48-661f71fcd035": {
+                                "fbc5cc5d-5d54-55a0-6082-ec96e42e20ea": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "21697d2d-ac26-e5c3-f890-d8f9b01e0ad5",
+                                    "parentEditorKey": "d75a1191-1d65-64f5-fa88-3f44498d8924",
                                     "isAdvancedChildComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -861,9 +861,9 @@
                                 }
                             }
                         },
-                        "b72b3153-5960-25e3-edaa-6f54b32a8b2f": {
+                        "654b256b-67be-4b4f-685f-61494c050c4f": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "29ec3fe0-3156-8569-4c5f-c9fa0168ad0b",
+                            "parentEditorKey": "12dcb6d4-b1ac-5949-8919-0eaa5b262fd7",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -922,9 +922,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "978e4762-9a01-5f4d-524b-60d9cf7ff373": {
+                            "29ebc4a2-d9af-ad45-e159-bf963e7cf866": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "b72b3153-5960-25e3-edaa-6f54b32a8b2f",
+                                "parentEditorKey": "654b256b-67be-4b4f-685f-61494c050c4f",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1099,9 +1099,9 @@
                                     }
                                 ]
                             },
-                            "a68ea3b8-f77b-3780-855e-a7ce40b5e18c": {
+                            "9fa5261c-4eec-03dd-0385-9846586387b9": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "b72b3153-5960-25e3-edaa-6f54b32a8b2f",
+                                "parentEditorKey": "654b256b-67be-4b4f-685f-61494c050c4f",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1277,9 +1277,9 @@
                                 ]
                             }
                         },
-                        "776b4887-6d3b-3bcd-802f-dc39d4286b87": {
+                        "acb7f489-c285-f961-7948-2b436a660c21": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "29ec3fe0-3156-8569-4c5f-c9fa0168ad0b",
+                            "parentEditorKey": "12dcb6d4-b1ac-5949-8919-0eaa5b262fd7",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1338,9 +1338,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "06620985-0d5a-1556-4d0a-e2c06446488b": {
+                            "6eff3518-d86a-17ea-b1cc-29a86fed938f": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "776b4887-6d3b-3bcd-802f-dc39d4286b87",
+                                "parentEditorKey": "acb7f489-c285-f961-7948-2b436a660c21",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1515,9 +1515,9 @@
                                     }
                                 ]
                             },
-                            "225c9700-c0c2-6d4b-c16e-f3541cb53e9a": {
+                            "660171d8-8da9-98fb-3bab-32b0d9af0c24": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "776b4887-6d3b-3bcd-802f-dc39d4286b87",
+                                "parentEditorKey": "acb7f489-c285-f961-7948-2b436a660c21",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1693,9 +1693,9 @@
                                 ]
                             }
                         },
-                        "ac1e1812-bd11-09c8-2cf3-fe3268008899": {
+                        "5fd0bfb3-5e07-9b0b-2943-263abb70279a": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "29ec3fe0-3156-8569-4c5f-c9fa0168ad0b",
+                            "parentEditorKey": "12dcb6d4-b1ac-5949-8919-0eaa5b262fd7",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1754,9 +1754,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "6c80a419-ae15-2133-89cb-4a23b6e98ce9": {
+                            "748f0bf0-a717-d0f7-3fcf-a650a83c51ab": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "ac1e1812-bd11-09c8-2cf3-fe3268008899",
+                                "parentEditorKey": "5fd0bfb3-5e07-9b0b-2943-263abb70279a",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1931,9 +1931,9 @@
                                     }
                                 ]
                             },
-                            "28d46b9e-dca6-a5e9-686e-ec7249552ee8": {
+                            "db99aa7b-dc11-2262-540c-65cfa20f9aa5": {
                                 "paletteKey": "NG-Input",
-                                "parentEditorKey": "ac1e1812-bd11-09c8-2cf3-fe3268008899",
+                                "parentEditorKey": "5fd0bfb3-5e07-9b0b-2943-263abb70279a",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -2110,9 +2110,9 @@
                             }
                         }
                     },
-                    "1f2eaabc-994e-cb59-6754-8ef13ba7fa58": {
+                    "f26b74aa-8a61-9b0b-ca77-b0934e381634": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "d4539963-5cda-cba9-0e7a-88ad5d67db5e",
+                        "parentEditorKey": "833f43e5-140f-48d3-1731-ecdc356f2535",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2171,9 +2171,9 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "c499c262-bfc0-bd84-36a7-57895e207e96": {
+                        "ce19d0e4-a711-b388-bc48-a4455af89ed5": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "1f2eaabc-994e-cb59-6754-8ef13ba7fa58",
+                            "parentEditorKey": "f26b74aa-8a61-9b0b-ca77-b0934e381634",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2232,9 +2232,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "f1a7b9a4-92a9-0d4e-6e1e-8418845a4a0e": {
+                            "821e33f7-11e6-1d32-cd69-5748131b3cb6": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "c499c262-bfc0-bd84-36a7-57895e207e96",
+                                "parentEditorKey": "ce19d0e4-a711-b388-bc48-a4455af89ed5",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -2419,9 +2419,9 @@
                                         "_visibility": false
                                     }
                                 ],
-                                "2408814c-e399-6f75-b87a-2e94da38591f": {
+                                "b07b81cf-a5d8-c200-3d59-47952a0e31cf": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "f1a7b9a4-92a9-0d4e-6e1e-8418845a4a0e",
+                                    "parentEditorKey": "821e33f7-11e6-1d32-cd69-5748131b3cb6",
                                     "isAdvancedChildComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -2447,282 +2447,9 @@
                                 }
                             }
                         },
-                        "cf4939e9-5261-1bda-8bbe-9b7e454d9a34": {
-                            "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "1f2eaabc-994e-cb59-6754-8ef13ba7fa58",
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "componentLabel",
-                                    "_value": "Row",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": "",
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "fxFlex",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "fxLayoutGap",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "wrap",
-                                    "_value": "wrap",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "layoutAlign",
-                                    "_value": "start",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "pLayoutAlign",
-                                    "_value": "stretch",
-                                    "_type": "a",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[fxShow]",
-                                    "_value": "true",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                }
-                            ],
-                            "6af4255a-0ca3-a2a6-556f-1d1bbce0dfc9": {
-                                "paletteKey": "NG-Select",
-                                "parentEditorKey": "cf4939e9-5261-1bda-8bbe-9b7e454d9a34",
-                                "isAdvancedComponent": true,
-                                "commentid": null,
-                                "designerReference": [
-                                    {
-                                        "_key": "style",
-                                        "_value": "color:#124e52",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "class",
-                                        "_value": [
-                                            "width-49"
-                                        ],
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "innerMatSelectStyle",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "innerMatSelectClass",
-                                        "_value": "",
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "placeholder",
-                                        "_value": "Select",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_useAsLabel": true
-                                    },
-                                    {
-                                        "_key": "Label",
-                                        "_value": "Select Dependency Id Number",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "datasource",
-                                        "_value": "page.ids",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[groupOptions]",
-                                        "_value": "noGroup",
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[groupLabels]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "[disableGroup]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "[optionDatasource]",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "optionValue",
-                                        "_value": "option.value",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "optionView",
-                                        "_value": "{{option.viewValue}}",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "formControlName",
-                                        "_value": "depsId",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[(ngModel)]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[(value)]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[required]",
-                                        "_value": "false",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[appearance]",
-                                        "_value": "'legacy'",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[floatLabel]",
-                                        "_value": "'auto'",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[disableRipple]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "multiple",
-                                        "_value": "",
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "CustomTriggerValue",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(openedChange)",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "(selectionChange)",
-                                        "_value": "populate()",
-                                        "_type": "kv",
-                                        "_attrDef": "p",
-                                        "_customAttributeFlag": "flowpicker",
-                                        "objValue": {
-                                            "nodeID": "sd_aLg7SMgOK7JFbf8d",
-                                            "functionName": "populate",
-                                            "activeTree": "pages",
-                                            "z": "sd_N4CyuOQSKrbNKzFe",
-                                            "input": []
-                                        }
-                                    },
-                                    {
-                                        "_key": "selectCustomOption",
-                                        "_value": [],
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "selectStyle",
-                                        "_value": "Basic",
-                                        "_type": "a",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "panelClass",
-                                        "_value": "",
-                                        "_type": "dav",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[disabled]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[errorStateMatcher]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "option",
-                                        "_value": "option",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": false
-                                    },
-                                    {
-                                        "_key": "matError",
-                                        "_value": [],
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    }
-                                ]
-                            }
-                        },
-                        "3e49165a-50c7-1902-f9f3-14b5e5771468": {
+                        "2f9b1036-751f-fc84-7114-b2e6f0004977": {
                             "paletteKey": "NG-Form",
-                            "parentEditorKey": "1f2eaabc-994e-cb59-6754-8ef13ba7fa58",
+                            "parentEditorKey": "f26b74aa-8a61-9b0b-ca77-b0934e381634",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2781,9 +2508,9 @@
                                     "_attrDef": "c"
                                 }
                             ],
-                            "5dd679cf-510b-338a-fbdf-4e38db71ac20": {
+                            "c7692f19-51d0-a1c1-88f1-1c4db1ebe375": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "3e49165a-50c7-1902-f9f3-14b5e5771468",
+                                "parentEditorKey": "2f9b1036-751f-fc84-7114-b2e6f0004977",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2842,9 +2569,9 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "d5e24224-0358-d547-fea0-4276901eabd1": {
+                                "fd529793-c07f-7965-592f-87f4bad1d42b": {
                                     "paletteKey": "NG-Input",
-                                    "parentEditorKey": "5dd679cf-510b-338a-fbdf-4e38db71ac20",
+                                    "parentEditorKey": "c7692f19-51d0-a1c1-88f1-1c4db1ebe375",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -3019,9 +2746,9 @@
                                         }
                                     ]
                                 },
-                                "5da7086d-7257-2884-2770-9eac53827223": {
+                                "45b64bdf-88dc-0f27-a8da-a2b81464b919": {
                                     "paletteKey": "NG-Input",
-                                    "parentEditorKey": "5dd679cf-510b-338a-fbdf-4e38db71ac20",
+                                    "parentEditorKey": "c7692f19-51d0-a1c1-88f1-1c4db1ebe375",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -3197,9 +2924,9 @@
                                     ]
                                 }
                             },
-                            "b5c21a45-5e97-f2cd-b37d-9693bc721a96": {
+                            "21eb14ef-c163-f112-1128-88c7331b26f5": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "3e49165a-50c7-1902-f9f3-14b5e5771468",
+                                "parentEditorKey": "2f9b1036-751f-fc84-7114-b2e6f0004977",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3258,9 +2985,9 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "1edcb669-4f2e-36d8-f516-f1c9fb3d8dca": {
+                                "05853c04-b2f2-334d-9bf3-becf4717e0b0": {
                                     "paletteKey": "NG-Input",
-                                    "parentEditorKey": "b5c21a45-5e97-f2cd-b37d-9693bc721a96",
+                                    "parentEditorKey": "21eb14ef-c163-f112-1128-88c7331b26f5",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -3435,9 +3162,9 @@
                                         }
                                     ]
                                 },
-                                "7893173c-9be3-83ec-c219-0d54b0c1edd7": {
+                                "48822b71-efee-b7ff-9c67-bacf9525ad4a": {
                                     "paletteKey": "NG-Input",
-                                    "parentEditorKey": "b5c21a45-5e97-f2cd-b37d-9693bc721a96",
+                                    "parentEditorKey": "21eb14ef-c163-f112-1128-88c7331b26f5",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -3613,9 +3340,9 @@
                                     ]
                                 }
                             },
-                            "b1545ade-084d-7864-eed9-1dad4fc96893": {
+                            "d1655d54-021f-13eb-e71d-05e9d89419c9": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "3e49165a-50c7-1902-f9f3-14b5e5771468",
+                                "parentEditorKey": "2f9b1036-751f-fc84-7114-b2e6f0004977",
                                 "isCommented": "true",
                                 "commentid": "1725810225331",
                                 "designerReference": [
@@ -3675,9 +3402,9 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "d6fb3aea-33a3-2f81-caba-ebcda1e3abc0": {
+                                "35d04c15-144e-55bf-8e1a-06163a5c7274": {
                                     "paletteKey": "NG-DatePicker",
-                                    "parentEditorKey": "b1545ade-084d-7864-eed9-1dad4fc96893",
+                                    "parentEditorKey": "d1655d54-021f-13eb-e71d-05e9d89419c9",
                                     "isAdvancedComponent": true,
                                     "isCommented": "true",
                                     "commentid": "1725810225331",
@@ -3940,9 +3667,9 @@
                                 }
                             }
                         },
-                        "5e346c4f-34c8-d169-89e8-d8250e66fac9": {
+                        "67e4fa9e-7fb2-71d4-24d6-8e3a3a3bfde6": {
                             "paletteKey": "FlexLayoutCol",
-                            "parentEditorKey": "1f2eaabc-994e-cb59-6754-8ef13ba7fa58",
+                            "parentEditorKey": "f26b74aa-8a61-9b0b-ca77-b0934e381634",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4001,9 +3728,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "271031b9-c162-8af9-67a7-6c5c4d05aaa1": {
+                            "82d70b81-055c-ac02-cf53-386ce0db5f9d": {
                                 "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "5e346c4f-34c8-d169-89e8-d8250e66fac9",
+                                "parentEditorKey": "67e4fa9e-7fb2-71d4-24d6-8e3a3a3bfde6",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4062,9 +3789,9 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "3f730de7-885b-fb73-6ce7-991314de0650": {
+                                "30decf71-26ba-65be-3f01-1d1347eef40e": {
                                     "paletteKey": "Html5",
-                                    "parentEditorKey": "271031b9-c162-8af9-67a7-6c5c4d05aaa1",
+                                    "parentEditorKey": "82d70b81-055c-ac02-cf53-386ce0db5f9d",
                                     "isAdvancedComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -4249,9 +3976,9 @@
                                             "_visibility": false
                                         }
                                     ],
-                                    "b7733f38-4e4c-60fb-f31e-4c50a18b14d1": {
+                                    "057c7e38-1955-d5d1-fa67-02b0899f0ccc": {
                                         "paletteKey": "html-editor",
-                                        "parentEditorKey": "3f730de7-885b-fb73-6ce7-991314de0650",
+                                        "parentEditorKey": "30decf71-26ba-65be-3f01-1d1347eef40e",
                                         "isAdvancedChildComponent": true,
                                         "commentid": null,
                                         "designerReference": [
@@ -4277,9 +4004,9 @@
                                     }
                                 }
                             },
-                            "32c93241-ecc2-534d-43c8-4dc5aaab2b22": {
+                            "3cba1361-e13c-0179-af7a-12d191b98a8c": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "5e346c4f-34c8-d169-89e8-d8250e66fac9",
+                                "parentEditorKey": "67e4fa9e-7fb2-71d4-24d6-8e3a3a3bfde6",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -4462,17 +4189,11 @@
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_visibility": false
-                                    },
-                                    {
-                                        "_key": "(click)",
-                                        "_value": "tghj",
-                                        "_type": "kv",
-                                        "_attrDef": "c"
                                     }
                                 ],
-                                "f32adafe-0685-54b4-d149-1a904b1298f0": {
+                                "9600532e-bd73-da0d-ac00-b158ae501878": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "32c93241-ecc2-534d-43c8-4dc5aaab2b22",
+                                    "parentEditorKey": "3cba1361-e13c-0179-af7a-12d191b98a8c",
                                     "isAdvancedChildComponent": true,
                                     "commentid": null,
                                     "designerReference": [
@@ -4490,21 +4211,21 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "\r\n <div (click)= \"upload1()\">\r\n     <input type=\"file\" id=\"upload1\"    hidden required formControlName = \"idClaimer2\">\r\n <button class=\"input-button\"><label for=\"upload1\">\r\n     Upload ID Claimer\r\n </label></button>\r\n  <p *ngIf=\"page.showId\" >{{page.id}} </p>\r\n  <a  *ngIf=\"page.showId\" href=\"{{page.fileURL}}{{page.idclaimerfilename}}\" target=\"_blank\">view</a>\r\n </div>\r\n\r\n <div (click)=\"upload2()\">\r\n \r\n  <input type=\"file\" id=\"upload2\"   hidden required formControlName = \"idDeceased2\">\r\n <button class=\"input-button\"><label for=\"upload2\">\r\n     Upload ID Deceased\r\n </label></button>\r\n <p *ngIf=\"page.showIddes\">{{page.iddes}}</p>\r\n   <a   *ngIf=\"page.showIddes\" href=\"{{page.fileURL}}{{page.idDeceasedfilename}}\" target=\"_blank\">view</a>\r\n </div>\r\n <div (click)=\"upload3()\">\r\n<input type=\"file\" id=\"upload3\" (change)=\"upload3($event)\" hidden   required formControlName = \"deathCetificatify2\">\r\n <button class=\"input-button\"><label for=\"upload3\">\r\n     Upload Death Certificate\r\n\r\n </label></button>\r\n <p *ngIf=\" page.showdeathCetificatify \">{{page.deathCetificatify}}</p>\r\n   <a   *ngIf=\" page.showdeathCetificatify \" href=\"{{page.fileURL}}{{page.deathCetificatifyfilename}}\" target=\"_blank\">view</a>\r\n</div>\r\n <div (click)=\"upload4()\">\r\n <input type=\"file\" id=\"upload4\"  hidden required formControlName = \"bi16632\">\r\n <button class=\"input-button\"><label for=\"upload4\">\r\n     Upload bi1663\r\n\r\n </label></button>\r\n  <p *ngIf=\" page.showbi1663 \">{{page.bi1663}}</p>\r\n    <a  *ngIf=\" page.showbi1663 \" href=\"{{page.fileURL}}{{page.bi1663filename}}\" target=\"_blank\">view</a>\r\n </div>\r\n<div (click)=\"upload5()\">\r\n <input type=\"file\" id=\"upload5\" (change)=\"upload5($event)\"   hidden required formControlName = \"bankDetails2\">\r\n <button class=\"input-button\"><label for=\"upload5\">\r\n     Upload Bank Details\r\n\r\n </label></button>\r\n  <p *ngIf=\" page.showbankDetails \">{{page.bankDetails}}</p>\r\n    <a  *ngIf=\"page.showbankDetails\"  href =\"{{page.fileURL}}{{page.bankDetailsfilename}}\" target=\"_blank\">view</a>\r\n</div>\r\n\r\n\r\n",
+                                            "_value": "\r\n <div >\r\n \r\n  <a href=\"{{page.fileUR}}{{page['IDfile']}}\" target=\"_blank\" > claimers ID:{{page.claim.ID}}</a>\r\n </div>\r\n\r\n <div >\r\n\r\n <a href=\"{{page.fileUR}}{{page['IDDeceasedfile']}}\" target=\"_blank\" > Decesed ID:{{page.claim.IDDeceased}}</a>\r\n </div>\r\n <div >\r\n\r\n <a href=\"{{page.fileUR}}{{page['DeathCertificatefile']}}\" target=\"_blank\">Death Certificate:{{page.claim.DeathCertificate}}</a>\r\n</div>\r\n <div >\r\n\r\n  <a href=\"{{page.fileUR}}{{page.bi1663file}}\" target=\"_blank\"> BI1663 Form:{{page.claim.bi1663}}</a>\r\n </div>\r\n<div>\r\n\r\n  <a href=\"{{page.fileUR}}{{page['bankDetailsfile']}}\" target=\"_blank\" > Bank Details:{{page.claim.bankDetails}}</a>\r\n</div>\r\n\r\n\r\n",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
                                     ]
                                 }
                             },
-                            "858b4439-4bf8-9136-0993-be03546f5f30": {
-                                "paletteKey": "FlexLayoutRow",
-                                "parentEditorKey": "5e346c4f-34c8-d169-89e8-d8250e66fac9",
+                            "142ec341-0dcd-6d06-1db7-6a6cb2b9218e": {
+                                "paletteKey": "FlexLayoutCol",
+                                "parentEditorKey": "67e4fa9e-7fb2-71d4-24d6-8e3a3a3bfde6",
                                 "commentid": null,
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
-                                        "_value": "Row",
+                                        "_value": "Column",
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -4541,13 +4262,13 @@
                                     },
                                     {
                                         "_key": "layoutAlign",
-                                        "_value": "center",
+                                        "_value": "start",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
                                         "_key": "pLayoutAlign",
-                                        "_value": "center",
+                                        "_value": "stretch",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
@@ -4558,14 +4279,21 @@
                                         "_attrDef": "p"
                                     }
                                 ],
-                                "60b0b46e-1945-9d47-db1c-9a62ea3e285f": {
-                                    "paletteKey": "NG-RaisedButton",
-                                    "parentEditorKey": "858b4439-4bf8-9136-0993-be03546f5f30",
+                                "d1d47a35-e2de-0aa5-ed69-7255ec077b87": {
+                                    "paletteKey": "FlexLayoutRow",
+                                    "parentEditorKey": "142ec341-0dcd-6d06-1db7-6a6cb2b9218e",
                                     "commentid": null,
                                     "designerReference": [
                                         {
+                                            "_key": "componentLabel",
+                                            "_value": "Row",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
                                             "_key": "style",
-                                            "_value": "margin-top: 25px;     margin-bottom: 25px;    width: 124px;",
+                                            "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -4576,57 +4304,672 @@
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "buttonname",
-                                            "_value": "Submit a Claim",
+                                            "_key": "fxFlex",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxLayoutGap",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
                                             "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "start",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "pLayoutAlign",
+                                            "_value": "stretch",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        }
+                                    ],
+                                    "0b0dc480-5962-f22b-3a4a-08a76b826958": {
+                                        "paletteKey": "Html5",
+                                        "parentEditorKey": "d1d47a35-e2de-0aa5-ed69-7255ec077b87",
+                                        "isAdvancedComponent": true,
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "margin-bottom: 20px; ",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": "",
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "htmlElement",
+                                                "_value": "label",
+                                                "_type": "dav",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "tagType",
+                                                "_value": "label",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "name",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "sandbox",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "src",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "srcdoc",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "width",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[autoplay]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "[loop]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "data",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "audioSource",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "videoSource",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "audioDatasource",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "audioSrc",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "audioType",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "videoDatasource",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "videoSrc",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "videoType",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(audioplay)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(videoplay)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(audiopause)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(videopause)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(audioended)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            },
+                                            {
+                                                "_key": "(videoended)",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_visibility": false
+                                            }
+                                        ],
+                                        "e20fa983-b821-53d1-ea55-647e05eb0b28": {
+                                            "paletteKey": "html-editor",
+                                            "parentEditorKey": "0b0dc480-5962-f22b-3a4a-08a76b826958",
+                                            "isAdvancedChildComponent": true,
+                                            "commentid": null,
+                                            "designerReference": [
+                                                {
+                                                    "_key": "style",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "class",
+                                                    "_value": "",
+                                                    "_type": "dav",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "html",
+                                                    "_value": "<b>Claim Status</b>",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "fed1a262-53ee-1dd3-5eb4-1abe8c0e8b96": {
+                                    "paletteKey": "FlexLayoutRow",
+                                    "parentEditorKey": "142ec341-0dcd-6d06-1db7-6a6cb2b9218e",
+                                    "commentid": null,
+                                    "designerReference": [
+                                        {
+                                            "_key": "componentLabel",
+                                            "_value": "Row",
+                                            "_type": "kv",
                                             "_attrDef": "p",
                                             "_useAsLabel": true
                                         },
                                         {
-                                            "_key": "color",
-                                            "_value": "accent",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "(click)",
-                                            "_value": "submit()",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "objValue": {
-                                                "nodeID": "sd_X2tvjc7ajLK5WAAA",
-                                                "functionName": "submit",
-                                                "activeTree": "pages",
-                                                "z": "sd_w93AbqYMQ4LWwqYF",
-                                                "input": []
-                                            }
-                                        },
-                                        {
-                                            "_key": "[disabled]",
-                                            "_value": "page.policyClaimsForm.invalid",
-                                            "_type": "kv",
-                                            "_attrDef": "p",
-                                            "_customAttributeFlag": "customInput"
-                                        },
-                                        {
-                                            "_key": "[disableRipple]",
+                                            "_key": "style",
                                             "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "type",
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "fxFlex",
                                             "_value": "",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
                                         {
-                                            "_key": "routerLink",
+                                            "_key": "fxLayoutGap",
                                             "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "wrap",
+                                            "_value": "wrap",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "layoutAlign",
+                                            "_value": "space-between",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "pLayoutAlign",
+                                            "_value": "space-between",
+                                            "_type": "a",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "[fxShow]",
+                                            "_value": "true",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         }
-                                    ]
+                                    ],
+                                    "08e0e988-0077-7a1c-22ec-165d0de01863": {
+                                        "paletteKey": "NG-Input",
+                                        "parentEditorKey": "fed1a262-53ee-1dd3-5eb4-1abe8c0e8b96",
+                                        "isAdvancedComponent": true,
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": [
+                                                    "width-49"
+                                                ],
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "placeholder",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "value",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[appearance]",
+                                                "_value": "'legacy'",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[required]",
+                                                "_value": "false",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(ngModel)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "name",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[formControl]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "readonly",
+                                                "_value": "true",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "id",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[floatLabel]",
+                                                "_value": "'auto'",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[hideRequiredMarker]",
+                                                "_value": "false",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_complexity": "advanced"
+                                            },
+                                            {
+                                                "_key": "matError",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "inputHint",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Label",
+                                                "_value": "Claim Status",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Suffix Icon",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "(suffixIconClick)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Prefix Icon",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "(prefixIconClick)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Prefix",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Suffix",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "formControlName",
+                                                "_value": "status",
+                                                "_type": "kv",
+                                                "_attrDef": "c"
+                                            }
+                                        ]
+                                    },
+                                    "8d4ef2c0-c3ec-f9c8-a9e2-d5ba19e2c839": {
+                                        "paletteKey": "NG-Input",
+                                        "parentEditorKey": "fed1a262-53ee-1dd3-5eb4-1abe8c0e8b96",
+                                        "isAdvancedComponent": true,
+                                        "commentid": null,
+                                        "designerReference": [
+                                            {
+                                                "_key": "style",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "class",
+                                                "_value": [
+                                                    "width-49"
+                                                ],
+                                                "_type": "dav",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "placeholder",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_useAsLabel": true
+                                            },
+                                            {
+                                                "_key": "value",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[appearance]",
+                                                "_value": "'legacy'",
+                                                "_type": "a",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[required]",
+                                                "_value": "false",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[(ngModel)]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "color",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "name",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "type",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[formControl]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "readonly",
+                                                "_value": "true",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[disabled]",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "id",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[floatLabel]",
+                                                "_value": "'auto'",
+                                                "_type": "kv",
+                                                "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "[hideRequiredMarker]",
+                                                "_value": "false",
+                                                "_type": "kv",
+                                                "_attrDef": "p",
+                                                "_complexity": "advanced"
+                                            },
+                                            {
+                                                "_key": "matError",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "inputHint",
+                                                "_value": [],
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Label",
+                                                "_value": "Reason",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Suffix Icon",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "(suffixIconClick)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Prefix Icon",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "(prefixIconClick)",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Prefix",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "Suffix",
+                                                "_value": "",
+                                                "_type": "a",
+                                                "_attrDef": "p",
+                                                "_visibility": true
+                                            },
+                                            {
+                                                "_key": "formControlName",
+                                                "_value": "reason",
+                                                "_type": "kv",
+                                                "_attrDef": "c"
+                                            }
+                                        ]
+                                    }
                                 }
                             }
                         }
@@ -4634,10 +4977,11 @@
                 }
             }
         },
-        "ae832f97-f521-3337-bac8-3a6eb194d6b4": {
+        "ca93137c-17a8-ed27-cc02-878d580ec1dd": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "65de233f-b420-4475-f300-a0359e7a11dd",
-            "commentid": null,
+            "parentEditorKey": "dff84e63-2ba3-377a-0b67-215989c0b542",
+            "isCommented": "true",
+            "commentid": "1726134477037",
             "designerReference": [
                 {
                     "_key": "componentLabel",
@@ -4705,10 +5049,11 @@
                     "_attrDef": "c"
                 }
             ],
-            "ff145289-68f4-66bd-7cfd-bd779025dffc": {
+            "e92a825a-be13-038b-24ff-df6e116a0f61": {
                 "paletteKey": "NEUTRINOS_VIEW_loader",
-                "parentEditorKey": "ae832f97-f521-3337-bac8-3a6eb194d6b4",
-                "commentid": null,
+                "parentEditorKey": "ca93137c-17a8-ed27-cc02-878d580ec1dd",
+                "isCommented": "true",
+                "commentid": "1726088383785",
                 "designerReference": [
                     {
                         "_key": "componentLabel",
@@ -4731,11 +5076,12 @@
                     }
                 ]
             },
-            "72437edb-7449-7c83-dcbd-6bb1e96b14ac": {
+            "e7ef47d5-8377-1e2a-48e7-9d9a78aafd22": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "ae832f97-f521-3337-bac8-3a6eb194d6b4",
+                "parentEditorKey": "ca93137c-17a8-ed27-cc02-878d580ec1dd",
                 "isAdvancedComponent": true,
-                "commentid": null,
+                "isCommented": "true",
+                "commentid": "1726134477037",
                 "designerReference": [
                     {
                         "_key": "style",
@@ -4918,11 +5264,12 @@
                         "_visibility": false
                     }
                 ],
-                "407ae635-6579-65d2-a2d7-b9c8e216d391": {
+                "b63a065b-ca27-c46e-1891-2fb943bf6cb6": {
                     "paletteKey": "html-editor",
-                    "parentEditorKey": "72437edb-7449-7c83-dcbd-6bb1e96b14ac",
+                    "parentEditorKey": "e7ef47d5-8377-1e2a-48e7-9d9a78aafd22",
                     "isAdvancedChildComponent": true,
-                    "commentid": null,
+                    "isCommented": "true",
+                    "commentid": "1726134477037",
                     "designerReference": [
                         {
                             "_key": "style",

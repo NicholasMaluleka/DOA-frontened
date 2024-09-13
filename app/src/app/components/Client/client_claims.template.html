@@ -62,7 +62,7 @@
               <th mat-header-cell *matHeaderCellDef>Action</th>
               <td mat-cell *matCellDef="let table; let i = index;">
                 <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
-                  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="kg-pointer" matTooltip="Review Claim">visibility</mat-icon></div>
+                  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="kg-pointer" matTooltip="Review Claim" (click)="reviewClaim(table)">visibility</mat-icon></div>
                 </div>
               </td>
             </ng-container>
