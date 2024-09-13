@@ -463,11 +463,11 @@
         "flow_type": "sync",
         "functionName": "confirmPassword",
         "category": "General",
-        "x": 140,
+        "x": 65,
         "y": 440,
         "wires": [
             [
-                "sd_cCg7LMjTO95FMIW9"
+                "sd_mjmqc9QhxXT8dN0U"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -671,6 +671,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/client_view_claim",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_qJzUhzTofMKIqPSC",
         "category": "Navigation",
         "x": 530,
@@ -733,6 +740,225 @@
                 "sd_qJzUhzTofMKIqPSC"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mjmqc9QhxXT8dN0U",
+        "type": "Script",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\npage.currentDate = new Date();\n\npage.registeredDate = new Date(page.user['registeredDate'])\npage.difference = (page.currentDate.getFullYear() - page.registeredDate.getFullYear())*12 + (page.currentDate.getMonth() - page.registeredDate.getMonth())\nif(page.difference <= 6){\n    console.log(\"waiting period\")\n}else{\n    console.log(\"aligeble to claim\")\n}",
+        "functionName": "sd_mjmqc9QhxXT8dN0U",
+        "category": "Function",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "sd_yuIafLrSqhQikfta"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yuIafLrSqhQikfta",
+        "type": "PageSwitch",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "difference",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.difference",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "6",
+                "vt": "num",
+                "gv": "6"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_yuIafLrSqhQikfta",
+        "category": "Function",
+        "x": 180,
+        "y": 500,
+        "wires": [
+            [
+                "sd_qrQxvQrDWS0tO94k"
+            ],
+            [
+                "sd_cCg7LMjTO95FMIW9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claimsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qrQxvQrDWS0tO94k",
+        "type": "OpenDialog",
+        "z": "sd_TWjVL4CJiqaEHkYO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_6uF2nVeo48yILAir",
+            "label": "pop_client_waitin"
+        },
+        "relativePath": "app/components/Client/pop_client_waitin",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_qrQxvQrDWS0tO94k",
+        "category": "Dialog",
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "client_claimsComponent",

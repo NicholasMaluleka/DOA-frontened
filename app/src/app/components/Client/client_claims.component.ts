@@ -11,6 +11,7 @@ import { MatSort } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { confirm_identityComponent } from 'app/components/Client/confirm_identity.component'; //_splitter_
+import { pop_client_waitinComponent } from 'app/components/Client/pop_client_waitin.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -102,7 +103,7 @@ export class client_claimsComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_cCg7LMjTO95FMIW9(bh);
+      bh = this.sd_mjmqc9QhxXT8dN0U(bh);
       //appendnew_next_confirmPassword
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8p3lE7t0dTRlGArU');
@@ -291,6 +292,64 @@ export class client_claimsComponent implements AfterViewInit {
     }
   }
 
+  sd_mjmqc9QhxXT8dN0U(bh) {
+    try {
+      const page = this.page;
+      page.currentDate = new Date();
+
+      page.registeredDate = new Date(page.user['registeredDate']);
+      page.difference =
+        (page.currentDate.getFullYear() - page.registeredDate.getFullYear()) *
+          12 +
+        (page.currentDate.getMonth() - page.registeredDate.getMonth());
+      if (page.difference <= 6) {
+        console.log('waiting period');
+      } else {
+        console.log('aligeble to claim');
+      }
+      bh = this.sd_yuIafLrSqhQikfta(bh);
+      //appendnew_next_sd_mjmqc9QhxXT8dN0U
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mjmqc9QhxXT8dN0U');
+    }
+  }
+
+  async sd_yuIafLrSqhQikfta(bh) {
+    try {
+      if (
+        this.sdService.operators['lte'](
+          this.page.difference,
+          6,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_qrQxvQrDWS0tO94k(bh);
+      } else {
+        bh = await this.sd_cCg7LMjTO95FMIW9(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yuIafLrSqhQikfta');
+    }
+  }
+
+  sd_qrQxvQrDWS0tO94k(bh) {
+    try {
+      const pop_client_waitinDialog = this.__page_injector__.get(MatDialog);
+      const pop_client_waitinDialogRef = pop_client_waitinDialog.open(
+        pop_client_waitinComponent,
+        {}
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qrQxvQrDWS0tO94k');
+    }
+  }
+
   sd_cCg7LMjTO95FMIW9(bh) {
     try {
       const confirm_identityDialog = this.__page_injector__.get(MatDialog);
@@ -334,7 +393,9 @@ export class client_claimsComponent implements AfterViewInit {
         this.sdService.getPathAndQParamsObj('/dashboard/client_view_claim');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_qJzUhzTofMKIqPSC
       return bh;
     } catch (e) {
