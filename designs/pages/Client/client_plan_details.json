@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_4mQrEz9Ka3TQFfDH",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 25,
+        "y": 40,
         "wires": [
             [
                 "sd_nZBvna9VGICI6IZ7"
