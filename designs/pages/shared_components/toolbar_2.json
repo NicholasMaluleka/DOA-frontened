@@ -520,6 +520,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "path",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "get-users"
+                }
             }
         ],
         "functionName": "sd_vYroLyfoxwBQaGzc",
@@ -564,7 +571,7 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_Qfbqflcpzj8qAiMC",
         "category": "Function",
-        "x": 265,
+        "x": 245,
         "y": 40,
         "wires": [
             [
@@ -608,11 +615,11 @@
         "accept_csd": false,
         "functionName": "sd_El3dos7jXdf6N9R0",
         "category": "General",
-        "x": 345,
+        "x": 325,
         "y": 40,
         "wires": [
             [
-                "sd_9ScCxX3UHpaaXEJa"
+                "sd_3aUV8v8xHBXZT1sr"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -662,7 +669,7 @@
         ],
         "functionName": "sd_9ScCxX3UHpaaXEJa",
         "category": "Function",
-        "x": 425,
+        "x": 545,
         "y": 40,
         "wires": [
             [
@@ -702,14 +709,98 @@
         "serviceImportPath": "./",
         "startName": "getInitials",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_qGoGH6Y3O30tcSxQ",
         "category": "General",
-        "x": 505,
+        "x": 625,
         "y": 40,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_3aUV8v8xHBXZT1sr",
+        "type": "PageCallService",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_2F1jRXPpIvh6BKAw",
+            "type": "tab",
+            "createdDate": "2024-09-10T12:10:37.327Z",
+            "label": "Notifications",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_7Gra8AgAem9ujuDY",
+            "flowName": "genericGet"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "this.page",
+                "value": "path"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "this.page",
+                "value": "notifications",
+                "mapVarName": "data",
+                "localVar": "this.page.notifications"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Notifications",
+        "startName": "genericGet",
+        "inputParams": [
+            "this.page.path"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_3aUV8v8xHBXZT1sr",
+        "category": "General",
+        "x": 405,
+        "y": 40,
+        "wires": [
+            [
+                "sd_fGZJ3s4kXamNriT5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_fGZJ3s4kXamNriT5",
+        "type": "Script",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
+        "functionName": "sd_fGZJ3s4kXamNriT5",
+        "category": "Function",
+        "x": 485,
+        "y": 40,
+        "wires": [
+            [
+                "sd_9ScCxX3UHpaaXEJa"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

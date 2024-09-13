@@ -6,7 +6,7 @@
         "label": "claims",
         "disabled": false,
         "info": "",
-        "functionSeq": 3,
+        "functionSeq": 4,
         "generateNext": true,
         "serviceName": "claimsComponent"
     },
@@ -77,7 +77,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"claims ->\", page.result)\n\npage.approvedDataSource = []\npage.pendingDataSource = []\npage.rejectedDataSource = []\npage.partiallyApprovedDataSource = []\n\npage.result.forEach( (claim) => {\n    if(claim.status === 'approved'){\n        page.approvedDataSource.push(claim)\n    } else if (claim.status === 'pending'){\n        page.pendingDataSource.push(claim)\n    } else if(claim.status === 'rejected'){\n        page.rejectedDataSource.push(claim)\n    } else if(claim.status === 'partially approved'){\n        page.partiallyApprovedDataSource.push(claim)\n    }\n})\n\n\nbh.local.dataSource = new MatTableDataSource(page.result);",
+        "script": "console.log(\"claims ->\", page.result)\n\npage.approvedDataSource = []\npage.pendingDataSource = []\npage.rejectedDataSource = []\npage.partiallyApprovedDataSource = []\n\npage.result.forEach( (claim) => {\n    if(claim.status === 'approved'){\n        page.approvedDataSource.push(claim)\n    } else if (claim.status === 'pending'){\n        page.pendingDataSource.push(claim)\n    } else if(claim.status === 'rejected'){\n        page.rejectedDataSource.push(claim)\n    } else if(claim.status === 'partially approved'){\n        page.partiallyApprovedDataSource.push(claim)\n    }\n})\n\nbh.path = \"get-notification\"\n\nbh.local.dataSource = new MatTableDataSource(page.result);",
         "functionName": "sd_eJuzOUTYKNgXaqdz_1",
         "category": "Function",
         "x": 485,
@@ -113,7 +113,7 @@
         ],
         "functionName": "sd_E9QbOlnVduPNV5MO_1",
         "category": "Function",
-        "x": 585,
+        "x": 605,
         "y": 40,
         "wires": [
             []
@@ -122,26 +122,6 @@
         "generateNext": false,
         "serviceName": "claimsComponent",
         "generated": true
-    },
-    {
-        "id": "sd_NnBo2ElmEPMQhdin",
-        "type": "AfterViewInit",
-        "z": "sd_sslKQC9SCZ3rr5Xe",
-        "viewType": "common",
-        "nodeType": "start",
-        "name": "",
-        "functionName": "ngAfterViewInit",
-        "category": "Lifecycle Events",
-        "x": 65,
-        "y": 250,
-        "wires": [
-            [
-                "sd_9CSVHoYiwzqvTVDq"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "claimsComponent"
     },
     {
         "id": "sd_9CSVHoYiwzqvTVDq",
@@ -163,11 +143,11 @@
         ],
         "functionName": "sd_xKCCTWKzvgDN0rx7_1",
         "category": "Function",
-        "x": 205,
-        "y": 250,
+        "x": 165,
+        "y": 260,
         "wires": [
             [
-                "sd_P1x3dimC6AnShOit"
+                "sd_nJkzHFDq629hbd1F"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -182,15 +162,13 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "this.page.tableData.sort = this.MatSort;",
+        "script": "setTimeout(() => {\n\n    console.log(\"TB DATA: \", page.tableData)\n\n    this.page.tableData.sort = bh.pageViews.MatSort;\n\n    this.page.tableData.paginator = bh.pageViews.MatPaginator;\n\n    console.log(\"TABLE DATA: \", page.tableData)\n\n}, 500)\n\n// this.page.tableData.sort = this.MatSort;\n",
         "functionName": "sd_2VNGqvcKee34lvOz_1",
         "category": "Function",
         "x": 345,
-        "y": 250,
+        "y": 260,
         "wires": [
-            [
-                "sd_nJkzHFDq629hbd1F"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -207,8 +185,8 @@
         "script": "console.log(bh.input.filterEvent);\nconst filterValue = (bh.input.filterEvent.target as HTMLInputElement).value;\nthis.page.tableData.filter = filterValue.trim().toLowerCase();",
         "functionName": "sd_iBlFYTlpoczCmWts_2",
         "category": "Function",
-        "x": 165,
-        "y": 340,
+        "x": 145,
+        "y": 380,
         "wires": [
             []
         ],
@@ -239,8 +217,8 @@
         "flow_type": "sync",
         "functionName": "onFilter_2",
         "category": "General",
-        "x": 60,
-        "y": 370,
+        "x": 65,
+        "y": 380,
         "wires": [
             [
                 "sd_HIDdQSP0NPnkAAKL"
@@ -270,11 +248,11 @@
         ],
         "functionName": "sd_xKCCTWKzvgDN0rx7_3",
         "category": "Function",
-        "x": 205,
-        "y": 480,
+        "x": 245,
+        "y": 260,
         "wires": [
             [
-                "sd_WATRVjI05gX4Sh1T"
+                "sd_P1x3dimC6AnShOit"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -289,7 +267,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "this.page.tableData.paginator = this.MatPaginator;",
+        "script": "// this.page.tableData.paginator = this.MatPaginator;\nthis.page.tableData.paginator = bh.pageViews.MatPaginator;\n\nconsole.log(\"TABLE DATA: \", page.tableData)",
         "functionName": "sd_2VNGqvcKee34lvOz_3",
         "category": "Function",
         "x": 345,
@@ -298,9 +276,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "claimsComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "claimsComponent"
     },
     {
         "id": "sd_R4PZGnmiLIdMHbq5",
@@ -991,5 +968,25 @@
         "generateNext": false,
         "serviceName": "claimsComponent",
         "generated": true
+    },
+    {
+        "id": "sd_FAwuoNmWMyaQjCaS",
+        "type": "AfterViewInit",
+        "z": "sd_sslKQC9SCZ3rr5Xe",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "After View Init",
+        "functionName": "ngAfterViewInit",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 260,
+        "wires": [
+            [
+                "sd_9CSVHoYiwzqvTVDq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "claimsComponent"
     }
 ]
