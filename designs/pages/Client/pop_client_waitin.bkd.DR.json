@@ -1,5 +1,5 @@
 {
-    "a11881a4-67e4-c575-4879-fd3fb4e1b45d": {
+    "2ee95ac5-3d7c-d03b-b979-20605fe92102": {
         "paletteKey": "FlexLayoutCol",
         "commentid": null,
         "designerReference": [
@@ -12,13 +12,13 @@
             },
             {
                 "_key": "style",
-                "_value": "height: 85vh",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "_key": "class",
-                "_value": [],
+                "_value": "",
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -59,15 +59,15 @@
                 "_attrDef": "p"
             }
         ],
-        "afc657ee-4d65-a8c2-0453-2d5d83bbfab3": {
+        "9cdbbbe0-c619-8ed9-1d71-4dc4b3ba04ce": {
             "paletteKey": "Html5",
-            "parentEditorKey": "a11881a4-67e4-c575-4879-fd3fb4e1b45d",
+            "parentEditorKey": "2ee95ac5-3d7c-d03b-b979-20605fe92102",
             "isAdvancedComponent": true,
             "commentid": null,
             "designerReference": [
                 {
                     "_key": "style",
-                    "_value": "height:100%; ",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -244,17 +244,11 @@
                     "_type": "kv",
                     "_attrDef": "p",
                     "_visibility": false
-                },
-                {
-                    "_key": "disabled",
-                    "_value": "true",
-                    "_type": "kv",
-                    "_attrDef": "c"
                 }
             ],
-            "fb9efd13-bc8c-38fb-09d1-f4cc3c0160bf": {
+            "0fd7078c-fb20-5b0a-1f7d-a3c7ef684223": {
                 "paletteKey": "html-editor",
-                "parentEditorKey": "afc657ee-4d65-a8c2-0453-2d5d83bbfab3",
+                "parentEditorKey": "9cdbbbe0-c619-8ed9-1d71-4dc4b3ba04ce",
                 "isAdvancedChildComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -272,7 +266,7 @@
                     },
                     {
                         "_key": "html",
-                        "_value": "<div #scheduler_here class=\"dhx_cal_container full-width full-height\" readonly>\r\n    <div class=\"dhx_cal_navline\">\r\n    <div class=\"dhx_cal_prev_button\"></div>\r\n    <div class=\"dhx_cal_next_button\"></div>\r\n    <div class=\"dhx_cal_today_button\"></div>\r\n    <div class=\"dhx_cal_date\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"day\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"week\"></div>\r\n    <div class=\"dhx_cal_tab\" data-tab=\"month\"></div>\r\n    </div>\r\n    <div class=\"dhx_cal_header\"></div>\r\n    <div class=\"dhx_cal_data\"></div>\r\n</div>",
+                        "_value": "within waiting period",
                         "_type": "a",
                         "_attrDef": "p"
                     }

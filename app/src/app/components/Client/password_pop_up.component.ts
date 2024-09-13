@@ -60,15 +60,16 @@ export class password_pop_upComponent {
     }
   }
 
-  countCharacters(e: any = undefined, ...others) {
+  cancel(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = { e };
+      bh.input = {};
       bh.local = {};
-      //appendnew_next_countCharacters
+      bh = this.sd_f4ZK5wgsKLRyvSLS(bh);
+      //appendnew_next_cancel
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_GP1HgpZGbv3Xbpjs');
     }
@@ -94,10 +95,47 @@ export class password_pop_upComponent {
     try {
       this.page.password = undefined;
       this.page.loginForm = {};
+      bh = this.sd_4vBSQlxCo0JLE73d(bh);
       //appendnew_next_sd_XgztCccuWZ4LpH1D
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_XgztCccuWZ4LpH1D');
+    }
+  }
+
+  sd_4vBSQlxCo0JLE73d(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_rDMFugxk7zRZMNPq(bh);
+      //appendnew_next_sd_4vBSQlxCo0JLE73d
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4vBSQlxCo0JLE73d');
+    }
+  }
+
+  sd_rDMFugxk7zRZMNPq(bh) {
+    try {
+      const page = this.page;
+      page.loginForm.email = page.user.email;
+      //appendnew_next_sd_rDMFugxk7zRZMNPq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rDMFugxk7zRZMNPq');
+    }
+  }
+
+  async sd_f4ZK5wgsKLRyvSLS(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_f4ZK5wgsKLRyvSLS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_f4ZK5wgsKLRyvSLS');
     }
   }
 

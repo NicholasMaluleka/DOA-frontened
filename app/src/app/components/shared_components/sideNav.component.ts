@@ -177,14 +177,10 @@ export class sideNavComponent {
       page.sideNav = [
         { label: 'Home', icon: 'home', route: '/dashboard/home' },
         { label: 'Claims', icon: 'description', route: '/dashboard/claims' },
-        {
-          label: 'Register Client',
-          icon: 'edit',
-          route: '/dashboard/register',
-        },
+        { label: 'Add a client', icon: 'edit', route: '/dashboard/register' },
         { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
-        { label: 'Reports', icon: 'folder_open' },
-        { label: 'Audit Logs', icon: 'trending_up' },
+        // {label: "Reports", icon: "folder_open"},
+        // {label: "Audit Logs", icon: "trending_up"}
       ];
       bh = this.sd_2tPXtu9NFHtoLXpa(bh);
       //appendnew_next_sd_b3dzn7MpxnUPDSJw
@@ -315,7 +311,9 @@ export class sideNavComponent {
         this.sdService.getPathAndQParamsObj('/login');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_g9HdCihIW9zKSLFu
       return bh;
     } catch (e) {
