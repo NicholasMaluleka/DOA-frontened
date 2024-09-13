@@ -1515,7 +1515,6 @@
                             "parentEditorKey": "bbf7398c-7cfc-07a5-3211-0d85c522ad30",
                             "isAdvancedComponent": true,
                             "advancedSiblingType": "after",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1874,6 +1873,13 @@
                                                 "_value": "Review Claim",
                                                 "_type": "kv",
                                                 "_attrDef": "c"
+                                            },
+                                            {
+                                                "_key": "(click)",
+                                                "_value": "reviewClaim(table)",
+                                                "_type": "kv",
+                                                "_attrDef": "c",
+                                                "_customAttributeFlag": "customInput"
                                             }
                                         ]
                                     }

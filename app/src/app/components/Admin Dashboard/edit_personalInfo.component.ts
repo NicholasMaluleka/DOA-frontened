@@ -285,14 +285,6 @@ export class edit_personalInfoComponent {
         page.showbeneficaries1Form = false;
       }
 
-      //check if the Dependencyform1 has data so that we can display the button
-      // if(page.depe2.firstName != "") {
-      //     page.showdependencies1Form = true
-      // }
-      // console.log("show", page.depe2)
-
-      //console.log("ben1", page.ben1)
-      //console.log("ben2", page.ben2)
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData?.dependencies[1];
       page.depe3 = page.userData?.dependencies[2];

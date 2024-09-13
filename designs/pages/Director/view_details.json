@@ -1,0 +1,155 @@
+[
+    {
+        "id": "sd_huLdbUFBAVqTkDaZ",
+        "type": "tab",
+        "createdDate": "2024-09-12T09:39:12.196Z",
+        "label": "view_details",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "view_detailsComponent"
+    },
+    {
+        "id": "sd_h9VqLGxMOlv114JT",
+        "type": "OnInit",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_h9VqLGxMOlv114JT",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_EPv8E8w74Can2h3n"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_detailsComponent"
+    },
+    {
+        "id": "sd_EPv8E8w74Can2h3n",
+        "type": "PageVariables",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_EPv8E8w74Can2h3n",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Sk2cP18TarbWTOrJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Sk2cP18TarbWTOrJ",
+        "type": "Storage",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "userData"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "userData"
+        },
+        "functionName": "sd_Sk2cP18TarbWTOrJ",
+        "category": "Storage",
+        "x": 285,
+        "y": 40,
+        "wires": [
+            [
+                "sd_rnxKHPDUwmxRSbuK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rnxKHPDUwmxRSbuK",
+        "type": "Script",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"duser\", page.userData)\n\npage.currentUser = page.userData\n\n console.log(\"page user\" , page.currentUser)\n //console.log(\"bene\",page.currentUser.beneficaries);",
+        "functionName": "sd_rnxKHPDUwmxRSbuK",
+        "category": "Function",
+        "x": 385,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_detailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_bMh07wbp5IaDnEw9",
+        "type": "PageStart",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "back",
+        "category": "General",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "sd_mIONi4GoXRNcXsqI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_detailsComponent"
+    },
+    {
+        "id": "sd_mIONi4GoXRNcXsqI",
+        "type": "Navigation",
+        "z": "sd_huLdbUFBAVqTkDaZ",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/director_home",
+        "functionName": "sd_mIONi4GoXRNcXsqI",
+        "category": "Navigation",
+        "x": 220,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_detailsComponent",
+        "generated": true
+    }
+]

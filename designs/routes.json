@@ -67,6 +67,10 @@
                 {
                     "component": "director_claimsComponent",
                     "path": "director_claims"
+                },
+                {
+                    "path": "client_view_claim",
+                    "component": "client_view_claimComponent"
                 }
             ],
             "canActivate": {

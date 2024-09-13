@@ -268,7 +268,9 @@ export class confirm_identityComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_claim_form');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_TSTjkGLws4c5c652(bh);
       //appendnew_next_sd_oHtAcXLF1cMWRK4g
       return bh;
