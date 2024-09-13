@@ -1920,22 +1920,16 @@ export class claims_registerComponent implements AfterViewInit {
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
       });
 
-      page.deceased.get('status')?.valueChanges.subscribe((value) => {
-        page.value = { status: value };
-        if (
-          (page.user.role == 'admin' && value == 'partially approved') ||
-          (page.user.role === 'admin' && value == 'rejected')
-        ) {
-          page.deceased.get('status')?.disable();
-          page.policyClaimsForm.value.status = page.value.status;
-        } else if (
-          (page.user.role === 'director' && value === 'approved') ||
-          (page.user.role === 'director' && value === 'rejected')
-        ) {
-          page.deceased.get('status')?.disable();
-          page.policyClaimsForm.value.status = page.value.status;
-        }
-      });
+      // page.deceased.get('status')?.valueChanges.subscribe( value => {
+      //   page.value = {status: value}
+      //   if ( page.user.role == "admin" && value == 'partially approved' || page.user.role === "admin" && value == 'rejected'){
+      //     page.deceased.get('status')?.disable()
+      //     page.policyClaimsForm.value.status = page.value.status
+      //   } else if ( page.user.role === "director" && value === 'approved' || page.user.role === "director" && value === 'rejected'){
+      //     page.deceased.get('status')?.disable()
+      //     page.policyClaimsForm.value.status = page.value.status
+      //   }
+      // })
 
       page.date = new Date();
 
@@ -2073,25 +2067,19 @@ export class claims_registerComponent implements AfterViewInit {
         _id: new FormControl(page.selectedClaim._id),
       });
 
-      page.deceased.get('status')?.valueChanges.subscribe((value) => {
-        page.value = { status: value };
-        if (
-          (page.user.role == 'admin' && value == 'partially approved') ||
-          (page.user.role === 'admin' && value == 'rejected')
-        ) {
-          page.deceased.get('status')?.disable();
-          page.policyClaimsForm.value.status = page.value.status;
-          if (page.user.role === 'director' && value === 'partially approved') {
-            page.deceased.get('status')?.enable();
-          }
-        } else if (
-          (page.user.role === 'director' && value === 'approved') ||
-          (page.user.role === 'director' && value === 'rejected')
-        ) {
-          page.deceased.get('status')?.disable();
-          page.policyClaimsForm.value.status = page.value.status;
-        }
-      });
+      // page.deceased.get('status')?.valueChanges.subscribe( value => {
+      //   page.value = {status: value}
+      //   if ( page.user.role == "admin" && value == 'partially approved' || page.user.role === "admin" && value == 'rejected'){
+      //     page.deceased.get('status')?.disable()
+      //     page.policyClaimsForm.value.status = page.value.status
+      //     if(page.user.role === "director" && value === 'partially approved'){
+      //       page.deceased.get('status')?.enable()
+      //     }
+      //   } else if ( page.user.role === "director" && value === 'approved' || page.user.role === "director" && value === 'rejected'){
+      //     page.deceased.get('status')?.disable()
+      //     page.policyClaimsForm.value.status = page.value.status
+      //   }
+      // })
 
       page.date = new Date();
 
@@ -2267,8 +2255,8 @@ export class claims_registerComponent implements AfterViewInit {
 
       bh.body = {
         email: page.userEmail,
-        subject: 'Claim update',
-        message: `Your claim has been ${page.updatedClaim.status}. Please login to the system to see more details.`,
+        title: `DOA Claim Update - ${page.updatedClaim.claimNumber}`,
+        message: `Your claim's status has been updated. Please log in to the system to view more details regarding your claim.`,
       };
       bh = this.sd_iLRwB3gmY1wyNMMJ(bh);
       //appendnew_next_sd_0JdhwakS1r4tZGSu
@@ -2376,7 +2364,7 @@ export class claims_registerComponent implements AfterViewInit {
       const director_noteDialog = this.__page_injector__.get(MatDialog);
       const director_noteDialogRef = director_noteDialog.open(
         director_noteComponent,
-        { height: '300px', width: '400px' }
+        { height: '200px', width: '400px' }
       );
       director_noteDialogRef.afterClosed().subscribe((event) => {
         this.page.resFromPop = event;

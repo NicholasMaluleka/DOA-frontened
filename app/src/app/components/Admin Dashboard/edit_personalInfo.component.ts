@@ -275,9 +275,10 @@ export class edit_personalInfoComponent {
 
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData?.beneficaries[1];
+      console.log('BEN 2: ', page.ben2);
 
       //check if the form has data so that we can display the button
-      if (page.ben2.firstName != '') {
+      if (page.ben2?.firstName) {
         page.showbeneficaries1Form = true;
         page.hideIcon = false;
       } else {
@@ -295,48 +296,35 @@ export class edit_personalInfoComponent {
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData?.dependencies[1];
       page.depe3 = page.userData?.dependencies[2];
-      //console.log("depe1", page.depe1)
+      console.log('depe1', page.depe1);
 
       ///dependencies
+      console.log('DEP 2: ', page.depe2);
+      console.log('DEP 3: ', page.depe3);
 
-      if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName !== ''
-      ) {
+      if (page.depe2?.firstName && page.depe3?.firstName) {
         // Case 1: All forms are not empty
         page.showdependenciesForm = true;
         page.showdependencies1Form = true;
         page.showdependencies2Form = true;
         page.hideIcon2 = false; // Hide the add icon
-      } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2?.firstName !== '' &&
-        page.depe3?.firstName === ''
-      ) {
+      } else if (!page.depe2?.firstName && !page.depe3?.firstName) {
         // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
         page.showdependenciesForm = true;
-        page.showdependencies1Form = true;
+        page.showdependencies1Form = false;
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
-      } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2?.firstName === '' &&
-        page.depe3?.firstName === ''
-      ) {
+        console.log('BOTH');
+      } else if (!page.depe2?.firstName) {
         // Case 3: Form 1 is filled, Forms 2 and 3 are empty
         page.showdependenciesForm = true;
         page.showdependencies1Form = false;
-        page.showdependencies2Form = false;
+        // page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
-      } else if (
-        page.depe1.firstName === '' &&
-        page.depe2?.firstName === '' &&
-        page.depe3?.firstName === ''
-      ) {
+      } else if (!page.depe3?.firstName) {
         // Case 4: All forms are empty
         page.showdependenciesForm = true; // Show the first empty form (Form 1)
-        page.showdependencies1Form = false;
+        // page.showdependencies1Form = false;
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
       }
@@ -467,16 +455,16 @@ export class edit_personalInfoComponent {
       });
 
       //combine beneficaries
-      page.beneficary = !page.beneficaries1Form.value.firstName
+      page.beneficary = !page.beneficaries1Form.value?.firstName
         ? [page.beneficariesForm]
         : [page.beneficariesForm, page.beneficaries1Form];
 
       //console.log("beneficaries", page.beneficaries)
 
       //combine dependencies
-      page.dependencies = !page.dependency1Form.value.firstName
+      page.dependencies = !page.dependency1Form.value?.firstName
         ? [page.dependencyForm]
-        : !page.dependency2Form.value.firstName
+        : !page.dependency2Form.value?.firstName
         ? [page.dependencyForm, page.dependency1Form]
         : [page.dependencyForm, page.dependency1Form, page.dependency2Form];
       //console.log("dependencies", page.dependencies)
@@ -493,6 +481,9 @@ export class edit_personalInfoComponent {
       //    {value: 'Male', viewValue: 'Male'},
       //    {value: 'Female', viewValue: 'Female'}
       // ];
+
+      console.log('DEP 1 FORM', page.showdependencies1Form);
+      console.log('DEP 2 FORM', page.showdependencies2Form);
       //appendnew_next_sd_ECrTSDWg9bec5qWR
       return bh;
     } catch (e) {

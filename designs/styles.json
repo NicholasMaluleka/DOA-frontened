@@ -1,5 +1,9 @@
 {
     "classes": [
+        "dhx_menu_icon",
+        "icon_details",
+        "icon_edit",
+        "icon_delete",
         "FullHeight",
         "width20",
         "small-weight",
@@ -162,9 +166,10 @@
         "count",
         "pending",
         "partially-approved",
-        "fully-approved",
+        "all-accounts",
         "icon-hourglass",
         "icon-half-check",
-        "icon-check"
+        "icon-globe",
+        "icon-hover"
     ]
 }

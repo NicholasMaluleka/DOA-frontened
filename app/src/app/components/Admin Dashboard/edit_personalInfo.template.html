@@ -137,9 +137,11 @@
               </mat-form-field>
             </div>
           </form>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(2,ben)">delete</mat-icon></div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="blue-color pointer" (click)="del(2,ben)">delete</mat-icon></div>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon || !page.showbeneficaries1Form == true"><mat-icon (click)="openBeneficiries()">add_circle</mat-icon></div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon || !page.showbeneficaries1Form == true">
+          <div fxLayout="column wrap" class="icon-hover" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="blue-color pointer" (click)="openBeneficiries()">add_circle</mat-icon></div>
+        </div>
       </mat-expansion-panel><mat-expansion-panel style="margin: 8px;" (opened)="true" (closed)="false">
         <mat-expansion-panel-header>
 
@@ -191,7 +193,7 @@
               </mat-form-field>
             </div>
           </form>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(2,&apos;dep&apos;)">delete</mat-icon></div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="blue-color pointer" (click)="del(2,&apos;dep&apos;)">delete</mat-icon></div>
         </div>
         <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true" *ngIf="page.showdependencies2Form">
           <form [formGroup]="page.dependency2Form">
@@ -216,9 +218,11 @@
               </mat-form-field>
             </div>
           </form>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="pointer" (click)="del(3,&apos;dep&apos;)">delete</mat-icon></div>
+          <div fxLayout="column wrap" class="icon-hover" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="blue-color teal-color pointer" (click)="del(3,&apos;dep&apos;)">delete</mat-icon></div>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2 "><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2 ">
+          <div fxLayout="column wrap" class="icon-hover" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon class="blue-color pointer" (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
+        </div>
       </mat-expansion-panel></mat-accordion>
     <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/home" class="edit-button-alt">Cancel</button><button mat-raised-button class="blue-color yellow-bg" (click)="update()">Submit</button></div>
   </div>

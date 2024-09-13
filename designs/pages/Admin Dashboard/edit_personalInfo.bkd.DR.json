@@ -7479,6 +7479,7 @@
                                     {
                                         "_key": "class",
                                         "_value": [
+                                            "blue-color",
                                             "pointer"
                                         ],
                                         "_type": "dav",
@@ -7590,11 +7591,18 @@
                                 "_attrDef": "c"
                             }
                         ],
-                        "be9138e6-d22d-ac56-a3a2-3cff6d90fde0": {
-                            "paletteKey": "NG-icon",
+                        "9b3133f7-d92d-bda6-1f3b-c233a01b363d": {
+                            "paletteKey": "FlexLayoutCol",
                             "parentEditorKey": "fff07608-b735-99b0-9aff-6502cf82ab18",
                             "commentid": null,
                             "designerReference": [
+                                {
+                                    "_key": "componentLabel",
+                                    "_value": "Column",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
                                 {
                                     "_key": "style",
                                     "_value": "",
@@ -7603,37 +7611,97 @@
                                 },
                                 {
                                     "_key": "class",
-                                    "_value": "",
+                                    "_value": [
+                                        "icon-hover"
+                                    ],
                                     "_type": "dav",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "IconName",
-                                    "_value": "add_circle",
+                                    "_key": "fxFlex",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxLayoutGap",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "wrap",
+                                    "_value": "wrap",
                                     "_type": "a",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "[inline]",
-                                    "_value": "",
-                                    "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
+                                    "_key": "layoutAlign",
+                                    "_value": "start",
+                                    "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "(click)",
-                                    "_value": "openBeneficiries()",
+                                    "_key": "pLayoutAlign",
+                                    "_value": "stretch",
+                                    "_type": "a",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[fxShow]",
+                                    "_value": "true",
                                     "_type": "kv",
-                                    "_attrDef": "c",
-                                    "_customAttributeFlag": "customInput"
+                                    "_attrDef": "p"
                                 }
-                            ]
+                            ],
+                            "6d0c9c8f-89f0-9e6e-4572-155ad91aa4d3": {
+                                "paletteKey": "NG-icon",
+                                "parentEditorKey": "9b3133f7-d92d-bda6-1f3b-c233a01b363d",
+                                "commentid": null,
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": [
+                                            "blue-color",
+                                            "pointer"
+                                        ],
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "IconName",
+                                        "_value": "add_circle",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "[inline]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "color",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(click)",
+                                        "_value": "openBeneficiries()",
+                                        "_type": "kv",
+                                        "_attrDef": "c",
+                                        "_customAttributeFlag": "customInput"
+                                    }
+                                ]
+                            }
                         }
                     }
                 },
@@ -9835,6 +9903,7 @@
                                     {
                                         "_key": "class",
                                         "_value": [
+                                            "blue-color",
                                             "pointer"
                                         ],
                                         "_type": "dav",
@@ -10897,7 +10966,9 @@
                                 },
                                 {
                                     "_key": "class",
-                                    "_value": "",
+                                    "_value": [
+                                        "icon-hover"
+                                    ],
                                     "_type": "dav",
                                     "_attrDef": "p"
                                 },
@@ -10952,6 +11023,8 @@
                                     {
                                         "_key": "class",
                                         "_value": [
+                                            "blue-color",
+                                            "teal-color",
                                             "pointer"
                                         ],
                                         "_type": "dav",
@@ -11016,7 +11089,7 @@
                             },
                             {
                                 "_key": "class",
-                                "_value": "",
+                                "_value": [],
                                 "_type": "dav",
                                 "_attrDef": "p"
                             },
@@ -11063,11 +11136,18 @@
                                 "_attrDef": "c"
                             }
                         ],
-                        "05c9a4f1-2e43-488e-3063-06f95ad717b1": {
-                            "paletteKey": "NG-icon",
+                        "0a9b0f91-5cfa-7b7d-03ff-515721e7ba08": {
+                            "paletteKey": "FlexLayoutCol",
                             "parentEditorKey": "dfbde04b-0954-85d8-e86d-944455d012cf",
                             "commentid": null,
                             "designerReference": [
+                                {
+                                    "_key": "componentLabel",
+                                    "_value": "Column",
+                                    "_type": "kv",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
                                 {
                                     "_key": "style",
                                     "_value": "",
@@ -11076,43 +11156,103 @@
                                 },
                                 {
                                     "_key": "class",
-                                    "_value": "",
+                                    "_value": [
+                                        "icon-hover"
+                                    ],
                                     "_type": "dav",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "IconName",
-                                    "_value": "add_circle",
+                                    "_key": "fxFlex",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "fxLayoutGap",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "wrap",
+                                    "_value": "wrap",
                                     "_type": "a",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "[inline]",
-                                    "_value": "",
-                                    "_type": "kv",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
+                                    "_key": "layoutAlign",
+                                    "_value": "start",
+                                    "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "(click)",
-                                    "_value": "openDependencies()",
-                                    "_type": "kv",
-                                    "_attrDef": "c",
-                                    "_customAttributeFlag": "customInput"
+                                    "_key": "pLayoutAlign",
+                                    "_value": "stretch",
+                                    "_type": "a",
+                                    "_attrDef": "p"
                                 },
                                 {
-                                    "_key": "[hidden]",
-                                    "_value": "page.dependencyForm",
+                                    "_key": "[fxShow]",
+                                    "_value": "true",
                                     "_type": "kv",
-                                    "_attrDef": "c"
+                                    "_attrDef": "p"
                                 }
-                            ]
+                            ],
+                            "0464970c-8bb6-4ab3-6fb6-f6485a597bea": {
+                                "paletteKey": "NG-icon",
+                                "parentEditorKey": "0a9b0f91-5cfa-7b7d-03ff-515721e7ba08",
+                                "commentid": null,
+                                "designerReference": [
+                                    {
+                                        "_key": "style",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "class",
+                                        "_value": [
+                                            "blue-color",
+                                            "pointer"
+                                        ],
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "IconName",
+                                        "_value": "add_circle",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_useAsLabel": true
+                                    },
+                                    {
+                                        "_key": "[inline]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "color",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(click)",
+                                        "_value": "openDependencies()",
+                                        "_type": "kv",
+                                        "_attrDef": "c",
+                                        "_customAttributeFlag": "customInput"
+                                    },
+                                    {
+                                        "_key": "[hidden]",
+                                        "_value": "page.dependencyForm",
+                                        "_type": "kv",
+                                        "_attrDef": "c"
+                                    }
+                                ]
+                            }
                         }
                     }
                 }
