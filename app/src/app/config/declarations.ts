@@ -16,12 +16,16 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-view_detailsComponent
+import { view_detailsComponent } from '../components/Director/view_details.component';
 //CORE_REFERENCE_IMPORT-pop_client_waitinComponent
 import { pop_client_waitinComponent } from '../components/Client/pop_client_waitin.component';
 //CORE_REFERENCE_IMPORT-toolbar_2Component
 import { toolbar_2Component } from '../components/shared_components/toolbar_2.component';
 //CORE_REFERENCE_IMPORT-client_view_claimComponent
 import { client_view_claimComponent } from '../components/Client/client_view_claim.component';
+//CORE_REFERENCE_IMPORT-Notifications
+import { Notifications } from '../sd-services/Notifications';
 //CORE_REFERENCE_IMPORT-edit_profileComponent
 import { edit_profileComponent } from '../components/Client/edit_profile.component';
 //CORE_REFERENCE_IMPORT-password_pop_upComponent
@@ -128,6 +132,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_detailsComponent
+  view_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-pop_client_waitinComponent
   pop_client_waitinComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbar_2Component
@@ -217,6 +223,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-Notifications
+Notifications,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-variables
   variables,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-authorizationService
@@ -254,6 +262,7 @@ export const appRoutes = [
       { path: 'edit_profile', component: edit_profileComponent },
       { path: 'director_home', component: Director_homeComponent },
       { path: 'director_claims', component: director_claimsComponent },
+      { path: 'view_details', component: view_detailsComponent },
       { path: 'client_view_claim', component: client_view_claimComponent },
     ],
   },

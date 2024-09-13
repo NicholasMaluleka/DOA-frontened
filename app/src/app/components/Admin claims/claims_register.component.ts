@@ -18,6 +18,7 @@ import { director_noteComponent } from 'app/components/Director/director_note.co
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
 import { variables } from 'app/sd-services/variables'; //_splitter_
 //append_imports_end
 
@@ -76,7 +77,7 @@ export class claims_registerComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      bh = this.sd_8uy7TQ48zgBugAZc(bh);
       //appendnew_next_start
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Pmcf2QLXpNt1xmib');
@@ -451,6 +452,7 @@ export class claims_registerComponent implements AfterViewInit {
       this.page.fileURL = undefined;
       this.page.updatedClaim = undefined;
       this.page.value = undefined;
+      this.page.notification = undefined;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
@@ -473,11 +475,22 @@ export class claims_registerComponent implements AfterViewInit {
   sd_tRNzeK7FO7O5eZY6(bh) {
     try {
       this.page.newClient = JSON.parse(localStorage.getItem('client'));
-      bh = this.sd_t7WBGNUYn2Qn9klf(bh);
+      bh = this.sd_hGyKu4GCZrIhOO7t(bh);
       //appendnew_next_sd_tRNzeK7FO7O5eZY6
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_tRNzeK7FO7O5eZY6');
+    }
+  }
+
+  sd_hGyKu4GCZrIhOO7t(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_t7WBGNUYn2Qn9klf(bh);
+      //appendnew_next_sd_hGyKu4GCZrIhOO7t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hGyKu4GCZrIhOO7t');
     }
   }
 
@@ -494,6 +507,12 @@ export class claims_registerComponent implements AfterViewInit {
 
       page.policyNo = page.newClient[0].policyNumber;
 
+      page.notification = {
+        status: 'pending',
+        notificationID: `NOT-${new Date().getTime()}`,
+        claimNumber: `CN-${page.policyNo}`,
+        addedBy: page.user.role,
+      };
       bh = this.sd_VS9kuSjxODDIjqLl(bh);
       //appendnew_next_sd_t7WBGNUYn2Qn9klf
       return bh;
@@ -627,7 +646,7 @@ export class claims_registerComponent implements AfterViewInit {
         chunkSize: new FormControl(''),
         length: new FormControl(''),
       });
-      page.bi1662 = new FormGroup({
+      page.bi1663 = new FormGroup({
         _id: new FormControl(''),
         filename: new FormControl(''),
         chunkSize: new FormControl(''),
@@ -659,7 +678,7 @@ export class claims_registerComponent implements AfterViewInit {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
+        bi1663: page.bi1663,
         bi16632: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
@@ -753,7 +772,7 @@ export class claims_registerComponent implements AfterViewInit {
         chunkSize: new FormControl(''),
         length: new FormControl(''),
       });
-      page.bi1662 = new FormGroup({
+      page.bi1663 = new FormGroup({
         _id: new FormControl(''),
         filename: new FormControl(''),
         chunkSize: new FormControl(''),
@@ -785,8 +804,8 @@ export class claims_registerComponent implements AfterViewInit {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
-        bi16632: new FormControl(''),
+        bi1663: page.bi1663,
+        bi1662: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
@@ -829,6 +848,18 @@ export class claims_registerComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_vlg7Jz5xPnAHOlgA');
+    }
+  }
+
+  sd_8uy7TQ48zgBugAZc(bh) {
+    try {
+      const page = this.page;
+      console.log('page.', page.deceased);
+      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      //appendnew_next_sd_8uy7TQ48zgBugAZc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8uy7TQ48zgBugAZc');
     }
   }
 
@@ -922,7 +953,7 @@ export class claims_registerComponent implements AfterViewInit {
         page.bankDetailsFile.length;
       page.policyClaimsForm.value.bankDetails.chunkSize =
         page.bankDetailsFile.chunkSize;
-      bh = this.bi1663FileInForm(bh);
+      bh = this.sd_3QrXrgXm95pU3x0Q(bh);
       //appendnew_next_bankDetailsFileInForm
       return bh;
     } catch (e) {
@@ -930,29 +961,34 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
+  sd_3QrXrgXm95pU3x0Q(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.bi1663FileInForm(bh);
+      //appendnew_next_sd_3QrXrgXm95pU3x0Q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3QrXrgXm95pU3x0Q');
+    }
+  }
+
   bi1663FileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value.bi1662._id = page.bi1663File._id;
-      page.policyClaimsForm.value.bi1662.filename = page.bi1663File.filename;
-      page.policyClaimsForm.value.bi1662.length = page.bi1663File.length;
-      page.policyClaimsForm.value.bi1662.chunkSize = page.bi1663File.chunkSize;
-      bh = this.sd_6AIl6tNP9HfXh7UZ(bh);
+      console.log('PG FILE: ', page.bi1663File);
+
+      page.policyClaimsForm.value.bi1663._id = page.bi1663File._id;
+      page.policyClaimsForm.value.bi1663.filename = page.bi1663File.filename;
+      page.policyClaimsForm.value.bi1663.length = page.bi1663File.length;
+      page.policyClaimsForm.value.bi1663.chunkSize = page.bi1663File.chunkSize;
+
+      bh.notURL = 'add-notification';
+      console.log('NOT URL: ', bh.notURL);
+      bh = this.sd_GDDWmjjIVPTba5A7(bh);
       //appendnew_next_bi1663FileInForm
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_JR3eNMxvH2KitFQv');
-    }
-  }
-
-  sd_6AIl6tNP9HfXh7UZ(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_GDDWmjjIVPTba5A7(bh);
-      //appendnew_next_sd_6AIl6tNP9HfXh7UZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_6AIl6tNP9HfXh7UZ');
     }
   }
 
@@ -967,11 +1003,31 @@ export class claims_registerComponent implements AfterViewInit {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      bh = this.sd_szPF5fSpHvY5QPUd(bh);
       //appendnew_next_sd_GDDWmjjIVPTba5A7
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_GDDWmjjIVPTba5A7');
+    }
+  }
+
+  async sd_szPF5fSpHvY5QPUd(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericPost(
+        bh.notURL,
+        this.page.notification
+      );
+      bh.res = outputVariables.local.result;
+
+      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      this.sd_1yKiwXFoXNIGd3dc(bh);
+      //appendnew_next_sd_szPF5fSpHvY5QPUd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_szPF5fSpHvY5QPUd');
     }
   }
 
@@ -1004,6 +1060,16 @@ export class claims_registerComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EZV9KScHEbVQ3VZL');
+    }
+  }
+
+  sd_1yKiwXFoXNIGd3dc(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.res);
+      //appendnew_next_sd_1yKiwXFoXNIGd3dc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1yKiwXFoXNIGd3dc');
     }
   }
 
@@ -1452,7 +1518,6 @@ export class claims_registerComponent implements AfterViewInit {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'upload';
-
       bh = this.sd_rXIAeUYF30BWCUSh(bh);
       //appendnew_next_sd_VmKFEeemCRTBGk6S
       return bh;
@@ -1520,10 +1585,21 @@ export class claims_registerComponent implements AfterViewInit {
   sd_gL8y6GZoB2NS2hdX(bh) {
     try {
       this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
+      this.sd_UtPy5PvcklyhnFCo(bh);
       //appendnew_next_sd_gL8y6GZoB2NS2hdX
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_gL8y6GZoB2NS2hdX');
+    }
+  }
+
+  sd_UtPy5PvcklyhnFCo(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.bi1663File);
+      //appendnew_next_sd_UtPy5PvcklyhnFCo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UtPy5PvcklyhnFCo');
     }
   }
 
@@ -1542,7 +1618,6 @@ export class claims_registerComponent implements AfterViewInit {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'upload';
-
       bh = this.sd_lZOqKwyx0IZ5HCE1(bh);
       //appendnew_next_sd_GIH7bU9nx5ZqjZdu
       return bh;
@@ -1944,7 +2019,7 @@ export class claims_registerComponent implements AfterViewInit {
         length: new FormControl(page.selectedClaim.idDecesed.length),
       });
 
-      page.bi1662 = new FormGroup({
+      page.bi1663 = new FormGroup({
         _id: new FormControl(page.selectedClaim.bi1662._id),
         filename: new FormControl(page.selectedClaim.bi1662.filename),
         // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
@@ -1979,7 +2054,7 @@ export class claims_registerComponent implements AfterViewInit {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1662: page.bi1662,
+        bi1663: page.bi1663,
         bi16632: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),

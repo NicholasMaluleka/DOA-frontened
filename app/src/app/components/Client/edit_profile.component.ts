@@ -1104,7 +1104,23 @@ export class edit_profileComponent {
       //appendnew_next_sd_iCtDdM4RjHBE7o2O
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iCtDdM4RjHBE7o2O');
+      return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
+    }
+  }
+
+  async sd_tcxBJckGGYZqxWmJ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_tcxBJckGGYZqxWmJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tcxBJckGGYZqxWmJ');
     }
   }
 
