@@ -302,8 +302,8 @@
         "resultMapping": "",
         "functionName": "sd_GrC07KTLi0xBLPf5",
         "category": "Navigation",
-        "x": 765,
-        "y": 320,
+        "x": 965,
+        "y": 160,
         "wires": [
             [
                 "sd_IO4IqWL9nrM5vCKf"
@@ -335,8 +335,8 @@
         "resultMapping": {},
         "functionName": "sd_uK9SFyo7OgJzOK8J",
         "category": "Storage",
-        "x": 645,
-        "y": 260,
+        "x": 845,
+        "y": 160,
         "wires": [
             [
                 "sd_GrC07KTLi0xBLPf5"
@@ -357,8 +357,8 @@
         "data": "this.page.clients",
         "functionName": "sd_IO4IqWL9nrM5vCKf",
         "category": "Dialog",
-        "x": 865,
-        "y": 320,
+        "x": 1065,
+        "y": 160,
         "wires": [
             []
         ],
@@ -404,7 +404,7 @@
                 "sd_kPBY0flPvVW2qs8E"
             ],
             [
-                "sd_uK9SFyo7OgJzOK8J"
+                "sd_M3Mx5SO6Ewwd84IC"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -479,6 +479,317 @@
                 "sd_7reQ1uGtj2XhgmOg"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_M3Mx5SO6Ewwd84IC",
+        "type": "Script",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.total = page.clients[0].trialCount - 6\n\n// if(page.total  > 0) {\n//     console.log(\" liable for claim\")\n// } else {\n//     console.log(\" not liable for claim\")\n// }",
+        "functionName": "sd_M3Mx5SO6Ewwd84IC",
+        "category": "Function",
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "sd_eELT5pMxSfee5Pj1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eELT5pMxSfee5Pj1",
+        "type": "PageSwitch",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "total",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.total",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "literal",
+                "gv": "0"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_eELT5pMxSfee5Pj1",
+        "category": "Function",
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "sd_uK9SFyo7OgJzOK8J"
+            ],
+            [
+                "sd_7yMY6xtRM932937O"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7yMY6xtRM932937O",
+        "type": "PageCallService",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_mZtkuYkkTI8tLdyV",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:36:49.759Z",
+            "label": "variables",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJNBQsNOvW2mw7Dt",
+            "flowName": "setVariable"
+        },
+        "inputVariables": [
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "clients[0]"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "data",
+                "valueType": "bh",
+                "value": "results",
+                "mapVarName": "data",
+                "localVar": "bh.results"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/variables",
+        "startName": "setVariable",
+        "inputParams": [
+            "this.page.clients[0]"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_7yMY6xtRM932937O",
+        "category": "General",
+        "x": 845,
+        "y": 320,
+        "wires": [
+            [
+                "sd_8VXYA6N57Vm8tm0h"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZVCUNk8rfZjdDM9Z",
+        "type": "OpenDialog",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_TR0TQjMMISFiPvpl",
+            "label": "not_liable_popUp"
+        },
+        "relativePath": "app/components/search Policy/not_liable_popUp",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "\"65vh\"",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "\"45vw\"",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_ZVCUNk8rfZjdDM9Z",
+        "category": "Dialog",
+        "x": 1025,
+        "y": 320,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "str",
+                "value": "65vh",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "str",
+                "value": "45vw",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8VXYA6N57Vm8tm0h",
+        "type": "CloseDialog",
+        "z": "sd_DhHQUCCXlUUb7ZvE",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.clients",
+        "functionName": "sd_8VXYA6N57Vm8tm0h",
+        "category": "Dialog",
+        "x": 925,
+        "y": 320,
+        "wires": [
+            [
+                "sd_ZVCUNk8rfZjdDM9Z"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "clients",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "searchPolicyComponent",
