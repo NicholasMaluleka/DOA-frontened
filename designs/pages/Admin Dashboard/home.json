@@ -145,7 +145,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\npage.table = bh.tableDataSource \npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"bh\" ,bh)\n\n",
+        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\n\npage.table = bh.tableDataSource\npage.table.policyActive = page.policyActiveStatus \n\npage.table.forEach ( (item) => {\n    if(item.policyActive === true){\n        item.policyActive = \"Active\"\n    } else {\n    item.policyActive = \"Deactivated\"\n}\n})\n\n\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"page.table \" ,page.table )\n\n",
         "functionName": "sd_sQz2RUgYmK2eNRYZ",
         "category": "Function",
         "x": 765,
