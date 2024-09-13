@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatDialogRef } from '@angular/material/dialog'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -55,6 +56,20 @@ export class pop_client_waitinComponent {
     }
   }
 
+  close(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_neUrSXi3mYEISp3Q(bh);
+      //appendnew_next_close
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fpRqyIjFtSpGj9yq');
+    }
+  }
   //appendnew_flow_pop_client_waitinComponent_start
 
   sd_LeZ1LidYRNpvKkRY(bh) {
@@ -63,6 +78,18 @@ export class pop_client_waitinComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_LeZ1LidYRNpvKkRY');
+    }
+  }
+
+  sd_neUrSXi3mYEISp3Q(bh) {
+    try {
+      const _dialogRef = this.__page_injector__.get(MatDialogRef);
+      _dialogRef.close(this.page.close);
+
+      //appendnew_next_sd_neUrSXi3mYEISp3Q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_neUrSXi3mYEISp3Q');
     }
   }
 

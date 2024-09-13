@@ -52,5 +52,56 @@
         "generateNext": false,
         "serviceName": "pop_client_waitinComponent",
         "generated": true
+    },
+    {
+        "id": "sd_neUrSXi3mYEISp3Q",
+        "type": "CloseDialog",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.close",
+        "functionName": "sd_neUrSXi3mYEISp3Q",
+        "category": "Dialog",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "close",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pop_client_waitinComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fpRqyIjFtSpGj9yq",
+        "type": "PageStart",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "close",
+        "category": "General",
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "sd_neUrSXi3mYEISp3Q"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pop_client_waitinComponent"
     }
 ]

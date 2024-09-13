@@ -1872,7 +1872,7 @@ export class claims_registerComponent implements AfterViewInit {
         length: new FormControl(page.selectedClaim.idDecesed.length),
       });
 
-      page.bi1663 = new FormGroup({
+      page.bi1662 = new FormGroup({
         _id: new FormControl(page.selectedClaim.bi1662._id),
         filename: new FormControl(page.selectedClaim.bi1662.filename),
         // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),
@@ -1908,8 +1908,8 @@ export class claims_registerComponent implements AfterViewInit {
         idClaimer2: new FormControl(''),
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi1663: page.bi1663,
-        bi1662: new FormControl(''),
+        bi1662: page.bi1663,
+        bi16632: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
@@ -2055,7 +2055,7 @@ export class claims_registerComponent implements AfterViewInit {
         idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
         bi1663: page.bi1663,
-        bi1662: new FormControl(''),
+        bi16632: new FormControl(''),
         deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
         bankDetails: page.bankDetails,
