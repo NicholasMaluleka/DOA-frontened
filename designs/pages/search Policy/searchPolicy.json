@@ -432,9 +432,7 @@
             "value": "4000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -491,7 +489,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.total = page.clients[0].trialCount - 6\n\n// if(page.total  > 0) {\n//     console.log(\" liable for claim\")\n// } else {\n//     console.log(\" not liable for claim\")\n// }",
+        "script": "page.total = page.clients[0].trialCount - 6\n\n\n////// DO NOT DELETE THIS!!!!!!!\nconst paymentDate = page.clients[0].paymentDate;\nconst dateObject = new Date(paymentDate); \n// console.log(\"CLient Date ==>\", dateObject.toLocaleDateString())",
         "functionName": "sd_M3Mx5SO6Ewwd84IC",
         "category": "Function",
         "x": 660,

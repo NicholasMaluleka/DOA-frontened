@@ -905,7 +905,7 @@
                         },
                         {
                             "_key": "buttonname",
-                            "_value": "Log a Claim",
+                            "_value": "Go to search",
                             "_type": "a",
                             "_attrDef": "p",
                             "_useAsLabel": true

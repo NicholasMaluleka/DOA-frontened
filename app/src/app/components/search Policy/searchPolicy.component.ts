@@ -236,11 +236,10 @@ export class searchPolicyComponent {
       const page = this.page;
       page.total = page.clients[0].trialCount - 6;
 
-      // if(page.total  > 0) {
-      //     console.log(" liable for claim")
-      // } else {
-      //     console.log(" not liable for claim")
-      // }
+      ////// DO NOT DELETE THIS!!!!!!!
+      const paymentDate = page.clients[0].paymentDate;
+      const dateObject = new Date(paymentDate);
+      // console.log("CLient Date ==>", dateObject.toLocaleDateString())
       bh = this.sd_eELT5pMxSfee5Pj1(bh);
       //appendnew_next_sd_M3Mx5SO6Ewwd84IC
       return bh;
