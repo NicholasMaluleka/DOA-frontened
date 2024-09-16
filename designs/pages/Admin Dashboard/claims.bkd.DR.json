@@ -1622,7 +1622,7 @@
                                 },
                                 {
                                     "_key": "[dataSource]",
-                                    "_value": "page?.result",
+                                    "_value": "page.result",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "value": "page?.tableData"
@@ -1656,7 +1656,7 @@
                                 },
                                 {
                                     "_key": "*ngIf",
-                                    "_value": "page?.result.length > 0",
+                                    "_value": "page.result?.length > 0",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }

@@ -317,11 +317,21 @@ export class registerComponent {
 
   sd_21M8r6uomCRnf45y(bh) {
     try {
-      bh = this.sd_7K2noVNldq6MAAbT(bh);
+      bh = this.sd_r3eEuybGflYSevtu(bh);
       //appendnew_next_sd_21M8r6uomCRnf45y
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_21M8r6uomCRnf45y');
+    }
+  }
+
+  sd_r3eEuybGflYSevtu(bh) {
+    try {
+      bh = this.sd_7K2noVNldq6MAAbT(bh);
+      //appendnew_next_sd_r3eEuybGflYSevtu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r3eEuybGflYSevtu');
     }
   }
 
@@ -341,6 +351,7 @@ export class registerComponent {
       this.page.gender5 = undefined;
       this.page.gender6 = undefined;
       this.page.feedback = undefined;
+      this.page.date = undefined;
       bh = this.sd_qjesZ9T9zyxXQtfe(bh);
       //appendnew_next_sd_7K2noVNldq6MAAbT
       return bh;
@@ -447,8 +458,10 @@ export class registerComponent {
         ]),
         address: new FormControl('', [Validators.required]),
         packageType: new FormControl('', [Validators.required]),
+        paymentDate: new FormControl('', [Validators.required]),
         file2: new FormControl('', [Validators.required]),
         file: page.fileForm,
+        trialCount: new FormControl(0),
       });
 
       page.package = [
@@ -461,6 +474,10 @@ export class registerComponent {
         { value: 'Male', viewValue: 'Male' },
         { value: 'Female', viewValue: 'Female' },
       ];
+
+      page.date = new Date();
+
+      page.customHeader = 'CustomHeaderComponent';
       bh = this.sd_hsNZ5en4D8hP7I5H(bh);
       //appendnew_next_sd_qjesZ9T9zyxXQtfe
       return bh;

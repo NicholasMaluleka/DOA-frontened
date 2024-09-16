@@ -1,0 +1,14 @@
+<div fxLayout="row wrap" class="relative" fxLayoutAlign="center center" [fxShow]="true" fxFill="fill">
+  <div fxLayout="column wrap" style="height:10%;" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true">
+    <div style="font-size:1.5em">
+      <i>Your Account Has Been Deactivated</i>
+    </div>
+  </div>
+  <div fxLayout="column wrap" style="height:50%" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/images/deactivated.png" class="fullWidth FullHeight"></div>
+  <div fxLayout="column wrap" style="bottom:0; height:5%; width:60%; left:0;" class="absolute" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div>
+      <small><i>Please contact support, <span class="click-me" routerLink="/contact-us" (click)="close()">CLICK HERE</span></i></small>
+    </div>
+  </div>
+  <div fxLayout="column wrap" style="height:10%;" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="height:90%; width:20%; background:#f7dd71;border-bottom:2px solid #124e52;color:#124e52;border-right:2px solid #124e52" class="close" (click)="close()">Close</button></div><mat-icon style="height:5%;width:5%; right:10px;top:10px" class="absolute" (click)="close()">cancel</mat-icon>
+</div>
