@@ -8,8 +8,8 @@
       <div fxLayout="column wrap" style="padding-left:19px; padding-right:19px" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
-              <b *ngIf="page.policyholder == true">Policy Holder Details</b>
-              <b *ngIf="page.beneficiary == true">Beneficiary Details</b></label></div>
+              <b *ngIf="page.policyHolder == true">Policy Holder Details</b>
+              <b *ngIf="page.beneficiary ==true &amp;&amp; !page.selectedClaim">Beneficiary Details</b></label></div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.beneficiary ==true &amp;&amp; !page.selectedClaim "><mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label>Select Beneficiary Id Number</mat-label>
               <mat-select formControlName="beIds" placeholder="Select" [required]="false" (selectionChange)="populate2()">
@@ -106,42 +106,121 @@
             <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
                 <b>Required Documents</b></label></div>
             <div *ngIf="!page.selectedClaim" style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
+
               <div (click)="upload1()">
                 <input type="file" id="upload1" hidden required formControlName="idClaimer2">
                 <button class="input-button"><label for="upload1">
                     Upload ID Claimer
                   </label></button>
+                <p *ngIf="page.showId">{{page.id}} </p>
+                <a *ngIf="page.showId" href="{{page.fileURL}}{{page.idclaimerfilename}}" target="_blank">view</a>
               </div>
+
               <div (click)="upload2()">
 
-                <input type="file" id="upload2" (change)="upload2()" hidden required formControlName="idDeceased2">
+                <input type="file" id="upload2" hidden required formControlName="idDeceased2">
                 <button class="input-button"><label for="upload2">
                     Upload ID Deceased
-
                   </label></button>
+                <p *ngIf="page.showIddes">{{page.iddes}}</p>
+                <a *ngIf="page.showIddes" href="{{page.fileURL}}{{page.idDeceasedfilename}}" target="_blank">view</a>
               </div>
               <div (click)="upload3()">
-                <input type="file" id="upload3" (change)="upload3()" hidden required formControlName="deathCetificatify2">
+                <input type="file" id="upload3" (change)="upload3($event)" hidden required formControlName="deathCetificatify2">
                 <button class="input-button"><label for="upload3">
-                    Upload Death Cetificatify
+                    Upload Death Certificate
 
                   </label></button>
-
+                <p *ngIf=" page.showdeathCetificatify ">{{page.deathCetificatify}}</p>
+                <a *ngIf=" page.showdeathCetificatify " href="{{page.fileURL}}{{page.deathCetificatifyfilename}}" target="_blank">view</a>
               </div>
               <div (click)="upload4()">
-                <input type="file" id="upload4" (change)="upload4()" hidden required formControlName="bi16632">
+                <input type="file" id="upload4" hidden required formControlName="bi16632">
                 <button class="input-button"><label for="upload4">
                     Upload bi1663
 
                   </label></button>
+                <p *ngIf=" page.showbi1663 ">{{page.bi1663}}</p>
+                <a *ngIf=" page.showbi1663 " href="{{page.fileURL}}{{page.bi1663filename}}" target="_blank">view</a>
               </div>
               <div (click)="upload5()">
-                <input type="file" id="upload5" (change)="upload5()" hidden required formControlName="bankDetails2">
+                <input type="file" id="upload5" (change)="upload5($event)" hidden required formControlName="bankDetails2">
                 <button class="input-button"><label for="upload5">
                     Upload Bank Details
 
                   </label></button>
+                <p *ngIf=" page.showbankDetails ">{{page.bankDetails}}</p>
+                <a *ngIf="page.showbankDetails" href="{{page.fileURL}}{{page.bankDetailsfilename}}" target="_blank">view</a>
               </div>
+
+
+
+
+
+
+
+              <!-- <div (click)="upload1()">
+	<input type="file" id="upload1"    hidden required formControlName = "idClaimer2">
+	<button class="input-button"><label for="upload1">
+     Upload ID Claimer
+ </label></button>
+</div>
+<div (click)="upload2()">
+
+	<input type="file" id="upload2" (change)="upload2()"  hidden required formControlName = "idDeceased2">
+	<button class="input-button"><label for="upload2">
+     Upload ID Deceased
+
+ </label></button>
+</div>
+<div (click)="upload3()">
+	<input type="file" id="upload3" (change)="upload3()" hidden   required formControlName = "deathCetificatify2">
+	<button class="input-button"><label for="upload3">
+     Upload Death Cetificatify
+
+ </label></button>
+
+</div>
+<div (click)="upload4()">
+	<input type="file" id="upload4" (change)="upload4()"  hidden required formControlName = "bi16632">
+	<button class="input-button"><label for="upload4">
+     Upload bi1663
+
+ </label></button>
+</div>
+<div (click)="upload5()">
+	<input type="file" id="upload5" (change)="upload5()"   hidden required formControlName = "bankDetails2">
+	<button class="input-button"><label for="upload5">
+     Upload Bank Details
+
+ </label></button>
+</div> -->
+            </div>
+            <div *ngIf="page.selectedClaim" style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
+
+              <div>
+
+                <a href="{{page.fileURL}}{{page[&apos;IDfile&apos;]}}" target="_blank"><b> Claimers ID:</b> {{page.selectedClaim.ID}}</a>
+              </div>
+
+              <div>
+
+                <a href="{{page.fileURL}}{{page[&apos;IDDeceasedfile&apos;]}}" target="_blank"><b> Decesed ID:</b> {{page.selectedClaim.IDDeceased}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileURL}}{{page[&apos;DeathCertificatefile&apos;]}}" target="_blank"> <b>Death Certificate:</b> {{page.selectedClaim.DeathCertificate}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileURL}}{{page.bi1663file}}" target="_blank"> <b>BI1663 Form:</b> {{page.selectedClaim.bi1663}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileURL}}{{page[&apos;bankDetailsfile&apos;]}}" target="_blank"><b> Bank Details:</b> {{page.selectedClaim.bankDetails}}</a>
+              </div>
+
+
             </div>
             <div fxLayout="column wrap" style="height:30px; width:100%; margin-top:10px ;" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="row wrap" class="fullWidth FullHeight" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
@@ -151,10 +230,15 @@
                 </div>
               </div>
             </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" color="accent" (click)="page.selectedClaim ? updateClaim(page.policyClaimsForm.value) : start()">{{page.selectedClaim ? &quot;Update Claim&quot; : &quot;Submit a Claim&quot; }}</button></div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" *ngIf="!page.selectedClaim" color="accent" (click)="start()" [disabled]="page.policyClaimsForm.invalid"> Submit a Claim</button><button mat-raised-button style="margin-top: 25px;     margin-bottom: 25px;    width: 124px;" *ngIf="page.selectedClaim" color="accent" (click)="updateClaim(page.policyClaimsForm.value)" [disabled]="page.disabled">Update Claim</button></div>
           </div>
         </div>
       </div>
     </form>
+    <div fxLayout="column wrap" style="background:#00000045" class="fullWidth FullHeight absolute" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true" *ngIf="page.loading"><bh-loader></bh-loader>
+      <div style="color:white">
+        <h1>{{page.mes}}</h1>
+      </div>
+    </div>
   </div>
 </div>
