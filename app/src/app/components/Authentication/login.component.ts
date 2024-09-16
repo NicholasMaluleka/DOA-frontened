@@ -400,12 +400,10 @@ export class loginComponent {
   async sd_iGycO4jnqKpix0R8(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/home');
+        this.sdService.getPathAndQParamsObj('/dashboard/director_home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_SGMcpcrY4y3UKTKj(bh);
       //appendnew_next_sd_iGycO4jnqKpix0R8
       return bh;

@@ -1517,13 +1517,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1535,7 +1535,7 @@
                                 },
                                 {
                                     "_key": "*ngIf",
-                                    "_value": "page?.tableData.length < 1",
+                                    "_value": "page?.result.length < 1",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }
@@ -1554,7 +1554,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1592,7 +1592,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -1638,7 +1638,7 @@
                                 },
                                 {
                                     "_key": "[dataSource]",
-                                    "_value": "page?.tableData",
+                                    "_value": "page.result",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "value": "page?.tableData"
@@ -1672,7 +1672,7 @@
                                 },
                                 {
                                     "_key": "*ngIf",
-                                    "_value": "page?.tableData.length > 0",
+                                    "_value": "page.result?.length > 0",
                                     "_type": "kv",
                                     "_attrDef": "c"
                                 }
@@ -1984,7 +1984,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}} ",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -2763,13 +2763,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -2800,7 +2800,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -2838,7 +2838,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -3230,7 +3230,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -4009,13 +4009,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -4046,7 +4046,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4084,7 +4084,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -4476,7 +4476,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -5255,13 +5255,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -5292,7 +5292,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -5330,7 +5330,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -5722,7 +5722,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -6501,13 +6501,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -6538,7 +6538,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "height: 400px; width: 400px",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -6576,7 +6576,7 @@
                                     },
                                     {
                                         "_key": "width",
-                                        "_value": "90%",
+                                        "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -6968,7 +6968,7 @@
                                     },
                                     {
                                         "_key": "Mapping",
-                                        "_value": "{{table.status}}",
+                                        "_value": "{{table.status | titlecase}}",
                                         "_type": "ma",
                                         "_attrDef": "p",
                                         "_useAsLabel": true

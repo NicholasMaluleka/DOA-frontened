@@ -2033,6 +2033,267 @@
                                                     "_visibility": true
                                                 }
                                             ]
+                                        },
+                                        "93f52972-34ed-3e62-0b35-5c7997091cfe": {
+                                            "paletteKey": "NG-DatePicker",
+                                            "parentEditorKey": "351e423b-9fa2-b02e-3f75-e873eb0ea643",
+                                            "isAdvancedComponent": true,
+                                            "commentid": null,
+                                            "designerReference": [
+                                                {
+                                                    "_key": "style",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "class",
+                                                    "_value": "",
+                                                    "_type": "dav",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "placeholder",
+                                                    "_value": "Payment date",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p",
+                                                    "_useAsLabel": true
+                                                },
+                                                {
+                                                    "_key": "Label",
+                                                    "_value": "Payment date",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[appearance]",
+                                                    "_value": "'legacy'",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "color",
+                                                    "_value": "primary",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[dateClass]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "panelClass",
+                                                    "_value": "",
+                                                    "_type": "dav",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "value",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[min]",
+                                                    "_value": "page.date",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[max]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[startAt]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[calendarHeaderComponent]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "startView",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "touchUi",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "id",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(dateChange)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p",
+                                                    "_customAttributeFlag": "flowpicker"
+                                                },
+                                                {
+                                                    "_key": "(dateInput)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[opened]",
+                                                    "_value": "false",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabledDatepicker]",
+                                                    "_value": "false",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabledDatepickerIcons]",
+                                                    "_value": "false",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[disabledDatepickerInput]",
+                                                    "_value": "true",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(opened)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(closed)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[matDatepickerFilter]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "formControlName",
+                                                    "_value": "paymentDate",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[formControl]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[(ngModel)]",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "name",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "picker",
+                                                    "_value": "picker",
+                                                    "_type": "ma",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "ngModel",
+                                                    "_value": "",
+                                                    "_type": "vk",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[required]",
+                                                    "_value": "true",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(yearSelected)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(monthSelected)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "customIcon",
+                                                    "_value": "",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "[iconPosition]",
+                                                    "_value": "matSuffix",
+                                                    "_type": "a",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "(click)",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "readonly",
+                                                    "_value": "",
+                                                    "_type": "kv",
+                                                    "_attrDef": "p"
+                                                },
+                                                {
+                                                    "_key": "matError",
+                                                    "_value": [
+                                                        {
+                                                            "input1": "page.clientForm.controls.paymentDate?.errors?.required",
+                                                            "input2": "Payment date is <b>required</b>",
+                                                            "toggle": {
+                                                                "toggleData": [],
+                                                                "selected": "start"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                },
+                                                {
+                                                    "_key": "inputHint",
+                                                    "_value": [],
+                                                    "_type": "a",
+                                                    "_attrDef": "p",
+                                                    "_visibility": true
+                                                }
+                                            ]
                                         }
                                     },
                                     "976f3a86-3974-8660-a552-91e966da6d50": {
@@ -3024,6 +3285,12 @@
                                                 "_value": "true",
                                                 "_type": "kv",
                                                 "_attrDef": "p"
+                                            },
+                                            {
+                                                "_key": "*ngIf",
+                                                "_value": "",
+                                                "_type": "kv",
+                                                "_attrDef": "c"
                                             }
                                         ],
                                         "1e2244cd-cd48-ea38-527d-09aeade0f247": {
@@ -3350,7 +3617,8 @@
                                                 {
                                                     "_key": "class",
                                                     "_value": [
-                                                        "kg-grey"
+                                                        "COLOR-WHITE",
+                                                        "yellow-bg"
                                                     ],
                                                     "_type": "dav",
                                                     "_attrDef": "p"
@@ -3370,9 +3638,16 @@
                                                 },
                                                 {
                                                     "_key": "(click)",
-                                                    "_value": "",
+                                                    "_value": "showFeedback()",
                                                     "_type": "kv",
-                                                    "_attrDef": "p"
+                                                    "_attrDef": "p",
+                                                    "objValue": {
+                                                        "nodeID": "sd_Cn24mn0H6lpBFLYp",
+                                                        "functionName": "showFeedback",
+                                                        "activeTree": "pages",
+                                                        "z": "sd_uqB8Ta19yPAqB9Xq",
+                                                        "input": []
+                                                    }
                                                 },
                                                 {
                                                     "_key": "[disabled]",
@@ -3398,12 +3673,6 @@
                                                     "_value": "",
                                                     "_type": "kv",
                                                     "_attrDef": "p"
-                                                },
-                                                {
-                                                    "_key": "matStepperNext",
-                                                    "_value": "matStepperNext",
-                                                    "_type": "a",
-                                                    "_attrDef": "c"
                                                 }
                                             ]
                                         }
@@ -8874,7 +9143,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-yellow"
+                                                "dhx_cal_event"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"
@@ -8944,7 +9213,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-grey"
+                                                "yellow-bg"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"
@@ -14257,7 +14526,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-yellow"
+                                                "dhx_cal_event"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"
@@ -14327,7 +14596,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-grey"
+                                                "yellow-bg"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"
@@ -23034,7 +23303,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-yellow"
+                                                "dhx_cal_event"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"
@@ -23104,7 +23373,7 @@
                                         {
                                             "_key": "class",
                                             "_value": [
-                                                "kg-grey"
+                                                "yellow-bg"
                                             ],
                                             "_type": "dav",
                                             "_attrDef": "p"

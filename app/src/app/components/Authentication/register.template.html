@@ -34,7 +34,15 @@
                       </ng-template>
                     </mat-select>
                     <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
-                  </mat-form-field></div>
+                  </mat-form-field>
+                  <mat-form-field [appearance]="&apos;legacy&apos;">
+                    <mat-label>Payment date</mat-label>
+                    <input matInput placeholder="Payment date" [matDatepicker]="picker" formControlName="paymentDate" [min]="page.date" [required]="true" [disabled]="true">
+                    <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+                    <mat-datepicker #picker color="primary" [disabled]="false" [opened]="false"></mat-datepicker>
+                    <mat-error align="start" *ngIf="page.clientForm.controls.paymentDate?.errors?.required">Payment date is <b>required</b></mat-error>
+                  </mat-form-field>
+                </div>
                 <h3>
                   Contact Details</h3>
                 <div fxLayout="row " class="kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -59,7 +67,7 @@
                     <label for="upload" class="kg-box kg-border-box kg-padding-10px">Upload ID</label>
                   </div>
                 </div>
-                <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="kg-grey" matStepperNext [disabled]="page.clientForm.invalid">Next</button></div>
+                <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="COLOR-WHITE yellow-bg" (click)="showFeedback()" [disabled]="page.clientForm.invalid">Next</button></div>
               </form>
             </mat-card-content>
           </mat-card></mat-step><mat-step label="Beneficary Details" [stepControl]="page.beneficaryForm" editable="true" Disabled="page.clientForm.invalid">
@@ -165,7 +173,7 @@
                   </form>
                 </mat-expansion-panel></mat-accordion></div>
             <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true" *ngIf="page.hideIcon"><mat-icon class="kg-pointer" (click)="showBeneficaryForm2()">add_circle</mat-icon></div>
-            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="kg-yellow" matStepperPrevious>Back</button><button mat-raised-button class="kg-grey" matStepperNext [disabled]="page.beneficaryForm.invalid">Next</button></div>
+            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="dhx_cal_event" matStepperPrevious>Back</button><button mat-raised-button class="yellow-bg" matStepperNext [disabled]="page.beneficaryForm.invalid">Next</button></div>
           </div>
         </mat-step><mat-step label="Dependency Details" optional="true" editable="true">
           <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -266,7 +274,7 @@
                   </form>
                 </mat-expansion-panel></mat-accordion></div>
             <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true" *ngIf="page.hideIcon2"><mat-icon class="kg-pointer" (click)="showDependencyForm2()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
-            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="kg-yellow" matStepperPrevious>Back</button><button mat-raised-button class="kg-grey" matStepperNext>Next</button></div>
+            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="end stretch" [fxShow]="true"><button mat-raised-button class="dhx_cal_event" matStepperPrevious>Back</button><button mat-raised-button class="yellow-bg" matStepperNext>Next</button></div>
           </div>
         </mat-step><mat-step label="Summary">
           <div fxLayout="column wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -484,7 +492,7 @@
                     </div>
                   </div>
                 </mat-expansion-panel></mat-accordion></div>
-            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center stretch" [fxShow]="true"><button mat-raised-button class="kg-yellow" matStepperPrevious>Back</button><button mat-raised-button class="kg-grey" (click)="confirm()">Confirm</button></div>
+            <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center stretch" [fxShow]="true"><button mat-raised-button class="dhx_cal_event" matStepperPrevious>Back</button><button mat-raised-button class="yellow-bg" (click)="confirm()">Confirm</button></div>
           </div>
         </mat-step></div>
     </mat-horizontal-stepper></div>

@@ -1,0 +1,117 @@
+<div fxLayout="column " style="color:#124e52" class="relative" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column " class="scroller" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="fullWidth" fxLayoutAlign="center center" [fxShow]="true">
+      <h2>
+        Claims Form -{{page.policy}}</h2>
+    </div>
+    <form [formGroup]="page.policyClaimsForm">
+      <div fxLayout="column wrap" style="padding-left:19px; padding-right:19px" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
+              <b>Policy Holder Details</b>
+            </label></div>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Name" [required]="false" formControlName="firstName" readonly="True">
+
+            </mat-form-field>
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Lastname" [required]="false" formControlName="lastName" readonly="true">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Idnum" [required]="false" formControlName="idNum" readonly="true">
+
+            </mat-form-field>
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Gender" [required]="false" formControlName="gender" readonly="true">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Pakage Type" [required]="false" formControlName="packageType" readonly="true">
+
+            </mat-form-field>
+            <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Payout Amount" [required]="false" formControlName="payoutAmount" readonly="true">
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
+              <b>Deceased Details</b></label></div>
+          <form [formGroup]="page.deceased">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Name" value="{{page.name}}" [required]="false" formControlName="firstName" readonly="true">
+
+              </mat-form-field>
+              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Lastname" value="{{page.surname}}" [required]="false" formControlName="lastName" readonly="true">
+
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Idnum" value="{{page.idnum}}" [required]="false" formControlName="idNum" readonly="true">
+
+              </mat-form-field>
+              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                <input matInput placeholder="Gender" value="{{page.gender}}" [required]="false" formControlName="gender" readonly="true">
+
+              </mat-form-field>
+            </div>
+          </form>
+          <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
+                <b>Required Documents</b></label></div>
+            <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
+
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;IDfile&apos;]}}" target="_blank"> claimers ID:{{page.claim.ID}}</a>
+              </div>
+
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;IDDeceasedfile&apos;]}}" target="_blank"> Decesed ID:{{page.claim.IDDeceased}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;DeathCertificatefile&apos;]}}" target="_blank">Death Certificate:{{page.claim.DeathCertificate}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page.bi1663file}}" target="_blank"> BI1663 Form:{{page.claim.bi1663}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;bankDetailsfile&apos;]}}" target="_blank"> Bank Details:{{page.claim.bankDetails}}</a>
+              </div>
+
+
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
+                  <b>Claim Status</b></label></div>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between space-between" [fxShow]="true">
+                <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [required]="false" formControlName="status" readonly="true">
+                  <mat-label>Claim Status</mat-label>
+                </mat-form-field>
+                <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput [required]="false" formControlName="reason" readonly="true">
+                  <mat-label>Reason</mat-label>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

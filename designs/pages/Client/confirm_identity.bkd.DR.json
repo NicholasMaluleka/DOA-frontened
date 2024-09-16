@@ -461,7 +461,6 @@
                     "paletteKey": "NG-Input",
                     "parentEditorKey": "ec6460a6-6e17-8ad8-6702-a5c7de516cf4",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -521,7 +520,7 @@
                         },
                         {
                             "_key": "type",
-                            "_value": "text",
+                            "_value": "password",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

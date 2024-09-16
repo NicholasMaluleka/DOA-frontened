@@ -67,10 +67,41 @@
                 "_attrDef": "c"
             }
         ],
+        "cc4a0b68-7fdc-d790-a110-3ad5ef8b4460": {
+            "paletteKey": "NEUTRINOS_VIEW_toolbar_2",
+            "parentEditorKey": "2fed34fb-238f-3052-dc0e-3fab1fb5e2e3",
+            "isCommented": "false",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "toolbar_2",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "height-12",
+                        "full-width"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                }
+            ]
+        },
         "560c9ab8-92f1-6436-b56b-87808af1374f": {
             "paletteKey": "NEUTRINOS_VIEW_toolbar",
             "parentEditorKey": "2fed34fb-238f-3052-dc0e-3fab1fb5e2e3",
-            "commentid": null,
+            "isCommented": "true",
+            "commentid": "1726213750725",
             "designerReference": [
                 {
                     "_key": "componentLabel",
@@ -2412,7 +2443,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<h2 class=\"no-margin lightgrey-bg blue-color\">{{page.navItem}}</h2>",
+                                            "_value": "<!-- <h2 class=\"no-margin lightgrey-bg blue-color\">{{page.navItem}}</h2> -->",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }

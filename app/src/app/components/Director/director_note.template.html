@@ -7,10 +7,12 @@
   </div>
   <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="column wrap" class="kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-      <form [formGroup]="page.claimReasonForm"><mat-form-field class="kg-full-width" [floatLabel]="&apos;auto&apos;">
-          <mat-label></mat-label>
-          <textarea matInput formControlName="reason" placeholder="Text Area" [required]="false"></textarea>
-        </mat-form-field></form>
+      <form [formGroup]="page.claimReasonForm">
+        <mat-form-field class="kg-full-width" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [required]="false" formControlName="reason">
+
+        </mat-form-field>
+      </form>
     </div>
   </div>
   <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">

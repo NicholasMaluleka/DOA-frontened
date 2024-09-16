@@ -4,7 +4,7 @@
 //append_imports_start
 
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper'; //_splitter_
-import { Component, Injector } from '@angular/core'; //_splitter_
+import { Component, Injector, ViewChild } from '@angular/core'; //_splitter_
 import {
   FormBuilder,
   FormControl,
@@ -16,6 +16,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
 import { randomNumber } from 'app/sd-services/randomNumber'; //_splitter_
 //append_imports_end
 
@@ -31,6 +32,8 @@ import { randomNumber } from 'app/sd-services/randomNumber'; //_splitter_
   ],
 })
 export class registerComponent {
+  @ViewChild('stepper')
+  public stepper: any = null;
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -78,7 +81,7 @@ export class registerComponent {
         .constructFlowObject(this);
       bh.input = { event };
       bh.local = {};
-      bh = this.sd_l6SiwAtJD0vilMVM(bh);
+      bh = this.sd_r8ZA4xPfv6W0TiV1(bh);
       //appendnew_next_upload
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4jpHOcBeJ9oMy5gC');
@@ -279,15 +282,56 @@ export class registerComponent {
       return this.errorHandler(bh, e, 'sd_EJPnHK5FvoFnOVor');
     }
   }
+
+  checkClientIfExists(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = { found: undefined };
+      bh = this.sd_XCInRNlQncgb7N8d(bh);
+      //appendnew_next_checkClientIfExists
+      return bh.local.found;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rIqZaBUYQzyNklXN');
+    }
+  }
+
+  showFeedback(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_WF7SEDIdIMfAqLeD(bh);
+      //appendnew_next_showFeedback
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Cn24mn0H6lpBFLYp');
+    }
+  }
   //appendnew_flow_registerComponent_start
 
   sd_21M8r6uomCRnf45y(bh) {
     try {
-      bh = this.sd_7K2noVNldq6MAAbT(bh);
+      bh = this.sd_r3eEuybGflYSevtu(bh);
       //appendnew_next_sd_21M8r6uomCRnf45y
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_21M8r6uomCRnf45y');
+    }
+  }
+
+  sd_r3eEuybGflYSevtu(bh) {
+    try {
+      bh = this.sd_7K2noVNldq6MAAbT(bh);
+      //appendnew_next_sd_r3eEuybGflYSevtu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r3eEuybGflYSevtu');
     }
   }
 
@@ -306,6 +350,8 @@ export class registerComponent {
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
       this.page.gender6 = undefined;
+      this.page.feedback = undefined;
+      this.page.date = undefined;
       bh = this.sd_qjesZ9T9zyxXQtfe(bh);
       //appendnew_next_sd_7K2noVNldq6MAAbT
       return bh;
@@ -317,6 +363,8 @@ export class registerComponent {
   sd_qjesZ9T9zyxXQtfe(bh) {
     try {
       const page = this.page;
+      bh.path = 'get-users';
+
       page.fileForm = new FormGroup({
         _id: new FormControl(''),
         filename: new FormControl(''),
@@ -410,8 +458,10 @@ export class registerComponent {
         ]),
         address: new FormControl('', [Validators.required]),
         packageType: new FormControl('', [Validators.required]),
+        paymentDate: new FormControl('', [Validators.required]),
         file2: new FormControl('', [Validators.required]),
         file: page.fileForm,
+        trialCount: new FormControl(0),
       });
 
       page.package = [
@@ -424,6 +474,11 @@ export class registerComponent {
         { value: 'Male', viewValue: 'Male' },
         { value: 'Female', viewValue: 'Female' },
       ];
+
+      page.date = new Date();
+
+      page.customHeader = 'CustomHeaderComponent';
+      bh = this.sd_hsNZ5en4D8hP7I5H(bh);
       //appendnew_next_sd_qjesZ9T9zyxXQtfe
       return bh;
     } catch (e) {
@@ -431,7 +486,67 @@ export class registerComponent {
     }
   }
 
-  sd_l6SiwAtJD0vilMVM(bh) {
+  async sd_hsNZ5en4D8hP7I5H(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericGet(bh.path);
+      this.page.clients = outputVariables.local.data;
+
+      this.sd_2FFxDGhNOLQvZzfY(bh);
+      //appendnew_next_sd_hsNZ5en4D8hP7I5H
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hsNZ5en4D8hP7I5H');
+    }
+  }
+
+  sd_2FFxDGhNOLQvZzfY(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.clients);
+      //appendnew_next_sd_2FFxDGhNOLQvZzfY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2FFxDGhNOLQvZzfY');
+    }
+  }
+
+  sd_r8ZA4xPfv6W0TiV1(bh) {
+    try {
+      let outputVariables = this.checkClientIfExists();
+      this.page.found = outputVariables;
+
+      bh = this.sd_SRC5bY330I8jkZdR(bh);
+      //appendnew_next_sd_r8ZA4xPfv6W0TiV1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r8ZA4xPfv6W0TiV1');
+    }
+  }
+
+  async sd_SRC5bY330I8jkZdR(bh) {
+    try {
+      if (
+        this.sdService.operators['empty'](
+          this.page.found,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_C9LXe6h3lxPGUYhL(bh);
+      } else {
+        bh = await this.sd_6eYy90OWTPwkRgDi(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SRC5bY330I8jkZdR');
+    }
+  }
+
+  sd_C9LXe6h3lxPGUYhL(bh) {
     try {
       const page = this.page;
       bh.upload = document.getElementById('upload') as HTMLInputElement;
@@ -447,10 +562,25 @@ export class registerComponent {
         });
       }
 
-      //appendnew_next_sd_l6SiwAtJD0vilMVM
+      //appendnew_next_sd_C9LXe6h3lxPGUYhL
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_l6SiwAtJD0vilMVM');
+      return this.errorHandler(bh, e, 'sd_C9LXe6h3lxPGUYhL');
+    }
+  }
+
+  sd_6eYy90OWTPwkRgDi(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open(this.page.feedback, 'OK', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_6eYy90OWTPwkRgDi
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6eYy90OWTPwkRgDi');
     }
   }
 
@@ -559,15 +689,18 @@ export class registerComponent {
       bh.body.role = 'client';
       bh.body.policyNumber = bh.random;
       bh.body.password = bh.random2.toString();
-      bh.body.beneficaries = [
-        page.beneficaryForm.value,
-        page.beneficaryForm2.value,
-      ];
-      bh.body.dependencies = [
-        page.dependencyForm.value,
-        page.dependencyForm2.value,
-        page.dependencyForm3.value,
-      ];
+      bh.body.beneficaries = !page.beneficaryForm2.value.firstName
+        ? [page.beneficaryForm.value]
+        : [page.beneficaryForm.value, page.beneficaryForm2.value];
+      bh.body.dependencies = !page.dependencyForm2.value.firstName
+        ? [page.dependencyForm.value]
+        : !page.dependencyForm3.value.firstName
+        ? [page.dependencyForm.value, page.dependencyForm2.value]
+        : [
+            page.dependencyForm.value,
+            page.dependencyForm2.value,
+            page.dependencyForm3.value,
+          ];
 
       bh = this.sd_feAbYysgRL7fgGGm(bh);
       //appendnew_next_sd_lL2rQ9BIoBqeZaCn
@@ -1286,6 +1419,115 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ujwsbDV8Krrs0ert');
+    }
+  }
+
+  sd_XCInRNlQncgb7N8d(bh) {
+    try {
+      const page = this.page;
+      let clientForm = page.clientForm.value;
+
+      console.log('CLIENT FORM: ', clientForm);
+
+      bh.local.found = page.clients.filter((client) => {
+        if (
+          client.email == clientForm.email &&
+          client.idNumber == clientForm.idNumber
+        ) {
+          page.feedback =
+            'CLIENT WITH THE SUPPLIED ID NUMBER AND EMAIL EXISTS. ';
+          return client;
+        }
+        if (client.idNumber == clientForm.idNumber) {
+          page.feedback = 'CLIENT WITH THE SUPPLIED ID NUMBER EXISTS. ';
+          return client;
+        }
+        if (client.email == clientForm.email) {
+          page.feedback = 'CLIENT WITH THE SUPPLIED EMAIL EXISTS. ';
+          return client;
+        }
+      });
+
+      console.log('found: ', bh.local.found);
+      //appendnew_next_sd_XCInRNlQncgb7N8d
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XCInRNlQncgb7N8d');
+    }
+  }
+
+  sd_WF7SEDIdIMfAqLeD(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        stepper: this.stepper,
+      });
+      bh = this.sd_1K5TUH2VquggXj9W(bh);
+      //appendnew_next_sd_WF7SEDIdIMfAqLeD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WF7SEDIdIMfAqLeD');
+    }
+  }
+
+  sd_1K5TUH2VquggXj9W(bh) {
+    try {
+      let outputVariables = this.checkClientIfExists();
+      bh.found = outputVariables;
+
+      bh = this.sd_PosCwUYRxSSmEloq(bh);
+      //appendnew_next_sd_1K5TUH2VquggXj9W
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1K5TUH2VquggXj9W');
+    }
+  }
+
+  async sd_PosCwUYRxSSmEloq(bh) {
+    try {
+      if (
+        this.sdService.operators['empty'](
+          bh.found,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_RNocM9C3WAPuxkb7(bh);
+      } else {
+        bh = await this.sd_EDBlE08Rsskj3R9e(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PosCwUYRxSSmEloq');
+    }
+  }
+
+  sd_RNocM9C3WAPuxkb7(bh) {
+    try {
+      const page = this.page;
+      console.log('STEPPER: ', bh.pageViews.stepper);
+
+      bh.pageViews.stepper.next();
+      //appendnew_next_sd_RNocM9C3WAPuxkb7
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RNocM9C3WAPuxkb7');
+    }
+  }
+
+  sd_EDBlE08Rsskj3R9e(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open(this.page.feedback, 'OK', {
+        duration: 3000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_EDBlE08Rsskj3R9e
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EDBlE08Rsskj3R9e');
     }
   }
 

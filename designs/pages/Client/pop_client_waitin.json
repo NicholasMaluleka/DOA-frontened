@@ -1,0 +1,107 @@
+[
+    {
+        "id": "sd_6uF2nVeo48yILAir",
+        "type": "tab",
+        "createdDate": "2024-09-12T23:19:02.322Z",
+        "label": "pop_client_waitin",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "pop_client_waitinComponent"
+    },
+    {
+        "id": "sd_xpxDZUCLD7uu5WSC",
+        "type": "OnInit",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_xpxDZUCLD7uu5WSC",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_LeZ1LidYRNpvKkRY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pop_client_waitinComponent"
+    },
+    {
+        "id": "sd_LeZ1LidYRNpvKkRY",
+        "type": "PageVariables",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_LeZ1LidYRNpvKkRY",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pop_client_waitinComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_neUrSXi3mYEISp3Q",
+        "type": "CloseDialog",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.close",
+        "functionName": "sd_neUrSXi3mYEISp3Q",
+        "category": "Dialog",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "close",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pop_client_waitinComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fpRqyIjFtSpGj9yq",
+        "type": "PageStart",
+        "z": "sd_6uF2nVeo48yILAir",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "close",
+        "category": "General",
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "sd_neUrSXi3mYEISp3Q"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pop_client_waitinComponent"
+    }
+]

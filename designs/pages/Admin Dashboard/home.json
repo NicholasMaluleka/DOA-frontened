@@ -145,7 +145,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\npage.table = bh.tableDataSource \npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"bh\" ,bh)\n\n",
+        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\n\npage.table = bh.tableDataSource\npage.table.policyActive = page.policyActiveStatus \n\npage.table.forEach ( (item) => {\n    if(item.policyActive === true){\n        item.policyActive = \"Active\"\n    } else {\n    item.policyActive = \"Deactivated\"\n}\n})\n\n\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"page.table \" ,page.table )\n\n",
         "functionName": "sd_sQz2RUgYmK2eNRYZ",
         "category": "Function",
         "x": 765,
@@ -618,6 +618,13 @@
                     "type": "this.page",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "user",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "user"
+                }
             }
         ],
         "functionName": "sd_Q9kpfJBrwcNwMSIq",
@@ -1083,7 +1090,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"input\", bh.input.row.packageType == 'Package 1')\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
+        "script": "\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
         "functionName": "sd_Vk8d9TXjHuPW2ccT",
         "category": "Function",
         "x": 165,

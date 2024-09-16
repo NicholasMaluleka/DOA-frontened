@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -55,7 +56,7 @@ export class edit_profileComponent {
 
   sd_JgyRBkRN3y1TgJS6(bh) {
     try {
-      bh = this.sd_zZbFXjqfFF4D2qLR(bh);
+      bh = this.sd_pLrJikf1GfcXcIfw(bh);
       //appendnew_next_sd_JgyRBkRN3y1TgJS6
       return bh;
     } catch (e) {
@@ -71,10 +72,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_O0Jk4YGXjcErU5KM(bh);
+      bh = this.sd_YLr6e7qTr0v7cYmV(bh);
       //appendnew_next_update
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YaBBZJtWlPt7bFHB');
+      return this.errorHandler(bh, e, 'sd_sgb0uyaJqnMHbB7g');
     }
   }
 
@@ -86,10 +87,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_J9PwgORaWfdJy8li(bh);
+      bh = this.sd_g1dgjskkEOhQ0Tmc(bh);
       //appendnew_next_openBeneficiries
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_1Fc2ORtGlIyayrgN');
+      return this.errorHandler(bh, e, 'sd_qrSjqUMEriOPeci5');
     }
   }
 
@@ -101,10 +102,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_POQroE0i2enIYQNx(bh);
+      bh = this.sd_djGhPGuxtSAzK2Wb(bh);
       //appendnew_next_openDependencies
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AP7dmceTLRFkhXnN');
+      return this.errorHandler(bh, e, 'sd_bhEg4zAfCjsW1PyW');
     }
   }
 
@@ -116,10 +117,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_Gc4iT6sFGJajKFo9(bh);
+      bh = this.sd_hNU2zuRQxVVIIPaf(bh);
       //appendnew_next_idValid
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HiU37FLdDCx20drd');
+      return this.errorHandler(bh, e, 'sd_mgOe7CHJ4H7aWsNR');
     }
   }
 
@@ -131,10 +132,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_h2grNuNNwlt1Rjir(bh);
+      bh = this.sd_7KK6d5DepbFPRSBa(bh);
       //appendnew_next_idValid1
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_KwgHSz7lqQeEj1N4');
+      return this.errorHandler(bh, e, 'sd_NchkdTblJWpUmZUY');
     }
   }
 
@@ -146,10 +147,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_dYpPTDnv8OXrUBaR(bh);
+      bh = this.sd_m2GFvyreTkUT15zp(bh);
       //appendnew_next_idValid2
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_jzjiMnGz6dZi6ToK');
+      return this.errorHandler(bh, e, 'sd_voTE3BXybhEhpiZG');
     }
   }
 
@@ -161,10 +162,10 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_bnohEYupJ0AVpzeT(bh);
+      bh = this.sd_YrBwqNGTJO40L52t(bh);
       //appendnew_next_idValid3
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ptFntbRK6k6BXB3z');
+      return this.errorHandler(bh, e, 'sd_O0NwatE96xK1BABg');
     }
   }
 
@@ -176,50 +177,25 @@ export class edit_profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_j8Q8TFFKldHEDP5b(bh);
+      bh = this.sd_iCtDdM4RjHBE7o2O(bh);
       //appendnew_next_idValid4
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zeavhCK92Hm892hh');
-    }
-  }
-
-  cancel(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_tcxBJckGGYZqxWmJ(bh);
-      //appendnew_next_cancel
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_pklcqBCImlsNjMX4');
+      return this.errorHandler(bh, e, 'sd_NThelJdhmr348buh');
     }
   }
   //appendnew_flow_edit_profileComponent_start
 
-  sd_zZbFXjqfFF4D2qLR(bh) {
+  sd_pLrJikf1GfcXcIfw(bh) {
     try {
-      bh = this.sd_YpKvHuzOJX7A70Nt(bh);
-      //appendnew_next_sd_zZbFXjqfFF4D2qLR
+      bh = this.sd_UHAloZdWiiqtiSEV(bh);
+      //appendnew_next_sd_pLrJikf1GfcXcIfw
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zZbFXjqfFF4D2qLR');
+      return this.errorHandler(bh, e, 'sd_pLrJikf1GfcXcIfw');
     }
   }
 
-  sd_YpKvHuzOJX7A70Nt(bh) {
-    try {
-      bh = this.sd_MhlljBlxFSW8IGgH(bh);
-      //appendnew_next_sd_YpKvHuzOJX7A70Nt
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YpKvHuzOJX7A70Nt');
-    }
-  }
-
-  sd_MhlljBlxFSW8IGgH(bh) {
+  sd_UHAloZdWiiqtiSEV(bh) {
     try {
       this.page.results = undefined;
       this.page.formdata = undefined;
@@ -229,51 +205,110 @@ export class edit_profileComponent {
       this.page.dependency1Form = undefined;
       this.page.dependency2Form = undefined;
       this.page.showbeneficaries1Form = this.page.false;
-      this.page.showdependencies1Form = this.page.false;
+      this.page.showdependencies1Form = undefined;
       this.page.counter = 1;
-      this.page.showdependencies2Form = this.page.false;
+      this.page.showdependencies2Form = undefined;
       this.page.hideIcon = true;
-      this.page.hideIcon2 = true;
+      this.page.hideIcon2 = undefined;
       this.page.gender = undefined;
       this.page.gender1 = undefined;
       this.page.gender2 = undefined;
       this.page.gender3 = undefined;
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
-      this.page.showdependenciesForm = this.page.false;
-      bh = this.sd_WRH4C8nfvCW2ysVZ(bh);
-      //appendnew_next_sd_MhlljBlxFSW8IGgH
+      this.page.showdependenciesForm = undefined;
+      bh = this.sd_RnQSoLGbXPuS7ZSE(bh);
+      //appendnew_next_sd_UHAloZdWiiqtiSEV
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_MhlljBlxFSW8IGgH');
+      return this.errorHandler(bh, e, 'sd_UHAloZdWiiqtiSEV');
     }
   }
 
-  sd_WRH4C8nfvCW2ysVZ(bh) {
+  sd_RnQSoLGbXPuS7ZSE(bh) {
     try {
       this.page.userData = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_fzZkHtBt829JtEFx(bh);
-      //appendnew_next_sd_WRH4C8nfvCW2ysVZ
+      bh = this.sd_S3Jtj7xBUvqZDRcD(bh);
+      //appendnew_next_sd_RnQSoLGbXPuS7ZSE
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WRH4C8nfvCW2ysVZ');
+      return this.errorHandler(bh, e, 'sd_RnQSoLGbXPuS7ZSE');
     }
   }
 
-  sd_fzZkHtBt829JtEFx(bh) {
+  sd_S3Jtj7xBUvqZDRcD(bh) {
     try {
       const page = this.page;
       console.log('userData==>', page.userData);
-      //console.log("depe", page.userData.dependencies)
+      console.log('depe', page.userData.beneficaries);
 
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData.beneficaries[1];
+
+      //check if the form has data so that we can display the button
+      if (page.ben2.firstName != '') {
+        page.showbeneficaries1Form = true;
+        page.hideIcon = false;
+      } else {
+        page.showbeneficaries1Form = false;
+      }
+
+      //check if the Dependencyform1 has data so that we can display the button
+      // if(page.depe2.firstName != "") {
+      //     page.showdependencies1Form = true
+      // }
+      // console.log("show", page.depe2)
+
       //console.log("ben1", page.ben1)
       //console.log("ben2", page.ben2)
       page.depe1 = page.userData.dependencies[0];
       page.depe2 = page.userData.dependencies[1];
       page.depe3 = page.userData.dependencies[2];
       //console.log("depe1", page.depe1)
+
+      ///dependencies
+
+      if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName !== '' &&
+        page.depe3.firstName !== ''
+      ) {
+        // Case 1: All forms are not empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = true;
+        page.showdependencies2Form = true;
+        page.hideIcon2 = false; // Hide the add icon
+      } else if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName !== '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = true;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      } else if (
+        page.depe1.firstName !== '' &&
+        page.depe2.firstName === '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 3: Form 1 is filled, Forms 2 and 3 are empty
+        page.showdependenciesForm = true;
+        page.showdependencies1Form = false;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      } else if (
+        page.depe1.firstName === '' &&
+        page.depe2.firstName === '' &&
+        page.depe3.firstName === ''
+      ) {
+        // Case 4: All forms are empty
+        page.showdependenciesForm = true; // Show the first empty form (Form 1)
+        page.showdependencies1Form = false;
+        page.showdependencies2Form = false;
+        page.hideIcon2 = true; // Show the add icon
+      }
 
       page.formdata = new FormGroup({
         firstName: new FormControl(page.userData?.firstName || '', [
@@ -284,6 +319,7 @@ export class edit_profileComponent {
         ]),
         cellphone: new FormControl(page.userData?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -326,6 +362,7 @@ export class edit_profileComponent {
         ]),
         cellphone: new FormControl(page.ben1?.cellphone || '', [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -334,7 +371,9 @@ export class edit_profileComponent {
         ]),
       });
       page.beneficaries1Form = new FormGroup({
-        firstName: new FormControl(page.ben2.firstName, [Validators.required]),
+        firstName: new FormControl(page.ben2?.firstName || '', [
+          Validators.required,
+        ]),
         lastName: new FormControl(page.ben2.lastName, [Validators.required]),
         idNumber: new FormControl(page.ben2.idNumber, [
           Validators.required,
@@ -348,6 +387,7 @@ export class edit_profileComponent {
         ]),
         cellphone: new FormControl(page.ben2.cellphone, [
           Validators.required,
+          Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
@@ -423,25 +463,30 @@ export class edit_profileComponent {
       //    {value: 'Male', viewValue: 'Male'},
       //    {value: 'Female', viewValue: 'Female'}
       // ];
-      //appendnew_next_sd_fzZkHtBt829JtEFx
+      //appendnew_next_sd_S3Jtj7xBUvqZDRcD
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_fzZkHtBt829JtEFx');
+      return this.errorHandler(bh, e, 'sd_S3Jtj7xBUvqZDRcD');
     }
   }
 
-  sd_O0Jk4YGXjcErU5KM(bh) {
+  sd_YLr6e7qTr0v7cYmV(bh) {
     try {
       const page = this.page;
       bh.structuredData = page.formdata.value;
+      console.log('data', bh.structuredData);
 
       bh.structuredData.beneficaries = page.beneficary;
-      //console.log(page.beneficary)
 
-      bh.structuredData.dependencies = page.dependencies;
-
+      //Beneficaries
+      bh.ben1 = bh.structuredData.beneficaries[0];
+      page.ben2 = bh.structuredData.beneficaries[1];
+      console.log("Let's see Juska", bh.structuredData);
       page.ben2 = page.beneficaries1Form.value;
       bh.structuredData.beneficaries[1] = page.ben2;
+
+      //Dependencies
+      bh.structuredData.dependencies = page.dependencies;
 
       page.depe2 = page.dependency1Form.value;
       bh.structuredData.dependencies[1] = page.depe2;
@@ -449,48 +494,77 @@ export class edit_profileComponent {
       page.depe3 = page.dependency2Form.value;
       bh.structuredData.dependencies[2] = page.depe3;
 
-      // console.log("form", page.formdata.value)
-
-      // console.log("ben==>", page.ben2)
-      //console.log("structured data: ", bh.structuredData)
-      // console.log("ben value==>", page.beneficaries1Form.value)
-
-      bh = this.sd_Dug2vRdqwEKYndZt(bh);
-      //appendnew_next_sd_O0Jk4YGXjcErU5KM
+      bh = this.sd_zS7b1NmCmWYBlQFq(bh);
+      //appendnew_next_sd_YLr6e7qTr0v7cYmV
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_O0Jk4YGXjcErU5KM');
+      return this.errorHandler(bh, e, 'sd_YLr6e7qTr0v7cYmV');
     }
   }
 
-  sd_Dug2vRdqwEKYndZt(bh) {
+  sd_zS7b1NmCmWYBlQFq(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_lvNLqA6tib2KUU18(bh);
-      //appendnew_next_sd_Dug2vRdqwEKYndZt
+      bh = this.sd_pr7tgd1gK1w7AKTA(bh);
+      //appendnew_next_sd_zS7b1NmCmWYBlQFq
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Dug2vRdqwEKYndZt');
+      return this.errorHandler(bh, e, 'sd_zS7b1NmCmWYBlQFq');
     }
   }
 
-  sd_lvNLqA6tib2KUU18(bh) {
+  sd_pr7tgd1gK1w7AKTA(bh) {
     try {
       const page = this.page;
       bh.url = page.ssdUrl + 'update-user/' + `${page.userData._id}`;
 
-      console.log('url', bh.url);
-      console.log('structured d', bh.structuredData);
-
-      bh = this.sd_xBb6i0XCapBH7NP3(bh);
-      //appendnew_next_sd_lvNLqA6tib2KUU18
+      bh = this.sd_H3Y1QPVP8mkHnjCk(bh);
+      //appendnew_next_sd_pr7tgd1gK1w7AKTA
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lvNLqA6tib2KUU18');
+      return this.errorHandler(bh, e, 'sd_pr7tgd1gK1w7AKTA');
     }
   }
 
-  async sd_xBb6i0XCapBH7NP3(bh) {
+  async sd_H3Y1QPVP8mkHnjCk(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.ben2,
+      };
+      this.page.result2 = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_C7btWIkSPPi4vDXM(bh);
+      //appendnew_next_sd_H3Y1QPVP8mkHnjCk
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_H3Y1QPVP8mkHnjCk');
+    }
+  }
+
+  async sd_C7btWIkSPPi4vDXM(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.ben1,
+      };
+      this.page.result1 = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_pcFebE53orviGldn(bh);
+      //appendnew_next_sd_C7btWIkSPPi4vDXM
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_C7btWIkSPPi4vDXM');
+    }
+  }
+
+  async sd_pcFebE53orviGldn(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -501,41 +575,83 @@ export class edit_profileComponent {
         body: bh.structuredData,
       };
       this.page.results = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_qdPGbaSjG2Fz6oiL(bh);
-      //appendnew_next_sd_xBb6i0XCapBH7NP3
+      bh = this.sd_S3hSIuErjFzguoK6(bh);
+      //appendnew_next_sd_pcFebE53orviGldn
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xBb6i0XCapBH7NP3');
+      return this.errorHandler(bh, e, 'sd_pcFebE53orviGldn');
     }
   }
 
-  sd_qdPGbaSjG2Fz6oiL(bh) {
+  sd_S3hSIuErjFzguoK6(bh) {
     try {
       const page = this.page;
       console.log('results', page.results);
 
-      //appendnew_next_sd_qdPGbaSjG2Fz6oiL
+      bh = this.sd_vGtjziZA586ysjXp(bh);
+      //appendnew_next_sd_S3hSIuErjFzguoK6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qdPGbaSjG2Fz6oiL');
+      return this.errorHandler(bh, e, 'sd_S3hSIuErjFzguoK6');
     }
   }
 
-  sd_J9PwgORaWfdJy8li(bh) {
+  sd_vGtjziZA586ysjXp(bh) {
+    try {
+      sessionStorage.setItem('userData', JSON.stringify(bh.structuredData));
+      bh = this.sd_G19PY66JzVKcGxtc(bh);
+      //appendnew_next_sd_vGtjziZA586ysjXp
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vGtjziZA586ysjXp');
+    }
+  }
+
+  async sd_G19PY66JzVKcGxtc(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      bh = this.sd_nxWSj9bRtG2lyhli(bh);
+      //appendnew_next_sd_G19PY66JzVKcGxtc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_G19PY66JzVKcGxtc');
+    }
+  }
+
+  sd_nxWSj9bRtG2lyhli(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Profile Update', 'OK', {
+        duration: 1000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_nxWSj9bRtG2lyhli
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nxWSj9bRtG2lyhli');
+    }
+  }
+
+  sd_g1dgjskkEOhQ0Tmc(bh) {
     try {
       const page = this.page;
       page.showbeneficaries1Form = true;
       page.hideIcon = false;
       console.log('form', page.showbeneficaries1Form);
 
-      //appendnew_next_sd_J9PwgORaWfdJy8li
+      //appendnew_next_sd_g1dgjskkEOhQ0Tmc
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_J9PwgORaWfdJy8li');
+      return this.errorHandler(bh, e, 'sd_g1dgjskkEOhQ0Tmc');
     }
   }
 
-  sd_POQroE0i2enIYQNx(bh) {
+  sd_djGhPGuxtSAzK2Wb(bh) {
     try {
       const page = this.page;
       page.showdependenciesForm = true;
@@ -550,14 +666,14 @@ export class edit_profileComponent {
         page.hideIcon2 = false;
       }
 
-      //appendnew_next_sd_POQroE0i2enIYQNx
+      //appendnew_next_sd_djGhPGuxtSAzK2Wb
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_POQroE0i2enIYQNx');
+      return this.errorHandler(bh, e, 'sd_djGhPGuxtSAzK2Wb');
     }
   }
 
-  sd_Gc4iT6sFGJajKFo9(bh) {
+  sd_hNU2zuRQxVVIIPaf(bh) {
     try {
       const page = this.page;
       let id = page.beneficariesForm.controls.idNumber.value;
@@ -637,14 +753,14 @@ export class edit_profileComponent {
         return;
       }
       console.log('valid id', page.beneficariesForm.controls.idNumber.value);
-      //appendnew_next_sd_Gc4iT6sFGJajKFo9
+      //appendnew_next_sd_hNU2zuRQxVVIIPaf
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Gc4iT6sFGJajKFo9');
+      return this.errorHandler(bh, e, 'sd_hNU2zuRQxVVIIPaf');
     }
   }
 
-  sd_h2grNuNNwlt1Rjir(bh) {
+  sd_7KK6d5DepbFPRSBa(bh) {
     try {
       const page = this.page;
       let id = page.beneficaries1Form.controls.idNumber.value;
@@ -724,14 +840,14 @@ export class edit_profileComponent {
         return;
       }
       console.log('valid id', page.beneficaries1Form.controls.idNumber.value);
-      //appendnew_next_sd_h2grNuNNwlt1Rjir
+      //appendnew_next_sd_7KK6d5DepbFPRSBa
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_h2grNuNNwlt1Rjir');
+      return this.errorHandler(bh, e, 'sd_7KK6d5DepbFPRSBa');
     }
   }
 
-  sd_dYpPTDnv8OXrUBaR(bh) {
+  sd_m2GFvyreTkUT15zp(bh) {
     try {
       const page = this.page;
       let id = page.dependencyForm.controls.idNumber.value;
@@ -811,14 +927,14 @@ export class edit_profileComponent {
         return;
       }
       console.log('valid id', page.dependencyForm.controls.idNumber.value);
-      //appendnew_next_sd_dYpPTDnv8OXrUBaR
+      //appendnew_next_sd_m2GFvyreTkUT15zp
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dYpPTDnv8OXrUBaR');
+      return this.errorHandler(bh, e, 'sd_m2GFvyreTkUT15zp');
     }
   }
 
-  sd_bnohEYupJ0AVpzeT(bh) {
+  sd_YrBwqNGTJO40L52t(bh) {
     try {
       const page = this.page;
       let id = page.dependency1Form.controls.idNumber.value;
@@ -898,14 +1014,14 @@ export class edit_profileComponent {
         return;
       }
       console.log('valid id', page.dependency1Form.controls.idNumber.value);
-      //appendnew_next_sd_bnohEYupJ0AVpzeT
+      //appendnew_next_sd_YrBwqNGTJO40L52t
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bnohEYupJ0AVpzeT');
+      return this.errorHandler(bh, e, 'sd_YrBwqNGTJO40L52t');
     }
   }
 
-  sd_j8Q8TFFKldHEDP5b(bh) {
+  sd_iCtDdM4RjHBE7o2O(bh) {
     try {
       const page = this.page;
       let id = page.dependency2Form.controls.idNumber.value;
@@ -985,7 +1101,7 @@ export class edit_profileComponent {
         return;
       }
       console.log('valid id', page.dependency2Form.controls.idNumber.value);
-      //appendnew_next_sd_j8Q8TFFKldHEDP5b
+      //appendnew_next_sd_iCtDdM4RjHBE7o2O
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
@@ -998,7 +1114,9 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_tcxBJckGGYZqxWmJ
       return bh;
     } catch (e) {

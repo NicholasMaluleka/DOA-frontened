@@ -1,4 +1,4 @@
-<div fxLayout="column wrap" class="full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true" fxFill>
+<div fxLayout="column wrap" class="padding-5px full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true" fxFill>
   <div fxLayout="row wrap" style="height: 7%; border-bottom: 1px solid lightgrey" fxLayoutAlign="center center" [fxShow]="true">
     <div fxLayout="row wrap" style="height: 100% !Important" class="margin-top-10px pointer full-width radius-10px" fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true">
       <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
@@ -20,7 +20,7 @@
   </div>
   <div fxLayout="row wrap" style="height: 10%" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="row wrap" style="height: 100% !Important" class="margin-top-10px pointer full-width white-bg radius-10px blue-color" fxLayoutGap="0.2em" fxLayoutAlign="center center" [fxShow]="true">
-      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-icon class="teal-color no-margin" (click)="logout()">power_settings_new</mat-icon>
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" (click)="logout()"><mat-icon class="teal-color no-margin" (click)="logout()">power_settings_new</mat-icon>
         <div style="font-size: 15px;" class="blue-color">
           <h4 class="no-margin label nav-name-LMN">Logout</h4>
         </div>

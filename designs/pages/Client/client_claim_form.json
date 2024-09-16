@@ -173,6 +173,20 @@
                     "type": "str",
                     "value": "READING DOCUMENT"
                 }
+            },
+            {
+                "textIp": "fileURL",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "idclaimerfilename",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_37zMadhqe6cOjrj2",
@@ -408,7 +422,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\n\n// console.log(page.newClient[0].policyNumber)\n\n page.policyno = page.user.policyNumber\nconsole.log(\"users\",page.user)",
+        "script": "\npage.fileURL = 'http://localhost:8081/api/download/'\n// console.log(page.newClient[0].policyNumber)\n\n page.policyno = page.user.policyNumber\nconsole.log(\"users\",page.user)",
         "functionName": "sd_n3ZmIInEaqwuOf5e",
         "category": "Function",
         "x": 505,
@@ -569,7 +583,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'verify-doc'\npage.loading = true\n\n",
+        "script": "bh.url = page.ssdUrl + 'verify-id'\npage.loading = true\n\n",
         "functionName": "sd_p4B7idTFiqPSmL4H",
         "category": "Function",
         "x": 245,
@@ -592,6 +606,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -599,8 +614,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -616,9 +633,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_qE3ziIXUvXb5u3JI",
         "category": "HTTP",
@@ -667,7 +686,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "The ID uploaded is Invalid"
+            "value": "The document uploaded is Invalid"
         },
         "action": {
             "type": "str",
@@ -678,7 +697,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -746,7 +767,9 @@
         "x": 405,
         "y": 360,
         "wires": [
-            []
+            [
+                "sd_PbHhgGm66YTklFyZ"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -777,7 +800,9 @@
         "x": 445,
         "y": 1180,
         "wires": [
-            []
+            [
+                "sd_UwjbGxNF17NFOfnQ"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -797,7 +822,7 @@
         "flow_type": "sync",
         "functionName": "submit",
         "category": "General",
-        "x": 145,
+        "x": 165,
         "y": 1300,
         "wires": [
             [
@@ -818,7 +843,7 @@
         "script": "\nbh.url = page.ssdUrl + 'add-claim'\nconsole.log(\"The val\",page.policyClaimsForm.value)\nbh.body = page.policyClaimsForm.value\nbh.body['policyNo']=  page.policyno\nbh.body.claimNumber = `CN-${ page.policyno}`\n\ndelete bh.body.deathCetificatify2\ndelete bh.body.deceased2\ndelete bh.body.idClaimer2\ndelete bh.body.idDeceased2\ndelete bh.body.bi16632\ndelete bh.body.bankDetails2\ndelete bh.body.depsId\nconsole.log(\"This is bh body\", bh.body)",
         "functionName": "sd_3VDakwnzEcR5Oup5",
         "category": "Function",
-        "x": 265,
+        "x": 245,
         "y": 1300,
         "wires": [
             [
@@ -838,6 +863,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -845,8 +871,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -862,9 +890,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_fusyotj2BipM6rO4",
         "category": "HTTP",
@@ -956,10 +986,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "file in form",
-        "script": "\npage.policyClaimsForm.value['ID'] = page.id\npage.policyClaimsForm.value['IDDeceased'] = page.iddes\npage.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify\npage.policyClaimsForm.value['bi1663'] =  page.bi1663\npage.policyClaimsForm.value['bankDetails'] = page.bankDetails\n\n// console.log(\"The val\",page.deathCetificatifyFile)",
+        "script": "\npage.policyClaimsForm.value['ID'] = page.id\npage.policyClaimsForm.value['IDfile'] = page.idclaimerfilename\npage.policyClaimsForm.value['IDDeceased'] = page.iddes\npage.policyClaimsForm.value['IDDeceasedfile'] = page.idDeceasedfilename\npage.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify\npage.policyClaimsForm.value['DeathCertificatefile'] = page.deathCetificatifyfilename\npage.policyClaimsForm.value['bi1663'] =  page.bi1663\npage.policyClaimsForm.value['bi1663file'] =  page.bi1663filename\npage.policyClaimsForm.value['bankDetails'] = page.bankDetails\npage.policyClaimsForm.value['bankDetailsfile'] = page.bankDetailsfilename\n\nconsole.log(\"The val\",page.policyClaimsForm.value)",
         "functionName": "fileInForm",
         "category": "Function",
-        "x": 385,
+        "x": 345,
         "y": 1300,
         "wires": [
             [
@@ -1024,7 +1054,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "   \n page.year = parseInt(new Date().getFullYear().toString().slice(-2))\n   page.birthyear = parseInt(\n        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)\n      );\n      page.years = page.birthyear - page.year;\n   \n       if (page.user.packageType == 'Package 1') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '1500';\n        } else {\n          page.payamount = '3000';\n        }\n      }\n      if (page.user.packageType == 'Package 2') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '2500';\n        } else {\n          page.payamount = '5000';\n        }\n      }\n      if (page.user.packageType == 'Package 3') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = '4000';\n        } else {\n          page.payamount = '10000';\n        }\n      }\n      page.policyClaimsForm.patchValue({\n        payoutAmount: page.payamount,\n      });",
+        "script": "   \n page.year = parseInt(new Date().getFullYear().toString().slice(-2))\n   page.birthyear = parseInt(\n        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)\n      );\n      page.years = page.birthyear - page.year;\n   \n       if (page.user.packageType == 'Package 1') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = 'R 1500';\n        } else {\n          page.payamount = 'R 3000';\n        }\n      }\n      if (page.user.packageType == 'Package 2') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = 'R 2500';\n        } else {\n          page.payamount = 'R 5000';\n        }\n      }\n      if (page.user.packageType == 'Package 3') {\n        if (page.years >= -21 && page.years <= 21) {\n          page.payamount = 'R 4000';\n        } else {\n          page.payamount = 'R 10000';\n        }\n      }\n      page.policyClaimsForm.patchValue({\n        payoutAmount: page.payamount,\n      });",
         "functionName": "sd_DbkzD1Oop0ECjWgI",
         "category": "Function",
         "x": 1305,
@@ -1086,6 +1116,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -1093,8 +1124,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -1110,9 +1143,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_5y2VR92b81XEz9tD",
         "category": "HTTP",
@@ -1148,7 +1183,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1173,7 +1210,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"",
+        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"\nsessionStorage.setItem(\"idClaimer\",JSON.stringify(page.res))\nthis.getFromBackend1()",
         "functionName": "sd_nUpeEDzTzWMcBbWd",
         "category": "Function",
         "x": 885,
@@ -1248,7 +1285,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"idClaimer\",JSON.stringify(bh.result))\nthis.getFromBackend1()\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n\n",
+        "script": "\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n\n",
         "functionName": "sd_lNRBNADEwAftcDMX",
         "category": "Function",
         "x": 685,
@@ -1305,7 +1342,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1436,7 +1475,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl +'verify-doc'\npage.loading = true\n\n",
+        "script": "bh.url = page.ssdUrl +'verify-id'\npage.loading = true\n\n",
         "functionName": "sd_mfoU0xKdTFiLcrfz",
         "category": "Function",
         "x": 245,
@@ -1459,6 +1498,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -1466,8 +1506,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -1483,9 +1525,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_LZJJZ6TTNFPHtebO",
         "category": "HTTP",
@@ -1534,7 +1578,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "The ID uploaded is Invalid"
+            "value": "The document uploaded is Invalid"
         },
         "action": {
             "type": "str",
@@ -1545,7 +1589,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1613,7 +1659,9 @@
         "x": 405,
         "y": 540,
         "wires": [
-            []
+            [
+                "sd_44ZVLUe7U6XdYr4k"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -1669,6 +1717,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -1676,8 +1725,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -1693,9 +1744,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_18W5H0dOnfGzmtRm",
         "category": "HTTP",
@@ -1731,7 +1784,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1756,7 +1811,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"",
+        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"\nsessionStorage.setItem(\"idDeceased\",JSON.stringify( page.res))\nthis.getFromBackend2()",
         "functionName": "sd_Uu3tgDJTOP1kdw5g",
         "category": "Function",
         "x": 885,
@@ -1778,7 +1833,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"idDeceased\",JSON.stringify(bh.result))\nthis.getFromBackend1()\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
+        "script": "\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
         "functionName": "sd_cFaCMy4DZV75DBan",
         "category": "Function",
         "x": 685,
@@ -1824,7 +1879,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Valid ID"
+            "value": "Valid Document"
         },
         "action": {
             "type": "str",
@@ -1835,7 +1890,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1966,7 +2023,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'verify-doc'\npage.loading = true\n\n",
+        "script": "bh.url = page.ssdUrl + 'verify-death-certificate'\npage.loading = true\n\n",
         "functionName": "sd_2khXacsujptwBtLe",
         "category": "Function",
         "x": 265,
@@ -1989,6 +2046,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -1996,8 +2054,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -2013,9 +2073,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_o6UVMiTVHBuHN4aM",
         "category": "HTTP",
@@ -2064,7 +2126,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "The ID uploaded is Invalid"
+            "value": "The document uploaded is Invalid"
         },
         "action": {
             "type": "str",
@@ -2146,6 +2208,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -2153,8 +2216,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -2170,9 +2235,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_FlZAGikPa1MP0lYo",
         "category": "HTTP",
@@ -2208,7 +2275,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -2233,7 +2302,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"",
+        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"\nsessionStorage.setItem(\"deathCetificatify\",JSON.stringify(page.res))\nthis.getFromBackend3()",
         "functionName": "sd_WuwUSZUIW6SHhWhX",
         "category": "Function",
         "x": 905,
@@ -2255,7 +2324,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"deathCetificatify\",JSON.stringify(bh.result))\nthis.getFromBackend3()\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
+        "script": "\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
         "functionName": "sd_z4s2zTiMY3XzjD0p",
         "category": "Function",
         "x": 705,
@@ -2301,7 +2370,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Valid ID"
+            "value": "Valid Document"
         },
         "action": {
             "type": "str",
@@ -2402,7 +2471,9 @@
         "x": 365,
         "y": 960,
         "wires": [
-            []
+            [
+                "sd_bMD9PJo4pOaPvjCY"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -2523,6 +2594,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -2530,8 +2602,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -2547,9 +2621,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_2KaUyUcFhEDpNac1",
         "category": "HTTP",
@@ -2598,7 +2674,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "The ID uploaded is Invalid"
+            "value": "The document uploaded is Invalid"
         },
         "action": {
             "type": "str",
@@ -2680,6 +2756,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -2687,8 +2764,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -2704,9 +2783,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_5OwvkSRVRODJRV33",
         "category": "HTTP",
@@ -2742,7 +2823,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -2767,7 +2850,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"",
+        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"\nsessionStorage.setItem(\"bi1663\",JSON.stringify(page.res))\nthis.getFromBackend4()",
         "functionName": "sd_uQ2ta4AT7dJGjfF6",
         "category": "Function",
         "x": 905,
@@ -2789,7 +2872,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"bi1663\",JSON.stringify(bh.result))\nthis.getFromBackend4()\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
+        "script": "\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
         "functionName": "sd_P1x5hwR7zK2XSXhe",
         "category": "Function",
         "x": 705,
@@ -2811,7 +2894,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = true",
+        "script": "page.loading = true\n",
         "functionName": "sd_QrFOU4XrjWDme9mt",
         "category": "Function",
         "x": 465,
@@ -2835,7 +2918,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Valid ID"
+            "value": "Valid Document"
         },
         "action": {
             "type": "str",
@@ -2936,7 +3019,9 @@
         "x": 385,
         "y": 740,
         "wires": [
-            []
+            [
+                "sd_soByUd0NmBNgnhsu"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -3014,7 +3099,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'verify-doc'\npage.loading = true\n\n",
+        "script": "bh.url = page.ssdUrl + 'verify-bank-statement'\npage.loading = true\n\n",
         "functionName": "sd_8GPDFmqkBu3Gj4Jy",
         "category": "Function",
         "x": 285,
@@ -3037,6 +3122,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -3044,8 +3130,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -3061,9 +3149,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_jhzXDCIg5uWpdK5F",
         "category": "HTTP",
@@ -3112,7 +3202,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "The ID uploaded is Invalid"
+            "value": "The document uploaded is Invalid"
         },
         "action": {
             "type": "str",
@@ -3194,6 +3284,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -3201,8 +3292,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -3218,9 +3311,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_qcIw5zhvQL6QMZDv",
         "category": "HTTP",
@@ -3256,7 +3351,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -3281,7 +3378,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"",
+        "script": "\nconsole.log(\"File uploded\", page.res)\npage.mes= \"READING DOCUMENT\"\npage.loading = false\nsessionStorage.setItem(\"bankDetails\",JSON.stringify( page.res))\nthis.getFromBackend5()\npage.loading = false",
         "functionName": "sd_aI7RSXUCxplR25t0",
         "category": "Function",
         "x": 925,
@@ -3303,7 +3400,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "sessionStorage.setItem(\"bankDetails\",JSON.stringify(bh.result))\nthis.getFromBackend5()\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
+        "script": "\nconsole.log(\"response\",bh.result)\nbh.url = page.ssdUrl + 'upload'\npage.loading = true\npage.mes = \"UPLOADING DOCUMENT\"\n",
         "functionName": "sd_t6r7SrhN7R7PePIS",
         "category": "Function",
         "x": 725,
@@ -3349,7 +3446,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Valid ID"
+            "value": "Valid Document"
         },
         "action": {
             "type": "str",
@@ -3447,85 +3544,103 @@
         "generated": true
     },
     {
-        "id": "sd_0uGaf2nkYkXRNNiy",
+        "id": "sd_PbHhgGm66YTklFyZ",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
-        "name": "id claimer file added on form",
-        "script": "page.policyClaimsForm.value.idClaimer._id = page.idclaimerFile._id\npage.policyClaimsForm.value.idClaimer.filename = page.idclaimerFile.filename\npage.policyClaimsForm.value.idClaimer.length = page.idclaimerFile.length\npage.policyClaimsForm.value.idClaimer.chunkSize = page.idclaimerFile.chunkSize",
-        "functionName": "idClaimerFileAddedOnForm",
+        "name": "",
+        "script": "page.idclaimerfilename = page.idclaimerFile.filename",
+        "functionName": "sd_PbHhgGm66YTklFyZ",
         "category": "Function",
-        "x": 305,
-        "y": 1520,
-        "wires": [
-            [
-                "sd_rEkxEHgr77jWUaXM"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_cbjd43LYN5KOooib",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "Deceased id file in form",
-        "script": "page.policyClaimsForm.value. idDecesed._id = page.idDeceasedFile._id\npage.policyClaimsForm.value. idDecesed.filename = page.idDeceasedFile.filename\npage.policyClaimsForm.value. idDecesed.length = page.idDeceasedFile.length\npage.policyClaimsForm.value. idDecesed.chunkSize = page.idDeceasedFile.chunkSize",
-        "functionName": "deceasedIdFileInForm",
-        "category": "Function",
-        "x": 185,
-        "y": 1520,
-        "wires": [
-            [
-                "sd_0uGaf2nkYkXRNNiy"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_Gfp8Iv9pWsxFIC9q",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "bi1663 file in form",
-        "script": "page.policyClaimsForm.value.bi1662._id = page.bi1663File._id\npage.policyClaimsForm.value.bi1662.filename = page.bi1663File.filename\npage.policyClaimsForm.value.bi1662.length = page.bi1663File.length\npage.policyClaimsForm.value.bi1662.chunkSize = page.bi1663File.chunkSize",
-        "functionName": "bi1663FileInForm",
-        "category": "Function",
-        "x": 525,
-        "y": 1520,
+        "x": 520,
+        "y": 360,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
     },
     {
-        "id": "sd_rEkxEHgr77jWUaXM",
+        "id": "sd_44ZVLUe7U6XdYr4k",
         "type": "Script",
         "z": "sd_w93AbqYMQ4LWwqYF",
         "viewType": "common",
         "nodeType": "flow",
-        "name": "bankDetails file in form",
-        "script": "page.policyClaimsForm.value.bankDetails._id = page.bankDetailsFile._id\npage.policyClaimsForm.value.bankDetails.filename = page.bankDetailsFile.filename\npage.policyClaimsForm.value.bankDetails.length = page.bankDetailsFile.length\npage.policyClaimsForm.value.bankDetails.chunkSize = page.bankDetailsFile.chunkSize",
-        "functionName": "bankDetailsFileInForm",
+        "name": "",
+        "script": "page.idDeceasedfilename = page.idDeceasedFile.filename",
+        "functionName": "sd_44ZVLUe7U6XdYr4k",
         "category": "Function",
-        "x": 405,
-        "y": 1520,
+        "x": 485,
+        "y": 540,
         "wires": [
-            [
-                "sd_Gfp8Iv9pWsxFIC9q"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_soByUd0NmBNgnhsu",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.deathCetificatifyfilename= page.deathCetificatifyFile.filename",
+        "functionName": "sd_soByUd0NmBNgnhsu",
+        "category": "Function",
+        "x": 465,
+        "y": 740,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_bMD9PJo4pOaPvjCY",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.bi1663filename = page.bi1663File.filename",
+        "functionName": "sd_bMD9PJo4pOaPvjCY",
+        "category": "Function",
+        "x": 465,
+        "y": 960,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UwjbGxNF17NFOfnQ",
+        "type": "Script",
+        "z": "sd_w93AbqYMQ4LWwqYF",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.bankDetailsfilename = page.bankDetailsFile.filename",
+        "functionName": "sd_UwjbGxNF17NFOfnQ",
+        "category": "Function",
+        "x": 535.5555419921875,
+        "y": 1200.89111328125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "client_claim_formComponent",
+        "generated": true
     }
 ]

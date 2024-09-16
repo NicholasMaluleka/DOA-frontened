@@ -67,18 +67,6 @@ export class claimsComponent implements AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
-      //appendnew_next_ngAfterViewInit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_NnBo2ElmEPMQhdin');
-    }
-  }
-
   onFilter_2(filterEvent: any = undefined, ...others) {
     let bh: any = {};
     try {
@@ -138,6 +126,18 @@ export class claimsComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_6uxXfPKiwYlVASPF');
     }
   }
+  ngAfterViewInit() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
+      //appendnew_next_ngAfterViewInit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FAwuoNmWMyaQjCaS');
+    }
+  }
+
   //appendnew_flow_claimsComponent_start
 
   sd_f4qlWKJDct97cBFV(bh) {
@@ -216,6 +216,8 @@ export class claimsComponent implements AfterViewInit {
         }
       });
 
+      bh.path = 'get-notification';
+
       bh.local.dataSource = new MatTableDataSource(page.result);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
@@ -232,55 +234,6 @@ export class claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3pY8tDHomR137FNx');
-    }
-  }
-
-  sd_xKCCTWKzvgDN0rx7_1(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatSort: this.MatSort,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_9CSVHoYiwzqvTVDq');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_1(bh) {
-    try {
-      const page = this.page;
-      this.page.tableData.sort = this.MatSort;
-      bh = this.sd_xKCCTWKzvgDN0rx7_3(bh);
-      //appendnew_next_sd_2VNGqvcKee34lvOz_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_P1x3dimC6AnShOit');
-    }
-  }
-
-  sd_xKCCTWKzvgDN0rx7_3(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatPaginator: this.MatPaginator,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_3(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_nJkzHFDq629hbd1F');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_3(bh) {
-    try {
-      const page = this.page;
-      this.page.tableData.paginator = this.MatPaginator;
-      //appendnew_next_sd_2VNGqvcKee34lvOz_3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WATRVjI05gX4Sh1T');
     }
   }
 
@@ -418,6 +371,54 @@ export class claimsComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ieGXqp1MFZIwHCzM');
+    }
+  }
+
+  sd_xKCCTWKzvgDN0rx7_1(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        MatSort: this.MatSort,
+      });
+      bh = this.sd_xKCCTWKzvgDN0rx7_3(bh);
+      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9CSVHoYiwzqvTVDq');
+    }
+  }
+
+  sd_xKCCTWKzvgDN0rx7_3(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        MatPaginator: this.MatPaginator,
+      });
+      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
+      //appendnew_next_sd_xKCCTWKzvgDN0rx7_3
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nJkzHFDq629hbd1F');
+    }
+  }
+
+  sd_2VNGqvcKee34lvOz_1(bh) {
+    try {
+      const page = this.page;
+      setTimeout(() => {
+        console.log('TB DATA: ', page.tableData);
+
+        this.page.tableData.sort = bh.pageViews.MatSort;
+
+        this.page.tableData.paginator = bh.pageViews.MatPaginator;
+
+        console.log('TABLE DATA: ', page.tableData);
+      }, 500);
+
+      // this.page.tableData.sort = this.MatSort;
+
+      //appendnew_next_sd_2VNGqvcKee34lvOz_1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_P1x3dimC6AnShOit');
     }
   }
 
