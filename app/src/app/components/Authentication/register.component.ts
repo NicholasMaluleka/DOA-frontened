@@ -313,6 +313,21 @@ export class registerComponent {
       return this.errorHandler(bh, e, 'sd_Cn24mn0H6lpBFLYp');
     }
   }
+
+  setPayDate(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_hErIPOFkyiRU6ocp(bh);
+      //appendnew_next_setPayDate
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HIREFTn0oG6aIU5c');
+    }
+  }
   //appendnew_flow_registerComponent_start
 
   sd_21M8r6uomCRnf45y(bh) {
@@ -341,6 +356,7 @@ export class registerComponent {
       this.page.gender5 = undefined;
       this.page.gender6 = undefined;
       this.page.feedback = undefined;
+      this.page.paymentDates = undefined;
       bh = this.sd_qjesZ9T9zyxXQtfe(bh);
       //appendnew_next_sd_7K2noVNldq6MAAbT
       return bh;
@@ -447,9 +463,12 @@ export class registerComponent {
         ]),
         address: new FormControl('', [Validators.required]),
         packageType: new FormControl('', [Validators.required]),
+        paymentDate: new FormControl('', [Validators.required]),
         file2: new FormControl('', [Validators.required]),
         file: page.fileForm,
       });
+
+      console.log('FORM: ', page.clientForm);
 
       page.package = [
         { value: 'Package 1', viewValue: 'Package 1' },
@@ -460,6 +479,13 @@ export class registerComponent {
       page.genders = [
         { value: 'Male', viewValue: 'Male' },
         { value: 'Female', viewValue: 'Female' },
+      ];
+
+      page.paymentDates = [
+        { value: 1, viewValue: '1st' },
+        { value: 5, viewValue: '5th' },
+        { value: 15, viewValue: '15th' },
+        { value: 25, viewValue: '25th' },
       ];
       bh = this.sd_hsNZ5en4D8hP7I5H(bh);
       //appendnew_next_sd_qjesZ9T9zyxXQtfe
@@ -1511,6 +1537,24 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EDBlE08Rsskj3R9e');
+    }
+  }
+
+  sd_hErIPOFkyiRU6ocp(bh) {
+    try {
+      const page = this.page;
+      const ctrlValue = page.clientForm.controls.paymentDate.value;
+
+      let date = new Date().setDate(ctrlValue);
+
+      let newDate = new Date(date);
+
+      console.log('VAL: ', newDate);
+
+      //appendnew_next_sd_hErIPOFkyiRU6ocp
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hErIPOFkyiRU6ocp');
     }
   }
 

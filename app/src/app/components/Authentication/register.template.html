@@ -26,15 +26,26 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="row " class="margin-top-10px kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field class="kg-half-width" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-label>Package Type</mat-label>
-                    <mat-select formControlName="packageType" placeholder="Package Type" [required]="false">
-                      <ng-template ngFor let-option [ngForOf]="page.package" let-i="index">
-                        <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-                    <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
-                  </mat-form-field></div>
+                <div fxLayout="row " class="margin-top-10px kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-label>Package Type</mat-label>
+                      <mat-select formControlName="packageType" placeholder="Package Type" [required]="false">
+                        <ng-template ngFor let-option [ngForOf]="page.package" let-i="index">
+                          <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                        </ng-template>
+                      </mat-select>
+                      <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
+                    </mat-form-field></div>
+                  <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-label>Preferred Payment Date</mat-label>
+                      <mat-select formControlName="paymentDate" placeholder="Payment Date" [required]="false">
+                        <ng-template ngFor let-option [ngForOf]="page.paymentDates" let-i="index">
+                          <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                        </ng-template>
+                      </mat-select>
+                      <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
+                    </mat-form-field></div>
+                </div>
                 <h3>
                   Contact Details</h3>
                 <div fxLayout="row " class="kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
