@@ -443,12 +443,10 @@ export class Director_homeComponent implements AfterViewInit {
   async sd_KjgezfRoGPixtYr3(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/view-payments');
+        this.sdService.getPathAndQParamsObj('/dashboard/payments_d');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_KjgezfRoGPixtYr3
       return bh;
     } catch (e) {

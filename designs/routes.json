@@ -71,6 +71,10 @@
                 {
                     "path": "client_view_claim",
                     "component": "client_view_claimComponent"
+                },
+                {
+                    "path": "payments_d",
+                    "component": "payments_dComponent"
                 }
             ],
             "canActivate": {

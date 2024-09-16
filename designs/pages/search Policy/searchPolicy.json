@@ -246,7 +246,7 @@
         "y": 160,
         "wires": [
             [
-                "sd_FQaTWhsdsnTZhqFY"
+                "sd_uK9SFyo7OgJzOK8J"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -293,17 +293,10 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/claim-register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_GrC07KTLi0xBLPf5",
         "category": "Navigation",
-        "x": 965,
-        "y": 160,
+        "x": 765,
+        "y": 200,
         "wires": [
             [
                 "sd_IO4IqWL9nrM5vCKf"
@@ -335,8 +328,8 @@
         "resultMapping": {},
         "functionName": "sd_uK9SFyo7OgJzOK8J",
         "category": "Storage",
-        "x": 845,
-        "y": 160,
+        "x": 645,
+        "y": 200,
         "wires": [
             [
                 "sd_GrC07KTLi0xBLPf5"
@@ -357,8 +350,8 @@
         "data": "this.page.clients",
         "functionName": "sd_IO4IqWL9nrM5vCKf",
         "category": "Dialog",
-        "x": 1065,
-        "y": 160,
+        "x": 865,
+        "y": 200,
         "wires": [
             []
         ],
@@ -403,14 +396,11 @@
             [
                 "sd_kPBY0flPvVW2qs8E"
             ],
-            [
-                "sd_M3Mx5SO6Ewwd84IC"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_kPBY0flPvVW2qs8E",
@@ -446,9 +436,8 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_tWBNhkIBx5C151la",
@@ -492,17 +481,14 @@
         "script": "page.total = page.clients[0].trialCount - 6\n\n\n////// DO NOT DELETE THIS!!!!!!!\nconst paymentDate = page.clients[0].paymentDate;\nconst dateObject = new Date(paymentDate); \n// console.log(\"CLient Date ==>\", dateObject.toLocaleDateString())",
         "functionName": "sd_M3Mx5SO6Ewwd84IC",
         "category": "Function",
-        "x": 660,
-        "y": 220,
+        "x": 665,
+        "y": 280,
         "wires": [
-            [
-                "sd_eELT5pMxSfee5Pj1"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_eELT5pMxSfee5Pj1",
@@ -530,20 +516,17 @@
         "outputs": 2,
         "functionName": "sd_eELT5pMxSfee5Pj1",
         "category": "Function",
-        "x": 760,
-        "y": 240,
+        "x": 865,
+        "y": 320,
         "wires": [
-            [
-                "sd_uK9SFyo7OgJzOK8J"
-            ],
+            [],
             [
                 "sd_7yMY6xtRM932937O"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_7yMY6xtRM932937O",
@@ -596,17 +579,16 @@
         "accept_csd": true,
         "functionName": "sd_7yMY6xtRM932937O",
         "category": "General",
-        "x": 845,
-        "y": 320,
+        "x": 905,
+        "y": 380,
         "wires": [
             [
                 "sd_8VXYA6N57Vm8tm0h"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_ZVCUNk8rfZjdDM9Z",
@@ -644,8 +626,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_ZVCUNk8rfZjdDM9Z",
         "category": "Dialog",
-        "x": 1025,
-        "y": 320,
+        "x": 1085,
+        "y": 380,
         "wires": [
             [],
             [],
@@ -760,9 +742,8 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     },
     {
         "id": "sd_8VXYA6N57Vm8tm0h",
@@ -774,8 +755,8 @@
         "data": "this.page.clients",
         "functionName": "sd_8VXYA6N57Vm8tm0h",
         "category": "Dialog",
-        "x": 925,
-        "y": 320,
+        "x": 985,
+        "y": 380,
         "wires": [
             [
                 "sd_ZVCUNk8rfZjdDM9Z"
@@ -789,8 +770,7 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "searchPolicyComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "searchPolicyComponent"
     }
 ]
