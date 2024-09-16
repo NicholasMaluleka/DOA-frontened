@@ -1,6 +1,6 @@
 <div fxLayout="column wrap" style="height:100%" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="column " style="height:100%" class="container" fxLayoutAlign="start stretch" [fxShow]="true"><mat-accordion style="margin-bottom:2em">
-      <mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (closed)="true" hideToggle="false">
+      <mat-expansion-panel style="style: background: #BDBDBD;margin: 8px;" (opened)="true" (closed)="false" hideToggle="false" [expanded]="true">
         <mat-expansion-panel-header>
 
           <mat-panel-title>
