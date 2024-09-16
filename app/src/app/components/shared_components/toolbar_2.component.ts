@@ -118,12 +118,27 @@ export class toolbar_2Component {
       return this.errorHandler(bh, e, 'sd_qvDYKL1VrIxeddsI');
     }
   }
+
+  viewClaim(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_hIbpsd5Kwt9ZDjAA(bh);
+      //appendnew_next_viewClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gS2glZfxWSU6jse5');
+    }
+  }
   //appendnew_flow_toolbar_2Component_start
 
   sd_vYroLyfoxwBQaGzc(bh) {
     try {
       this.page.messages = undefined;
-      this.page.path = 'get-users';
+      this.page.path = 'get-notification';
       bh = this.sd_Qfbqflcpzj8qAiMC(bh);
       //appendnew_next_sd_vYroLyfoxwBQaGzc
       return bh;
@@ -177,9 +192,13 @@ export class toolbar_2Component {
       const page = this.page;
       console.log('NOTIFICATIONS: ', page.notifications);
 
+      let notifications = page.notifications;
+
       page.notifications = [];
 
-      page.notifications.forEach((notification) => {
+      console.log('NOT 2: ', notifications);
+
+      notifications.forEach((notification) => {
         console.log('CLAIM POLICY: ', notification.claimNumber.split('-')[1]);
         console.log('userPolicy : ', page.user.policyNumber);
         if (
@@ -197,7 +216,7 @@ export class toolbar_2Component {
         ) {
           page.notifications.push({
             date: notification.date,
-            _notification: `Claim has been logged and requires your attention`,
+            _notification: `Claim is ${notification?.status} and requires your attention`,
             claimNumber: notification.claimNumber,
           });
         } else if (
@@ -413,6 +432,20 @@ export class toolbar_2Component {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_oyctM1WIv8S3DcIA');
+    }
+  }
+
+  async sd_hIbpsd5Kwt9ZDjAA(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_hIbpsd5Kwt9ZDjAA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hIbpsd5Kwt9ZDjAA');
     }
   }
 

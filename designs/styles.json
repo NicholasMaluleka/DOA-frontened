@@ -7,6 +7,7 @@
         "mat-select-value-text",
         "FullHeight",
         "width20",
+        "width-200px",
         "small-weight",
         "fullWidth",
         "yellow-bg",
@@ -136,13 +137,14 @@
         "kg-green",
         "kg-box",
         "sim-x-small",
+        "sim-border-radius",
         "logclaim-btn",
         "stylish-btn",
         "viewclaim-btn",
         "view-btn",
+        "mat-menu-panel",
         "sim-menu",
         "mat-menu-item",
-        "mat-menu-panel",
         "mat-menu-content",
         "kg-box1",
         "mat-step-header",
@@ -171,6 +173,7 @@
         "icon-hourglass",
         "icon-half-check",
         "icon-globe",
-        "icon-hover"
+        "icon-hover",
+        "sim-link"
     ]
 }

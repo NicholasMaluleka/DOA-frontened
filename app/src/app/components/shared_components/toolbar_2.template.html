@@ -47,19 +47,16 @@
           </div>
         </div>
       </button></mat-menu></div>
-  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-menu class="padding-5px sim-menu" #notsMenu="matMenu" xPosition="before" #menu="matMenu">
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-menu class="sim-menu width-200px padding-5px" #notsMenu="matMenu" xPosition="before" #menu="matMenu">
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="!page.notifications?.length">
         <div class="blue-color sim-x-small">
           You currently have no notifications</div>
       </div>
-      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let message of page.notifications">
-        <div class="blue-color sim-x-small">
-          Claim has been {{message.status}}</div>
-        <div fxLayout="row wrap" class="sim-x-small" fxLayoutAlign="end stretch" [fxShow]="true">
-          <div>
-            {{ message.date | date }}
-          </div>
-        </div>
+      <div fxLayout="column wrap" class="sim-border-radius light-blue-bg" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let message of page.notifications; let indx = index"><small class="COLOR-WHITE sim-x-small">
+          {{message._notification}}. <span class="pointer sim-link" (click)="viewClaim()">{{message.claimNumber}}</span>.</small>
+        <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true"><small class="COLOR-WHITE sim-x-small">
+            {{ message.date | date }}</small></div>
+        <hr *ngIf="indx !== page.notifications.length -1" class="no-margin fullWidth COLOR-WHITE">
       </div>
     </mat-menu></div>
 </div>

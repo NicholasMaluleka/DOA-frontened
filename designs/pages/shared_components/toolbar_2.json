@@ -336,8 +336,8 @@
         "flow_type": "sync",
         "functionName": "editProfile",
         "category": "General",
-        "x": 145,
-        "y": 760,
+        "x": 105,
+        "y": 680,
         "wires": [
             [
                 "sd_oyctM1WIv8S3DcIA"
@@ -383,8 +383,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_oyctM1WIv8S3DcIA",
         "category": "Dialog",
-        "x": 265,
-        "y": 760,
+        "x": 205,
+        "y": 680,
         "wires": [
             [],
             [],
@@ -525,7 +525,7 @@
                 "textIp": "path",
                 "typedIpValue": {
                     "type": "str",
-                    "value": "get-users"
+                    "value": "get-notification"
                 }
             }
         ],
@@ -669,7 +669,7 @@
         ],
         "functionName": "sd_9ScCxX3UHpaaXEJa",
         "category": "Function",
-        "x": 545,
+        "x": 565,
         "y": 40,
         "wires": [
             [
@@ -709,10 +709,11 @@
         "serviceImportPath": "./",
         "startName": "getInitials",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_qGoGH6Y3O30tcSxQ",
         "category": "General",
-        "x": 625,
+        "x": 645,
         "y": 40,
         "wires": [
             []
@@ -792,7 +793,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
+        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\nlet notifications = page.notifications\n\npage.notifications = []\n\nconsole.log(\"NOT 2: \", notifications)\n\nnotifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
         "functionName": "sd_fGZJ3s4kXamNriT5",
         "category": "Function",
         "x": 485,
@@ -801,6 +802,50 @@
             [
                 "sd_9ScCxX3UHpaaXEJa"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_gS2glZfxWSU6jse5",
+        "type": "PageStart",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "viewClaim",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "viewClaim",
+        "category": "General",
+        "x": 105,
+        "y": 780,
+        "wires": [
+            [
+                "sd_hIbpsd5Kwt9ZDjAA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbar_2Component"
+    },
+    {
+        "id": "sd_hIbpsd5Kwt9ZDjAA",
+        "type": "Navigation",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/claim-register",
+        "functionName": "sd_hIbpsd5Kwt9ZDjAA",
+        "category": "Navigation",
+        "x": 205,
+        "y": 780,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

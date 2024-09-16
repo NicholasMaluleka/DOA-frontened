@@ -45,6 +45,10 @@ bh-contact_us{
     width: 5%;
 }
 
+.width-200px {
+    width: 180px
+}
+
 // Juska
  
 // End Juska
@@ -778,7 +782,11 @@ body{
 }
 
 .sim-x-small {
-    font-size: x-small;
+    font-size: xx-small;
+}
+
+.sim-border-radius {
+    border-radius: 10px;
 }
 
 .logclaim-btn{
@@ -834,6 +842,11 @@ a {
     @extend %shared-stylish-hover
 }
 
+.mat-menu-panel {
+    background-color: $light-blue !important;
+    color: white;
+}
+
 .sim-menu {
     button.mat-menu-item {
         height: 20px;
@@ -843,13 +856,15 @@ a {
 
     .mat-menu-panel {
         min-height: 0px !important;
+        background-color: $light-blue !important;
     }
 
     .mat-menu-content:not(:empty) {
         max-height: 50px !important;
+        padding: 0px;
     }
-    .mat-menu-content::-webkit-scrollbar {
-       width: 10px;
+    .mat-menu-content:not(:empty)::-webkit-scrollbar {
+       width: 100px !important;
     }
 }
 
@@ -1088,5 +1103,11 @@ a {
     &:hover {
         background-color: $teal-blue;
         color: $light-grey;
+    }
+}
+
+.sim-link {
+    &:hover {
+        text-decoration: underline solid $teal-blue;
     }
 }
