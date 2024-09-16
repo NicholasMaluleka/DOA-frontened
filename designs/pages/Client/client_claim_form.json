@@ -210,7 +210,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "forms",
-        "script": "// decesed details\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.name),\n      lastName: new FormControl( ''),\n      idNum :new FormControl( ''),\n       gender: new FormControl(''),\n       \n    })\n    // documents\n  // page.idClaimer=new FormGroup({\n  //   filename: new FormControl(\"\"),\n  //   })\n  //    page.idDecesed =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.bi1662 =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.deathCertificate =new FormGroup({\n   \n    \n     \n  //   })\n  //     page.bankDetails =new FormGroup({\n   \n    \n     \n  //   })\n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.user.firstName),\n    lastName:new FormControl(page.user.lastName),\n    idNum:new FormControl( page.user.idNumber),\n    gender:new FormControl( page.user.gender),\n    packageType : new FormControl( page.user.packageType),\n    payoutAmount :new FormControl( ''),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    // idClaimer: page.idClaimer,\n    idClaimer2:new FormControl(''),\n    \n     idDeceased2:new FormControl(''),\n   \n     bi16632:new FormControl(''),\n    // deathCertificate:page.deathCertificate,\n    deathCetificatify2:new FormControl(''),\n    // bankDetails :page.bankDetails,\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl ()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
+        "script": "// decesed details\npage.deceased = new FormGroup({\n      firstName :new FormControl(page.name),\n      lastName: new FormControl( ''),\n      idNum :new FormControl( ''),\n       gender: new FormControl(''),\n        dateOfDeath:new FormControl( '',[Validators.required])\n    })\n   \n    //claims form with all information including claimer details\npage.policyClaimsForm = new FormGroup({\n    firstName :new FormControl(page.user.firstName),\n    lastName:new FormControl(page.user.lastName),\n    idNum:new FormControl( page.user.idNumber),\n    gender:new FormControl( page.user.gender),\n    packageType : new FormControl( page.user.packageType),\n    payoutAmount :new FormControl( ''),\n    deceased: page.deceased, \n    deceased2 :new FormControl(''),\n    idClaimer2:new FormControl(''),\n     idDeceased2:new FormControl(''),\n     bi16632:new FormControl(''),\n    deathCetificatify2:new FormControl(''),\n     bankDetails2:new FormControl(''),\n     status:new FormControl('pending'),\n     depsId : new FormControl ()\n })\n\n page.date = new Date()\n\n   console.log(\"page.deceased\", page.deceased)         \n            \n              \nbh.url = page.ssdUrl + 'get-users'",
         "functionName": "forms",
         "category": "Function",
         "x": 865,
@@ -1014,8 +1014,8 @@
         "flow_type": "sync",
         "functionName": "populate",
         "category": "General",
-        "x": 1105,
-        "y": 120,
+        "x": 1265,
+        "y": 40,
         "wires": [
             [
                 "sd_UkF2eDdSpGZvRsan"
@@ -1035,8 +1035,8 @@
         "script": "\npage.deceased.patchValue ({\n      firstName :page.policyClaimsForm.value.depsId.firstName,\n      lastName:  page.policyClaimsForm.value.depsId.lastName,\n      idNum :page.policyClaimsForm.value.depsId.idNumber,\n       gender:page.policyClaimsForm.value.depsId.gender ,\n       \n    })",
         "functionName": "sd_UkF2eDdSpGZvRsan",
         "category": "Function",
-        "x": 1205,
-        "y": 120,
+        "x": 1485,
+        "y": 60,
         "wires": [
             [
                 "sd_DbkzD1Oop0ECjWgI"
@@ -1219,59 +1219,6 @@
             [
                 "sd_l3dQSb0lFtyKLJ9h"
             ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "client_claim_formComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_92tVWfrP7H1u0NES",
-        "type": "PageStart",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "idDisclaimer",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "e",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "idDisclaimer",
-        "category": "General",
-        "x": 65,
-        "y": 140,
-        "wires": [
-            [
-                "sd_1vaiP5kxticWztLy"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "client_claim_formComponent"
-    },
-    {
-        "id": "sd_1vaiP5kxticWztLy",
-        "type": "Script",
-        "z": "sd_w93AbqYMQ4LWwqYF",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "let file:File;\npage.input = bh.input.e.target as HTMLInputElement;\nfile = page.input.files[0];\npage.file = file;\n\n\n// this.goToBackend1()",
-        "functionName": "sd_1vaiP5kxticWztLy",
-        "category": "Function",
-        "x": 165,
-        "y": 140,
-        "wires": [
-            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
