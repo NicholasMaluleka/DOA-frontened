@@ -1,4 +1,18 @@
 <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div>
-    within waiting period</div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFill>
+    <div fxLayout="column wrap" class="full-height full-width" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="row wrap" class="full-width" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/images/alert.svg" style="width: 100px; height: 86px;"></div>
+      <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+        <div style="font-size: xx-large" class="no-margin">
+          <h1 class="teal-color no-margin">SORRY!</h1>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="margin-left-1em full-width" fxLayoutAlign="center center" [fxShow]="true">
+        <div class="margin-right-15em margin-left-1em full-width">
+          <h3 class="teal-color">You cannot make a claim your account is still within the trial period.</h3>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true"><button mat-button class="yellow-bg box-shadow" (click)="close()">back</button></div>
+    </div>
+  </div>
 </div>
