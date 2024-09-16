@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-deactivated_accountComponent
+import { deactivated_accountComponent } from '../components/Authentication/deactivated_account.component';
 //CORE_REFERENCE_IMPORT-not_liable_popUpComponent
 import { not_liable_popUpComponent } from '../components/search Policy/not_liable_popUp.component';
 //CORE_REFERENCE_IMPORT-view_detailsComponent
@@ -144,6 +146,8 @@ export const appDeclarations = [
   toolbar_2Component,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_view_claimComponent
   client_view_claimComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deactivated_accountComponent
+  deactivated_accountComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_profileComponent
   edit_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent

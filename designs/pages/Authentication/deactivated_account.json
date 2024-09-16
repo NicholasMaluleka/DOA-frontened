@@ -1,0 +1,107 @@
+[
+    {
+        "id": "sd_L2FHAcgYaeMEBSha",
+        "type": "tab",
+        "createdDate": "2024-09-13T13:42:23.132Z",
+        "label": "deactivated_account",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "deactivated_accountComponent"
+    },
+    {
+        "id": "sd_msN30qTp5BtyqpDg",
+        "type": "OnInit",
+        "z": "sd_L2FHAcgYaeMEBSha",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_msN30qTp5BtyqpDg",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_0vvYStOku8M1qqYm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deactivated_accountComponent"
+    },
+    {
+        "id": "sd_0vvYStOku8M1qqYm",
+        "type": "PageVariables",
+        "z": "sd_L2FHAcgYaeMEBSha",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_0vvYStOku8M1qqYm",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deactivated_accountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uC2qFcxqD9N6NFNN",
+        "type": "CloseDialog",
+        "z": "sd_L2FHAcgYaeMEBSha",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.result",
+        "functionName": "sd_uC2qFcxqD9N6NFNN",
+        "category": "Dialog",
+        "x": 165,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deactivated_accountComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_U8Z7w7xLtX7M82tf",
+        "type": "PageStart",
+        "z": "sd_L2FHAcgYaeMEBSha",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "close",
+        "category": "General",
+        "x": 60,
+        "y": 120,
+        "wires": [
+            [
+                "sd_uC2qFcxqD9N6NFNN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deactivated_accountComponent"
+    }
+]
