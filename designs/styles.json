@@ -1,5 +1,7 @@
 {
     "classes": [
+        "close",
+        "click-me",
         "FullHeight",
         "width20",
         "small-weight",

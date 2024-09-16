@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-deactivated_accountComponent
+import { deactivated_accountComponent } from '../components/Authentication/deactivated_account.component';
 //CORE_REFERENCE_IMPORT-edit_profileComponent
 import { edit_profileComponent } from '../components/Client/edit_profile.component';
 //CORE_REFERENCE_IMPORT-password_pop_upComponent
@@ -122,6 +124,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deactivated_accountComponent
+  deactivated_accountComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_profileComponent
   edit_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent
