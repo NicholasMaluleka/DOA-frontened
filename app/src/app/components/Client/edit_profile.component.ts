@@ -64,13 +64,13 @@ export class edit_profileComponent {
     }
   }
 
-  update(...others) {
+  update(form: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = {};
+      bh.input = { form };
       bh.local = {};
       bh = this.sd_YLr6e7qTr0v7cYmV(bh);
       //appendnew_next_update
@@ -246,7 +246,7 @@ export class edit_profileComponent {
       page.ben2 = page.userData.beneficaries[1];
 
       //check if the form has data so that we can display the button
-      if (page.ben2.firstName != '') {
+      if (page.ben2?.firstName != '') {
         page.showbeneficaries1Form = true;
         page.hideIcon = false;
       } else {
@@ -311,7 +311,7 @@ export class edit_profileComponent {
       }
 
       page.formdata = new FormGroup({
-        firstName: new FormControl(page.userData?.firstName || '', [
+        firstName: new FormControl(page.userData?.firstName, [
           Validators.required,
         ]),
         lastName: new FormControl(page.userData?.lastName || '', [
@@ -342,6 +342,8 @@ export class edit_profileComponent {
           Validators.required,
         ]),
       });
+
+      console.log('FORM :', page.formdata);
 
       page.beneficariesForm = new FormGroup({
         firstName: new FormControl(page.ben1?.firstName || '', [
@@ -575,7 +577,7 @@ export class edit_profileComponent {
         body: bh.structuredData,
       };
       this.page.results = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_S3hSIuErjFzguoK6(bh);
+      bh = this.sd_GjKcbwDGAHK9WeuX(bh);
       //appendnew_next_sd_pcFebE53orviGldn
       return bh;
     } catch (e) {
@@ -583,27 +585,19 @@ export class edit_profileComponent {
     }
   }
 
-  sd_S3hSIuErjFzguoK6(bh) {
+  sd_GjKcbwDGAHK9WeuX(bh) {
     try {
       const page = this.page;
-      console.log('results', page.results);
+      bh.structuredData.role = ' client';
 
-      bh = this.sd_vGtjziZA586ysjXp(bh);
-      //appendnew_next_sd_S3hSIuErjFzguoK6
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_S3hSIuErjFzguoK6');
-    }
-  }
-
-  sd_vGtjziZA586ysjXp(bh) {
-    try {
-      sessionStorage.setItem('userData', JSON.stringify(bh.structuredData));
+      if (page.results.acknowledged == true) {
+        sessionStorage.setItem('user', JSON.stringify(bh.structuredData));
+      }
       bh = this.sd_G19PY66JzVKcGxtc(bh);
-      //appendnew_next_sd_vGtjziZA586ysjXp
+      //appendnew_next_sd_GjKcbwDGAHK9WeuX
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_vGtjziZA586ysjXp');
+      return this.errorHandler(bh, e, 'sd_GjKcbwDGAHK9WeuX');
     }
   }
 
@@ -613,9 +607,7 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_nxWSj9bRtG2lyhli(bh);
       //appendnew_next_sd_G19PY66JzVKcGxtc
       return bh;

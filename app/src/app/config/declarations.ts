@@ -152,7 +152,6 @@ export const appDeclarations = [
   pop_client_waitinComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-toolbar_2Component
   toolbar_2Component,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_view_claimComponent
   client_view_claimComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deactivated_accountComponent
   deactivated_accountComponent,
