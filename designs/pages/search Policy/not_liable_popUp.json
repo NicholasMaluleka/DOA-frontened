@@ -1,0 +1,347 @@
+[
+    {
+        "id": "sd_TR0TQjMMISFiPvpl",
+        "type": "tab",
+        "createdDate": "2024-09-13T09:50:24.030Z",
+        "label": "not_liable_popUp",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "not_liable_popUpComponent"
+    },
+    {
+        "id": "sd_vAEJ7x7wX3VsNnyY",
+        "type": "OnInit",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_vAEJ7x7wX3VsNnyY",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_XY12q4d53x5iqhRe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "not_liable_popUpComponent"
+    },
+    {
+        "id": "sd_XY12q4d53x5iqhRe",
+        "type": "PageVariables",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_XY12q4d53x5iqhRe",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_lS83v7VUWTNHJP19"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "not_liable_popUpComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lS83v7VUWTNHJP19",
+        "type": "PageCallService",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_mZtkuYkkTI8tLdyV",
+            "type": "tab",
+            "createdDate": "2024-08-28T09:36:49.759Z",
+            "label": "variables",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_sr5Ud7ts2hkaks9g",
+            "flowName": "getVariable"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "this.page",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "this.page.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/variables",
+        "startName": "getVariable",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_lS83v7VUWTNHJP19",
+        "category": "General",
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "sd_nIBEkUJ06L1x5eST"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "not_liable_popUpComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nIBEkUJ06L1x5eST",
+        "type": "Log",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.result",
+        "functionName": "sd_nIBEkUJ06L1x5eST",
+        "category": "General",
+        "x": 380,
+        "y": 60,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "not_liable_popUpComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UKizHnzOgtYKw3H3",
+        "type": "PageStart",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "close",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "close",
+        "category": "General",
+        "x": 60,
+        "y": 180,
+        "wires": [
+            [
+                "sd_q2pkm2A4LJsq5EtE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "not_liable_popUpComponent"
+    },
+    {
+        "id": "sd_q2pkm2A4LJsq5EtE",
+        "type": "CloseDialog",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.result",
+        "functionName": "sd_q2pkm2A4LJsq5EtE",
+        "category": "Dialog",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "sd_CbMWHQ8FiBKb759g"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "result",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "not_liable_popUpComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CbMWHQ8FiBKb759g",
+        "type": "OpenDialog",
+        "z": "sd_TR0TQjMMISFiPvpl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_DhHQUCCXlUUb7ZvE",
+            "label": "searchPolicy"
+        },
+        "relativePath": "app/components/search Policy/searchPolicy",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "\"40%\"",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_CbMWHQ8FiBKb759g",
+        "category": "Dialog",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "str",
+                "value": "40%",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "not_liable_popUpComponent",
+        "generated": true
+    }
+]

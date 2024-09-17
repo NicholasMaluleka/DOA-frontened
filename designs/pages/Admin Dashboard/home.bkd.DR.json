@@ -2202,28 +2202,27 @@
                         }
                     ]
                 },
-                "ddf3a244-3ebe-60fd-be6f-478422c8d5bf": {
+                "57ed0492-1de7-dc0d-aa06-92ab90d5e772": {
                     "paletteKey": "ng-table-column",
                     "parentEditorKey": "99eecd70-5d13-f169-3009-91cfd1e5de2c",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "true",
-                    "commentid": "1724280245625",
+                    "commentid": null,
                     "designerReference": [
                         {
                             "_key": "Header Label",
-                            "_value": "Status",
+                            "_value": "Policy Number",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "matSortHeaderColumn",
-                            "_value": "",
+                            "_value": "mat-sort-header",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "Mapping",
-                            "_value": "Active",
+                            "_value": "{{table.policyNumber}}",
                             "_type": "ma",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -2249,27 +2248,28 @@
                         }
                     ]
                 },
-                "57ed0492-1de7-dc0d-aa06-92ab90d5e772": {
+                "ddf3a244-3ebe-60fd-be6f-478422c8d5bf": {
                     "paletteKey": "ng-table-column",
                     "parentEditorKey": "99eecd70-5d13-f169-3009-91cfd1e5de2c",
                     "isAdvancedChildComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
                             "_key": "Header Label",
-                            "_value": "Policy Number",
+                            "_value": "Policy Status",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "matSortHeaderColumn",
-                            "_value": "mat-sort-header",
+                            "_value": "",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "Mapping",
-                            "_value": "{{table.policyNumber}}",
+                            "_value": "{{table.policyActive}}",
                             "_type": "ma",
                             "_attrDef": "p",
                             "_useAsLabel": true

@@ -310,9 +310,19 @@ export class homeComponent implements OnChanges, AfterViewInit {
       });
 
       page.table = bh.tableDataSource;
+      page.table.policyActive = page.policyActiveStatus;
+
+      page.table.forEach((item) => {
+        if (item.policyActive === true) {
+          item.policyActive = 'Active';
+        } else {
+          item.policyActive = 'Deactivated';
+        }
+      });
+
       page.backupapplicationsDatasource = page.table;
       page.table.paginator = page.paginator;
-      console.log('bh', bh);
+      console.log('page.table ', page.table);
 
       bh = this.sd_Q9kpfJBrwcNwMSIq(bh);
       //appendnew_next_sd_sQz2RUgYmK2eNRYZ
