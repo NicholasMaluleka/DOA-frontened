@@ -595,14 +595,14 @@ export class claims_registerComponent implements AfterViewInit {
       page.docs = [];
 
       page.ids = [
-        { value: page.deparray[0], viewValue: page.deparray[0].idNumber },
-        { value: page.deparray[1], viewValue: page.deparray[1].idNumber },
-        { value: page.deparray[2], viewValue: page.deparray[2].idNumber },
+        { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
+        { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
+        { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
       ];
 
       page.beIds = [
-        { value: page.benarray[0], viewValue: page.benarray[0].idNumber },
-        { value: page.benarray[1], viewValue: page.benarray[1].idNumber },
+        { value: page.benarray[0], viewValue: page.benarray[0]?.idNumber },
+        { value: page.benarray[1], viewValue: page.benarray[1]?.idNumber },
       ];
       page.year = parseInt(new Date().getFullYear().toString().slice(-2));
 
@@ -1737,7 +1737,9 @@ export class claims_registerComponent implements AfterViewInit {
         this.sdService.getPathAndQParamsObj('/dashboard/claims');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_nZ3fyQZGNTByR3Yl
       return bh;
     } catch (e) {

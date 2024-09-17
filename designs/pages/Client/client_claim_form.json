@@ -477,7 +477,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "ben and depen array for selectors",
-        "script": "\n// Dependency\npage.deparray = page.user.dependencies\n// selector deps list\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0].idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1].idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2].idNumber}\n];\n\n\n",
+        "script": "\n// Dependency\npage.deparray = page.user.dependencies\n// selector deps list\npage.ids = [\n   {value: page.deparray[0], viewValue: page.deparray[0]?.idNumber},\n   {value: page.deparray[1], viewValue: page.deparray[1]?.idNumber},\n   {value: page.deparray[2], viewValue: page.deparray[2]?.idNumber}\n];\n\n\n",
         "functionName": "benAndDepenArrayForSelectors",
         "category": "Function",
         "x": 745,
