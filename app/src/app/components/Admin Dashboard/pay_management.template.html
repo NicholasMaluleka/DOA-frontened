@@ -1,0 +1,75 @@
+<div fxLayout="column wrap" class="full-width" fxLayoutAlign="start center" [fxShow]="true" fxFill>
+  <div fxLayout="row wrap" class="full-width" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="column wrap" class="width-30 margin-top-10px margin-left-1em search" fxLayoutAlign="start stretch" [fxShow]="true">
+      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+        <input matInput type="Search" placeholder="Search" [required]="false" (keydown)="onFilter($event)">
+        <mat-icon matPrefix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="space-between stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="blue-color" fxLayoutAlign="center stretch" [fxShow]="true">
+          <div>
+          </div>
+        </div>
+        <div fxLayout="column wrap" class="padding-5px filter-cards" fxLayoutAlign="start stretch" [fxShow]="true" (click)="cardsFilter(&apos;Package 1&apos;)">
+          <div class="padding-5px blue-color">
+            Paid</div>
+        </div>
+        <div fxLayout="column wrap" class="filter-cards" fxLayoutAlign="start stretch" [fxShow]="true" (click)="cardsFilter(&apos;Package 2&apos;)">
+          <div class="padding-5px blue-color">
+            Missed</div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column wrap" class="width-49" fxLayoutAlign="center end" [fxShow]="true"><mat-form-field style="margin-top: 1em" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+        <mat-label>Month</mat-label>
+        <mat-select placeholder="Event" [required]="false">
+          <mat-option [value]="&apos;January&apos;" disabled="false">January</mat-option><mat-option [value]="&apos;February&apos;" disabled="false">February</mat-option><mat-option [value]="&apos;March&apos;" disabled="false">March</mat-option><mat-option [value]="&apos;April&apos;" disabled="false">April</mat-option><mat-option [value]="&apos;May&apos;" disabled="false">May</mat-option><mat-option [value]="&apos;June&apos;" disabled="false">June</mat-option><mat-option [value]="&apos;July&apos;" disabled="false">July</mat-option><mat-option [value]="&apos;August&apos;" disabled="false">August</mat-option><mat-option [value]="&apos;September&apos;" disabled="false">September</mat-option><mat-option [value]="&apos;October&apos;" disabled="false">October</mat-option><mat-option [value]="&apos;November&apos;" disabled="false">November</mat-option><mat-option [value]="&apos;December&apos;" disabled="false">December</mat-option>
+        </mat-select>
+
+      </mat-form-field></div>
+  </div>
+  <div fxLayout="row wrap" style="margin-bottom: 1em;" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.table.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" class="rotate" width="90%"></div>
+  <div fxLayout="row wrap" class="full-width" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.table.length &gt; 0">
+    <div fxLayout="column" style="width:98%; border: 1.5px solid #124e52;">
+      <table mat-table [dataSource]="page.table" *ngIf="page.table.length &gt; 0" matSort class="table-width-fix">
+        <tr mat-header-row *matHeaderRowDef="[&apos;name&apos;,&apos;surname&apos;,&apos;amount&apos;,&apos;policyNumber&apos;,&apos;date&apos;,&apos;af49d494-9b3b-db7d-6ff7-3c53fb4d255e&apos;]"></tr>
+        <tr mat-row (click)="setClientData(row)" *matRowDef="let row; columns: [&apos;name&apos;,&apos;surname&apos;,&apos;amount&apos;,&apos;policyNumber&apos;,&apos;date&apos;,&apos;af49d494-9b3b-db7d-6ff7-3c53fb4d255e&apos;];"></tr>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+          <td mat-cell *matCellDef="let table; let i = index;">{{table.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="surname">
+          <th mat-header-cell *matHeaderCellDef>Surname</th>
+          <td mat-cell *matCellDef="let table; let i = index;">{{table.surname}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>amount</th>
+          <td mat-cell *matCellDef="let table; let i = index;">{{table.amount}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="policyNumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Policy Number</th>
+          <td mat-cell *matCellDef="let table; let i = index;">{{table.policyNumber}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>date</th>
+          <td mat-cell *matCellDef="let table; let i = index;">{{table.date}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="af49d494-9b3b-db7d-6ff7-3c53fb4d255e">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+          <td mat-cell *matCellDef="let table; let i = index;" (rowclick)="viewPayments(row)"><mat-icon class="pointer" [matMenuTriggerFor]="menu" [matMenuTriggerData]="{table: table}" (click)="sendUser(row)">more_vert</mat-icon></td>
+        </ng-container>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
+      </mat-paginator>
+
+    </div>
+  </div>
+</div>

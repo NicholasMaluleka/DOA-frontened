@@ -75,6 +75,10 @@
                 {
                     "path": "payments_d",
                     "component": "payments_dComponent"
+                },
+                {
+                    "path": "pay_management",
+                    "component": "pay_managementComponent"
                 }
             ],
             "canActivate": {

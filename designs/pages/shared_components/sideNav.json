@@ -219,7 +219,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/home\"},\n    {label: \"Claims\", icon: \"description\", route: \"/dashboard/claims\"},\n    {label: \"Add a client\", icon: \"edit\", route:\"/dashboard/register\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n    // {label: \"Reports\", icon: \"folder_open\"},\n    // {label: \"Audit Logs\", icon: \"trending_up\"}\n]",
+        "script": "page.sideNav = [\n    {label: \"Home\", icon: \"home\", route: \"/dashboard/home\"},\n    {label: \"Claims\", icon: \"description\", route: \"/dashboard/claims\"},\n    {label: \"Add a client\", icon: \"edit\", route:\"/dashboard/register\"},\n    {label: \"Schedules\", icon: \"today\", route: \"/dashboard/schedules\"},\n    {label: \"Payments\", icon: \"payments\", route:\"/dashboard/pay_management\"},\n\n    // {label: \"Reports\", icon: \"folder_open\"},\n    // {label: \"Audit Logs\", icon: \"trending_up\"}\n]",
         "functionName": "sd_b3dzn7MpxnUPDSJw",
         "category": "Function",
         "x": 465,

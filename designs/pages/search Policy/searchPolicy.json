@@ -246,7 +246,7 @@
         "y": 160,
         "wires": [
             [
-                "sd_uK9SFyo7OgJzOK8J"
+                "sd_FQaTWhsdsnTZhqFY"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -295,7 +295,7 @@
         "path": "/dashboard/claim-register",
         "functionName": "sd_GrC07KTLi0xBLPf5",
         "category": "Navigation",
-        "x": 765,
+        "x": 845,
         "y": 200,
         "wires": [
             [
@@ -328,7 +328,7 @@
         "resultMapping": {},
         "functionName": "sd_uK9SFyo7OgJzOK8J",
         "category": "Storage",
-        "x": 645,
+        "x": 745,
         "y": 200,
         "wires": [
             [
@@ -350,7 +350,7 @@
         "data": "this.page.clients",
         "functionName": "sd_IO4IqWL9nrM5vCKf",
         "category": "Dialog",
-        "x": 865,
+        "x": 945,
         "y": 200,
         "wires": [
             []
@@ -396,11 +396,14 @@
             [
                 "sd_kPBY0flPvVW2qs8E"
             ],
-            []
+            [
+                "sd_M3Mx5SO6Ewwd84IC"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_kPBY0flPvVW2qs8E",
@@ -436,8 +439,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_tWBNhkIBx5C151la",
@@ -481,14 +485,17 @@
         "script": "page.total = page.clients[0].trialCount - 6\n\n\n////// DO NOT DELETE THIS!!!!!!!\nconst paymentDate = page.clients[0].paymentDate;\nconst dateObject = new Date(paymentDate); \n// console.log(\"CLient Date ==>\", dateObject.toLocaleDateString())",
         "functionName": "sd_M3Mx5SO6Ewwd84IC",
         "category": "Function",
-        "x": 665,
-        "y": 280,
+        "x": 605,
+        "y": 220,
         "wires": [
-            []
+            [
+                "sd_eELT5pMxSfee5Pj1"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_eELT5pMxSfee5Pj1",
@@ -516,17 +523,20 @@
         "outputs": 2,
         "functionName": "sd_eELT5pMxSfee5Pj1",
         "category": "Function",
-        "x": 865,
-        "y": 320,
+        "x": 665,
+        "y": 280,
         "wires": [
-            [],
+            [
+                "sd_uK9SFyo7OgJzOK8J"
+            ],
             [
                 "sd_7yMY6xtRM932937O"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_7yMY6xtRM932937O",
@@ -587,8 +597,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_ZVCUNk8rfZjdDM9Z",
@@ -742,8 +753,9 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     },
     {
         "id": "sd_8VXYA6N57Vm8tm0h",
@@ -770,7 +782,8 @@
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "searchPolicyComponent"
+        "generateNext": false,
+        "serviceName": "searchPolicyComponent",
+        "generated": true
     }
 ]

@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-pay_managementComponent
+import { pay_managementComponent } from '../components/Admin Dashboard/pay_management.component';
 //CORE_REFERENCE_IMPORT-payments_dComponent
 import { payments_dComponent } from '../components/Director/payments_d.component';
 //CORE_REFERENCE_IMPORT-not_liable_popUpComponent
@@ -136,6 +138,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-pay_managementComponent
+  pay_managementComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-payments_dComponent
   payments_dComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-not_liable_popUpComponent
@@ -272,6 +276,7 @@ export const appRoutes = [
       { path: 'director_claims', component: director_claimsComponent },
       { path: 'client_view_claim', component: client_view_claimComponent },
       { path: 'payments_d', component: payments_dComponent },
+      { path: 'pay_management', component: pay_managementComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
