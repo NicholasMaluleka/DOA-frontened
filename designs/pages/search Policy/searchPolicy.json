@@ -293,17 +293,10 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/claim-register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_GrC07KTLi0xBLPf5",
         "category": "Navigation",
-        "x": 965,
-        "y": 160,
+        "x": 845,
+        "y": 200,
         "wires": [
             [
                 "sd_IO4IqWL9nrM5vCKf"
@@ -335,8 +328,8 @@
         "resultMapping": {},
         "functionName": "sd_uK9SFyo7OgJzOK8J",
         "category": "Storage",
-        "x": 845,
-        "y": 160,
+        "x": 745,
+        "y": 200,
         "wires": [
             [
                 "sd_GrC07KTLi0xBLPf5"
@@ -357,8 +350,8 @@
         "data": "this.page.clients",
         "functionName": "sd_IO4IqWL9nrM5vCKf",
         "category": "Dialog",
-        "x": 1065,
-        "y": 160,
+        "x": 945,
+        "y": 200,
         "wires": [
             []
         ],
@@ -492,7 +485,7 @@
         "script": "page.total = page.clients[0].trialCount - 6\n\n\n////// DO NOT DELETE THIS!!!!!!!\nconst paymentDate = page.clients[0].paymentDate;\nconst dateObject = new Date(paymentDate); \n// console.log(\"CLient Date ==>\", dateObject.toLocaleDateString())",
         "functionName": "sd_M3Mx5SO6Ewwd84IC",
         "category": "Function",
-        "x": 660,
+        "x": 605,
         "y": 220,
         "wires": [
             [
@@ -530,8 +523,8 @@
         "outputs": 2,
         "functionName": "sd_eELT5pMxSfee5Pj1",
         "category": "Function",
-        "x": 760,
-        "y": 240,
+        "x": 665,
+        "y": 280,
         "wires": [
             [
                 "sd_uK9SFyo7OgJzOK8J"
@@ -596,8 +589,8 @@
         "accept_csd": true,
         "functionName": "sd_7yMY6xtRM932937O",
         "category": "General",
-        "x": 845,
-        "y": 320,
+        "x": 905,
+        "y": 380,
         "wires": [
             [
                 "sd_8VXYA6N57Vm8tm0h"
@@ -644,8 +637,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_ZVCUNk8rfZjdDM9Z",
         "category": "Dialog",
-        "x": 1025,
-        "y": 320,
+        "x": 1085,
+        "y": 380,
         "wires": [
             [],
             [],
@@ -774,8 +767,8 @@
         "data": "this.page.clients",
         "functionName": "sd_8VXYA6N57Vm8tm0h",
         "category": "Dialog",
-        "x": 925,
-        "y": 320,
+        "x": 985,
+        "y": 380,
         "wires": [
             [
                 "sd_ZVCUNk8rfZjdDM9Z"
