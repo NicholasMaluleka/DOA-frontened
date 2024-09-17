@@ -77,13 +77,13 @@ export class pay_managementComponent implements AfterViewInit {
     }
   }
 
-  cardsFilter(plan: any = undefined, ...others) {
+  cardsFilter(event: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = { plan };
+      bh.input = { event };
       bh.local = {};
       bh = this.sd_7diO4Gn0urLXDAf6(bh);
       //appendnew_next_cardsFilter
@@ -331,9 +331,9 @@ export class pay_managementComponent implements AfterViewInit {
                   .toString()
                   .toLowerCase()
                   .includes(searchValue)) || // Convert policyNumber to string
-              (row.packageType &&
-                row.packageType.toLowerCase().includes(searchValue)) ||
-              (row.date && row.date.toLowerCase().includes(searchValue))
+              (row.event && row.event.toLowerCase().includes(searchValue)) ||
+              (row.date && row.date.toLowerCase().includes(searchValue)) ||
+              (row.loggedBY && row.loggedBY.toLowerCase().includes(searchValue))
             );
           }
         );
@@ -360,8 +360,8 @@ export class pay_managementComponent implements AfterViewInit {
       const filteredResults = page.backupapplicationsDatasource.filter(
         (row) => {
           return (
-            row.packageType &&
-            row.packageType.toLowerCase() === bh.input.plan.toLowerCase()
+            row.event &&
+            row.event.toLowerCase() === bh.input.event.toLowerCase()
           );
         }
       );
