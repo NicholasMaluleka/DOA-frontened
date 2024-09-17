@@ -65,36 +65,17 @@
 
               </mat-form-field>
             </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-form-field class="width-49" [appearance]="&apos;legacy&apos;">
+                <mat-label>Date of death</mat-label>
+                <input matInput placeholder="Date of Death" [matDatepicker]="picker" formControlName="dateOfDeath" [max]="page.date" [disabled]="false" readonly="true">
+                <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+                <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+                <mat-error align="start" *ngIf="page.deceased.controls.dateOfDeath?.errors?.required">Date of Death is required</mat-error>
+              </mat-form-field>
+            </div>
           </form>
           <div fxLayout="column " fxLayoutAlign="start stretch" [fxShow]="true">
-            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
-                <b>Required Documents</b></label></div>
-            <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;">
-
-              <div>
-
-                <a href="{{page.fileUR}}{{page[&apos;IDfile&apos;]}}" target="_blank"> claimers ID:{{page.claim.ID}}</a>
-              </div>
-
-              <div>
-
-                <a href="{{page.fileUR}}{{page[&apos;IDDeceasedfile&apos;]}}" target="_blank"> Decesed ID:{{page.claim.IDDeceased}}</a>
-              </div>
-              <div>
-
-                <a href="{{page.fileUR}}{{page[&apos;DeathCertificatefile&apos;]}}" target="_blank">Death Certificate:{{page.claim.DeathCertificate}}</a>
-              </div>
-              <div>
-
-                <a href="{{page.fileUR}}{{page.bi1663file}}" target="_blank"> BI1663 Form:{{page.claim.bi1663}}</a>
-              </div>
-              <div>
-
-                <a href="{{page.fileUR}}{{page[&apos;bankDetailsfile&apos;]}}" target="_blank"> Bank Details:{{page.claim.bankDetails}}</a>
-              </div>
-
-
-            </div>
             <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
               <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
                   <b>Claim Status</b></label></div>
@@ -108,6 +89,34 @@
                   <mat-label>Reason</mat-label>
                 </mat-form-field>
               </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="margin-bottom: 20px; ">
+                <b>Required Documents</b></label></div>
+            <div style="    display: flex;     flex-direction: row;     gap: 53px;     justify-content: center;margin-bottom :10px">
+
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;IDfile&apos;]}}" target="_blank"> <b>claimers ID:</b>{{page.claim.ID}}</a>
+              </div>
+
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;IDDeceasedfile&apos;]}}" target="_blank"><b> Decesed ID: </b>{{page.claim.IDDeceased}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;DeathCertificatefile&apos;]}}" target="_blank"> <b>Death Certificate: </b>{{page.claim.DeathCertificate}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page.bi1663file}}" target="_blank"><b> BI1663 Form: </b>{{page.claim.bi1663}}</a>
+              </div>
+              <div>
+
+                <a href="{{page.fileUR}}{{page[&apos;bankDetailsfile&apos;]}}" target="_blank"><b> Bank Details: </b>{{page.claim.bankDetails}}</a>
+              </div>
+
+
             </div>
           </div>
         </div>
