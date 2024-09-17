@@ -1,5 +1,7 @@
 {
     "classes": [
+        "close",
+        "click-me",
         "dhx_menu_icon",
         "icon_details",
         "icon_edit",

@@ -5,8 +5,10 @@
 
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
+import { deactivated_accountComponent } from 'app/components/Authentication/deactivated_account.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -219,6 +221,15 @@ export class loginComponent {
         )
       ) {
         bh = this.sd_vl5FCxtDP6xLD1fe(bh);
+      } else if (
+        this.sdService.operators['eq'](
+          bh.result.message,
+          'Account Deactivated',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_4gDIpqRUy3EexkSR(bh);
       } else {
         bh = await this.sd_pWnUWcBfELW3hZrp(bh);
       }
@@ -426,6 +437,38 @@ export class loginComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_QCpkMADtxfSqgHXt');
+    }
+  }
+
+  sd_4gDIpqRUy3EexkSR(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Account Deactivated.', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_GdCsTLRtHGBVNBUz(bh);
+      //appendnew_next_sd_4gDIpqRUy3EexkSR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4gDIpqRUy3EexkSR');
+    }
+  }
+
+  sd_GdCsTLRtHGBVNBUz(bh) {
+    try {
+      const deactivated_accountDialog = this.__page_injector__.get(MatDialog);
+      const deactivated_accountDialogRef = deactivated_accountDialog.open(
+        deactivated_accountComponent,
+        { height: '500px', width: '500px' }
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GdCsTLRtHGBVNBUz');
     }
   }
 
