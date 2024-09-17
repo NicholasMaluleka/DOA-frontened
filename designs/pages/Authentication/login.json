@@ -255,11 +255,17 @@
             },
             {
                 "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "Account Deactivated",
+                "vt": "str",
+                "gv": "\"Account Deactivated\""
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 3,
+        "outputs": 4,
         "functionName": "sd_buYzaxDxyjRaVxqv",
         "category": "Function",
         "x": 605,
@@ -273,6 +279,9 @@
             ],
             [
                 "sd_pWnUWcBfELW3hZrp"
+            ],
+            [
+                "sd_4gDIpqRUy3EexkSR"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -310,8 +319,8 @@
         "direction": "ltr",
         "functionName": "sd_DrwpTKFaF2PfX0uE",
         "category": "General",
-        "x": 705,
-        "y": 100,
+        "x": 745,
+        "y": 60,
         "wires": [
             []
         ],
@@ -350,8 +359,8 @@
         "direction": "ltr",
         "functionName": "sd_vl5FCxtDP6xLD1fe",
         "category": "General",
-        "x": 705,
-        "y": 180,
+        "x": 745,
+        "y": 140,
         "wires": [
             []
         ],
@@ -390,7 +399,7 @@
         "direction": "ltr",
         "functionName": "sd_SGMcpcrY4y3UKTKj",
         "category": "General",
-        "x": 905,
+        "x": 1065,
         "y": 360,
         "wires": [
             [
@@ -568,7 +577,7 @@
         "path": "/dashboard/director_home",
         "functionName": "sd_iGycO4jnqKpix0R8",
         "category": "Navigation",
-        "x": 825,
+        "x": 985,
         "y": 360,
         "wires": [
             [
@@ -601,7 +610,7 @@
         "resultMapping": {},
         "functionName": "sd_QCpkMADtxfSqgHXt",
         "category": "Storage",
-        "x": 1025,
+        "x": 1145,
         "y": 360,
         "wires": [
             []
@@ -646,7 +655,7 @@
         "outputs": 3,
         "functionName": "sd_pWnUWcBfELW3hZrp",
         "category": "Function",
-        "x": 700,
+        "x": 865,
         "y": 280,
         "wires": [
             [
@@ -694,7 +703,7 @@
         "direction": "ltr",
         "functionName": "sd_viITVWMo8noRtLLF",
         "category": "General",
-        "x": 905,
+        "x": 1065,
         "y": 280,
         "wires": [
             [
@@ -723,7 +732,7 @@
         "resultMapping": "",
         "functionName": "sd_r58lpYP5NfnKU8WQ",
         "category": "Navigation",
-        "x": 825,
+        "x": 985,
         "y": 280,
         "wires": [
             [
@@ -756,7 +765,7 @@
         "resultMapping": {},
         "functionName": "sd_iiPTp6BRisa9Wz2L",
         "category": "Storage",
-        "x": 1025,
+        "x": 1145,
         "y": 280,
         "wires": [
             []
@@ -796,7 +805,7 @@
         "direction": "ltr",
         "functionName": "sd_51iYvY9GLbmiDMYl",
         "category": "General",
-        "x": 905,
+        "x": 1065,
         "y": 200,
         "wires": [
             [
@@ -825,7 +834,7 @@
         "resultMapping": "",
         "functionName": "sd_amrKD85p0eRgsnBY",
         "category": "Navigation",
-        "x": 825,
+        "x": 985,
         "y": 200,
         "wires": [
             [
@@ -858,11 +867,207 @@
         "resultMapping": {},
         "functionName": "sd_Sxe8LBYbOvGJ2l4m",
         "category": "Storage",
-        "x": 1025,
+        "x": 1145,
         "y": 200,
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_4gDIpqRUy3EexkSR",
+        "type": "SnackBar",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Account Deactivated."
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_4gDIpqRUy3EexkSR",
+        "category": "General",
+        "x": 685,
+        "y": 300,
+        "wires": [
+            [
+                "sd_GdCsTLRtHGBVNBUz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GdCsTLRtHGBVNBUz",
+        "type": "OpenDialog",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_L2FHAcgYaeMEBSha",
+            "label": "deactivated_account"
+        },
+        "relativePath": "app/components/Authentication/deactivated_account",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "\"500px\"",
+        "maxHeight": "\"\"",
+        "minHeight": "this.page",
+        "width": "\"500px\"",
+        "maxWidth": "\"\"",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "sd_GdCsTLRtHGBVNBUz",
+        "category": "Dialog",
+        "x": 765,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "str",
+                "value": "500px",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "str",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "str",
+                "value": "500px",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "str",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "loginComponent",

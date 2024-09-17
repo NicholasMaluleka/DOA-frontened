@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-deactivated_accountComponent
+import { deactivated_accountComponent } from '../components/Authentication/deactivated_account.component';
 //CORE_REFERENCE_IMPORT-pay_managementComponent
 import { pay_managementComponent } from '../components/Admin Dashboard/pay_management.component';
 //CORE_REFERENCE_IMPORT-payments_dComponent
@@ -152,6 +154,8 @@ export const appDeclarations = [
   toolbar_2Component,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-client_view_claimComponent
   client_view_claimComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deactivated_accountComponent
+  deactivated_accountComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-edit_profileComponent
   edit_profileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-password_pop_upComponent
@@ -275,6 +279,7 @@ export const appRoutes = [
       { path: 'director_home', component: Director_homeComponent },
       { path: 'director_claims', component: director_claimsComponent },
       { path: 'client_view_claim', component: client_view_claimComponent },
+      { path: 'view_details', component: view_detailsComponent },
       { path: 'payments_d', component: payments_dComponent },
       { path: 'pay_management', component: pay_managementComponent },
     ],
@@ -287,7 +292,6 @@ export const appRoutes = [
   { path: 'reset-password', component: reset_passwordComponent },
   { path: 'view', component: view_documentComponent },
   { path: 'confirm', component: confirm_identityComponent },
-  { path: 'not-liable', component: not_liable_popUpComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

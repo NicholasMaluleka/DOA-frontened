@@ -33,6 +33,20 @@ $light-blue: #124e52;
     left: 0 !important;
 }
 
+.close:hover{
+   border: none !important;
+}
+
+.click-me{
+    color: $light-blue;
+    text-decoration: underline;
+}
+
+.click-me:hover{
+    cursor: pointer;
+    color: blue;
+}
+
 // angel
 bh-contact_us{
     // background-color:#edf5f5 ;
@@ -79,8 +93,9 @@ bh-contact_us{
 .CARDS{
     border: solid 1px #124e5285;
      border-radius: 10px !important;
-    height: 390px;
+    // height: 390px;
     overflow: hidden;
+      box-sizing: unset !important;
 }
 
 .margin-10{
@@ -90,8 +105,8 @@ bh-contact_us{
     //  border: solid 1px #124e5285;
 
     // padding-bottom: 10px;
-     height: 390px;
-        //  box-sizing: unset !important;
+    //  height: 390px;
+         box-sizing: unset !important;
       border-bottom: 1.5px solid #124e52 !important;
      border-right: 1.5px solid #124e52 !important;
     // border-radius: 10px !important;

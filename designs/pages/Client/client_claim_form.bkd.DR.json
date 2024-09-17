@@ -3616,8 +3616,7 @@
                             "b1545ade-084d-7864-eed9-1dad4fc96893": {
                                 "paletteKey": "FlexLayoutRow",
                                 "parentEditorKey": "3e49165a-50c7-1902-f9f3-14b5e5771468",
-                                "isCommented": "true",
-                                "commentid": "1725810225331",
+                                "commentid": null,
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -3679,8 +3678,7 @@
                                     "paletteKey": "NG-DatePicker",
                                     "parentEditorKey": "b1545ade-084d-7864-eed9-1dad4fc96893",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "true",
-                                    "commentid": "1725810225331",
+                                    "commentid": null,
                                     "designerReference": [
                                         {
                                             "_key": "style",

@@ -4,7 +4,12 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms'; //_splitter_
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -131,21 +136,6 @@ export class client_claim_formComponent {
       //appendnew_next_populate
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_j83i6QAg4YSl7WWy');
-    }
-  }
-
-  idDisclaimer(e: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { e };
-      bh.local = {};
-      bh = this.sd_1vaiP5kxticWztLy(bh);
-      //appendnew_next_idDisclaimer
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_92tVWfrP7H1u0NES');
     }
   }
 
@@ -416,9 +406,9 @@ export class client_claim_formComponent {
       page.deparray = page.user.dependencies;
       // selector deps list
       page.ids = [
-        { value: page.deparray[0], viewValue: page.deparray[0].idNumber },
-        { value: page.deparray[1], viewValue: page.deparray[1].idNumber },
-        { value: page.deparray[2], viewValue: page.deparray[2].idNumber },
+        { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
+        { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
+        { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
       ];
 
       bh = this.forms(bh);
@@ -437,23 +427,9 @@ export class client_claim_formComponent {
         lastName: new FormControl(''),
         idNum: new FormControl(''),
         gender: new FormControl(''),
+        dateOfDeath: new FormControl('', [Validators.required]),
       });
-      // documents
-      // page.idClaimer=new FormGroup({
-      //   filename: new FormControl(""),
-      //   })
-      //    page.idDecesed =new FormGroup({
 
-      //   })
-      //     page.bi1662 =new FormGroup({
-
-      //   })
-      //     page.deathCertificate =new FormGroup({
-
-      //   })
-      //     page.bankDetails =new FormGroup({
-
-      //   })
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(page.user.firstName),
@@ -464,15 +440,10 @@ export class client_claim_formComponent {
         payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
-        // idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
-
         idDeceased2: new FormControl(''),
-
         bi16632: new FormControl(''),
-        // deathCertificate:page.deathCertificate,
         deathCetificatify2: new FormControl(''),
-        // bankDetails :page.bankDetails,
         bankDetails2: new FormControl(''),
         status: new FormControl('pending'),
         depsId: new FormControl(),
@@ -930,22 +901,6 @@ export class client_claim_formComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_DbkzD1Oop0ECjWgI');
-    }
-  }
-
-  sd_1vaiP5kxticWztLy(bh) {
-    try {
-      const page = this.page;
-      let file: File;
-      page.input = bh.input.e.target as HTMLInputElement;
-      file = page.input.files[0];
-      page.file = file;
-
-      // this.goToBackend1()
-      //appendnew_next_sd_1vaiP5kxticWztLy
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_1vaiP5kxticWztLy');
     }
   }
 

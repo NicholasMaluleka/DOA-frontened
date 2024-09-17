@@ -73,6 +73,10 @@
                     "component": "client_view_claimComponent"
                 },
                 {
+                    "path": "view_details",
+                    "component": "view_detailsComponent"
+                },
+                {
                     "path": "payments_d",
                     "component": "payments_dComponent"
                 },
@@ -125,10 +129,6 @@
         {
             "path": "confirm",
             "component": "confirm_identityComponent"
-        },
-        {
-            "path": "not-liable",
-            "component": "not_liable_popUpComponent"
         },
         {
             "path": "''",
