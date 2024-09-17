@@ -1,39 +1,39 @@
 [
     {
-        "id": "sd_6uF2nVeo48yILAir",
+        "id": "sd_L2FHAcgYaeMEBSha",
         "type": "tab",
-        "createdDate": "2024-09-12T23:19:02.322Z",
-        "label": "pop_client_waitin",
+        "createdDate": "2024-09-13T13:42:23.132Z",
+        "label": "deactivated_account",
         "disabled": false,
         "info": "",
         "functionSeq": 0,
         "generateNext": true,
-        "serviceName": "pop_client_waitinComponent"
+        "serviceName": "deactivated_accountComponent"
     },
     {
-        "id": "sd_xpxDZUCLD7uu5WSC",
+        "id": "sd_msN30qTp5BtyqpDg",
         "type": "OnInit",
-        "z": "sd_6uF2nVeo48yILAir",
+        "z": "sd_L2FHAcgYaeMEBSha",
         "viewType": "common",
         "nodeType": "start",
         "name": "",
-        "functionName": "sd_xpxDZUCLD7uu5WSC",
+        "functionName": "sd_msN30qTp5BtyqpDg",
         "category": "Lifecycle Events",
         "x": 30,
         "y": 30,
         "wires": [
             [
-                "sd_LeZ1LidYRNpvKkRY"
+                "sd_0vvYStOku8M1qqYm"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "pop_client_waitinComponent"
+        "serviceName": "deactivated_accountComponent"
     },
     {
-        "id": "sd_LeZ1LidYRNpvKkRY",
+        "id": "sd_0vvYStOku8M1qqYm",
         "type": "PageVariables",
-        "z": "sd_6uF2nVeo48yILAir",
+        "z": "sd_L2FHAcgYaeMEBSha",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -41,7 +41,7 @@
         "outputs": 1,
         "operation": "set",
         "globalVariables": [],
-        "functionName": "sd_LeZ1LidYRNpvKkRY",
+        "functionName": "sd_0vvYStOku8M1qqYm",
         "category": "Function",
         "x": 180,
         "y": 30,
@@ -50,40 +50,40 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "pop_client_waitinComponent",
+        "serviceName": "deactivated_accountComponent",
         "generated": true
     },
     {
-        "id": "sd_neUrSXi3mYEISp3Q",
+        "id": "sd_uC2qFcxqD9N6NFNN",
         "type": "CloseDialog",
-        "z": "sd_6uF2nVeo48yILAir",
+        "z": "sd_L2FHAcgYaeMEBSha",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "data": "this.page.close",
-        "functionName": "sd_neUrSXi3mYEISp3Q",
+        "data": "this.page.result",
+        "functionName": "sd_uC2qFcxqD9N6NFNN",
         "category": "Dialog",
-        "x": 220,
-        "y": 180,
+        "x": 165,
+        "y": 120,
         "wires": [
             []
         ],
         "__ssdTypeInputs__": {
             "data": {
                 "type": "this.page",
-                "value": "close",
+                "value": "result",
                 "constant": false
             }
         },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "pop_client_waitinComponent",
+        "serviceName": "deactivated_accountComponent",
         "generated": true
     },
     {
-        "id": "sd_fpRqyIjFtSpGj9yq",
+        "id": "sd_U8Z7w7xLtX7M82tf",
         "type": "PageStart",
-        "z": "sd_6uF2nVeo48yILAir",
+        "z": "sd_L2FHAcgYaeMEBSha",
         "viewType": "pages",
         "nodeType": "start",
         "name": "close",
@@ -93,15 +93,15 @@
         "flow_type": "sync",
         "functionName": "close",
         "category": "General",
-        "x": 125,
-        "y": 180,
+        "x": 60,
+        "y": 120,
         "wires": [
             [
-                "sd_neUrSXi3mYEISp3Q"
+                "sd_uC2qFcxqD9N6NFNN"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "pop_client_waitinComponent"
+        "serviceName": "deactivated_accountComponent"
     }
 ]

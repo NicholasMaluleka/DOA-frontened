@@ -119,6 +119,10 @@
             "component": "confirm_identityComponent"
         },
         {
+            "path": "not-liable",
+            "component": "not_liable_popUpComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "/DOAServices",
             "pathMatch": "full",

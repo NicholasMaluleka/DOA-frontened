@@ -360,8 +360,8 @@
         "script": "if (!page.backupapplicationsDatasource) {\n  page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement)\n  .value.trim()\n  .toLowerCase();\n\npage.searchValue = searchValue;\n\nif (searchValue) {\n  const searchResults = page.backupapplicationsDatasource.filter(\n    (row) => {\n      const dateStr = new Date(row.date).toLocaleDateString('en-US', {\n        year: 'numeric',\n        month: 'short',\n        day: 'numeric',\n      }).toLowerCase();\n\n      return (\n        (row.amount &&\n          row.amount.toString().toLowerCase().includes(searchValue)) ||\n        (row.date && dateStr.includes(searchValue)) ||\n        (row.policyNumber &&\n          row.policyNumber.toString().toLowerCase().includes(searchValue))\n      );\n    }\n  );\n  page.table = searchResults;\n} else {\n  // Reset to original data if search value is empty\n  page.table = [...page.backupapplicationsDatasource];\n}\n",
         "functionName": "sd_iBlFYTlpoczCmWts_5",
         "category": "Function",
-        "x": 205,
-        "y": 260,
+        "x": 125,
+        "y": 240,
         "wires": [
             []
         ],
@@ -392,8 +392,8 @@
         "flow_type": "sync",
         "functionName": "onFilter",
         "category": "General",
-        "x": 60,
-        "y": 260,
+        "x": 45,
+        "y": 240,
         "wires": [
             [
                 "sd_sJPKFnOc5xM7bGTZ"
@@ -460,8 +460,8 @@
         "flow_type": "sync",
         "functionName": "openPaymentForm",
         "category": "General",
-        "x": 65,
-        "y": 360,
+        "x": 45,
+        "y": 320,
         "wires": [
             [
                 "sd_9ubEfKLoRfowfo8q"
@@ -507,8 +507,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_gfsbZ8Sd5skDsAgI",
         "category": "Dialog",
-        "x": 245,
-        "y": 360,
+        "x": 205,
+        "y": 320,
         "wires": [
             [],
             [],
@@ -661,8 +661,8 @@
         "accept_csd": false,
         "functionName": "sd_VtI0lmylmkampM9c",
         "category": "General",
-        "x": 365,
-        "y": 360,
+        "x": 305,
+        "y": 340,
         "wires": [
             []
         ],
@@ -736,8 +736,8 @@
         "resultMapping": {},
         "functionName": "sd_9ubEfKLoRfowfo8q",
         "category": "Storage",
-        "x": 145,
-        "y": 360,
+        "x": 125,
+        "y": 320,
         "wires": [
             [
                 "sd_gfsbZ8Sd5skDsAgI"
@@ -761,8 +761,8 @@
         "flow_type": "sync",
         "functionName": "edit",
         "category": "General",
-        "x": 60,
-        "y": 460,
+        "x": 45,
+        "y": 420,
         "wires": [
             [
                 "sd_IhgwzeZxvYG1yEqm"
@@ -808,8 +808,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_a5WtRidyGMdzCdpQ",
         "category": "Dialog",
-        "x": 245,
-        "y": 460,
+        "x": 205,
+        "y": 420,
         "wires": [
             [],
             [],
@@ -962,8 +962,8 @@
         "accept_csd": false,
         "functionName": "sd_lPDS2mHFSSLMBItn",
         "category": "General",
-        "x": 365,
-        "y": 460,
+        "x": 305,
+        "y": 440,
         "wires": [
             []
         ],
@@ -993,8 +993,8 @@
         "resultMapping": {},
         "functionName": "sd_IhgwzeZxvYG1yEqm",
         "category": "Storage",
-        "x": 145,
-        "y": 460,
+        "x": 125,
+        "y": 420,
         "wires": [
             [
                 "sd_a5WtRidyGMdzCdpQ"
@@ -1082,8 +1082,8 @@
         "flow_type": "sync",
         "functionName": "disable",
         "category": "General",
-        "x": 80,
-        "y": 600,
+        "x": 65,
+        "y": 540,
         "wires": [
             [
                 "sd_iJBq2LSBzyX2Dd3G"
@@ -1103,8 +1103,8 @@
         "script": "// if (page.table)\nconsole.log(\"result\",page.result)\n\npage.result.forEach((item:any) => {\n   if (item.date == new Date()) {\n       page.disabled = true;\n   }\n})",
         "functionName": "sd_iJBq2LSBzyX2Dd3G",
         "category": "Function",
-        "x": 160,
-        "y": 600,
+        "x": 145,
+        "y": 540,
         "wires": [
             []
         ],
@@ -1168,8 +1168,8 @@
         "flow_type": "sync",
         "functionName": "getLoggedInUser",
         "category": "General",
-        "x": 80,
-        "y": 740,
+        "x": 65,
+        "y": 620,
         "wires": [
             [
                 "sd_56JL6Oc8cBmMeC1N"
@@ -1200,8 +1200,8 @@
         },
         "functionName": "sd_56JL6Oc8cBmMeC1N",
         "category": "Storage",
-        "x": 165,
-        "y": 740,
+        "x": 145,
+        "y": 620,
         "wires": [
             []
         ],
@@ -1238,6 +1238,7 @@
         "serviceImportPath": "./",
         "startName": "getLoggedInUser",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_FMDpkN9mOlyDn874",
         "category": "General",

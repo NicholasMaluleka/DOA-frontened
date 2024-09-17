@@ -483,8 +483,9 @@ export class registerComponent {
 
       page.paymentDates = [
         { value: 1, viewValue: '1st' },
-        { value: 5, viewValue: '5th' },
+        { value: 7, viewValue: '7th' },
         { value: 15, viewValue: '15th' },
+        { value: 20, viewValue: '20th' },
         { value: 25, viewValue: '25th' },
       ];
       bh = this.sd_hsNZ5en4D8hP7I5H(bh);

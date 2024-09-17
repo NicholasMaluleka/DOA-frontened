@@ -33,6 +33,20 @@ $light-blue: #124e52;
     left: 0 !important;
 }
 
+.close:hover{
+   border: none !important;
+}
+
+.click-me{
+    color: $light-blue;
+    text-decoration: underline;
+}
+
+.click-me:hover{
+    cursor: pointer;
+    color: blue;
+}
+
 // angel
 bh-contact_us{
     // background-color:#edf5f5 ;
@@ -467,6 +481,10 @@ width: 150px;
 
 //margin
 
+.margin-right-15em {
+    margin-right: 1.5em
+}
+
 .margin-top-2em {
     margin-top: 2em;
 }
@@ -523,6 +541,16 @@ width: 150px;
 .box-sizing {
     box-sizing: border-box;
 }
+
+//padding
+
+bh-not_liable_popup {
+    padding: 0px !important
+}
+
+
+
+
 
 //search
 

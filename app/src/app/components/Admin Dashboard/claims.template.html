@@ -11,7 +11,7 @@
     <div fxLayout="column wrap" fxLayoutAlign="center start" [fxShow]="true">
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <div fxLayout="column wrap" class="logclaim-btn relative" fxLayoutAlign="start stretch" [fxShow]="true" [matMenuTriggerFor]="menu">
-          <div fxLayout="column wrap" style="top: -6px; left: -4px" class="stylish-btn absolute" fxLayoutAlign="center center" [fxShow]="true" (click)="login(loginForm)">
+          <div fxLayout="column wrap" style="top: -6px; left: -4px" class="stylish-btn absolute" fxLayoutAlign="center center" [fxShow]="true">
             <div>
               Log A Claim</div>
           </div>
@@ -23,7 +23,7 @@
     <div fxLayout="column wrap" class="kg-padding-10px kg-border-box kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-tab-group mat-align-tabs="start" color="accent"><mat-tab label="All">
           <div fxLayout="row wrap" style="margin-bottom: 1em;" fxLayoutAlign="center center" [fxShow]="true" *ngIf="page?.result.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" style="height: 400px; width: 400px" class="rotate"></div>
           <div fxLayout="column" style="border: 1.5px solid #124e52;">
-            <table mat-table [dataSource]="page?.result" *ngIf="page?.result.length &gt; 0" matSort class="table-width-fix">
+            <table mat-table [dataSource]="page?.result" matSort class="table-width-fix">
               <tr mat-header-row *matHeaderRowDef="[&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status | titlecase&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;]"></tr>
               <tr mat-row *matRowDef="let row; columns: [&apos;lastName&apos;,&apos;policyNo&apos;,&apos;claimNumber&apos;,&apos;date.slice(0,10)&apos;,&apos;payoutAmount&apos;,&apos;status | titlecase&apos;,&apos;588fc765-2fd0-8268-9651-a0e3f9d82469&apos;];"></tr>
 
@@ -301,3 +301,4 @@
                 <strong>Approve</strong></span></button><button mat-menu-item> <span class="kg-red">
                 <strong>Reject</strong></span></button></mat-menu></div>
 </div>
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>

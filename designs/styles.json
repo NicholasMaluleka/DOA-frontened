@@ -1,5 +1,7 @@
 {
     "classes": [
+        "close",
+        "click-me",
         "dhx_menu_icon",
         "icon_details",
         "icon_edit",
@@ -86,6 +88,7 @@
         "radius-10px",
         "radius-top-right",
         "radius-bottom-right-LMN",
+        "margin-right-15em",
         "margin-top-2em",
         "no-margin",
         "margin-left-1em",

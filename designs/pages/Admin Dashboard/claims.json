@@ -77,7 +77,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"claims ->\", page.result)\n\npage.approvedDataSource = []\npage.pendingDataSource = []\npage.rejectedDataSource = []\npage.partiallyApprovedDataSource = []\n\npage.result.forEach( (claim) => {\n    if(claim.status === 'approved'){\n        page.approvedDataSource.push(claim)\n    } else if (claim.status === 'pending'){\n        page.pendingDataSource.push(claim)\n    } else if(claim.status === 'rejected'){\n        page.rejectedDataSource.push(claim)\n    } else if(claim.status === 'partially approved'){\n        page.partiallyApprovedDataSource.push(claim)\n    }\n})\n\nbh.path = \"get-notification\"\n\nbh.local.dataSource = new MatTableDataSource(page.result);",
+        "script": "console.log(\"claims ->\", page.result)\n\npage.approvedDataSource = []\npage.pendingDataSource = []\npage.rejectedDataSource = []\npage.partiallyApprovedDataSource = []\n\npage.result.forEach( (claim) => {\n    if(claim.status === 'approved'){\n        page.approvedDataSource.push(claim)\n    } else if (claim.status === 'pending'){\n        page.pendingDataSource.push(claim)\n    } else if(claim.status === 'rejected'){\n        page.rejectedDataSource.push(claim)\n    } else if(claim.status === 'partially approved'){\n        page.partiallyApprovedDataSource.push(claim)\n    }\n})\n\nbh.path = \"get-notification\"\n\nbh.local.dataSource = new MatTableDataSource(page.result);\nbh.local.dataSourceApproved = new MatTableDataSource(page.approvedDataSource);\nbh.local.dataSourcePending = new MatTableDataSource(page.pendingDataSource);\nbh.local.dataSourcePA = new MatTableDataSource(page.partiallyApprovedDataSource);\n\n// page.result = bh.local.dataSource\n\nconsole.log(\"RES: \", page.result)\n\nconsole.log(\"DS: \", bh.local.dataSource)",
         "functionName": "sd_eJuzOUTYKNgXaqdz_1",
         "category": "Function",
         "x": 485,
@@ -104,7 +104,7 @@
         "operation": "set",
         "globalVariables": [
             {
-                "textIp": "tableData",
+                "textIp": "result",
                 "typedIpValue": {
                     "type": "bh.local",
                     "value": "dataSource"
@@ -143,8 +143,8 @@
         ],
         "functionName": "sd_xKCCTWKzvgDN0rx7_1",
         "category": "Function",
-        "x": 165,
-        "y": 260,
+        "x": 145,
+        "y": 140,
         "wires": [
             [
                 "sd_nJkzHFDq629hbd1F"
@@ -162,11 +162,11 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "setTimeout(() => {\n\n    console.log(\"TB DATA: \", page.tableData)\n\n    this.page.tableData.sort = bh.pageViews.MatSort;\n\n    this.page.tableData.paginator = bh.pageViews.MatPaginator;\n\n    console.log(\"TABLE DATA: \", page.tableData)\n\n}, 500)\n\n// this.page.tableData.sort = this.MatSort;\n",
+        "script": "setTimeout(() => {\n\n    console.log(\"TB DATA: \", page.tableData)\n\n    page.result.sort = bh.pageViews.MatSort;\n\n    page.result.paginator = bh.pageViews.MatPaginator;\n\n    console.log(\"page.result: \", page.result)\n\n}, 100)\n\n// this.page.tableData.sort = this.MatSort;\n",
         "functionName": "sd_2VNGqvcKee34lvOz_1",
         "category": "Function",
-        "x": 345,
-        "y": 260,
+        "x": 325,
+        "y": 140,
         "wires": [
             []
         ],
@@ -186,7 +186,7 @@
         "functionName": "sd_iBlFYTlpoczCmWts_2",
         "category": "Function",
         "x": 145,
-        "y": 380,
+        "y": 260,
         "wires": [
             []
         ],
@@ -217,8 +217,8 @@
         "flow_type": "sync",
         "functionName": "onFilter_2",
         "category": "General",
-        "x": 65,
-        "y": 380,
+        "x": 45,
+        "y": 260,
         "wires": [
             [
                 "sd_HIDdQSP0NPnkAAKL"
@@ -248,8 +248,8 @@
         ],
         "functionName": "sd_xKCCTWKzvgDN0rx7_3",
         "category": "Function",
-        "x": 245,
-        "y": 260,
+        "x": 225,
+        "y": 140,
         "wires": [
             [
                 "sd_P1x3dimC6AnShOit"
@@ -873,8 +873,8 @@
         "flow_type": "sync",
         "functionName": "reviewClaim",
         "category": "General",
-        "x": 60,
-        "y": 620,
+        "x": 45,
+        "y": 340,
         "wires": [
             [
                 "sd_6b10CFQCiMMUZcQg"
@@ -904,8 +904,8 @@
         "resultMapping": "",
         "functionName": "sd_ieGXqp1MFZIwHCzM",
         "category": "Navigation",
-        "x": 325,
-        "y": 620,
+        "x": 310,
+        "y": 340,
         "wires": [
             []
         ],
@@ -935,8 +935,8 @@
         "resultMapping": {},
         "functionName": "sd_6b10CFQCiMMUZcQg",
         "category": "Storage",
-        "x": 145,
-        "y": 620,
+        "x": 130,
+        "y": 340,
         "wires": [
             [
                 "sd_BfP16kvx4zGkQL9z"
@@ -957,8 +957,8 @@
         "script": "bh.routeData = {isReview: true}",
         "functionName": "sd_BfP16kvx4zGkQL9z",
         "category": "Function",
-        "x": 225,
-        "y": 620,
+        "x": 210,
+        "y": 340,
         "wires": [
             [
                 "sd_ieGXqp1MFZIwHCzM"
@@ -978,8 +978,8 @@
         "name": "After View Init",
         "functionName": "ngAfterViewInit",
         "category": "Lifecycle Events",
-        "x": 65,
-        "y": 260,
+        "x": 45,
+        "y": 140,
         "wires": [
             [
                 "sd_9CSVHoYiwzqvTVDq"

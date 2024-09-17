@@ -11,13 +11,13 @@ import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'
 //append_imports_end
 
 @Component({
-  selector: 'bh-pop_client_waitin',
-  templateUrl: './pop_client_waitin.template.html',
+  selector: 'bh-deactivated_account',
+  templateUrl: './deactivated_account.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class pop_client_waitinComponent {
+export class deactivated_accountComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -34,7 +34,7 @@ export class pop_client_waitinComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_xpxDZUCLD7uu5WSC(bh);
+      this.sd_msN30qTp5BtyqpDg(bh);
     }
   }
 
@@ -46,13 +46,13 @@ export class pop_client_waitinComponent {
     //append_listeners
   }
 
-  sd_xpxDZUCLD7uu5WSC(bh) {
+  sd_msN30qTp5BtyqpDg(bh) {
     try {
-      bh = this.sd_LeZ1LidYRNpvKkRY(bh);
-      //appendnew_next_sd_xpxDZUCLD7uu5WSC
+      bh = this.sd_0vvYStOku8M1qqYm(bh);
+      //appendnew_next_sd_msN30qTp5BtyqpDg
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xpxDZUCLD7uu5WSC');
+      return this.errorHandler(bh, e, 'sd_msN30qTp5BtyqpDg');
     }
   }
 
@@ -64,32 +64,32 @@ export class pop_client_waitinComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_neUrSXi3mYEISp3Q(bh);
+      bh = this.sd_uC2qFcxqD9N6NFNN(bh);
       //appendnew_next_close
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_fpRqyIjFtSpGj9yq');
+      return this.errorHandler(bh, e, 'sd_U8Z7w7xLtX7M82tf');
     }
   }
-  //appendnew_flow_pop_client_waitinComponent_start
+  //appendnew_flow_deactivated_accountComponent_start
 
-  sd_LeZ1LidYRNpvKkRY(bh) {
+  sd_0vvYStOku8M1qqYm(bh) {
     try {
-      //appendnew_next_sd_LeZ1LidYRNpvKkRY
+      //appendnew_next_sd_0vvYStOku8M1qqYm
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_LeZ1LidYRNpvKkRY');
+      return this.errorHandler(bh, e, 'sd_0vvYStOku8M1qqYm');
     }
   }
 
-  sd_neUrSXi3mYEISp3Q(bh) {
+  sd_uC2qFcxqD9N6NFNN(bh) {
     try {
       const _dialogRef = this.__page_injector__.get(MatDialogRef);
-      _dialogRef.close(this.page.close);
+      _dialogRef.close(this.page.result);
 
-      //appendnew_next_sd_neUrSXi3mYEISp3Q
+      //appendnew_next_sd_uC2qFcxqD9N6NFNN
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_neUrSXi3mYEISp3Q');
+      return this.errorHandler(bh, e, 'sd_uC2qFcxqD9N6NFNN');
     }
   }
 
@@ -109,5 +109,5 @@ export class pop_client_waitinComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_pop_client_waitinComponent_Catch
+  //appendnew_flow_deactivated_accountComponent_Catch
 }
