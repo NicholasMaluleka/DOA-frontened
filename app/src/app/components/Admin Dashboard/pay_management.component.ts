@@ -6,8 +6,6 @@
 import { AfterViewInit, Component, Injector, ViewChild } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; //_splitter_
-import { MatSort } from '@angular/material/sort'; //_splitter_
-import { MatTableDataSource } from '@angular/material/table'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -16,17 +14,15 @@ import { variables } from 'app/sd-services/variables'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-Director_home',
-  templateUrl: './Director_home.template.html',
+  selector: 'bh-pay_management',
+  templateUrl: './pay_management.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class Director_homeComponent implements AfterViewInit {
-  @ViewChild(MatPaginator)
+export class pay_managementComponent implements AfterViewInit {
+  @ViewChild(MatPaginator, { read: MatPaginator })
   public MatPaginator: any = null;
-  @ViewChild(MatSort)
-  public MatSort: any = null;
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -44,7 +40,7 @@ export class Director_homeComponent implements AfterViewInit {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_DtSf30GmPf1zASFg(bh);
+      this.sd_H6aJaOAoVp4vq6dU(bh);
     }
   }
 
@@ -56,13 +52,13 @@ export class Director_homeComponent implements AfterViewInit {
     //append_listeners
   }
 
-  sd_DtSf30GmPf1zASFg(bh) {
+  sd_H6aJaOAoVp4vq6dU(bh) {
     try {
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
-      //appendnew_next_sd_DtSf30GmPf1zASFg
+      //appendnew_next_sd_H6aJaOAoVp4vq6dU
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_DtSf30GmPf1zASFg');
+      return this.errorHandler(bh, e, 'sd_H6aJaOAoVp4vq6dU');
     }
   }
 
@@ -77,22 +73,22 @@ export class Director_homeComponent implements AfterViewInit {
       bh = this.sd_iBlFYTlpoczCmWts_5(bh);
       //appendnew_next_onFilter
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RgrRsjkQxtdhlIGG');
+      return this.errorHandler(bh, e, 'sd_YmLJJATuCRfSkQUz');
     }
   }
 
-  cardsFilter(plan: any = undefined, ...others) {
+  cardsFilter(event: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = { plan };
+      bh.input = { event };
       bh.local = {};
-      bh = this.sd_jUtqxXGUHR3Ix0Lu(bh);
+      bh = this.sd_7diO4Gn0urLXDAf6(bh);
       //appendnew_next_cardsFilter
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xonWNp48Jx1i3JWy');
+      return this.errorHandler(bh, e, 'sd_Jq8cIy67f6yRxXmD');
     }
   }
 
@@ -104,10 +100,10 @@ export class Director_homeComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = { row };
       bh.local = {};
-      bh = this.sd_dPYwQs8rtUpA4383(bh);
+      bh = this.sd_c9z9zMbt03zMNBq1(bh);
       //appendnew_next_setClientData
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zNzdsMdk0ZtrCGyq');
+      return this.errorHandler(bh, e, 'sd_61UKXyNOabPg4ItU');
     }
   }
 
@@ -119,10 +115,10 @@ export class Director_homeComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_KjgezfRoGPixtYr3(bh);
+      bh = this.sd_sEEfqfrbKc6PncYs(bh);
       //appendnew_next_goToViewPayment
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_m7mJ7BjRmuTPSjzn');
+      return this.errorHandler(bh, e, 'sd_C9Skm2DHnQpJXDAK');
     }
   }
 
@@ -134,10 +130,21 @@ export class Director_homeComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = { row };
       bh.local = {};
-      bh = this.sd_dgfJkNIqDpLKo5oO(bh);
+      bh = this.sd_UqGhBvQPon07bGFI(bh);
       //appendnew_next_sendUser
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_kylVKcKkEMf4pF5t');
+      return this.errorHandler(bh, e, 'sd_KrM20LgHX16CJOuJ');
+    }
+  }
+  ngAfterViewInit() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_xKCCTWKzvgDN0rx7_9(bh);
+      //appendnew_next_ngAfterViewInit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IJb4gnvvTJfK3E63');
     }
   }
 
@@ -149,25 +156,13 @@ export class Director_homeComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = { row };
       bh.local = {};
-      bh = this.sd_qI2FoGMy5nrfZfbX(bh);
+      bh = this.sd_1xg11F8aWQBYU9Ef(bh);
       //appendnew_next_getRowColor
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iACRgndCNMEHCJxu');
+      return this.errorHandler(bh, e, 'sd_huDbdJ9Pi7C7l1SX');
     }
   }
-  ngAfterViewInit() {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
-      //appendnew_next_ngAfterViewInit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_EOOl0suzk2zorUn4');
-    }
-  }
-
-  //appendnew_flow_Director_homeComponent_start
+  //appendnew_flow_pay_managementComponent_start
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
     try {
@@ -176,73 +171,69 @@ export class Director_homeComponent implements AfterViewInit {
       this.page.searchValue = '';
       this.page.backupapplicationsDatasource = undefined;
       this.page.currentPageIndex = undefined;
-      this.page.currentDate = undefined;
-      this.page.timeDifference = undefined;
-      this.page.differenceInMonths = undefined;
-      this.page.outsideTrialAccounts = undefined;
-      bh = this.sd_rTJJURMTnWuDRATt(bh);
+      bh = this.sd_nIWaz3kqf6y3N9bn(bh);
       //appendnew_next_sd_E9QbOlnVduPNV5MO_1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yTELKnjwO60pudmG');
+      return this.errorHandler(bh, e, 'sd_Arzy8uB4k1GWBhCI');
     }
   }
 
-  sd_rTJJURMTnWuDRATt(bh) {
+  sd_nIWaz3kqf6y3N9bn(bh) {
     try {
       this.page.paginator = MatPaginatorModule;
-      bh = this.sd_n0wQGYnJGEpnYFkl(bh);
-      //appendnew_next_sd_rTJJURMTnWuDRATt
+      bh = this.sd_50cMX6H4SfXx91KF(bh);
+      //appendnew_next_sd_nIWaz3kqf6y3N9bn
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_rTJJURMTnWuDRATt');
+      return this.errorHandler(bh, e, 'sd_nIWaz3kqf6y3N9bn');
     }
   }
 
-  sd_n0wQGYnJGEpnYFkl(bh) {
+  sd_50cMX6H4SfXx91KF(bh) {
     try {
-      bh = this.sd_l91cknpNzAKaPZLc(bh);
-      //appendnew_next_sd_n0wQGYnJGEpnYFkl
+      bh = this.sd_0S5xz4kOPvdicmdq(bh);
+      //appendnew_next_sd_50cMX6H4SfXx91KF
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_n0wQGYnJGEpnYFkl');
+      return this.errorHandler(bh, e, 'sd_50cMX6H4SfXx91KF');
     }
   }
 
-  sd_l91cknpNzAKaPZLc(bh) {
+  sd_0S5xz4kOPvdicmdq(bh) {
     try {
-      bh = this.sd_QQnZ9ChWWAFoC0Zg(bh);
-      //appendnew_next_sd_l91cknpNzAKaPZLc
+      bh = this.sd_gKIcVTMlDc071Xta(bh);
+      //appendnew_next_sd_0S5xz4kOPvdicmdq
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_l91cknpNzAKaPZLc');
+      return this.errorHandler(bh, e, 'sd_0S5xz4kOPvdicmdq');
     }
   }
 
-  sd_QQnZ9ChWWAFoC0Zg(bh) {
+  sd_gKIcVTMlDc071Xta(bh) {
     try {
       this.page.ssdURL = bh.system.environment.properties.ssdURL;
-      bh = this.sd_xjiBFP9fYiGVt0sO(bh);
-      //appendnew_next_sd_QQnZ9ChWWAFoC0Zg
+      bh = this.sd_aLNDbQf84ZZgYS7k(bh);
+      //appendnew_next_sd_gKIcVTMlDc071Xta
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_QQnZ9ChWWAFoC0Zg');
+      return this.errorHandler(bh, e, 'sd_gKIcVTMlDc071Xta');
     }
   }
 
-  sd_xjiBFP9fYiGVt0sO(bh) {
+  sd_aLNDbQf84ZZgYS7k(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdURL + 'get-users';
-      bh = this.sd_8HpC5ye2Nr9muhxi(bh);
-      //appendnew_next_sd_xjiBFP9fYiGVt0sO
+      bh.url = page.ssdURL + 'get-monthly-payments';
+      bh = this.sd_tZj98HRMrxvqzJnn(bh);
+      //appendnew_next_sd_aLNDbQf84ZZgYS7k
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_xjiBFP9fYiGVt0sO');
+      return this.errorHandler(bh, e, 'sd_aLNDbQf84ZZgYS7k');
     }
   }
 
-  async sd_8HpC5ye2Nr9muhxi(bh) {
+  async sd_tZj98HRMrxvqzJnn(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -253,74 +244,64 @@ export class Director_homeComponent implements AfterViewInit {
         body: undefined,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_2lLCrjneGLoT2O1S(bh);
-      //appendnew_next_sd_8HpC5ye2Nr9muhxi
+      bh = this.sd_mSUodGizS2HbDJrx(bh);
+      bh = this.sd_N1aALxkUGzCMyqIq(bh);
+      //appendnew_next_sd_tZj98HRMrxvqzJnn
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8HpC5ye2Nr9muhxi');
+      return this.errorHandler(bh, e, 'sd_tZj98HRMrxvqzJnn');
     }
   }
 
-  sd_2lLCrjneGLoT2O1S(bh) {
+  sd_mSUodGizS2HbDJrx(bh) {
     try {
       const page = this.page;
-      bh.tableDataSource = page.result.filter((user: any) => {
-        return user.role == 'client';
-      });
+      page.table = page.result;
 
-      page.table = bh.tableDataSource;
+      // page.table = bh.tableDataSource
+      // page.table.policyActive = page.policyActiveStatus
+
+      // page.table.forEach ( (item) => {
+      //     if(item.policyActive === true){
+      //         item.policyActive = "Active"
+      //     } else {
+      //     item.policyActive = "Deactivated"
+      // }
+      // })
+
       page.backupapplicationsDatasource = page.table;
+      page.table.paginator = page.paginator;
+      console.log('page.table ', page.table);
 
-      page.currentDate = new Date();
-
-      page.trialAccounts = page.table.filter((item) => {
-        page.registeredDate = new Date(item.registeredDate);
-        console.log('page.registeredDate', page.registeredDate);
-
-        page.timeDifference =
-          page.currentDate.getTime() - page.registeredDate.getTime();
-        console.log('timeDifference', page.timeDifference);
-
-        page.differenceInMonths =
-          page.timeDifference / (1000 * 3600 * 24 * 30.436875); // Convert milliseconds to months
-        console.log('m', page.differenceInMonths);
-        return page.differenceInMonths <= 6;
-      }).length;
-
-      page.outsideTrialAccounts = page.table.filter((item) => {
-        page.registeredDate = new Date(item.registeredDate);
-        page.timeDifference =
-          page.currentDate.getTime() - page.registeredDate.getTime();
-        page.differenceInMonths =
-          page.timeDifference / (1000 * 3600 * 24 * 30.436875); // Convert milliseconds to months
-
-        return page.differenceInMonths > 6;
-      }).length;
-
-      page.allAccounts = page.table.length;
-
-      console.log('Trial Accounts:', page.trialAccounts);
-      console.log('Outside Trial Accounts:', page.outsideTrialAccounts);
-      console.log('All Accounts:', page.allAccounts);
-
-      // page.table = new MatTableDataSource(page.table)
-
-      bh.local.dataSource = new MatTableDataSource(page.table);
-      bh = this.sd_CNo2sWBcD8FWpCtC(bh);
-      //appendnew_next_sd_2lLCrjneGLoT2O1S
+      bh = this.sd_cSgr6Vttfp6vdarU(bh);
+      //appendnew_next_sd_mSUodGizS2HbDJrx
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_2lLCrjneGLoT2O1S');
+      return this.errorHandler(bh, e, 'sd_mSUodGizS2HbDJrx');
     }
   }
 
-  sd_CNo2sWBcD8FWpCtC(bh) {
+  sd_cSgr6Vttfp6vdarU(bh) {
     try {
+      this.page.table.paginator = bh.tableDataSource.paginator;
+      this.page.table.sort = bh.tableDataSource.sort;
       this.page.backupapplicationsDatasource = undefined;
-      //appendnew_next_sd_CNo2sWBcD8FWpCtC
+      this.page.user = this.page.user;
+      //appendnew_next_sd_cSgr6Vttfp6vdarU
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CNo2sWBcD8FWpCtC');
+      return this.errorHandler(bh, e, 'sd_cSgr6Vttfp6vdarU');
+    }
+  }
+
+  sd_N1aALxkUGzCMyqIq(bh) {
+    try {
+      const page = this.page;
+      console.log('payments ==>', page.result);
+      //appendnew_next_sd_N1aALxkUGzCMyqIq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_N1aALxkUGzCMyqIq');
     }
   }
 
@@ -342,17 +323,17 @@ export class Director_homeComponent implements AfterViewInit {
         const searchResults = page.backupapplicationsDatasource.filter(
           (row) => {
             return (
-              (row.firstName &&
-                row.firstName.toLowerCase().includes(searchValue)) ||
-              (row.lastName &&
-                row.lastName.toLowerCase().includes(searchValue)) ||
+              (row.name && row.surname.toLowerCase().includes(searchValue)) ||
+              (row.surname &&
+                row.surname.toLowerCase().includes(searchValue)) ||
               (row.policyNumber &&
                 row.policyNumber
                   .toString()
                   .toLowerCase()
                   .includes(searchValue)) || // Convert policyNumber to string
-              (row.packageType &&
-                row.packageType.toLowerCase().includes(searchValue))
+              (row.event && row.event.toLowerCase().includes(searchValue)) ||
+              (row.date && row.date.toLowerCase().includes(searchValue)) ||
+              (row.loggedBY && row.loggedBY.toLowerCase().includes(searchValue))
             );
           }
         );
@@ -365,11 +346,11 @@ export class Director_homeComponent implements AfterViewInit {
       //appendnew_next_sd_iBlFYTlpoczCmWts_5
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7rjTzg6eMUQI2VKx');
+      return this.errorHandler(bh, e, 'sd_AcZlV0st0RdhUgzm');
     }
   }
 
-  sd_jUtqxXGUHR3Ix0Lu(bh) {
+  sd_7diO4Gn0urLXDAf6(bh) {
     try {
       const page = this.page;
       if (!page.backupapplicationsDatasource) {
@@ -379,118 +360,107 @@ export class Director_homeComponent implements AfterViewInit {
       const filteredResults = page.backupapplicationsDatasource.filter(
         (row) => {
           return (
-            row.packageType &&
-            row.packageType.toLowerCase() === bh.input.plan.toLowerCase()
+            row.event &&
+            row.event.toLowerCase() === bh.input.event.toLowerCase()
           );
         }
       );
 
       page.table = filteredResults;
 
-      //appendnew_next_sd_jUtqxXGUHR3Ix0Lu
+      //appendnew_next_sd_7diO4Gn0urLXDAf6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_jUtqxXGUHR3Ix0Lu');
+      return this.errorHandler(bh, e, 'sd_7diO4Gn0urLXDAf6');
     }
   }
 
-  async sd_dPYwQs8rtUpA4383(bh) {
+  async sd_c9z9zMbt03zMNBq1(bh) {
     try {
       const variablesInstance: variables =
         this.__page_injector__.get(variables);
 
       let outputVariables = await variablesInstance.setVariable(bh.input.row);
 
-      bh = this.sd_8PEw6bn53fcAWyPF(bh);
-      //appendnew_next_sd_dPYwQs8rtUpA4383
+      bh = this.sd_KuuhBRGHKT9ixMsa(bh);
+      //appendnew_next_sd_c9z9zMbt03zMNBq1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dPYwQs8rtUpA4383');
+      return this.errorHandler(bh, e, 'sd_c9z9zMbt03zMNBq1');
     }
   }
 
-  sd_8PEw6bn53fcAWyPF(bh) {
+  sd_KuuhBRGHKT9ixMsa(bh) {
     try {
       sessionStorage.setItem('userData', JSON.stringify(bh.input.row));
-      //appendnew_next_sd_8PEw6bn53fcAWyPF
+      //appendnew_next_sd_KuuhBRGHKT9ixMsa
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8PEw6bn53fcAWyPF');
+      return this.errorHandler(bh, e, 'sd_KuuhBRGHKT9ixMsa');
     }
   }
 
-  async sd_KjgezfRoGPixtYr3(bh) {
+  async sd_sEEfqfrbKc6PncYs(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/payments_d');
+        this.sdService.getPathAndQParamsObj('/dashboard/view-payments');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
-      //appendnew_next_sd_KjgezfRoGPixtYr3
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_sEEfqfrbKc6PncYs
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_KjgezfRoGPixtYr3');
+      return this.errorHandler(bh, e, 'sd_sEEfqfrbKc6PncYs');
     }
   }
 
-  sd_dgfJkNIqDpLKo5oO(bh) {
+  sd_UqGhBvQPon07bGFI(bh) {
     try {
       sessionStorage.setItem('userData', JSON.stringify(bh.input.row));
-      //appendnew_next_sd_dgfJkNIqDpLKo5oO
+      //appendnew_next_sd_UqGhBvQPon07bGFI
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dgfJkNIqDpLKo5oO');
+      return this.errorHandler(bh, e, 'sd_UqGhBvQPon07bGFI');
     }
   }
 
-  sd_qI2FoGMy5nrfZfbX(bh) {
+  sd_xKCCTWKzvgDN0rx7_9(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        MatPaginator: this.MatPaginator,
+      });
+      bh = this.sd_2VNGqvcKee34lvOz_9(bh);
+      //appendnew_next_sd_xKCCTWKzvgDN0rx7_9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GNFPyM3JOScm1d7o');
+    }
+  }
+
+  sd_2VNGqvcKee34lvOz_9(bh) {
+    try {
+      const page = this.page; // page.table.paginator = this.MatPaginator;
+      //appendnew_next_sd_2VNGqvcKee34lvOz_9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9z0TUmIphR7dUFhM');
+    }
+  }
+
+  sd_1xg11F8aWQBYU9Ef(bh) {
     try {
       const page = this.page;
-      console.log('input', bh.input.row.packageType == 'Package 1');
       if (bh.input.row.packageType == 'Package 1') {
         return 'lightblue'; // Change to the color you want for this condition
       }
       return ''; // Default color (no color change)
 
-      //appendnew_next_sd_qI2FoGMy5nrfZfbX
+      //appendnew_next_sd_1xg11F8aWQBYU9Ef
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qI2FoGMy5nrfZfbX');
-    }
-  }
-
-  sd_xKCCTWKzvgDN0rx7_1(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatPaginator: this.MatPaginator,
-        MatSort: this.MatSort,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_C9omM9ov77Yt9zDx');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_1(bh) {
-    try {
-      const page = this.page;
-      setTimeout(() => {
-        console.log('TB DATA: ', page.table);
-
-        this.page.table.sort = bh.pageViews.MatSort;
-
-        this.page.table.paginator = bh.pageViews.MatPaginator;
-
-        console.log('TABLE DATA: ', page.table);
-      }, 500);
-
-      // this.page.tableData.paginator = this.MatPaginator;
-      //appendnew_next_sd_2VNGqvcKee34lvOz_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_JUTEttAqqLDvbfqP');
+      return this.errorHandler(bh, e, 'sd_1xg11F8aWQBYU9Ef');
     }
   }
 
@@ -510,5 +480,5 @@ export class Director_homeComponent implements AfterViewInit {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_Director_homeComponent_Catch
+  //appendnew_flow_pay_managementComponent_Catch
 }

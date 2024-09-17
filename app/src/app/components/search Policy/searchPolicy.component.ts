@@ -281,9 +281,7 @@ export class searchPolicyComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_IO4IqWL9nrM5vCKf(bh);
       //appendnew_next_sd_GrC07KTLi0xBLPf5
       return bh;

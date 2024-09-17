@@ -973,22 +973,6 @@
                             "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(click)",
-                            "_value": "login(loginForm)",
-                            "_type": "kv",
-                            "_attrDef": "c",
-                            "objValue": {
-                                "nodeID": "sd_71FwAex7k56plSj9",
-                                "functionName": "login",
-                                "activeTree": "pages",
-                                "z": "sd_fn8FAmmpAsSioSZv",
-                                "input": [
-                                    "loginForm"
-                                ]
-                            },
-                            "_customAttributeFlag": "customInput"
                         }
                     ],
                     "88b687ba-6eb3-f648-e30c-d957590a0d19": {
