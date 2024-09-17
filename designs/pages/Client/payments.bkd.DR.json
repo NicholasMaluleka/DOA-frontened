@@ -1088,7 +1088,6 @@
         "03d89488-c521-dbf4-e82c-2c1ce47ed133": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
-            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -1160,7 +1159,6 @@
                 "paletteKey": "ng-table",
                 "parentEditorKey": "03d89488-c521-dbf4-e82c-2c1ce47ed133",
                 "isAdvancedComponent": true,
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1208,7 +1206,6 @@
                     "paletteKey": "ng-table-column",
                     "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1255,7 +1252,6 @@
                     "paletteKey": "ng-droppable-table-column",
                     "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1315,7 +1311,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "e2c40cf5-e28e-4f75-60f2-fde6140b8c01",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1503,7 +1498,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "f55cd673-eff9-cec4-4515-8e4480209866",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1532,7 +1526,6 @@
                     "paletteKey": "ng-table-column",
                     "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
