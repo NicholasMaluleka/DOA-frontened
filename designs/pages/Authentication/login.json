@@ -79,10 +79,12 @@
         ],
         "functionName": "sd_QZIhirkF1KOOozB7",
         "category": "Function",
-        "x": 125,
+        "x": 165,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_L1ixhp2QHtWF8cjP"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -111,7 +113,7 @@
         "flow_type": "sync",
         "functionName": "login",
         "category": "General",
-        "x": 25,
+        "x": 45,
         "y": 160,
         "wires": [
             [
@@ -575,6 +577,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/dashboard/director_home",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_iGycO4jnqKpix0R8",
         "category": "Navigation",
         "x": 985,
@@ -897,7 +906,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1068,6 +1079,26 @@
                 "constant": false
             }
         },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_L1ixhp2QHtWF8cjP",
+        "type": "Script",
+        "z": "sd_fn8FAmmpAsSioSZv",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(\"Looking for changes\", bh)",
+        "functionName": "sd_L1ixhp2QHtWF8cjP",
+        "category": "Function",
+        "x": 240,
+        "y": 40,
+        "wires": [
+            []
+        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "loginComponent",

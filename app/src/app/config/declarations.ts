@@ -270,6 +270,7 @@ export const appRoutes = [
       { path: 'director_home', component: Director_homeComponent },
       { path: 'director_claims', component: director_claimsComponent },
       { path: 'client_view_claim', component: client_view_claimComponent },
+      { path: 'view_details', component: view_detailsComponent },
     ],
   },
   { path: 'DOAServices', component: landingComponent },
@@ -280,7 +281,6 @@ export const appRoutes = [
   { path: 'reset-password', component: reset_passwordComponent },
   { path: 'view', component: view_documentComponent },
   { path: 'confirm', component: confirm_identityComponent },
-  { path: 'not-liable', component: not_liable_popUpComponent },
   { path: '', redirectTo: '/DOAServices', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

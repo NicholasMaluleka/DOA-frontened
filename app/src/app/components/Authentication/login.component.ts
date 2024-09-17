@@ -99,10 +99,22 @@ export class loginComponent {
       this.page.pattern = undefined;
       this.page.characterCount = 0;
       this.page.loading = false;
+      bh = this.sd_L1ixhp2QHtWF8cjP(bh);
       //appendnew_next_sd_QZIhirkF1KOOozB7
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_QZIhirkF1KOOozB7');
+    }
+  }
+
+  sd_L1ixhp2QHtWF8cjP(bh) {
+    try {
+      const page = this.page;
+      console.log('Looking for changes', bh);
+      //appendnew_next_sd_L1ixhp2QHtWF8cjP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_L1ixhp2QHtWF8cjP');
     }
   }
 
@@ -403,7 +415,9 @@ export class loginComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/director_home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_SGMcpcrY4y3UKTKj(bh);
       //appendnew_next_sd_iGycO4jnqKpix0R8
       return bh;
