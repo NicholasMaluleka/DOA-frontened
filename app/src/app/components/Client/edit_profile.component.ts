@@ -269,9 +269,9 @@ export class edit_profileComponent {
       ///dependencies
 
       if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName !== ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName !== '' &&
+        page.depe3?.firstName !== ''
       ) {
         // Case 1: All forms are not empty
         page.showdependenciesForm = true;
@@ -279,9 +279,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = true;
         page.hideIcon2 = false; // Hide the add icon
       } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName !== '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
         page.showdependenciesForm = true;
@@ -289,9 +289,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
       } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName === '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 3: Form 1 is filled, Forms 2 and 3 are empty
         page.showdependenciesForm = true;
@@ -299,9 +299,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
       } else if (
-        page.depe1.firstName === '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName === '' &&
+        page.depe2?.firstName === '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 4: All forms are empty
         page.showdependenciesForm = true; // Show the first empty form (Form 1)
@@ -374,24 +374,24 @@ export class edit_profileComponent {
         firstName: new FormControl(page.ben2?.firstName || '', [
           Validators.required,
         ]),
-        lastName: new FormControl(page.ben2.lastName, [Validators.required]),
-        idNumber: new FormControl(page.ben2.idNumber, [
+        lastName: new FormControl(page.ben2?.lastName, [Validators.required]),
+        idNumber: new FormControl(page.ben2?.idNumber, [
           Validators.required,
           Validators.minLength(13),
           Validators.maxLength(13),
         ]),
-        gender: new FormControl(page.ben2.gender || '', [Validators.required]),
-        email: new FormControl(page.ben2.email, [
+        gender: new FormControl(page.ben2?.gender || '', [Validators.required]),
+        email: new FormControl(page.ben2?.email, [
           Validators.required,
           Validators.email,
         ]),
-        cellphone: new FormControl(page.ben2.cellphone, [
+        cellphone: new FormControl(page.ben2?.cellphone, [
           Validators.required,
           Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
-        relationship: new FormControl(page.ben2.relationship, [
+        relationship: new FormControl(page.ben2?.relationship, [
           Validators.required,
         ]),
       });
@@ -613,7 +613,9 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_nxWSj9bRtG2lyhli(bh);
       //appendnew_next_sd_G19PY66JzVKcGxtc
       return bh;
@@ -1104,23 +1106,7 @@ export class edit_profileComponent {
       //appendnew_next_sd_iCtDdM4RjHBE7o2O
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
-    }
-  }
-
-  async sd_tcxBJckGGYZqxWmJ(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-      //appendnew_next_sd_tcxBJckGGYZqxWmJ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_tcxBJckGGYZqxWmJ');
+      return this.errorHandler(bh, e, 'sd_iCtDdM4RjHBE7o2O');
     }
   }
 
