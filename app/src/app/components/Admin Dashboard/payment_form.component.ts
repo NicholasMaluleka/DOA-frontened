@@ -122,7 +122,7 @@ export class payment_formComponent implements OnChanges {
     }
   }
 
-  checkDate(...others) {
+  checkPolicyActive(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
@@ -130,7 +130,7 @@ export class payment_formComponent implements OnChanges {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      //appendnew_next_checkDate
+      //appendnew_next_checkPolicyActive
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_gKA6xVjHA4ym50YD');
     }

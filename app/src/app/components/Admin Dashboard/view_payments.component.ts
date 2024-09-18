@@ -6,6 +6,7 @@
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
 import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { payment_formComponent } from 'app/components/Admin Dashboard/payment_form.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -98,7 +99,7 @@ export class view_paymentsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_9ubEfKLoRfowfo8q(bh);
+      bh = this.sd_yK7OQUR2F8tQyJfQ(bh);
       //appendnew_next_openPaymentForm
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_42iesCMKtG2KiN8V');
@@ -113,7 +114,7 @@ export class view_paymentsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_IhgwzeZxvYG1yEqm(bh);
+      bh = this.sd_UXbMMlF8KoofuW82(bh);
       //appendnew_next_edit
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lLjKTcNWnIYepJjR');
@@ -355,6 +356,27 @@ export class view_paymentsComponent {
     }
   }
 
+  async sd_yK7OQUR2F8tQyJfQ(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.userData.policyActive,
+          'Active',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_9ubEfKLoRfowfo8q(bh);
+      } else {
+        bh = await this.sd_TRPqEtbnE9LehpLp(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yK7OQUR2F8tQyJfQ');
+    }
+  }
+
   sd_9ubEfKLoRfowfo8q(bh) {
     try {
       sessionStorage.setItem('payment_event', JSON.stringify('Log a payment'));
@@ -394,6 +416,56 @@ export class view_paymentsComponent {
     }
   }
 
+  sd_TRPqEtbnE9LehpLp(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('This policy is deactivated', 'OK', {
+          duration: 4000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_wVZJNXaXwd80dfvD(bh);
+      //appendnew_next_sd_TRPqEtbnE9LehpLp
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_TRPqEtbnE9LehpLp');
+    }
+  }
+
+  sd_wVZJNXaXwd80dfvD(bh) {
+    try {
+      let outputVariables = this.getPayments();
+
+      //appendnew_next_sd_wVZJNXaXwd80dfvD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wVZJNXaXwd80dfvD');
+    }
+  }
+
+  async sd_UXbMMlF8KoofuW82(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.userData.policyActive,
+          'Active',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_IhgwzeZxvYG1yEqm(bh);
+      } else {
+        bh = await this.sd_SWOYuZDZn2222LhW(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UXbMMlF8KoofuW82');
+    }
+  }
+
   sd_IhgwzeZxvYG1yEqm(bh) {
     try {
       sessionStorage.setItem('payment_event', JSON.stringify('Edit payment'));
@@ -430,6 +502,35 @@ export class view_paymentsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lPDS2mHFSSLMBItn');
+    }
+  }
+
+  sd_SWOYuZDZn2222LhW(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('This policy is deactivated', 'OK', {
+          duration: 4000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_FbjRoE3K8n8wfTxm(bh);
+      //appendnew_next_sd_SWOYuZDZn2222LhW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SWOYuZDZn2222LhW');
+    }
+  }
+
+  sd_FbjRoE3K8n8wfTxm(bh) {
+    try {
+      let outputVariables = this.getPayments();
+
+      //appendnew_next_sd_FbjRoE3K8n8wfTxm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FbjRoE3K8n8wfTxm');
     }
   }
 

@@ -19,7 +19,7 @@
         "name": "",
         "functionName": "sd_pv9WDQQTAb5TdcRu",
         "category": "Lifecycle Events",
-        "x": 45,
+        "x": 25,
         "y": 60,
         "wires": [
             [
@@ -72,7 +72,7 @@
         ],
         "functionName": "sd_1mWJDUJMcNFR2L50",
         "category": "Function",
-        "x": 125,
+        "x": 105,
         "y": 60,
         "wires": [
             [
@@ -286,7 +286,6 @@
         "serviceImportPath": "./",
         "startName": "packageType",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_pHYVQ6qVqoPeCrHB",
         "category": "General",
@@ -546,11 +545,10 @@
         "serviceImportPath": "./",
         "startName": "close",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_mEg74lKeqcx440aD",
         "category": "General",
-        "x": 745,
+        "x": 765,
         "y": 460,
         "wires": [
             []
@@ -569,8 +567,8 @@
         "name": "On Changes",
         "functionName": "ngOnChanges",
         "category": "Lifecycle Events",
-        "x": 320,
-        "y": 180,
+        "x": 305,
+        "y": 240,
         "wires": [
             [
                 "sd_IJvi4mnr0YOvwVXV"
@@ -622,8 +620,8 @@
         "accept_csd": true,
         "functionName": "getService2",
         "category": "General",
-        "x": 425,
-        "y": 180,
+        "x": 410,
+        "y": 240,
         "wires": [
             []
         ],
@@ -958,12 +956,12 @@
         "z": "sd_7Y0FdLD4v3Ji9ha6",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "checkDate",
+        "name": "checkPolicyActive",
         "outputs": 1,
         "inputVariables": [],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "checkDate",
+        "functionName": "checkPolicyActive",
         "category": "General",
         "x": 120,
         "y": 700,

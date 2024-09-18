@@ -6,13 +6,9 @@
         <mat-icon matPrefix>search</mat-icon>
       </mat-form-field>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
-      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="space-between stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="blue-color" fxLayoutAlign="center stretch" [fxShow]="true">
-          <div>
-          </div>
-        </div>
-        <div fxLayout="column wrap" class="padding-5px filter-cards" fxLayoutAlign="start stretch" [fxShow]="true" (click)="cardsFilter(&apos;Paid&apos;)">
+    <div fxLayout="column wrap" style="width: 20%" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="full-width" fxLayoutGap="1em" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
+        <div fxLayout="column wrap" style="width:37%" class="padding-5px filter-cards" fxLayoutAlign="center center" [fxShow]="true" (click)="cardsFilter(&apos;Paid&apos;)">
           <div class="padding-5px blue-color">
             Paid</div>
         </div>
@@ -22,10 +18,10 @@
         </div>
       </div>
     </div>
-    <div fxLayout="column wrap" class="width-49" fxLayoutAlign="center end" [fxShow]="true">
-      <form><mat-form-field style="margin-top: 1em" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
+    <div fxLayout="column wrap" class="width-43" fxLayoutAlign="center end" [fxShow]="true">
+      <form #monthForm="ngForm"><mat-form-field style="margin-top: 1em" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;">
           <mat-label>Month</mat-label>
-          <mat-select placeholder="Month" [required]="false">
+          <mat-select [(value)]="page.monthName" placeholder="Month" [(ngModel)]="page.monthFilter" [required]="false" (selectionChange)="selectFilter()" name="month">
             <mat-option [value]="&apos;Jan&apos;" disabled="false">January</mat-option><mat-option [value]="&apos;Feb&apos;" disabled="false">February</mat-option><mat-option [value]="&apos;Mar&apos;" disabled="false">March</mat-option><mat-option [value]="&apos;Apr&apos;" disabled="false">April</mat-option><mat-option [value]="&apos;May&apos;" disabled="false">May</mat-option><mat-option [value]="&apos;Jun&apos;" disabled="false">June</mat-option><mat-option [value]="&apos;Jul&apos;" disabled="false">July</mat-option><mat-option [value]="&apos;Aug&apos;" disabled="false">August</mat-option><mat-option [value]="&apos;Sep&apos;" disabled="false">September</mat-option><mat-option [value]="&apos;Oct&apos;" disabled="false">October</mat-option><mat-option [value]="&apos;Nov&apos;" disabled="false">November</mat-option><mat-option [value]="&apos;Dec&apos;" disabled="false">December</mat-option>
           </mat-select>
 
