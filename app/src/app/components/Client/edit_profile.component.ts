@@ -217,6 +217,7 @@ export class edit_profileComponent {
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
       this.page.showdependenciesForm = undefined;
+      this.page.policyNumber = undefined;
       bh = this.sd_RnQSoLGbXPuS7ZSE(bh);
       //appendnew_next_sd_UHAloZdWiiqtiSEV
       return bh;
@@ -241,6 +242,8 @@ export class edit_profileComponent {
       const page = this.page;
       console.log('userData==>', page.userData);
       console.log('depe', page.userData.beneficaries);
+
+      page.policyNumber = page.userData.policyNumber;
 
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData.beneficaries[1];
@@ -588,7 +591,9 @@ export class edit_profileComponent {
   sd_GjKcbwDGAHK9WeuX(bh) {
     try {
       const page = this.page;
-      bh.structuredData.role = ' client';
+      bh.structuredData.role = 'client';
+
+      bh.structuredData.policyNumber = page.policyNumber;
 
       if (page.results.acknowledged == true) {
         sessionStorage.setItem('user', JSON.stringify(bh.structuredData));
@@ -607,7 +612,9 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_nxWSj9bRtG2lyhli(bh);
       //appendnew_next_sd_G19PY66JzVKcGxtc
       return bh;
