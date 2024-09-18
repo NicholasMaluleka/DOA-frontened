@@ -114,7 +114,7 @@ export class view_paymentsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_IhgwzeZxvYG1yEqm(bh);
+      bh = this.sd_UXbMMlF8KoofuW82(bh);
       //appendnew_next_edit
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lLjKTcNWnIYepJjR');
@@ -445,6 +445,27 @@ export class view_paymentsComponent {
     }
   }
 
+  async sd_UXbMMlF8KoofuW82(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          this.page.userData.policyActive,
+          'Active',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_IhgwzeZxvYG1yEqm(bh);
+      } else {
+        bh = await this.sd_SWOYuZDZn2222LhW(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UXbMMlF8KoofuW82');
+    }
+  }
+
   sd_IhgwzeZxvYG1yEqm(bh) {
     try {
       sessionStorage.setItem('payment_event', JSON.stringify('Edit payment'));
@@ -481,6 +502,35 @@ export class view_paymentsComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_lPDS2mHFSSLMBItn');
+    }
+  }
+
+  sd_SWOYuZDZn2222LhW(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('This policy is deactivated', 'OK', {
+          duration: 4000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      bh = this.sd_FbjRoE3K8n8wfTxm(bh);
+      //appendnew_next_sd_SWOYuZDZn2222LhW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SWOYuZDZn2222LhW');
+    }
+  }
+
+  sd_FbjRoE3K8n8wfTxm(bh) {
+    try {
+      let outputVariables = this.getPayments();
+
+      //appendnew_next_sd_FbjRoE3K8n8wfTxm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FbjRoE3K8n8wfTxm');
     }
   }
 
