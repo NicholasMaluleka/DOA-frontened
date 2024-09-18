@@ -27,6 +27,11 @@
       </div>
     </div>
   </div>
+  <div fxLayout="row wrap" style="width: 98%" class="margin-left-1em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div>
+      <h3 class="blue-color" *ngIf="page.table.length &lt; 1">No <span class="teal-color">data</span> added or found.</h3>
+    </div>
+  </div>
   <div fxLayout="row wrap" style="margin-bottom: 1em;" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.table.length &lt; 1"><img imgSrc="/Web/images/D.O.A-logo.png" class="rotate" width="90%"></div>
   <div fxLayout="row wrap" class="full-width" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.table.length &gt; 0">
     <div fxLayout="column" style="width:98%; border: 1.5px solid #124e52;">

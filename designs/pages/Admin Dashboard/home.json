@@ -855,6 +855,7 @@
         "inputParams": [
             null
         ],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_2DIjYQbf6CS17DYx",
         "category": "General",
