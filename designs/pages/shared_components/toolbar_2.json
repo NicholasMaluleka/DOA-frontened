@@ -336,8 +336,8 @@
         "flow_type": "sync",
         "functionName": "editProfile",
         "category": "General",
-        "x": 145,
-        "y": 760,
+        "x": 105,
+        "y": 680,
         "wires": [
             [
                 "sd_oyctM1WIv8S3DcIA"
@@ -383,8 +383,8 @@
         "resultMapping": "this.page",
         "functionName": "sd_oyctM1WIv8S3DcIA",
         "category": "Dialog",
-        "x": 265,
-        "y": 760,
+        "x": 205,
+        "y": 680,
         "wires": [
             [],
             [],
@@ -525,7 +525,21 @@
                 "textIp": "path",
                 "typedIpValue": {
                     "type": "str",
-                    "value": "get-users"
+                    "value": "get-notification"
+                }
+            },
+            {
+                "textIp": "notifications",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
+            },
+            {
+                "textIp": "backUpNotifications",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
                 }
             }
         ],
@@ -669,7 +683,7 @@
         ],
         "functionName": "sd_9ScCxX3UHpaaXEJa",
         "category": "Function",
-        "x": 545,
+        "x": 685,
         "y": 40,
         "wires": [
             [
@@ -709,10 +723,11 @@
         "serviceImportPath": "./",
         "startName": "getInitials",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_qGoGH6Y3O30tcSxQ",
         "category": "General",
-        "x": 625,
+        "x": 885,
         "y": 40,
         "wires": [
             []
@@ -777,7 +792,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_fGZJ3s4kXamNriT5"
+                "sd_KQQMQS2xrZFgmlaQ"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -792,14 +807,348 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
+        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.backUpNotifications = page.notifications\n\nconsole.log(\"Obs\", bh.Obs)\n\nbh.Obs.subscribe({\n    next: (res) => { \n        console.log(\"RES: \", res)\n        if(res.status) {\n            // page.notifications.push(res)\n            // this.prepareNotifications() \n        }\n    },\n    error: (err) => { console.log(\"ERR: \", err) },\n    complete: () => { console.log(\"DONE !!\") }\n})\n\n this.prepareNotifications() ",
         "functionName": "sd_fGZJ3s4kXamNriT5",
         "category": "Function",
-        "x": 485,
+        "x": 565,
         "y": 40,
         "wires": [
             [
                 "sd_9ScCxX3UHpaaXEJa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_gS2glZfxWSU6jse5",
+        "type": "PageStart",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "viewClaim",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "notification",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "viewClaim",
+        "category": "General",
+        "x": 105,
+        "y": 780,
+        "wires": [
+            [
+                "sd_mQ10NHSHyQU6EbqY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbar_2Component"
+    },
+    {
+        "id": "sd_hIbpsd5Kwt9ZDjAA",
+        "type": "Navigation",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/dashboard/claim-register",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": {
+            "type": "this.page",
+            "value": "routeData"
+        },
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_hIbpsd5Kwt9ZDjAA",
+        "category": "Navigation",
+        "x": 645,
+        "y": 780,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_KQQMQS2xrZFgmlaQ",
+        "type": "PageCallService",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_2F1jRXPpIvh6BKAw",
+            "type": "tab",
+            "createdDate": "2024-09-10T12:10:37.327Z",
+            "label": "Notifications",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_C1t77o9fVIhcxiiz",
+            "flowName": "initializeObs"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "Obs",
+                "valueType": "bh",
+                "value": "Obs",
+                "mapVarName": "Obs",
+                "localVar": "bh.Obs"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Notifications",
+        "startName": "initializeObs",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_KQQMQS2xrZFgmlaQ",
+        "category": "General",
+        "x": 485,
+        "y": 40,
+        "wires": [
+            [
+                "sd_fGZJ3s4kXamNriT5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_D8ySol3eAPgyU7yO",
+        "type": "PageStart",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "prepareNotifications",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "prepareNotifications",
+        "category": "General",
+        "x": 45,
+        "y": 160,
+        "wires": [
+            [
+                "sd_p5BuR6lDjNSXKRIV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "toolbar_2Component"
+    },
+    {
+        "id": "sd_p5BuR6lDjNSXKRIV",
+        "type": "Script",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let notifications = page.notifications\n\nconsole.log(\"NOT 2: \", notifications)\n\nnotifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)",
+        "functionName": "sd_p5BuR6lDjNSXKRIV",
+        "category": "Function",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_nz6GDgWx5KF0Akv0",
+        "type": "Script",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.routeData = {\n    fromNotification: true\n}\n\npage.userClaim = page.claims.find(claim => claim.claimNumber == bh.claimNumber)\n\nconsole.log(\"CLAIM: \", page.userClaim)",
+        "functionName": "sd_nz6GDgWx5KF0Akv0",
+        "category": "Function",
+        "x": 365,
+        "y": 780,
+        "wires": [
+            [
+                "sd_RKgvYUhCZL9ZE6g9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_8z0NM7YrlVnQLpIj",
+        "type": "PageCallService",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_2F1jRXPpIvh6BKAw",
+            "type": "tab",
+            "createdDate": "2024-09-10T12:10:37.327Z",
+            "label": "Notifications",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_7Gra8AgAem9ujuDY",
+            "flowName": "genericGet"
+        },
+        "inputVariables": [
+            {
+                "key": "path",
+                "map": true,
+                "valueType": "this.page",
+                "value": "path"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "this.page",
+                "value": "claims",
+                "mapVarName": "data",
+                "localVar": "this.page.claims"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Notifications",
+        "startName": "genericGet",
+        "inputParams": [
+            "this.page.path"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_8z0NM7YrlVnQLpIj",
+        "category": "General",
+        "x": 265,
+        "y": 780,
+        "wires": [
+            [
+                "sd_nz6GDgWx5KF0Akv0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_mQ10NHSHyQU6EbqY",
+        "type": "Script",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.path = \"get-claims\"\n\nconsole.log(bh.input.notification)\n\nbh.claimNumber = bh.input.notification.claimNumber\n\nbh.notific = page.backUpNotifications.find(notification => notification.claimNumber == bh.claimNumber)\n\nconsole.log(\"NOTIFIC: \", bh.notific)",
+        "functionName": "sd_mQ10NHSHyQU6EbqY",
+        "category": "Function",
+        "x": 185,
+        "y": 780,
+        "wires": [
+            [
+                "sd_8z0NM7YrlVnQLpIj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_5BnSKyrzeBMjIEH8",
+        "type": "Storage",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "claim"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "userClaim"
+        },
+        "resultMapping": {},
+        "functionName": "sd_5BnSKyrzeBMjIEH8",
+        "category": "Storage",
+        "x": 565,
+        "y": 780,
+        "wires": [
+            [
+                "sd_hIbpsd5Kwt9ZDjAA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbar_2Component",
+        "generated": true
+    },
+    {
+        "id": "sd_RKgvYUhCZL9ZE6g9",
+        "type": "Storage",
+        "z": "sd_ruyWFLY0uZMoejTk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "clickedNotification"
+        },
+        "value": {
+            "type": "bh",
+            "value": "notific"
+        },
+        "resultMapping": {},
+        "functionName": "sd_RKgvYUhCZL9ZE6g9",
+        "category": "Storage",
+        "x": 460,
+        "y": 780,
+        "wires": [
+            [
+                "sd_5BnSKyrzeBMjIEH8"
             ]
         ],
         "__n_excludedFromValidation__": {},

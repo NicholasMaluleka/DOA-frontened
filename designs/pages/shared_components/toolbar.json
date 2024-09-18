@@ -396,7 +396,7 @@
         ],
         "functionName": "sd_4JmschuK1J95rMwA",
         "category": "Function",
-        "x": 625,
+        "x": 725,
         "y": 40,
         "wires": [
             [
@@ -440,7 +440,7 @@
         "accept_csd": false,
         "functionName": "sd_iVhqs9Yhhcc5HWXd",
         "category": "General",
-        "x": 705,
+        "x": 805,
         "y": 40,
         "wires": [
             []
@@ -778,7 +778,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_C2uEjMLkeZE9dBL7"
+                "sd_90T0VfVCnSaWRo1q"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -793,14 +793,68 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n",
+        "script": "console.log(\"NOTIFICATIONS: \", page.notifications)\n\npage.notifications = []\n\npage.notifications.forEach(notification => {\n    console.log(\"CLAIM POLICY: \", notification.claimNumber.split(\"-\")[1])\n    console.log(\"userPolicy : \", page.user.policyNumber)\n    if(notification?.status.toLowerCase() == \"partially approved\" && page.user.role == \"director\") {\n        page.notifications.push({date: notification.date, _notification: `Claim is ${notification?.status} and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"admin\" && notification?.status.toLowerCase() == \"pending\") {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged and requires your attention`, claimNumber: notification.claimNumber})\n    }else if(notification?.status.toLowerCase() == \"approved\" && page.user.role == \"client\" && notification.claimNumber.includes(page.user.policy)) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been sucessfully ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"pending\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been logged sucessfully and is ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"partially approved\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}`, claimNumber: notification.claimNumber})\n    }else if(page.user.role == \"client\" && notification?.status.toLowerCase() == \"rejected\" && notification.claimNumber.split(\"-\")[1] == page.user.policyNumber) {\n        page.notifications.push({date: notification.date, _notification: `Claim has been ${notification?.status}.`, claimNumber: notification.claimNumber})\n    }\n})\n\nconsole.log(\" AFTER FILTER: \", page.notifications)\n\nconsole.log(\"Obs\", bh.Obs)\n\nbh.Obs.subscribe({\n    next: (res) => { console.log(\"RES: \", res) },\n    error: (err) => { console.log(\"ERR: \", err) },\n    complete: () => { console.log(\"DONE !!\") }\n})\n",
         "functionName": "sd_C2uEjMLkeZE9dBL7",
         "category": "Function",
-        "x": 545,
+        "x": 645,
         "y": 40,
         "wires": [
             [
                 "sd_4JmschuK1J95rMwA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "toolbarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_90T0VfVCnSaWRo1q",
+        "type": "PageCallService",
+        "z": "sd_jx2nZPm829dgllX2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_2F1jRXPpIvh6BKAw",
+            "type": "tab",
+            "createdDate": "2024-09-10T12:10:37.327Z",
+            "label": "Notifications",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_C1t77o9fVIhcxiiz",
+            "flowName": "initializeObs"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "Obs",
+                "valueType": "bh",
+                "value": "Obs",
+                "mapVarName": "Obs",
+                "localVar": "bh.Obs"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Notifications",
+        "startName": "initializeObs",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_90T0VfVCnSaWRo1q",
+        "category": "General",
+        "x": 545,
+        "y": 40,
+        "wires": [
+            [
+                "sd_C2uEjMLkeZE9dBL7"
             ]
         ],
         "__n_excludedFromValidation__": {},

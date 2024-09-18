@@ -164,11 +164,27 @@ export class toolbarComponent {
       );
       this.page.notifications = outputVariables.local.data;
 
-      bh = this.sd_C2uEjMLkeZE9dBL7(bh);
+      bh = this.sd_90T0VfVCnSaWRo1q(bh);
       //appendnew_next_sd_qtn4YGxkzRZk8Y6h
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_qtn4YGxkzRZk8Y6h');
+    }
+  }
+
+  async sd_90T0VfVCnSaWRo1q(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.initializeObs();
+      bh.Obs = outputVariables.local.Obs;
+
+      bh = this.sd_C2uEjMLkeZE9dBL7(bh);
+      //appendnew_next_sd_90T0VfVCnSaWRo1q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_90T0VfVCnSaWRo1q');
     }
   }
 
@@ -244,6 +260,20 @@ export class toolbarComponent {
       });
 
       console.log(' AFTER FILTER: ', page.notifications);
+
+      console.log('Obs', bh.Obs);
+
+      bh.Obs.subscribe({
+        next: (res) => {
+          console.log('RES: ', res);
+        },
+        error: (err) => {
+          console.log('ERR: ', err);
+        },
+        complete: () => {
+          console.log('DONE !!');
+        },
+      });
 
       bh = this.sd_4JmschuK1J95rMwA(bh);
       //appendnew_next_sd_C2uEjMLkeZE9dBL7

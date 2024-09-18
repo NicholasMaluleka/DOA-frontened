@@ -360,8 +360,8 @@
         "script": "if (!page.backupapplicationsDatasource) {\n  page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement)\n  .value.trim()\n  .toLowerCase();\n\npage.searchValue = searchValue;\n\nif (searchValue) {\n  const searchResults = page.backupapplicationsDatasource.filter(\n    (row) => {\n      const dateStr = new Date(row.date).toLocaleDateString('en-US', {\n        year: 'numeric',\n        month: 'short',\n        day: 'numeric',\n      }).toLowerCase();\n\n      return (\n        (row.amount &&\n          row.amount.toString().toLowerCase().includes(searchValue)) ||\n        (row.date && dateStr.includes(searchValue)) ||\n        (row.policyNumber &&\n          row.policyNumber.toString().toLowerCase().includes(searchValue))\n      );\n    }\n  );\n  page.table = searchResults;\n} else {\n  // Reset to original data if search value is empty\n  page.table = [...page.backupapplicationsDatasource];\n}\n",
         "functionName": "sd_iBlFYTlpoczCmWts_5",
         "category": "Function",
-        "x": 205,
-        "y": 260,
+        "x": 125,
+        "y": 240,
         "wires": [
             []
         ],
@@ -392,8 +392,8 @@
         "flow_type": "sync",
         "functionName": "onFilter",
         "category": "General",
-        "x": 60,
-        "y": 260,
+        "x": 45,
+        "y": 240,
         "wires": [
             [
                 "sd_sJPKFnOc5xM7bGTZ"

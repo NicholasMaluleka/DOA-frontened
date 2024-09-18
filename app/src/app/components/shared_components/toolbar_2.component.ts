@@ -118,12 +118,44 @@ export class toolbar_2Component {
       return this.errorHandler(bh, e, 'sd_qvDYKL1VrIxeddsI');
     }
   }
+
+  viewClaim(notification: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { notification };
+      bh.local = {};
+      bh = this.sd_mQ10NHSHyQU6EbqY(bh);
+      //appendnew_next_viewClaim
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gS2glZfxWSU6jse5');
+    }
+  }
+
+  prepareNotifications(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_p5BuR6lDjNSXKRIV(bh);
+      //appendnew_next_prepareNotifications
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_D8ySol3eAPgyU7yO');
+    }
+  }
   //appendnew_flow_toolbar_2Component_start
 
   sd_vYroLyfoxwBQaGzc(bh) {
     try {
       this.page.messages = undefined;
-      this.page.path = 'get-users';
+      this.page.path = 'get-notification';
+      this.page.notifications = [];
+      this.page.backUpNotifications = undefined;
       bh = this.sd_Qfbqflcpzj8qAiMC(bh);
       //appendnew_next_sd_vYroLyfoxwBQaGzc
       return bh;
@@ -164,11 +196,27 @@ export class toolbar_2Component {
       );
       this.page.notifications = outputVariables.local.data;
 
-      bh = this.sd_fGZJ3s4kXamNriT5(bh);
+      bh = this.sd_KQQMQS2xrZFgmlaQ(bh);
       //appendnew_next_sd_3aUV8v8xHBXZT1sr
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3aUV8v8xHBXZT1sr');
+    }
+  }
+
+  async sd_KQQMQS2xrZFgmlaQ(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.initializeObs();
+      bh.Obs = outputVariables.local.Obs;
+
+      bh = this.sd_fGZJ3s4kXamNriT5(bh);
+      //appendnew_next_sd_KQQMQS2xrZFgmlaQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_KQQMQS2xrZFgmlaQ');
     }
   }
 
@@ -177,74 +225,27 @@ export class toolbar_2Component {
       const page = this.page;
       console.log('NOTIFICATIONS: ', page.notifications);
 
-      page.notifications = [];
+      page.backUpNotifications = page.notifications;
 
-      page.notifications.forEach((notification) => {
-        console.log('CLAIM POLICY: ', notification.claimNumber.split('-')[1]);
-        console.log('userPolicy : ', page.user.policyNumber);
-        if (
-          notification?.status.toLowerCase() == 'partially approved' &&
-          page.user.role == 'director'
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim is ${notification?.status} and requires your attention`,
-            claimNumber: notification.claimNumber,
-          });
-        } else if (
-          page.user.role == 'admin' &&
-          notification?.status.toLowerCase() == 'pending'
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim has been logged and requires your attention`,
-            claimNumber: notification.claimNumber,
-          });
-        } else if (
-          notification?.status.toLowerCase() == 'approved' &&
-          page.user.role == 'client' &&
-          notification.claimNumber.includes(page.user.policy)
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim has been sucessfully ${notification?.status}`,
-            claimNumber: notification.claimNumber,
-          });
-        } else if (
-          page.user.role == 'client' &&
-          notification?.status.toLowerCase() == 'pending' &&
-          notification.claimNumber.split('-')[1] == page.user.policyNumber
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim has been logged sucessfully and is ${notification?.status}`,
-            claimNumber: notification.claimNumber,
-          });
-        } else if (
-          page.user.role == 'client' &&
-          notification?.status.toLowerCase() == 'partially approved' &&
-          notification.claimNumber.split('-')[1] == page.user.policyNumber
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim has been ${notification?.status}`,
-            claimNumber: notification.claimNumber,
-          });
-        } else if (
-          page.user.role == 'client' &&
-          notification?.status.toLowerCase() == 'rejected' &&
-          notification.claimNumber.split('-')[1] == page.user.policyNumber
-        ) {
-          page.notifications.push({
-            date: notification.date,
-            _notification: `Claim has been ${notification?.status}.`,
-            claimNumber: notification.claimNumber,
-          });
-        }
+      console.log('Obs', bh.Obs);
+
+      bh.Obs.subscribe({
+        next: (res) => {
+          console.log('RES: ', res);
+          if (res.status) {
+            // page.notifications.push(res)
+            // this.prepareNotifications()
+          }
+        },
+        error: (err) => {
+          console.log('ERR: ', err);
+        },
+        complete: () => {
+          console.log('DONE !!');
+        },
       });
 
-      console.log(' AFTER FILTER: ', page.notifications);
-
+      this.prepareNotifications();
       bh = this.sd_9ScCxX3UHpaaXEJa(bh);
       //appendnew_next_sd_fGZJ3s4kXamNriT5
       return bh;
@@ -413,6 +414,183 @@ export class toolbar_2Component {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_oyctM1WIv8S3DcIA');
+    }
+  }
+
+  sd_mQ10NHSHyQU6EbqY(bh) {
+    try {
+      const page = this.page;
+      page.path = 'get-claims';
+
+      console.log(bh.input.notification);
+
+      bh.claimNumber = bh.input.notification.claimNumber;
+
+      bh.notific = page.backUpNotifications.find(
+        (notification) => notification.claimNumber == bh.claimNumber
+      );
+
+      console.log('NOTIFIC: ', bh.notific);
+      bh = this.sd_8z0NM7YrlVnQLpIj(bh);
+      //appendnew_next_sd_mQ10NHSHyQU6EbqY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mQ10NHSHyQU6EbqY');
+    }
+  }
+
+  async sd_8z0NM7YrlVnQLpIj(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericGet(
+        this.page.path
+      );
+      this.page.claims = outputVariables.local.data;
+
+      bh = this.sd_nz6GDgWx5KF0Akv0(bh);
+      //appendnew_next_sd_8z0NM7YrlVnQLpIj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8z0NM7YrlVnQLpIj');
+    }
+  }
+
+  sd_nz6GDgWx5KF0Akv0(bh) {
+    try {
+      const page = this.page;
+      page.routeData = {
+        fromNotification: true,
+      };
+
+      page.userClaim = page.claims.find(
+        (claim) => claim.claimNumber == bh.claimNumber
+      );
+
+      console.log('CLAIM: ', page.userClaim);
+      bh = this.sd_RKgvYUhCZL9ZE6g9(bh);
+      //appendnew_next_sd_nz6GDgWx5KF0Akv0
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nz6GDgWx5KF0Akv0');
+    }
+  }
+
+  sd_RKgvYUhCZL9ZE6g9(bh) {
+    try {
+      localStorage.setItem('clickedNotification', JSON.stringify(bh.notific));
+      bh = this.sd_5BnSKyrzeBMjIEH8(bh);
+      //appendnew_next_sd_RKgvYUhCZL9ZE6g9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RKgvYUhCZL9ZE6g9');
+    }
+  }
+
+  sd_5BnSKyrzeBMjIEH8(bh) {
+    try {
+      localStorage.setItem('claim', JSON.stringify(this.page.userClaim));
+      bh = this.sd_hIbpsd5Kwt9ZDjAA(bh);
+      //appendnew_next_sd_5BnSKyrzeBMjIEH8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5BnSKyrzeBMjIEH8');
+    }
+  }
+
+  async sd_hIbpsd5Kwt9ZDjAA(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/dashboard/claim-register');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, this.page.routeData),
+        });
+      //appendnew_next_sd_hIbpsd5Kwt9ZDjAA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hIbpsd5Kwt9ZDjAA');
+    }
+  }
+
+  sd_p5BuR6lDjNSXKRIV(bh) {
+    try {
+      const page = this.page;
+      let notifications = page.notifications;
+
+      console.log('NOT 2: ', notifications);
+
+      notifications.forEach((notification) => {
+        console.log('CLAIM POLICY: ', notification.claimNumber.split('-')[1]);
+        console.log('userPolicy : ', page.user.policyNumber);
+        if (
+          notification?.status.toLowerCase() == 'partially approved' &&
+          page.user.role == 'director'
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim is ${notification?.status} and requires your attention`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'admin' &&
+          notification?.status.toLowerCase() == 'pending'
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim is ${notification?.status} and requires your attention`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          notification?.status.toLowerCase() == 'approved' &&
+          page.user.role == 'client' &&
+          notification.claimNumber.includes(page.user.policy)
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been sucessfully ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'pending' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been logged sucessfully and is ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'partially approved' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been ${notification?.status}`,
+            claimNumber: notification.claimNumber,
+          });
+        } else if (
+          page.user.role == 'client' &&
+          notification?.status.toLowerCase() == 'rejected' &&
+          notification.claimNumber.split('-')[1] == page.user.policyNumber
+        ) {
+          page.notifications.push({
+            date: notification.date,
+            _notification: `Claim has been ${notification?.status}.`,
+            claimNumber: notification.claimNumber,
+          });
+        }
+      });
+
+      console.log(' AFTER FILTER: ', page.notifications);
+      //appendnew_next_sd_p5BuR6lDjNSXKRIV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_p5BuR6lDjNSXKRIV');
     }
   }
 

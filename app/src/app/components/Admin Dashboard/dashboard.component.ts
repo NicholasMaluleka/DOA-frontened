@@ -8,6 +8,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -115,6 +116,36 @@ export class dashboardComponent {
       return this.errorHandler(bh, e, 'sd_b1GI13Nw8KRjwiIQ');
     }
   }
+
+  updatePayment(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = { path: 'get-monthly-payments' };
+      bh = this.sd_ycxSItTbw1QKWzlU(bh);
+      //appendnew_next_updatePayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xsVhSI4ADzgb2Kn2');
+    }
+  }
+
+  storePayment(form: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { form };
+      bh.local = { path: 'log-payment' };
+      bh = this.sd_U7JmgLxfZX6fz3XN(bh);
+      //appendnew_next_storePayment
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9vLC9WAKEYTGA3rm');
+    }
+  }
   //appendnew_flow_dashboardComponent_start
 
   sd_BZk5VYcbok7vTCa5(bh) {
@@ -168,11 +199,23 @@ export class dashboardComponent {
   sd_WiXpGH1Toryzavqq(bh) {
     try {
       this.page.navItem = JSON.parse(sessionStorage.getItem('navItem'));
-      bh = this.sd_Oxa4JU6JEwuflFFv(bh);
+      bh = this.sd_PQQ1BfHCiczywJYh(bh);
       //appendnew_next_sd_WiXpGH1Toryzavqq
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_WiXpGH1Toryzavqq');
+    }
+  }
+
+  sd_PQQ1BfHCiczywJYh(bh) {
+    try {
+      let outputVariables = this.updatePayment();
+
+      bh = this.sd_Oxa4JU6JEwuflFFv(bh);
+      //appendnew_next_sd_PQQ1BfHCiczywJYh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PQQ1BfHCiczywJYh');
     }
   }
 
@@ -392,6 +435,141 @@ export class dashboardComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_q2NLm7f3ES5CuB3k');
+    }
+  }
+
+  async sd_ycxSItTbw1QKWzlU(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericGet(
+        bh.local.path
+      );
+      this.page.payments = outputVariables.local.data;
+
+      bh = this.sd_tmQQTWA5auKGP18O(bh);
+      //appendnew_next_sd_ycxSItTbw1QKWzlU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ycxSItTbw1QKWzlU');
+    }
+  }
+
+  sd_tmQQTWA5auKGP18O(bh) {
+    try {
+      const page = this.page;
+      console.log('PAYMENT: ', page.payments);
+
+      page.payments = page.payments.filter((payment) => {
+        console.log('PAYMENT ITEM: ', payment);
+        let paidDate = new Date(payment.date);
+        if (paidDate.getMonth() === new Date().getMonth()) {
+          if (paidDate.getFullYear() === new Date().getFullYear()) {
+            return payment;
+          }
+        }
+      });
+
+      bh.path = 'get-users';
+
+      console.log("THIS MONTH'S PAYMENT: ", page.payments);
+
+      bh = this.sd_uU1egWMUwJGEYeZ5(bh);
+      //appendnew_next_sd_tmQQTWA5auKGP18O
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tmQQTWA5auKGP18O');
+    }
+  }
+
+  async sd_uU1egWMUwJGEYeZ5(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericGet(bh.path);
+      this.page.clients = outputVariables.local.data;
+
+      bh = this.sd_JWSjjJaLEskD2kAh(bh);
+      //appendnew_next_sd_uU1egWMUwJGEYeZ5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_uU1egWMUwJGEYeZ5');
+    }
+  }
+
+  sd_JWSjjJaLEskD2kAh(bh) {
+    try {
+      const page = this.page;
+      bh.form = {
+        name: '',
+        surname: '',
+        policyNumber: '',
+        amount: 0,
+        loggedBY: 'Automated Overdue',
+        event: 'Missed payment',
+      };
+
+      let foundClients = page.clients.page.clients.forEach((client) => {
+        let day = new Date().getDate();
+        let year = new Date().getFullYear();
+        // console.log("day: ", day)
+        // console.log("CLIENT: 1", client)
+
+        page.payments.forEach((payment) => {
+          if (
+            payment.policyNumber !== client.policyNumber &&
+            client.role == 'client'
+          ) {
+            console.log('PAYMENTS: ', payment);
+            console.log('CLIENT: ', client);
+            if (client?.paymentDate <= day) {
+              // console.log("CLIENT: 2", client)
+              // console.log("PAYMENT: ", payment)
+              bh.form.name = client.firstName;
+              bh.form.surname = client.lastName;
+              bh.form.policyNumber = client.policyNumber;
+              // this.storePayment(bh.form)
+              console.log('FORM TO BE SENT: ', bh.form);
+            }
+          }
+        });
+      });
+
+      //appendnew_next_sd_JWSjjJaLEskD2kAh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JWSjjJaLEskD2kAh');
+    }
+  }
+
+  async sd_U7JmgLxfZX6fz3XN(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericPost(
+        bh.local.path,
+        bh.input.form
+      );
+      bh.res = outputVariables.local.result;
+
+      this.sd_FrMw5MzCSmIAFIWA(bh);
+      //appendnew_next_sd_U7JmgLxfZX6fz3XN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_U7JmgLxfZX6fz3XN');
+    }
+  }
+
+  sd_FrMw5MzCSmIAFIWA(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.res);
+      //appendnew_next_sd_FrMw5MzCSmIAFIWA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FrMw5MzCSmIAFIWA');
     }
   }
 

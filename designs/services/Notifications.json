@@ -200,7 +200,7 @@
         "functionName": "genericPost",
         "category": "General",
         "x": 85,
-        "y": 200,
+        "y": 280,
         "wires": [
             [
                 "sd_t9iOOiIX26jIc6Y8"
@@ -220,8 +220,8 @@
         "script": "bh.url = bh.ssdURL + bh.input.path",
         "functionName": "sd_AZYvYq8p9bttzcea",
         "category": "Function",
-        "x": 265,
-        "y": 200,
+        "x": 285,
+        "y": 280,
         "wires": [
             [
                 "sd_eD9sbenMelWr6yyk"
@@ -251,8 +251,8 @@
         ],
         "functionName": "sd_t9iOOiIX26jIc6Y8",
         "category": "General",
-        "x": 180,
-        "y": 200,
+        "x": 205,
+        "y": 280,
         "wires": [
             [
                 "sd_AZYvYq8p9bttzcea"
@@ -301,8 +301,379 @@
         "paramMappingObj": {},
         "functionName": "sd_eD9sbenMelWr6yyk",
         "category": "HTTP",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_C1t77o9fVIhcxiiz",
+        "type": "Start",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "InitializeObs",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "BehaviourSub",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "Obs",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "initializeObs",
+        "category": "General",
+        "x": 85,
+        "y": 400,
+        "wires": [
+            [
+                "sd_VzHz99B01mVTf0L7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Notifications"
+    },
+    {
+        "id": "sd_VzHz99B01mVTf0L7",
+        "type": "UseDependency",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "BehaviorSubject",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "BS"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "rxjs",
+        "serviceDesignerType": "client",
+        "functionName": "sd_VzHz99B01mVTf0L7",
+        "category": "Function",
+        "x": 205,
+        "y": 400,
+        "wires": [
+            [
+                "sd_4VScn4LGSNE0JI33"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_4VScn4LGSNE0JI33",
+        "type": "Script",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.BehaviourSub = new BehaviorSubject<any>({notification: \"\"})\n\nbh.local.Obs = bh.local.BehaviourSub.asObservable()\n\nconsole.log(\"bh.local.BehaviourSub\", bh.local.BehaviourSub)\n\nconsole.log(\"bh.local.Obs\", bh.local.Obs)",
+        "functionName": "sd_4VScn4LGSNE0JI33",
+        "category": "Function",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "sd_CrL4wbPIFNqAWv9J"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_CrL4wbPIFNqAWv9J",
+        "type": "ServiceVariables",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "behaviorS",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "BehaviourSub"
+                }
+            }
+        ],
+        "functionName": "sd_CrL4wbPIFNqAWv9J",
+        "category": "Function",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_nD5YhSEKx1PzGpCF",
+        "type": "Start",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "updateNotifications",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "data",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "updateNotifications",
+        "category": "General",
+        "x": 85,
+        "y": 500,
+        "wires": [
+            [
+                "sd_jg0UEDnjeMTknc2X"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Notifications"
+    },
+    {
+        "id": "sd_jg0UEDnjeMTknc2X",
+        "type": "ServiceVariables",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "behaviorS",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "behaviorS"
+                }
+            }
+        ],
+        "functionName": "sd_jg0UEDnjeMTknc2X",
+        "category": "Function",
+        "x": 205,
+        "y": 500,
+        "wires": [
+            [
+                "sd_Ee6R4vyxG1LfFhwH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_Ee6R4vyxG1LfFhwH",
+        "type": "Script",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.behaviorS.next(bh.input.data)\n\nconsole.log(\"bh.behaviorS\", bh.behaviorS)",
+        "functionName": "sd_Ee6R4vyxG1LfFhwH",
+        "category": "Function",
+        "x": 320,
+        "y": 500,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_8iH7KhiPN5tqPMXx",
+        "type": "Start",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "genericPUT",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "path",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "payload",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "genericPut",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_6fXBALinptaOInrG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Notifications"
+    },
+    {
+        "id": "sd_Nb9mTOR9uUGWP0hM",
+        "type": "Script",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.ssdURL + bh.input.path",
+        "functionName": "sd_Nb9mTOR9uUGWP0hM",
+        "category": "Function",
+        "x": 285,
+        "y": 180,
+        "wires": [
+            [
+                "sd_8YglPiMQ8XhRtDrB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_6fXBALinptaOInrG",
+        "type": "Environment",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_6fXBALinptaOInrG",
+        "category": "General",
+        "x": 205,
+        "y": 180,
+        "wires": [
+            [
+                "sd_Nb9mTOR9uUGWP0hM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Notifications",
+        "generated": true
+    },
+    {
+        "id": "sd_8YglPiMQ8XhRtDrB",
+        "type": "HttpRequest",
+        "z": "sd_2F1jRXPpIvh6BKAw",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.payload",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "payload"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_8YglPiMQ8XhRtDrB",
+        "category": "HTTP",
         "x": 380,
-        "y": 200,
+        "y": 180,
         "wires": [
             []
         ],

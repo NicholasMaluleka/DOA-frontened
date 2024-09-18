@@ -219,6 +219,21 @@ export class claimsComponent implements AfterViewInit {
       bh.path = 'get-notification';
 
       bh.local.dataSource = new MatTableDataSource(page.result);
+      bh.local.dataSourceApproved = new MatTableDataSource(
+        page.approvedDataSource
+      );
+      bh.local.dataSourcePending = new MatTableDataSource(
+        page.pendingDataSource
+      );
+      bh.local.dataSourcePA = new MatTableDataSource(
+        page.partiallyApprovedDataSource
+      );
+
+      // page.result = bh.local.dataSource
+
+      console.log('RES: ', page.result);
+
+      console.log('DS: ', bh.local.dataSource);
       bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
       //appendnew_next_sd_eJuzOUTYKNgXaqdz_1
       return bh;
@@ -229,7 +244,7 @@ export class claimsComponent implements AfterViewInit {
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
     try {
-      this.page.tableData = bh.local.dataSource;
+      this.page.result = bh.local.dataSource;
       //appendnew_next_sd_E9QbOlnVduPNV5MO_1
       return bh;
     } catch (e) {
@@ -406,12 +421,12 @@ export class claimsComponent implements AfterViewInit {
       setTimeout(() => {
         console.log('TB DATA: ', page.tableData);
 
-        this.page.tableData.sort = bh.pageViews.MatSort;
+        page.result.sort = bh.pageViews.MatSort;
 
-        this.page.tableData.paginator = bh.pageViews.MatPaginator;
+        page.result.paginator = bh.pageViews.MatPaginator;
 
-        console.log('TABLE DATA: ', page.tableData);
-      }, 500);
+        console.log('page.result: ', page.result);
+      }, 100);
 
       // this.page.tableData.sort = this.MatSort;
 

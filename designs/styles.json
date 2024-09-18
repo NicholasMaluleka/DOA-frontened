@@ -9,6 +9,7 @@
         "click-me",
         "FullHeight",
         "width20",
+        "width-200px",
         "small-weight",
         "fullWidth",
         "yellow-bg",
@@ -140,6 +141,7 @@
         "kg-green",
         "kg-box",
         "sim-x-small",
+        "sim-border-radius",
         "logclaim-btn",
         "stylish-btn",
         "viewclaim-btn",
@@ -175,6 +177,7 @@
         "icon-hourglass",
         "icon-half-check",
         "icon-globe",
-        "icon-hover"
+        "icon-hover",
+        "sim-link"
     ]
 }

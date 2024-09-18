@@ -26,22 +26,25 @@
 
                   </mat-form-field>
                 </div>
-                <div fxLayout="row " class="margin-top-10px kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field class="kg-half-width" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
-                    <mat-label>Package Type</mat-label>
-                    <mat-select formControlName="packageType" placeholder="Package Type" [required]="false">
-                      <ng-template ngFor let-option [ngForOf]="page.package" let-i="index">
-                        <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
-                      </ng-template>
-                    </mat-select>
-                    <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
-                  </mat-form-field>
-                  <mat-form-field [appearance]="&apos;legacy&apos;">
-                    <mat-label>Payment date</mat-label>
-                    <input matInput placeholder="Payment date" [matDatepicker]="picker" formControlName="paymentDate" [min]="page.date" [required]="true" [disabled]="true">
-                    <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
-                    <mat-datepicker #picker color="primary" [disabled]="false" [opened]="false"></mat-datepicker>
-                    <mat-error align="start" *ngIf="page.clientForm.controls.paymentDate?.errors?.required">Payment date is <b>required</b></mat-error>
-                  </mat-form-field>
+                <div fxLayout="row " class="margin-top-10px kg-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                  <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-label>Package Type</mat-label>
+                      <mat-select formControlName="packageType" placeholder="Package Type" [required]="false">
+                        <ng-template ngFor let-option [ngForOf]="page.package" let-i="index">
+                          <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                        </ng-template>
+                      </mat-select>
+                      <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
+                    </mat-form-field></div>
+                  <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true"><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+                      <mat-label>Preferred Payment Date</mat-label>
+                      <mat-select formControlName="paymentDate" placeholder="Payment Date" [required]="false">
+                        <ng-template ngFor let-option [ngForOf]="page.paymentDates" let-i="index">
+                          <mat-option [value]="option.value">{{option.viewValue}}</mat-option>
+                        </ng-template>
+                      </mat-select>
+                      <mat-error align="start" *ngIf="page.clientForm.controls.packageType?.errors?.required">Package Type is <strong>required<strong></strong></strong></mat-error>
+                    </mat-form-field></div>
                 </div>
                 <h3>
                   Contact Details</h3>
@@ -63,7 +66,7 @@
                 </div>
                 <div fxLayout="row wrap" class="margin-top-2em" fxLayoutAlign="start stretch" [fxShow]="true">
                   <div (click)="upload()">
-                    <input type="file" id="upload" required formControlName="file2" accept=".png" hidden>
+                    <input type="file" id="upload" required formControlName="file2" accept="application/pdf" hidden>
                     <label for="upload" class="kg-box kg-border-box kg-padding-10px">Upload ID</label>
                   </div>
                 </div>

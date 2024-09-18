@@ -140,9 +140,9 @@
                 }
             },
             {
-                "textIp": "date",
+                "textIp": "paymentDates",
                 "typedIpValue": {
-                    "type": "bh",
+                    "type": "literal",
                     "value": ""
                 }
             }
@@ -209,7 +209,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_r3eEuybGflYSevtu"
+                "sd_7K2noVNldq6MAAbT"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -224,7 +224,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.path = \"get-users\"\n\npage.fileForm = new FormGroup({\n    _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"),\n})\n\npage.beneficaryForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.beneficaryForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.dependencyForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm3 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.clientForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    address: new FormControl(\"\", [Validators.required]),\n    packageType: new FormControl(\"\", [Validators.required]),\n    paymentDate: new FormControl(\"\", [Validators.required]),\n    file2: new FormControl(\"\", [Validators.required]),\n    file: page.fileForm,\n    trialCount: new FormControl (0)\n})\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\npage.genders = [\n   {value: 'Male', viewValue: 'Male'},\n   {value: 'Female', viewValue: 'Female'}\n];\n\npage.date = new Date()\n\n page.customHeader = \"CustomHeaderComponent\"",
+        "script": "bh.path = \"get-users\"\n\npage.fileForm = new FormGroup({\n    _id: new FormControl(\"\"),\n    filename: new FormControl(\"\"),\n    chunkSize: new FormControl(\"\"),\n    length: new FormControl(\"\"),\n})\n\npage.beneficaryForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.beneficaryForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    relationship: new FormControl(\"\", [Validators.required]),\n})\n\npage.dependencyForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm2 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.dependencyForm3 = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n})\n\npage.clientForm = new FormGroup({\n    firstName: new FormControl(\"\", [Validators.required]),\n    lastName: new FormControl(\"\", [Validators.required]),\n    email: new FormControl(\"\", [Validators.required, Validators.email]),\n    gender: new FormControl(\"\"),\n    idNumber: new FormControl(\"\", [Validators.required, Validators.maxLength(13), Validators.minLength(13)]),\n    cellphone: new FormControl(\"\", [Validators.required,Validators.maxLength(10) , Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/)]),\n    address: new FormControl(\"\", [Validators.required]),\n    packageType: new FormControl(\"\", [Validators.required]),\n    paymentDate: new FormControl(\"\", [Validators.required]),\n    file2: new FormControl(\"\", [Validators.required]),\n    file: page.fileForm\n})\n\nconsole.log(\"FORM: \", page.clientForm)\n\npage.package = [\n   {value: 'Package 1', viewValue: 'Package 1'},\n   {value: 'Package 2', viewValue: 'Package 2'},\n   {value: 'Package 3', viewValue: 'Package 3'}\n];\n\npage.genders = [\n   {value: 'Male', viewValue: 'Male'},\n   {value: 'Female', viewValue: 'Female'}\n];\n\npage.paymentDates = [\n   {value: 1, viewValue: '1st'},\n   {value: 7, viewValue: '7th'},\n   {value: 15, viewValue: '15th'},\n   {value: 20, viewValue: '20th'},\n   {value: 25, viewValue: '25th'},\n];",
         "functionName": "sd_qjesZ9T9zyxXQtfe",
         "category": "Function",
         "x": 305,
@@ -422,7 +422,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.clientForm.value.file._id = page.userFile._id\npage.clientForm.value.file.filename = page.userFile.filename\npage.clientForm.value.file.length = page.userFile.length\npage.clientForm.value.file.chunkSize = page.userFile.chunkSize\n\nbh.url = page.ssdUrl + 'register'\n\ndelete page.clientForm.file2\n\nbh.body = page.clientForm.value\nbh.body.role = \"client\"\nbh.body.policyNumber = bh.random\nbh.body.password = bh.random2.toString()\nbh.body.beneficaries = !page.beneficaryForm2.value.firstName ? [ page.beneficaryForm.value ] : [page.beneficaryForm.value, page.beneficaryForm2.value]\nbh.body.dependencies = !page.dependencyForm2.value.firstName ? [ page.dependencyForm.value ] : !page.dependencyForm3.value.firstName ? [page.dependencyForm.value, page.dependencyForm2.value] : [page.dependencyForm.value, page.dependencyForm2.value, page.dependencyForm3.value]\n\n\n",
+        "script": "page.clientForm.value.file._id = page.userFile._id\npage.clientForm.value.file.filename = page.userFile.filename\npage.clientForm.value.file.length = page.userFile.length\npage.clientForm.value.file.chunkSize = page.userFile.chunkSize\n\nbh.url = page.ssdUrl + 'register'\n\ndelete page.clientForm.file2\n\nbh.body = page.clientForm.value\nbh.body.role = \"client\"\nbh.body.policyNumber = bh.random\nbh.body.password = bh.random2.toString()\nbh.body.beneficaries = !page.beneficaryForm2.value.firstName ? [ page.beneficaryForm.value ] : [page.beneficaryForm.value, page.beneficaryForm2.value]\nbh.body.dependencies = !page.dependencyForm2.value.firstName ? [ page.dependencyForm.value ] : !page.dependencyForm3.value.firstName ? [page.dependencyForm.value, page.dependencyForm2.value] : [page.dependencyForm.value, page.dependencyForm2.value, page.dependencyForm3.value]\n\n\nconsole.log(\"BODY: \", bh.body)",
         "functionName": "sd_lL2rQ9BIoBqeZaCn",
         "category": "Function",
         "x": 725,
@@ -456,8 +456,8 @@
         ],
         "functionName": "sd_RqtM6SLXw5cveimP",
         "category": "General",
-        "x": 765,
-        "y": 140,
+        "x": 685,
+        "y": 180,
         "wires": [
             [
                 "sd_XSPvXcLY8nKgPJZk"
@@ -478,11 +478,11 @@
         "script": "bh.url = page.ssdUrl + 'upload'",
         "functionName": "sd_XSPvXcLY8nKgPJZk",
         "category": "Function",
-        "x": 865,
-        "y": 140,
+        "x": 785,
+        "y": 180,
         "wires": [
             [
-                "sd_Z0u2uGd5YO9ydjps"
+                "sd_wTp42s7fASuqyUGQ"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -498,7 +498,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -506,10 +505,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -525,25 +522,22 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_Z0u2uGd5YO9ydjps",
         "category": "HTTP",
-        "x": 965,
-        "y": 140,
+        "x": 1125,
+        "y": 120,
         "wires": [
             [
                 "sd_vR3yJnYv3XKsLrq8"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "registerComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "registerComponent"
     },
     {
         "id": "sd_8TYG7d0QanhgKFMo",
@@ -558,8 +552,8 @@
         "flow_type": "sync",
         "functionName": "goToBackend",
         "category": "General",
-        "x": 665,
-        "y": 140,
+        "x": 565,
+        "y": 180,
         "wires": [
             [
                 "sd_RqtM6SLXw5cveimP"
@@ -634,15 +628,14 @@
         "script": "sessionStorage.setItem('file',JSON.stringify(bh.result))\nthis.getFromBackend()",
         "functionName": "sd_vR3yJnYv3XKsLrq8",
         "category": "Function",
-        "x": 1065,
-        "y": 140,
+        "x": 1205,
+        "y": 120,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "registerComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "registerComponent"
     },
     {
         "id": "sd_em3ylD24zJZE2On9",
@@ -664,9 +657,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -674,14 +665,15 @@
         "direction": "ltr",
         "functionName": "sd_em3ylD24zJZE2On9",
         "category": "General",
-        "x": 1145,
-        "y": 140,
+        "x": 1225,
+        "y": 320,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "registerComponent"
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
     },
     {
         "id": "sd_feAbYysgRL7fgGGm",
@@ -691,7 +683,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -699,10 +690,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -718,11 +707,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_feAbYysgRL7fgGGm",
         "category": "HTTP",
@@ -730,7 +717,8 @@
         "y": 400,
         "wires": [
             [
-                "sd_QnaW4yCDpoY9Cu3b"
+                "sd_QnaW4yCDpoY9Cu3b",
+                "sd_6HYllpHP2fgE2pmy"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -758,9 +746,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1015,7 +1001,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdUrl + 'validate-id'\npage.loading = true\n\n",
+        "script": "bh.url = page.ssdUrl + 'validate-id'\nbh.verifyURL = page.ssdUrl + 'verify-id'\n\npage.loading = true\n\n",
         "functionName": "sd_Joet7d2z5ZGhbPVA",
         "category": "Function",
         "x": 768,
@@ -1038,18 +1024,15 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
-        "urlMapping": "bh.url",
+        "urlMapping": "bh.verifyURL",
         "urlMappingObj": {
             "mapVarType": "bh",
-            "mapVarValue": "url"
+            "mapVarValue": "verifyURL"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -1065,11 +1048,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_xmrSywhjgd5I6fVU",
         "category": "HTTP",
@@ -1116,7 +1097,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.loading = false\n\n    bh.message1 = bh.results.message\n    this.showmsg()\n    this.goToBackend()\n\n",
+        "script": "page.loading = false\n\nbh.message1 = bh.results.message\n\nif(bh.message1 == \"Valid Form\") {\n    this.goToBackend()\n}else {\n    this.showmsg()\n\n}\n\n    console.log(\"FIle Data\", bh.message1)\n\n",
         "functionName": "sd_FZ6WMQY1voina3hL",
         "category": "Function",
         "x": 968,
@@ -1362,8 +1343,8 @@
         "flow_type": "sync",
         "functionName": "showmsg",
         "category": "General",
-        "x": 1085,
-        "y": 260,
+        "x": 1105,
+        "y": 220,
         "wires": [
             [
                 "sd_ujwsbDV8Krrs0ert"
@@ -1382,7 +1363,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "ID is valid"
+            "value": "ID is not valid"
         },
         "action": {
             "type": "str",
@@ -1393,9 +1374,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1403,8 +1382,8 @@
         "direction": "ltr",
         "functionName": "sd_ujwsbDV8Krrs0ert",
         "category": "General",
-        "x": 1185,
-        "y": 260,
+        "x": 1205,
+        "y": 220,
         "wires": [
             []
         ],
@@ -1614,7 +1593,6 @@
         "serviceImportPath": "./",
         "startName": "checkClientIfExists",
         "inputParams": [],
-        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_r8ZA4xPfv6W0TiV1",
         "category": "General",
@@ -1934,40 +1912,185 @@
         "generated": true
     },
     {
-        "id": "sd_r3eEuybGflYSevtu",
-        "type": "UseDependency",
+        "id": "sd_HIREFTn0oG6aIU5c",
+        "type": "PageStart",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "setPayDate",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "setPayDate",
+        "category": "General",
+        "x": 65,
+        "y": 900,
+        "wires": [
+            [
+                "sd_hErIPOFkyiRU6ocp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_hErIPOFkyiRU6ocp",
+        "type": "Script",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\nconst ctrlValue = page.clientForm.controls.paymentDate.value;\n\nlet date = new Date().setDate(ctrlValue)\n\nlet  newDate = new Date(date)\n\nconsole.log(\"VAL: \", newDate)\n\n",
+        "functionName": "sd_hErIPOFkyiRU6ocp",
+        "category": "Function",
+        "x": 200,
+        "y": 900,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wTp42s7fASuqyUGQ",
+        "type": "HttpRequest",
         "z": "sd_uqB8Ta19yPAqB9Xq",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "property": "",
-        "propertyType": "bh",
-        "propertyGv": "bh.",
-        "alias": "",
-        "modules": [
-            {
-                "textIp": "MatCalendar",
-                "typedIpValue": {
-                    "type": "this.page",
-                    "value": ""
-                },
-                "injectable": true
-            }
-        ],
-        "import_all": false,
-        "library": "@angular/material/datepicker",
-        "serviceDesignerType": "pages",
-        "functionName": "sd_r3eEuybGflYSevtu",
-        "category": "Function",
-        "x": 165,
-        "y": 100,
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.uploadedFile",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "uploadedFile"
+        },
+        "resultMapping": "this.page.userFile",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "userFile"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_wTp42s7fASuqyUGQ",
+        "category": "HTTP",
+        "x": 865,
+        "y": 180,
         "wires": [
             [
-                "sd_7K2noVNldq6MAAbT"
+                "sd_XlKgDxyHEwYuaCKH"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qKOu5zSvnfLhKp4i",
+        "type": "PageStart",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "showMsg2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "showMsg2",
+        "category": "General",
+        "x": 1105,
+        "y": 320,
+        "wires": [
+            [
+                "sd_em3ylD24zJZE2On9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_XlKgDxyHEwYuaCKH",
+        "type": "PageCallService",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_uqB8Ta19yPAqB9Xq",
+            "type": "tab",
+            "createdDate": "2024-08-16T11:30:17.229Z",
+            "label": "register",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_qKOu5zSvnfLhKp4i",
+            "flowName": "showMsg2"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "showMsg2",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_XlKgDxyHEwYuaCKH",
+        "category": "General",
+        "x": 960,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6HYllpHP2fgE2pmy",
+        "type": "Log",
+        "z": "sd_uqB8Ta19yPAqB9Xq",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.result",
+        "functionName": "sd_6HYllpHP2fgE2pmy",
+        "category": "General",
+        "x": 960,
+        "y": 500,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "result",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "registerComponent",

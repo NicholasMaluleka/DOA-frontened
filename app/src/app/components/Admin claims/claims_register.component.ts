@@ -18,6 +18,7 @@ import { director_noteComponent } from 'app/components/Director/director_note.co
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Notifications } from 'app/sd-services/Notifications'; //_splitter_
 import { variables } from 'app/sd-services/variables'; //_splitter_
 //append_imports_end
 
@@ -76,7 +77,7 @@ export class claims_registerComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      bh = this.sd_8uy7TQ48zgBugAZc(bh);
       //appendnew_next_start
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Pmcf2QLXpNt1xmib');
@@ -113,6 +114,231 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
+  upload1(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_i0xoEvpROPITU08N(bh);
+      //appendnew_next_upload1
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pN2ygQATPeLmzpIS');
+    }
+  }
+
+  goToBackend1(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_HAh8e2O6WlsOH6LR(bh);
+      //appendnew_next_goToBackend1
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iwimDeYXL6XcUkV4');
+    }
+  }
+
+  getFromBackend1(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_K6MUoKvNOAgAhK6i(bh);
+      //appendnew_next_getFromBackend1
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_y6PJt16z1WJHehyF');
+    }
+  }
+
+  upload2(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_G0j8bBjdh9weyiHG(bh);
+      //appendnew_next_upload2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_S1gyKckXWRyS9lSM');
+    }
+  }
+
+  upload3(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_aT3O0eRMOtZ6LC7u(bh);
+      //appendnew_next_upload3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_s4TFoVZaDvBKch2t');
+    }
+  }
+
+  goToBackend2(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_LhQRZFr5wXEAmZrZ(bh);
+      //appendnew_next_goToBackend2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IgOlwuw484mmQ8YO');
+    }
+  }
+
+  getFromBackend2(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_9yKA7QsBVt0HSigs(bh);
+      //appendnew_next_getFromBackend2
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CjvWQiUircLfJOvq');
+    }
+  }
+
+  goToBackend3(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_6uNK0kYpEsVrH7Ly(bh);
+      //appendnew_next_goToBackend3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7HMhDMyc2AKX2ucm');
+    }
+  }
+
+  getFromBackend3(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_HpMne9ieeprru1TK(bh);
+      //appendnew_next_getFromBackend3
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wMUpwRzmLCauob6u');
+    }
+  }
+
+  upload4(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_pO4AAHrTGJHGxcJs(bh);
+      //appendnew_next_upload4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_u4KB9PPIAMtnXNDe');
+    }
+  }
+
+  upload5(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_1u0zIChRYRVWLz4w(bh);
+      //appendnew_next_upload5
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RW6hTM1nuBoZ7wzr');
+    }
+  }
+
+  goToBackend4(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_ch1LeIg0VFOP5L4f(bh);
+      //appendnew_next_goToBackend4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_32LyDrjbYafwmVLT');
+    }
+  }
+
+  getFromBackend4(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_gL8y6GZoB2NS2hdX(bh);
+      //appendnew_next_getFromBackend4
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ERMjX0BVtHqKFxGa');
+    }
+  }
+
+  goToBackend5(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_Q24KK8CQ39Px5KnJ(bh);
+      //appendnew_next_goToBackend5
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_MQwP9s86fj7L1r2c');
+    }
+  }
+
+  getFromBackend5(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_shJhZakxr7p6z9TR(bh);
+      //appendnew_next_getFromBackend5
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_21mSynYSb6vu6Khf');
+    }
+  }
+
   checkIfIsReview(...others) {
     let bh: any = {};
     try {
@@ -136,7 +362,7 @@ export class claims_registerComponent implements AfterViewInit {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_2V5D2n28pUkU7tCx(bh);
+      this.sd_3UFHNmHQ6gr6Z6rE(bh);
       bh = this.sd_tTEL46pK2xh7B0lI(bh);
       //appendnew_next_reviewPatch
     } catch (e) {
@@ -200,243 +426,18 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  upload1(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_n4hbMh10Eh3z3ZsU(bh);
-      //appendnew_next_upload1
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_GPMxiYwAHW5mcTLG');
-    }
-  }
-
-  goToBackend1(...others) {
+  updateNotification(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
       bh.input = {};
-      bh.local = {};
-      bh = this.sd_TCg0MA5sCko3aWQh(bh);
-      //appendnew_next_goToBackend1
+      bh.local = { path: 'update_notification' };
+      bh = this.sd_pwCofTEY8QankddX(bh);
+      //appendnew_next_updateNotification
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_g3pyJj48j834jEvI');
-    }
-  }
-
-  getFromBackend1(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_n6Kfln4aV96ozLG0(bh);
-      //appendnew_next_getFromBackend1
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_w4xmd0ohQzJQ2yEp');
-    }
-  }
-
-  upload2(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_BmPWz1VDSzl4brQG(bh);
-      //appendnew_next_upload2
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Em1vOdfMEJ8s3HQp');
-    }
-  }
-
-  goToBackend2(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_VEJHUpqnMMqY74Ix(bh);
-      //appendnew_next_goToBackend2
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_aU0Zzwoqe2CxVNau');
-    }
-  }
-
-  getFromBackend2(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_etlERJRr2he1KIA9(bh);
-      //appendnew_next_getFromBackend2
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_cG6OLBbbJnyGx17V');
-    }
-  }
-
-  upload3(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_c0R9DuWKyrUGeBUV(bh);
-      //appendnew_next_upload3
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_hxQnprRmARpZj6zV');
-    }
-  }
-
-  goToBackend3(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_vprqtHXSLnaUznHL(bh);
-      //appendnew_next_goToBackend3
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qou4s0Qzgx0yyj89');
-    }
-  }
-
-  getFromBackend3(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_zOzYuojeT4wvbvTJ(bh);
-      //appendnew_next_getFromBackend3
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3Vxa7F2M3Q8j4u5q');
-    }
-  }
-
-  upload4(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_LXObBzwaRqR61Jqk(bh);
-      //appendnew_next_upload4
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_2OeZZceBHpduKz76');
-    }
-  }
-
-  goToBackend4(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_cxxe2TLoSCvtqnNn(bh);
-      //appendnew_next_goToBackend4
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_DU7tkUKDDCiQlKRa');
-    }
-  }
-
-  getFromBackend4(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_V7KAHoxPKIn498z1(bh);
-      //appendnew_next_getFromBackend4
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lQRp7otYHu2k6FIb');
-    }
-  }
-
-  upload5(event: any = undefined, ...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = { event };
-      bh.local = {};
-      bh = this.sd_R1vMQTyO0uOzv33b(bh);
-      //appendnew_next_upload5
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_A4ieF4I6nYcolXIT');
-    }
-  }
-
-  goToBackend5(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_ONu5zn9LOqoT8qaM(bh);
-      //appendnew_next_goToBackend5
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3G76a3FUpNh3YFzw');
-    }
-  }
-
-  getFromBackend5(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_7xTXSTkRD7MJjbAf(bh);
-      //appendnew_next_getFromBackend5
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CkI94gGI0K26rsvw');
-    }
-  }
-
-  disabled(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_neIC7BNFCyHTAt2a(bh);
-      //appendnew_next_disabled
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CJakOjzWChnqchWN');
+      return this.errorHandler(bh, e, 'sd_mecVHBoSACJxtWoR');
     }
   }
   //appendnew_flow_claims_registerComponent_start
@@ -466,8 +467,6 @@ export class claims_registerComponent implements AfterViewInit {
       this.page.updatedClaim = undefined;
       this.page.value = undefined;
       this.page.notification = undefined;
-      this.page.mes = 'READING DOCUMENT';
-      this.page.disabled = true;
       bh = this.sd_RAZi7XEL1v8YuoKq(bh);
       //appendnew_next_sd_8uegiEQyOnacegW8
       return bh;
@@ -598,6 +597,9 @@ export class claims_registerComponent implements AfterViewInit {
         { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
         { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
         { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
+        { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
+        { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
+        { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
       ];
 
       page.beIds = [
@@ -626,54 +628,12 @@ export class claims_registerComponent implements AfterViewInit {
       ) {
         bh = this.forms(bh);
       } else {
-        bh = await this.sd_MsyP7rUIfmYVgK6U(bh);
+        bh = await this.benForm(bh);
       }
 
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_s7IAxRYDHIXfSJ12');
-    }
-  }
-
-  sd_MsyP7rUIfmYVgK6U(bh) {
-    try {
-      const page = this.page;
-      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
-      page.birthyear = parseInt(page.newClient[0].idNumber.slice(0, 2));
-      page.years = page.birthyear - page.year;
-
-      if (page.newClient[0].packageType == 'Package 1') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 1500';
-        } else {
-          page.payamount = 'R 3000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 2') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 2500';
-        } else {
-          page.payamount = 'R 5000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 3') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 4000';
-        } else {
-          page.payamount = 'R 10000';
-        }
-      }
-      // page.policyClaimsForm.patchValue({
-      //   payoutAmount: page.payamount,
-      // });
-      console.log('payout', page.newClient[0].packageType);
-      console.log('yearcurrent', page.year);
-      console.log('from id', page.birthyear);
-      bh = this.benForm(bh);
-      //appendnew_next_sd_MsyP7rUIfmYVgK6U
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_MsyP7rUIfmYVgK6U');
     }
   }
 
@@ -690,42 +650,37 @@ export class claims_registerComponent implements AfterViewInit {
         gender: new FormControl(page.newClient[0].gender),
         dateOfDeath: new FormControl('', [Validators.required]),
       });
-      //   // documents
-      // page.idClaimer=new FormGroup({
-      //  _id: new FormControl(""),
-      //   filename: new FormControl(""),
-      //   chunkSize: new FormControl(""),
-      //   length: new FormControl(""),
-
-      //   })
-      //    page.idDecesed =new FormGroup({
-      //  _id: new FormControl(""),
-      //   filename: new FormControl(""),
-      //   chunkSize: new FormControl(""),
-      //   length: new FormControl(""),
-
-      //   })
-      //     page.bi1663 =new FormGroup({
-      //  _id: new FormControl(""),
-      //   filename: new FormControl(""),
-      //   chunkSize: new FormControl(""),
-      //   length: new FormControl(""),
-
-      //   })
-      //     page.deathCertificate =new FormGroup({
-      //  _id: new FormControl(""),
-      //   filename: new FormControl(""),
-      //   chunkSize: new FormControl(""),
-      //   length: new FormControl(""),
-
-      //   })
-      //     page.bankDetails =new FormGroup({
-      //  _id: new FormControl(""),
-      //   filename: new FormControl(""),
-      //   chunkSize: new FormControl(""),
-      //   length: new FormControl(""),
-
-      //   })
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(''),
@@ -733,18 +688,18 @@ export class claims_registerComponent implements AfterViewInit {
         idNum: new FormControl(''),
         gender: new FormControl(''),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl(page.payamount),
+        payoutAmount: new FormControl(''),
         deceased: page.deceased,
         deceased2: new FormControl(''),
-        // idClaimer: page.idClaimer,
+        idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
-        // idDecesed:page.idDecesed,
+        idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        // bi1663:page.bi1663,
+        bi1663: page.bi1663,
         bi16632: new FormControl(''),
-        // deathCertificate:page.deathCertificate,
+        deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
-        // bankDetails :page.bankDetails,
+        bankDetails: page.bankDetails,
         bankDetails2: new FormControl(''),
         status: new FormControl('pending'),
         depsId: new FormControl(),
@@ -812,6 +767,8 @@ export class claims_registerComponent implements AfterViewInit {
     try {
       const page = this.page; // decesed details
 
+      console.log('PH');
+
       page.deceased = new FormGroup({
         firstName: new FormControl(''),
         lastName: new FormControl(''),
@@ -819,7 +776,37 @@ export class claims_registerComponent implements AfterViewInit {
         gender: new FormControl(''),
         dateOfDeath: new FormControl('', [Validators.required]),
       });
-
+      // documents
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(''),
+        filename: new FormControl(''),
+        chunkSize: new FormControl(''),
+        length: new FormControl(''),
+      });
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(page.newClient[0].firstName),
@@ -827,13 +814,18 @@ export class claims_registerComponent implements AfterViewInit {
         idNum: new FormControl(page.newClient[0].idNumber),
         gender: new FormControl(page.newClient[0].gender),
         packageType: new FormControl(page.newClient[0].packageType),
-        payoutAmount: new FormControl(''),
+        payoutAmount: new FormControl('R110'),
         deceased: page.deceased,
         deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
-        bi16632: new FormControl(''),
+        bi1663: page.bi1663,
+        bi1662: new FormControl(''),
+        deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
         bankDetails2: new FormControl(''),
         status: new FormControl('pending'),
         depsId: new FormControl(),
@@ -876,6 +868,18 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
+  sd_8uy7TQ48zgBugAZc(bh) {
+    try {
+      const page = this.page;
+      console.log('page.', page.deceased);
+      bh = this.sd_gTV26jkDQkSajvI6(bh);
+      //appendnew_next_sd_8uy7TQ48zgBugAZc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8uy7TQ48zgBugAZc');
+    }
+  }
+
   sd_gTV26jkDQkSajvI6(bh) {
     try {
       const page = this.page;
@@ -893,7 +897,7 @@ export class claims_registerComponent implements AfterViewInit {
       delete bh.body.bankDetails2;
 
       console.log('This is bh body', bh.body);
-      bh = this.fileInForm(bh);
+      bh = this.deathCetificatifyFileInForm(bh);
       //appendnew_next_sd_gTV26jkDQkSajvI6
       return bh;
     } catch (e) {
@@ -901,38 +905,107 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  fileInForm(bh) {
+  deathCetificatifyFileInForm(bh) {
     try {
       const page = this.page;
-      page.policyClaimsForm.value['ID'] = page.id;
-      page.policyClaimsForm.value['IDfile'] = page.idclaimerfilename;
-      page.policyClaimsForm.value['IDDeceased'] = page.iddes;
-      page.policyClaimsForm.value['IDDeceasedfile'] = page.idDeceasedfilename;
-      page.policyClaimsForm.value['DeathCertificate'] = page.deathCetificatify;
-      page.policyClaimsForm.value['DeathCertificatefile'] =
-        page.deathCetificatifyfilename;
-      page.policyClaimsForm.value['bi1663'] = page.bi1663;
-      page.policyClaimsForm.value['bi1663file'] = page.bi1663filename;
-      page.policyClaimsForm.value['bankDetails'] = page.bankDetails;
-      page.policyClaimsForm.value['bankDetailsfile'] = page.bankDetailsfilename;
+      page.policyClaimsForm.value.deathCertificate._id =
+        page.deathCetificatifyFile._id;
+      page.policyClaimsForm.value.deathCertificate.filename =
+        page.deathCetificatifyFile.filename;
+      page.policyClaimsForm.value.deathCertificate.length =
+        page.deathCetificatifyFile.length;
+      page.policyClaimsForm.value.deathCertificate.chunkSize =
+        page.deathCetificatifyFile.chunkSize;
 
-      console.log('The val', page.policyClaimsForm.value);
-      bh = this.sd_3QrXrgXm95pU3x0Q(bh);
-      //appendnew_next_fileInForm
+      // console.log("The val",page.deathCetificatifyFile)
+      bh = this.deceasedIdFileInForm(bh);
+      //appendnew_next_deathCetificatifyFileInForm
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_hWEJxhxU43a7daez');
+      return this.errorHandler(bh, e, 'sd_OMTsTOK7oXNTPdug');
+    }
+  }
+
+  deceasedIdFileInForm(bh) {
+    try {
+      const page = this.page;
+      page.policyClaimsForm.value.idDecesed._id = page.idDeceasedFile._id;
+      page.policyClaimsForm.value.idDecesed.filename =
+        page.idDeceasedFile.filename;
+      page.policyClaimsForm.value.idDecesed.length = page.idDeceasedFile.length;
+      page.policyClaimsForm.value.idDecesed.chunkSize =
+        page.idDeceasedFile.chunkSize;
+      bh = this.idClaimerFileAddedOnForm(bh);
+      //appendnew_next_deceasedIdFileInForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NKq8I2oKOKqsJyCT');
+    }
+  }
+
+  idClaimerFileAddedOnForm(bh) {
+    try {
+      const page = this.page;
+      page.policyClaimsForm.value.idClaimer._id = page.idclaimerFile._id;
+      page.policyClaimsForm.value.idClaimer.filename =
+        page.idclaimerFile.filename;
+      page.policyClaimsForm.value.idClaimer.length = page.idclaimerFile.length;
+      page.policyClaimsForm.value.idClaimer.chunkSize =
+        page.idclaimerFile.chunkSize;
+      bh = this.bankDetailsFileInForm(bh);
+      //appendnew_next_idClaimerFileAddedOnForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kv8fOzN3JZKLGL8Y');
+    }
+  }
+
+  bankDetailsFileInForm(bh) {
+    try {
+      const page = this.page;
+      page.policyClaimsForm.value.bankDetails._id = page.bankDetailsFile._id;
+      page.policyClaimsForm.value.bankDetails.filename =
+        page.bankDetailsFile.filename;
+      page.policyClaimsForm.value.bankDetails.length =
+        page.bankDetailsFile.length;
+      page.policyClaimsForm.value.bankDetails.chunkSize =
+        page.bankDetailsFile.chunkSize;
+      bh = this.sd_3QrXrgXm95pU3x0Q(bh);
+      //appendnew_next_bankDetailsFileInForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_snQrUVCSE6LP6Dgp');
     }
   }
 
   sd_3QrXrgXm95pU3x0Q(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_GDDWmjjIVPTba5A7(bh);
+      bh = this.bi1663FileInForm(bh);
       //appendnew_next_sd_3QrXrgXm95pU3x0Q
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3QrXrgXm95pU3x0Q');
+    }
+  }
+
+  bi1663FileInForm(bh) {
+    try {
+      const page = this.page;
+      console.log('PG FILE: ', page.bi1663File);
+
+      page.policyClaimsForm.value.bi1663._id = page.bi1663File._id;
+      page.policyClaimsForm.value.bi1663.filename = page.bi1663File.filename;
+      page.policyClaimsForm.value.bi1663.length = page.bi1663File.length;
+      page.policyClaimsForm.value.bi1663.chunkSize = page.bi1663File.chunkSize;
+
+      bh.notURL = 'add-notification';
+      console.log('NOT URL: ', bh.notURL);
+      bh = this.sd_GDDWmjjIVPTba5A7(bh);
+      //appendnew_next_bi1663FileInForm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JR3eNMxvH2KitFQv');
     }
   }
 
@@ -947,11 +1020,31 @@ export class claims_registerComponent implements AfterViewInit {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      bh = this.sd_szPF5fSpHvY5QPUd(bh);
       //appendnew_next_sd_GDDWmjjIVPTba5A7
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_GDDWmjjIVPTba5A7');
+    }
+  }
+
+  async sd_szPF5fSpHvY5QPUd(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericPost(
+        bh.notURL,
+        this.page.notification
+      );
+      bh.res = outputVariables.local.result;
+
+      bh = this.sd_wZzTriFZ4B4Kx6yx(bh);
+      this.sd_1yKiwXFoXNIGd3dc(bh);
+      //appendnew_next_sd_szPF5fSpHvY5QPUd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_szPF5fSpHvY5QPUd');
     }
   }
 
@@ -980,10 +1073,37 @@ export class claims_registerComponent implements AfterViewInit {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_lvSzZTgwVbEKFpc6(bh);
       //appendnew_next_sd_EZV9KScHEbVQ3VZL
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EZV9KScHEbVQ3VZL');
+    }
+  }
+
+  async sd_lvSzZTgwVbEKFpc6(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.updateNotifications(
+        this.page.notification
+      );
+
+      //appendnew_next_sd_lvSzZTgwVbEKFpc6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lvSzZTgwVbEKFpc6');
+    }
+  }
+
+  sd_1yKiwXFoXNIGd3dc(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.res);
+      //appendnew_next_sd_1yKiwXFoXNIGd3dc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1yKiwXFoXNIGd3dc');
     }
   }
 
@@ -1003,54 +1123,10 @@ export class claims_registerComponent implements AfterViewInit {
         idNum: page.policyClaimsForm.value.depsId.idNumber,
         gender: page.policyClaimsForm.value.depsId.gender,
       });
-      bh = this.sd_WY4rbMDeXIxPRC44(bh);
       //appendnew_next_sd_YRFsW4mmP13CYVr4
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_YRFsW4mmP13CYVr4');
-    }
-  }
-
-  sd_WY4rbMDeXIxPRC44(bh) {
-    try {
-      const page = this.page;
-      page.year = parseInt(new Date().getFullYear().toString().slice(-2));
-      page.birthyear = parseInt(
-        page.policyClaimsForm.value.depsId.idNumber.slice(0, 2)
-      );
-      page.years = page.birthyear - page.year;
-
-      if (page.newClient[0].packageType == 'Package 1') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 1500';
-        } else {
-          page.payamount = 'R 3000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 2') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 2500';
-        } else {
-          page.payamount = 'R 5000';
-        }
-      }
-      if (page.newClient[0].packageType == 'Package 3') {
-        if (page.years >= -21 && page.years <= 21) {
-          page.payamount = 'R 4000';
-        } else {
-          page.payamount = 'R 10000';
-        }
-      }
-      page.policyClaimsForm.patchValue({
-        payoutAmount: page.payamount,
-      });
-      console.log('payout', page.newClient[0].packageType);
-      console.log('yearcurrent', page.year);
-      console.log('from id', page.birthyear);
-      //appendnew_next_sd_WY4rbMDeXIxPRC44
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WY4rbMDeXIxPRC44');
     }
   }
 
@@ -1071,6 +1147,584 @@ export class claims_registerComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_HwSEW31qlijbdmJp');
+    }
+  }
+
+  sd_i0xoEvpROPITU08N(bh) {
+    try {
+      const page = this.page;
+      bh.upload1 = document.getElementById('upload1') as HTMLInputElement;
+      if (bh.upload1) {
+        bh.upload1.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            bh.file = input.files[0];
+            page.uploadedFile1 = new FormData();
+            page.uploadedFile1.append('file', bh.file);
+            this.goToBackend1();
+          }
+        });
+      }
+      console.log('page.uploadedFile1', page.uploadedFile1);
+      //appendnew_next_sd_i0xoEvpROPITU08N
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_i0xoEvpROPITU08N');
+    }
+  }
+
+  sd_HAh8e2O6WlsOH6LR(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_tEq1F4UeJuAdbLVa(bh);
+      //appendnew_next_sd_HAh8e2O6WlsOH6LR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HAh8e2O6WlsOH6LR');
+    }
+  }
+
+  sd_tEq1F4UeJuAdbLVa(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'upload';
+
+      bh = this.sd_pm7IM6MBn4iCRAJX(bh);
+      //appendnew_next_sd_tEq1F4UeJuAdbLVa
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tEq1F4UeJuAdbLVa');
+    }
+  }
+
+  async sd_pm7IM6MBn4iCRAJX(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile1,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_b1QBlwuGwfmxrU8X(bh);
+      //appendnew_next_sd_pm7IM6MBn4iCRAJX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pm7IM6MBn4iCRAJX');
+    }
+  }
+
+  sd_b1QBlwuGwfmxrU8X(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('idClaimer', JSON.stringify(bh.result));
+      this.getFromBackend1();
+
+      let file = JSON.parse(sessionStorage.getItem('idClaimer'));
+
+      page.docs[0] = {
+        name: 'idClaimer',
+        ...file,
+      };
+      bh = this.sd_jr3k8kNfVkjaB5Ka(bh);
+      //appendnew_next_sd_b1QBlwuGwfmxrU8X
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_b1QBlwuGwfmxrU8X');
+    }
+  }
+
+  sd_jr3k8kNfVkjaB5Ka(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('claimer id Upload Successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_jr3k8kNfVkjaB5Ka
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_jr3k8kNfVkjaB5Ka');
+    }
+  }
+
+  sd_K6MUoKvNOAgAhK6i(bh) {
+    try {
+      this.page.idclaimerFile = JSON.parse(sessionStorage.getItem('idClaimer'));
+      //appendnew_next_sd_K6MUoKvNOAgAhK6i
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_K6MUoKvNOAgAhK6i');
+    }
+  }
+
+  sd_G0j8bBjdh9weyiHG(bh) {
+    try {
+      const page = this.page;
+      bh.upload2 = document.getElementById('upload2') as HTMLInputElement;
+      if (bh.upload2) {
+        bh.upload2.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            bh.file = input.files[0];
+            page.uploadedFile2 = new FormData();
+            page.uploadedFile2.append('file', bh.file);
+            this.goToBackend2();
+          }
+        });
+      }
+      //appendnew_next_sd_G0j8bBjdh9weyiHG
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_G0j8bBjdh9weyiHG');
+    }
+  }
+
+  sd_aT3O0eRMOtZ6LC7u(bh) {
+    try {
+      const page = this.page;
+      bh.upload3 = document.getElementById('upload3') as HTMLInputElement;
+      if (bh.upload3) {
+        bh.upload3.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            bh.file = input.files[0];
+            page.uploadedFile3 = new FormData();
+            page.uploadedFile3.append('file', bh.file);
+            this.goToBackend3();
+          }
+        });
+      }
+
+      //appendnew_next_sd_aT3O0eRMOtZ6LC7u
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aT3O0eRMOtZ6LC7u');
+    }
+  }
+
+  sd_LhQRZFr5wXEAmZrZ(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_TEc7ZPzpUyYtkEba(bh);
+      //appendnew_next_sd_LhQRZFr5wXEAmZrZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LhQRZFr5wXEAmZrZ');
+    }
+  }
+
+  sd_TEc7ZPzpUyYtkEba(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'upload';
+
+      bh = this.sd_HziKCOhAlC4JYwNt(bh);
+      //appendnew_next_sd_TEc7ZPzpUyYtkEba
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_TEc7ZPzpUyYtkEba');
+    }
+  }
+
+  async sd_HziKCOhAlC4JYwNt(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile2,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_naVFzQoHG9PNzmpr(bh);
+      //appendnew_next_sd_HziKCOhAlC4JYwNt
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HziKCOhAlC4JYwNt');
+    }
+  }
+
+  sd_naVFzQoHG9PNzmpr(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('idDeceased', JSON.stringify(bh.result));
+      this.getFromBackend2();
+
+      let file = JSON.parse(sessionStorage.getItem('idDeceased'));
+
+      page.docs[1] = {
+        name: 'idDeceased',
+        ...file,
+      };
+      bh = this.sd_ByY2JldcpCcfHzI8(bh);
+      //appendnew_next_sd_naVFzQoHG9PNzmpr
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_naVFzQoHG9PNzmpr');
+    }
+  }
+
+  sd_ByY2JldcpCcfHzI8(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Deceased Id Upload Successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_ByY2JldcpCcfHzI8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ByY2JldcpCcfHzI8');
+    }
+  }
+
+  sd_9yKA7QsBVt0HSigs(bh) {
+    try {
+      this.page.idDeceasedFile = JSON.parse(
+        sessionStorage.getItem('idDeceased')
+      );
+      //appendnew_next_sd_9yKA7QsBVt0HSigs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9yKA7QsBVt0HSigs');
+    }
+  }
+
+  sd_6uNK0kYpEsVrH7Ly(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_quK7nLtPiswS8Hr6(bh);
+      //appendnew_next_sd_6uNK0kYpEsVrH7Ly
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6uNK0kYpEsVrH7Ly');
+    }
+  }
+
+  sd_quK7nLtPiswS8Hr6(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'upload';
+
+      bh = this.sd_cXQZgmIjNnXGhMfB(bh);
+      //appendnew_next_sd_quK7nLtPiswS8Hr6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_quK7nLtPiswS8Hr6');
+    }
+  }
+
+  async sd_cXQZgmIjNnXGhMfB(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile3,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_PEs3jZ0F7V9TKive(bh);
+      //appendnew_next_sd_cXQZgmIjNnXGhMfB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cXQZgmIjNnXGhMfB');
+    }
+  }
+
+  sd_PEs3jZ0F7V9TKive(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('deathCetificatify', JSON.stringify(bh.result));
+      this.getFromBackend3();
+      console.log('bh', bh.results);
+
+      let file = JSON.parse(sessionStorage.getItem('deathCetificatify'));
+
+      page.docs[2] = {
+        name: 'deathCetificatify',
+        ...file,
+      };
+      bh = this.sd_8oQKKQYPcqVuI8TK(bh);
+      //appendnew_next_sd_PEs3jZ0F7V9TKive
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PEs3jZ0F7V9TKive');
+    }
+  }
+
+  sd_8oQKKQYPcqVuI8TK(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Death Cetificatify Upload Successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_8oQKKQYPcqVuI8TK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8oQKKQYPcqVuI8TK');
+    }
+  }
+
+  sd_HpMne9ieeprru1TK(bh) {
+    try {
+      this.page.deathCetificatifyFile = JSON.parse(
+        sessionStorage.getItem('deathCetificatify')
+      );
+      //appendnew_next_sd_HpMne9ieeprru1TK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_HpMne9ieeprru1TK');
+    }
+  }
+
+  sd_pO4AAHrTGJHGxcJs(bh) {
+    try {
+      const page = this.page;
+      bh.upload4 = document.getElementById('upload4') as HTMLInputElement;
+      if (bh.upload4) {
+        bh.upload4.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            bh.file = input.files[0];
+            page.uploadedFile4 = new FormData();
+            page.uploadedFile4.append('file', bh.file);
+            this.goToBackend4();
+          }
+        });
+      }
+      //appendnew_next_sd_pO4AAHrTGJHGxcJs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pO4AAHrTGJHGxcJs');
+    }
+  }
+
+  sd_1u0zIChRYRVWLz4w(bh) {
+    try {
+      const page = this.page;
+      bh.upload5 = document.getElementById('upload5') as HTMLInputElement;
+      if (bh.upload5) {
+        bh.upload5.addEventListener('change', (event: Event) => {
+          const input = event.target as HTMLInputElement;
+          if (input.files && input.files.length > 0) {
+            bh.file = input.files[0];
+            page.uploadedFile5 = new FormData();
+            page.uploadedFile5.append('file', bh.file);
+            this.goToBackend5();
+          }
+        });
+      }
+      //appendnew_next_sd_1u0zIChRYRVWLz4w
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_1u0zIChRYRVWLz4w');
+    }
+  }
+
+  sd_ch1LeIg0VFOP5L4f(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_VmKFEeemCRTBGk6S(bh);
+      //appendnew_next_sd_ch1LeIg0VFOP5L4f
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ch1LeIg0VFOP5L4f');
+    }
+  }
+
+  sd_VmKFEeemCRTBGk6S(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'upload';
+      bh = this.sd_rXIAeUYF30BWCUSh(bh);
+      //appendnew_next_sd_VmKFEeemCRTBGk6S
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VmKFEeemCRTBGk6S');
+    }
+  }
+
+  async sd_rXIAeUYF30BWCUSh(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile4,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_qAqklLHl7YggpvdV(bh);
+      //appendnew_next_sd_rXIAeUYF30BWCUSh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rXIAeUYF30BWCUSh');
+    }
+  }
+
+  sd_qAqklLHl7YggpvdV(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('bi1663', JSON.stringify(bh.result));
+      this.getFromBackend4();
+
+      let file = JSON.parse(sessionStorage.getItem('bi1663'));
+
+      page.docs[3] = {
+        name: 'bi1663',
+        ...file,
+      };
+      bh = this.sd_lg9wvNZgvdJI59fo(bh);
+      //appendnew_next_sd_qAqklLHl7YggpvdV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qAqklLHl7YggpvdV');
+    }
+  }
+
+  sd_lg9wvNZgvdJI59fo(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('bi1663 Upload Successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_lg9wvNZgvdJI59fo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lg9wvNZgvdJI59fo');
+    }
+  }
+
+  sd_gL8y6GZoB2NS2hdX(bh) {
+    try {
+      this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
+      this.sd_UtPy5PvcklyhnFCo(bh);
+      //appendnew_next_sd_gL8y6GZoB2NS2hdX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gL8y6GZoB2NS2hdX');
+    }
+  }
+
+  sd_UtPy5PvcklyhnFCo(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.bi1663File);
+      //appendnew_next_sd_UtPy5PvcklyhnFCo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UtPy5PvcklyhnFCo');
+    }
+  }
+
+  sd_Q24KK8CQ39Px5KnJ(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_GIH7bU9nx5ZqjZdu(bh);
+      //appendnew_next_sd_Q24KK8CQ39Px5KnJ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Q24KK8CQ39Px5KnJ');
+    }
+  }
+
+  sd_GIH7bU9nx5ZqjZdu(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + 'upload';
+      bh = this.sd_lZOqKwyx0IZ5HCE1(bh);
+      //appendnew_next_sd_GIH7bU9nx5ZqjZdu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GIH7bU9nx5ZqjZdu');
+    }
+  }
+
+  async sd_lZOqKwyx0IZ5HCE1(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile5,
+      };
+      bh.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_lbjf2VgcIKFjsixy(bh);
+      //appendnew_next_sd_lZOqKwyx0IZ5HCE1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lZOqKwyx0IZ5HCE1');
+    }
+  }
+
+  sd_lbjf2VgcIKFjsixy(bh) {
+    try {
+      const page = this.page;
+      sessionStorage.setItem('bankDetails', JSON.stringify(bh.result));
+      this.getFromBackend5();
+
+      let file = JSON.parse(sessionStorage.getItem('bankDetails'));
+
+      page.docs[4] = {
+        name: 'bankDetails',
+        ...file,
+      };
+      bh = this.sd_rzesD82YORPSFkNR(bh);
+      //appendnew_next_sd_lbjf2VgcIKFjsixy
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lbjf2VgcIKFjsixy');
+    }
+  }
+
+  sd_rzesD82YORPSFkNR(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Bank Details Upload Successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_rzesD82YORPSFkNR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rzesD82YORPSFkNR');
+    }
+  }
+
+  sd_shJhZakxr7p6z9TR(bh) {
+    try {
+      this.page.bankDetailsFile = JSON.parse(
+        sessionStorage.getItem('bankDetails')
+      );
+      //appendnew_next_sd_shJhZakxr7p6z9TR
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_shJhZakxr7p6z9TR');
     }
   }
 
@@ -1120,6 +1774,7 @@ export class claims_registerComponent implements AfterViewInit {
   sd_EiyEHm1Q0suBYnul(bh) {
     try {
       this.page.selectedClaim = JSON.parse(localStorage.getItem('claim'));
+      bh = this.sd_Nk0e9Ege7xW2p07b(bh);
       //appendnew_next_sd_EiyEHm1Q0suBYnul
       return bh;
     } catch (e) {
@@ -1127,14 +1782,24 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  sd_2V5D2n28pUkU7tCx(bh) {
+  sd_Nk0e9Ege7xW2p07b(bh) {
     try {
       const page = this.page;
-      console.log('selectedclaim', page.selectedClaim);
-      //appendnew_next_sd_2V5D2n28pUkU7tCx
+      console.log('selectedClaim: ', page.selectedClaim);
+      //appendnew_next_sd_Nk0e9Ege7xW2p07b
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_2V5D2n28pUkU7tCx');
+      return this.errorHandler(bh, e, 'sd_Nk0e9Ege7xW2p07b');
+    }
+  }
+
+  sd_3UFHNmHQ6gr6Z6rE(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.selectedClaim);
+      //appendnew_next_sd_3UFHNmHQ6gr6Z6rE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3UFHNmHQ6gr6Z6rE');
     }
   }
 
@@ -1151,24 +1816,23 @@ export class claims_registerComponent implements AfterViewInit {
 
   sd_UmdtwXC1AB0nhAbw(bh) {
     try {
-      const page = this.page; // bh.claimKeys = Object.keys(page.selectedClaim)
+      const page = this.page;
+      bh.claimKeys = Object.keys(page.selectedClaim);
 
-      // page.docs = []
+      page.docs = [];
 
-      // bh.claimKeys.forEach(key => {
-      //     if(page.selectedClaim[key]?.filename) {
-      //         let doc = {...page.selectedClaim[key],
-      //                     name: key}
-      //         page.docs.push(doc)
-      //     }
-
-      //     })
-
-      // console.log("DOCS: ", page.docs)
+      bh.claimKeys.forEach((key) => {
+        if (page.selectedClaim[key]?.filename) {
+          let doc = { ...page.selectedClaim[key], name: key };
+          page.docs.push(doc);
+        }
+      });
 
       page.fileURL = page.ssdUrl + 'download/';
 
       console.log('URL:', page.ssdUrl);
+
+      console.log('FORM: ', page.policyClaimsForm);
       bh = this.sd_xLAtfgHKTyGPt8n2(bh);
       //appendnew_next_sd_UmdtwXC1AB0nhAbw
       return bh;
@@ -1198,9 +1862,9 @@ export class claims_registerComponent implements AfterViewInit {
           undefined
         )
       ) {
-        bh = this.sd_hNf9MpU9Y55whZpO(bh);
+        bh = this.ben1Form(bh);
       } else {
-        bh = await this.sd_uFC9Kp0n2fbzRNN3(bh);
+        bh = await this.forms1(bh);
       }
 
       return bh;
@@ -1209,29 +1873,11 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  sd_hNf9MpU9Y55whZpO(bh) {
-    try {
-      const page = this.page;
-      page.DeathCertificatefile = page.selectedClaim['DeathCertificatefile'];
-      page.bi1663file = page.selectedClaim['bi1663file'];
-      page['IDDeceasedfile'] = page.selectedClaim['IDDeceasedfile'];
-      page['IDfile'] = page.selectedClaim['IDfile'];
-      page['bankDetailsfile'] = page.selectedClaim['bankDetailsfile'];
-      console.log('page.claim', page['DeathCertificatefile']);
-
-      bh = this.ben1Form(bh);
-      //appendnew_next_sd_hNf9MpU9Y55whZpO
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_hNf9MpU9Y55whZpO');
-    }
-  }
-
   ben1Form(bh) {
     try {
       const page = this.page; // decesed details
 
-      // console.log("BEN")
+      console.log('BEN');
       // console.log(page.user.role)
 
       if (page.user.role === 'admin') {
@@ -1258,42 +1904,40 @@ export class claims_registerComponent implements AfterViewInit {
       });
 
       // documents
-      // page.idClaimer = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.idClaimer._id),
-      //   filename: new FormControl(page.selectedClaim.idClaimer.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize?.length),
-      //   length: new FormControl(page.selectedClaim.idClaimer.length),
-      // })
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
+      });
 
-      // page.idDecesed = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.idDecesed._id),
-      //   filename: new FormControl(page.selectedClaim.idDecesed.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize?.length),
-      //   length: new FormControl(page.selectedClaim.idDecesed.length),
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
+      });
 
-      // })
+      page.bi1663 = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
+      });
 
-      // page.bi1662 = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.bi1662._id),
-      //   filename: new FormControl(page.selectedClaim.bi1662.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize?.length),
-      //   length: new FormControl(page.selectedClaim.bi1662.length),
-      // })
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
+      });
 
-      // page.deathCertificate = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.deathCertificate._id),
-      //   filename: new FormControl(page.selectedClaim.deathCertificate.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize?.length),
-      //   length: new FormControl(page.selectedClaim.deathCertificate.length),
-
-      // })
-
-      // page.bankDetails = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.bankDetails._id),
-      //   filename: new FormControl(page.selectedClaim.bankDetails.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize?.length),
-      //   length: new FormControl(page.selectedClaim.bankDetails.length),
-      // })
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize?.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
+      });
 
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
@@ -1305,33 +1949,19 @@ export class claims_registerComponent implements AfterViewInit {
         payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
         deceased: page.deceased,
         status: new FormControl(page.deceased.value.status),
-        ID: new FormControl(page.selectedClaim.ID),
-        IDfile: new FormControl(page.selectedClaim['IDfile']),
-        IDDecesed: new FormControl(page.selectedClaim['IDDecesed']),
-        IDDecesedfile: new FormControl(page.selectedClaim['IDDecesedfile']),
-        DeathCertificate: new FormControl(
-          page.selectedClaim['DeathCertificate']
-        ),
-        DeathCertificatefile: new FormControl(
-          page.selectedClaim['DeathCertificatefile']
-        ),
-        bi1663: new FormControl(page.selectedClaim['bi1663']),
-        bi1663file: new FormControl(page.selectedClaim['bi1663file']),
-        bankDetails: new FormControl(page.selectedClaim['bankDetails']),
-        bankDetailsfile: new FormControl(page.selectedClaim['bankDetailsfile']),
-        // deceased2: new FormControl(''),
-        // idClaimer: page.idClaimer,
-        // idClaimer2: new FormControl(''),
-        // idDecesed: page.idDecesed,
-        // idDeceased2: new FormControl(''),
-        // bi1662: page.bi1663,
-        // bi16632: new FormControl(''),
-        // deathCertificate: page.deathCertificate,
-        // deathCetificatify2: new FormControl(''),
-        // bankDetails: page.bankDetails,
-        // bankDetails2: new FormControl(''),
-        // depsId: new FormControl(page.selectedClaim.depsId),
-        // beIds: new FormControl(page.selectedClaim.beIds),
+        deceased2: new FormControl(''),
+        idClaimer: page.idClaimer,
+        idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
+        idDeceased2: new FormControl(''),
+        bi1663: page.bi1663,
+        bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
+        deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
+        bankDetails2: new FormControl(''),
+        depsId: new FormControl(page.selectedClaim.depsId),
+        beIds: new FormControl(page.selectedClaim.beIds),
         _id: new FormControl(page.selectedClaim._id),
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
       });
@@ -1345,11 +1975,14 @@ export class claims_registerComponent implements AfterViewInit {
       //     page.deceased.get('status')?.disable()
       //     page.policyClaimsForm.value.status = page.value.status
       //   }
+
+      // console.log("page.policyClaimsForm: 1", page.policyClaimsForm)
+
       // })
 
       page.date = new Date();
 
-      console.log('page.deceased', page.deceased);
+      console.log('page.policyClaimsForm', page.policyClaimsForm);
 
       bh.url = page.ssdUrl + 'get-users';
       bh = this.sd_H2rfObg2GTiF2OJI(bh);
@@ -1393,23 +2026,6 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  sd_uFC9Kp0n2fbzRNN3(bh) {
-    try {
-      const page = this.page; // console.log("page.claim",page.claim)
-      page['DeathCertificatefile'] = page.selectedClaim['DeathCertificatefile'];
-      page.bi1663file = page.selectedClaim['bi1663file'];
-      page['IDDeceasedfile'] = page.selectedClaim['IDDeceasedfile'];
-      page['IDfile'] = page.selectedClaim['IDfile'];
-      page['bankDetailsfile'] = page.selectedClaim['bankDetailsfile'];
-
-      bh = this.forms1(bh);
-      //appendnew_next_sd_uFC9Kp0n2fbzRNN3
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uFC9Kp0n2fbzRNN3');
-    }
-  }
-
   forms1(bh) {
     try {
       const page = this.page;
@@ -1438,44 +2054,40 @@ export class claims_registerComponent implements AfterViewInit {
       });
 
       // documents
-      // page.idClaimer = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.idClaimer._id),
-      //   filename: new FormControl(page.selectedClaim.idClaimer.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize.length),
-      //   length: new FormControl(page.selectedClaim.idClaimer.length),
+      page.idClaimer = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idClaimer._id),
+        filename: new FormControl(page.selectedClaim.idClaimer.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idClaimer.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idClaimer.length),
+      });
 
-      // })
+      page.idDecesed = new FormGroup({
+        _id: new FormControl(page.selectedClaim.idDecesed._id),
+        filename: new FormControl(page.selectedClaim.idDecesed.filename),
+        // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize.length),
+        length: new FormControl(page.selectedClaim.idDecesed.length),
+      });
 
-      // page.idDecesed = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.idDecesed._id),
-      //   filename: new FormControl(page.selectedClaim.idDecesed.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.idDecesed.chunkSize.length),
-      //   length: new FormControl(page.selectedClaim.idDecesed.length),
+      page.bi1662 = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bi1662._id),
+        filename: new FormControl(page.selectedClaim.bi1662.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bi1662.length),
+      });
 
-      // })
+      page.deathCertificate = new FormGroup({
+        _id: new FormControl(page.selectedClaim.deathCertificate._id),
+        filename: new FormControl(page.selectedClaim.deathCertificate.filename),
+        // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize.length),
+        length: new FormControl(page.selectedClaim.deathCertificate.length),
+      });
 
-      // page.bi1663 = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.bi1662._id),
-      //   filename: new FormControl(page.selectedClaim.bi1662.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.bi1662.chunkSize.length),
-      //   length: new FormControl(page.selectedClaim.bi1662.length),
-
-      // })
-
-      // page.deathCertificate = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.deathCertificate._id),
-      //   filename: new FormControl(page.selectedClaim.deathCertificate.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.deathCertificate.chunkSize.length),
-      //   length: new FormControl(page.selectedClaim.deathCertificate.length),
-
-      // })
-
-      // page.bankDetails = new FormGroup({
-      //   _id: new FormControl(page.selectedClaim.bankDetails._id),
-      //   filename: new FormControl(page.selectedClaim.bankDetails.filename),
-      //   // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize.length),
-      //   length: new FormControl(page.selectedClaim.bankDetails.length),
-      // })
+      page.bankDetails = new FormGroup({
+        _id: new FormControl(page.selectedClaim.bankDetails._id),
+        filename: new FormControl(page.selectedClaim.bankDetails.filename),
+        // chunkSize: new FormControl(page.selectedClaim.bankDetails.chunkSize.length),
+        length: new FormControl(page.selectedClaim.bankDetails.length),
+      });
 
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
@@ -1487,29 +2099,20 @@ export class claims_registerComponent implements AfterViewInit {
         payoutAmount: new FormControl(page.selectedClaim.payoutAmount),
         deceased: page.deceased,
         deceased2: new FormControl(''),
-        ID: new FormControl(page.selectedClaim.ID),
-        IDfile: new FormControl(page.selectedClaim['IDfile']),
-        IDDecesed: new FormControl(page.selectedClaim['IDDecesed']),
-        IDDecesedfile: new FormControl(page.selectedClaim['IDDecesedfile']),
-        DeathCertificate: new FormControl(
-          page.selectedClaim['DeathCertificate']
-        ),
-        DeathCertificatefile: new FormControl(
-          page.selectedClaim['DeathCertificatefile']
-        ),
-        bi1663: new FormControl(page.selectedClaim['bi1663']),
-        bi1663file: new FormControl(page.selectedClaim['bi1663file']),
-        bankDetails: new FormControl(page.selectedClaim['bankDetails']),
-        bankDetailsfile: new FormControl(page.selectedClaim['bankDetailsfile']),
+        idClaimer: page.idClaimer,
         idClaimer2: new FormControl(''),
+        idDecesed: page.idDecesed,
         idDeceased2: new FormControl(''),
+        bi1662: page.bi1662,
         bi16632: new FormControl(''),
+        deathCertificate: page.deathCertificate,
         deathCetificatify2: new FormControl(''),
+        bankDetails: page.bankDetails,
         bankDetails2: new FormControl(''),
         depsId: new FormControl(page.selectedClaim.depsId),
         beIds: new FormControl(page.selectedClaim.beIds),
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
-        status: new FormControl(page.value?.status),
+        status: new FormControl(page.deceased.value.status),
         _id: new FormControl(page.selectedClaim._id),
       });
 
@@ -1525,11 +2128,15 @@ export class claims_registerComponent implements AfterViewInit {
       //     page.deceased.get('status')?.disable()
       //     page.policyClaimsForm.value.status = page.value.status
       //   }
+
+      //  console.log("page.policyClaimsForm: 1", page.policyClaimsForm)
       // })
 
       page.date = new Date();
 
       bh.url = page.ssdUrl + 'get-users';
+
+      console.log('page.policyClaimsForm', page.policyClaimsForm);
       bh = this.sd_H2rfObg2GTiF2OJI(bh);
       //appendnew_next_forms1
       return bh;
@@ -1569,7 +2176,7 @@ export class claims_registerComponent implements AfterViewInit {
       bh.url = page.ssdUrl + 'update_claim';
 
       page.updatedClaim = page.policyClaimsForm.value;
-      page.updatedClaim.status = page.value.status;
+      // page.updatedClaim.status = page.value.status
 
       console.log('page.updatedClaim', page.updatedClaim);
       bh = this.sd_9j0Sbn07mNgWcy1F(bh);
@@ -1740,6 +2347,7 @@ export class claims_registerComponent implements AfterViewInit {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_3n7RZOqIyihMZ63W(bh);
       //appendnew_next_sd_nZ3fyQZGNTByR3Yl
       return bh;
     } catch (e) {
@@ -1747,26 +2355,25 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
+  sd_3n7RZOqIyihMZ63W(bh) {
+    try {
+      let outputVariables = this.updateNotification();
+
+      //appendnew_next_sd_3n7RZOqIyihMZ63W
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3n7RZOqIyihMZ63W');
+    }
+  }
+
   sd_6K1LlQR7ORYPgDAJ(bh) {
     try {
       this.page.user = JSON.parse(sessionStorage.getItem('user'));
-      bh = this.sd_O61HpZCZtU1qpQWn(bh);
+      bh = this.sd_WhX0AWiqqtFEb3rr(bh);
       //appendnew_next_sd_6K1LlQR7ORYPgDAJ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_6K1LlQR7ORYPgDAJ');
-    }
-  }
-
-  sd_O61HpZCZtU1qpQWn(bh) {
-    try {
-      let outputVariables = this.disabled();
-
-      bh = this.sd_WhX0AWiqqtFEb3rr(bh);
-      //appendnew_next_sd_O61HpZCZtU1qpQWn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_O61HpZCZtU1qpQWn');
     }
   }
 
@@ -1897,1217 +2504,62 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
-  sd_n4hbMh10Eh3z3ZsU(bh) {
+  sd_pwCofTEY8QankddX(bh) {
     try {
-      const page = this.page;
-      bh.upload1 = document.getElementById('upload1') as HTMLInputElement;
-      if (bh.upload1) {
-        bh.upload1.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            page.file = input.files[0];
-            page.uploadedFile1 = new FormData();
-            page.uploadedFile1.append('file', page.file);
-            page.id = page.file.name;
-            page.showId = true;
-
-            this.goToBackend1();
-          }
-        });
-      }
-
-      //appendnew_next_sd_n4hbMh10Eh3z3ZsU
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_n4hbMh10Eh3z3ZsU');
-    }
-  }
-
-  sd_TCg0MA5sCko3aWQh(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_KNrgPYlP3jE0IjKb(bh);
-      //appendnew_next_sd_TCg0MA5sCko3aWQh
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_TCg0MA5sCko3aWQh');
-    }
-  }
-
-  sd_KNrgPYlP3jE0IjKb(bh) {
-    try {
-      const page = this.page;
-      bh.url = page.ssdUrl + 'verify-id';
-      page.loading = true;
-
-      bh = this.sd_XHdElQNByHl5VK22(bh);
-      //appendnew_next_sd_KNrgPYlP3jE0IjKb
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_KNrgPYlP3jE0IjKb');
-    }
-  }
-
-  async sd_XHdElQNByHl5VK22(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile1,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_40hhfTwkSFIrUcrN(bh);
-      //appendnew_next_sd_XHdElQNByHl5VK22
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_XHdElQNByHl5VK22');
-    }
-  }
-
-  sd_40hhfTwkSFIrUcrN(bh) {
-    try {
-      const page = this.page;
-      page.loading = true;
-      bh = this.sd_zpdugbbDIBJ7pnwT(bh);
-      //appendnew_next_sd_40hhfTwkSFIrUcrN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_40hhfTwkSFIrUcrN');
-    }
-  }
-
-  async sd_zpdugbbDIBJ7pnwT(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.result.message,
-          'Valid Form',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_5emoPH54CKDeVpDe(bh);
-      } else {
-        bh = await this.sd_IZgxjqgrv1Lxpdv0(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zpdugbbDIBJ7pnwT');
-    }
-  }
-
-  sd_5emoPH54CKDeVpDe(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Valid ID', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_PU6FAJfhwtXXaRfu(bh);
-      //appendnew_next_sd_5emoPH54CKDeVpDe
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_5emoPH54CKDeVpDe');
-    }
-  }
-
-  sd_PU6FAJfhwtXXaRfu(bh) {
-    try {
-      const page = this.page;
-      console.log('response', bh.result);
-      bh.url = page.ssdUrl + 'upload';
-      page.loading = true;
-      page.mes = 'UPLOADING DOCUMENT';
-
-      bh = this.sd_KWeqeqVVPOahuUgn(bh);
-      //appendnew_next_sd_PU6FAJfhwtXXaRfu
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PU6FAJfhwtXXaRfu');
-    }
-  }
-
-  async sd_KWeqeqVVPOahuUgn(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile1,
-      };
-      this.page.res = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_yp2jx88OTfj4ri6g(bh);
-      //appendnew_next_sd_KWeqeqVVPOahuUgn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_KWeqeqVVPOahuUgn');
-    }
-  }
-
-  sd_yp2jx88OTfj4ri6g(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      console.log('File uploded', page.res);
-      page.mes = 'READING DOCUMENT';
-      sessionStorage.setItem('idClaimer', JSON.stringify(page.res));
-      this.getFromBackend1();
-      bh = this.sd_diMduR0duogwPLSp(bh);
-      //appendnew_next_sd_yp2jx88OTfj4ri6g
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yp2jx88OTfj4ri6g');
-    }
-  }
-
-  sd_diMduR0duogwPLSp(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('ID has been Uploaded', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_diMduR0duogwPLSp
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_diMduR0duogwPLSp');
-    }
-  }
-
-  sd_IZgxjqgrv1Lxpdv0(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('The document uploaded is Invalid', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_fr38MztJ59haWIf9(bh);
-      //appendnew_next_sd_IZgxjqgrv1Lxpdv0
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_IZgxjqgrv1Lxpdv0');
-    }
-  }
-
-  sd_fr38MztJ59haWIf9(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      page.showId = false;
-      //appendnew_next_sd_fr38MztJ59haWIf9
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_fr38MztJ59haWIf9');
-    }
-  }
-
-  sd_n6Kfln4aV96ozLG0(bh) {
-    try {
-      this.page.idclaimerFile = JSON.parse(sessionStorage.getItem('idClaimer'));
-      bh = this.sd_AeJuuCeGt9BZhvyy(bh);
-      //appendnew_next_sd_n6Kfln4aV96ozLG0
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_n6Kfln4aV96ozLG0');
-    }
-  }
-
-  sd_AeJuuCeGt9BZhvyy(bh) {
-    try {
-      const page = this.page;
-      page.idclaimerfilename = page.idclaimerFile.filename;
-      //appendnew_next_sd_AeJuuCeGt9BZhvyy
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AeJuuCeGt9BZhvyy');
-    }
-  }
-
-  sd_BmPWz1VDSzl4brQG(bh) {
-    try {
-      const page = this.page;
-      bh.upload2 = document.getElementById('upload2') as HTMLInputElement;
-      if (bh.upload2) {
-        bh.upload2.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            page.file = input.files[0];
-            page.uploadedFile2 = new FormData();
-            page.uploadedFile2.append('file', page.file);
-            page.iddes = page.file.name;
-            page.showIddes = true;
-
-            this.goToBackend2();
-          }
-        });
-      }
-
-      //appendnew_next_sd_BmPWz1VDSzl4brQG
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_BmPWz1VDSzl4brQG');
-    }
-  }
-
-  sd_VEJHUpqnMMqY74Ix(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_Ui7aSNufSpgMf5fn(bh);
-      //appendnew_next_sd_VEJHUpqnMMqY74Ix
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_VEJHUpqnMMqY74Ix');
-    }
-  }
-
-  sd_Ui7aSNufSpgMf5fn(bh) {
-    try {
-      const page = this.page;
-      bh.url = page.ssdUrl + 'verify-id';
-      page.loading = true;
-
-      bh = this.sd_IMaHyAZE5QQC5qoY(bh);
-      //appendnew_next_sd_Ui7aSNufSpgMf5fn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Ui7aSNufSpgMf5fn');
-    }
-  }
-
-  async sd_IMaHyAZE5QQC5qoY(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile2,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_WkXs3FOj5CqQoFDb(bh);
-      //appendnew_next_sd_IMaHyAZE5QQC5qoY
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_IMaHyAZE5QQC5qoY');
-    }
-  }
-
-  sd_WkXs3FOj5CqQoFDb(bh) {
-    try {
-      const page = this.page;
-      page.loading = true;
-      bh = this.sd_OwhZYGyh4M3aw8tB(bh);
-      //appendnew_next_sd_WkXs3FOj5CqQoFDb
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WkXs3FOj5CqQoFDb');
-    }
-  }
-
-  async sd_OwhZYGyh4M3aw8tB(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.result.message,
-          'Valid Form',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_puEvbf1XS4POeSIc(bh);
-      } else {
-        bh = await this.sd_zdEMATSS2fZwHuHk(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OwhZYGyh4M3aw8tB');
-    }
-  }
-
-  sd_puEvbf1XS4POeSIc(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_nIkGAXfUZtDik97i(bh);
-      //appendnew_next_sd_puEvbf1XS4POeSIc
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_puEvbf1XS4POeSIc');
-    }
-  }
-
-  sd_nIkGAXfUZtDik97i(bh) {
-    try {
-      const page = this.page;
-      console.log('response', bh.result);
-      bh.url = page.ssdUrl + 'upload';
-      page.loading = true;
-      page.mes = 'UPLOADING DOCUMENT';
-
-      bh = this.sd_HCVB864LcTTxbL8y(bh);
-      //appendnew_next_sd_nIkGAXfUZtDik97i
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_nIkGAXfUZtDik97i');
-    }
-  }
-
-  async sd_HCVB864LcTTxbL8y(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile2,
-      };
-      this.page.res = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_Sfgpgbn6oSSCvTf9(bh);
-      //appendnew_next_sd_HCVB864LcTTxbL8y
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HCVB864LcTTxbL8y');
-    }
-  }
-
-  sd_Sfgpgbn6oSSCvTf9(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      console.log('File uploded', page.res);
-      page.mes = 'READING DOCUMENT';
-      sessionStorage.setItem('idDeceased', JSON.stringify(page.res));
-      this.getFromBackend2();
-      bh = this.sd_8vC8q9h3Ifgo5fL1(bh);
-      //appendnew_next_sd_Sfgpgbn6oSSCvTf9
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Sfgpgbn6oSSCvTf9');
-    }
-  }
-
-  sd_8vC8q9h3Ifgo5fL1(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('ID has been Uploaded', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_8vC8q9h3Ifgo5fL1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_8vC8q9h3Ifgo5fL1');
-    }
-  }
-
-  sd_zdEMATSS2fZwHuHk(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('The document uploaded is Invalid', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_l0q77Sv2C3DOAzlk(bh);
-      //appendnew_next_sd_zdEMATSS2fZwHuHk
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zdEMATSS2fZwHuHk');
-    }
-  }
-
-  sd_l0q77Sv2C3DOAzlk(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      page.showIddes = false;
-      //appendnew_next_sd_l0q77Sv2C3DOAzlk
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_l0q77Sv2C3DOAzlk');
-    }
-  }
-
-  sd_etlERJRr2he1KIA9(bh) {
-    try {
-      this.page.idDeceasedFile = JSON.parse(
-        sessionStorage.getItem('idDeceased')
+      this.page.clickedNotification = JSON.parse(
+        localStorage.getItem('clickedNotification')
       );
-      bh = this.sd_czoEwkzdVrJb88db(bh);
-      //appendnew_next_sd_etlERJRr2he1KIA9
+      bh = this.sd_xMywLUDNGvlZt44t(bh);
+      //appendnew_next_sd_pwCofTEY8QankddX
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_etlERJRr2he1KIA9');
+      return this.errorHandler(bh, e, 'sd_pwCofTEY8QankddX');
     }
   }
 
-  sd_czoEwkzdVrJb88db(bh) {
+  sd_xMywLUDNGvlZt44t(bh) {
     try {
       const page = this.page;
-      page.idDeceasedfilename = page.idDeceasedFile.filename;
-      //appendnew_next_sd_czoEwkzdVrJb88db
+      page.clickedNotification.status = page.policyClaimsForm.value.status;
+
+      console.log('NOT: ', page.clickedNotification);
+      bh = this.sd_bJnnfpKyukLLMIbo(bh);
+      //appendnew_next_sd_xMywLUDNGvlZt44t
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_czoEwkzdVrJb88db');
+      return this.errorHandler(bh, e, 'sd_xMywLUDNGvlZt44t');
     }
   }
 
-  sd_c0R9DuWKyrUGeBUV(bh) {
+  async sd_bJnnfpKyukLLMIbo(bh) {
     try {
-      const page = this.page;
-      bh.upload3 = document.getElementById('upload3') as HTMLInputElement;
-      if (bh.upload3) {
-        bh.upload3.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            page.file3 = input.files[0];
-            page.uploadedFile3 = new FormData();
-            page.uploadedFile3.append('file', page.file3);
-            page.deathCetificatify = page.file3.name;
-            page.showdeathCetificatify = true;
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
 
-            this.goToBackend3();
-          }
-        });
-      }
-
-      //appendnew_next_sd_c0R9DuWKyrUGeBUV
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_c0R9DuWKyrUGeBUV');
-    }
-  }
-
-  sd_vprqtHXSLnaUznHL(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_L7eAMtZ9L7FDAjiW(bh);
-      //appendnew_next_sd_vprqtHXSLnaUznHL
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_vprqtHXSLnaUznHL');
-    }
-  }
-
-  sd_L7eAMtZ9L7FDAjiW(bh) {
-    try {
-      const page = this.page;
-      bh.url = page.ssdUrl + 'verify-death-certificate';
-      page.loading = true;
-
-      bh = this.sd_9t3d8zPDyWfPekAl(bh);
-      //appendnew_next_sd_L7eAMtZ9L7FDAjiW
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_L7eAMtZ9L7FDAjiW');
-    }
-  }
-
-  async sd_9t3d8zPDyWfPekAl(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile3,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_BW0q4HIeZBR3J30E(bh);
-      //appendnew_next_sd_9t3d8zPDyWfPekAl
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_9t3d8zPDyWfPekAl');
-    }
-  }
-
-  sd_BW0q4HIeZBR3J30E(bh) {
-    try {
-      const page = this.page;
-      page.loading = true;
-      bh = this.sd_egn7UeF0wWzIPEe4(bh);
-      //appendnew_next_sd_BW0q4HIeZBR3J30E
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_BW0q4HIeZBR3J30E');
-    }
-  }
-
-  async sd_egn7UeF0wWzIPEe4(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.result.message,
-          'Valid Form',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_Z2f4l6fKycVYScrb(bh);
-      } else {
-        bh = await this.sd_NHCmLOBtpCuQlfep(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_egn7UeF0wWzIPEe4');
-    }
-  }
-
-  sd_Z2f4l6fKycVYScrb(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_unoAVLPII4YchOmm(bh);
-      //appendnew_next_sd_Z2f4l6fKycVYScrb
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Z2f4l6fKycVYScrb');
-    }
-  }
-
-  sd_unoAVLPII4YchOmm(bh) {
-    try {
-      const page = this.page;
-      console.log('response', bh.result);
-      bh.url = page.ssdUrl + 'upload';
-      page.loading = true;
-      page.mes = 'UPLOADING DOCUMENT';
-
-      bh = this.sd_6mGK9KSGfzm7ZcQi(bh);
-      //appendnew_next_sd_unoAVLPII4YchOmm
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_unoAVLPII4YchOmm');
-    }
-  }
-
-  async sd_6mGK9KSGfzm7ZcQi(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile3,
-      };
-      this.page.res = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_7wYZ6BZ5Hs3pmFDt(bh);
-      //appendnew_next_sd_6mGK9KSGfzm7ZcQi
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_6mGK9KSGfzm7ZcQi');
-    }
-  }
-
-  sd_7wYZ6BZ5Hs3pmFDt(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      console.log('File uploded', page.res);
-      page.mes = 'READING DOCUMENT';
-      sessionStorage.setItem('deathCetificatify', JSON.stringify(page.res));
-      this.getFromBackend3();
-      bh = this.sd_dnGuHoVleFKMzu4X(bh);
-      //appendnew_next_sd_7wYZ6BZ5Hs3pmFDt
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7wYZ6BZ5Hs3pmFDt');
-    }
-  }
-
-  sd_dnGuHoVleFKMzu4X(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Death Certificate has been Uploaded', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_dnGuHoVleFKMzu4X
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dnGuHoVleFKMzu4X');
-    }
-  }
-
-  sd_NHCmLOBtpCuQlfep(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('The document uploaded is Invalid', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_V1HbmZo7pmieVovM(bh);
-      //appendnew_next_sd_NHCmLOBtpCuQlfep
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_NHCmLOBtpCuQlfep');
-    }
-  }
-
-  sd_V1HbmZo7pmieVovM(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      page.showdeathCetificatify = false;
-      //appendnew_next_sd_V1HbmZo7pmieVovM
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_V1HbmZo7pmieVovM');
-    }
-  }
-
-  sd_zOzYuojeT4wvbvTJ(bh) {
-    try {
-      this.page.deathCetificatifyFile = JSON.parse(
-        sessionStorage.getItem('deathCetificatify')
+      let outputVariables = await NotificationsInstance.genericPut(
+        bh.local.path,
+        this.page.clickedNotification
       );
-      bh = this.sd_CdS7H7sanKbQ7Mqy(bh);
-      //appendnew_next_sd_zOzYuojeT4wvbvTJ
+      bh.res = outputVariables.local.result;
+
+      this.sd_Ev5d9NbZNSBlv4LI(bh);
+      //appendnew_next_sd_bJnnfpKyukLLMIbo
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zOzYuojeT4wvbvTJ');
+      return this.errorHandler(bh, e, 'sd_bJnnfpKyukLLMIbo');
     }
   }
 
-  sd_CdS7H7sanKbQ7Mqy(bh) {
+  sd_Ev5d9NbZNSBlv4LI(bh) {
     try {
-      const page = this.page;
-      page.deathCetificatifyfilename = page.deathCetificatifyFile.filename;
-      //appendnew_next_sd_CdS7H7sanKbQ7Mqy
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CdS7H7sanKbQ7Mqy');
-    }
-  }
-
-  sd_LXObBzwaRqR61Jqk(bh) {
-    try {
-      const page = this.page;
-      bh.upload4 = document.getElementById('upload4') as HTMLInputElement;
-      if (bh.upload4) {
-        bh.upload4.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            page.file4 = input.files[0];
-            page.uploadedFile4 = new FormData();
-            page.uploadedFile4.append('file', page.file4);
-            page.bi1663 = page.file4.name;
-            page.showbi1663 = true;
-
-            this.goToBackend4();
-          }
-        });
-      }
-
-      //appendnew_next_sd_LXObBzwaRqR61Jqk
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_LXObBzwaRqR61Jqk');
-    }
-  }
-
-  sd_cxxe2TLoSCvtqnNn(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_kDRrqQKpoOEBcofH(bh);
-      //appendnew_next_sd_cxxe2TLoSCvtqnNn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_cxxe2TLoSCvtqnNn');
-    }
-  }
-
-  sd_kDRrqQKpoOEBcofH(bh) {
-    try {
-      const page = this.page;
-      bh.url = page.ssdUrl + 'verify-doc';
-      page.loading = true;
-
-      bh = this.sd_AztcCs191XZyomXZ(bh);
-      //appendnew_next_sd_kDRrqQKpoOEBcofH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_kDRrqQKpoOEBcofH');
-    }
-  }
-
-  async sd_AztcCs191XZyomXZ(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile4,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_3UaXhjaZHu9MWu9l(bh);
-      //appendnew_next_sd_AztcCs191XZyomXZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AztcCs191XZyomXZ');
-    }
-  }
-
-  sd_3UaXhjaZHu9MWu9l(bh) {
-    try {
-      const page = this.page;
-      page.loading = true;
-
-      bh = this.sd_bmuO4CjlIKu05DjM(bh);
-      //appendnew_next_sd_3UaXhjaZHu9MWu9l
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_3UaXhjaZHu9MWu9l');
-    }
-  }
-
-  async sd_bmuO4CjlIKu05DjM(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.result.message,
-          'Valid Form',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_dGIKNHvYFGxGNEHH(bh);
-      } else {
-        bh = await this.sd_CSUA7LpeGyXXcJp0(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bmuO4CjlIKu05DjM');
-    }
-  }
-
-  sd_dGIKNHvYFGxGNEHH(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_6Q8v0t0e9SrguOQ4(bh);
-      //appendnew_next_sd_dGIKNHvYFGxGNEHH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dGIKNHvYFGxGNEHH');
-    }
-  }
-
-  sd_6Q8v0t0e9SrguOQ4(bh) {
-    try {
-      const page = this.page;
-      console.log('response', bh.result);
-      bh.url = page.ssdUrl + 'upload';
-      page.loading = true;
-      page.mes = 'UPLOADING DOCUMENT';
-
-      bh = this.sd_foH5VmeTCCHcIdoI(bh);
-      //appendnew_next_sd_6Q8v0t0e9SrguOQ4
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_6Q8v0t0e9SrguOQ4');
-    }
-  }
-
-  async sd_foH5VmeTCCHcIdoI(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile4,
-      };
-      this.page.res = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_YqUCILGT4NrXjhuV(bh);
-      //appendnew_next_sd_foH5VmeTCCHcIdoI
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_foH5VmeTCCHcIdoI');
-    }
-  }
-
-  sd_YqUCILGT4NrXjhuV(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      console.log('File uploded', page.res);
-      page.mes = 'READING DOCUMENT';
-      sessionStorage.setItem('bi1663', JSON.stringify(page.res));
-      this.getFromBackend4();
-      bh = this.sd_V1ZD3Ouxu3nWTqXk(bh);
-      //appendnew_next_sd_YqUCILGT4NrXjhuV
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YqUCILGT4NrXjhuV');
-    }
-  }
-
-  sd_V1ZD3Ouxu3nWTqXk(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('bi1663 has been Uploaded', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_V1ZD3Ouxu3nWTqXk
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_V1ZD3Ouxu3nWTqXk');
-    }
-  }
-
-  sd_CSUA7LpeGyXXcJp0(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('The document uploaded is Invalid', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_OGuXfGlvtWGZ0ZpS(bh);
-      //appendnew_next_sd_CSUA7LpeGyXXcJp0
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CSUA7LpeGyXXcJp0');
-    }
-  }
-
-  sd_OGuXfGlvtWGZ0ZpS(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      page.showbi1663 = false;
-      //appendnew_next_sd_OGuXfGlvtWGZ0ZpS
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OGuXfGlvtWGZ0ZpS');
-    }
-  }
-
-  sd_V7KAHoxPKIn498z1(bh) {
-    try {
-      this.page.bi1663File = JSON.parse(sessionStorage.getItem('bi1663'));
-      bh = this.sd_Gg074IKkyV8UM9EK(bh);
-      //appendnew_next_sd_V7KAHoxPKIn498z1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_V7KAHoxPKIn498z1');
-    }
-  }
-
-  sd_Gg074IKkyV8UM9EK(bh) {
-    try {
-      const page = this.page;
-      page.bi1663filename = page.bi1663File.filename;
-      //appendnew_next_sd_Gg074IKkyV8UM9EK
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Gg074IKkyV8UM9EK');
-    }
-  }
-
-  sd_R1vMQTyO0uOzv33b(bh) {
-    try {
-      const page = this.page;
-      bh.upload5 = document.getElementById('upload5') as HTMLInputElement;
-      if (bh.upload5) {
-        bh.upload5.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files.length > 0) {
-            page.file5 = input.files[0];
-            page.uploadedFile5 = new FormData();
-            page.uploadedFile5.append('file', page.file5);
-            page.bankDetails = page.file5.name;
-            page.showbankDetails = true;
-
-            this.goToBackend5();
-          }
-        });
-      }
-
-      //appendnew_next_sd_R1vMQTyO0uOzv33b
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_R1vMQTyO0uOzv33b');
-    }
-  }
-
-  sd_ONu5zn9LOqoT8qaM(bh) {
-    try {
-      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_5tCTBxmpsLA3klKs(bh);
-      //appendnew_next_sd_ONu5zn9LOqoT8qaM
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ONu5zn9LOqoT8qaM');
-    }
-  }
-
-  sd_5tCTBxmpsLA3klKs(bh) {
-    try {
-      const page = this.page;
-      bh.url = page.ssdUrl + 'verify-bank-statement';
-      page.loading = true;
-
-      bh = this.sd_9qynJoGLZsJNWVO6(bh);
-      //appendnew_next_sd_5tCTBxmpsLA3klKs
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_5tCTBxmpsLA3klKs');
-    }
-  }
-
-  async sd_9qynJoGLZsJNWVO6(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile5,
-      };
-      bh.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_sZPfO2PsIP2h9I7N(bh);
-      //appendnew_next_sd_9qynJoGLZsJNWVO6
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_9qynJoGLZsJNWVO6');
-    }
-  }
-
-  sd_sZPfO2PsIP2h9I7N(bh) {
-    try {
-      const page = this.page;
-      page.loading = true;
-      bh = this.sd_PqxywdsOemp5Igql(bh);
-      //appendnew_next_sd_sZPfO2PsIP2h9I7N
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_sZPfO2PsIP2h9I7N');
-    }
-  }
-
-  async sd_PqxywdsOemp5Igql(bh) {
-    try {
-      if (
-        this.sdService.operators['eq'](
-          bh.result.message,
-          'Valid Form',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_eexTfZTyTRa8FjLM(bh);
-      } else {
-        bh = await this.sd_NyV6mC49f4wqJxFf(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PqxywdsOemp5Igql');
-    }
-  }
-
-  sd_eexTfZTyTRa8FjLM(bh) {
-    try {
-      this.__page_injector__.get(MatSnackBar).open('Valid Document', 'Ok', {
-        duration: 3000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_E4OwG14i68Eq3UXP(bh);
-      //appendnew_next_sd_eexTfZTyTRa8FjLM
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_eexTfZTyTRa8FjLM');
-    }
-  }
-
-  sd_E4OwG14i68Eq3UXP(bh) {
-    try {
-      const page = this.page;
-      console.log('response', bh.result);
-      bh.url = page.ssdUrl + 'upload';
-      page.loading = true;
-      page.mes = 'UPLOADING DOCUMENT';
-
-      bh = this.sd_g2R76Jxfr5l49SmZ(bh);
-      //appendnew_next_sd_E4OwG14i68Eq3UXP
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_E4OwG14i68Eq3UXP');
-    }
-  }
-
-  async sd_g2R76Jxfr5l49SmZ(bh) {
-    try {
-      let requestOptions = {
-        url: bh.url,
-        method: 'post',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: this.page.uploadedFile5,
-      };
-      this.page.res = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_nP1bqNxyA7hXoBSZ(bh);
-      //appendnew_next_sd_g2R76Jxfr5l49SmZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_g2R76Jxfr5l49SmZ');
-    }
-  }
-
-  sd_nP1bqNxyA7hXoBSZ(bh) {
-    try {
-      const page = this.page;
-      console.log('File uploded', page.res);
-      page.mes = 'READING DOCUMENT';
-      page.loading = false;
-      sessionStorage.setItem('bankDetails', JSON.stringify(page.res));
-      this.getFromBackend5();
-      page.loading = false;
-      bh = this.sd_iZN5m4nyuGYcHyMH(bh);
-      //appendnew_next_sd_nP1bqNxyA7hXoBSZ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_nP1bqNxyA7hXoBSZ');
-    }
-  }
-
-  sd_iZN5m4nyuGYcHyMH(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Bank Details has been Uploaded', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      //appendnew_next_sd_iZN5m4nyuGYcHyMH
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iZN5m4nyuGYcHyMH');
-    }
-  }
-
-  sd_NyV6mC49f4wqJxFf(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('The document uploaded is Invalid', 'Ok', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_OG0jcXxonpVksHoG(bh);
-      //appendnew_next_sd_NyV6mC49f4wqJxFf
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_NyV6mC49f4wqJxFf');
-    }
-  }
-
-  sd_OG0jcXxonpVksHoG(bh) {
-    try {
-      const page = this.page;
-      page.loading = false;
-      page.showbankDetails = false;
-      //appendnew_next_sd_OG0jcXxonpVksHoG
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OG0jcXxonpVksHoG');
-    }
-  }
-
-  sd_7xTXSTkRD7MJjbAf(bh) {
-    try {
-      this.page.bankDetailsFile = JSON.parse(
-        sessionStorage.getItem('bankDetails')
+      console.log(
+        new Date().toLocaleTimeString(),
+        this.page.clickedNotification
       );
-      bh = this.sd_PZgdaN3b5b40uvLb(bh);
-      //appendnew_next_sd_7xTXSTkRD7MJjbAf
+      //appendnew_next_sd_Ev5d9NbZNSBlv4LI
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7xTXSTkRD7MJjbAf');
-    }
-  }
-
-  sd_PZgdaN3b5b40uvLb(bh) {
-    try {
-      const page = this.page;
-      page.bankDetailsfilename = page.bankDetailsFile.filename;
-      //appendnew_next_sd_PZgdaN3b5b40uvLb
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PZgdaN3b5b40uvLb');
-    }
-  }
-
-  sd_neIC7BNFCyHTAt2a(bh) {
-    try {
-      const page = this.page;
-      page.disabled = false;
-      //appendnew_next_sd_neIC7BNFCyHTAt2a
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_neIC7BNFCyHTAt2a');
+      return this.errorHandler(bh, e, 'sd_Ev5d9NbZNSBlv4LI');
     }
   }
 
