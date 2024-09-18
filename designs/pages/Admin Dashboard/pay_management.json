@@ -1,39 +1,39 @@
 [
     {
-        "id": "sd_o4ikLTEW12PcNWYL",
+        "id": "sd_cZLPHcExM7qPlfNz",
         "type": "tab",
-        "createdDate": "2024-08-18T19:15:05.395Z",
-        "label": "home",
+        "createdDate": "2024-09-16T11:12:24.326Z",
+        "label": "pay_management",
         "disabled": false,
         "info": "",
-        "functionSeq": 9,
+        "functionSeq": 0,
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_1t0DhsI5kAmqEWqm",
+        "id": "sd_H6aJaOAoVp4vq6dU",
         "type": "OnInit",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "start",
         "name": "",
-        "functionName": "sd_1t0DhsI5kAmqEWqm",
+        "functionName": "sd_H6aJaOAoVp4vq6dU",
         "category": "Lifecycle Events",
-        "x": 45,
-        "y": 40,
+        "x": 25,
+        "y": 80,
         "wires": [
             [
-                "sd_PqjDEZrkZowpbFwi"
+                "sd_r47gA5v95dkNeP9x"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_SqQamlbgHC0CMDv2",
+        "id": "sd_gKIcVTMlDc071Xta",
         "type": "Environment",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -47,46 +47,46 @@
                 "envProperty": "ssdURL"
             }
         ],
-        "functionName": "sd_SqQamlbgHC0CMDv2",
+        "functionName": "sd_gKIcVTMlDc071Xta",
         "category": "General",
-        "x": 525,
-        "y": 40,
+        "x": 585,
+        "y": 80,
         "wires": [
             [
-                "sd_7gioBFKVWHaZ95Yw"
+                "sd_aLNDbQf84ZZgYS7k"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_7gioBFKVWHaZ95Yw",
+        "id": "sd_aLNDbQf84ZZgYS7k",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdURL + \"get-users\"",
-        "functionName": "sd_7gioBFKVWHaZ95Yw",
+        "script": "bh.url = page.ssdURL + \"get-monthly-payments\";\n\n\n",
+        "functionName": "sd_aLNDbQf84ZZgYS7k",
         "category": "Function",
-        "x": 605,
-        "y": 40,
+        "x": 665,
+        "y": 80,
         "wires": [
             [
-                "sd_RRKQV3ETWYI7Umxb"
+                "sd_tZj98HRMrxvqzJnn"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_RRKQV3ETWYI7Umxb",
+        "id": "sd_tZj98HRMrxvqzJnn",
         "type": "HttpRequest",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -124,66 +124,66 @@
         "paramsObj": [],
         "paramMapping": "",
         "paramMappingObj": {},
-        "functionName": "sd_RRKQV3ETWYI7Umxb",
+        "functionName": "sd_tZj98HRMrxvqzJnn",
         "category": "HTTP",
-        "x": 685,
-        "y": 40,
+        "x": 745,
+        "y": 80,
         "wires": [
             [
-                "sd_sQz2RUgYmK2eNRYZ"
+                "sd_mSUodGizS2HbDJrx"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_sQz2RUgYmK2eNRYZ",
+        "id": "sd_mSUodGizS2HbDJrx",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.tableDataSource = page.result.filter((user:any) =>{\nreturn    user.role == \"client\"\n})\n\n\npage.table = bh.tableDataSource\npage.table.policyActive = page.policyActiveStatus \n\npage.table.forEach ( (item) => {\n    if(item.policyActive === true){\n        item.policyActive = \"Active\"\n    } else {\n    item.policyActive = \"Deactivated\"\n}\n})\n\n\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"page.table \" ,page.table )\n\n",
-        "functionName": "sd_sQz2RUgYmK2eNRYZ",
+        "script": "page.table = page.result\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\n// console.log(\"page.table \" ,page.table )\n\n",
+        "functionName": "sd_mSUodGizS2HbDJrx",
         "category": "Function",
-        "x": 765,
-        "y": 40,
+        "x": 825,
+        "y": 80,
         "wires": [
             [
-                "sd_Q9kpfJBrwcNwMSIq"
+                "sd_cSgr6Vttfp6vdarU"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_26B83wPaElPthlwe",
+        "id": "sd_AcZlV0st0RdhUgzm",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "if (!page.backupapplicationsDatasource) {\n    page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement).value.trim().toLowerCase();\npage.searchValue = searchValue;\n\nif (searchValue) {\n    const searchResults = page.backupapplicationsDatasource.filter((row) => {\n        return (\n            (row.firstName && row.firstName.toLowerCase().includes(searchValue)) ||\n            (row.lastName && row.lastName.toLowerCase().includes(searchValue)) ||\n            (row.policyNumber && row.policyNumber.toString().toLowerCase().includes(searchValue)) ||  // Convert policyNumber to string\n            (row.packageType && row.packageType.toLowerCase().includes(searchValue))\n        );\n    });\n    page.table = searchResults;\n} else {\n    // Reset to original data if search value is empty\n    page.table = [...page.backupapplicationsDatasource];\n}\n",
+        "script": "if (!page.backupapplicationsDatasource) {\n    page.backupapplicationsDatasource = [...page.table];\n}\n\nconst searchValue = (bh.input.filterEvent.target as HTMLInputElement).value.trim().toLowerCase();\npage.searchValue = searchValue;\n\nif (searchValue) {\n    const searchResults = page.backupapplicationsDatasource.filter((row) => {\n        return (\n            (row.name && row.surname.toLowerCase().includes(searchValue)) ||\n            (row.surname && row.surname.toLowerCase().includes(searchValue)) ||\n            (row.policyNumber && row.policyNumber.toString().toLowerCase().includes(searchValue)) ||  // Convert policyNumber to string\n            (row.event && row.event.toLowerCase().includes(searchValue)) ||\n            (row.date && row.date.toLowerCase().includes(searchValue)) ||\n            (row.loggedBY && row.loggedBY.toLowerCase().includes(searchValue)) \n        );\n    });\n    page.table = searchResults;\n} else {\n    // Reset to original data if search value is empty\n    page.table = [...page.backupapplicationsDatasource];\n}\n",
         "functionName": "sd_iBlFYTlpoczCmWts_5",
         "category": "Function",
-        "x": 205,
-        "y": 280,
+        "x": 265,
+        "y": 320,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_c9oNeYPHHXzRmfhx",
+        "id": "sd_YmLJJATuCRfSkQUz",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
         "name": "onFilter",
@@ -202,28 +202,28 @@
         "flow_type": "sync",
         "functionName": "onFilter",
         "category": "General",
-        "x": 60,
-        "y": 280,
+        "x": 120,
+        "y": 320,
         "wires": [
             [
-                "sd_26B83wPaElPthlwe"
+                "sd_AcZlV0st0RdhUgzm"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_k3j5KbTZTS6UvlPT",
+        "id": "sd_Jq8cIy67f6yRxXmD",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
         "name": "cards_filter",
         "outputs": 1,
         "inputVariables": [
             {
-                "key": "plan",
+                "key": "event",
                 "defaultValue": {
                     "type": "any",
                     "value": ""
@@ -235,41 +235,41 @@
         "flow_type": "sync",
         "functionName": "cardsFilter",
         "category": "General",
-        "x": 65,
-        "y": 360,
+        "x": 125,
+        "y": 400,
         "wires": [
             [
-                "sd_cDHK0KhL1bspOFcv"
+                "sd_7diO4Gn0urLXDAf6"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_cDHK0KhL1bspOFcv",
+        "id": "sd_7diO4Gn0urLXDAf6",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\n    if (!page.backupapplicationsDatasource) {\n        page.backupapplicationsDatasource = [...page.table];\n    }\n\n    const filteredResults = page.backupapplicationsDatasource.filter((row) => {\n        return row.packageType && row.packageType.toLowerCase() === bh.input.plan.toLowerCase();\n    });\n\n    page.table = filteredResults;\n\n",
-        "functionName": "sd_cDHK0KhL1bspOFcv",
+        "script": "\n    if (!page.backupapplicationsDatasource) {\n        page.backupapplicationsDatasource = [...page.table];\n    }\n\n    const filteredResults = page.backupapplicationsDatasource.filter((row) => {\n        return row.event && row.event.toLowerCase() === bh.input.event.toLowerCase();\n    });\n\n    page.table = filteredResults;\n\n",
+        "functionName": "sd_7diO4Gn0urLXDAf6",
         "category": "Function",
-        "x": 140,
-        "y": 360,
+        "x": 200,
+        "y": 400,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_MVMh0WBg4s6QqZUr",
+        "id": "sd_nIWaz3kqf6y3N9bn",
         "type": "UseDependency",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -292,24 +292,24 @@
         "import_all": false,
         "library": "@angular/material/paginator",
         "serviceDesignerType": "pages",
-        "functionName": "sd_MVMh0WBg4s6QqZUr",
+        "functionName": "sd_nIWaz3kqf6y3N9bn",
         "category": "Function",
-        "x": 225,
-        "y": 40,
+        "x": 285,
+        "y": 80,
         "wires": [
             [
-                "sd_FQOoBfBlmATSyjPd"
+                "sd_50cMX6H4SfXx91KF"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_yN9biohu3MCF1RRs",
+        "id": "sd_61UKXyNOabPg4ItU",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
         "name": "set client data",
@@ -328,21 +328,21 @@
         "flow_type": "sync",
         "functionName": "setClientData",
         "category": "General",
-        "x": 85,
-        "y": 460,
+        "x": 145,
+        "y": 500,
         "wires": [
             [
-                "sd_iLkoHwTtrAd37cM8"
+                "sd_c9z9zMbt03zMNBq1"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_iLkoHwTtrAd37cM8",
+        "id": "sd_c9z9zMbt03zMNBq1",
         "type": "PageCallService",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -387,24 +387,24 @@
         ],
         "accept_bh": false,
         "accept_csd": true,
-        "functionName": "sd_iLkoHwTtrAd37cM8",
+        "functionName": "sd_c9z9zMbt03zMNBq1",
         "category": "General",
-        "x": 160,
-        "y": 460,
+        "x": 220,
+        "y": 500,
         "wires": [
             [
-                "sd_ApqA9ISLMNGfknzq"
+                "sd_KuuhBRGHKT9ixMsa"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_oYuxO86FKvA3jf09",
+        "id": "sd_C9Skm2DHnQpJXDAK",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
         "name": "go to view payment",
@@ -414,21 +414,21 @@
         "flow_type": "sync",
         "functionName": "goToViewPayment",
         "category": "General",
-        "x": 85,
-        "y": 560,
+        "x": 145,
+        "y": 600,
         "wires": [
             [
-                "sd_WnahUlnrdMBkCHsS"
+                "sd_sEEfqfrbKc6PncYs"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_WnahUlnrdMBkCHsS",
+        "id": "sd_sEEfqfrbKc6PncYs",
         "type": "Navigation",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -440,22 +440,22 @@
         "qparamsMap": "",
         "qparamsArray": "",
         "resultMapping": "",
-        "functionName": "sd_WnahUlnrdMBkCHsS",
+        "functionName": "sd_sEEfqfrbKc6PncYs",
         "category": "Navigation",
-        "x": 180,
-        "y": 560,
+        "x": 240,
+        "y": 600,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_nrUbOI69LYzRt4La",
+        "id": "sd_KrM20LgHX16CJOuJ",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
         "name": "sendUser",
@@ -474,21 +474,21 @@
         "flow_type": "sync",
         "functionName": "sendUser",
         "category": "General",
-        "x": 97,
-        "y": 646.8020629882812,
+        "x": 157,
+        "y": 686.8020629882812,
         "wires": [
             [
-                "sd_eVczpAOdwofO12md"
+                "sd_UqGhBvQPon07bGFI"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_eVczpAOdwofO12md",
+        "id": "sd_UqGhBvQPon07bGFI",
         "type": "Storage",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -504,22 +504,22 @@
             "value": "row"
         },
         "resultMapping": {},
-        "functionName": "sd_eVczpAOdwofO12md",
+        "functionName": "sd_UqGhBvQPon07bGFI",
         "category": "Storage",
-        "x": 177,
-        "y": 646.8020629882812,
+        "x": 237,
+        "y": 686.8020629882812,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_ApqA9ISLMNGfknzq",
+        "id": "sd_KuuhBRGHKT9ixMsa",
         "type": "Storage",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -535,22 +535,22 @@
             "value": "row"
         },
         "resultMapping": {},
-        "functionName": "sd_ApqA9ISLMNGfknzq",
+        "functionName": "sd_KuuhBRGHKT9ixMsa",
         "category": "Storage",
-        "x": 245,
-        "y": 460,
+        "x": 305,
+        "y": 500,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_FQOoBfBlmATSyjPd",
+        "id": "sd_50cMX6H4SfXx91KF",
         "type": "UseDependency",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -573,24 +573,24 @@
         "import_all": false,
         "library": "@angular/material/sort",
         "serviceDesignerType": "pages",
-        "functionName": "sd_FQOoBfBlmATSyjPd",
+        "functionName": "sd_50cMX6H4SfXx91KF",
         "category": "Function",
-        "x": 305,
-        "y": 40,
+        "x": 365,
+        "y": 80,
         "wires": [
             [
-                "sd_S0vzAMRd3kpQdYu4"
+                "sd_0S5xz4kOPvdicmdq"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_Q9kpfJBrwcNwMSIq",
+        "id": "sd_cSgr6Vttfp6vdarU",
         "type": "PageVariables",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -627,272 +627,44 @@
                 }
             }
         ],
-        "functionName": "sd_Q9kpfJBrwcNwMSIq",
+        "functionName": "sd_cSgr6Vttfp6vdarU",
         "category": "Function",
-        "x": 865,
-        "y": 40,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_aw4OH46OM1EzQrTS",
-        "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "On page change",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "ev",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "onPageChange",
-        "category": "General",
-        "x": 465,
-        "y": 180,
+        "x": 925,
+        "y": 80,
         "wires": [
             [
-                "sd_av9XUpIkWkjumDhd"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_av9XUpIkWkjumDhd",
-        "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "page.currentPageIndex = bh.input.ev.pageIndex;\nconsole.log(\"current\", page.currentPageIndex)",
-        "functionName": "sd_av9XUpIkWkjumDhd",
-        "category": "Function",
-        "x": 565,
-        "y": 180,
-        "wires": [
-            [
-                "sd_CdCXJ8wOH3CkcJYj"
+                "sd_N1aALxkUGzCMyqIq"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_CdCXJ8wOH3CkcJYj",
-        "type": "PageCallService",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_o4ikLTEW12PcNWYL",
-            "type": "tab",
-            "createdDate": "2024-08-18T19:15:05.395Z",
-            "label": "home",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 8
-        },
-        "flow": {
-            "flowId": "sd_6Uycp6i4VVxlHjZ2",
-            "flowName": "updateApplicationToShow"
-        },
-        "inputVariables": [
-            {
-                "key": "itemsPerPage",
-                "map": true,
-                "valueType": "bh",
-                "value": ""
-            }
-        ],
-        "outputMapping": [],
-        "serviceImportPath": "./",
-        "startName": "updateApplicationToShow",
-        "inputParams": [
-            null
-        ],
-        "accept_bh": false,
-        "accept_csd": false,
-        "functionName": "sd_CdCXJ8wOH3CkcJYj",
-        "category": "General",
-        "x": 665,
-        "y": 180,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_0myDzscgXXTxK4WK",
-        "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.startIndex = page.currentPageIndex * bh.input.itemsPerPage;\nbh.endIndex = bh.startIndex + bh.input.itemsPerPage;\npage.table = page.backupapplicationsDatasource.slice(bh.startIndex, bh.endIndex);",
-        "functionName": "sd_0myDzscgXXTxK4WK",
-        "category": "Function",
-        "x": 585,
-        "y": 300,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_6Uycp6i4VVxlHjZ2",
-        "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "updateApplicationToShow",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "itemsPerPage",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "updateApplicationToShow",
-        "category": "General",
-        "x": 480,
-        "y": 300,
-        "wires": [
-            [
-                "sd_0myDzscgXXTxK4WK"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_PifxfaDM06rskNkb",
-        "type": "OnChanges",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "common",
-        "nodeType": "start",
-        "name": "On Changes",
-        "functionName": "ngOnChanges",
-        "category": "Lifecycle Events",
-        "x": 400,
-        "y": 560,
-        "wires": [
-            [
-                "sd_2DIjYQbf6CS17DYx"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "homeComponent"
-    },
-    {
-        "id": "sd_2DIjYQbf6CS17DYx",
-        "type": "PageCallService",
-        "z": "sd_o4ikLTEW12PcNWYL",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_o4ikLTEW12PcNWYL",
-            "type": "tab",
-            "createdDate": "2024-08-18T19:15:05.395Z",
-            "label": "home",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 9
-        },
-        "flow": {
-            "flowId": "sd_aw4OH46OM1EzQrTS",
-            "flowName": "onPageChange"
-        },
-        "inputVariables": [
-            {
-                "key": "ev",
-                "map": true,
-                "valueType": "bh",
-                "value": ""
-            }
-        ],
-        "outputMapping": [],
-        "serviceImportPath": "./",
-        "startName": "onPageChange",
-        "inputParams": [
-            null
-        ],
-        "accept_bh": false,
-        "accept_csd": false,
-        "functionName": "sd_2DIjYQbf6CS17DYx",
-        "category": "General",
-        "x": 485,
-        "y": 560,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "homeComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_0fGu5LvUcHdhb2Ac",
+        "id": "sd_IJb4gnvvTJfK3E63",
         "type": "AfterViewInit",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "start",
         "name": "",
         "functionName": "ngAfterViewInit",
         "category": "Lifecycle Events",
-        "x": 65,
-        "y": 756.8020629882812,
+        "x": 125,
+        "y": 796.8020629882812,
         "wires": [
             [
-                "sd_wuV2zSw5nsWGD6kg"
+                "sd_GNFPyM3JOScm1d7o"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_wuV2zSw5nsWGD6kg",
+        "id": "sd_GNFPyM3JOScm1d7o",
         "type": "ViewPicker",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
@@ -909,42 +681,42 @@
         ],
         "functionName": "sd_xKCCTWKzvgDN0rx7_9",
         "category": "Function",
-        "x": 205,
-        "y": 756.8020629882812,
+        "x": 265,
+        "y": 796.8020629882812,
         "wires": [
             [
-                "sd_7VuYIUgtmhqPsXpX"
+                "sd_9z0TUmIphR7dUFhM"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_7VuYIUgtmhqPsXpX",
+        "id": "sd_9z0TUmIphR7dUFhM",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
         "script": "// page.table.paginator = this.MatPaginator;",
         "functionName": "sd_2VNGqvcKee34lvOz_9",
         "category": "Function",
-        "x": 345,
-        "y": 756.8020629882812,
+        "x": 405,
+        "y": 796.8020629882812,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_PqjDEZrkZowpbFwi",
+        "id": "sd_Arzy8uB4k1GWBhCI",
         "type": "PageVariables",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -986,26 +758,33 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "currentMonth",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_E9QbOlnVduPNV5MO_1",
         "category": "Function",
-        "x": 125,
-        "y": 40,
+        "x": 185,
+        "y": 80,
         "wires": [
             [
-                "sd_MVMh0WBg4s6QqZUr"
+                "sd_nIWaz3kqf6y3N9bn"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_S0vzAMRd3kpQdYu4",
+        "id": "sd_0S5xz4kOPvdicmdq",
         "type": "UseDependency",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
@@ -1036,31 +815,51 @@
         "import_all": false,
         "library": "@angular/core",
         "serviceDesignerType": "pages",
-        "functionName": "sd_S0vzAMRd3kpQdYu4",
+        "functionName": "sd_0S5xz4kOPvdicmdq",
         "category": "Function",
-        "x": 405,
-        "y": 40,
+        "x": 465,
+        "y": 80,
         "wires": [
             [
-                "sd_SqQamlbgHC0CMDv2"
+                "sd_gKIcVTMlDc071Xta"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
         "generated": true
     },
     {
-        "id": "sd_MPNk5xxpnKSeR1Jn",
+        "id": "sd_N1aALxkUGzCMyqIq",
+        "type": "Script",
+        "z": "sd_cZLPHcExM7qPlfNz",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.monthFilter = {\n    month: page.monthName\n}",
+        "functionName": "sd_N1aALxkUGzCMyqIq",
+        "category": "Function",
+        "x": 1025,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_managementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2k8PGHewnqrLyQOy",
         "type": "PageStart",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "getRowColor",
+        "name": "selectFilter",
         "outputs": 1,
         "inputVariables": [
             {
-                "key": "row",
+                "key": "event",
                 "defaultValue": {
                     "type": "any",
                     "value": ""
@@ -1070,37 +869,93 @@
         ],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "getRowColor",
+        "functionName": "selectFilter",
         "category": "General",
-        "x": 80,
-        "y": 940,
+        "x": 125,
+        "y": 900,
         "wires": [
             [
-                "sd_Vk8d9TXjHuPW2ccT"
+                "sd_kmtWad1qF80YnSNE"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "homeComponent"
+        "serviceName": "pay_managementComponent"
     },
     {
-        "id": "sd_Vk8d9TXjHuPW2ccT",
+        "id": "sd_kmtWad1qF80YnSNE",
         "type": "Script",
-        "z": "sd_o4ikLTEW12PcNWYL",
+        "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
-        "functionName": "sd_Vk8d9TXjHuPW2ccT",
+        "script": "if (!page.backupapplicationsDatasource) {\n    // Create a backup of the original data\n    page.backupapplicationsDatasource = [...page.table];\n}\n\n// Ensure page.monthFilter is a string for comparison\nconst monthFilter = page.monthFilter.toString().toLowerCase();\n\n// Filter the backup data source based on the date\nconst filteredResults = page.backupapplicationsDatasource.filter((row) => {\n    if (row.date) {\n        const rowDate = new Date(row.date);\n        \n        // Format the date to only include month and year (or just the month)\n        const rowMonth = rowDate.toLocaleString('default', { month: 'long' }).toLowerCase(); // e.g., 'january'\n\n        // Check if rowMonth includes the monthFilter\n        return rowMonth.includes(monthFilter);\n    }\n    return false;\n});\n\n// Update the table with the filtered results\npage.table = filteredResults;\n\n\n\n",
+        "functionName": "sd_kmtWad1qF80YnSNE",
         "category": "Function",
-        "x": 165,
-        "y": 940,
+        "x": 205,
+        "y": 900,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "homeComponent",
+        "serviceName": "pay_managementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r47gA5v95dkNeP9x",
+        "type": "UseDependency",
+        "z": "sd_cZLPHcExM7qPlfNz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_r47gA5v95dkNeP9x",
+        "category": "Function",
+        "x": 105,
+        "y": 80,
+        "wires": [
+            [
+                "sd_Arzy8uB4k1GWBhCI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_managementComponent",
         "generated": true
     }
 ]

@@ -57,11 +57,41 @@ export class client_plan_detailsComponent {
     }
   }
 
+  getUser(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_PFdTz4I6dOb2yMqv(bh);
+      //appendnew_next_getUser
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZzO8qt1EjGeKdHcY');
+    }
+  }
+
+  trialCount(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_6RSb6nxAwpXrwseu(bh);
+      //appendnew_next_trialCount
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_LSwMzdiGToM9VNKD');
+    }
+  }
   //appendnew_flow_client_plan_detailsComponent_start
 
   sd_nZBvna9VGICI6IZ7(bh) {
     try {
       this.page.currentUser = undefined;
+      this.page.found = undefined;
       bh = this.sd_l7TWElTpIXp7E4HJ(bh);
       //appendnew_next_sd_nZBvna9VGICI6IZ7
       return bh;
@@ -89,10 +119,178 @@ export class client_plan_detailsComponent {
 
       console.log('page user', page.currentUser);
       console.log('bene', page.currentUser.beneficaries);
+      bh = this.sd_ypBsNDgkftViziaA(bh);
       //appendnew_next_sd_E2exTTghxPJnNphQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_E2exTTghxPJnNphQ');
+    }
+  }
+
+  sd_ypBsNDgkftViziaA(bh) {
+    try {
+      let outputVariables = this.getUser();
+
+      bh = this.sd_qnYHCTmsJirepfQj(bh);
+      //appendnew_next_sd_ypBsNDgkftViziaA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ypBsNDgkftViziaA');
+    }
+  }
+
+  sd_qnYHCTmsJirepfQj(bh) {
+    try {
+      const page = this.page; // this.getUser()
+      // console.log("found on trial ==>", page.found)
+
+      // for (let i = 0; page.found.trialCount > 6; i++) {
+      //     console.log("new count ==>", page.found.trialCount)
+      //     this.getUser()
+      //     this.trialCount();
+      //     this.getUser()
+      // }
+      //appendnew_next_sd_qnYHCTmsJirepfQj
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qnYHCTmsJirepfQj');
+    }
+  }
+
+  sd_PFdTz4I6dOb2yMqv(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_cQVVjgYXSJHbIBp4(bh);
+      //appendnew_next_sd_PFdTz4I6dOb2yMqv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PFdTz4I6dOb2yMqv');
+    }
+  }
+
+  sd_cQVVjgYXSJHbIBp4(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + 'get-users';
+      bh = this.sd_2puEQLJbFWmZ193K(bh);
+      //appendnew_next_sd_cQVVjgYXSJHbIBp4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cQVVjgYXSJHbIBp4');
+    }
+  }
+
+  async sd_2puEQLJbFWmZ193K(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_uOEBnPp8FRIMrEGc(bh);
+      //appendnew_next_sd_2puEQLJbFWmZ193K
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_2puEQLJbFWmZ193K');
+    }
+  }
+
+  sd_uOEBnPp8FRIMrEGc(bh) {
+    try {
+      const page = this.page;
+      page.found = page.result.find((users: any) => {
+        return page.user._id == users._id;
+      });
+
+      console.log('get api ==>', page.found);
+      bh = this.sd_nJ73V46etiDL4nqC(bh);
+      //appendnew_next_sd_uOEBnPp8FRIMrEGc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_uOEBnPp8FRIMrEGc');
+    }
+  }
+
+  sd_nJ73V46etiDL4nqC(bh) {
+    try {
+      const page = this.page;
+      console.log('lets gooooooo ==>', page.found);
+      //  this.getUser()
+
+      setTimeout(() => {
+        for (let i = 0; i <= 6; i++) {
+          this.trialCount();
+          // page.found.trialCount++
+          console.log('new count ==>', i);
+        }
+      }, 9000);
+
+      //appendnew_next_sd_nJ73V46etiDL4nqC
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nJ73V46etiDL4nqC');
+    }
+  }
+
+  sd_6RSb6nxAwpXrwseu(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_96b0CjYaTghPx4w6(bh);
+      //appendnew_next_sd_6RSb6nxAwpXrwseu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6RSb6nxAwpXrwseu');
+    }
+  }
+
+  sd_96b0CjYaTghPx4w6(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + `trial-increment`;
+
+      bh.body = {
+        _id: page.user._id,
+        trialCount: page.user.trialCount++,
+      };
+      bh = this.sd_XORYuuJA8VhZwrnQ(bh);
+      //appendnew_next_sd_96b0CjYaTghPx4w6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_96b0CjYaTghPx4w6');
+    }
+  }
+
+  async sd_XORYuuJA8VhZwrnQ(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_ZSIshdbOpfm66OgO(bh);
+      //appendnew_next_sd_XORYuuJA8VhZwrnQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XORYuuJA8VhZwrnQ');
+    }
+  }
+
+  sd_ZSIshdbOpfm66OgO(bh) {
+    try {
+      const page = this.page;
+      console.log('new trial count ==>', page.result);
+      //appendnew_next_sd_ZSIshdbOpfm66OgO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZSIshdbOpfm66OgO');
     }
   }
 

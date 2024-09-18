@@ -97,8 +97,9 @@ bh-contact_us{
 .CARDS{
     border: solid 1px #124e5285;
      border-radius: 10px !important;
-    height: 390px;
+    // height: 390px;
     overflow: hidden;
+      box-sizing: unset !important;
 }
 
 .margin-10{
@@ -108,8 +109,8 @@ bh-contact_us{
     //  border: solid 1px #124e5285;
 
     // padding-bottom: 10px;
-     height: 390px;
-        //  box-sizing: unset !important;
+    //  height: 390px;
+         box-sizing: unset !important;
       border-bottom: 1.5px solid #124e52 !important;
      border-right: 1.5px solid #124e52 !important;
     // border-radius: 10px !important;
@@ -269,6 +270,10 @@ width: 25%;
 
 .width-40 {
     width: 40%;
+}
+
+.width-43 {
+    width: 43%;
 }
 
 .width-45 {
@@ -953,17 +958,8 @@ a {
     color: $light-blue;
 }
 
-// .profile-container {
-//   padding: 5px;
-// //   max-width: 800px;
-//   margin: auto;
-  
-//     max-height: 500px;
-//     overflow-y: scroll;
-//     scrollbar-width: none;
-
      
-// }
+
 .profile-container-alt {
   padding: 10px;
   max-width: 400px; 
@@ -1108,7 +1104,7 @@ a {
 /* Icon Styles */
 .icon-hourglass::before {
     content: "\23F3"; /* Unicode for hourglass */
-    font-size: 30px; /* Adjust icon size */
+    font-size: 30px; 
     margin-right: 5px;
 }
 

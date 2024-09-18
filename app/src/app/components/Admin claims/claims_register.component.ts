@@ -597,6 +597,9 @@ export class claims_registerComponent implements AfterViewInit {
         { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
         { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
         { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
+        { value: page.deparray[0], viewValue: page.deparray[0]?.idNumber },
+        { value: page.deparray[1], viewValue: page.deparray[1]?.idNumber },
+        { value: page.deparray[2], viewValue: page.deparray[2]?.idNumber },
       ];
 
       page.beIds = [

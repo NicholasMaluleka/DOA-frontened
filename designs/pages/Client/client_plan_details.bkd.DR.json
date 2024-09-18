@@ -191,13 +191,13 @@
                         },
                         {
                             "_key": "(opened)",
-                            "_value": "",
+                            "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "(closed)",
-                            "_value": "true",
+                            "_value": "false",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -209,7 +209,7 @@
                         },
                         {
                             "_key": "[expanded]",
-                            "_value": "",
+                            "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

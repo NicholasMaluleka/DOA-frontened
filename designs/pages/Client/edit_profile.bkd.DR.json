@@ -9071,7 +9071,7 @@
                             },
                             {
                                 "_key": "routerLink",
-                                "_value": "/dashboard/client_profile",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             }

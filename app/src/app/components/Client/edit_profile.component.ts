@@ -64,13 +64,13 @@ export class edit_profileComponent {
     }
   }
 
-  update(...others) {
+  update(form: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = {};
+      bh.input = { form };
       bh.local = {};
       bh = this.sd_YLr6e7qTr0v7cYmV(bh);
       //appendnew_next_update
@@ -217,6 +217,7 @@ export class edit_profileComponent {
       this.page.gender4 = undefined;
       this.page.gender5 = undefined;
       this.page.showdependenciesForm = undefined;
+      this.page.policyNumber = undefined;
       bh = this.sd_RnQSoLGbXPuS7ZSE(bh);
       //appendnew_next_sd_UHAloZdWiiqtiSEV
       return bh;
@@ -242,11 +243,13 @@ export class edit_profileComponent {
       console.log('userData==>', page.userData);
       console.log('depe', page.userData.beneficaries);
 
+      page.policyNumber = page.userData.policyNumber;
+
       page.ben1 = page.userData.beneficaries[0];
       page.ben2 = page.userData.beneficaries[1];
 
       //check if the form has data so that we can display the button
-      if (page.ben2.firstName != '') {
+      if (page.ben2?.firstName != '') {
         page.showbeneficaries1Form = true;
         page.hideIcon = false;
       } else {
@@ -269,9 +272,9 @@ export class edit_profileComponent {
       ///dependencies
 
       if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName !== ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName !== '' &&
+        page.depe3?.firstName !== ''
       ) {
         // Case 1: All forms are not empty
         page.showdependenciesForm = true;
@@ -279,9 +282,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = true;
         page.hideIcon2 = false; // Hide the add icon
       } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName !== '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName !== '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 2: Form 1 and Form 2 are filled, Form 3 is empty
         page.showdependenciesForm = true;
@@ -289,9 +292,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
       } else if (
-        page.depe1.firstName !== '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName !== '' &&
+        page.depe2?.firstName === '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 3: Form 1 is filled, Forms 2 and 3 are empty
         page.showdependenciesForm = true;
@@ -299,9 +302,9 @@ export class edit_profileComponent {
         page.showdependencies2Form = false;
         page.hideIcon2 = true; // Show the add icon
       } else if (
-        page.depe1.firstName === '' &&
-        page.depe2.firstName === '' &&
-        page.depe3.firstName === ''
+        page.depe1?.firstName === '' &&
+        page.depe2?.firstName === '' &&
+        page.depe3?.firstName === ''
       ) {
         // Case 4: All forms are empty
         page.showdependenciesForm = true; // Show the first empty form (Form 1)
@@ -311,7 +314,7 @@ export class edit_profileComponent {
       }
 
       page.formdata = new FormGroup({
-        firstName: new FormControl(page.userData?.firstName || '', [
+        firstName: new FormControl(page.userData?.firstName, [
           Validators.required,
         ]),
         lastName: new FormControl(page.userData?.lastName || '', [
@@ -342,6 +345,8 @@ export class edit_profileComponent {
           Validators.required,
         ]),
       });
+
+      console.log('FORM :', page.formdata);
 
       page.beneficariesForm = new FormGroup({
         firstName: new FormControl(page.ben1?.firstName || '', [
@@ -374,24 +379,24 @@ export class edit_profileComponent {
         firstName: new FormControl(page.ben2?.firstName || '', [
           Validators.required,
         ]),
-        lastName: new FormControl(page.ben2.lastName, [Validators.required]),
-        idNumber: new FormControl(page.ben2.idNumber, [
+        lastName: new FormControl(page.ben2?.lastName, [Validators.required]),
+        idNumber: new FormControl(page.ben2?.idNumber, [
           Validators.required,
           Validators.minLength(13),
           Validators.maxLength(13),
         ]),
-        gender: new FormControl(page.ben2.gender || '', [Validators.required]),
-        email: new FormControl(page.ben2.email, [
+        gender: new FormControl(page.ben2?.gender || '', [Validators.required]),
+        email: new FormControl(page.ben2?.email, [
           Validators.required,
           Validators.email,
         ]),
-        cellphone: new FormControl(page.ben2.cellphone, [
+        cellphone: new FormControl(page.ben2?.cellphone, [
           Validators.required,
           Validators.minLength(10),
           Validators.maxLength(10),
           Validators.pattern(/^0(6|7|8){1}[0-9]{1}[0-9]{7}$/),
         ]),
-        relationship: new FormControl(page.ben2.relationship, [
+        relationship: new FormControl(page.ben2?.relationship, [
           Validators.required,
         ]),
       });
@@ -575,7 +580,7 @@ export class edit_profileComponent {
         body: bh.structuredData,
       };
       this.page.results = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_S3hSIuErjFzguoK6(bh);
+      bh = this.sd_GjKcbwDGAHK9WeuX(bh);
       //appendnew_next_sd_pcFebE53orviGldn
       return bh;
     } catch (e) {
@@ -583,27 +588,21 @@ export class edit_profileComponent {
     }
   }
 
-  sd_S3hSIuErjFzguoK6(bh) {
+  sd_GjKcbwDGAHK9WeuX(bh) {
     try {
       const page = this.page;
-      console.log('results', page.results);
+      bh.structuredData.role = 'client';
 
-      bh = this.sd_vGtjziZA586ysjXp(bh);
-      //appendnew_next_sd_S3hSIuErjFzguoK6
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_S3hSIuErjFzguoK6');
-    }
-  }
+      bh.structuredData.policyNumber = page.policyNumber;
 
-  sd_vGtjziZA586ysjXp(bh) {
-    try {
-      sessionStorage.setItem('userData', JSON.stringify(bh.structuredData));
+      if (page.results.acknowledged == true) {
+        sessionStorage.setItem('user', JSON.stringify(bh.structuredData));
+      }
       bh = this.sd_G19PY66JzVKcGxtc(bh);
-      //appendnew_next_sd_vGtjziZA586ysjXp
+      //appendnew_next_sd_GjKcbwDGAHK9WeuX
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_vGtjziZA586ysjXp');
+      return this.errorHandler(bh, e, 'sd_GjKcbwDGAHK9WeuX');
     }
   }
 
@@ -613,7 +612,9 @@ export class edit_profileComponent {
         this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_nxWSj9bRtG2lyhli(bh);
       //appendnew_next_sd_G19PY66JzVKcGxtc
       return bh;
@@ -1104,23 +1105,7 @@ export class edit_profileComponent {
       //appendnew_next_sd_iCtDdM4RjHBE7o2O
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_j8Q8TFFKldHEDP5b');
-    }
-  }
-
-  async sd_tcxBJckGGYZqxWmJ(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/client_profile');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-      //appendnew_next_sd_tcxBJckGGYZqxWmJ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_tcxBJckGGYZqxWmJ');
+      return this.errorHandler(bh, e, 'sd_iCtDdM4RjHBE7o2O');
     }
   }
 

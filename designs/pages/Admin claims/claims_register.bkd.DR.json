@@ -5726,6 +5726,78 @@
                                             "_attrDef": "p"
                                         },
                                         {
+                                            "_key": "type",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "routerLink",
+                                            "_value": "",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "*ngIf",
+                                            "_value": "!page.selectedClaim",
+                                            "_type": "kv",
+                                            "_attrDef": "c"
+                                        }
+                                    ]
+                                },
+                                "7b9c24fb-4681-db1a-31ed-036beb709c96": {
+                                    "paletteKey": "NG-RaisedButton",
+                                    "parentEditorKey": "e33fc522-f920-8fb2-6c59-f13ea91e5a98",
+                                    "commentid": null,
+                                    "designerReference": [
+                                        {
+                                            "_key": "style",
+                                            "_value": "margin-top: 25px;     margin-bottom: 25px;    width: 124px;",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "class",
+                                            "_value": "",
+                                            "_type": "dav",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "buttonname",
+                                            "_value": "Update Claim",
+                                            "_type": "a",
+                                            "_attrDef": "p",
+                                            "_useAsLabel": true
+                                        },
+                                        {
+                                            "_key": "color",
+                                            "_value": "accent",
+                                            "_type": "kv",
+                                            "_attrDef": "p"
+                                        },
+                                        {
+                                            "_key": "(click)",
+                                            "_value": "updateClaim(page.policyClaimsForm.value)",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "objValue": {
+                                                "nodeID": "sd_d6vseXRHCyuRWjnv",
+                                                "functionName": "updateClaim",
+                                                "activeTree": "pages",
+                                                "z": "sd_N4CyuOQSKrbNKzFe",
+                                                "input": [
+                                                    "page.policyClaimsForm.value"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "_key": "[disabled]",
+                                            "_value": "page.disabled",
+                                            "_type": "kv",
+                                            "_attrDef": "p",
+                                            "_customAttributeFlag": "customInput"
+                                        },
+                                        {
                                             "_key": "[disableRipple]",
                                             "_value": "",
                                             "_type": "kv",

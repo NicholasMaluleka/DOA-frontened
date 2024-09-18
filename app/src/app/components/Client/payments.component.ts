@@ -374,7 +374,7 @@ export class paymentsComponent {
                 alignment: AlignmentType.CENTER,
               }),
               new Paragraph({
-                text: 'For any queries, please contact us at support@example.com.',
+                text: 'For any queries, please contact the D.O.A parlour on the contact form.',
                 alignment: AlignmentType.CENTER,
               }),
             ],

@@ -1,5 +1,5 @@
 {
-    "ddc78946-2565-aa56-b9b1-fbfa261b34d0": {
+    "7115a08a-58b8-04e7-b780-cd4eb7ab12aa": {
         "paletteKey": "FlexLayoutCol",
         "commentid": null,
         "designerReference": [
@@ -18,7 +18,7 @@
             },
             {
                 "_key": "class",
-                "_value": [],
+                "_value": "",
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -59,9 +59,9 @@
                 "_attrDef": "p"
             }
         ],
-        "f599977e-401d-9a86-7e07-386bed647119": {
+        "ab609319-d194-11d2-8a51-20ad0a5758c3": {
             "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
+            "parentEditorKey": "7115a08a-58b8-04e7-b780-cd4eb7ab12aa",
             "isCommented": "true",
             "commentid": "1724932980512",
             "designerReference": [
@@ -131,9 +131,9 @@
                     "_attrDef": "c"
                 }
             ],
-            "a1105ffb-856e-26d0-faab-681d50311baf": {
+            "3bd7168e-aee8-068d-002f-ecbdc0b027c1": {
                 "paletteKey": "NEUTRINOS_VIEW_loader",
-                "parentEditorKey": "f599977e-401d-9a86-7e07-386bed647119",
+                "parentEditorKey": "ab609319-d194-11d2-8a51-20ad0a5758c3",
                 "isCommented": "true",
                 "commentid": "1724932980512",
                 "designerReference": [
@@ -159,9 +159,9 @@
                 ]
             }
         },
-        "a7588d98-c44c-38a1-cf63-258b55e0c911": {
+        "629060d3-f2bb-2980-97ae-bac8cc0d1f05": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
+            "parentEditorKey": "7115a08a-58b8-04e7-b780-cd4eb7ab12aa",
             "commentid": null,
             "designerReference": [
                 {
@@ -220,9 +220,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "c98d40fb-0c23-798d-6d9f-a71f113fd5f8": {
+            "00acaf43-d2d9-32e5-3e19-6b5542c75b7a": {
                 "paletteKey": "FlexLayoutCol",
-                "parentEditorKey": "a7588d98-c44c-38a1-cf63-258b55e0c911",
+                "parentEditorKey": "629060d3-f2bb-2980-97ae-bac8cc0d1f05",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -283,9 +283,9 @@
                         "_attrDef": "p"
                     }
                 ],
-                "5b795283-3146-0f8f-b8a8-7d9a1660bc9a": {
+                "9b20699c-ef05-362d-3864-8ee037583378": {
                     "paletteKey": "FlexLayoutCol",
-                    "parentEditorKey": "c98d40fb-0c23-798d-6d9f-a71f113fd5f8",
+                    "parentEditorKey": "00acaf43-d2d9-32e5-3e19-6b5542c75b7a",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -348,9 +348,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "981c1d22-a8e5-0a35-a973-cf16c1fc9880": {
+                    "53712f19-39e1-7111-b86a-d5b1cb7aa4fb": {
                         "paletteKey": "NG-Input",
-                        "parentEditorKey": "5b795283-3146-0f8f-b8a8-7d9a1660bc9a",
+                        "parentEditorKey": "9b20699c-ef05-362d-3864-8ee037583378",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -535,9 +535,9 @@
                     }
                 }
             },
-            "118782a6-52d4-591c-adb6-3a8d127b9ea8": {
+            "81b6b946-d118-0ba2-c868-d592095a23e7": {
                 "paletteKey": "FlexLayoutCol",
-                "parentEditorKey": "a7588d98-c44c-38a1-cf63-258b55e0c911",
+                "parentEditorKey": "629060d3-f2bb-2980-97ae-bac8cc0d1f05",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -594,11 +594,17 @@
                         "_value": "true",
                         "_type": "kv",
                         "_attrDef": "p"
+                    },
+                    {
+                        "_key": "*ngIf",
+                        "_value": "page.user.role == 'admin'",
+                        "_type": "kv",
+                        "_attrDef": "c"
                     }
                 ],
-                "68d9b006-e129-dc65-6b40-dfabb37aaa22": {
+                "191cf58e-f473-4749-171d-01b8baacd35f": {
                     "paletteKey": "NG-RaisedButton",
-                    "parentEditorKey": "118782a6-52d4-591c-adb6-3a8d127b9ea8",
+                    "parentEditorKey": "81b6b946-d118-0ba2-c868-d592095a23e7",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -617,7 +623,7 @@
                         },
                         {
                             "_key": "buttonname",
-                            "_value": "Get Statement",
+                            "_value": "Log payment",
                             "_type": "a",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -630,14 +636,14 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "download()",
+                            "_value": "openPaymentForm()",
                             "_type": "kv",
                             "_attrDef": "p",
                             "objValue": {
-                                "nodeID": "sd_x3Im7h3fE6bmLkSr",
-                                "functionName": "download",
+                                "nodeID": "sd_42iesCMKtG2KiN8V",
+                                "functionName": "openPaymentForm",
                                 "activeTree": "pages",
-                                "z": "sd_YIDbIi87WZ0EHp1U",
+                                "z": "sd_nsEcp9j2OQxe1WKG",
                                 "input": []
                             }
                         },
@@ -669,9 +675,9 @@
                 }
             }
         },
-        "fbc4effd-5890-b097-303e-cad7431f1b52": {
+        "0159eb40-a9d8-1fc2-4c87-492378517d63": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
+            "parentEditorKey": "7115a08a-58b8-04e7-b780-cd4eb7ab12aa",
             "commentid": null,
             "designerReference": [
                 {
@@ -732,9 +738,9 @@
                     "_attrDef": "p"
                 }
             ],
-            "32993852-acc3-c289-d7dc-b6479fd9a59a": {
+            "e22c89a5-8303-cb49-3abc-4ff56aa740bf": {
                 "paletteKey": "Html5",
-                "parentEditorKey": "fbc4effd-5890-b097-303e-cad7431f1b52",
+                "parentEditorKey": "0159eb40-a9d8-1fc2-4c87-492378517d63",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -919,9 +925,9 @@
                         "_visibility": false
                     }
                 ],
-                "6afd4162-f536-5edc-b993-5a433c2f7401": {
+                "82827c30-e96e-41a1-e76e-a9df4be2582b": {
                     "paletteKey": "html-editor",
-                    "parentEditorKey": "32993852-acc3-c289-d7dc-b6479fd9a59a",
+                    "parentEditorKey": "e22c89a5-8303-cb49-3abc-4ff56aa740bf",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -939,7 +945,7 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "<h3 class=\"blue-color\" *ngIf =\"page.table.length > 0\"> Your payment history</h3>\r\n<h3 class=\"blue-color\" *ngIf =\"page.table.length < 1\">You have <span class=\"teal-color\">0</span> payments.</h3>",
+                            "_value": "<h3 class=\"blue-color\" *ngIf =\"page.table.length > 0\"> Payment history for {{page.userData.firstName}} {{page.userData.lastName}}.</h3>\r\n<h3 class=\"blue-color\" *ngIf =\"page.table.length < 1\">{{page.userData.firstName}} {{page.userData.lastName}} has <span class=\"teal-color\">0</span> payments.</h3>",
                             "_type": "a",
                             "_attrDef": "p"
                         }
@@ -947,9 +953,9 @@
                 }
             }
         },
-        "a5f31a86-8e6b-2b40-37a0-389a485f5fa1": {
+        "272a8ef5-3ac2-d0dc-cb31-450d168b92be": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
+            "parentEditorKey": "7115a08a-58b8-04e7-b780-cd4eb7ab12aa",
             "commentid": null,
             "designerReference": [
                 {
@@ -1016,9 +1022,9 @@
                     "_attrDef": "c"
                 }
             ],
-            "96eae4e7-6765-dd6e-b54f-e7dae762263e": {
+            "b307b40f-247e-1dca-0c1a-86f440238556": {
                 "paletteKey": "NG-image",
-                "parentEditorKey": "a5f31a86-8e6b-2b40-37a0-389a485f5fa1",
+                "parentEditorKey": "272a8ef5-3ac2-d0dc-cb31-450d168b92be",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1085,9 +1091,9 @@
                 ]
             }
         },
-        "03d89488-c521-dbf4-e82c-2c1ce47ed133": {
+        "886303e2-61ad-b170-e358-1443fdc6823d": {
             "paletteKey": "FlexLayoutRow",
-            "parentEditorKey": "ddc78946-2565-aa56-b9b1-fbfa261b34d0",
+            "parentEditorKey": "7115a08a-58b8-04e7-b780-cd4eb7ab12aa",
             "commentid": null,
             "designerReference": [
                 {
@@ -1155,9 +1161,9 @@
                     "_attrDef": "c"
                 }
             ],
-            "35cb87ca-f313-ee2a-f3af-0ebd03b46874": {
+            "e0f0d1d9-387f-51f6-c9d4-bc707ad990c8": {
                 "paletteKey": "ng-table",
-                "parentEditorKey": "03d89488-c521-dbf4-e82c-2c1ce47ed133",
+                "parentEditorKey": "886303e2-61ad-b170-e358-1443fdc6823d",
                 "isAdvancedComponent": true,
                 "commentid": null,
                 "designerReference": [
@@ -1189,10 +1195,19 @@
                     },
                     {
                         "_key": "(rowclick)",
-                        "_value": "",
+                        "_value": "editInfo(row)",
                         "_type": "a",
                         "_attrDef": "p",
-                        "_customAttributeFlag": "flowpicker"
+                        "_customAttributeFlag": "flowpicker",
+                        "objValue": {
+                            "nodeID": "sd_jLre9GhKhZrqatD3",
+                            "functionName": "editInfo",
+                            "activeTree": "pages",
+                            "z": "sd_nsEcp9j2OQxe1WKG",
+                            "input": [
+                                "row"
+                            ]
+                        }
                     },
                     {
                         "_key": "header",
@@ -1202,9 +1217,9 @@
                         "_visibility": true
                     }
                 ],
-                "d8920439-4048-a9db-5465-a7bbed2e6958": {
+                "68ce9ad4-e3a5-12b2-205d-7d5fb8f8d452": {
                     "paletteKey": "ng-table-column",
-                    "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
+                    "parentEditorKey": "e0f0d1d9-387f-51f6-c9d4-bc707ad990c8",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -1248,9 +1263,9 @@
                         }
                     ]
                 },
-                "e2c40cf5-e28e-4f75-60f2-fde6140b8c01": {
+                "93bec531-febf-5a04-33d3-66e043f9c063": {
                     "paletteKey": "ng-droppable-table-column",
-                    "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
+                    "parentEditorKey": "e0f0d1d9-387f-51f6-c9d4-bc707ad990c8",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -1307,9 +1322,9 @@
                             }
                         }
                     ],
-                    "f55cd673-eff9-cec4-4515-8e4480209866": {
+                    "0e95f614-89a8-8e7e-2449-3bc35ea9d0cd": {
                         "paletteKey": "Html5",
-                        "parentEditorKey": "e2c40cf5-e28e-4f75-60f2-fde6140b8c01",
+                        "parentEditorKey": "93bec531-febf-5a04-33d3-66e043f9c063",
                         "isAdvancedComponent": true,
                         "commentid": null,
                         "designerReference": [
@@ -1494,9 +1509,9 @@
                                 "_visibility": false
                             }
                         ],
-                        "1b502739-5332-2de4-7c61-30a2da393108": {
+                        "6a08f13e-b056-114d-1f8f-e26807891676": {
                             "paletteKey": "html-editor",
-                            "parentEditorKey": "f55cd673-eff9-cec4-4515-8e4480209866",
+                            "parentEditorKey": "0e95f614-89a8-8e7e-2449-3bc35ea9d0cd",
                             "isAdvancedChildComponent": true,
                             "commentid": null,
                             "designerReference": [
@@ -1522,9 +1537,9 @@
                         }
                     }
                 },
-                "ccd02aa6-850b-70a4-e7b4-8277b300d4d0": {
+                "d5990b5e-8b16-629a-eaea-f248791b6429": {
                     "paletteKey": "ng-table-column",
-                    "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
+                    "parentEditorKey": "e0f0d1d9-387f-51f6-c9d4-bc707ad990c8",
                     "isAdvancedChildComponent": true,
                     "commentid": null,
                     "designerReference": [
@@ -1568,9 +1583,9 @@
                         }
                     ]
                 },
-                "5be14437-eabc-682b-59b6-a2a3d64a05d8": {
+                "32980c97-847e-836a-4a35-54eb43bd300b": {
                     "paletteKey": "ng-table-paginator",
-                    "parentEditorKey": "35cb87ca-f313-ee2a-f3af-0ebd03b46874",
+                    "parentEditorKey": "e0f0d1d9-387f-51f6-c9d4-bc707ad990c8",
                     "isAdvancedComponent": true,
                     "advancedSiblingType": "after",
                     "isCommented": "true",

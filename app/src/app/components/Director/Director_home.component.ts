@@ -6,6 +6,8 @@
 import { AfterViewInit, Component, Injector, ViewChild } from '@angular/core'; //_splitter_
 import { FormBuilder } from '@angular/forms'; //_splitter_
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; //_splitter_
+import { MatSort } from '@angular/material/sort'; //_splitter_
+import { MatTableDataSource } from '@angular/material/table'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -23,6 +25,8 @@ import { variables } from 'app/sd-services/variables'; //_splitter_
 export class Director_homeComponent implements AfterViewInit {
   @ViewChild(MatPaginator)
   public MatPaginator: any = null;
+  @ViewChild(MatSort)
+  public MatSort: any = null;
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -50,18 +54,6 @@ export class Director_homeComponent implements AfterViewInit {
       .constructFlowObject(this);
 
     //append_listeners
-  }
-
-  ngAfterViewInit() {
-    try {
-      var bh: any = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
-      //appendnew_next_ngAfterViewInit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_EOOl0suzk2zorUn4');
-    }
   }
 
   sd_DtSf30GmPf1zASFg(bh) {
@@ -163,31 +155,19 @@ export class Director_homeComponent implements AfterViewInit {
       return this.errorHandler(bh, e, 'sd_iACRgndCNMEHCJxu');
     }
   }
+  ngAfterViewInit() {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh = this.sd_xKCCTWKzvgDN0rx7_1(bh);
+      //appendnew_next_ngAfterViewInit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EOOl0suzk2zorUn4');
+    }
+  }
+
   //appendnew_flow_Director_homeComponent_start
-
-  sd_xKCCTWKzvgDN0rx7_1(bh) {
-    try {
-      bh.pageViews = Object.assign(bh.pageViews || {}, {
-        MatPaginator: this.MatPaginator,
-      });
-      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
-      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_C9omM9ov77Yt9zDx');
-    }
-  }
-
-  sd_2VNGqvcKee34lvOz_1(bh) {
-    try {
-      const page = this.page;
-      this.page.tableData.paginator = this.MatPaginator;
-      //appendnew_next_sd_2VNGqvcKee34lvOz_1
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_JUTEttAqqLDvbfqP');
-    }
-  }
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
     try {
@@ -290,8 +270,6 @@ export class Director_homeComponent implements AfterViewInit {
 
       page.table = bh.tableDataSource;
       page.backupapplicationsDatasource = page.table;
-      page.table.paginator = page.paginator;
-      console.log('bh', page.table);
 
       page.currentDate = new Date();
 
@@ -325,6 +303,9 @@ export class Director_homeComponent implements AfterViewInit {
       console.log('Outside Trial Accounts:', page.outsideTrialAccounts);
       console.log('All Accounts:', page.allAccounts);
 
+      // page.table = new MatTableDataSource(page.table)
+
+      bh.local.dataSource = new MatTableDataSource(page.table);
       bh = this.sd_CNo2sWBcD8FWpCtC(bh);
       //appendnew_next_sd_2lLCrjneGLoT2O1S
       return bh;
@@ -335,8 +316,6 @@ export class Director_homeComponent implements AfterViewInit {
 
   sd_CNo2sWBcD8FWpCtC(bh) {
     try {
-      this.page.table.paginator = bh.tableDataSource.paginator;
-      this.page.table.sort = bh.tableDataSource.sort;
       this.page.backupapplicationsDatasource = undefined;
       //appendnew_next_sd_CNo2sWBcD8FWpCtC
       return bh;
@@ -443,12 +422,10 @@ export class Director_homeComponent implements AfterViewInit {
   async sd_KjgezfRoGPixtYr3(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/dashboard/view-payments');
+        this.sdService.getPathAndQParamsObj('/dashboard/payments_d');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_KjgezfRoGPixtYr3
       return bh;
     } catch (e) {
@@ -479,6 +456,41 @@ export class Director_homeComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_qI2FoGMy5nrfZfbX');
+    }
+  }
+
+  sd_xKCCTWKzvgDN0rx7_1(bh) {
+    try {
+      bh.pageViews = Object.assign(bh.pageViews || {}, {
+        MatPaginator: this.MatPaginator,
+        MatSort: this.MatSort,
+      });
+      bh = this.sd_2VNGqvcKee34lvOz_1(bh);
+      //appendnew_next_sd_xKCCTWKzvgDN0rx7_1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_C9omM9ov77Yt9zDx');
+    }
+  }
+
+  sd_2VNGqvcKee34lvOz_1(bh) {
+    try {
+      const page = this.page;
+      setTimeout(() => {
+        console.log('TB DATA: ', page.table);
+
+        this.page.table.sort = bh.pageViews.MatSort;
+
+        this.page.table.paginator = bh.pageViews.MatPaginator;
+
+        console.log('TABLE DATA: ', page.table);
+      }, 500);
+
+      // this.page.tableData.paginator = this.MatPaginator;
+      //appendnew_next_sd_2VNGqvcKee34lvOz_1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JUTEttAqqLDvbfqP');
     }
   }
 

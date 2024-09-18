@@ -28,12 +28,12 @@
 <div fxLayout="column wrap" style="height: 100vh" fxLayoutAlign="center stretch" [fxShow]="true">
   <div fxLayout="row wrap" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
     <div fxLayout="column wrap" style="height: 100%" class="kg-padding-10px kg-border-box kg-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-      <div fxLayout="row wrap" class="margin-left-1em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" class="margin-left-1em" fxLayoutAlign="start center" [fxShow]="true">
         <div>
           <h2 class="blue-color no-margin"> Registered clients</h2>
         </div>
       </div>
-      <div fxLayout="column wrap" class="kg-half-width" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="column wrap" style="padding-right:11px" fxLayoutAlign="center end" [fxShow]="true">
         <div fxLayout="column wrap" class="margin-top-10px margin-left-1em search" fxLayoutAlign="center stretch" [fxShow]="true">
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
             <input matInput type="Search" placeholder="Search" [required]="false" (keydown)="onFilter($event)">

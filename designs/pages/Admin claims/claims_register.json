@@ -4593,6 +4593,7 @@
         "serviceImportPath": "./",
         "startName": "updateNotification",
         "inputParams": [],
+        "accept_bh": false,
         "accept_csd": false,
         "functionName": "sd_3n7RZOqIyihMZ63W",
         "category": "General",

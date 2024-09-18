@@ -179,6 +179,12 @@ export class sideNavComponent {
         { label: 'Claims', icon: 'description', route: '/dashboard/claims' },
         { label: 'Add a client', icon: 'edit', route: '/dashboard/register' },
         { label: 'Schedules', icon: 'today', route: '/dashboard/schedules' },
+        {
+          label: 'Payments',
+          icon: 'payments',
+          route: '/dashboard/pay_management',
+        },
+
         // {label: "Reports", icon: "folder_open"},
         // {label: "Audit Logs", icon: "trending_up"}
       ];
