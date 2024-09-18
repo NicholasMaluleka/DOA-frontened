@@ -28,7 +28,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_BZk5VYcbok7vTCa5",
@@ -125,7 +126,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_p4UqDj3fR0sGlSfo",
@@ -246,7 +248,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_aSuB2dcKyxmaLU6f",
@@ -355,7 +358,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_Fde7P8ntbklt8Rlj",
@@ -676,7 +680,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_q2NLm7f3ES5CuB3k",
@@ -760,7 +765,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_tmQQTWA5auKGP18O",
@@ -950,7 +956,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "dashboardComponent"
+        "serviceName": "dashboardComponent",
+        "generated": false
     },
     {
         "id": "sd_U7JmgLxfZX6fz3XN",
@@ -1018,9 +1025,9 @@
             ]
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "dashboardComponent",
-        "generated": true
+        "serviceName": "dashboardComponent"
     },
     {
         "id": "sd_FrMw5MzCSmIAFIWA",

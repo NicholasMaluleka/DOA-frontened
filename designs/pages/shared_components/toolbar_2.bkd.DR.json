@@ -3170,7 +3170,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "{{message._notification}}. <span class=\"pointer sim-link\" (click)=\"viewClaim()\">{{message.claimNumber}}</span>.",
+                                    "_value": "{{message._notification}}. <span class=\"pointer sim-link\" (click)=\"viewClaim(message)\">{{message.claimNumber}}</span>.",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }

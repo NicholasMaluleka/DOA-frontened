@@ -3578,7 +3578,7 @@
                                                     },
                                                     {
                                                         "_key": "html",
-                                                        "_value": "<input type=\"file\" id=\"upload\" required formControlName = \"file2\" accept=\".png\" hidden>\r\n<label for=\"upload\" class=\"kg-box kg-border-box kg-padding-10px\">Upload ID</label>\r\n",
+                                                        "_value": "<input type=\"file\" id=\"upload\" required formControlName = \"file2\" accept=\"application/pdf\" hidden>\r\n<label for=\"upload\" class=\"kg-box kg-border-box kg-padding-10px\">Upload ID</label>\r\n",
                                                         "_type": "a",
                                                         "_attrDef": "p"
                                                     }
