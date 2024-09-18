@@ -54,7 +54,7 @@ export class pay_managementComponent implements AfterViewInit {
 
   sd_H6aJaOAoVp4vq6dU(bh) {
     try {
-      bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
+      bh = this.sd_r47gA5v95dkNeP9x(bh);
       //appendnew_next_sd_H6aJaOAoVp4vq6dU
       return bh;
     } catch (e) {
@@ -148,21 +148,31 @@ export class pay_managementComponent implements AfterViewInit {
     }
   }
 
-  getRowColor(row: any = undefined, ...others) {
+  selectFilter(event: any = undefined, ...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = { row };
+      bh.input = { event };
       bh.local = {};
-      bh = this.sd_1xg11F8aWQBYU9Ef(bh);
-      //appendnew_next_getRowColor
+      bh = this.sd_kmtWad1qF80YnSNE(bh);
+      //appendnew_next_selectFilter
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_huDbdJ9Pi7C7l1SX');
+      return this.errorHandler(bh, e, 'sd_2k8PGHewnqrLyQOy');
     }
   }
   //appendnew_flow_pay_managementComponent_start
+
+  sd_r47gA5v95dkNeP9x(bh) {
+    try {
+      bh = this.sd_E9QbOlnVduPNV5MO_1(bh);
+      //appendnew_next_sd_r47gA5v95dkNeP9x
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_r47gA5v95dkNeP9x');
+    }
+  }
 
   sd_E9QbOlnVduPNV5MO_1(bh) {
     try {
@@ -171,6 +181,7 @@ export class pay_managementComponent implements AfterViewInit {
       this.page.searchValue = '';
       this.page.backupapplicationsDatasource = undefined;
       this.page.currentPageIndex = undefined;
+      this.page.currentMonth = undefined;
       bh = this.sd_nIWaz3kqf6y3N9bn(bh);
       //appendnew_next_sd_E9QbOlnVduPNV5MO_1
       return bh;
@@ -225,6 +236,7 @@ export class pay_managementComponent implements AfterViewInit {
     try {
       const page = this.page;
       bh.url = page.ssdURL + 'get-monthly-payments';
+
       bh = this.sd_tZj98HRMrxvqzJnn(bh);
       //appendnew_next_sd_aLNDbQf84ZZgYS7k
       return bh;
@@ -245,7 +257,6 @@ export class pay_managementComponent implements AfterViewInit {
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_mSUodGizS2HbDJrx(bh);
-      bh = this.sd_N1aALxkUGzCMyqIq(bh);
       //appendnew_next_sd_tZj98HRMrxvqzJnn
       return bh;
     } catch (e) {
@@ -258,20 +269,9 @@ export class pay_managementComponent implements AfterViewInit {
       const page = this.page;
       page.table = page.result;
 
-      // page.table = bh.tableDataSource
-      // page.table.policyActive = page.policyActiveStatus
-
-      // page.table.forEach ( (item) => {
-      //     if(item.policyActive === true){
-      //         item.policyActive = "Active"
-      //     } else {
-      //     item.policyActive = "Deactivated"
-      // }
-      // })
-
       page.backupapplicationsDatasource = page.table;
       page.table.paginator = page.paginator;
-      console.log('page.table ', page.table);
+      // console.log("page.table " ,page.table )
 
       bh = this.sd_cSgr6Vttfp6vdarU(bh);
       //appendnew_next_sd_mSUodGizS2HbDJrx
@@ -287,6 +287,7 @@ export class pay_managementComponent implements AfterViewInit {
       this.page.table.sort = bh.tableDataSource.sort;
       this.page.backupapplicationsDatasource = undefined;
       this.page.user = this.page.user;
+      bh = this.sd_N1aALxkUGzCMyqIq(bh);
       //appendnew_next_sd_cSgr6Vttfp6vdarU
       return bh;
     } catch (e) {
@@ -297,7 +298,9 @@ export class pay_managementComponent implements AfterViewInit {
   sd_N1aALxkUGzCMyqIq(bh) {
     try {
       const page = this.page;
-      console.log('payments ==>', page.result);
+      page.monthFilter = {
+        month: page.monthName,
+      };
       //appendnew_next_sd_N1aALxkUGzCMyqIq
       return bh;
     } catch (e) {
@@ -449,18 +452,42 @@ export class pay_managementComponent implements AfterViewInit {
     }
   }
 
-  sd_1xg11F8aWQBYU9Ef(bh) {
+  sd_kmtWad1qF80YnSNE(bh) {
     try {
       const page = this.page;
-      if (bh.input.row.packageType == 'Package 1') {
-        return 'lightblue'; // Change to the color you want for this condition
+      if (!page.backupapplicationsDatasource) {
+        // Create a backup of the original data
+        page.backupapplicationsDatasource = [...page.table];
       }
-      return ''; // Default color (no color change)
 
-      //appendnew_next_sd_1xg11F8aWQBYU9Ef
+      // Ensure page.monthFilter is a string for comparison
+      const monthFilter = page.monthFilter.toString().toLowerCase();
+
+      // Filter the backup data source based on the date
+      const filteredResults = page.backupapplicationsDatasource.filter(
+        (row) => {
+          if (row.date) {
+            const rowDate = new Date(row.date);
+
+            // Format the date to only include month and year (or just the month)
+            const rowMonth = rowDate
+              .toLocaleString('default', { month: 'long' })
+              .toLowerCase(); // e.g., 'january'
+
+            // Check if rowMonth includes the monthFilter
+            return rowMonth.includes(monthFilter);
+          }
+          return false;
+        }
+      );
+
+      // Update the table with the filtered results
+      page.table = filteredResults;
+
+      //appendnew_next_sd_kmtWad1qF80YnSNE
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_1xg11F8aWQBYU9Ef');
+      return this.errorHandler(bh, e, 'sd_kmtWad1qF80YnSNE');
     }
   }
 

@@ -19,11 +19,11 @@
         "name": "",
         "functionName": "sd_H6aJaOAoVp4vq6dU",
         "category": "Lifecycle Events",
-        "x": 105,
+        "x": 25,
         "y": 80,
         "wires": [
             [
-                "sd_Arzy8uB4k1GWBhCI"
+                "sd_r47gA5v95dkNeP9x"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -68,7 +68,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.url = page.ssdURL + \"get-monthly-payments\"",
+        "script": "bh.url = page.ssdURL + \"get-monthly-payments\";\n\n\n",
         "functionName": "sd_aLNDbQf84ZZgYS7k",
         "category": "Function",
         "x": 665,
@@ -130,8 +130,7 @@
         "y": 80,
         "wires": [
             [
-                "sd_mSUodGizS2HbDJrx",
-                "sd_N1aALxkUGzCMyqIq"
+                "sd_mSUodGizS2HbDJrx"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -146,7 +145,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.table = page.result\n\n\n// page.table = bh.tableDataSource\n// page.table.policyActive = page.policyActiveStatus \n\n// page.table.forEach ( (item) => {\n//     if(item.policyActive === true){\n//         item.policyActive = \"Active\"\n//     } else {\n//     item.policyActive = \"Deactivated\"\n// }\n// })\n\n\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\nconsole.log(\"page.table \" ,page.table )\n\n",
+        "script": "page.table = page.result\n\npage.backupapplicationsDatasource = page.table;\npage.table.paginator = page.paginator;\n// console.log(\"page.table \" ,page.table )\n\n",
         "functionName": "sd_mSUodGizS2HbDJrx",
         "category": "Function",
         "x": 825,
@@ -633,7 +632,9 @@
         "x": 925,
         "y": 80,
         "wires": [
-            []
+            [
+                "sd_N1aALxkUGzCMyqIq"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -757,6 +758,13 @@
                     "type": "literal",
                     "value": ""
                 }
+            },
+            {
+                "textIp": "currentMonth",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
             }
         ],
         "functionName": "sd_E9QbOlnVduPNV5MO_1",
@@ -822,50 +830,17 @@
         "generated": true
     },
     {
-        "id": "sd_huDbdJ9Pi7C7l1SX",
-        "type": "PageStart",
-        "z": "sd_cZLPHcExM7qPlfNz",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "getRowColor",
-        "outputs": 1,
-        "inputVariables": [
-            {
-                "key": "row",
-                "defaultValue": {
-                    "type": "any",
-                    "value": ""
-                },
-                "output": false
-            }
-        ],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "getRowColor",
-        "category": "General",
-        "x": 140,
-        "y": 980,
-        "wires": [
-            [
-                "sd_1xg11F8aWQBYU9Ef"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "pay_managementComponent"
-    },
-    {
-        "id": "sd_1xg11F8aWQBYU9Ef",
+        "id": "sd_N1aALxkUGzCMyqIq",
         "type": "Script",
         "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "\nif (bh.input.row.packageType == 'Package 1') {\n      return 'lightblue';  // Change to the color you want for this condition\n    }\n    return '';  // Default color (no color change)\n  ",
-        "functionName": "sd_1xg11F8aWQBYU9Ef",
+        "script": "page.monthFilter = {\n    month: page.monthName\n}",
+        "functionName": "sd_N1aALxkUGzCMyqIq",
         "category": "Function",
-        "x": 225,
-        "y": 980,
+        "x": 1025,
+        "y": 80,
         "wires": [
             []
         ],
@@ -875,19 +850,108 @@
         "generated": true
     },
     {
-        "id": "sd_N1aALxkUGzCMyqIq",
+        "id": "sd_2k8PGHewnqrLyQOy",
+        "type": "PageStart",
+        "z": "sd_cZLPHcExM7qPlfNz",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "selectFilter",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "selectFilter",
+        "category": "General",
+        "x": 125,
+        "y": 900,
+        "wires": [
+            [
+                "sd_kmtWad1qF80YnSNE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "pay_managementComponent"
+    },
+    {
+        "id": "sd_kmtWad1qF80YnSNE",
         "type": "Script",
         "z": "sd_cZLPHcExM7qPlfNz",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(\"payments ==>\", page.result)",
-        "functionName": "sd_N1aALxkUGzCMyqIq",
+        "script": "if (!page.backupapplicationsDatasource) {\n    // Create a backup of the original data\n    page.backupapplicationsDatasource = [...page.table];\n}\n\n// Ensure page.monthFilter is a string for comparison\nconst monthFilter = page.monthFilter.toString().toLowerCase();\n\n// Filter the backup data source based on the date\nconst filteredResults = page.backupapplicationsDatasource.filter((row) => {\n    if (row.date) {\n        const rowDate = new Date(row.date);\n        \n        // Format the date to only include month and year (or just the month)\n        const rowMonth = rowDate.toLocaleString('default', { month: 'long' }).toLowerCase(); // e.g., 'january'\n\n        // Check if rowMonth includes the monthFilter\n        return rowMonth.includes(monthFilter);\n    }\n    return false;\n});\n\n// Update the table with the filtered results\npage.table = filteredResults;\n\n\n\n",
+        "functionName": "sd_kmtWad1qF80YnSNE",
         "category": "Function",
-        "x": 825,
-        "y": 160,
+        "x": 205,
+        "y": 900,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "pay_managementComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_r47gA5v95dkNeP9x",
+        "type": "UseDependency",
+        "z": "sd_cZLPHcExM7qPlfNz",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_r47gA5v95dkNeP9x",
+        "category": "Function",
+        "x": 105,
+        "y": 80,
+        "wires": [
+            [
+                "sd_Arzy8uB4k1GWBhCI"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
