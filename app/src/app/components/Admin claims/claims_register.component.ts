@@ -426,6 +426,20 @@ export class claims_registerComponent implements AfterViewInit {
     }
   }
 
+  updateNotification(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = { path: 'update_notification' };
+      bh = this.sd_pwCofTEY8QankddX(bh);
+      //appendnew_next_updateNotification
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mecVHBoSACJxtWoR');
+    }
+  }
   //appendnew_flow_claims_registerComponent_start
 
   sd_TLAQgRUW9oXzXEcO(bh) {
@@ -1056,10 +1070,27 @@ export class claims_registerComponent implements AfterViewInit {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_lvSzZTgwVbEKFpc6(bh);
       //appendnew_next_sd_EZV9KScHEbVQ3VZL
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EZV9KScHEbVQ3VZL');
+    }
+  }
+
+  async sd_lvSzZTgwVbEKFpc6(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.updateNotifications(
+        this.page.notification
+      );
+
+      //appendnew_next_sd_lvSzZTgwVbEKFpc6
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lvSzZTgwVbEKFpc6');
     }
   }
 
@@ -1740,10 +1771,22 @@ export class claims_registerComponent implements AfterViewInit {
   sd_EiyEHm1Q0suBYnul(bh) {
     try {
       this.page.selectedClaim = JSON.parse(localStorage.getItem('claim'));
+      bh = this.sd_Nk0e9Ege7xW2p07b(bh);
       //appendnew_next_sd_EiyEHm1Q0suBYnul
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_EiyEHm1Q0suBYnul');
+    }
+  }
+
+  sd_Nk0e9Ege7xW2p07b(bh) {
+    try {
+      const page = this.page;
+      console.log('selectedClaim: ', page.selectedClaim);
+      //appendnew_next_sd_Nk0e9Ege7xW2p07b
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Nk0e9Ege7xW2p07b');
     }
   }
 
@@ -1782,11 +1825,11 @@ export class claims_registerComponent implements AfterViewInit {
         }
       });
 
-      console.log('DOCS: ', page.docs);
-
       page.fileURL = page.ssdUrl + 'download/';
 
       console.log('URL:', page.ssdUrl);
+
+      console.log('FORM: ', page.policyClaimsForm);
       bh = this.sd_xLAtfgHKTyGPt8n2(bh);
       //appendnew_next_sd_UmdtwXC1AB0nhAbw
       return bh;
@@ -1929,11 +1972,14 @@ export class claims_registerComponent implements AfterViewInit {
       //     page.deceased.get('status')?.disable()
       //     page.policyClaimsForm.value.status = page.value.status
       //   }
+
+      // console.log("page.policyClaimsForm: 1", page.policyClaimsForm)
+
       // })
 
       page.date = new Date();
 
-      console.log('page.deceased', page.deceased);
+      console.log('page.policyClaimsForm', page.policyClaimsForm);
 
       bh.url = page.ssdUrl + 'get-users';
       bh = this.sd_H2rfObg2GTiF2OJI(bh);
@@ -2063,7 +2109,7 @@ export class claims_registerComponent implements AfterViewInit {
         depsId: new FormControl(page.selectedClaim.depsId),
         beIds: new FormControl(page.selectedClaim.beIds),
         claimNumber: new FormControl(page.selectedClaim.claimNumber),
-        status: new FormControl(page.value?.status),
+        status: new FormControl(page.deceased.value.status),
         _id: new FormControl(page.selectedClaim._id),
       });
 
@@ -2079,11 +2125,15 @@ export class claims_registerComponent implements AfterViewInit {
       //     page.deceased.get('status')?.disable()
       //     page.policyClaimsForm.value.status = page.value.status
       //   }
+
+      //  console.log("page.policyClaimsForm: 1", page.policyClaimsForm)
       // })
 
       page.date = new Date();
 
       bh.url = page.ssdUrl + 'get-users';
+
+      console.log('page.policyClaimsForm', page.policyClaimsForm);
       bh = this.sd_H2rfObg2GTiF2OJI(bh);
       //appendnew_next_forms1
       return bh;
@@ -2123,7 +2173,7 @@ export class claims_registerComponent implements AfterViewInit {
       bh.url = page.ssdUrl + 'update_claim';
 
       page.updatedClaim = page.policyClaimsForm.value;
-      page.updatedClaim.status = page.value.status;
+      // page.updatedClaim.status = page.value.status
 
       console.log('page.updatedClaim', page.updatedClaim);
       bh = this.sd_9j0Sbn07mNgWcy1F(bh);
@@ -2294,10 +2344,22 @@ export class claims_registerComponent implements AfterViewInit {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
+      bh = this.sd_3n7RZOqIyihMZ63W(bh);
       //appendnew_next_sd_nZ3fyQZGNTByR3Yl
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_nZ3fyQZGNTByR3Yl');
+    }
+  }
+
+  sd_3n7RZOqIyihMZ63W(bh) {
+    try {
+      let outputVariables = this.updateNotification();
+
+      //appendnew_next_sd_3n7RZOqIyihMZ63W
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3n7RZOqIyihMZ63W');
     }
   }
 
@@ -2436,6 +2498,65 @@ export class claims_registerComponent implements AfterViewInit {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_5wzAXg1SAFazVW4X');
+    }
+  }
+
+  sd_pwCofTEY8QankddX(bh) {
+    try {
+      this.page.clickedNotification = JSON.parse(
+        localStorage.getItem('clickedNotification')
+      );
+      bh = this.sd_xMywLUDNGvlZt44t(bh);
+      //appendnew_next_sd_pwCofTEY8QankddX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pwCofTEY8QankddX');
+    }
+  }
+
+  sd_xMywLUDNGvlZt44t(bh) {
+    try {
+      const page = this.page;
+      page.clickedNotification.status = page.policyClaimsForm.value.status;
+
+      console.log('NOT: ', page.clickedNotification);
+      bh = this.sd_bJnnfpKyukLLMIbo(bh);
+      //appendnew_next_sd_xMywLUDNGvlZt44t
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xMywLUDNGvlZt44t');
+    }
+  }
+
+  async sd_bJnnfpKyukLLMIbo(bh) {
+    try {
+      const NotificationsInstance: Notifications =
+        this.__page_injector__.get(Notifications);
+
+      let outputVariables = await NotificationsInstance.genericPut(
+        bh.local.path,
+        this.page.clickedNotification
+      );
+      bh.res = outputVariables.local.result;
+
+      this.sd_Ev5d9NbZNSBlv4LI(bh);
+      //appendnew_next_sd_bJnnfpKyukLLMIbo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bJnnfpKyukLLMIbo');
+    }
+  }
+
+  sd_Ev5d9NbZNSBlv4LI(bh) {
+    try {
+      console.log(
+        new Date().toLocaleTimeString(),
+        this.page.clickedNotification
+      );
+      //appendnew_next_sd_Ev5d9NbZNSBlv4LI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Ev5d9NbZNSBlv4LI');
     }
   }
 

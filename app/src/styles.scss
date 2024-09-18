@@ -870,16 +870,18 @@ a {
     @extend %shared-stylish-hover
 }
 
-.mat-menu-panel {
-    background-color: $light-blue !important;
-    color: white;
-}
 
 .sim-menu {
+     background-color: $light-blue !important;
+    color: white;
     button.mat-menu-item {
         height: 20px;
         display: flex;
         align-items: center;
+    }
+    .mat-menu-panel {
+        background-color: $light-blue !important;
+        color: white;
     }
 
     .mat-menu-panel {

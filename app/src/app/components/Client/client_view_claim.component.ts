@@ -124,23 +124,8 @@ export class client_view_claimComponent {
         lastName: new FormControl(page.claim.deceased.lastName),
         idNum: new FormControl(page.claim.deceased.idNum),
         gender: new FormControl(page.claim.deceased.gender),
+        dateOfDeath: new FormControl(page.claim.deceased.dateOfDeath),
       });
-      // documents
-      // page.idClaimer=new FormGroup({
-      //   filename: new FormControl(""),
-      //   })
-      //    page.idDecesed =new FormGroup({
-
-      //   })
-      //     page.bi1662 =new FormGroup({
-
-      //   })
-      //     page.deathCertificate =new FormGroup({
-
-      //   })
-      //     page.bankDetails =new FormGroup({
-
-      //   })
       //claims form with all information including claimer details
       page.policyClaimsForm = new FormGroup({
         firstName: new FormControl(page.claim.firstName),
