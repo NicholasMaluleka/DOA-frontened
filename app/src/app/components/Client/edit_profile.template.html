@@ -212,7 +212,7 @@
           </form>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" *ngIf="page.hideIcon2 "><mat-icon (click)="openDependencies()" [hidden]="page.dependencyForm">add_circle</mat-icon></div>
         </mat-expansion-panel></mat-accordion>
-      <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/client_profile" class="edit-button-alt">Cancel</button><button mat-raised-button routerLink="/dashboard/client_profile" class="blue-color yellow-bg" (click)="update()">Submit</button></div>
+      <div fxLayout="row wrap" style="height:5%" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/dashboard/client_profile" class="edit-button-alt">Cancel</button><button mat-raised-button class="blue-color yellow-bg" (click)="update()">Submit</button></div>
     </div>
   </div>
 </div>

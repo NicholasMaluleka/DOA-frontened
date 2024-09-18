@@ -514,7 +514,7 @@
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "center",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -754,15 +754,13 @@
                         },
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "padding-right:11px",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "class",
-                            "_value": [
-                                "kg-half-width"
-                            ],
+                            "_value": [],
                             "_type": "dav",
                             "_attrDef": "p"
                         },
@@ -792,7 +790,7 @@
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "end",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1590,12 +1588,11 @@
                                     "skipCodegen": true,
                                     "_key": "__n_dependant_flows_key__",
                                     "_value": [
-                                        "sd_0fGu5LvUcHdhb2Ac",
-                                        "sd_wuV2zSw5nsWGD6kg",
-                                        "sd_7VuYIUgtmhqPsXpX"
+                                        "sd_TR4YUJFWojXLeBDq",
+                                        "sd_E2CATAN7Fsrrhvxf"
                                     ],
                                     "_type": "a",
-                                    "_attrDef": "c",
+                                    "_attrDef": "p",
                                     "_visibility": false
                                 }
                             ]

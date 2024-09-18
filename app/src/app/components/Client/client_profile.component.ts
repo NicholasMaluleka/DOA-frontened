@@ -75,21 +75,11 @@ export class client_profileComponent {
 
   sd_HylJdYhI60EDK1IM(bh) {
     try {
-      bh = this.sd_qOYIIRwGDCqGGaOU(bh);
+      bh = this.sd_yfOFbavH9ohBUvy1(bh);
       //appendnew_next_sd_HylJdYhI60EDK1IM
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_HylJdYhI60EDK1IM');
-    }
-  }
-
-  sd_qOYIIRwGDCqGGaOU(bh) {
-    try {
-      bh = this.sd_yfOFbavH9ohBUvy1(bh);
-      //appendnew_next_sd_qOYIIRwGDCqGGaOU
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qOYIIRwGDCqGGaOU');
     }
   }
 
@@ -106,11 +96,16 @@ export class client_profileComponent {
 
   sd_sDChkTyL4lAwKMl2(bh) {
     try {
-      const page = this.page;
-      page.currentUser = page.user;
+      const page = this.page; // setTimeout(() => {
+      // page.currentUser = page.user
+      //  console.log("page user" , page.currentUser)
+      //  console.log("bene",page.currentUser.beneficaries);
+      //  }, 1000)
 
+      page.currentUser = page.user;
       console.log('page user', page.currentUser);
       console.log('bene', page.currentUser.beneficaries);
+
       //appendnew_next_sd_sDChkTyL4lAwKMl2
       return bh;
     } catch (e) {
